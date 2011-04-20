@@ -1,0 +1,20 @@
+@c License appendix...
+
+@c GPL v3...
+@node License GPL
+@appendixsec GNU General Public License
+@include Licenses/GPL.texi
+
+@c GFDL 1.2... (should be 1.3)
+@page
+@node License GFDL
+@appendixsec GNU Free Documentation License
+@include Licenses/GFDL.texi
+
+@c CC-BY-NC-SA 3.0 Unported...
+@page
+@node License CC-BY-NC-SA
+@appendixsec Creative Commons Attribution-NonCommercial-ShareAlike
+@include Licenses/CC-BY-NC-SA.texi
+
+

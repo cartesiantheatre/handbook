@@ -17,20 +17,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-MAIN_SOURCE = Source/Handbook.texi
-ALL_SOURCE  = Source/Licenses/GFDL.texi \
-              Source/Licenses/GPL.texi  \
-              Source/Handbook.texi      \
-              Source/Version.texi
-OUTPUT      = Handbook.pdf
+MAIN_SOURCE = Source/Main.texi
+ALL_SOURCE  = $(shell find Source/ -type f -name '*.texi' -exec echo "{}" \; | sed 's/ /\\ /g')
+OUTPUT      = "Avaneya Crew Handbook.pdf"
 CACHE       = Cache
 
 all: $(OUTPUT)
 
 $(OUTPUT): $(ALL_SOURCE)
-	texi2pdf -q --build-dir=$(CACHE) $(MAIN_SOURCE)
+	texi2dvi --pdf --build-dir=$(CACHE) $(MAIN_SOURCE) && mv Main.pdf $(OUTPUT)
 
 clean:
-	@ texi2pdf -q --clean $(MAIN_SOURCE)
 	@ rm -vf $(OUTPUT)
+
 

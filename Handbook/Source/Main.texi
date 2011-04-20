@@ -67,18 +67,12 @@ Documentation License".
 
 @c Body follows...
 
-@node Why The Handbook?
-@chapter Why The Handbook?
+@node Purpose of Handbook
+@chapter Purpose of Handbook
 
 @node The Game
 @chapter The Game
-@section Classification
-@section Who It Is For
-@section Who It Is Not For
-This game will challenge you. People who believe things originate in 
-cans and have an attention span lasting only a few seconds will not 
-enjoy this game. There are many games that appeal to those kind of 
-people, so that is not our concern here.
+@include "The Game.texi"
 
 @node Licensing
 @chapter Licensing
@@ -134,9 +128,9 @@ Writer
 @node Technologies Used
 @chapter Technologies Used
 
-@node Working With The Crew
-@chapter Working With The Crew
-@c @include "Working With The Crew.texi"
+@node Collaboration
+@chapter Collaboration
+@include "Collaboration.texi"
 
 @node Things to Know
 @chapter Things to Know

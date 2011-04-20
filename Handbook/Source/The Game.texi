@@ -1,0 +1,25 @@
+@section Classification
+
+@section Who It Is For
+This game so far as attracted a fairly large audience. From what can
+be observed at this time, the general attributes appears to be 
+
+@itemize @bullet
+@item
+those with an affinity for @emph{software libre},
+@item 
+those with a social conscience,
+@item
+those with a love for science fiction,
+@item
+those who like to think and see the @emph{connectedness of everything}.
+@end itemize
+
+@section Who It Is Not For
+This game will challenge you and as most have already noticed, it is 
+not like other games. Having said that, it is not for some people.
+
+Those who believe things originate in cans or have an attention span
+lasting only a few seconds will not enjoy this game. There are already
+many games that appeal to them, so that need not be our aim here.
+

@@ -19,13 +19,14 @@
 
 MAIN_SOURCE = Source/Main.texi
 ALL_SOURCE  = $(shell find Source/ -type f -name '*.texi' -exec echo "{}" \; | sed 's/ /\\ /g')
+PRE_OUTPUT  = Main.pdf
 OUTPUT      = "Avaneya Crew Handbook.pdf"
 CACHE       = Cache
 
 all: $(OUTPUT)
 
 $(OUTPUT): $(ALL_SOURCE)
-	texi2dvi --pdf --build-dir=$(CACHE) $(MAIN_SOURCE) && mv Main.pdf $(OUTPUT)
+	texi2dvi --pdf --build-dir=$(CACHE) $(MAIN_SOURCE) && mv $(PRE_OUTPUT) $(OUTPUT)
 
 clean:
 	@ rm -vf $(OUTPUT)

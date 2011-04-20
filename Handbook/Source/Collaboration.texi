@@ -1,0 +1,16 @@
+@c Collaboration chapter...
+
+@section Avaneya Code of Conduct
+@include "Code of Conduct.texi"
+
+@section The Crew
+@c include "The Crew.texi"
+
+@section Communication and Coordination
+@subsection Mailing List
+@subsection Internet Relay Chat (IRC)
+
+@subsection Launchpad
+@subsubsection Bug Tracker
+@subsubsection Revision Control
+

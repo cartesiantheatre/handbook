@@ -65,10 +65,11 @@ Documentation License".
 @value{MANUAL_DESCRIPTION}
 @end ifnottex
 
-@c Body follows...
+@c Main body follows...
 
 @node Purpose of Handbook
 @chapter Purpose of Handbook
+@include "Purpose of Handbook.texi"
 
 @node The Game
 @chapter The Game
@@ -76,82 +77,54 @@ Documentation License".
 
 @node Licensing
 @chapter Licensing
+@include "Licensing.texi"
 
 @node The Story
 @chapter The Story
+@include "The Story.texi"
+
+@node The Timeline
+@chapter The Timeline
+@include "The Timeline.texi"
 
 @node Features
 @chapter Features
+@include "Features.texi"
 
-@node Game World
+@node Dependent Technology
+@chapter Dependent Technology
+@include "Dependent Technology.texi"
+
+@node The Game World
 @chapter The Game World
-@section The Characters
+@include "The Game World.texi"
 
-@node Contributors
-@chapter Contributor Capacities
-Avaneya is a fairly large, creative, and collaborative project, 
-calling upon a variety of different disciplines. These are the 
-different capacities Avaneya contributors fall into. Note that there 
-is no reason why someone who wishes to work in more than one capacity
-cannot. Many do already.
+@node The Team
+@chapter The Team
+@include "The Team.texi"
 
-@itemize
-@sp 1
-@item
-2D Artist
-@item
-Administrator
-@item
-Audio Engineer
-@item
-Cinematic Artist
-@item
-Engineer
-@item
-Modeller
-@item
-Musician
-@item
-Researcher
-@item
-Scripter
-@item
-Translator
-@item
-Voice Actor
-@item
-Web Developer
-@item
-Writer
-@end itemize
-
-@node Technologies Used
-@chapter Technologies Used
-
-@node Collaboration
-@chapter Collaboration
-@include "Collaboration.texi"
-
-@node Things to Know
-@chapter Things to Know
+@node Things To Know If You Are
+@chapter Things To Know If You Are...
+@include "Things to Know If You Are.texi"
 
 @node Gameplay
 @chapter Gameplay
-
-@node Suggested Readings
-@chapter Suggested Readings
-These books you should consider reading to aid in enriching your 
-understanding of the game. You may find them useful
+@include "Gameplay.texi"
 
 @c Print the index...
 @node Index
 @unnumbered Index
 @printindex cp
 
-@c License appendix...
-@node Licenses
-@appendix Licenses
-@include Licenses.texi
+@c Appendices...
+
+@node Appendix of Suggested Readings
+@appendix Appendix of Suggested Readings
+@include "Appendix of Suggested Readings.texi"
+
+@node Appendix of Licenses
+@appendix Appendix of Licenses
+@include "Appendix of Licenses.texi"
 
 @c End of document...
 @bye

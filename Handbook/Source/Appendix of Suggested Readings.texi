@@ -1,0 +1,51 @@
+@c Suggested Readings chapter...
+These books you should consider reading to aid in enriching your 
+understanding of the game. You may find them useful
+
+For everyone:
+@itemize
+@item
+Free Software, Free Society: Selected Essays of Richard M. Stallman
+@end itemize
+
+For artists:
+@itemize
+@item
+
+@end itemize
+
+For engineers:
+@itemize
+@item
+Game Engine Architecture
+@item 
+System and 
+@end itemize
+
+For writers and researchers:
+@itemize
+@item
+Death by Government
+@item
+Debunking 9/11 Debunking
+@item
+How to Live on Mars
+@item
+Mars Trilogy (Red Mars, Green Mars, Blue Mars)
+@item
+Minutes of Parliamentary Standing Committee on Banking & Commerce, 1939
+@item
+Open Letter to Minister of Public Safety
+@item
+Statistics of Democide: Genocide and Mass Murder since 1900
+@item
+Terraforming Worlds
+@item
+The Case Against Fluoride
+@item
+The China Study
+@item
+The Creature From Jekyll Island
+@end itemize
+
+

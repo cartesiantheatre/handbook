@@ -1,0 +1,53 @@
+@c The Team chapter...
+
+Avaneya is a fairly large, creative, and collaborative project, 
+calling upon a variety of different disciplines. These are the 
+different capacities Avaneya contributors fall into. Note that there 
+is no reason why someone who wishes to work in more than one capacity
+cannot. Many do already.
+
+@itemize
+@sp 1
+@item
+2D Artist
+@item
+Audio Engineer
+@item
+Cinematic Artist
+@item
+Engineer
+@item
+Modeller
+@item
+Musician
+@item
+Researcher
+@item
+Scripter
+@item
+System Administrator
+@item
+Translator
+@item
+Voice Actor
+@item
+Web Developer
+@item
+Writer
+@end itemize
+
+@page
+@section Avaneya Code of Conduct
+@include "Code of Conduct.texi"
+
+@section The Crew
+@c include "The Crew.texi"
+
+@section Communication and Coordination
+@subsection Mailing List
+@subsection Internet Relay Chat (IRC)
+
+@subsection Launchpad
+@subsubsection Bug Tracker
+@subsubsection Revision Control
+

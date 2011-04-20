@@ -1,0 +1,13 @@
+@c The Story chapter...
+
+@c The story in this section...
+@node Background
+@section Background
+
+@node Storyboard
+@section Storyboard
+@c Explain the purpose of storyboarding here.
+@subsection Opening Cinematic
+
+@node The Timeline
+@section The Timeline

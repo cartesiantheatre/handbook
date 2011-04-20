@@ -1,0 +1,21 @@
+@c The Game World chapter...
+
+This chapter deals with some of the different aspects of the world the
+game takes place in, as one in that world itself might know it as.
+
+@section The Avaneya
+@section Buildings
+@section Characters
+@section Economics
+@section Environmental
+@section Food
+@section Ground Vehicles and Machinery
+@section Indoors
+@section Kit
+@section Locations
+@section Politics and Legal
+@section Population
+@section Resources
+@section Time
+@section Weapons
+

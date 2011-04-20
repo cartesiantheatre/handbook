@@ -1,8 +1,20 @@
+@section Why?
+Too often, people have come out of experiencing a great dystopian
+science fiction novel or film, only to say to themselves, Thank
+god we don't live in @emph{that} world. That needs to change.
+
+@noindent
+Dystopian science fiction can arguably be among the most honest kind
+of story telling when examined in the context of history. But unless
+people can see the connection between the world they perceived in
+fiction and the one they inhabit, vague analogies and cryptic 
+metaphors tend to have minimal utility as pedagogical tools.
+
 @section Classification
 
-@section Who It Is For
-This game so far as attracted a fairly large audience. From what can
-be observed at this time, the general attributes appears to be 
+@section Who Is It For?
+This game so far has attracted a fairly large base of followers. From 
+what can be observed at this time, the general qualities appears to be 
 
 @itemize @bullet
 @item
@@ -15,7 +27,7 @@ those with a love for science fiction,
 those who like to think and see the @emph{connectedness of everything}.
 @end itemize
 
-@section Who It Is Not For
+@section Who Is It Not For?
 This game will challenge you and as most have already noticed, it is 
 not like other games. Having said that, it is not for some people.
 

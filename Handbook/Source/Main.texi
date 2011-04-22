@@ -95,6 +95,10 @@ Documentation License".
 @chapter Dependent Technology
 @include "Dependent Technology.texi"
 
+@node Suggested Readings
+@chapter Suggested Readings
+@include "Suggested Readings.texi"
+
 @node The Game World
 @chapter The Game World
 @include "The Game World.texi"
@@ -117,10 +121,6 @@ Documentation License".
 @printindex cp
 
 @c Appendices...
-
-@node Appendix of Suggested Readings
-@appendix Appendix of Suggested Readings
-@include "Appendix of Suggested Readings.texi"
 
 @node Appendix of Licenses
 @appendix Appendix of Licenses

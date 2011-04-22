@@ -1,0 +1,245 @@
+@c Suggested Readings chapter...
+These books you should consider reading to aid in enriching your 
+understanding of the game. You may find them useful
+
+@c For everyone...
+@section Everyone
+@itemize
+
+@item
+@emph{Blue Mars: Mars Trilogy Bk. 3}
+@sp 0
+Kim Stanley Robinson, Voyager, ISBN 9780586213919, 1997.
+@sp 1
+
+@item
+@emph{Death by Government}
+@sp 0
+R. J. Rummel, Transaction Publishers, ISBN 9781560009276, 1997.
+@sp 1
+
+@item
+@emph{Debunking 9/11 Debunking}
+@sp 0
+David Ray Griffin, Olive Branch Pr, ISBN 9781566566865, 2007.
+@sp 1
+
+@item
+@emph{Free Software, Free Society: Selected Essays of Richard M. Stallman}
+@sp 0
+Richard M. Stallman, Free Software Foundation, ISBN 9781882114986, 2002.
+@sp 1
+
+@item
+@emph{Green Mars: Mars Trilogy Bk. 2}
+@sp 0
+Kim Stanley Robinson, Voyager, ISBN 9780586213902, 1994.
+@sp 1
+
+@item
+@emph{How to Live on Mars: A Trusty Guidebook to Surviving and Thriving on the Red Planet}
+@sp 0
+Robert Zubrin, Three Rivers Press, ISBN 9780307407184, 2008.
+@sp 1
+
+@item
+@emph{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming}
+@sp 0
+Naomi Oreskes et al., Bloomsbury Press, ISBN 9781596916104, 2010.
+@sp 1
+
+@item
+@emph{Minutes of Proceedings and Evidence Respecting the Bank of Canada}
+@sp 0
+Standing Committee on Banking and Commerce, 1939, pp. 461-500.
+@c Anyone have a reliable online link for this to a pdf or something?
+@sp 1
+
+@item
+@url{http://www.thevertigo.com/html/9-11/, @emph{Open Letter to Minister of Public Safety Regarding 9/11}}
+@sp 0
+Kip Warner, 2011.
+@sp 1
+
+@item
+@emph{Red Mars: Mars Trilogy Bk. 1}
+@sp 0
+Kim Stanley Robinson, Collins, ISBN 9780586213896, 1993.
+@sp 1
+
+@item
+@emph{Statistics of Democide: Genocide and Mass Murder since 1900 (Macht Und Gesellschaft, Bd. 2)}
+@sp 0
+R. J. Rummel, Lit Verlag, ISBN 9783825840105, 1999.
+@sp 1
+
+@item
+@emph{Terraforming: The Creating of Habitable Worlds (Astronomers' Universe)}
+@sp 0
+Martin Beech, Springer, ISBN 9780387097954, 2009.
+@sp 1
+
+@item
+@emph{The Case Against Fluoride: How Hazardous Waste Ended Up in Our Drinking Water and the Bad Science and Powerful Politics That Keep It There}
+@sp 0
+Paul Connett et al., Chelsea Green Publishing, ISBN 9781603582872, 2010.
+@sp 1
+
+@item
+@emph{The Case for Mars: The Plan to Settle the Red Planet and Why We Must}
+@sp 0
+Robert Zubrin et al., Free Press, 1997.
+@sp 1
+
+@item
+@emph{The China Study: The Most Comprehensive Study of Nutrition Ever Conducted and the Startling Implications for Diet, Weight Loss and Long-term Health}
+@sp 0
+T. Colin Campbell, Benbella Books, 2006.
+@sp 1
+
+@item
+@emph{The Creature from Jekyll Island: A Second Look at the Federal Reserve}
+@sp 0
+G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
+@sp 1
+
+@end itemize
+
+@c For artists...
+@section Artists
+@itemize
+
+@item
+@emph{Beginning GIMP: From Novice to Professional}
+@sp 0
+Akkana Peck, Apress, ISBN 9781430210702, 2009.
+@sp 1
+
+@item
+@emph{Blender 2.5 Materials and Textures Cookbook}
+@sp 0
+Colin Litster, Packt Publishing, ISBN 9781849512886, 2011.
+@sp 1
+
+@item
+@emph{Blender 3D 2.49 Incredible Machines}
+@sp 0
+Allan Brito, Packt Publishing, ISBN 9781847197467, 2009.
+@sp 1
+
+@item
+@emph{Blender 3D Architecture, Buildings, and Scenery: Create photorealistic 3D architectural visualizations of buildings, interiors, and environmental scenery}
+@sp 0
+Allan Brito, Packt Publishing, ISBN 9781847193674, 2008.
+@sp 1
+
+@item
+@emph{Blender Studio Projects: Digital Movie-Making}
+@sp 0
+Tony Mullen & Claudio Andaur, Sybex, ISBN 9780470543139, 2010.
+@sp 1
+
+@item
+@emph{Introducing Character Animation with Blender}
+@sp 0
+Tony Mullen, Sybex, ISBN 9780470102602, 2007.
+@sp 1
+
+@item
+@emph{The Essential Blender: Guide to 3D Creation with the Open Source Suite Blender}
+@sp 0
+Roland Hess, No Starch Press, ISBN 9781593271664, 2007.
+@sp 1
+
+@end itemize
+
+@c For engineers...
+@section Engineers
+@itemize
+
+@item
+@emph{Autotools: A Practioner's Guide to GNU Autoconf, Automake, and Libtool}
+@sp 0
+John Calcote, No Starch Press, ISBN 9781593272067, 2010.
+@sp 1
+
+@item
+@emph{Beginning Game Audio Programming}
+@sp 0
+Mason McCuskey et al., Premier-Trade, ISBN 9781592000296, 2003.
+@sp 1
+
+@item
+@emph{Beginning iPhone Games Development}
+@sp 0
+PJ Cabrera et al., Apress, ISBN 9781430225997, 2010.
+@sp 1
+
+@item
+@emph{Design Patterns: Elements of Reusable Object-Oriented Software (Addison-Wesley Professional Computing Series)}
+@sp 0
+Gamma et al., Addison-Wesley Professional, Hardcover, ISBN 9780201633610, 1994.
+@sp 1
+
+@item
+@emph{Game Engine Architecture}
+@sp 0
+Jason Gregory, A K Peters/CRC Press, ISBN 9781568814131, 2009.
+@sp 1
+
+@item
+@emph{Lua 5.1 Reference Manual}
+@sp 0
+Roberto Ierusalimschy et al., Lua.org, ISBN 9788590379836, 2006.
+@sp 1
+
+@item
+@emph{Lua Programming Gems}
+@sp 0
+Lua.org, ISBN 9788590379843, 2008.
+@sp 1
+
+@item
+@emph{OpenGL Library (5th Edition)}
+@sp 0
+Dave Shreiner et al., Addison-Wesley Professional, ISBN 9780321637642, 2009.
+@sp 1
+
+@item
+@emph{Pro OGRE 3D Programming}
+@sp 0
+Gregory Junker, Apress, ISBN 9781590597101, 2006.
+@sp 1
+
+@item
+@emph{Programming in Lua, Second Edition}
+@sp 0
+Roberto Ierusalimschy, Lua.org, ISBN 9788590379829, 2006.
+@sp 1
+
+@item
+@emph{System Zoo 1 Simulation Models - Elementary Systems, Physics, Engineering}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484223, 2007.
+@sp 1
+
+@item
+@emph{System Zoo 2 Simulation Models. Climate, Ecosystems, Resources}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484230, 2007.
+@sp 1
+
+@item
+@emph{System Zoo 3 Simulation Models. Economy, Society, Development}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484247, 2007.
+@sp 1
+
+@item
+@emph{Systems and Models. Complexity, Dynamics, Evolution, Sustainability}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833481215, 2007.
+@sp 1
+
+@end itemize
+

@@ -1,2 +1,4 @@
 @c Gameplay chapter...
+@node Gameplay
+@chapter Gameplay
 

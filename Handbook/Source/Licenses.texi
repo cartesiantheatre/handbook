@@ -1,4 +1,6 @@
 @c License appendix...
+@node Licenses
+@appendix Licenses
 
 @c GPL v3...
 @node License GPL

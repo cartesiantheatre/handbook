@@ -1,9 +1,16 @@
 @c Suggested Readings chapter...
-These books you should consider reading to aid in enriching your 
-understanding of the game. You may find them useful
+@node Suggested Readings
+@chapter Suggested Readings
+
+You should consider reading some of these resources in order to enrich your understanding of the purpose of this game, whose fabric is drawn from at least all of them. The more background knowledge you have, the greater the potential quality of your contributions can be. This is applicable to any kind of complex simulation, and not just Avaneya.
+
+You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
 
 @c For everyone...
 @section Everyone
+These resources are useful for every kind of contributor, from modellers to engineers.
+@sp 1
+
 @itemize
 
 @item
@@ -107,6 +114,8 @@ G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
 
 @c For artists...
 @section Artists
+These resources are useful different kinds of artists, e.g. 2D artist, audio engineer, cinematic artist, modeller, musician, and so on.
+@sp 1
 @itemize
 
 @item
@@ -155,6 +164,8 @@ Roland Hess, No Starch Press, ISBN 9781593271664, 2007.
 
 @c For engineers...
 @section Engineers
+These resources are useful mostly for engineers and other very technical work.
+@sp 1
 @itemize
 
 @item

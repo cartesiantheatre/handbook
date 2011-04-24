@@ -1,4 +1,6 @@
 @c Things to Know If You Are chapter...
+@node Things To Know If You Are
+@chapter Things To Know If You Are...
 
 @node Artists / Non-Developers
 

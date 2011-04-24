@@ -1,0 +1,4 @@
+@c Licensing Rationale chapter...
+@node Licensing Rationale
+@chapter Licensing Rationale
+

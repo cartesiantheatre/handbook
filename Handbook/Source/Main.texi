@@ -66,65 +66,27 @@ Documentation License".
 @end ifnottex
 
 @c Main body follows...
-
-@node Purpose of Handbook
-@chapter Purpose of Handbook
 @include "Purpose of Handbook.texi"
-
-@node The Game
-@chapter The Game
 @include "The Game.texi"
-
-@node Licensing
-@chapter Licensing
-@include "Licensing.texi"
-
-@node The Story
-@chapter The Story
+@include "Licensing Rationale.texi"
 @include "The Story.texi"
-
-@node The Timeline
-@chapter The Timeline
-@include "The Timeline.texi"
-
-@node Features
-@chapter Features
+@include "Fictional Timeline.texi"
 @include "Features.texi"
-
-@node Dependent Technology
-@chapter Dependent Technology
 @include "Dependent Technology.texi"
-
-@node Suggested Readings
-@chapter Suggested Readings
 @include "Suggested Readings.texi"
-
-@node The Game World
-@chapter The Game World
 @include "The Game World.texi"
-
-@node The Team
-@chapter The Team
 @include "The Team.texi"
-
-@node Things To Know If You Are
-@chapter Things To Know If You Are...
 @include "Things to Know If You Are.texi"
-
-@node Gameplay
-@chapter Gameplay
 @include "Gameplay.texi"
 
-@c Print the index...
+@c Appendices...
+@include "Licenses.texi"
+@include "Glossary.texi"
+
+@c Index...
 @node Index
 @unnumbered Index
 @printindex cp
-
-@c Appendices...
-
-@node Appendix of Licenses
-@appendix Appendix of Licenses
-@include "Appendix of Licenses.texi"
 
 @c End of document...
 @bye

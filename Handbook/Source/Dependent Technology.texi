@@ -1,2 +1,4 @@
 @c Dependent Technology chapter...
+@node Dependent Technology
+@chapter Dependent Technology
 

@@ -1,1 +1,4 @@
 @c Purpose of Handbook chapter...
+@node Purpose of Handbook
+@chapter Purpose of Handbook
+

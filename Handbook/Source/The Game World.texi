@@ -1,4 +1,6 @@
 @c The Game World chapter...
+@node The Game World
+@chapter The Game World
 
 This chapter deals with some of the different aspects of the world the
 game takes place in, as one in that world itself might know it as.

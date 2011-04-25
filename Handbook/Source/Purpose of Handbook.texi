@@ -2,3 +2,5 @@
 @node Purpose of Handbook
 @chapter Purpose of Handbook
 
+The purpose of this handbook is to define the project as clearly as possible so that everyone who is working on it knows what needs to be done. The book is probably not as useful to normal users as it is to contributors. In fact, it may even spoil elements of the game for the latter. On the other hand, normal users are just as likely to enrich the game through their feedback - feedback which is better supported through an understanding of the contributors' project aims.
+

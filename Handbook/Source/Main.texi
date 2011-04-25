@@ -15,13 +15,14 @@
 @set MANUAL_TITLE           Avaneya Crew Handbook
 @set MANUAL_DESCRIPTION     A comprehensive guide for all of our bold contributors.
 @set AVANEYA_DESCRIPTION    A cerebral science fiction game for GNU.
+@set COPYRIGHT_LINE         @copyright{} 2010, 2011 Kshatra Corp
 
 @c Copyright notice...
 @copying
 @value{MANUAL_DESCRIPTION}
 
 @sp 1
-Copyright @copyright{} 2011 Kshatra Corp.
+Copyright @value{COPYRIGHT_LINE}.
 @sp 1
 
 @quotation
@@ -80,8 +81,8 @@ Documentation License".
 @include "Gameplay.texi"
 
 @c Appendices...
-@include "Licenses.texi"
 @include "Glossary.texi"
+@include "Licenses.texi"
 
 @c Index...
 @node Index

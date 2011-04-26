@@ -2,7 +2,7 @@
 @node Relevant Readings
 @chapter Relevant Readings
 
-You should consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge you have, the greater the potential quality of your contributions can be. This is applicable to any kind of complex simulation, and not just Avaneya.
+You should consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge you have, the greater the potential quality of your contributions can be. This same goes for really any kind of complex simulation, and not just Avaneya.
 
 You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
 

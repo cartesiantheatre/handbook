@@ -9,12 +9,12 @@ Dystopian science fiction can arguably be among the most honest kind of story te
 
 But @i{good} science fiction is only @i{partly} fiction because it is often the @i{science} portion that is what attracts people to it in the first place. Science, by its nature, is a thinking and knowledge oriented enterprise - not unlike the people that tend to gravitate towards the aforementioned genre. This can set the bar high for what they expect and requires designers to pay a great deal of attention to detail. A certain degree of artistic license is to be expected, but users still expect it to be as consistent with what we already know to be true or what is at least reasonably plausible. It may be because of the thinking and learning aspect that we are seeing less and less science fiction entertainment as time goes on. That needs to change.
 
-Another important reason is that there is very little, if any, free commercial entertainment for the GNU operating system. When people use GNU, they are treated as second class citizens in terms of the availability of high quality games. Not only are there very few higher production titles that are available for GNU, they are usually proprietary, and even then, generally bad ports using deprecated APIs, poorly packaged, @footnote{That is, if they use the platform's native distribution's package manager at all.} and integrate horribly into the user's desktop - ignoring the usual human factors community driven conventions.
+Another important reason is that there is very little, if any, free commercial entertainment for the GNU operating system. When people use GNU, they are treated as second class citizens in terms of the availability of high quality games. Not only are there very few higher production titles that are available for GNU, they are usually proprietary, and even then, generally bad ports using deprecated APIs, poorly packaged, @footnote{That is, if they even bother to use the platform's native distribution's package manager in the first place.} and integrate horribly into the user's desktop - ignoring the usual human factors community driven conventions.
 
 But in terms of their subject matter itself, they tend to appeal more to the senses of the mainstream proprietary user, and thus do not reflect the spirit of a social conscience commonplace in the @i{software libre} community. That also needs to change.
 
 @section Classification
-People have struggled in the past to classify Avaneya. It is what it is, but the closest traditional classifications that form a subset of it are a hybrid mix of the traditional city builder and management simulations and the real time strategy.
+People have struggled in the past to classify Avaneya. It is what it is, but the closest traditional categories that form a subset of it are the traditional city builder and management simulations and the real time strategy.
 
 @section Who Is It For?
 The game so far has attracted a fairly large base of followers. From what can be observed at this time, the game appears to appeal to those with an interest in:
@@ -33,9 +33,9 @@ The game so far has attracted a fairly large base of followers. From what can be
 The best way to get an idea of the intended audience is to quickly @pxref{Relevant Readings} and to ask yourself the type of audience that those resources would probably appeal to. 
 
 @section Who Is It Not For?
-This game will challenge you to think, and maybe even offend you. It is not like other games, and thus it is not for all people. Those who have an attention span of only a few seconds or that believe things originate in cans will simply not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
+This game will challenge you to think, and maybe even offend you. It is not like other games, and thus it is not for all people. Those who have an attention span of only a few seconds or believe that things originate in cans will simply not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
 
-We could take a rough guess though by taking the rough inversion of the aforemention and guess that at least any one of them might be a disqualifier for someone that enjoys the game. These might include:
+There is nothing to stop us from taking a guess via something like a rough inversion of the aforementioned. Someone who would not want to play this game might have any of these characteristics:
 
 @itemize @bullet
 @item

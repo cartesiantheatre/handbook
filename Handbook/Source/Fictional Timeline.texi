@@ -1,4 +1,0 @@
-@c Fictional Timeline chapter.
-@node Fictional Timeline
-@chapter Fictional Timeline
-

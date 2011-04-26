@@ -1,7 +1,8 @@
-@c The Team chapter...
-@node The Team
-@chapter The Team
+@c The Project Crew chapter...
+@node The Project Crew
+@chapter The Project Crew
 
+@section Specialties
 Avaneya is a fairly large, creative, and collaborative project,
 calling upon a variety of different disciplines. These are the
 different capacities Avaneya contributors fall into. There is no
@@ -54,14 +55,53 @@ Writers work closely with the researchers and other artists to provide dialogue 
 @section Avaneya Code of Conduct
 @include "Code of Conduct.texi"
 
-@section The Crew
-@c include "The Crew.texi"
+@section Current Members
+@c include "Current Members.texi"
 
 @section Communication and Coordination
-@subsection Mailing List
+The team uses two primary means of intercommunicating. The first is through the crew mailing list, and the second is over IRC. The Code of Conduct applies to both. @xref{Code of Conduct}.
+
+@subsection Mailing Lists
+Mailing lists have been around for literally decades. They lack the cosmetics and ease of use of a forum, but until our website is ready, it will suffice for the time being.
+
+Avaneya has three mailing lists. The first is a unidirectional announcement mailing list. It is low volume and only intended to communicate from the project to the general public about major project press releases. Anyone can subscribe to it @url{https://www.avaneya.com/lists/?p=subscribe&id=1,here} or browse its archives @url{https://www.avaneya.com/news/announcements/,here}.
+
+The second @email{avaneya@@lists.avaneya.com} is for anyone to discuss anything related to the project. It is open to everyone. You can subscribe to it @url{http://lists.avaneya.com/listinfo.cgi/avaneya-avaneya.com,here} or browse its archives @url{http://lists.avaneya.com/private.cgi/avaneya-private-avaneya.com/,here}.
+
+The third @email{avaneya-private@@lists.avaneya.com} is open only to project crew. Topics range from game storyline spoilers, unreleased conceptual art, security vulnerabilities, and so on. If you are a volunteer, you should have been sent a subscription invitation.
+
+When using either of the latter two mailing lists, you may find the following tips useful.
+
+@itemize @bullet
+@item
+Do not ever send HTML email. Some peoples' mail clients cannot render it. And even if they can, there is no guarantee it will come out the same. People with visual disabilities may not have their speech synthesizers work properly, since HTML email is much harder to parse. Others may have to pay for additional bandwidth to retrieve your email, since HTML email is larger in size than plain text. For more information, consider reading @url{http://www1.american.edu/cas/econ/htmlmail.htm,this}.
+@sp 1
+
+@item
+When you reply to a post, remember to reply to the list and not just the original sender privately. Unless you had intended to, the mailing list is setup so that everyone who subscribes to it may benefit from productive communication on it. Sometimes this may not happen until years later when a new subscriber searches through old archives to find a solution to a problem they were having that was solved long ago.
+@sp 1
+
+@item
+When replying to a post, if you have your subscription configured to use batch digest mode,@footnote{When batch digest mode is enabled, the server will "batch" together emails into groups and then it to you as a single compilation to cut down on the amount of email you receive.} you do not need to copy the whole digest. Just quote the minimum needed for context.
+@sp 1
+
+@item
+Check the subject heading of your reply to a message posted on the list to make sure it still reflects the original post. Some mail readers, if you have batch digest mode enabled in your subscription, will change the heading to reflect the batch digest's subject heading, instead of the specific message within it you are replying to.
+@sp 1
+
+@item
+When you reply, remember to reply at the bottom and not at the top of the message. Top posting is generally not encouraged because it makes preservation of chronological order difficult to follow for readers. See @url{https://secure.wikimedia.org/wikipedia/en/wiki/Top_posting#Top-posting,this} for an explanation of why it is generally a bad idea.
+@sp 1
+
+@end itemize
+
 @subsection Internet Relay Chat (IRC)
 
 @subsection Launchpad
+
+Make sure you add yourself to the project crew page if you are crew:
+https://launchpad.net/~avaneya
+
 @subsubsection Bug Tracker
 @subsubsection Revision Control
 

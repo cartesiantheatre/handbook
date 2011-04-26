@@ -1,8 +1,8 @@
-@c Suggested Readings chapter...
-@node Suggested Readings
-@chapter Suggested Readings
+@c Relevant Readings chapter...
+@node Relevant Readings
+@chapter Relevant Readings
 
-You should consider reading some of these resources in order to enrich your understanding of the purpose of this game, whose fabric is drawn from at least all of them. The more background knowledge you have, the greater the potential quality of your contributions can be. This is applicable to any kind of complex simulation, and not just Avaneya.
+You should consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge you have, the greater the potential quality of your contributions can be. This is applicable to any kind of complex simulation, and not just Avaneya.
 
 You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
 
@@ -114,9 +114,16 @@ G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
 
 @c For artists...
 @section Artists
-These resources are useful different kinds of artists, e.g. 2D artist, audio engineer, cinematic artist, modeller, musician, and so on.
+These resources are useful for different kinds of artists, such as 2D artists, audio engineers, cinematic artists, modellers, musicians, and so on.
 @sp 1
 @itemize
+
+@item
+@emph{3D Computer Graphics, Second Edition}@footnote{This book is listed as a resource for artists because it is a wonderful and concise introduction to the theory of computer graphics, but for non-programmers and non-mathematicians. It is a classic, though long out of print. Nevertheless, you can probably find used copies for sale.}
+
+@sp 0
+Andrew Glassner, Green Editorial, ISBN 9781558213050, 1994.
+@sp 1
 
 @item
 @emph{Beginning GIMP: From Novice to Professional}
@@ -229,6 +236,12 @@ Roberto Ierusalimschy, Lua.org, ISBN 9788590379829, 2006.
 @sp 1
 
 @item
+@emph{Systems and Models. Complexity, Dynamics, Evolution, Sustainability}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833481215, 2007.
+@sp 1
+
+@item
 @emph{System Zoo 1 Simulation Models - Elementary Systems, Physics, Engineering}
 @sp 0
 Hartmut Bossel, BoD, ISBN 9783833484223, 2007.
@@ -244,12 +257,6 @@ Hartmut Bossel, BoD, ISBN 9783833484230, 2007.
 @emph{System Zoo 3 Simulation Models. Economy, Society, Development}
 @sp 0
 Hartmut Bossel, BoD, ISBN 9783833484247, 2007.
-@sp 1
-
-@item
-@emph{Systems and Models. Complexity, Dynamics, Evolution, Sustainability}
-@sp 0
-Hartmut Bossel, BoD, ISBN 9783833481215, 2007.
 @sp 1
 
 @end itemize

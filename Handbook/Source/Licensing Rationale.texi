@@ -7,11 +7,11 @@ Avaneya is composed of different types of files that fall into general categorie
 
 @itemize @bullet
 @item
-@strong{Artwork:} This includes all literary works, cinematics, models, audio and voice effects, textures, materials, concept art, fonts, screenshots, and other relevant non-executable creative media. 
+@strong{Artwork:} This includes all literary works, cinematics, models, audio and voice effects, textures, materials, concept art, fonts, screenshots, and other relevant non-executable creative data. 
 
 These objects are licensed under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike (BY-NC-SA) 3.0 Unported license, copyright @value{COPYRIGHT_LINE}. See @ref{License CC-BY-NC-SA} for the full text of the license.
 
-The license ensures that, under the default conditions, unless given permission, others cannot use it for commercial purposes (NC), must give attribution (BY), and if they alter, transform, or build upon it, they must distribute the resulting work only under the same or similar license to this one (SA). Everyone is free to copy, distribute, and transmit the work, as well as to adapt the work as they like. Any of theese conditions can be waived with the permission from the copyright holder.
+The license ensures that, under the default conditions, unless given permission, others cannot use it for commercial purposes (NC), must give attribution (BY), and if they alter, transform, or build upon it, they must distribute the resulting work only under the same or similar license to this one (SA). Everyone is free to copy, distribute, and transmit the work, as well as to adapt the work as they like. These are just the default conditions and can be waived with the permission of the copyright holder.
 @sp 1
 
 @item
@@ -19,7 +19,7 @@ The license ensures that, under the default conditions, unless given permission,
 
 These objects are licensed under the terms of the GNU General Public License 3.0, copyright @value{COPYRIGHT_LINE}. See @ref{License GPL} for the full text of the license.
 
-In a nutshell, the license ensure that users have four fundamental freedoms that are protected. These are the freedom to use the software for any purpose, the freedom to change the software to suit your needs, the freedom to share the software with your friends and neighbors, and the freedom to share the changes you make. The license for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program - to make sure it remains free software for all its users.
+In a nutshell, this license ensures that users have four fundamental freedoms that are always protected. These are the freedom to use the software for any purpose, the freedom to change the software to suit your needs, the freedom to share the software with your friends and neighbors, and the freedom to share the changes you make. The license for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program - to make sure it remains free software for all its users.
 
 @item
 @strong{Documentation:} This includes UML schematics and other design documents, doxygen output, man and info pages, this handbook, and other relevant data.
@@ -31,5 +31,5 @@ The Free Software Foundation explains the purpose of the license as being to mak
 @end itemize
 @strong{Music:} This includes all music in Ogg Vorbis, FLAC, Speex, or other formats and associated project files.
 
-These objects are licensed under the terms of their respective artists or publishers. We feel that music does not necessarily have to be free, but it is preferred that it should at least be shareable.
+These objects are licensed under the terms of their respective artists or publishers. We feel that music does not have to be free, but it is preferred that it be at least shareable. This is the position of Richard Stallman of the Free Software Foundation, along with many artists.
 

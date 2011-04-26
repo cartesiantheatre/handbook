@@ -1,4 +1,6 @@
 @c The Story chapter...
+@node The Story
+@chapter The Story
 
 @c The story in this section...
 @node Background
@@ -9,5 +11,4 @@
 @c Explain the purpose of storyboarding here.
 @subsection Opening Cinematic
 
-@node The Timeline
-@section The Timeline
+

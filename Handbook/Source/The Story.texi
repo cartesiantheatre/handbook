@@ -11,4 +11,6 @@
 @c Explain the purpose of storyboarding here.
 @subsection Opening Cinematic
 
+@node Fictional Timeline
+@section Fictional Timeline
 

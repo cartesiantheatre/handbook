@@ -3,5 +3,27 @@
 @chapter Information For Engineers
 
 @section Coding Standards
-@section Ares Engine Architectural Design
+
+@c AresEngine architectural design
+@section Architecture
+
+The engine which powers Avaneya is called the @i{AresEngine}. It is designed to provide for the game, but kept architecturally general enough to lend itself to other projects. If you do not know what a game engine is, Jason Gregory's book @i{Game Engine Programming}@footnote{@xref{Resources for Engineers} for details.} is highly recommended.
+
+@subsection Artificial Intelligence
+@subsection Audio
+@subsection Configuration
+@subsection Console
+@subsection Design Patterns
+@subsection Engine
+@subsection Events
+@subsection File System
+@subsection Gooey
+@subsection Human Interface
+@subsection Logging & Error Control
+@subsection Logging State Diagram
+@subsection Mathematical
+@subsection Miscellaneous
+@subsection Physics
+@subsection Resources
+@subsection Scripting
 

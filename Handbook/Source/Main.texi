@@ -56,7 +56,7 @@ Last updated @value{VERSION_MANUAL}.
 @end titlepage 
 
 @c Output the table of contents at the beginning...
-@c @summarycontents
+@summarycontents
 @contents
 
 @c Top / master node...
@@ -76,9 +76,22 @@ Last updated @value{VERSION_MANUAL}.
 @include "Features.texi"
 @include "Dependent Technology.texi"
 @include "The Game World.texi"
-@include "The Project Crew.texi"
-@include "Information For.texi"
 @include "Gameplay.texi"
+@include "The Project Crew.texi"
+@c @include "Information For All Specialties.texi"
+@c @include "Information For 2D Artists.texi"
+@c @include "Information For Audio Engineers.texi"
+@c @include "Information For Cinematic Artists.texi"
+@c @include "Information For Engineers.texi"
+@c @include "Information For Modeller.texi"
+@c @include "Information For Musicians.texi"
+@c @include "Information For Researchers.texi"
+@c @include "Information For Scripters.texi"
+@c @include "Information For System Administrators.texi"
+@c @include "Information For Translators.texi"
+@c @include "Information For Voice Actors.texi"
+@c @include "Information For Web Developers.texi"
+@c @include "Information For Writers.texi"
 
 @c Appendices...
 @include "Glossary.texi"

@@ -13,9 +13,11 @@ Another important reason is that there is very little, if any, free commercial e
 
 But in terms of their subject matter itself, they tend to appeal more to the senses of the mainstream proprietary user, and thus do not reflect the spirit of a social conscience commonplace in the @i{software libre} community. That also needs to change.
 
+@node Classification
 @section Classification
 People have struggled in the past to classify Avaneya. It is what it is, but the closest traditional categories that form a subset of it are the traditional city builder and management simulations and the real time strategy.
 
+@node Who Is It For?
 @section Who Is It For?
 The game so far has attracted a fairly large base of followers. From what can be observed at this time, the game appears to appeal to those with an interest in:
 

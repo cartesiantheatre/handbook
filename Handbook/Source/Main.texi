@@ -77,7 +77,7 @@ Last updated @value{VERSION_MANUAL}.
 @include "Dependent Technology.texi"
 @include "The Game World.texi"
 @include "The Project Crew.texi"
-@include "Things to Know If You Are.texi"
+@include "Information For.texi"
 @include "Gameplay.texi"
 
 @c Appendices...

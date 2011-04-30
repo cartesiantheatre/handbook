@@ -34,9 +34,440 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
 @end example
 
 @subsection Formatting
+
+@itemize
+
+@item
+Always use spaces and not tabs.
+@sp 1
+
+@item
+Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier, in which case it should be indented so that the identifier begins at a four space interval.
+@sp 1
+
+Right:
+@example
+float SomeFunction()
+@{
+    int i = 0;
+  ++i;
+    return 1.0f;
+@}
+@end example
+@sp 1
+
+Wrong:
+@example
+float SomeFunction()
+@{
+    int i = 0;
+    ++i;
+        return 1.0f;
+@}
+@end example
+@sp 1
+
+@item
+You do not need to indent to accommodate a namespace when an entire source file is enclosed within one. If only part of the source is enclosed in a namespace, then those parts affected should be indented.
+@sp 1
+
+@item
+An opening brace appears on the next line as preceding code.
+@sp 1
+
+Right:
+@example
+float SomeFunction()
+@{
+    for(int x = 0; x < 100; ++x)
+    @{
+        ...
+    @}
+@}
+@end example
+@sp 1
+
+Wrong:
+@example
+float SomeFunction() @{
+    for(int x = 0; x < 100; ++x) @{
+        ...
+    @}
+@}
+@end example
+@sp 1
+
+@item
+Put spaces around binary operands
+@sp 1
+
+Right:
+@example
+A = X + Y;
+if(X == Y)
+    ...
+@end example
+@sp 1
+
+Wrong:
+@example
+A = X+Y;
+if(X==Y)
+    ...
+@end example
+@sp 1
+
+@item
+There is no space between unary operators and the affected variable's name.
+@sp 1
+
+@item
+When accessing an array, there is no space between the array name and the opening left bracket. 
+@sp 1
+
+Right:
+@example
+int n[100];
+y = n[3];
+@end example
+@sp 1
+
+Wrong:
+@example
+int n [100];
+y = n [3];
+@end example
+@sp 1
+
+@item
+The if, for, and while keywords are not followed by a space separating them and the left parenthesis. 
+@sp 1
+
+Right:
+@example
+if(x == 4)
+    return;
+@end example
+@sp 1
+
+Wrong:
+@example
+if (x == 4)
+    return;
+@end example
+@sp 1
+
+@item
+When declaring variables, align the variable names on the same column evenly divisible by four.
+@sp 1
+
+Right:
+@example
+int     Count;
+bool    Complete;
+Window  MainWindow;
+@end example
+@sp 1
+
+Wrong:
+@example
+int Count;
+bool Complete;
+Window MainWindow;
+@end example
+@sp 1
+
+@item
+When calling a function, definitions and function declarations should have no space between the function name and the following left parenthesis.
+@sp 1
+
+Right:
+@example
+int Add(int a, int b)
+@{ 
+    ... 
+@}
+@sp 1
+
+int i = Add(4, 5);
+@end example
+@sp 1
+
+Wrong:
+@example
+int Add (int a, int b)
+@{
+    ...
+@}
+@sp 1
+
+int i = Add (4, 5);
+@end example
+@sp 1
+
+@item
+When calling a function or making a function declaration, no space appears after the left parenthesis or before the right parenthesis.
+@sp 1
+
+Right:
+@example
+foo(x, y);
+bar(z);
+baz();
+@end example
+@sp 1
+
+Wrong:
+@example
+foo( x, y );
+bar( z );
+baz( );
+@end example
+@sp 1
+
+@item
+A brace preceding or following an else keyword appears on the same line as the else. A statement following an else keyword appears on the same line as the else. 
+@sp 1
+
+Right:
+@example
+if(x == 4)
+@{
+    ...
+@}
+else
+  ++y;
+
+if(x == 4)
+@{
+    ...
+@}
+else
+@{
+    ...
+@}
+@end example
+@sp 1
+
+Wrong:
+@example
+if(x == 4) @{
+    ...
+@}
+else ++y;
+
+if(x == 4) @{
+    ...
+@} else ++y;
+
+if(x == 4) @{
+    ...
+@}
+else @{
+    ...
+@}
+@end example
+@sp 1
+
+@item
+A brace preceding a catch keyword appears on a separate line as the catch. 
+@sp 1
+
+Right:
+@example
+try
+@{
+    ...
+@}
+
+catch(Error SomeError)
+@{
+    ...
+@}
+@end example
+@sp 1
+
+@item
+A value in a return statement is parenthesized where it contains more than one term.
+@sp 1
+
+Right:
+@example
+return x;
+return (a + b);
+@end example
+@sp 1
+
+Wrong:
+@example
+return (x);
+return a + b;
+@end example
+@sp 1
+
+@item
+If the body of an if, for, while or similar statement consists of a single statement, the statement does not need to be surrounded by braces.
+@sp 1
+
+Right:
+@example
+if(x == 3)
+  ++x;
+@end example
+@sp 1
+
+@end itemize
+
 @subsection Naming
+@sp 1
+
+@itemize
+@item
+Do not use Hungarian notation. We prefix objects to denote scope only.
+@sp 1
+
+Member of a global namespace:
+@example
+g_Wheels
+@end example
+@sp 1
+
+Member of a structure or class:
+@example
+m_Wheels
+@end example
+@sp 1
+
+Static member of a structure or class:
+@example
+ms_Wheels
+@end example
+@sp 1
+
+@item
+Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums can afford to go easy on brevity to allow for clarity.
+@sp 1
+
+Right:
+@example
+// Class for abstracting a camera interface...
+class Camera
+{
+    ...
+};
+
+// Create a camera...
+Camera LogitechCamera;
+@end example
+
+Wrong:
+@example
+class cam
+{
+    ...
+};
+
+cam log;
+@end example
+
+@end itemize
+
 @subsection Structure
+
 @subsection Comments
+@sp 1
+
+@itemize
+@item
+Comments should begin with a single space, then a capital letter and end with a trailing ellipses. 
+@sp 1
+
+Right:
+@example
+// Load the image...
+GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
+@end example
+@sp 1
+
+Wrong:
+@example
+GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image.
+@end example
+@sp 1
+
+@item
+The farther left the comment, the higher level and abstract what you are trying to do is. The farther right, the more detailed they are. You can think of a given level of indentation as elaborating on how to carry out what was described at a higher (less indented) level. It should be possible in many cases to strip away all the code, except the comments, and still understand what it is that you were trying to do.
+@sp 1
+
+Before:
+@example
+// Analyze single image...
+void AnalysisThread::AnalyzeImage(wxString Path)
+@{
+    // Variables...
+    IplImage   *GrayImage   = NULL;
+    wxString    TempString;
+
+    // Reset the tracker, if not already...
+    Frame.Tracker.Reset(0);
+
+    // Load the image...
+    GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
+
+        // Failed to load media...
+        if(!GrayImage)
+        @{
+            // Alert...
+            wxLogError(wxT("Unable to load image. It may be in an unrecognized"
+                           " format."));
+            
+            // Abort...
+            return;
+        @}
+
+    // Feed into tracker...
+    Frame.Tracker.Advance(pGrayImage);
+    
+    // Cleanup gray image...
+    cvReleaseImage(&GrayImage);
+@}
+@end example
+@sp 1
+
+Stripped:
+@example
+// Analyze single image...
+
+    // Variables...
+
+    // Reset the tracker, if not already...
+
+    // Load the image...
+
+        // Failed to load media...
+
+            // Alert...
+
+            // Abort...
+
+    // Feed into tracker...
+    
+    // Cleanup gray image...
+@end example
+@sp 1
+
+@item
+A single blank line should appear between each pair of functions or methods. 
+@sp 1
+
+@item
+Do not use a blank line after an opening brace or before a closing brace.
+@sp 1
+
+@item
+Do not use duplicate blank lines.
+@sp 1
+@end itemize
 
 @c AresEngine architectural design
 @section Architecture

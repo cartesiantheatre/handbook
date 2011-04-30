@@ -4,7 +4,7 @@
 
 @section Coding Standards
 
-Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where it is inconsistent. Try to apply the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders and scripts.
+Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where everyone applies their own. Try to apply the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere.
 
 @subsection Legal
 Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Licensing Rationale}, should have prefixed the following legal notice. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).

@@ -153,7 +153,7 @@ When you reply to a post, remember to reply to the list and not just the origina
 @sp 1
 
 @item
-When replying to a post, if you have your subscription configured to use batch digest mode,@footnote{When batch digest mode is enabled, the server will "batch" together emails into groups and then it to you as a single compilation to cut down on the amount of email you receive.} you do not need to copy the whole digest. Just quote the minimum needed for context.
+When replying to a post, if you have your subscription configured to use batch digest mode,@footnote{When batch digest mode is enabled, the server will "batch" together emails into groups and then send it to you as a single compilation to cut down on the amount of email you receive.} you do not need to copy the whole digest. Just quote the minimum needed for context.
 @sp 1
 
 @item

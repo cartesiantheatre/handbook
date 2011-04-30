@@ -1,5 +1,5 @@
 @c Note: This will eventually be automatically set via GNU Automake...
-@set VERSION_MANUAL         25 April 2011
+@set VERSION_MANUAL         29 April 2011
 @set VERSION_MANUAL_NO_DAY  April 2011
 @set VERSION_AVANEYA        0.00
 

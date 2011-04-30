@@ -4,6 +4,40 @@
 
 @section Coding Standards
 
+Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where it is inconsistent. Try to apply the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders and scripts.
+
+@subsection Legal
+Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Licensing Rationale}, should have prefixed the following legal notice. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
+@sp 1
+
+@example
+/*
+    AresEngine, a 3D game engine.
+    Copyright (C) 2011 Kshatra Corp <kip@@thevertigo.com>.
+
+    Public discussion on IRC available at #avaneya (irc.freenode.net)
+    or on the mailing list <avaneya@@lists.avaneya.com>.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+@end example
+
+@subsection Formatting
+@subsection Naming
+@subsection Structure
+@subsection Comments
+
 @c AresEngine architectural design
 @section Architecture
 

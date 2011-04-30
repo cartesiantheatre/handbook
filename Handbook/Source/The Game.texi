@@ -35,28 +35,10 @@ The game so far has attracted a fairly large base of followers. From what can be
 The game may take place in the future, but it deals with current problems. The best way to get an idea of the intended audience is to quickly @pxref{Relevant Readings} and to ask yourself the type of audience that those resources would probably appeal to. 
 
 @section Who Is It Not For?
-This game will challenge you to think, and possibly even offend you. Some have even accused Avaneya as being a vehicle for political views. Guilty as charged - like the newspapers, film, television, games, and other mainstream media that we have all become accustomed to taking up residence in our minds. 
+Avaneya is a @i{sui generis}. It is not like other games, and thus it is not for all people. Those who have a brief attention span or believe that things originate in cans, as in, little understanding and appreciation for process, will simply not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
 
-The only difference is that, unlike those mediums, their very presence in Avaneya is not subject to dispute and is self evident, whereas the former often pretend to not have a normative bias. In any case, you would be very hard pressed to try to find any classical work of science fiction, or really any kind of fiction for that matter, that did not. Moreover, that in itself is not necessarily a bad thing.
+This game will challenge you to think, and possibly even offend you. Some have even accused Avaneya of being a vehicle for political views. The project is guilty as charged---like the newspapers, film, television, games, and other mainstream media that saturate us. 
 
-It is not like other games, and thus it is not for all people. Those who have an attention span of only a few seconds or believe that things originate in cans will simply not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
-
-Nevertheless, sometimes it is hard to make such a prediction of who would not enjoy this game. Still, we can take a reasonable guess based on the aforementioned.
-@sp 1
-
-@itemize @bullet
-@item
-Indifferent to issues surrounding personal freedom and its connection to @i{software libre}
-
-@item 
-Indifferent to a sense of community
-
-@item
-No particular preference for science fiction
-
-@item
-Sees issues as disjointed, as opposed to interconnected
-@sp 1
-@end itemize
+The only difference is that, unlike those mediums, the very presence of a normative bias in Avaneya is not subject to dispute and is self evident. Other mediums often pretend to not have one. In any case, you would be very hard pressed to try to find any classical work of science fiction, or really any kind of fiction for that matter, that did not. Moreover, that in itself is not necessarily a bad thing.
 
 

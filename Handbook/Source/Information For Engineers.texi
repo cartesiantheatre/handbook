@@ -2,10 +2,12 @@
 @node Information For Engineers
 @chapter Information For Engineers
 
+@node Coding Standards
 @section Coding Standards
 
 Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where everyone applies their own. Try to apply the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere.
 
+@node Legal
 @subsection Legal
 Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Licensing Rationale}, should have prefixed the following legal notice. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
 @sp 1
@@ -33,7 +35,9 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
 */
 @end example
 
+@node Formatting
 @subsection Formatting
+@sp 1
 
 @itemize
 
@@ -318,6 +322,7 @@ if(x == 3)
 
 @end itemize
 
+@node Naming
 @subsection Naming
 @sp 1
 
@@ -345,16 +350,16 @@ ms_Wheels
 @sp 1
 
 @item
-Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums can afford to go easy on brevity to allow for clarity.
+Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums can afford to spare brevity, allowing for greater clarity.
 @sp 1
 
 Right:
 @example
 // Class for abstracting a camera interface...
 class Camera
-{
+@{
     ...
-};
+@};
 
 // Create a camera...
 Camera LogitechCamera;
@@ -363,17 +368,47 @@ Camera LogitechCamera;
 Wrong:
 @example
 class cam
-{
+@{
     ...
-};
+@};
 
 cam log;
 @end example
 
 @end itemize
 
+@node Structure
 @subsection Structure
+@sp 1
+@itemize
+@item
+Source lines may be up to 100 characters long. (You can configure gedit to display a margin at 100 characters; that may help you follow this convention.)
+@sp 1
 
+@item
+Functions or methods should be broken down into other functions or methods if they get too long and this is reasonable to do.
+@sp 1
+
+@item
+Use @i{assert()} to check your assumptions for things that ought to always be true. Do not abuse it for situations where it is reasonable for a condition to not be true, such as a socket connection failure or a file that could not be opened.
+@sp 1
+
+@item
+Follow the @i{GNU Coding Standards} as much as reasonably possible, save the code formatting points made in this handbook. There is a great deal of wisdom in it.
+@sp 1
+
+@item
+A comment which indicates task which needs to be done at some point should look like this: 
+@sp 1
+
+@example
+// TODO: Check portability here...
+@end example
+@sp 1
+
+@end itemize
+
+@node Comments
 @subsection Comments
 @sp 1
 
@@ -470,16 +505,58 @@ Do not use duplicate blank lines.
 @end itemize
 
 @c AresEngine architectural design
+@node Architecture
 @section Architecture
 
-The engine which powers Avaneya is called the @i{AresEngine}. It is designed to provide for the game, but kept architecturally general enough to lend itself to other projects. If you do not know what a game engine is, Jason Gregory's book @i{Game Engine Programming}@footnote{@xref{Resources for Engineers} for details.} is highly recommended.
+The @i{AresEngine} is responsible for delivering Avaneya. It is designed by the Avaneya crew to provide for the game, but kept architecturally general enough to lend itself to other projects of similar technical requirements (e.g. a city builder / real time strategy genre). If you do not know what a game engine is, Jason Gregory's book @i{Game Engine Programming}@footnote{@xref{Resources for Engineers} for details.} is highly recommended.
+
+The AresEngine is divided up into many subsystems, each responsible for a given logical task. These include audio, responding to input devices, updating the graphical user interface, artificial intelligence, and so on.
+
+Umbrello was used to design the architectural design of our AresEngine. At the time, you needed to use the latest Umbrello built from source because the task at hand was demanding and only Umbrello's bleeding edge was able to handle it. The latest build found in most distributions may have many show stopper bugs in it that would have have made work impossible. Even with the latest build, it still has many problems. Nevertheless, it was the most mature and functional free design tool available at the time and may still be. The Umbrello crew were especially helpful in fixing bugs as they were discovered as the engine design stress tested it.
+
+The following architectural diagrams were pulled from Umbrello at the time this handbook was compiled on @value{VERSION_MANUAL}.
+@sp 1
 
 @subsection Artificial Intelligence
+This diagram concerns itself with useful artificial intelligence algorithms, though not of an entire subsystem itself.
+
+It contains an implementation of the A* search strategy algorithm.@footnote{See @i{Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} The problem here is represented as a pattern for an abstract base class called @i{AStarBase}. The @i{h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
+@sp 1
+
 @subsection Audio
+The @i{AudioManager} subsystem is responsible for all tasks related to audio. Audio playback is divided into streaming and static audio sources. Streaming sources need to be continuously updated by loading new data from disk, decompressing it, and playing it. A common example would be music or narrative. Static sources are usually smaller and only need to played once before being freed. Static source examples would be things like the sound of an object contacting another.
+
+Decoding is done through an appropriate subclass of an @i{Ares::AudioDecoderBase} abstract class, instantiated via the @i{Ares::AudioDecoderFactory} class. Most decoding is done through a subclass of the aforementioned via @i{SDL_audio}.
+
+Playback is accomplished through OpenAL.
+@sp 1
+
 @subsection Configuration
+The @i{ConfigurationManager} subsystem is responsible for storing all user configuration. Its @i{Load()} method reads all configuration variables from disk, and then adds variables from command line as well, in that order. 
+
+Latter configuration variables read are set as non-archivable. A non-archivable configuration variable is one that is not saved to disk.
+
+Much of the manager is implemented in Lua because of its excellent database handling.
+@sp 1
+
 @subsection Console
+The in game console allows users to access aspects of the game engine at runtime. This is useful for debugging or other purposes.
+
+Console commands are implemented in Lua.
+@sp 1
+
 @subsection Design Patterns
+This diagram contains a number of common place design patterns found in many software projects, such as the singleton and multi-factory. 
+
+There seems to be two kinds of singleton design patterns in the literature that are not distinguished, but should be. There is the kind whose instantiation is implicit, meaning you don't care when it is created, just as long as it is there when you need it and that there is only at most one of them ever at a given time. We refer to this as the @i{implicit singleton} and it typically uses lazy instantiation.
+
+The second kind, like the first, only ever has one instance, but you control when you want it instantiated and deconstructed explicitly. We refer to this as the @i{explicit singleton}. This is useful for engine subsystems since C++ does not define the order in which constructors for global objects are invoked across translation units. This is important to consider, given that the order of subsystem initialization is very important (e.g. resource management must precede audio management).
+@sp 1
+
 @subsection Engine
+This diagram captures the engine at the highest level and provides an overview of all components in the most abstract sense.
+@sp 1
+
 @subsection Events
 @subsection File System
 @subsection Gooey

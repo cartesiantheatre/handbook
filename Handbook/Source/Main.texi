@@ -39,6 +39,7 @@ copy of the license is included in @ref{License GFDL}.
 @title @value{MANUAL_TITLE}
 @subtitle @value{MANUAL_DESCRIPTION}
 @author The Avaneya Crew
+last updated @value{VERSION_MANUAL}.
 
 @c Document description...
 @documentdescription
@@ -50,7 +51,6 @@ copy of the license is included in @ref{License GFDL}.
 @vskip 0pt plus 1filll
 @insertcopying
 @sp 1
-Last updated @value{VERSION_MANUAL}.
 
 @c End the title page and begin page numbering...
 @end titlepage 

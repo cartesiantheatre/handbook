@@ -1,4 +1,146 @@
 @c Dependent Technology chapter...
 @node Dependent Technology
 @chapter Dependent Technology
+It is generally a bad engineering practise to re-invent the wheel by creating something in a vacuum when there are already many usable components. Avaneya's dependent technology can be looked at by category. Let us take a look.
+
+@c Audio section...
+@node Dependent Technology Audio
+@section Dependent Technology Audio
+@sp 1
+
+@itemize
+@item
+We use @i{libmikmod} for playback of tracker music modules. Some people were requesting this and it should not take very much effort to integrate into the engine's @i{AudioManager} subsystem. The library needs to be built thread safe.
+
+@item
+@i{OpenAL} is used for 3D spatial audio rendering. Actual decoding of audio data is not done here.
+@end itemize
+
+@c Developer tools section...
+@node Dependent Technology Developer Tools
+@section
+@sp 1
+
+@itemize
+@item
+The @i{GNU Autotools} are used to reconcile and harmonize the idiosyncrasies of different platforms. It makes portability far more straightforward than without it.
+
+@item
+The @i{GNU Compiler Collection} is used for the engine's dependency calculation, compilation, and linking, among other things.
+
+@item
+@i{GNU gettext} is used for localization and translation to different languages by noting strings that are marked for translation our C++ code.
+
+@item
+The @i{xmlstarlet} tool is used to validate XML against a schema. It is useful to check AresPackage manifests and the engine event defition for syntactical errors this way.
+
+@item
+The @i{cppunit} library is a unit testing framework module for the C++ programming language, used only when the engine is built in debug mode.
+
+@item
+The @i{streflop} library (@i{STandalone REproducible FLOating-Point}) allows you to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences machine generated code, floating point processors, and so on, can make result inconsistent across different environments.
+
+@item
+The @i{libebml} library is the backbone of the Matroska multimedia container format. EBML stands for @i{Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans.
+@end itemize
+
+@c Graphics section...
+@node Dependent Technology Graphics
+@section Dependent Technology Graphics
+@sp 1
+
+@itemize
+@item
+All modelling is done with @i{Blender}, or some other free modelling application that supports common free formats, such as @i{Wings 3D}.
+
+@item
+The @i{CEGUI} library allows graphical user interfaces to be built on top of the @i{OGRE 3D} rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts accessing its Lua interface.
+
+@item
+@i{GLEW} (probably redundant with Ogre since it is already dependent on it)
+@i{OGRE 3D}
+
+    - @i{Hydrax} (fluid dynamics)
+        http://www.ogre3d.org/tikiwiki/Hydrax
+    - @i{Caelum} (weather)
+        http://www.ogre3d.org/tikiwiki/Caelum
+    - @i{Terrain}
+        http://www.ogre3d.org/tikiwiki/Terrain
+@i{SDL}
+    - Verify built with recursive mutex support
+    - @i{SDL_image}
+    - {SDL_pango}
+@i{OpenGL}
+    - headers are >= 3.1 compliant
+    - Verify GL_OGLBASE_VERSION at configure time to ensure ABI 
+      compatible with GL 3.x.
+    - Issue warning if renderer is software renderer (e.g. mesa) via m4
+      script.
+@end itemize
+
+@c Input section...
+@node Dependent Technology Input
+@section Dependent Technology Input
+@sp 1
+
+@itemize
+@item
+@end itemize
+
+
+@c Networking section...
+@node Dependent Technology Networking
+@section Dependent Technology Networking
+@sp 1
+
+@itemize
+@item
+@end itemize
+
+@i{gnutls}
+@i{ENet}
+
+@c Operating System section...
+@node Dependent Technology Operating System
+@section Dependent Technology Operating System
+@sp 1
+
+@itemize
+@item
+@end itemize
+
+@i{apport}
+@i{dbus}
+
+@c Physics section...
+@node Dependent Technology Physics
+@section Dependent Technology Physics
+@sp 1
+
+@itemize
+@item
+@i{OgreBullet}
+@end itemize
+
+
+@c Scripting section...
+@node Dependent Technology Scripting
+@section Dependent Technology Scripting
+@sp 1
+
+@itemize
+@item
+@i{Lua} is used to provide scripting support to the AresEngine. The runtime environment needs to have @i{package.loadlib} present.
+
+@item
+The @i{lua-gettext} is a Lua package that acts as a Lua wrapper for gettext bindings.
+
+@item
+The @i{lua-xgettext} tool is a small program for message extraction of marked strings from Lua code so they can be translation to other languages. It is similar to @i{GNU xgettext}, but far more primitive; it just extracts the strings and prints them out, without any additional information. It was written, because GNU `xgettext` did not support Lua at the time.
+
+@item
+The @i{libtolua++} library is used to integrate our C++ code with Lua. It is an updated replacement to the older toLua tool.
+
+@end itemize
+
 

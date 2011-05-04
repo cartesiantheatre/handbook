@@ -1,6 +1,6 @@
-@c Purpose of Handbook chapter...
-@node Purpose of Handbook
-@chapter Purpose of Handbook
+@c Preface chapter...
+@node Preface
+@chapter Preface
 
 The purpose of this handbook is to define the Avaneya project as clearly as possible so that everyone who is involved in its creation understands it. The book is probably not as useful to normal users as it is to contributors. In fact, it may even spoil elements of the game for the latter. On the other hand, normal users are just as likely to enrich the game through their feedback - feedback which is best supported through an understanding of the project's aims.
 

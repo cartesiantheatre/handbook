@@ -4,7 +4,7 @@
 
 @c Set file name for output and tell TEX to open auxiliary files.
 @c  everything before this line is ignored...
-@setfilename "Avaneya Crew Handbook"
+@setfilename "Handbook"
 @documentencoding UTF-8
 
 @c Set title for page headers / footers...
@@ -67,7 +67,7 @@ last updated @value{VERSION_MANUAL}.
 @end ifnottex
 
 @c Main body follows...
-@include "Purpose of Handbook.texi"
+@include "Preface.texi"
 @include "The Game.texi"
 @include "Relevant Readings.texi"
 @include "Licensing Rationale.texi"

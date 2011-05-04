@@ -5,7 +5,7 @@
 This chapter deals with some of the different aspects of the world the
 game takes place in, as one in that world itself might know it as.
 
-@section The Avaneya
+@section Avaneya
 @section Buildings
 @section Characters
 @section Economics

@@ -1,7 +1,9 @@
-@c Dependent Technology chapter...
-@node Dependent Technology
-@chapter Dependent Technology
+@c Selected Technology chapter...
+@node Selected Technology
+@chapter Selected Technology
 It is generally a bad engineering practise to re-invent the wheel by creating something in a vacuum when there are already many usable components. Avaneya's dependent technology is examined here, grouped by category. It is sometimes explained in their maintainer's own words.
+
+We always try to stick to using free software whenever possible. The only time we might use a non-free tool is to use it as a model in designing a suitable replacement. Another time would be where writing a replacement would be far too difficult and we have no choice.
 
 @c Audio section...
 @node Dependent Technology Audio
@@ -45,7 +47,7 @@ The @i{GNU Compiler Collection} is used for the engine's dependency calculation,
 @sp 1
 
 @item
-The @i{libebml} library is the backbone of the Matroska multimedia container format. EBML stands for @i{Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans.
+The @i{libebml} library is the backbone of the Matroska multimedia container format. EBML stands for @i{Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans. @xref{AresPackages} for details on how we are using it in this project.
 @sp 1
 
 @item

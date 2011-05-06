@@ -1,11 +1,11 @@
-@c Relevant Readings chapter...
-@node Relevant Readings
-@chapter Relevant Readings
+@c Relevant Learning Resources chapter...
+@node Relevant Learning Resources
+@chapter Relevant Learning Resources
 
 You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
 
 @c For everyone...
-@section Everyone
+@section For Everyone
 These resources are useful for every kind of contributor, from researchers and writers to modellers and engineers.
 
 You might consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge we have, the greater the quality of the game. The same goes for really any kind of complex simulation, and not just Avaneya.
@@ -113,7 +113,8 @@ G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
 @end itemize
 
 @c For artists...
-@section Artists
+@node Resources For Artists
+@section For Artists
 These resources are useful for different kinds of artists, such as 2D artists, audio engineers, cinematic artists, modellers, musicians, and so on.
 @sp 1
 @itemize
@@ -170,8 +171,8 @@ Roland Hess, No Starch Press, ISBN 9781593271664, 2007.
 @end itemize
 
 @c For engineers...
-@node Resources for Engineers
-@section Engineers
+@node Resources For Engineers
+@section For Engineers
 These resources are useful mostly for engineers and other very technical work.
 @sp 1
 @itemize

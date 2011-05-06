@@ -1,9 +1,0 @@
-@c Information For All Specialties chapter...
-@node Information For All Specialties
-@chapter Information For All Specialties
-
-@section Fonts
-@section Colour Scheme
-@section Theme
-
-

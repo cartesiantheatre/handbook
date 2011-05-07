@@ -7,7 +7,6 @@ game takes place in, as one in that world itself might know it as.
 
 @section Avaneya
 @section Buildings
-@section Characters
 @section Economics
 @section Environmental
 @section Food

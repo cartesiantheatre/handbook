@@ -12,7 +12,7 @@ Try to abide by the project coding standards whenever possible. It is easier to 
 Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Licensing Rationale}, should have prefixed the following legal notice. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
 @sp 1
 
-@example
+@smallexample
 /*
     AresEngine, a 3D game engine.
     Copyright (C) 2011 Kshatra Corp <kip@@thevertigo.com>.
@@ -33,7 +33,7 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-@end example
+@end smallexample
 
 @node Formatting
 @subsection Formatting
@@ -50,25 +50,25 @@ Each level of nesting should be indented by four spaces. The exception to this i
 @sp 1
 
 Right:
-@example
+@smallexample
 float SomeFunction()
 @{
     int i = 0;
   ++i;
     return 1.0f;
 @}
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 float SomeFunction()
 @{
     int i = 0;
     ++i;
         return 1.0f;
 @}
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -80,7 +80,7 @@ An opening brace appears on the next line as preceding code.
 @sp 1
 
 Right:
-@example
+@smallexample
 float SomeFunction()
 @{
     for(int x = 0; x < 100; ++x)
@@ -88,17 +88,17 @@ float SomeFunction()
         ...
     @}
 @}
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 float SomeFunction() @{
     for(int x = 0; x < 100; ++x) @{
         ...
     @}
 @}
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -106,19 +106,19 @@ Put spaces around binary operands
 @sp 1
 
 Right:
-@example
+@smallexample
 A = X + Y;
 if(X == Y)
     ...
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 A = X+Y;
 if(X==Y)
     ...
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -130,17 +130,17 @@ When accessing an array, there is no space between the array name and the openin
 @sp 1
 
 Right:
-@example
+@smallexample
 int n[100];
 y = n[3];
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 int n [100];
 y = n [3];
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -148,17 +148,17 @@ The if, for, and while keywords are not followed by a space separating them and 
 @sp 1
 
 Right:
-@example
+@smallexample
 if(x == 4)
     return;
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 if (x == 4)
     return;
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -166,19 +166,19 @@ When declaring variables, align the variable names on the same column evenly div
 @sp 1
 
 Right:
-@example
+@smallexample
 int     Count;
 bool    Complete;
 Window  MainWindow;
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 int Count;
 bool Complete;
 Window MainWindow;
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -186,7 +186,7 @@ When calling a function, definitions and function declarations should have no sp
 @sp 1
 
 Right:
-@example
+@smallexample
 int Add(int a, int b)
 @{ 
     ... 
@@ -194,11 +194,11 @@ int Add(int a, int b)
 @sp 1
 
 int i = Add(4, 5);
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 int Add (int a, int b)
 @{
     ...
@@ -206,7 +206,7 @@ int Add (int a, int b)
 @sp 1
 
 int i = Add (4, 5);
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -214,19 +214,19 @@ When calling a function or making a function declaration, no space appears after
 @sp 1
 
 Right:
-@example
+@smallexample
 foo(x, y);
 bar(z);
 baz();
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 foo( x, y );
 bar( z );
 baz( );
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -234,7 +234,7 @@ A brace preceding or following an else keyword appears on the same line as the e
 @sp 1
 
 Right:
-@example
+@smallexample
 if(x == 4)
 @{
     ...
@@ -250,11 +250,11 @@ else
 @{
     ...
 @}
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 if(x == 4) @{
     ...
 @}
@@ -270,7 +270,7 @@ if(x == 4) @{
 else @{
     ...
 @}
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -278,7 +278,7 @@ A brace preceding a catch keyword appears on a separate line as the catch.
 @sp 1
 
 Right:
-@example
+@smallexample
 try
 @{
     ...
@@ -288,7 +288,7 @@ catch(Error SomeError)
 @{
     ...
 @}
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -296,17 +296,17 @@ A value in a return statement is parenthesized where it contains more than one t
 @sp 1
 
 Right:
-@example
+@smallexample
 return x;
 return (a + b);
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 return (x);
 return a + b;
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -314,10 +314,10 @@ If the body of an if, for, while or similar statement consists of a single state
 @sp 1
 
 Right:
-@example
+@smallexample
 if(x == 3)
   ++x;
-@end example
+@end smallexample
 @sp 1
 
 @end itemize
@@ -332,21 +332,21 @@ Do not use Hungarian notation. We prefix objects to denote scope only.
 @sp 1
 
 Member of a global namespace:
-@example
+@smallexample
 g_Wheels
-@end example
+@end smallexample
 @sp 1
 
 Member of a structure or class:
-@example
+@smallexample
 m_Wheels
-@end example
+@end smallexample
 @sp 1
 
 Static member of a structure or class:
-@example
+@smallexample
 ms_Wheels
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -354,7 +354,7 @@ Class and object names should be intuitive, try to avoid abbreviations, and each
 @sp 1
 
 Right:
-@example
+@smallexample
 // Class for abstracting a camera interface...
 class Camera
 @{
@@ -363,17 +363,17 @@ class Camera
 
 // Create a camera...
 Camera LogitechCamera;
-@end example
+@end smallexample
 
 Wrong:
-@example
+@smallexample
 class cam
 @{
     ...
 @};
 
 cam log;
-@end example
+@end smallexample
 
 @end itemize
 
@@ -401,9 +401,9 @@ Follow the @i{GNU Coding Standards} as much as reasonably possible, save the cod
 A comment which indicates task which needs to be done at some point should look like this: 
 @sp 1
 
-@example
+@smallexample
 // TODO: Check portability here...
-@end example
+@end smallexample
 @sp 1
 
 @end itemize
@@ -422,16 +422,16 @@ Comments should begin with a single space, then a capital letter and end with a 
 @sp 1
 
 Right:
-@example
+@smallexample
 // Load the image...
 GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
-@end example
+@end smallexample
 @sp 1
 
 Wrong:
-@example
+@smallexample
 GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image.
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -439,7 +439,7 @@ The farther left the comment, the higher level and abstract what you are trying 
 @sp 1
 
 Before:
-@example
+@smallexample
 // Analyze single image...
 void AnalysisThread::AnalyzeImage(wxString Path)
 @{
@@ -469,11 +469,11 @@ void AnalysisThread::AnalyzeImage(wxString Path)
     // Cleanup gray image...
     cvReleaseImage(&GrayImage);
 @}
-@end example
+@end smallexample
 @sp 1
 
 Stripped:
-@example
+@smallexample
 // Analyze single image...
 
     // Variables...
@@ -491,7 +491,7 @@ Stripped:
     // Feed into tracker...
     
     // Cleanup gray image...
-@end example
+@end smallexample
 @sp 1
 
 @item
@@ -533,7 +533,10 @@ This diagram concerns itself with useful artificial intelligence algorithms, tho
 
 It contains an implementation of the A* search strategy algorithm.@footnote{See @i{Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} The problem here is represented as a pattern for an abstract base class called @i{AStarBase}. The @i{h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
 @sp 1
+@float Figure,Figure:ArtificialIntelligenceUML
+The Artificial Intelligence subsystem.
 @image{"AresEngine/Artificial Intelligence", 6in}
+@end float
 
 @c Audio subsection...
 @page
@@ -545,7 +548,10 @@ Decoding is done through an appropriate subclass of an @i{Ares::AudioDecoderBase
 
 Playback is accomplished through OpenAL.
 @sp 1
+@float Figure,Figure:AudioUML
+The audio subsystem.
 @image{"AresEngine/Audio", 6in}
+@end float
 
 @c Configuration subsection...
 @page
@@ -557,7 +563,10 @@ Latter configuration variables read are set as non-archivable. A non-archivable 
 
 Much of the manager is implemented in Lua because of its excellent database handling.
 @sp 1
+@float Figure,Figure:ConfigurationUML
+The configuration subsystem.
 @image{"AresEngine/Configuration", 6in}
+@end float
 
 @c Console subsection...
 @page
@@ -567,7 +576,10 @@ The in game console allows users to access aspects of the game engine at runtime
 
 Console commands are implemented in Lua.
 @sp 1
+@float Figure,Figure:ConsoleUML
+The console subsystem.
 @image{"AresEngine/Console", 6in}
+@end float
 
 @c Design patterns subsection...
 @page
@@ -579,7 +591,10 @@ There seems to be two kinds of singleton design patterns in the literature that 
 
 The second kind, like the first, only ever has one instance, but you control when you want it instantiated and deconstructed explicitly. We refer to this as the @i{explicit singleton}. This is useful for engine subsystems since C++ does not define the order in which constructors for global objects are invoked across translation units. This is important to consider, given that the order of subsystem initialization is very important (e.g. resource management must precede audio management).
 @sp 1
+@float Figure,Figure:DesignPatternsUML
+Useful design patterns.
 @image{"AresEngine/Design Patterns", 6in}
+@end float
 
 @c Engine subsection...
 @page
@@ -587,7 +602,10 @@ The second kind, like the first, only ever has one instance, but you control whe
 @subsection Engine
 This diagram captures the engine at the highest level and provides an overview of all components in the most abstract sense.
 @sp 1
+@float Figure,Figure:EngineUML
+The engine overview.
 @image{"AresEngine/Engine", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -598,21 +616,21 @@ The @i{EventManager} is responsible for intercommunication between various engin
 An event handler can either contain an @i{Ares::EventHandler} class, or can derive from it and override the @i{OnEvent()} method. It registers interest in one or more events via the @i{Register()} method:
 @sp 1
 
-@example
+@smallexample
 EventHandler::Register("some_event");
-@end example
+@end smallexample
 @sp 1
 
 Next, to create and enqueue an event, one would do as follows:
 @sp 1
 
-@example
+@smallexample
 // Create a some_event event...
 Ares::Event SomeEvent("some_event");
 
 // Enqueue event...
 Ares::EventManager::GetSingleton().Enqueue(SomeEvent);
-@end example
+@end smallexample
 @sp 1
 
 Every frame, the @i{EventManager::DispatchEvents()} method is called to pump the message queue. It will get an event from the internal priority queue that is due for processing. Once an event is fetched, it calls @i{Event.Dispatch()} to pass it to all registered handlers so that they may do whatever it is that they would like to do when that event occurs.
@@ -621,7 +639,10 @@ Events.xsd defines the XML schema that the engine uses at runtime to check built
 
 Events.xml contains a list of built-in event types, game engine mod agnostic, for fundamental event types. These include things like input device and window manager events.
 @sp 1
+@float Figure,Figure:EventUML
+The event subsystem.
 @image{"AresEngine/Events", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -630,7 +651,10 @@ Events.xml contains a list of built-in event types, game engine mod agnostic, fo
 Accessing files on disk for textures, shaders, scripts, models, sounds, and so on, requires an intermediary in most game engines. The AresEngine is no different. Files are stored inside of an EBML encoded container format called an AresPackage. The EBML format was selected because it enables extendability for future format changes and allows arbitrary metadata. It also has performance advantages because only a single file (*.AresPackage) needs to be located for a group of files contained within. This reduces file seek and access times. Also, because the AresPackage files can be compressed, it means that they take less time to access their payload because transferring a small file from disk and decompressing in RAM is faster than transferring a large uncompressed file from disk to RAM.
             
 @sp 1
+@float Figure,Figure:FileSystemUML
+The file system subsystem.
 @image{"AresEngine/File System", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -646,7 +670,10 @@ The @i{GooeyManager} is responsible for managing all graphical user interface ov
 
 Most of the interesting interfaces are within CEGUI singletons themselves, with appropriate accessors and mutators exported to Lua.
 @sp 1
+@float Figure,Figure:GooeyUML
+The graphical user interface subsystem.
 @image{"AresEngine/Gooey", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -655,7 +682,10 @@ Most of the interesting interfaces are within CEGUI singletons themselves, with 
 The @i{HumanInterfaceManager} takes care of routing all events from input devices to the appropriate code that has registered to be notified of that event. In that sense, the manager is mostly unidirectional, but also allows to send information the other way back to the input device if it supports a haptic interface (sometimes called force feedback).
 
 @sp 1
+@float Figure,Figure:HumanInterfaceUML
+The human interface subsystem.
 @image{"AresEngine/Human Interface", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -663,11 +693,17 @@ The @i{HumanInterfaceManager} takes care of routing all events from input device
 @subsection Logging & Error Control
 The @i{LogManager} is responsible for providing a central logging subsystem for all the other subsystems.
 @sp 1
+@float Figure,Figure:LoggingUML
+The logging and error control subsystem.
 @image{"AresEngine/Logging and Error Control", 6in}
+@end float
 @sp 1
 Since message can be emitted from any number of places, such as within the engine, or within some other externally linked component, such as CEGUI or OGRE, messages have to be intercepted and channeled through the @i{LogManager}. The following diagram makes this more clear.
 @sp 1
+@float Figure,Figure:LoggingStateUML
+The logging pipeline.
 @image{"AresEngine/Logging State Diagram", 6in}
+@end float
 @sp 1
 
 @c subsection...
@@ -677,7 +713,10 @@ Since message can be emitted from any number of places, such as within the engin
 Most mathematical routines for matrices and other linear algebra are provided by OGRE 3D. Some things like more advanced random number generation have to be implemented ourselves here.
 
 @sp 1
+@float Figure,Figure:MathematicalUML
+Various mathematical facilities.
 @image{"AresEngine/Mathematical", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -685,7 +724,10 @@ Most mathematical routines for matrices and other linear algebra are provided by
 @subsection Miscellaneous
 This is a catch-all for classes and functions that had no business elsewhere.
 @sp 1
+@float Figure,Figure:MiscellaneousUML
+Miscellaneous engine components.
 @image{"AresEngine/Miscellaneous", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -693,7 +735,10 @@ This is a catch-all for classes and functions that had no business elsewhere.
 @subsection Physics
 The @i{PhysicsManager} needs to be seriously refactored since @i{OgreBullet} was found as a viable option for physics support. This is the original, incomplete, design before that decision was made.
 @sp 1
+@float Figure,Figure:ScriptingUML
+The scripting subsystem.
 @image{"AresEngine/Physics", 6in}
+@end float
 
 @c subsection...
 @page 
@@ -701,7 +746,10 @@ The @i{PhysicsManager} needs to be seriously refactored since @i{OgreBullet} was
 @subsection Resources
 The @i{ResourceManager} is responsible for ensuring that whenever code needs a piece of game data, such as a model or animation, all of its requisites are loaded, in the correct order, only once, and take up only as much room as they absolutely must. The @i{ResourceManager} and the @i{FileManager} communicate to help the former locate what it needs physically on disk.
 @sp 1
+@float Figure,Figure:ResourcesUML
 @image{"AresEngine/Resources", 6in}
+The resources subsystem.
+@end float
 
 @c subsection...
 @page 
@@ -709,5 +757,10 @@ The @i{ResourceManager} is responsible for ensuring that whenever code needs a p
 @subsection Scripting
 The @i{ScriptManager} is responsible for exposing all useful aspects of the game engine to the game scripters. Since the engine itself is defined in code, the role of defining what makes Avaneya, Avaneya, is left to script writers.
 @sp 1
+
+@float Figure,Figure:ScriptingUML
 @image{"AresEngine/Scripting", 6in}
+The scripting subsystem.
+@end float
+
 

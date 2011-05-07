@@ -71,6 +71,7 @@ last updated @value{VERSION_MANUAL}.
 @include "The Game.texi"
 @include "Relevant Resources.texi"
 @include "The Story.texi"
+@include "The Characters.texi"
 @include "The Game World.texi"
 @include "Gameplay.texi"
 @c @include "Features.texi"

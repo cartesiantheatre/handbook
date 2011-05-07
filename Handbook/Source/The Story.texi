@@ -9,8 +9,19 @@
 @node Storyboard
 @section Storyboard
 @c Explain the purpose of storyboarding here.
-@subsection Opening Cinematic
+@subsection Opening Cinematic Sequence
 
 @node Fictional Timeline
 @section Fictional Timeline
 
+The game frequently references events in the game world fictional timeline. Time is referenced relative to the @i{year zero epoch}. Year zero's placement in the Gregorian calendar is @i{never} explicitly given, but inferentially, one can reason that it is somewhere distant enough in the future to allow for some creative license, but close enough to allow a contemporary audience to relate.
+@sp 1
+
+@itemize
+@item
+@b{0 A.R.} - Major-General Arda Baştürk discharges all public debt, replaces fiat Federal Reserve currency with rhodium standard, and transforms colony into a constitutional republic as part of colony's Declaration of Independence. These events serve as the epoch by which @i{year zero} of @i{@b{a}fter @b{r}epublic}, with dates preceding denote @i{@b{b}efore @b{r}epublic}.
+@sp 1
+
+@item
+@b{1 A.R.} - NAU forces 
+@end itemize

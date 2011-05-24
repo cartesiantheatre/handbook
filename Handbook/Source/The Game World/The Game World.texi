@@ -17,6 +17,6 @@ game takes place in, as one in that world itself might know it as.
 @section Politics and Legal
 @section Population
 @section Resources
-@section Time
+@include "The Game World/Time.texi"
 @section Weapons
 

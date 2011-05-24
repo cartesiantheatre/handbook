@@ -1,5 +1,5 @@
 @c TODO: Automate with GNU Automake...
-@set VERSION_MANUAL         6 May 2011
+@set VERSION_MANUAL         16 May 2011
 @set VERSION_MANUAL_NO_DAY  May 2011
 @set VERSION_AVANEYA        0.00
 

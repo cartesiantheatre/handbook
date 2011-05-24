@@ -1,8 +1,0 @@
-@c Preface chapter...
-@node Preface
-@chapter Preface
-
-The purpose of this handbook is to define the Avaneya project as clearly as possible so that everyone who is involved in its creation understands it. The book is probably not as useful to normal users as it is to contributors. In fact, it may even spoil elements of the game for the latter. On the other hand, normal users are just as likely to enrich the game through their feedback - feedback which is best supported through an understanding of the project's aims.
-
-It is also useful to have the project as well defined as possible in a single location. This is handy for those of us that may live in remote areas and have infrequent internet access from their machine, as is currently the case with some, but still want to contribute in whatever way they can.
-

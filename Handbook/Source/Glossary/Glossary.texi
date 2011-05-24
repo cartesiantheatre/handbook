@@ -27,6 +27,14 @@ An example where the difference between the two is well illustrated is with the 
 @dfn{@strong{Regolith}}: What most refer to as dirt. More technically, it is the the loose heterogeneous mixture of material that blankets the solid rock.
 @sp 1
 
+@c Rhodium
+@node Glossary Rhodium
+@noindent
+@dfn{@strong{Rhodium}}: An elemental chemical with the symbol Rh and atomic number 45. It is a member of the platinum family and considered to be the most precious metal of that family, even exceeding the value of gold. It is also one of rarist. 
+
+Usually the only way of getting any kind of high quantity mineral is through high-grade ore. This only happens when complex hydrological and volcanic processes have happened, which in our solar system, has only occured on Mars and Earth - hence why the Moon is barren. But unlike the Earth, Martian deposits have remained untapped.
+@sp 1
+
 @c RWGS reactor...
 @noindent
 @dfn{@strong{RWGS reactor}}: The reverse-water-gas-shift reactor is a method of producing oxygen (@math{O_2}) from carbon dioxide (@math{CO_2}). This is useful because the latter is plentiful in the Martian atmosphere at 95 %.
@@ -51,5 +59,16 @@ To start the process, only a small amount of water is required which acts as a r
 @sp 1
 
 The reactor needs to be at @math{400\,^{\circ}{\rm C}} and at low pressure. This makes it almost the same as the @emph{RWGS reactor} except that it uses a different catalyst to make methane instead of carbon monoxide. You can either use nickel, which is cheap, or ruthenium-on-alumina, which is safer, but more expensive.
+@sp 1
+
+@c Sol...
+@noindent
+@dfn{@strong{Sol}}: Short for solar day, the length of time a planet takes to rotate completely on its polar axis with respect to the sun. Terrans call this a day, Martians a sol. See also @i{yestersol}.
+@sp 1
+
+@c Yestersol...
+@noindent
+@node Glossary Yestersol
+@dfn{@strong{Yestersol}}: The sol preceding the current one. This is the Mars analogue to the Terran yesterday, but different since the length of a sol on both worlds is different.
 @sp 1
 

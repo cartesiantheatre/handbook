@@ -1,0 +1,24 @@
+@c Time section...
+@node Game World Time
+@section Time
+
+The colonists use a different calendar than on Earth for both practical and political reasons.
+
+Practical, because the Gregorian calendar is useless in a world where the orbital period, seasons, and length of a solar day are different than on Earth. The calendar's months, for instance, are not meaningful in the absence of the natural cycles of the Earth's Moon.
+
+Political, partly because the original Avaneya settlers were predominantly secular, the Gregorian calendar's year zero being incompatible with that; and partly that they desired a calendar which was meaningful in the context of @i{their own} collective memory.
+
+@c Explain hours...
+But as the details go, a Martian hour is the same as a Terran hour, composed of 3600 Terran seconds.
+
+@c Explain solar day...
+A @dfn{sol} is a solar day.@footnote{A @dfn{yestersol} being the sol preceding the current one.} This is the Martian analogue to a Terran day, but 2.7 % longer. The conversion of 1.027491 Terran days to Martial sols means that a sol is slightly longer than on Earth. Martian clocks are therefore designed to @dfn{time slip} at midnight for 39 minutes, 40 seconds. This allows Martians to use a 24 hour clock which they are accustomed to.
+
+@c Explain year...
+A Martian year, abbreviated @dfn{MYr}, contains 668.6 sols, or 689 days by a terrestrial metric. That means there are 88775.245 seconds in a Martian year with 1.8876712 Martian years for every Terran year (1 year, 320 days, and 18.2 hours). 
+
+The @math{L_s} system is used to designate the solar longitude, the angle Mars makes with respect to the Sun. This is measured from the northern hemisphere with the vernal or spring equinox (@math{L_s = 0}). Therefore @math{L_s = 90} is the summer solstice; @math{L_s = 180}, the autumn equinox; and @math{L_s = 270} the winter solstice. 
+
+There are no timezones. All clocks are set to those of the first settlement location.
+
+

@@ -90,7 +90,7 @@ Writers work closely with the researchers and other artists to provide dialogue 
 
 @page
 @section Avaneya Code of Conduct
-@include "Code of Conduct.texi"
+@include "The Project Crew/Code of Conduct.texi"
 
 @section Current Members
 @c include "Current Members.texi"

@@ -5,18 +5,18 @@
 This chapter deals with some of the different aspects of the world the
 game takes place in, as one in that world itself might know it as.
 
-@section Avaneya
-@section Buildings
-@section Economics
-@section Environmental
-@section Food
-@section Ground Vehicles and Machinery
-@section Indoors
-@section Kit
-@section Locations
-@section Politics and Legal
-@section Population
-@section Resources
+@c @section Avaneya
+@c @section Buildings
+@c @section Economics
+@c @section Environmental
+@c @section Food
+@c @section Ground Vehicles and Machinery
+@c @section Indoors
+@c @section Kit
+@c @section Locations
+@c @section Politics and Legal
+@c @section Population
+@c @section Resources
 @include "The Game World/Time.texi"
-@section Weapons
+@c @section Weapons
 

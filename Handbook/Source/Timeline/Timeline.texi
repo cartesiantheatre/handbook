@@ -13,20 +13,20 @@ The year zero's placement relative to the Gregorian calendar is deliberately nev
 
 @c Provides hint to astute reader of rough order of magnitude of time between now and story...
 @item
-@b{12 Feb 75 B.R.} The last of the International Space Station crew return to Earth with the station subsequently decommissioned, deorbited, and incinerated during atmospheric entry.
+@b{12 Feb 75 B.R.} The last of the @i{International Space Station} crew return to Earth with the station subsequently decommissioned, deorbited, and incinerated during atmospheric entry.
 @sp 1
 
 @item
-@b{26 June 42 B.R.} The Bancor is declared the new global currency and implemented via the respective central banks of the North American Union, European Union, African Union, and Asian Union.
+@b{26 June 42 B.R.} The bancor is declared the new global currency and implemented via the respective central banks of the North American Union, European Union, African Union, and Asian Union.
 @sp 1
 
 @c Don't use provisional designation for asteroid since includes fixed Gregorian date in name...
 @item
-@b{13 Dec 39 B.R.} Ramraj discovers a near-Earth, C-type Amor II asteroid, with a size comparable to Phobos. It is rapidly assigned the designation of @i{52048 Varuna} by the International Astronomical Union. His findings are detailed in the @i{Minor Planet Circular} where he calculates a near collision trajectory with Mars.
+@b{13 Dec 39 B.R.} Ramraj discovers a near-Earth, C-type Amor II asteroid, with a size comparable to Phobos from the Lincoln Near-Earth Asteroid Research laboratory, Socorro, New Mexico, North American Union. The discovery is rapidly assigned the designation @dfn{52048 Varuna} by the @i{International Astronomical Union}. His findings are detailed in the @i{Minor Planet Circular} where he calculates a near collision trajectory with Mars.
 @sp 1
 
 @item
-@b{13 Dec 37 B.R.} Wikileaks publishes a leaked list of 163 purported attendees of the annual Bilderberg conference that were held three days prior at the Hotel de Crillon, Paris. Dr. Samuel Lieberman, director of the National Institute of Standards and Technology, and Adriaan Janssen, the Secretary-General of the United Nations, are among those listed.
+@b{13 Dec 37 B.R.} Wikileaks publishes a leaked list of 163 purported attendees of the annual Bilderberg conference held three days prior at the Hotel de Crillon, Paris, European Union. Dr. Samuel Lieberman, director of the National Institute of Standards and Technology, and Adriaan Janssen, the Secretary-General of the United Nations, are among those listed.
 @sp 1
 
 @item
@@ -44,7 +44,11 @@ The year zero's placement relative to the Gregorian calendar is deliberately nev
 @item
 @b{12 Oct 35 B.R.} The International Mars Summit concludes publishing its findings in the @dfn{Mars Report}: @i{"Although the Mars Direct approach is totally feasible, the bar can and should be pushed. The summit determined that it is best to go, not merely for the sake of demonstrating that a safe return is possible, but to establish a permanent settlement on Mars. The purpose being to bootstrap the first non-terrestrial expansion of human civilization for the benefit of all mankind."}
 
-A preliminary draft of the @dfn{Mars Treaty} is produced using a revised @i{Outer Space Treaty} of 1967 A.D. as a basis for a subset of it. The treaty provides the contractual basis for all signatories, outlining the roadmap, responsibilities, and party resource allocations necessary to serve as a vehicle for the terraformation and first manned mission to Mars operating under a United Nations mandate. The treaty also provides an agreement governing the activities of states on Mars and its two moons, Phobos and Deimos. This international project implied by the treaty is termed the @i{Avaneya Initiative}.
+A preliminary draft of the @dfn{Mars Treaty} is produced using a revised @i{Outer Space Treaty} of 1967 A.D. as a basis for a subset of it. The treaty provides the contractual basis for all signatories, outlining the roadmap, responsibilities, and party resource allocations necessary to serve as a vehicle for the terraformation and first manned mission to Mars operating under a United Nations mandate. The treaty also provides an agreement governing the activities of states on Mars and its two moons, Phobos and Deimos. 
+
+The terraformation strategy is to be initiated by intercepting @i{52048 Varuna} and deflecting it to directly impact Mars using a nuclear warhead. Being a C-type asteroid, it contains high levels of hydrated (water-containing) minerals which, when released into the atmosphere, will greatly increase cloud condensation nuclei. Data was presented at the summit predicting a dramatic [increase / decreasing] in albedo, the proportion of sunlight reflected back into space. This would cause a cascading series of reactions, increasing the mean surface temperature and atmospheric pressure.
+
+This international project implicated by the treaty is termed the @dfn{Avaneya Initiative}.
 @sp 1
 
 @item
@@ -52,9 +56,9 @@ A preliminary draft of the @dfn{Mars Treaty} is produced using a revised @i{Oute
 
 The United Nations Office for Outer Space Affairs (UNOOSA) is dissolved. Its former responsibilities are transferred to UNSA under its new mandate.
 
-The resolution also requires members to accede the North American Union Aeronatical and Space Agency (NASA), European Space Agency (ESA), Japan Aerospace Exploration Agency (JAXA), Italian Space Agency (ISA), and all other national member space agencies under centralized UNSA administration. This is granted under the justification that space exploration and settlement ought to be an endeavour for all mankind, best realized through the aggregation of resources.
+The resolution also requires members to accede the North American Union Aeronatical and Space Agency (NASA), European Space Agency (ESA), Asian Aerospace Exploration Agency (AAXA), and all other national member space agencies under centralized UNSA administration. This is granted under the justification that space exploration and settlement ought to be an endeavour for all mankind, best realized through the aggregation of resources.
 
-Dr. Samuel Lieberman is nominated to the Office of the President of the UNSA, resigning his position as director for the National Institute of Standards and Technology.
+Lieberman is nominated to the Office of the President of the UNSA, resigning his position as director for the National Institute of Standards and Technology.
 @sp 1
 
 @item
@@ -65,13 +69,13 @@ Dr. Samuel Lieberman is nominated to the Office of the President of the UNSA, re
 @b{17 Jan 30 B.R.} UNSA's Office of the Avaneya Initiative announces successful bids. The @dfn{Iterum Shipyard} contract is jointly awarded to Lockheed Martin-Boeing and Mercedes-Pratt & Whitney to build a station in low Earth orbit at a cost of 2.2 billion bancors. The station is to be used as a general purpose interplanetary space vehicle construction platform.
 
 @c Lockheed Martin's failed X-33 design would be a good starting point for a model...
-Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} suborbital spaceplanes intended to provide UNSA with heavy lift workhorses for transporting personnel and materials to the Iterum Station. They require no external solid booster rockets or external fuel tank, unlike their retired Space Shuttle predecessor, and each operate at less than @math{{1 / 5}^{th} } the cost.
+Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} suborbital spaceplanes. These spaceplanes provide UNSA with heavy lift workhorses for transporting personnel and materials to the Iterum Station. They require no external solid booster rockets or external fuel tank and each operate at less than @math{{1 / 5}^{th} } the cost of the long retired Space Shuttle predecessor.
 
-Mitsubishi-Saab's is awarded a contract to provide the Avaneya, constructed @i{in situ}, at the Iterum Shipyard, at a cost of 7.8 billion bancors. 
+Mitsubishi-Saab's is awarded a contract to provide the @dfn{Avaneya}, constructed @i{in situ}, at the @i{Iterum Shipyard}, at a cost of 7.8 billion bancors. 
 
-Volvo-John Deere is awarded a contract to provide Avaneya's nuclear electric ion-drive propulsion system at a cost of 920 million bancors. 
+Volvo-John Deere is awarded a contract to provide @i{Avaneya's} nuclear electric ion-drive propulsion system at a cost of 920 million bancors. 
 
-Soros-Murdoch Aerospace is awarded a contract to provide four @i{Mars Positioning System} satellites and the @i{Mars Enhanced Telecommunications Orbiter} at a cost 750 million bancors.
+Soros-Murdoch Aerospace is awarded a contract to provide four @i{Mars Positioning System} satellites and the @i{Mars Enhanced Telecommunications Orbiter} carrying an optical relay at a cost 750 million bancors.
 @sp 1
 
 @c Huelva pronounced \ˈwel-vä, ˈhwel-\
@@ -92,37 +96,53 @@ Soros-Murdoch Aerospace is awarded a contract to provide four @i{Mars Positionin
 @sp 1
 
 @item
-@b{ B.R.} Last rocket leaves UNSA's Cape Canaveral launchpad carrying construction material for Iterum Shipyard.
+@b{ B.R.} @i{Internet Assigned Numbers Authority} allocates @code{A001:CA7:3134::/48} IPv6 address block for Martian use. 
 @sp 1
 
 @item
-@b{ B.R.} Avaneya construction is completed @i{in situ} at the Iterum Shipyard, low Earth orbit. The station orbits Earth at an altitude of 340 km, travelling at a speed of 27,400 km/h, and taking 1.5 hours to complete an orbital revolution.
+@b{ B.R.} Last rocket leaves UNSA's Cape Canaveral launchpad carrying construction material for the @i{Iterum Shipyard}.
 @sp 1
 
 @item
-@b{ B.R.} Launched from the Kennedy Space Center, Florida, an SSTO transporting the Avaneya crew dock with the Iterum Shipyard, low Earth orbit.
+@b{ B.R.} @i{Avaneya} construction is completed @i{in situ} at the @i{Iterum Shipyard}, low Earth orbit. The station orbits Earth at an altitude of 340 km, travelling at a speed of 27,400 km/h, and taking one and a half hours to complete one orbital revolution.
 @sp 1
 
 @item
-@b{7 Jan 8 B.R.} Avaneya completes all system checks and disembarks Iterum Shipyard berth. It performs a delta-v from low Earth orbit into a type II Hohmann transfer orbital manoeuvre.
+@b{ B.R.} Launched from the Kennedy Space Center, Florida, an SSTO transporting the @i{Avaneya} crew dock with the @i{Iterum Shipyard}, low Earth orbit.
 @sp 1
 
 @item
-@b{27 Aug 8 B.R.} Avaneya deploys four @i{Mars Positioning Satellites} (MPS) into medium Martian orbit.
+@b{7 Jan 8 B.R.} @i{Avaneya} completes all system checks and disembarks @i{Iterum Shipyard} berth. It performs a delta-v from low Earth orbit into a type II Hohmann transfer orbital manoeuvre.
 @sp 1
 
 @item
-@b{28 Aug 8 B.R.} Avaneya aerobreaks into Martian orbit. Instrumentation subsystems update onboard areology database on detailed surface geography, weather, mineralogy, and more.
+@b{27 Aug 8 B.R.} @i{Avaneya} deploys four @i{Mars Positioning Satellites} (MPS) into medium Martian orbit.
 @sp 1
 
 @item
-@b{30 Aug 8 B.R.} Landing site selected. Cargo of mostly construction equipment, hydrogen fuel, water, and other provisions, are jettisoned and parachuted to surface with no material loss, save one container due to an attitude control computer malfunction.
+@b{28 Aug 8 B.R.} @i{Avaneya} aerobreaks into Martian orbit. Instrumentation subsystems update onboard areology database on detailed surface geography, weather dynamics, mineralogy, and more.
+
+@i{Mars Enhanced Telecommunications Orbiter} is released and deploys itself into geostationary orbit.
 @sp 1
 
 @item
-@b{30 Aug 8 B.R.} All crew alight the Avaneya via the @dfn{Manu} landing craft, performing a successful soft landing at preselected drop site. Communications uplink successfully established with Mission Control. 
+@b{29 Aug 8 B.R.} @i{Mars Enhanced Telecommunications Orbiter} successfully completes self diagnostics and registers itself into UNSA's @i{Interplanetary Internet} as an available communications node, giving rise to what becomes colloquially known as @dfn{Solnet}. Terran downlink passes through a ground station at UNSA's Jet Propulsion Laboratory providing tier 1 network access.
 
-Team briefings are conducted within Manu while, concurrently, the recovery team is about, and the construction team are busy erecting and anchoring temporary inflatable tents and greenhouses.
+Brokered by a satellite uplink with METO, the @i{Avaneya} communications team establish contact with Mission Control routed over Solnet. Solnet becomes the defacto standard for Earth-Mars intercommunication.
+@sp 1
+
+@item
+@b{30 Aug 8 B.R.} Landing site selected. Cargo of mostly construction equipment, hydrogen fuel, water, and other provisions, are jettisoned and parachuted to surface with no material loss, save one asset due to an attitude control computer malfunction.
+@sp 1
+
+@item
+@b{30 Aug 8 B.R.} All crew alight the @i{Avaneya}, boarding the @dfn{Manu} landing craft. The @i{Avaneya} tracks the critical manoeuvres of @i{Manu's} entry, descent, and soft landing at the preselected drop site. The communications uplink with Mission Control is maintained throughout over a 4 minute delayed Solnet connection.
+
+Crew perform a successful soft landing where they are met with a temperature of @math{-70^{\circ}}C and an atmospheric pressure of 0.030 kPa. Time is local noon to maximize photovoltaic use.
+
+Team briefings are conducted within @i{Manu} at the drop site. Concurrently, the recovery team are deployed to recover all assets. 
+
+The construction team begin excavation for anchoring and erecting temporary inflatable tents and greenhouses.
 @sp 1
 
 @item
@@ -132,19 +152,15 @@ Sebatier, RWGS, and methanol gas processors@footnote{See @ref{Glossary} for more
 @sp 1
 
 @item
-@b{14 Sep 8 B.R.} Recovery team complete retrieval of all undamaged parachuted cargo within a 92 kilometre radius from the crew landing site, as within the pre-calculated landing error margin of 100 kilometres.
+@b{14 Sep 8 B.R.} Recovery team's rovers directed by scouts on methanol motorbikes complete asset recovery of all undamaged parachuted cargo within a 92 kilometre radius from the crew landing site.
 @sp 1
 
 @item
-@b{15 Sep 8 B.R.} @i{Internet Assigned Numbers Authority} allocates @code{A001:CA7:3134::/48} IPv6 address block for Martian use. 
+@b{16 Sep 8 B.R.} Construction team bring backhoes, front loaders, bulldozers, tractors, graders, water ice processors, and dump trucks online. 
 
-@i{Mars Enhanced Telecommunications Orbiter} successfully completes self diagnostics and registers itself into UNSA's @i{Interplanetary Internet} as an available communications node. Terran downlink passes down through a ground station at UNSA's Jet Propulsion Laboratory, a tier 1 network provider. The colloquial term for this new augmented form of the Internet is @dfn{Solnet}.
+On-board artificial intelligence and system firmware is upgraded from UNSA's Jet Propulsion Laboratory over Solnet. 
 
-Brokered by a satellite uplink with METO, the Avaneya Communications Team establish Solnet contact with Mission Control. Solnet becomes the defacto standard for Earth-Mars intercommunication.
-@sp 1
-
-@item
-@b{16 Sep 8 B.R.} Construction team bring backhoes, front loaders, bulldozers, tractors, graders, and dump trucks online with artificial intelligence firmware downloaded from UNSA's Jet Propulsion Laboratory from Solnet. Mining and excavation operations begin through a mixture of directly manned, remotely manned, and autonomous operation.
+Mining and excavation operations begin through a mixture of directly manned, remotely manned, and autonomous operation.
 @sp 1
 
 @c Needs to happen at next window of opportunity...
@@ -154,7 +170,7 @@ Brokered by a satellite uplink with METO, the Avaneya Communications Team establ
 
 @c Year zero...
 @item
-@b{[Year Zero] 3 May 0 A.R.} Major-General Arda Baştürk informs the Secretary-General of the United Nations via an internationally televised address of the passage of the Republic of X Act, initiating steps to secure the settlement's independence. The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The Bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic.
+@b{[Year Zero] 3 May 0 A.R.} Major-General Arda Baştürk informs the Secretary-General of the United Nations via an internationally televised address of the passage of the Rubicon Act, initiating steps to secure the settlement's independence. The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The Bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic.
 @sp 1
 
 @item

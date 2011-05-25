@@ -17,7 +17,7 @@ A @dfn{sol} is a solar day.@footnote{A @dfn{yestersol} being the sol preceding t
 @c Explain year...
 A Martian year, abbreviated @dfn{MYr}, contains 668.6 sols, or 689 days by a terrestrial metric. That means there are 88775.245 seconds in a Martian year with 1.8876712 Martian years for every Terran year (1 year, 320 days, and 18.2 hours). 
 
-The @math{L_s} system is used to designate the solar longitude, the angle Mars makes with respect to the Sun. This is measured from the northern hemisphere with the vernal or spring equinox (@math{L_s = 0}). Therefore @math{L_s = 90} is the summer solstice; @math{L_s = 180}, the autumn equinox; and @math{L_s = 270} the winter solstice. 
+The @math{L_s} system is used to designate the solar longitude, the angle Mars makes with respect to the Sun. This is measured from the northern hemisphere with the vernal or spring equinox (@math{L_s=0^{\circ}}). Therefore @math{L_s=90^{\circ}} is the summer solstice; @math{L_s=180^{\circ}}, the autumn equinox; and @math{L_s=270^{\circ}} the winter solstice. 
 
 There are no timezones. All clocks are set to those of the first settlement location.
 

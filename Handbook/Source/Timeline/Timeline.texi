@@ -88,7 +88,7 @@ Soros-Murdoch Aerospace is awarded a contract to provide four @i{Mars Positionin
 @sp 1
 
 @item
-@b{ B.R.} Crew selection is completed with a broad range of personnel including flight engineers, artificial intelligence specialists with knowledge engineers among them, cyberneticists, chemical and civil engineers, cold weather construction experts, mechanics, biogeochemists, geologists, areobotanists, one xenobiologist, and more. Arda Baştürk is named Mission Commander.
+@b{ B.R.} Crew selection is completed with a broad range of personnel including flight engineers, artificial intelligence specialists with knowledge engineers among them, cyberneticists, chemical and civil engineers, cold weather construction experts, mechanics, biogeochemists, geologists, areobotanists, one xenobiologist, and more. Arda Baştürk is named Mission Commander. United Nations envoy Jacob Kissinger is appointed to accompany the crew.
 @sp 1
 
 @item
@@ -138,11 +138,13 @@ Brokered by a satellite uplink with METO, the @i{Avaneya} communications team es
 @item
 @b{30 Aug 8 B.R.} All crew alight the @i{Avaneya}, boarding the @dfn{Manu} landing craft. The @i{Avaneya} tracks the critical manoeuvres of @i{Manu's} entry, descent, and soft landing at the preselected drop site. The communications uplink with Mission Control is maintained throughout over a 4 minute delayed Solnet connection.
 
-Crew perform a successful soft landing where they are met with a temperature of @math{-70^{\circ}}C and an atmospheric pressure of 0.030 kPa. Time is local noon to maximize photovoltaic use.
+Crew perform a successful soft landing where they are met with a temperature of @math{-70^{\circ}}C and an atmospheric pressure of 0.030 kPa. Time is local noon, allowing for maximum photovoltaic use.
 
 Team briefings are conducted within @i{Manu} at the drop site. Concurrently, the recovery team are deployed to recover all assets. 
 
-The construction team begin excavation for anchoring and erecting temporary inflatable tents and greenhouses.
+Dynamic isotope power systems are brought online for temporary power.
+
+The construction team begin minor excavation for anchoring and erecting temporary 340 mb rated aluminium strut reinforced inflatable polypropylene tents for the Command Centre and habitats, not requiring a pressurized suit. The greenhouse tent is rated 68 mb sufficient for plant life, but requiring a pressurized suit.
 @sp 1
 
 @item
@@ -156,9 +158,9 @@ Sebatier, RWGS, and methanol gas processors@footnote{See @ref{Glossary} for more
 @sp 1
 
 @item
-@b{16 Sep 8 B.R.} Construction team bring backhoes, front loaders, bulldozers, tractors, graders, water ice processors, and dump trucks online. 
+@b{16 Sep 8 B.R.} On-board artificial intelligence and system firmware is upgraded from UNSA's Jet Propulsion Laboratory over Solnet.
 
-On-board artificial intelligence and system firmware is upgraded from UNSA's Jet Propulsion Laboratory over Solnet. 
+Mechanics team complete the necessary preparation of the backhoes, front loaders, bulldozers, tractors, graders, water ice processors, dump trucks, and other vehicles rendering them available for construction team use.
 
 Mining and excavation operations begin through a mixture of directly manned, remotely manned, and autonomous operation.
 @sp 1
@@ -168,21 +170,33 @@ Mining and excavation operations begin through a mixture of directly manned, rem
 @b{7 Sep 8 B.R.} Flight engineers issue instructions remotely to @i{Avaneya} to return to Iterum Shipyard from the surface.
 @sp 1
 
+@item
+@b{12 April 8 B.R.} Arda submits himself as a candidate on the ballot for Chancellor of the Republic, accepting it to form the first interim government. Kissinger strongly advises him against this as being unnecessary.
+@sp 1
+
 @c Year zero...
 @item
-@b{[Year Zero] 3 May 0 A.R.} Major-General Arda Baştürk informs the Secretary-General of the United Nations via an internationally televised address of the passage of the Rubicon Act, initiating steps to secure the settlement's independence. The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The Bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic.
+@b{[Year Zero] 3 May 0 A.R.} Arda informs the Secretary-General of the United Nations over Solnet in an internationally televised address of the enactment of the Rubicon Act, initiating steps to secure the settlement's independence. 
+
+The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic.
+
+Arda holds an election for populating his cabinet.
 @sp 1
 
 @item
-@b{4 May 0 A.R.} Major-General Arda Baştürk has a security detail escort United Nations envoy Jacob Kissinger to @i{EVA Bravo}, Earth-bound.
+@b{5 May 0 A.R.} Republic of X successfully passes the @dfn{Humanoid Act} stripping corporate legal entities of the legal rights of human beings.
 @sp 1
 
 @item
-@b{May 5, 0 A.R.} United Nations Security Council Resolution 12664 is adopted which @i{"strongly condemns the actions of the illegitimate government of X and calls upon all members to proactively prevent the regional instability and deteriorating situation of the X settlement"}. The Security Council resolution recommends to the @dfn{United Nations Department of Peacekeeping Operations} (UNDPKO) that it place all four permanent standing @dfn{Rapid Reaction Force} battalions on high alert.
+@b{May 6 0 A.R.} Arda has a security detail escort United Nations envoy Jacob Kissinger to @i{EVA Bravo}, Earth-bound.
 @sp 1
 
 @item
-@b{May 19, 0 A.R.} Selected Rapid Reaction Force personnel are assigned to UNSA training facilities in Antarctica and Huelva, Spain.
+@b{6 May 0 A.R.} United Nations Security Council Resolution 12664 is adopted which @i{"strongly condemns the actions of the illegitimate government of X and calls upon all members to proactively prevent the regional instability and deteriorating situation of the X settlement"}. The Security Council resolution recommends to the @dfn{United Nations Department of Peacekeeping Operations} (UNDPKO) that it place all four permanent standing @dfn{Rapid Reaction Force} battalions on high alert.
+@sp 1
+
+@item
+@b{19 May 0 A.R.} Selected Rapid Reaction Force personnel are assigned to UNSA training facilities in Antarctica and Huelva, Spain.
 @sp 1
 
 @c Need a strategic transport...

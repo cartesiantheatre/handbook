@@ -136,11 +136,11 @@ Brokered by a satellite uplink with METO, the @i{Avaneya} communications team es
 @sp 1
 
 @item
-@b{30 Aug 8 B.R.} All crew alight the @i{Avaneya}, boarding the @dfn{Manu} landing craft. The @i{Avaneya} tracks the critical manoeuvres of @i{Manu's} entry, descent, and soft landing at the preselected drop site. The communications uplink with Mission Control is maintained throughout over a 4 minute delayed Solnet connection.
+@b{30 Aug 8 B.R.} All crew alight the @i{Avaneya}, boarding the @dfn{Manu} landing craft. The @i{Avaneya} tracks the critical manoeuvres of @i{Manu's} entry, descent, and soft landing at the preselected @i{Arcadia Planitia} drop site. The communications uplink with Mission Control is maintained throughout over a 4 minute delayed Solnet connection.
 
 Crew perform a successful soft landing where they are met with a temperature of @math{-70^{\circ}}C and an atmospheric pressure of 0.030 kPa. Time is local noon, allowing for maximum photovoltaic use.
 
-Team briefings are conducted within @i{Manu} at the drop site. Concurrently, the recovery team are deployed to recover all assets. 
+Team briefings are conducted within @i{Manu} at the drop site. Concurrently, the recovery team are deployed to recover all assets.
 
 Dynamic isotope power systems are brought online for temporary power.
 
@@ -176,9 +176,9 @@ Mining and excavation operations begin through a mixture of directly manned, rem
 
 @c Year zero...
 @item
-@b{[Year Zero] 3 May 0 A.R.} Arda informs the Secretary-General of the United Nations over Solnet in an internationally televised address of the enactment of the Rubicon Act, initiating steps to secure the settlement's independence. 
+@b{[Year Zero] 3 May 0 A.R.} Arda informs the Secretary-General of the United Nations over Solnet in an internationally televised address of the passages of the Rubicon Act, initiating steps to secure the settlement's independence. 
 
-The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic.
+The Act declares the colony an independent, sovereign, self-governed, constitutional republic, with a right to self determination. @dfn{Article IX} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The bancor fiat currency is replaced with a rhodium@footnote{See @ref{Glossary} for more information on rhodium.} standard as legal tender within the republic. Begotten is the @i{Republic of Arcadia Planitia}.
 
 Arda holds an election for populating his cabinet.
 @sp 1

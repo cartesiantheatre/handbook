@@ -19,7 +19,7 @@
 
 MAIN_SOURCE             = Source/Main.texi
 ALL_SOURCE              = $(shell find Source/ -type f -name '*.texi' -exec echo "{}" \; | sed 's/ /\\ /g')
-UMBRELLO_DIAGRAM        = ../Engineers/AresEngine/UML/Engine.xmi
+UMBRELLO_DIAGRAM        = ../AresEngine/UML/Engine.xmi
 PRE_OUTPUT              = Main.pdf
 OUTPUT                  = Handbook.pdf
 CACHE                   = Cache

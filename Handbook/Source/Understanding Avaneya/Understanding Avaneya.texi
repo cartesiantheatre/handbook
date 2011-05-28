@@ -1,11 +1,12 @@
-@c Relevant Learning Resources chapter...
-@node Relevant Learning Resources
-@chapter Relevant Learning Resources
+@c Understanding Avaneya chapter...
+@node Understanding Avaneya
+@chapter Understanding Avaneya
 
-You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
+A great way to better your understanding of this project is to experience some of the relevant learning resources. You should be able to find all of these resources available either in digital format online, or in physical format at most major book stores. Most of them are not difficult to find.
 
 @c For everyone...
-@section For Everyone
+@node Resources For Everyone
+@section Resources For Everyone
 These resources are useful for every kind of contributor, from researchers and writers to modellers and engineers.
 
 You might consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge we have, the greater the quality of the game. The same goes for really any kind of complex simulation, and not just Avaneya.
@@ -110,11 +111,29 @@ T. Colin Campbell, Benbella Books, 2006.
 G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
 @sp 1
 
+@item
+@emph{Zeitgeist: The Movie}
+@sp 0
+Peter Joseph, 122 minutes, GMP LLC, 2007.
+@sp 1
+
+@item
+@emph{Zeitgeist: Addendum}
+@sp 0
+Peter Joseph, 123 minutes, GMP LLC, 2008.
+@sp 1
+
+@item
+@emph{Zeitgeist: Moving Forward}
+@sp 0
+Peter Joseph, 161 minutes, GMP LLC, 2010.
+@sp 1
+
 @end itemize
 
 @c For artists...
 @node Resources For Artists
-@section For Artists
+@section Resources For Artists
 These resources are useful for different kinds of artists, such as 2D artists, audio engineers, cinematic artists, modellers, musicians, and so on.
 @sp 1
 @itemize
@@ -172,7 +191,7 @@ Roland Hess, No Starch Press, ISBN 9781593271664, 2007.
 
 @c For engineers...
 @node Resources For Engineers
-@section For Engineers
+@section Resources For Engineers
 These resources are useful mostly for engineers and other very technical work.
 @sp 1
 @itemize

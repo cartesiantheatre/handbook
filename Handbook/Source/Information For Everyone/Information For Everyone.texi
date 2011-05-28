@@ -1,0 +1,25 @@
+@c Information For Everyone chapter...
+@node Information For Everyone
+@chapter Information For Everyone
+
+@c Socioeconomic modelling section...
+@node Socioeconomic Modelling
+@section Socioeconomic Modelling
+Avaneya relies heavily on actual scientific research to substantiate the quantitative models it encodes. 
+
+@i{The Equality Trust} is an organization that aims to reduce income inequality through a programme of public and political education designed to achieve a widespread understanding of the harm caused by income inequality, public support for policy measures to reduce income inequality, and the political commitment to implementing such policy measures. 
+
+The research it has agregated powerfully reasserts the view that poverty, despair, and crime are not accidents, are well predictable, and that this is obvious by their asymmetrical spatial distribution. The research suggests that there is no such thing as human nature, but only human needs, and consequently human behaviour.@footnote{See @i{Zeitgeist: Moving Forward} in @ref{Resources For Everyone}.}
+
+@i{The Equality Trust} supports this conclusion by providing an invaluable repository of research that lays the foundation for the quantitative models necessary for a simulation like Avaneya.
+@sp 1
+
+@smallexample
+@url{http://www.equalitytrust.org.uk/resources/publications}
+@end smallexample
+
+@c @section Fonts
+@c @section Colour Scheme
+@c @section Theme
+
+

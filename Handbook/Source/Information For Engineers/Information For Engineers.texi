@@ -2,6 +2,47 @@
 @node Information For Engineers
 @chapter Information For Engineers
 
+@c AresPackages section...
+@node AresPackages
+@section AresPackages
+
+@node Purpose
+@subsection Purpose
+
+The AresEngine uses a custom game archive format built using EBML, an extensible language akin to XML, but tailored to handling binary data. The Matroska multimedia container is its most prominent client.
+
+You might be wondering why a game engine requires its media to be delivered to it in a custom archive format, as opposed to being exposed "naked" directly through the platform's native file system. There are a number of benefits to using a custom archive format, as well as EMBL specifically.
+@sp 1
+
+@itemize
+@item
+The EMBL format enables extendability for future format changes.
+@sp 1
+
+@item
+It can be easier to distribute a few files containing many, than many to the end user.
+@sp 1
+
+@item
+As a single file (*.AresPackage), file seek, open, and load times are reduced.
+@sp 1
+
+@item
+Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
+@sp 1
+@end itemize
+
+@node AresPackage Usage
+@subsection Usage
+The @i{ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
+
+@node Design
+@subsection Design
+A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package. The following diagram is a graphical representation of the schema.
+@page
+@image{AresPackage/Schema,,9in}
+
+@c Coding standards section...
 @node Coding Standards
 @section Coding Standards
 
@@ -35,6 +76,21 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
 */
 @end smallexample
 
+@node Mathematical
+@subsection Mathematical
+@sp 1
+
+@itemize
+@item
+All angles should be worked with in degrees, not radians, whenever possible.
+@sp 1
+
+@item
+All floating point calculations should be done in single precision whenever possible.
+@sp 1
+
+@end itemize
+
 @node Formatting
 @subsection Formatting
 @sp 1
@@ -42,7 +98,11 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
 @itemize
 
 @item
-Always use spaces and not tabs.
+English (Canadian) should be used for everything non-localized and saved in UTF-8 whenever possible.
+@sp 1
+
+@item
+Always use spaces and not tabs. You can use the latter, if you like, but just as long as your editor converts them to spaces when saving.
 @sp 1
 
 @item
@@ -414,7 +474,7 @@ A comment which indicates task which needs to be done at some point should look 
 
 @itemize
 @item
-All comments should be written in English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
+All comments should be written in Canadian English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
 @sp 1
 
 @item

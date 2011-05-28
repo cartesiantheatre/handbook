@@ -1,0 +1,23 @@
+@c The Game World chapter...
+@node The Game World
+@chapter The Game World
+
+This chapter deals with some of the different aspects of the world the
+game takes place in, as one in that world itself might know it as.
+
+@c @section Avaneya
+@c @section "The Game World/Arcadian Constitution.texi"
+@c @section Buildings
+@c @section Economics
+@c @section Environmental
+@c @section Food
+@c @section Ground Vehicles and Machinery
+@c @section Indoors
+@c @section Kit
+@c @section Locations
+@c @section Politics and Legal
+@c @section Population
+@c @section Resources
+@include "The Game World/Time.texi"
+@c @section Weapons
+

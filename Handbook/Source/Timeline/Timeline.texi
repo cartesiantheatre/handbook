@@ -223,7 +223,7 @@ The resolution recommends to the @dfn{United Nations Department of Peacekeeping 
 @item
 @b{April 5, 1 A.R.} The @dfn{Yama}, a manned spacecraft, completes a type I Hohmann transfer orbital manoeuvre, aerobreaking into Martian geostationary orbit. 
 
-Yama carries a payload of remotely operated equipment destined for Phobos, as well as a single Rapid Reaction Force battalion. The battalion is to be deployed as the @dfn{United Nations Emergency Assistance Peacekeeping Force}. Its numbers are drawn principally from North American Union and European Union airborne light infantry units.
+Yama carries a payload of remotely operated equipment destined for Phobos, a photographic reconnaissance satellite, as well as a single Rapid Reaction Force battalion. The battalion is to be deployed as the @dfn{United Nations Emergency Assistance Peacekeeping Force}. Its numbers are drawn principally from North American Union and European Union airborne light infantry units.
 @sp 1
 
 @item

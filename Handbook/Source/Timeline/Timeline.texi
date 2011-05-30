@@ -56,6 +56,8 @@ The terraformation strategy is to be initiated by intercepting @i{52048 Varuna} 
 
 Data was presented at the summit predicting that the direct effect of the introduction of these new dark, carbonaceous, aerosols would be a decrease in albedo since they absorb more solar radiation. This would cause a cascading series of reactions, increasing the mean surface temperature and atmospheric pressure.
 
+The deflection strategy will have the asteroid impact directly over the Martian south pole. The south pole contains a large sheet of buried CO₂ ice approximately 8m thick which, when sublimated, will act as a powerful greenhouse gas, thickening the atmosphere, along with the underlying water ice beneath it.
+
 While the legalities of the project are defined in the @i{Mars Treaty}, the international collaborative project it implicates is known as the @dfn{Avaneya Initiative}.
 @sp 1
 
@@ -107,7 +109,7 @@ Crew selection is completed with a broad range of personnel including flight eng
 
 @b{ B.R.}
 @sp 0
-@dfn{Mars Science Laboratory Curiosity XI}, an unmanned autonomous aerial vehicle, explores potential landing sites for settlement. The integrated on-board artificial intelligence is instructed to evaluate sites based on average available sunlight, water ice, minerology, surface geography, and other factors.
+@dfn{Mars Science Laboratory Curiosity XI}, an unmanned autonomous aerial vehicle, explores potential landing sites for settlement. The integrated on-board artificial intelligence is instructed to evaluate sites based on average available sunlight, shallow radar determined underground water ice, minerology, surface geography, and other factors.
 @sp 1
 
 @b{ B.R.}

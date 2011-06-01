@@ -26,6 +26,10 @@ Join the Avaneya Crew on Launchpad. Membership requires approval. If you already
 Also join the private discussion mailing list at the aforementioned link. Once on, I recommend you email the list and let everyone know a bit about yourself. They are all good people and will be happy to see a new face. You will be joining fellow musicians, engineers, and artists. @xref{Mailing Lists} for details.
 @sp 1
 
+@item
+If you do not have any time to be involved in the project, do not make things difficult on yourself in wanting to get involved.
+@sp 1
+
 @end enumerate
 
 @node Specialities

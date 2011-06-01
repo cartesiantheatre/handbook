@@ -33,7 +33,7 @@ Wikileaks publishes a leaked list of 163 purported attendees of the annual Bilde
 
 @b{15 Sep 35 B.R.}
 @sp 0
-The United Nations holds the International Mars Summit in Geneva, Switzerland, with the purpose of discussing the options on the table for the first manned mission to Mars. The attendees represent the African Union, North American Union, European Union, Asian Union, along with thousands of scientists, engineers, philosophers, and other scholars from around the world. The minimalistic Mars Direct approach of travelling light, living off of the land, and using indigenous materials to produce the fuel necessary for the journey home is a central theme.
+The United Nations holds the International Mars Summit in Geneva, Switzerland, with the purpose of discussing the options on the table for the first manned mission to Mars. The attendees represent the African Union, North American Union, European Union, Asian Union, along with thousands of scientists, engineers, philosophers, and other scholars from around the world. The minimalistic Mars Direct approach of travelling light, living off of the land, and using indigenous materials to produce the fuel necessary for the journey home is a central theme.@footnote{See @ref{Glossary} for more information on Mars Direct.}
 @sp 1
 
 @b{28 Sep 35 B.R.}
@@ -48,7 +48,7 @@ The @i{Trilateral Commission} holds its biannual meeting several months in advan
 
 @b{12 Oct 35 B.R.}
 @sp 0
-The International Mars Summit concludes publishing its findings in the @dfn{Mars Report}: @i{"Although the Mars Direct approach is totally feasible, the bar can and should be pushed. The summit determined that it is best to go, not merely for the sake of demonstrating that a safe return is possible, but to establish a permanent settlement on Mars. The purpose being to bootstrap the first non-terrestrial expansion of human civilization for the benefit of all mankind."}
+The International Mars Summit concludes publishing its findings in the @dfn{Mars Report}: @i{"Although the Mars Direct approach is totally feasible, the bar can and should be pushed. The summit determined that it is best to go, not merely for the sake of demonstrating that a safe return is possible, but to establish a permanent settlement on Mars. The purpose being to bootstrap the first non-terrestrial expansion of human civilization for the benefit of all mankind."}@footnote{See @ref{Glossary} for more information on Mars Direct.}
 
 A preliminary draft of the @dfn{Mars Treaty} is produced using a revised @i{Outer Space Treaty} of 1967 A.D. as a basis for a subset of it. The treaty provides the contractual basis for all signatories, outlining the roadmap, responsibilities, and party resource allocations necessary to serve as a vehicle for the terraformation and first manned mission to Mars operating under a United Nations mandate. The treaty also provides an agreement governing the activities of states on Mars and its two moons, Phobos and Deimos. 
 

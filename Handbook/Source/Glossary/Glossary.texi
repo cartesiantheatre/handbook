@@ -27,6 +27,19 @@ The following is a collection of terms used in the game world that range from th
 An example where the difference between the two is well illustrated is with the tobacco industry. The GDP would account for the value of all cigarettes sold (a positive figure). Conversely, the GPI would also account for the total value of all units sold, but then go on to subtract the deficits socialized to everyone in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000@footnote{@emph{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming}, Naomi Oreskes, Bloomsbury Press, 2010} people every year (a negative figure).
 @sp 1
 
+@c Mars Direct...
+@noindent
+@dfn{@strong{Mars Direct}}: A plan proposed by the brilliant aeronautical engineer, Dr Robert Zubrin, as an alternative to the prohibitively costly government proposed mission to Mars. 
+
+Zubrin reasoned that it is totally unnecessary to build giant space stations in low earth orbit, Lunar bases on a useless barren moon, and giant spacecraft carrying hundreds of people to achieve a manned mission to Mars. That, along with transporting all that is necessary to go to there, survive there, and return. He argued that the government prefers this approach because it creates the illusion of progress and productivity through countless jobs, contracts, bureaucratic expansion, and so on. But it comes at the cost of enormous waste, misdirected resources, and through increased complexity, an increased likelihood of disaster.
+
+Zubrin compared the government's NASA approach to the failed Arctic explorer, Sir John Franklin, who, with government assistance in 1845 took two ships, the @i{Erebus} and @i{Terror}, each displacing more than 300 tonnes, in an effort to navigate through the Northwest Passage. His ships carried all manner of useless items, including heavy English silverware, save many critical items. The crew ended up struggling for their very survival, dragging heavy iron and oak sleds across the Arctic ice in an effort to abandon their ice stranded ships. Bearing useless shotguns and other heavy and inappropriate equipment, all 127 men ended up perishing to the combined efforts of the elements and scurvy. It never occurred to them to take advantage of @i{in situ} resources, like fur coats, seals, and fish.
+
+Instead, he argued cogently in his book, @i{The Case For Mars}, a very reasonable, well thought out, minimalistic approach of travelling light, living off the land, and manufacturing the rocket fuel necessary for a return trip @i{in situ}. This is akin to the efforts of early Terran settlers, like the Indo-Europeans migrating into Europe, their later descendents that expanded into the Americas westward through the frontier, and virtually ever other civilization's successful effort at settling a distant land. Going to another planet is apparently no different. Indeed, the travel time to Mars is comparable to that of navigating through the Arctic.
+
+Mars is opulent. It has an abundance of natural resources necessary for creating rocket fuels, water, plastic polymers, alloyed metals, glass, gasses, semi-conductors, oxygen, and just about everything else one might require. All this, he calculated, at a fraction of the cost of NASA's proposal and using technology that has been around since the mid-@math{19^{th}} century.@footnote{See the @i{Reverse Water Gas Shift} and @i{Sebatier} reactors in the glossary, for instance.}
+@sp 1
+
 @c Regolith...
 @noindent
 @dfn{@strong{Regolith}}: What most refer to as dirt. More technically, it is the the loose heterogeneous mixture of material that blankets the solid rock.

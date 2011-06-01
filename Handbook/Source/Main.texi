@@ -78,7 +78,7 @@ last updated @value{VERSION_MANUAL}.
 @c @include "Features/Features.texi"
 @include "Selected Technologies/Selected Technologies.texi"
 @include "Information For Everyone/Information For Everyone.texi"
-@c @include "Information For 2D Artists/Information For 2D Artists.texi"
+@include "Information For Artists/Information For Artists.texi"
 @c @include "Information For Audio Engineers/Information For Audio Engineers.texi"
 @c @include "Information For Cinematic Artists/Information For Cinematic Artists.texi"
 @include "Information For Engineers/Information For Engineers.texi"

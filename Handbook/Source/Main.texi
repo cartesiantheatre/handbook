@@ -69,6 +69,7 @@ last updated @value{VERSION_MANUAL}.
 @c Main body follows...
 @include "Preface/Preface.texi"
 @include "The Game/The Game.texi"
+@include "Terminology/Terminology.texi"
 @include "Understanding Avaneya/Understanding Avaneya.texi"
 @include "Timeline/Timeline.texi"
 @include "The Characters/The Characters.texi"
@@ -95,7 +96,6 @@ last updated @value{VERSION_MANUAL}.
 @include "Licensing Rationale/Licensing Rationale.texi"
 
 @c Appendices...
-@include "Glossary/Glossary.texi"
 @include "Licenses/Licenses.texi"
 
 @c Index...

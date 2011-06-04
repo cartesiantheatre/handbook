@@ -6,13 +6,30 @@ The world Avaneya takes place in is highly self-referential. A fictional timelin
 
 Note that a year is defined as a Martian year (MYr) and is not the same as a Terran year. You may want to refer to @ref{Game World Time} for a more detailed explanation on how the settlers keep track of time on Mars.
 
-The year zero's placement relative to the Gregorian calendar is deliberately never given. But inferentially, one can reason that it is proximate enough for a contemporary audience to still feel relevant, yet distant enough to afford some reasonable creative licenses.
+Year zero's placement relative to the Gregorian calendar is deliberately never given. But inferentially, one can reason it is proximate enough for a contemporary audience to feel relevant, yet distant enough to afford some creative licenses.
 @sp 1
 
 @c Provides hint to astute reader of rough order of magnitude of time between now and story...
 @b{B.R.}
 @sp 0
 The last of the @i{International Space Station} crew return to Earth with the station subsequently decommissioned, deorbited, and incinerated during atmospheric entry.
+@sp 1
+
+@b{B.R.}
+@sp 0
+NASA's @dfn{Zubrin} spacecraft lifts off from its launchpad at Cape Canaveral, Florida. It carries a crew of four with two flight engineers and two mechanics with combined specialities in geology and biogeochemistry. This is the first attempted piloted mission to Mars and implements the Mars Direct mission architecture.
+@sp 1
+
+@c This should be 180 days after departing Earth for a fast conjunction class manoeuvre...
+@b{B.R.}
+@sp 0
+@dfn{Zubrin} aerobreaks into Martian orbit.
+@sp 1
+
+@c Constraint: Should be 910 days total mission time since departure, with 550 days of Mars stay time...
+@b{B.R.}
+@sp 0
+NASA's @dfn{Zubrin} completes its mission objectives and lands at the Kennedy Space Center, Florida.
 @sp 1
 
 @b{B.R.}
@@ -40,7 +57,7 @@ The minimalistic Mars Direct@footnote{See @ref{Mars Direct} for more information
 
 @b{B.R.}
 @sp 0
-Jacob Kissinger, president of the @i{Council of Foreign Relations} holds a symposium at the Harold I. Pratt House in New York City, North American Union.
+Leonard Kissinger, president of the @i{Council of Foreign Relations} holds a symposium at the Harold I. Pratt House in New York City, North American Union.
 @sp 1
 
 @b{B.R.}
@@ -101,7 +118,7 @@ The UNSA's Office of the Avaneya Initiative disseminates more than ten-thousand 
 UNSA's Office of the Avaneya Initiative announces successful bids. The @dfn{Iterum Shipyard} contract is jointly awarded to Lockheed Martin-Boeing and Mercedes-Pratt & Whitney to robotically build a station remotely in low Earth orbit at a cost of 2.2 billion bancors. The station is to be used as a general purpose interplanetary space vehicle construction platform.
 
 @c Lockheed Martin's failed X-33 design would be a good starting point for a model...
-Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} suborbital spaceplanes. These spaceplanes provide UNSA with heavy lift workhorses for transporting personnel and materials to the Iterum Station. They require no external solid booster rockets or external fuel tank and each operate at less than @math{{1 / 5}^{th} } the cost of the long retired Space Shuttle predecessors.
+Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} suborbital spaceplanes. These spaceplanes provide UNSA with heavy lift workhorses for transporting personnel and materials to the Iterum Station. They require no external solid booster rockets or external fuel tank and each operate at less than @math{{1 / 5}^{th} } the cost of the retired Space Shuttles.
 
 Mitsubishi-Saab's is awarded a contract to provide the @dfn{Avaneya}, robitically constructed remotely @i{in situ}, at the @i{Iterum Shipyard}, at a cost of 7.8 billion bancors. 
 
@@ -123,7 +140,7 @@ Crew selection and training begins at training facilities.
 
 @b{B.R.}
 @sp 0
-Crew selection is completed with a broad range of personnel including flight engineers, artificial intelligence specialists with knowledge engineers among them, astrogeophysicists, cyberneticists, chemical and civil engineers, cold weather construction experts, mechanics, biogeochemists, geologists, areobotanists, one xenobiologist, and more. Arda Baştürk is named Mission Commander. United Nations envoy Jacob Kissinger is appointed to accompany the crew.
+Crew selection is completed with a broad range of personnel including flight engineers, artificial intelligence specialists with knowledge engineers among them, astrogeophysicists, cyberneticists, chemical and civil engineers, cold weather construction experts, mechanics, biogeochemists, geologists, areobotanists, one xenobiologist, and more. Arda Baştürk is named Mission Commander. United Nations envoy Leonard Kissinger is appointed to accompany the crew.
 @sp 1
 
 @b{B.R.}
@@ -176,9 +193,10 @@ Avaneya crew complete all scheduled experiments in space medicine, life sciences
 @i{Avaneya} deploys four @i{Mars Positioning Satellites} (MPS) into medium Martian orbit.
 @sp 1
 
+@c Constraint: 250 days after launch with a departure velocity of 3.34 km/s...
 @b{B.R.}
 @sp 0
-@i{Avaneya} aerobreaks into Martian orbit. Instrumentation subsystems update onboard areology database on detailed surface geography, weather dynamics, mineralogy, and more.
+@i{Avaneya} aerobreaks into Martian orbit, assisted by retrorockets. The instrumentation subsystems update onboard areology database on detailed surface geography, weather dynamics, mineralogy, and more.
 
 @i{Mars Enhanced Telecommunications Orbiter} is released and deploys itself into geostationary orbit.
 @sp 1
@@ -269,7 +287,7 @@ Lockheed Martin-Boeing's Advanced Development Programs (Skunk Works) begins refi
 
 @b{A.R.}
 @sp 0
-This day is a minimum-energy launch window for Terran inbound. Arda has a security detail escort United Nations envoy Jacob Kissinger to @i{EVA Bravo}, Earth-bound.
+This day is a minimum-energy launch window for Terran inbound. Arda has a security detail escort United Nations envoy Leonard Kissinger to @i{EVA Bravo}, Earth-bound.
 @sp 1
 
 @b{A.R.}
@@ -282,6 +300,8 @@ United Nations Security Council Resolution 12664 is adopted which
 @sp 1
 
 The resolution recommends to the @dfn{United Nations Department of Peacekeeping Operations} (UNDPKO) that it place all four permanent standing @dfn{Rapid Reaction Force} battalions on high alert.
+
+The announcement is made one day prior to the Superbowl. There is no significant public reaction.
 @sp 1
 
 @b{A.R.}
@@ -300,6 +320,7 @@ Selected Rapid Reaction Force personnel are assigned to UNSA training facilities
 Arcadia's @i{EVA Bravo} carrying Kissinger lands at Edwards Air Force Base, California, NAU. The spacecraft becomes a UNSA asset.
 @sp 1
 
+@c Yama takes a free-return trajectory taking 180 days and drops off personnel and material
 @b{A.R.}
 @sp 0
 The @dfn{Yama}, a manned spacecraft, completes a type I Hohmann transfer orbital manoeuvre, aerobreaking into Martian geostationary orbit. 

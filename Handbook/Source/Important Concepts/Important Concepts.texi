@@ -1,14 +1,20 @@
-@c Terminology chapter...
-@node Terminology
-@chapter Terminology
+@c Important Concepts chapter...
+@node Important Concepts
+@chapter Important Concepts
 
-The following is a collection of useful terms which are used, either within the game world itself, or in reference to it. They range from the everyday colloquial to the technical. Familiarizing yourself with them before you read on may be to your benefit.
+The following is a collection of concepts which are useful in understanding the game world. They range from the everyday colloquial to the technical. Familiarizing yourself with them before you read on may be helpful.
 @sp 1
 
 @c Albedo...
 @node Albedo
 @section Albedo
 The proportion of incoming light reflected. It is the ratio of reflected light to total incident light. That is, a material with an alebdo of 1 is a perfect mirror whereas a material with an albedo of 0 absorbs all incident light.
+@sp 1
+
+@c Bancor...
+@node Bancor
+@section Bancor
+A global currency proposed in the early 1940s by the British economist John Maynard Keynes. On 13 April 2010, the @dfn{Strategy, Policy and Review Department of the International Monetary Fund} published a paper @dfn{Reserve Accumulation and International Monetary Stability}@footnote{@url{http://www.imf.org/external/np/pp/eng/2010/041310.pdf}} recommending the world adopt the bancor and create an international central bank to administer it.
 @sp 1
 
 @c Endothermic reaction...
@@ -36,7 +42,7 @@ An example where the difference between the two is well illustrated is with the 
 @section Mars Direct
 Mars Direct is a $50 billion dollar plan proposed by an American aerospace engineer named Robert Zubrin (born April 19, 1952) as an alternative to the prohibitively costly $450 billion dollar mission to Mars proposed by NASA in consultation with its government.
 
-The then incumbent President of the United States, George H. W. Bush, announced the government's proposal in 1989 as the @dfn{Space Exploration Initiative}. It called for the creation of the @dfn{Space Station Freedom} and a permanent Lunar base as intermediate steps for an ultimate destination to the Red Planet. The process, if enacted, was to be rolled out over the process of several decades.
+The then incumbent President of the United States, George H. W. Bush, announced the government's proposal in 1989 as the @dfn{Space Exploration Initiative}. It called for the creation of the @dfn{Space Station Freedom} and a permanent Lunar base as intermediate steps for an ultimate destination to the Red Planet. If implemented, it was to be rolled out over the process of several decades.
 
 Zubrin reasoned that it is totally unnecessary to construct giant space stations in low earth orbit, useless Lunar bases on a barren moon, and massive spacecraft carrying hundreds of people to achieve a manned mission to Mars. That, along with transporting all that is necessary to get there, survive there, and return safely. He argued that the government prefers an intentionally bloated approach because it creates the illusion of progress and productivity through countless jobs, contracts, bureaucratic expansion, and so on. But it comes at the cost of enormous waste, misdirected resources, and through increased complexity, an increased likelihood of disaster.
 
@@ -44,9 +50,9 @@ Zubrin compared their approach to the failed Arctic explorer, Sir John Franklin,
 
 The crew met a bitter end as they dragged heavy iron and oak sleds across the Arctic ice, having abandoned their ships that were stranded. With shotguns useless in the Arctic and other heavy and inappropriate equipment, all 127 men ended up perishing to the combined efforts of the elements and scurvy. It never occurred to them to take advantage of @i{in situ} resources, like fur coats, seals, and fish.
 
-The Space Exploration Initiative mission architecture is totally opposite a sound engineering approach. Zubrin argued cogently in his book, @i{The Case For Mars}, for a very reasonable, well thought out, minimalistic approach of travelling light, living off of the land, and manufacturing the necessary rocket propellant for the return trip @i{in situ}. This is akin to the efforts of early Terran settlers, like those who pushed through the American Western Frontier, or virtually ever other civilization's successful effort at settling a distant land. Going to another planet is, according to him, no different. Indeed, the travel time to Mars is comparable to that of navigating the Northwest Passage.
+Zubrin argued that the Space Exploration Initiative's mission architecture is an absolute inverse of a sound engineering approach. He outlined cogently in his book @i{The Case For Mars} for a very reasonable, well thought out, minimalistic approach of travelling light, living off the land, and manufacturing the necessary rocket propellant for the return trip @i{in situ}. This is akin to the efforts of early Terran settlers, like those who pushed through the American Western Frontier, or virtually ever other civilization's successful effort at settling a distant land. Going to another planet is, according to him, no different. Indeed, the travel time to Mars is comparable to that of navigating the Northwest Passage.
 
-This trans-planetary travel to Mars is possible because Mars is so opulent. It has an abundance of natural resources necessary for creating rocket fuels, water, plastic polymers, alloyed metals, glass, gasses like oxygen, semi-conductors, ceramics, and just about everything else one might require. All this, he calculated, at a fraction of the cost of NASA's proposal, using technology that has been around since the mid-@math{19^{th}} century,@footnote{See the @i{Reverse Water Gas Shift} and @i{Sebatier} reactors in the glossary, for instance.}, and in less than a decade instead of over several decades.
+This trans-planetary travel to Mars is possible because Mars is so opulent. It has an abundance of natural resources necessary for creating rocket fuels, water, plastic polymers, alloyed metals, glass, gasses like oxygen, semi-conductors, ceramics, and just about everything else one might require. All this, he calculated, at a fraction of the cost of NASA's proposal, and using technology that has been around since the mid-@math{19^{th}} century.@footnote{See the @i{Reverse Water Gas Shift} and @i{Sebatier} reactors in the glossary, for instance.} His plan could allegedly be realized in less than a decade with current technology, as opposed to requiring several decades.
 @sp 1
 
 @c Regolith...

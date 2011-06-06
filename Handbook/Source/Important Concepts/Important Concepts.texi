@@ -55,6 +55,62 @@ Zubrin argued that the Space Exploration Initiative's mission architecture is an
 This trans-planetary travel to Mars is possible because Mars is so opulent. It has an abundance of natural resources necessary for creating rocket fuels, water, plastic polymers, alloyed metals, glass, gasses like oxygen, semi-conductors, ceramics, and just about everything else one might require. All this, he calculated, at a fraction of the cost of NASA's proposal, and using technology that has been around since the mid-@math{19^{th}} century.@footnote{See the @i{Reverse Water Gas Shift} and @i{Sebatier} reactors in the glossary, for instance.} His plan could allegedly be realized in less than a decade with current technology, as opposed to requiring several decades.
 @sp 1
 
+@c Pressure rating...
+@node Pressure Rating
+@section Pressure Rating
+
+The mean sea level atmospheric pressure on Mars ranges from 0.3 millibars to 11.35 millibars, which is about the same as one would find at 36 km above the Earth's surface. The mean sea level atmospheric pressure on Earth, by contrast is 1,013 millibars (1.013 bars). This means that the surface pressure on Mars is only about 1% that experienced on Earth.
+
+This has an impact on the way buildings must be engineered on Mars. The main difference between inflatable buildings is their pressure rating. The lower the pressure rating, the fabric will be thinner, the building lighter, and therefore lower in cost to manufacture. The pressure rating also determines whether you need to where a pressure suit, merely a respirator, or nothing at all.
+
+The @dfn{Armstrong Limit} of 62.62 millibars is the lowest the human body can survive before the vapour pressure of all exposed liquids (but not liquids like blood within your skin's pressure barrier), such as tears, saliva and the liquid wetting the alveoli within the lungs exceeds that of its surrounding atmospheric pressure. They will begin to boil away at this point. On Earth, the Armstrong Limit begins at about 19 km above the surface. On Mars, it is already well exceeded everywhere.
+
+@multitable @columnfractions .8 .10 .10 .72
+@headitem Pressure
+
+@tab Respirator
+@sp 0
+Required
+
+@tab Pressure Suit
+@sp 0
+Required
+
+@tab Description
+
+@item 68 mb
+@tab Yes
+@tab Yes
+@tab These buildings are attractive because they are economical and very light to pack, requiring fabric only 0.2 mm in thickness. For plants, they are fine since plants require only 50 mb of pressure. But for humans, they need at least 170 mb to be able to live.
+
+@item 170 mb
+@tab Yes
+@tab No
+@tab These buildings cost a little bit more, but you can work in them without wearing a pressure suit. You still need to wear a respirator in order for the gas exchange taking place in your lungs to still work, otherwise you will quickly pass out.
+
+@item 340 mb
+@tab No
+@tab No
+@tab These buildings cost a little bit more, but you can work in them without wearing a pressure suit or respirator, although the O₂ partial pressure levels still need to be enriched. The other main advantage is that the pressure can also be equalized with a habitat making movement easier. As an added bonus, bees can polinate better at this pressure coupled with the lower gravity which makes it excellent for greenhouses.
+
+@item 1 bar
+@tab No
+@tab No
+@tab These buildings cost the most, but they offer at least the same pressure as on Earth. Since everything needs to be three times as heavy as it needs to be, it is a waste of resources, too costly, and unnecessary.
+
+@end multitable
+@sp 1
+
+@sp 1
+
+@c Railgun...
+@node Railgun
+@section Railgun
+A means of accelerating mass to supersonic velocities by applying a magnetic field to conductive objects. The acceleration, though high enough to crush a man's skull, can be used for material exports at speeds exceeding the minimum Martian escape velocity.
+
+Arcadians use railguns to export deuterium, geochemically rare elements, among other materials, back to Earth. It only requires them to expend @math{{1/4}^{th}} the energy to lift off of Mars as it does Earth.
+@sp 1
+
 @c Regolith...
 @node Regolith
 @section Regolith

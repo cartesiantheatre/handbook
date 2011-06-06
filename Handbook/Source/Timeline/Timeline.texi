@@ -23,7 +23,7 @@ NASA's @dfn{Zubrin} spacecraft lifts off from its launchpad at Cape Canaveral, F
 @c This should be 180 days after departing Earth for a fast conjunction class manoeuvre...
 @b{B.R.}
 @sp 0
-@dfn{Zubrin} aerobreaks into Martian orbit.
+@dfn{Zubrin} performs deceleration manoeuvre by aerobreaking through the Martian atmosphere, entering orbit.
 @sp 1
 
 @c Constraint: Should be 910 days total mission time since departure, with 550 days of Mars stay time...
@@ -71,7 +71,7 @@ The International Mars Summit concludes and publishes its findings in the @dfn{R
 @sp 1
 
 @quotation
-@i{Zero capability missions have no value. The Mars Direct mission having demonstrated successfully the feasibility of sending humans to Mars, the bar now can and should be pushed. The attendees concluded unanimously that it is unwise to return merely for the sake of demonstrating that a safe return is possible again, having been determined already, but to establish a permanent settlement on Mars. The new mission architecture proposed is designed to bootstrap the first non-terrestrial expansion of human civilization for the benefit of all mankind.}
+@i{"...Zero capability missions have no value. The Mars Direct mission having demonstrated successfully the feasibility of sending humans to Mars, the bar now can and should be pushed. The attendees concluded unanimously that it is not prudent to return merely for the sake of demonstrating that a safe return is possible, that having already been established, but to create a permanent settlement on Mars. The new mission architecture proposed would be designed to bootstrap the first non-terrestrial expansion of human civilization for the benefit of all mankind."}
 @end quotation
 @sp 1
 
@@ -271,38 +271,49 @@ Promoted from envoy, United Nations Security Council Resolution 12661 is adopted
 @sp 1
 
 @c Year zero...
-@b{3 May 0 A.R. (Year Zero Epoch)}
+@b{3 May 0 A.R.}
 @sp 0
-Arda informs the Secretary-General of the United Nations formally through an internationally televised address over Solnet of the passages of the @dfn{Rubicon Act}, initiating steps to secure the settlement's independence. Begotten is the @dfn{Republic of Arcadia Planitia}, colloquially known as @dfn{Arcadia}. Notable portions of the Act include:
+@i{Year Zero Epoch}
+@sp 0
+Arda informs the Secretary-General of the United Nations through an internationally televised formal address over Solnet of the passages of the @dfn{Rubicon Act}, initiating steps to secure the settlement's independence. 
+
+Arda likens the settlers predicament in his speech to that of @i{"the latest manifestation of the classical banana republic, railgun-catapulting deuterium and platinum across the solar system in an endless effort to satisfy the insatiable appetite of Terran usury"}.
+
+Notable portions of the Act include:
 @sp 1
 
 @itemize
 @item
-@dfn{Article I} declares the colony an independent, sovereign, self-governed, constitutional republic, with the right to self determination. 
+@dfn{Article I} declares the colony an independent, sovereign, self-governed, constitutional republic, with the right to self determination, self-styled the @dfn{Republic of Arcadia Planitia}. Colloquially it is known by its capital, @dfn{Arcadia}.
+@sp 1
 
 @item
-@dfn{Article II} begets and defines the @dfn{Direct Council}. As a direct democracy, governance circumvents elected representatives by directly polling digitally the will of the populace. Its will being voiced through the highest executive office, the @i{Direct Council}. The Executor is responsible for implementing the edicts of the @i{Direct Council} and must consult with it in all matters budgetary and otherwise, such as any bill which would increase the size of government. Higher executive authority is forbidden under all circumstance, including that of an emergency.
+@dfn{Article II} defines the head of state, the @dfn{Direct Council}. As a direct democracy, governance circumvents elected representatives by directly polling the populace digitally. This office functions as both the legislative and executive branches of government. An @dfn{Executor} is elected through the @i{Direct Council}, along with their cabinet. The Executor and their cabinet are responsible for implementing the edicts of the @i{Direct Council}. The @i{Direct Council} cannot be circumvented under any circumstance, including that of an emergency.
+@sp 1
 
 @item
-@dfn{Article III} defines the state's rule as one of natural law, as opposed to positive law, limiting the state's mandate exclusively to the preservation of life, liberty, property, and rights.
+@dfn{Article III} defines the state's rule as predicated upon natural law, as opposed to positive law, limiting the state's mandate exclusively to the preservation of life, liberty, property, and rights.
+@sp 1
 
 @item
-@dfn{Article VII}
-The bancor fiat currency is replaced with a rhodium standard as the exclusive legal tender within the Republic. The sole creator of new money being the public.
+@dfn{Article VII} superannuates the bancor fiat currency with the @dfn{jenya},@footnote{Sanskrit: @i{of noble origin, genuine, or true wealth.}} the first currency to be backed by a rhodium standard. The jenya becomes the exclusive legal tender within the Republic. By extension, this requires all Terran interests to acquire Arcadian goods in jenyas only.
+@sp 1
 
 @item
 @dfn{Article VIII} defines the state's disposition with respect to the military. The creation of a permanent or temporary standing army is forbidden. The creation of militias is permitted with exclusive executive authority resting in the @i{Direct Council}. The militia's three restrictions are that it is forbidden from deployment outside of Arcadia's territorial lands, that its purpose is exclusively defensive, and that it cannot be deployed domestically as an aid to civil power.
+@sp 1
 
 @item
 @dfn{Article IX} denies the deployment of munitions of war suborbital, orbital, in outer space, or elsewhere.
+@sp 1
 
 @item
-@dfn{Article X} discharges all public debt held by the @i{International Monetary Fund} and @i{World Bank} effective immediately. The exclusive right to borrow money can be done solely on the public credit.
+@dfn{Article X} discharges all public debt held by the @i{International Monetary Fund} and the @i{World Bank} effective immediately. The central banks had been using the registered biological property of the settlers, the birth certificates, as collateral against the debt.
+@sp 1
 
 @item
-@dfn{Article XI} prohibits the state from providing itself with a not-withstanding clause, preventing circumvention of this act.. 
+@dfn{Article XI} prohibits the state from providing itself with a not-withstanding clause, preventing circumvention of the act.
 @end itemize
-
 @sp 1
 
 @b{A.R.}
@@ -313,6 +324,7 @@ The bancor fiat currency is replaced with a rhodium standard as the exclusive le
 @b{A.R.}
 @sp 0
 Lockheed Martin-Boeing's Advanced Development Programs (Skunk Works) begins refitting the Avaneya in response to a UNSA contract for a classified mission payload.
+@sp 1
 
 @b{A.R.}
 @sp 0
@@ -352,13 +364,18 @@ Arcadia's @i{ERV Bravo} carrying Kissinger lands at Edwards Air Force Base, Cali
 @c Yama takes a free-return trajectory taking 180 days and drops off personnel and material
 @b{A.R.}
 @sp 0
-The @dfn{Yama}, a manned spacecraft, completes a type I Hohmann transfer orbital manoeuvre, aerobreaking into Martian geostationary orbit. 
+The @dfn{Yama}, a manned and remotely piloted spacecraft, completes a type I Hohmann transfer orbital manoeuvre, aerobreaking into Martian geostationary orbit. 
 
 Yama carries a payload of remotely operated equipment destined for Phobos, a photographic reconnaissance satellite, as well as a single Rapid Reaction Force battalion. The battalion is to be deployed as the @dfn{United Nations Emergency Assistance Peacekeeping Force}. Its numbers are drawn principally from North American Union and European Union airborne light infantry units.
 @sp 1
 
 @b{A.R.}
 @sp 0
-Yama's Commanding Officer Lieutenant-Colonel Dragov issues warning orders down the chain of command to prepare for insertion, geostationary orbit, Mars.
+Yama's commanding officer Lieutenant Colonel Dragov issues warning orders down the chain of command to prepare for insertion, geostationary orbit, Mars.
+@sp 1
+
+@b{A.R.}
+@sp 0
+Arcadia's 3rd militia battalion's attached Signal Corps detects a non-Arcadian transponder signal.
 @sp 1
 

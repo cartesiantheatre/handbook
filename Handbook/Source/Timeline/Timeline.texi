@@ -17,19 +17,24 @@ The last of the @i{International Space Station} crew return to Earth with the st
 
 @b{B.R.}
 @sp 0
-NASA's @dfn{Zubrin} spacecraft lifts off from its launchpad at Cape Canaveral, Florida. It carries a crew of four with two flight engineers and two mechanics with combined specialities in geology and biogeochemistry. This is the first attempted piloted mission to Mars and implements the Mars Direct mission architecture as a direct launch.
+NASA's @dfn{Zubrin} spacecraft lifts off atop an Enigma-D heavy-lift booster from its launchpad at Cape Canaveral, Florida. Its 140 tonnes capability separates from the manned module in low Earth orbit. It carries a crew of four with two flight engineers and two mechanics with combined specialities in geology and biogeochemistry. This is the first attempted piloted mission to Mars and implements the Mars Direct mission architecture as a direct launch.
 @sp 1
 
 @c This should be 180 days after departing Earth for a fast conjunction class manoeuvre...
 @b{B.R.}
 @sp 0
-@dfn{Zubrin} performs deceleration manoeuvre by aerobreaking through the Martian atmosphere, entering orbit.
+@dfn{Zubrin} performs deceleration manoeuvre by aerobreaking through the Martian atmosphere, entering orbit to prepare lander stage carrying a 25 tonnes payload of a habitat module and Earth return vehicle (ERV).
+@sp 1
+
+@b{B.R.}
+@sp 0
+Mars Direct crew report ERV's chemical processing plant is functioning as it currently produces oxygen, liquid water, and methane/oxygen return propellant.
 @sp 1
 
 @c Constraint: Should be 910 days total mission time since departure, with 550 days of Mars stay time...
 @b{B.R.}
 @sp 0
-NASA's @dfn{Zubrin} completes its mission objectives and lands at the Kennedy Space Center, Florida.
+@i{Zubrin ERV} completes its mission objectives and lands at the Kennedy Space Center, Florida.
 @sp 1
 
 @b{B.R.}
@@ -79,7 +84,7 @@ The plan's abstract outline is as such:
 @sp 1
 @itemize
 @item
-Send spacecraft carrying minimum necessary to bootstrap settlement, like @math{H_2}, getting there via nuclear electric ion-drive propulsion.
+Send spacecraft carrying minimum necessary to bootstrap a settlement, like @math{H_2}, getting there via nuclear electric ion-drive propulsion.
 @item
 Crew would deploy construction equipment and machinery to process indigenous materials for further expansion and self sustenance, aided with a nuclear reactor.
 @item
@@ -145,7 +150,7 @@ Crew selection is completed with a broad range of personnel including flight eng
 
 @b{B.R.}
 @sp 0
-@dfn{Mars Science Laboratory Curiosity XI}, an unmanned autonomous aerial vehicle, explores potential landing sites for settlement. The integrated on-board artificial intelligence is instructed to evaluate sites based on average available sunlight, shallow radar determined underground water ice, minerology, surface geography, and other factors.
+@dfn{Mars Science Laboratory Curiosity XI}, an unmanned autonomous aerial vehicle, explores potential landing sites for outpost. The integrated on-board artificial intelligence is instructed to evaluate sites based on average available sunlight, shallow radar determined underground water ice, minerology, surface geography, and other factors.
 @sp 1
 
 @b{B.R.}

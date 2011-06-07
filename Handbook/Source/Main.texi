@@ -1,3 +1,6 @@
+\pdfminorversion=6
+\pdfobjcompresslevel=3
+\pdfcompresslevel=9
 \input texinfo.tex
 @c Above tells TEX to use the ‘texinfo.tex’ file, which tells TEX how 
 @c to translate the Texinfo commands into TEX typesetting commands...

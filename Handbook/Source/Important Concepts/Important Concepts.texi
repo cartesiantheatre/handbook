@@ -37,6 +37,14 @@ The GPI is a system of true cost accounting which is intended to be a replacemen
 An example where the difference between the two is well illustrated is with the tobacco industry. The GDP would account for the value of all cigarettes sold (a positive figure). Conversely, the GPI would also account for the total value of all units sold, but then go on to subtract the deficits socialized to everyone in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000@footnote{@emph{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming}, Naomi Oreskes, Bloomsbury Press, 2010} people every year (a negative figure).
 @sp 1
 
+@c Jenya...
+@node Jenya
+@section Jenya
+@dfn{Article VII} of Arcadia's @i{Rubicon Act} superannuated the bancor fiat currency with the @dfn{jenya}. It is the first currency to be backed by a predominantly rhodium standard, as well as some other precious metals, such as gold and silver. The jenya became the exclusive legal tender within the Republic at the time the Act was passed. This constrained all Terran interests to acquire Arcadian goods in jenyas only.
+
+The word @i{jenya} is Sanskrit. It means @i{"of noble origin, genuine, or true wealth"}. The idea being that since rhodium is considered precious, indeed, more so than gold on both Earth and on Mars, distribution of jenyas across the populace meant the distribution of real wealth.
+@sp 1
+
 @c Mars Direct...
 @node Mars Direct
 @section Mars Direct
@@ -63,39 +71,35 @@ The mean sea level atmospheric pressure on Mars ranges from 0.3 millibars to 11.
 
 This has an impact on the way buildings must be engineered on Mars. The main difference between inflatable buildings is their pressure rating. The lower the pressure rating, the fabric will be thinner, the building lighter, and therefore lower in cost to manufacture. The pressure rating also determines whether you need to where a pressure suit, merely a respirator, or nothing at all.
 
-The @dfn{Armstrong Limit} of 62.62 millibars is the lowest the human body can survive before the vapour pressure of all exposed liquids (but not liquids like blood within your skin's pressure barrier), such as tears, saliva and the liquid wetting the alveoli within the lungs exceeds that of its surrounding atmospheric pressure. They will begin to boil away at this point. On Earth, the Armstrong Limit begins at about 19 km above the surface. On Mars, it is already well exceeded everywhere.
+The @dfn{Armstrong Limit} of 62.62 millibars is the lowest the human body can survive before the vapour pressure of all exposed liquids (but not liquids like blood within your skin's pressure barrier), such as tears, saliva and the liquid wetting the alveoli within the lungs exceeds that of its surrounding atmospheric pressure. They will begin to boil away at this point. On Earth, the Armstrong Limit begins at about 19 km above the surface. On Mars, it is already well exceeded at the surface.
 
-@multitable @columnfractions .8 .10 .10 .72
+@multitable @columnfractions .10 .15 .15 .60
 @headitem Pressure
 
 @tab Respirator
-@sp 0
-Required
 
-@tab Pressure Suit
-@sp 0
-Required
+@tab EVA Suit
 
 @tab Description
 
 @item 68 mb
-@tab Yes
-@tab Yes
+@tab Needed
+@tab Needed
 @tab These buildings are attractive because they are economical and very light to pack, requiring fabric only 0.2 mm in thickness. For plants, they are fine since plants require only 50 mb of pressure. But for humans, they need at least 170 mb to be able to live.
 
 @item 170 mb
-@tab Yes
-@tab No
+@tab Needed
+@tab Unneeded
 @tab These buildings cost a little bit more, but you can work in them without wearing a pressure suit. You still need to wear a respirator in order for the gas exchange taking place in your lungs to still work, otherwise you will quickly pass out.
 
 @item 340 mb
-@tab No
-@tab No
+@tab Unneeded
+@tab Unneeded
 @tab These buildings cost a little bit more, but you can work in them without wearing a pressure suit or respirator, although the O₂ partial pressure levels still need to be enriched. The other main advantage is that the pressure can also be equalized with a habitat making movement easier. As an added bonus, bees can polinate better at this pressure coupled with the lower gravity which makes it excellent for greenhouses.
 
 @item 1 bar
-@tab No
-@tab No
+@tab Unneeded
+@tab Unneeded
 @tab These buildings cost the most, but they offer at least the same pressure as on Earth. Since everything needs to be three times as heavy as it needs to be, it is a waste of resources, too costly, and unnecessary.
 
 @end multitable

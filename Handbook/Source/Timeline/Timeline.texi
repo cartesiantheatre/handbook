@@ -1,4 +1,4 @@
-@c Timeline chapter...
+﻿@c Timeline chapter...
 @node Timeline
 @chapter Timeline
 
@@ -84,11 +84,25 @@ The plan's abstract outline is as such:
 @sp 1
 @itemize
 @item
-Send spacecraft carrying minimum necessary to bootstrap a settlement, like @math{H_2}, getting there via nuclear electric ion-drive propulsion.
+Create a spacestation in low Earth orbit to act as a construction berth for trans-Martian spacecraft, supplied by single-stage-to-orbit (SSTO) vehicles.
+@sp 1
+
+@item
+Send a spacecraft constructed in that spacestation that carries the minimum necessary to bootstrap a settlement, like @math{H_2}. Use a nuclear electric ion-drive propulsion system to get there with indigenous resources to supply the return propellant.
+@sp 1
+
 @item
 Crew would deploy construction equipment and machinery to process indigenous materials for further expansion and self sustenance, aided with a nuclear reactor.
+@sp 1
+
 @item
-Spacecraft returns to Earth unmanned, but fully fuelled using @i{in situ} methane / oxygen propellant.
+Spacecraft returns to Earth unmanned, but fully fuelled using @i{in situ} methane/oxygen propellant.
+@sp 1
+
+@item
+Personnel ferries departing Earth augment the settlement population at regular intervals as the settlement reports increases in its capacity.
+@sp 1
+
 @end itemize
 
 A preliminary draft of the @dfn{Mars Treaty} is produced using a revised @i{Outer Space Treaty} of 1967 A.D. as a basis for a subset of it. The treaty provides the contractual basis for all signatories, outlining the roadmap, responsibilities, and party resource allocations necessary to serve as a vehicle for the terraformation and first manned mission to Mars operating under a United Nations mandate. The treaty also provides an agreement governing the activities of states on Mars and its two moons, Phobos and Deimos.
@@ -123,11 +137,13 @@ The UNSA's Office of the Avaneya Initiative disseminates more than ten-thousand 
 UNSA's Office of the Avaneya Initiative announces successful bids. The @dfn{Iterum Shipyard} contract is jointly awarded to Lockheed Martin-Boeing and Mercedes-Pratt & Whitney to robotically build a station remotely in low Earth orbit at a cost of 2.2 billion bancors. The station is to be used as a general purpose interplanetary space vehicle construction platform.
 
 @c Lockheed Martin's failed X-33 design would be a good starting point for a model...
-Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} suborbital spaceplanes. These spaceplanes provide UNSA with heavy lift workhorses for transporting personnel and materials to the Iterum Station. They require no external solid booster rockets or external fuel tank and each operate at less than @math{{1 / 5}^{th} } the cost of the retired Space Shuttles.
+Lockheed Martin-Boeing is awarded a contract to provide three, leased, single-stage-to-orbit (SSTO), manned, re-usable, @dfn{VentureStar VII} class suborbital spaceplanes named @i{Aravans}@footnote{Sanskrit for a steed or horse.}. These vehicles provide UNSA with heavy lift workhorses for ferrying personnel and materials to the @i{Iterum Shipyard}. They require no external solid booster rockets or external fuel tank and each operate at less than @math{{1 / 5}^{th} } the cost of the retired Space Shuttles.
 
-Mitsubishi-Saab's is awarded a contract to provide the @dfn{Avaneya}, robitically constructed remotely @i{in situ}, at the @i{Iterum Shipyard}, at a cost of 7.8 billion bancors. 
+Lockheed Martin-Boeing is also awarded contracts to incrementally provide four direct-launch ferries capable of carrying payload of 350 personnel each, plus provisions. The @dfn{Tarikins}@footnote{Sanskrit for a ferry-man.} will be responsible for shuttling settlers to Mars using a nuclear electric ion-drive propulsion system for the outbound trajectory, then provided in orbit with return methane/oxygen (@math{CH_4}/@math{O_2}) propellant manufactured in @i{in situ}. The ferries will depart Earth every 780 day minimum-energy launch window, taking 180 days to arrive at Mars.
 
-Volvo-John Deere is awarded a contract to provide @i{Avaneya's} nuclear electric ion-drive propulsion system at a cost of 920 million bancors. It is used for the outbound trajectory, with the inbound trajectory provided by methane / oxygen (@math{CH_4} / @math{O_2}) return fuel manufactured @i{in situ}.
+Mitsubishi-Saab's is awarded a contract to robotically construct the @dfn{Avaneya} remotely within the @i{Iterum Shipyard} orbital berth at a cost of 7.8 billion bancors.
+
+Volvo-John Deere is awarded a contract to provide nuclear electric ion-drive propulsion systems for the @i{Avaneya}, @i{Aravans}, and @i{Tarikins} at a cost of 920 million bancors. It is used for the outbound trans-Martian trajectory, with the return methane/oxygen (@math{CH_4}/@math{O_2}) propellant manufactured @i{in situ}.
 
 Soros-Murdoch Aerospace is awarded a contract to provide four @i{Mars Positioning System} satellites and the @i{Mars Enhanced Telecommunications Orbiter} carrying an optical relay at a cost 750 million bancors. The five satellites are carried as part of the Avaneya mission payload
 @sp 1
@@ -160,7 +176,7 @@ Crew selection is completed with a broad range of personnel including flight eng
 
 @b{B.R.}
 @sp 0
-Last rocket leaves UNSA's Cape Canaveral launchpad carrying construction material for the @i{Iterum Shipyard}.
+@i{Aravan III} departs UNSA's Cape Canaveral launchpad en-route to the @i{Iterum Shipyard}, low Earth orbit, with a mission payload of materials for the @i{Avaneya}. This includes the disassembled aeroshield, whole food, potable water, lab equipment, and its nuclear reactor.
 @sp 1
 
 @b{B.R.}
@@ -301,7 +317,7 @@ Notable portions of the Act include:
 @sp 1
 
 @item
-@dfn{Article VII} superannuates the bancor fiat currency with the @dfn{jenya},@footnote{Sanskrit: @i{of noble origin, genuine, or true wealth.}} the first currency to be backed by a rhodium standard. The jenya becomes the exclusive legal tender within the Republic. By extension, this requires all Terran interests to acquire Arcadian goods in jenyas only.
+@dfn{Article VII} superannuates the bancor fiat currency with the @dfn{jenya},@footnote{See @ref{Jenya}.} the first currency to be backed by a rhodium standard. The jenya becomes the exclusive legal tender within the Republic. This requires all Terran interests to acquire Arcadian goods in jenyas only.
 @sp 1
 
 @item
@@ -341,7 +357,7 @@ This day is a minimum-energy launch window for Terran inbound. Arda has a securi
 United Nations Security Council Resolution 12664 is adopted which
 
 @quotation
-@i{"unequivocally condemns in the strongest terms terrorist Martian efforts as a threat to international peace, security, and the spirit Mars Treaty. The Security Council does not recognize the self proclaimed government of the Republic of Arcadia Planitia as legitimate. The Security Council calls upon all members to proactively prevent the regional instability and deteriorating situation on the Martian planitia"}. 
+@i{"unequivocally condemns in the strongest terms the Mars Treaty Settlement's as a threat to international peace, security, and the spirit Mars Treaty. The Security Council does not recognize the self proclaimed government of the Republic of Arcadia Planitia as legitimate. The Security Council calls upon all members to proactively prevent the regional instability and deteriorating situation on the Martian planitia"}. 
 @end quotation
 @sp 1
 

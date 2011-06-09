@@ -1,0 +1,93 @@
+@c For engineers...
+@node Resources For Engineers
+@section Resources For Engineers
+These resources are useful mostly for engineers and other very technical work.
+@sp 1
+@itemize
+
+@item
+@emph{Autotools: A Practioner's Guide to GNU Autoconf, Automake, and Libtool}
+@sp 0
+John Calcote, No Starch Press, ISBN 9781593272067, 2010.
+@sp 1
+
+@item
+@emph{Beginning Game Audio Programming}
+@sp 0
+Mason McCuskey et al., Premier-Trade, ISBN 9781592000296, 2003.
+@sp 1
+
+@item
+@emph{Beginning iPhone Games Development}
+@sp 0
+PJ Cabrera et al., Apress, ISBN 9781430225997, 2010.
+@sp 1
+
+@item
+@emph{Design Patterns: Elements of Reusable Object-Oriented Software (Addison-Wesley Professional Computing Series)}
+@sp 0
+Gamma et al., Addison-Wesley Professional, Hardcover, ISBN 9780201633610, 1994.
+@sp 1
+
+@item
+@emph{Game Engine Architecture}
+@sp 0
+Jason Gregory, A K Peters/CRC Press, ISBN 9781568814131, 2009.
+@sp 1
+
+@item
+@emph{Lua 5.1 Reference Manual}
+@sp 0
+Roberto Ierusalimschy et al., Lua.org, ISBN 9788590379836, 2006.
+@sp 1
+
+@item
+@emph{Lua Programming Gems}
+@sp 0
+Lua.org, ISBN 9788590379843, 2008.
+@sp 1
+
+@item
+@emph{OpenGL Library (5th Edition)}
+@sp 0
+Dave Shreiner et al., Addison-Wesley Professional, ISBN 9780321637642, 2009.
+@sp 1
+
+@item
+@emph{Pro OGRE 3D Programming}
+@sp 0
+Gregory Junker, Apress, ISBN 9781590597101, 2006.
+@sp 1
+
+@item
+@emph{Programming in Lua, Second Edition}
+@sp 0
+Roberto Ierusalimschy, Lua.org, ISBN 9788590379829, 2006.
+@sp 1
+
+@item
+@emph{Systems and Models. Complexity, Dynamics, Evolution, Sustainability}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833481215, 2007.
+@sp 1
+
+@item
+@emph{System Zoo 1 Simulation Models - Elementary Systems, Physics, Engineering}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484223, 2007.
+@sp 1
+
+@item
+@emph{System Zoo 2 Simulation Models. Climate, Ecosystems, Resources}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484230, 2007.
+@sp 1
+
+@item
+@emph{System Zoo 3 Simulation Models. Economy, Society, Development}
+@sp 0
+Hartmut Bossel, BoD, ISBN 9783833484247, 2007.
+@sp 1
+
+@end itemize
+

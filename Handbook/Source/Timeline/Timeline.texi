@@ -10,7 +10,7 @@ Year zero's placement relative to the Gregorian calendar is deliberately never g
 @sp 1
 
 @c Provides hint to astute reader of rough order of magnitude of time between now and story...
-@b{B.R.}
+@b{(date here) B.R.}
 @sp 0
 The last of the @i{International Space Station} crew return to Earth with the station subsequently decommissioned, deorbited, and incinerated during atmospheric entry.
 @sp 1
@@ -316,7 +316,7 @@ Arda concludes his speech acknowledging his passage that morning of the @dfn{Rub
 @cartouche
 @itemize
 @item
-@dfn{Article I} declares the colony an independent, sovereign, self-governed, constitutional republic, with the right to self determination. It is self-styled the @dfn{Republic of Arcadia Planitia}, colloquially known as @dfn{Arcadia} which is both its capital and sole city.
+@dfn{Article I} declares the colony an independent, sovereign, self-governed, constitutional republic, with the right to self determination. It is self-styled the @dfn{Republic of Arcadia Planitia (RAP)}, colloquially known by its capital and sole city @dfn{Arcadia}.
 @sp 1
 
 @item
@@ -349,9 +349,10 @@ Arda concludes his speech acknowledging his passage that morning of the @dfn{Rub
 @end cartouche
 @sp 1
 
+@c Coke pulled out of Vietnam the year before the United States did...
 @b{A.R.}
 @sp 0
-@i{Arcadia} passes the @dfn{Humanoid Act}, stripping corporate legal fictions of the rights of human beings.
+Coke closes down its production and bottling facilities and makes preparations to return to Earth.
 @sp 1
 
 @c Note: Prior to this incident, No. 2 Railgun was already offline for 
@@ -366,6 +367,11 @@ Arda convenes an emergency cabinet meeting at @i{Arcadian Hall} where forensic e
 @b{A.R.}
 @sp 0
 Lockheed Martin-Boeing's Advanced Development Programs (Skunk Works) begins refitting the @i{Tarakin III} into the @dfn{Yama} in response to a UNSA contract for a classified mission payload.
+@sp 1
+
+@b{A.R.}
+@sp 0
+@i{Arcadia} passes the @dfn{Humanoid Act}, stripping corporate legal fictions of the rights of human beings.
 @sp 1
 
 @b{A.R.}
@@ -416,11 +422,11 @@ Expresses its readiness to take all necessary steps to respond to the terrorist 
 @sp 1
 
 @item
-<Need statement invoking use of force>
+Authorizes Member States that have notified the Secretary-General, acting nationally or through regional organizations or arrangements, and acting in cooperation with the Secretary-General and the Office of the President of the Space Agency, to take all necessary measures to protect civilians and civilian populated areas under threat of attack in the United Nations Arcadian Settlement, and requests the Member States concerned to inform the Secretary-General immediately of the measures they take pursuant to the authorization conferred by this paragraph which shall be immediately reported to the Security Council;
 @sp 1
 
 @item
-Decides to remain seized of the matter.
+Decides to remain actively seized of the matter.
 @sp 1
 @end enumerate
 @end quotation
@@ -445,7 +451,7 @@ Selected Rapid Reaction Force personnel are assigned to UNSA training facilities
 @c Need a strategic transport...
 @b{A.R.}
 @sp 0
-@i{Yama}'s launch window is missed due to low-Earth orbit overly saturated with space debris. UNSA engineers fear they may be approaching the Kessler effect of causing a runaway chain reaction, reducing all objects in orbit. This would threaten the @i{Iterum Shipyard} and all Terran space exploration. Departure is rescheduled for the next launch window of 25 months.
+@i{Yama's} launch window is missed due to low-Earth orbit overly saturated with space debris. UNSA engineers fear they may be approaching the Kessler effect of causing a runaway chain reaction, reducing all objects in orbit. This would threaten the @i{Iterum Shipyard} and all Terran space exploration. Departure is rescheduled for the next launch window of 25 months.
 @sp 1
 
 @b{A.R.}
@@ -458,16 +464,16 @@ Arcadia's @i{ERV Bravo} carrying Kissinger lands at Edwards Air Force Base, Cali
 @sp 0
 The @dfn{Yama}, a manned and remotely piloted spacecraft, completes a type I Hohmann transfer orbital manoeuvre, aerobreaking into Martian geostationary orbit. 
 
-Yama carries a payload of remotely operated equipment destined for Phobos, a photographic reconnaissance satellite for sun-synchronous orbit, as well as a single Rapid Reaction Force battalion. The battalion is to be deployed as the @dfn{United Nations Emergency Assistance Peacekeeping Force}. Its numbers are drawn principally from North American Union and European Union airborne light infantry units.
+@i{Yama} carries a payload of remotely operated equipment destined for Phobos, a photographic reconnaissance satellite for sun-synchronous orbit, as well as a single Rapid Reaction Force battalion. The battalion is to be deployed as the @dfn{United Nations Emergency Assistance Peacekeeping Force}. Its numbers are drawn principally from North American Union and European Union airborne light infantry units.
 @sp 1
 
 @b{A.R.}
 @sp 0
-Yama's commanding officer Lieutenant Colonel Dragov issues warning orders down the chain of command to prepare for insertion, geostationary orbit, Mars.
+@i{Yama's} commanding officer Lieutenant Colonel Dragov issues warning orders down the chain of command to prepare for insertion, geostationary orbit, Mars.
 @sp 1
 
 @b{A.R.}
 @sp 0
-Arcadia's 3rd militia battalion's attached Signal Corps detects a non-Arcadian transponder signal.
+Arcadia's 3rd militia battalion's attached Signal Corps detects a non-RAP transponder signal.
 @sp 1
 

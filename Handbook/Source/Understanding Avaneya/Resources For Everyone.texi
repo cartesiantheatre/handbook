@@ -1,0 +1,127 @@
+@c Resources for everyone section...
+@node Resources For Everyone
+@section Resources For Everyone
+These resources are useful for every kind of contributor, from researchers and writers to modellers and engineers.
+
+You might consider reading some of these resources in order to enrich your understanding of the game, whose fabric is drawn from @i{at least} all of them. The more background knowledge we have, the greater the quality of the game. The same goes for really any kind of complex simulation, and not just Avaneya.
+@sp 1
+
+@itemize
+
+@item
+@emph{Blue Mars: Mars Trilogy Bk. 3}
+@sp 0
+Kim Stanley Robinson, Voyager, ISBN 9780586213919, 1997.
+@sp 1
+
+@item
+@emph{Death by Government}
+@sp 0
+R. J. Rummel, Transaction Publishers, ISBN 9781560009276, 1997.
+@sp 1
+
+@item
+@emph{Debunking 9/11 Debunking}
+@sp 0
+David Ray Griffin, Olive Branch Pr, ISBN 9781566566865, 2007.
+@sp 1
+
+@item
+@emph{Free Software, Free Society: Selected Essays of Richard M. Stallman}
+@sp 0
+Richard M. Stallman, Free Software Foundation, ISBN 9781882114986, 2002.
+@sp 1
+
+@item
+@emph{Green Mars: Mars Trilogy Bk. 2}
+@sp 0
+Kim Stanley Robinson, Voyager, ISBN 9780586213902, 1994.
+@sp 1
+
+@item
+@emph{How to Live on Mars: A Trusty Guidebook to Surviving and Thriving on the Red Planet}
+@sp 0
+Robert Zubrin, Three Rivers Press, ISBN 9780307407184, 2008.
+@sp 1
+
+@item
+@emph{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming}
+@sp 0
+Naomi Oreskes et al., Bloomsbury Press, ISBN 9781596916104, 2010.
+@sp 1
+
+@item
+@emph{Minutes of Proceedings and Evidence Respecting the Bank of Canada}
+@sp 0
+Standing Committee on Banking and Commerce, 1939, pp. 461-500.
+@c Anyone have a reliable online link for this to a pdf or something?
+@sp 1
+
+@item
+@url{http://www.thevertigo.com/html/9-11/, @emph{Open Letter to Minister of Public Safety Regarding 9/11}}
+@sp 0
+Kip Warner, 2011.
+@sp 1
+
+@item
+@emph{Red Mars: Mars Trilogy Bk. 1}
+@sp 0
+Kim Stanley Robinson, Collins, ISBN 9780586213896, 1993.
+@sp 1
+
+@item
+@emph{Statistics of Democide: Genocide and Mass Murder since 1900 (Macht Und Gesellschaft, Bd. 2)}
+@sp 0
+R. J. Rummel, Lit Verlag, ISBN 9783825840105, 1999.
+@sp 1
+
+@item
+@emph{Terraforming: The Creating of Habitable Worlds (Astronomers' Universe)}
+@sp 0
+Martin Beech, Springer, ISBN 9780387097954, 2009.
+@sp 1
+
+@item
+@emph{The Case Against Fluoride: How Hazardous Waste Ended Up in Our Drinking Water and the Bad Science and Powerful Politics That Keep It There}
+@sp 0
+Paul Connett et al., Chelsea Green Publishing, ISBN 9781603582872, 2010.
+@sp 1
+
+@item
+@emph{The Case for Mars: The Plan to Settle the Red Planet and Why We Must}
+@sp 0
+Robert Zubrin et al., Free Press, 1997.
+@sp 1
+
+@item
+@emph{The China Study: The Most Comprehensive Study of Nutrition Ever Conducted and the Startling Implications for Diet, Weight Loss and Long-term Health}
+@sp 0
+T. Colin Campbell, Benbella Books, 2006.
+@sp 1
+
+@item
+@emph{The Creature from Jekyll Island: A Second Look at the Federal Reserve}
+@sp 0
+G. Edward Griffin, American Media, ISBN 9780912986395, 2010.
+@sp 1
+
+@item
+@emph{Zeitgeist: The Movie}
+@sp 0
+Peter Joseph, 122 minutes, GMP LLC, 2007.
+@sp 1
+
+@item
+@emph{Zeitgeist: Addendum}
+@sp 0
+Peter Joseph, 123 minutes, GMP LLC, 2008.
+@sp 1
+
+@item
+@emph{Zeitgeist: Moving Forward}
+@sp 0
+Peter Joseph, 161 minutes, GMP LLC, 2010.
+@sp 1
+
+@end itemize
+

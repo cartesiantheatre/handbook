@@ -1,0 +1,56 @@
+@c Core Leitmotifs section...
+@node Core Leitmotifs
+@section Core Leitmotifs
+
+Avaneya has several recurring theses that need to be communicated to users. Be creative in how you present them. But just be tactful and do not be afraid to requires users to do some thinking to earn them through interaction.
+@sp 1
+
+@itemize
+@item
+The basic assumptions of neo-classical economics are wrong. The environment is finite, and thus infinite growth models will always fail. True cost accounting is more honest and appropriate.
+@sp 1
+
+@item
+As government increases in size, it tends to become more dangerous, less useful, and the people less free.
+@sp 1
+
+@item
+Most disease is caused by diet.
+@sp 1
+
+@item
+Agriculture is our principle means of interacting with the planet. Change what you eat, solve many problems.
+@sp 1
+
+@item
+Elected officials are generally irrelevant. The more consequential a public policy, the more likely it was the product of special interest groups.
+@sp 1
+
+@item
+Most instances of terrorism are faked by government.
+@sp 1
+
+@item
+Fractional reserve central banking is fraud.
+@sp 1
+
+@item
+Giving corporations the rights of human beings was socially counterproductive.
+@sp 1
+
+@item
+Everything is connected and nothing happens in a vacuum.
+@sp 1
+
+@item
+Prices do not reflect the true cost of the commodities purchased.
+@sp 1
+
+@item
+Usury is the most ubiquitous contemporary form of slavery and can be used to enslave entire nations.
+@sp 1
+
+@item
+There is no such thing as human nature, only human behaviour.@footnote{See @ref{Socioeconomic Modelling}.}
+@end itemize
+

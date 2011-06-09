@@ -31,6 +31,7 @@ all: $(OUTPUT)
 
 $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_DIAGRAM_PDF)
 	texi2dvi --pdf -I Images --build-dir=$(CACHE) $(MAIN_SOURCE) && mv $(PRE_OUTPUT) $(OUTPUT)
+#	luatex --interaction=errorstopmode --pdf -I Images --build-dir=$(CACHE) $(MAIN_SOURCE) && mv $(PRE_OUTPUT) $(OUTPUT)
 
 $(UMBRELLO_DIAGRAM_PDF): $(UMBRELLO_DIAGRAM)
 	umbrello --export eps $(UMBRELLO_DIAGRAM) --directory Images/AresEngine

@@ -16,7 +16,7 @@
 
 @c Macros...
 @set MANUAL_TITLE           Avaneya Crew Handbook
-@set MANUAL_DESCRIPTION     A comprehensive guide for all of our bold contributors.
+@set MANUAL_DESCRIPTION     The Avaneya project canonically defined.
 @set AVANEYA_DESCRIPTION    A cerebral science fiction game for GNU.
 @set COPYRIGHT_LINE         @copyright{} 2010, 2011 Kshatra Corp
 

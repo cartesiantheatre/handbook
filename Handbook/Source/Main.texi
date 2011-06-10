@@ -71,9 +71,10 @@ last updated @value{VERSION_MANUAL}.
 
 @c Main body follows...
 @include "Preface/Preface.texi"
+@include "Core Leitmotifs/Core Leitmotifs.texi"
 @include "The Game/The Game.texi"
-@include "Important Concepts/Important Concepts.texi"
-@include "Understanding Avaneya/Understanding Avaneya.texi"
+@include "Terminology Used/Terminology Used.texi"
+@include "Learning Resources/Learning Resources.texi"
 @include "Timeline/Timeline.texi"
 @include "The Characters/The Characters.texi"
 @include "The Story/The Story.texi"
@@ -95,7 +96,6 @@ last updated @value{VERSION_MANUAL}.
 @c @include "Information For Voice Actors/Information For Voice Actors.texi"
 @c @include "Information For Web Developers/Information For Web Developers.texi"
 @c @include "Information For Writers/Information For Writers.texi"
-@include "The Project Crew/The Project Crew.texi"
 @include "Licensing Rationale/Licensing Rationale.texi"
 
 @c Appendices...

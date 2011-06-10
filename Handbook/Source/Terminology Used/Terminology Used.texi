@@ -1,8 +1,8 @@
-@c Important Concepts chapter...
-@node Important Concepts
-@chapter Important Concepts
+@c Terminology used chapter...
+@node Terminology Used
+@chapter Terminology Used
 
-The following is a collection of concepts which are useful in understanding the game world. They range from the everyday colloquial to the technical. Familiarizing yourself with them before you read on may be helpful.
+The following is a collection of terminology used throughout the handbook and the game world. They range from the everyday colloquial to the technical. Some of it is factual and some of it is fictional (e.g. the @i{jenya}). Getting familiar with the terminology before you read on might be useful.
 @sp 1
 
 @c Albedo...
@@ -34,15 +34,17 @@ A chemical reaction that releases energy as part of its reaction. An example wou
 @section Genuine Progress Indicator
 The GPI is a system of true cost accounting which is intended to be a replacement to the GDP, gross domestic product, sometimes called the gross national product, GNP. The GPI works by taking into account all costs of an activity to society and provides a net balance sheet. The latter, on the other hand, only functions as an income sheet by tabulating the total amount of goods and services produced in a year. 
 
-An example where the difference between the two is well illustrated is with the tobacco industry. The GDP would account for the value of all cigarettes sold (a positive figure). Conversely, the GPI would also account for the total value of all units sold, but then go on to subtract the deficits socialized to everyone in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000@footnote{@emph{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming}, Naomi Oreskes, Bloomsbury Press, 2010} people every year (a negative figure).
+An example where the difference between the two is well illustrated is in society's relation with the tobacco industry. The GDP accounts for the value of all cigarettes sold, a dollar figure greater than zero. Its functionality is limited more or less to that of an income sheet.
+
+Conversely, the GPI, like the GDP, would also account for the total value of all cigarettes sold. Where it differs is it then goes on to subtract the dollar figures socialized to everyone in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000@footnote{See @i{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming} in @ref{Resources For Everyone}.} people every year. The GDP calculated a gain. The GPI revealed it was actually a deficit.
 @sp 1
 
 @c Jenya...
 @node Jenya
 @section Jenya
-@dfn{Article VII} of Arcadia's @i{Rubicon Act} superannuated the bancor fiat currency with the @dfn{jenya}. It is the first currency to be backed by a predominantly rhodium standard, as well as some other precious metals, such as gold and silver. The jenya became the exclusive legal tender within the Republic at the time the Act was passed. This constrained all Terran interests to acquire Arcadian goods in jenyas only.
+@dfn{Article VII} of Arcadia's @i{Rubicon Act} superannuated the bancor fiat currency with the @dfn{jenya}. It is the first currency to be backed by a predominantly rhodium standard, with the remainder by other precious metals, such as gold and silver. The jenya became the exclusive legal tender within the Republic at the time the Act was passed. This constrained all Terran interests to acquire Arcadian goods in jenyas only.
 
-The word @i{jenya} is Sanskrit. It means @i{"of noble origin, genuine, or true wealth"}. The idea being that since rhodium is considered precious, indeed, more so than gold on both Earth and on Mars, distribution of jenyas across the populace meant the distribution of real wealth.
+The word @i{jenya} is Sanskrit. It means @i{"of noble origin, genuine, or true wealth"}. The idea being that since rhodium is considered precious, indeed, more so than gold on both Earth and Mars, distribution of jenyas across the populace implied the distribution of real wealth to the populace.
 @sp 1
 
 @c Mars Direct...

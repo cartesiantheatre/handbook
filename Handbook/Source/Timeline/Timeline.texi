@@ -253,7 +253,7 @@ The construction team begin minor excavation for anchoring and erecting temporar
 @sp 0
 Gas extractors are brought online and run at full capacity capturing liquid oxygen, liquid nitrogen, argon, and carbon dioxide. 
 
-Sebatier, RWGS, and methanol gas processors@footnote{See @ref{Glossary} for more information on the Sebatier and RWGS reactors.} create methane, oxygen, hydrogen, methanol, and aqua successfully.
+Sebatier, RWGS, and methanol gas processors@footnote{See @ref{RWGS reactor} for more information on the Sebatier and RWGS reactors.} create methane, oxygen, hydrogen, methanol, and aqua successfully.
 @sp 1
 
 @b{B.R.}

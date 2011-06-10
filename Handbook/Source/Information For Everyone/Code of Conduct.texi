@@ -1,5 +1,7 @@
 @c Avaneya Code of Conduct v1.0
-@node Code of Conduct
+@page
+@node Avaneya Code of Conduct
+@section Avaneya Code of Conduct
 @center Version 1.0
 @sp 1
 

@@ -4,9 +4,9 @@
 
 @node Why
 @section Why
-Too often, people have come out of experiencing a great dystopian science fiction novel or film, only to say to themselves, Thank goodness we don't live in @i{that} world.
+Too often, people have come out of experiencing a great dystopian science fiction novel or film, only to say to themselves, Thank goodness we don't live in @i{that} world. That needs to change.
 
-The problem is that dystopian science fiction is among the most honest kind of story telling when examined in the context of history. But unless people can see the pedagogical relevance, analogies will remain vauge and metaphors cryptic. Responsible dystopian science fiction makes the connection.
+The problem is that dystopian science fiction is among the most honest kind of story telling when examined in the context of history. But unless people can see the pedagogical relevance, analogies will remain vauge and metaphors too cryptic to be useful. Perhaps it can be said that @i{responsible} dystopian science fiction makes the connection.
 
 But good science fiction is only @i{partly} fiction because it is the @i{science} portion that attracts people to it in the first place. Science, by its nature, is a thinking and knowledge oriented enterprise. Science is the study of reality, and yet, fiction is outside of reality. So science fiction is a mediator between the two, often acting as an @i{avant-garde} for both.
 
@@ -24,8 +24,8 @@ Worded differently, the choice between using free and proprietary software is no
 @section Classification
 People have struggled in the past to classify Avaneya. It is what it is, but the closest traditional categories that form a subset of it are the traditional city builder and management simulations and the real time strategy.
 
-@node Who it is for
-@section Who it is for
+@node Likely Users
+@section Likely Users
 The game so far has attracted a fairly large base of followers. From what can be observed at this time, the game appears to appeal to those with an interest in:
 
 @itemize @bullet
@@ -41,11 +41,13 @@ The game so far has attracted a fairly large base of followers. From what can be
 @i{the interconnectedness of everything}
 @end itemize
 
-The game may take place in the future, but it deals with current problems. The best way to get an idea of the intended audience is to quickly @pxref{Understanding Avaneya} and to ask yourself the type of audience that those resources would probably resonate with. 
+The game may take place in the future, but it deals with current problems. The best way to get an idea of the intended audience is to quickly see both @ref{Core Leitmotifs} and @ref{Resources For Everyone}. You will be in a better position to try and gauge the type of audience that this game probably resonates with after doing that. 
 
-@node Who it is not for
-@section Who it is not for
-Avaneya is a @i{sui generis}.@footnote{"Literally meaning of its own kind / genus or unique in its characteristics. The expression is often used in analytic philosophy to indicate an idea, an entity, or a reality which cannot be included in a wider concept," (Wikipedia).} It is not like other games, and thus it is not for all people. Those with a brief attention span, believe that things originate in cans with little appreciation for process, and accidentalists will probably not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
+@node Unlikely Users
+@section Unlikely Users
+Avaneya is a @i{sui generis}.@footnote{@i{"Literally meaning of its own kind / genus or unique in its characteristics. The expression is often used in analytic philosophy to indicate an idea, an entity, or a reality which cannot be included in a wider concept,"} (Wikipedia).} It is not like other games, and thus it is not for all people. It does not try to be, nor will it ever be.
+
+Those with a brief attention span, believe that things originate in cans with little appreciation for process, and accidentalists will probably not enjoy this game. There are already many such games that appeal to that type of audience, so that need not be our aim here.
 
 This game will challenge you to think, and possibly even offend you. It challenges the consensus of reality, and therefore, potentially, your world view. Consequently, some have accused Avaneya of being a vehicle for culture jamming and political commentary. This project is shamelessly guilty as charged---like the newspapers, film, television, games, and other mainstream media that saturate us. 
 

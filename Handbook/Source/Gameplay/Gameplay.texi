@@ -1,6 +1,0 @@
-@c Gameplay chapter...
-@node Gameplay
-@chapter Gameplay
-
-@include "Gameplay/Build Tree.texi"
-

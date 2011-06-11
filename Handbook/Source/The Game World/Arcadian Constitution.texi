@@ -1,4 +1,0 @@
-@c Arcadian Constitution section...
-@node Arcadian Constitution
-@section Arcadian Constitution
-

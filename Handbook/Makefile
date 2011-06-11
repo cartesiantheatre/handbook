@@ -17,8 +17,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-MAIN_SOURCE             = Source/Main.texi
-ALL_SOURCE              = $(shell find Source/ -type f -name '*.texi' -exec echo "{}" \; | sed 's/ /\\ /g')
+MAIN_SOURCE             = Source/Main.tex
+ALL_SOURCE              = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_DIAGRAM        = ../AresEngine/UML/Engine.xmi
 PRE_OUTPUT              = Main.pdf
 OUTPUT                  = Handbook.pdf

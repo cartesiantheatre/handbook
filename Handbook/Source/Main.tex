@@ -1,16 +1,19 @@
+% Setup area...
+
 \starttext
 \startstandardmakeup
     \midaligned{Avaneya Crew Handbook}
 \stopstandardmakeup
-\completecontent
 
-%@c Macros...
+
+
+%% Macros...
 %@set MANUAL_TITLE           Avaneya Crew Handbook
 %@set MANUAL_DESCRIPTION     The Avaneya project canonically defined.
 %@set AVANEYA_DESCRIPTION    A cerebral science fiction game for GNU.
 %@set COPYRIGHT_LINE         @copyright{} 2010, 2011 Kshatra Corp
 
-%@c Copyright notice...
+%% Copyright notice...
 %@copying
 %@value{MANUAL_DESCRIPTION}
 
@@ -27,69 +30,70 @@
 %@end quotation
 %@end copying
 
-%@c Start title page...
+%% Start title page...
 %@titlepage
 %@title @value{MANUAL_TITLE}
 %@subtitle @value{MANUAL_DESCRIPTION}
 %@author The Avaneya Crew
 %last updated @value{VERSION_MANUAL}.
 
-%@c Document description...
+%% Document description...
 %@documentdescription
 %@value{MANUAL_DESCRIPTION}
 %@end documentdescription
 
-%@c Copyright page...
+%% Copyright page...
 %@page
 %@vskip 0pt plus 1filll
 %@insertcopying
 %@sp 1
 
-%@c End the title page and begin page numbering...
+%% End the title page and begin page numbering...
 %@end titlepage 
 
-%@c Output the table of contents at the beginning...
-%@summarycontents
-%@contents
+%% Output the table of contents at the beginning...
+\completecontent
 
-%@c Top / master node...
+%% Top / master node...
 %@ifnottex
 %@node Top
 %@top @value{MANUAL_TITLE}
 %@value{MANUAL_DESCRIPTION}
 %@end ifnottex
 
-%@c Main body follows...
-%@include "Preface/Preface.tex"
-%@include "Core Leitmotifs/Core Leitmotifs.tex"
-%@include "The Game/The Game.tex"
-%@include "Terminology Used/Terminology Used.tex"
-%@include "Learning Resources/Learning Resources.tex"
-%@include "Timeline/Timeline.tex"
-%@include "The Characters/The Characters.tex"
-%@include "The Story/The Story.tex"
-%@include "The Game World/The Game World.tex"
-%@include "Gameplay/Gameplay.tex"
-%@c @include "Features/Features.tex"
-%@include "Selected Technologies/Selected Technologies.tex"
-%@include "Information For Everyone/Information For Everyone.tex"
-%@include "Information For Artists/Information For Artists.tex"
-%@c @include "Information For Audio Engineers/Information For Audio Engineers.tex"
-%@c @include "Information For Cinematic Artists/Information For Cinematic Artists.tex"
-%@include "Information For Engineers/Information For Engineers.tex"
-%@c @include "Information For Modeller/Information For Modeller.tex"
-%@c @include "Information For Musicians/Information For Musicians.tex"
-%@c @include "Information For Researchers/Information For Researchers.tex"
-%@c @include "Information For Scripters/Information For Scripters.tex"
-%@c @include "Information For System Administrators/Information For System Administrators.tex"
-%@c @include "Information For Translators/Information For Translators.tex"
-%@c @include "Information For Voice Actors/Information For Voice Actors.tex"
-%@c @include "Information For Web Developers/Information For Web Developers.tex"
-%@c @include "Information For Writers/Information For Writers.tex"
-%@include "Licensing Rationale/Licensing Rationale.tex"
+%% Main body follows...
+% \include{Source/Preface/Preface.tex}
+% \include{Core Leitmotifs/Core Leitmotifs.tex}
+% \include{The Game/The Game.tex}
+% \include{Terminology Used/Terminology Used.tex}
+% \include{Learning Resources/Learning Resources.tex}
+% \include{Timeline/Timeline.tex}
+% \include{The Characters/The Characters.tex}
+% \include{The Story/The Story.tex}
+% \include{The Game World/The Game World.tex}
+% \include{Gameplay/Gameplay.tex}
+% %\include{Features/Features.tex}
+% \include{Selected Technologies/Selected Technologies.tex}
+% \include{Information For Everyone/Information For Everyone.tex}
+% \include{Information For Artists/Information For Artists.tex}
+% % \include{Information For Audio Engineers/Information For Audio Engineers.tex}
+% % \include{Information For Cinematic Artists/Information For Cinematic Artists.tex}
+% \include{Information For Engineers/Information For Engineers.tex}
+% % \include{Information For Modeller/Information For Modeller.tex}
+% % \include{Information For Musicians/Information For Musicians.tex}
+% % \include{Information For Researchers/Information For Researchers.tex}
+% % \include{Information For Scripters/Information For Scripters.tex}
+% % \include{Information For System Administrators/Information For System Administrators.tex}
+% % \include{Information For Translators/Information For Translators.tex}
+% % \include{Information For Voice Actors/Information For Voice Actors.tex}
+% % \include{Information For Web Developers/Information For Web Developers.tex}
+% % \include{Information For Writers/Information For Writers.tex}
+% \include{Licensing Rationale/Licensing Rationale.tex}
 
-%@c Appendices...
-%@include "Licenses/Licenses.tex"
+%% Appendices...
+\startappendices
+%\include{Licenses/Licenses.tex}
+\stopappendices
 
 \completeindex
 \stoptext

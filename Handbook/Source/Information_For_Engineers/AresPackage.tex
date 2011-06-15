@@ -8,20 +8,20 @@ The AresEngine uses a custom game archive format built using EBML, an extensible
 You might be wondering why a game engine requires its media to be delivered to it in a custom archive format, as opposed to being exposed "naked" directly through the platform's native file system. There are a number of benefits to using a custom archive format, as well as EMBL specifically.
 @sp 1
 
-@itemize
-@item
+\itemize
+\item
 The EMBL format enables extendability for future format changes.
 @sp 1
 
-@item
+\item
 It can be easier to distribute a few files containing many, than many to the end user.
 @sp 1
 
-@item
+\item
 As a single file (*.AresPackage), file seek, open, and load times are reduced.
 @sp 1
 
-@item
+\item
 Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
 @sp 1
 @end itemize

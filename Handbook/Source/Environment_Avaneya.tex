@@ -1,0 +1,223 @@
+% The environment file is used to setup the typesetting that relate to 
+%  any product, but at present, just the crew handbook...
+
+\startenvironment Environment_Avaneya
+
+\preloadtypescripts
+
+\doifmode{screen}{\setupinteraction[state=start]}
+
+\setupsystem
+  [\c!random=\v!big]
+
+\setuplayout
+  [\c!location=\v!middle,
+   \c!style=\ss,
+   \c!backspace=2.5cm,
+   \c!topspace=1.5cm,
+   \c!width=16cm,
+   \c!margindistance=.25cm,
+   \c!margin=2.5cm,
+   \c!height=\v!middle]
+
+% re-defined because the default rscale=1.075 for modern doesn't 
+% look right
+
+\starttypescript [palatino]
+\definetypeface [palatino] [rm] [serif] [palatino] [default]
+\definetypeface [palatino] [ss] [sans]  [modern]   [default]
+\definetypeface [palatino] [tt] [mono]  [modern]   [default]
+\definetypeface [palatino] [mm] [math]  [palatino] [default]
+\stoptypescript
+
+\usetypescript[palatino][ec]
+
+\setupbodyfont[palatino,11pt]
+
+\definefontsynonym[chapternumberfont][RegularBold]
+\definefontsynonym[chaptertextfont]  [RegularBold]
+
+\definebodyfont[11pt][rm][bfe=RegularBold at 30pt]
+\definebodyfont[11pt][rm][bft=RegularBold at 30pt]
+
+
+\definelayout
+  [fullpage]
+  [\c!backspace=0pt,
+   \c!topspace=0pt,
+   \c!width=\v!middle,
+   \c!height=\v!middle,
+   \c!header=0pt,
+   \c!footer=0pt]
+
+\setuppagenumbering
+  [\c!alternative=\v!doublesided]
+
+\def\startexample
+  {\blank
+   \begingroup}
+
+\def\stopexample
+  {\endgroup
+   \blank}
+
+\def\startreality
+  {\blank
+   \page[\v!preference]
+   \begingroup}
+
+\def\stopreality
+  {\relax
+   \endgroup
+   \blank}
+
+\defineframedtext
+  [MiniFile]
+  [\c!width=25em,
+   \c!offset=0.25ex,
+   \c!bodyfont=7pt,
+   \c!background=\v!color,
+   \c!backgroundcolor=GrayColor,
+   \c!backgroundoffset=.25ex,
+   \c!frame=\v!off,
+   \c!before=,
+   \c!after=]
+
+\setuppagenumbering
+  [\c!location=]
+
+\setuptolerance
+  [\v!verytolerant,\v!stretch]
+
+\setupblank
+  [\v!medium]
+
+\setupwhitespace
+  [\v!medium]
+
+\setuptyping
+  [\c!blank=\v!medium]
+
+\setupheadertexts
+  [\v!margin]
+  [][\hfill\pagenumber\hfill]
+
+\setupfootertexts
+  [\v!margin]
+  [][{\hfill\doifnotmode{*\v!frontpart}{\getmarking[\v!chapter\v!number]}\hfill}]
+
+\setupheadertexts
+  [\v!text]
+  [][{\hfill\getmarking[\v!chapter]\hfill}]
+
+\setupfootertexts
+  [\v!text]
+  [][{\hfill\getmarking[\v!section]\hfill}]
+
+\setupbodyfontenvironment
+  [default]
+  [em=italic]
+
+\setupsectionblock[\v!frontpart] [\c!page=\v!yes]
+\setupsectionblock[\v!bodypart]  [\c!page=\v!yes]
+\setupsectionblock[\v!appendix]  [\c!page=\v!yes]
+\setupsectionblock[\v!frontpart] [\c!before=,\c!after=]
+
+\setuphead
+  [\v!chapter]
+  [\c!command=\PlaceSection,
+   \c!page=\v!yes,
+   \c!before=,
+   \c!header=\v!nomarking,
+   \c!style=\bfd]
+
+\setuphead
+  [\v!title]
+  [\c!command=\PlaceSection,
+   \c!page=\v!right,
+   \c!before=,
+   \c!header=\v!nomarking,
+   \c!style=\bfd]
+
+\setuphead
+  [\v!section]
+  [\c!command=\PlaceSection,
+   \c!inbetween=,
+   \c!style=\bfb]
+
+\setuphead
+  [\v!subsection]
+  [\c!command=\PlaceSection,
+   \c!before=\blank,
+   \c!style=\bfa]
+
+\setuphead
+  [\v!subsubsection]
+  [\c!command=\PlaceSection,
+   \c!before=\blank,
+   \c!style=\bsa]
+
+\def\PlaceSection#1#2%
+  {\goodbreak
+   \vbox
+     {\localheadsetup
+      \begstrut
+      \inleftmargin{\hbox to \leftmarginwidth{\hss#1\hss}}%
+      #2}}
+
+\setupcaptions[width=14cm,align=right]
+
+
+\setMPtext{text}{some test text}
+
+\startusableMPgraphic{text}
+  picture r ;
+  r := image ( graphictext
+    \MPstring{text}
+    randomized .4pt
+    scaled 6pt
+    withfillcolor .8\MPcolor{maincolor}
+    withpen pencircle scaled 1pt ; ) ;
+  draw r ;
+\stopusableMPgraphic
+
+\setuptype
+  [\c!option=\v!slanted]
+
+\setuptyping
+  [\c!option=\v!slanted]
+
+\setuplist
+  [\v!section]
+  [\c!width=3em]
+
+\defineregister
+  [texmacro]
+  [texmacros]
+
+\setupregister
+  [texmacro]
+  [\c!indicator=\v!off,
+   \c!distance=1em minus .25em]
+
+\setupfootnotes
+  [\c!rule=\v!on]
+
+\setuphead
+  [\v!chapter]
+  [\c!header=\v!empty]
+
+\setupitemgroup[\v!itemize]
+  [\v!each]
+  [\c!headstyle=\v!bold]
+
+\setupitemgroup[\v!itemize]
+  [\v!each]
+  [\v!stopper]
+
+\setupsubpagenumber
+  [\c!way=\v!by\v!chapter,
+   \c!state=\v!start]
+
+\stopenvironment
+

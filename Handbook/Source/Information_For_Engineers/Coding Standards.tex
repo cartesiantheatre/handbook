@@ -33,12 +33,12 @@ Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Li
 \subsection{Mathematical}
 @sp 1
 
-@itemize
-@item
+\itemize
+\item
 All angles should be worked with in degrees, not radians, whenever possible.
 @sp 1
 
-@item
+\item
 All floating point calculations should be done in single precision whenever possible.
 @sp 1
 
@@ -47,17 +47,17 @@ All floating point calculations should be done in single precision whenever poss
 \subsection{Formatting}
 @sp 1
 
-@itemize
+\itemize
 
-@item
+\item
 English (Canadian) should be used for everything non-localized and saved in UTF-8 whenever possible.
 @sp 1
 
-@item
+\item
 Always use spaces and not tabs. You can use the latter, if you like, but just as long as your editor converts them to spaces when saving.
 @sp 1
 
-@item
+\item
 Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier, in which case it should be indented so that the identifier begins at a four space interval.
 @sp 1
 
@@ -83,11 +83,11 @@ float SomeFunction()
 @end smallexample
 @sp 1
 
-@item
+\item
 You do not need to indent to accommodate a namespace when an entire source file is enclosed within one. If only part of the source is enclosed in a namespace, then those parts affected should be indented.
 @sp 1
 
-@item
+\item
 An opening brace appears on the next line as preceding code.
 @sp 1
 
@@ -113,7 +113,7 @@ float SomeFunction() @{
 @end smallexample
 @sp 1
 
-@item
+\item
 Put spaces around binary operands
 @sp 1
 
@@ -133,11 +133,11 @@ if(X==Y)
 @end smallexample
 @sp 1
 
-@item
+\item
 There is no space between unary operators and the affected variable's name.
 @sp 1
 
-@item
+\item
 When accessing an array, there is no space between the array name and the opening left bracket. 
 @sp 1
 
@@ -155,7 +155,7 @@ y = n [3];
 @end smallexample
 @sp 1
 
-@item
+\item
 The if, for, and while keywords are not followed by a space separating them and the left parenthesis. 
 @sp 1
 
@@ -173,7 +173,7 @@ if (x == 4)
 @end smallexample
 @sp 1
 
-@item
+\item
 When declaring variables, align the variable names on the same column evenly divisible by four.
 @sp 1
 
@@ -193,7 +193,7 @@ Window MainWindow;
 @end smallexample
 @sp 1
 
-@item
+\item
 When calling a function, definitions and function declarations should have no space between the function name and the following left parenthesis.
 @sp 1
 
@@ -221,7 +221,7 @@ int i = Add (4, 5);
 @end smallexample
 @sp 1
 
-@item
+\item
 When calling a function or making a function declaration, no space appears after the left parenthesis or before the right parenthesis.
 @sp 1
 
@@ -241,7 +241,7 @@ baz( );
 @end smallexample
 @sp 1
 
-@item
+\item
 A brace preceding or following an else keyword appears on the same line as the else. A statement following an else keyword appears on the same line as the else. 
 @sp 1
 
@@ -285,7 +285,7 @@ else @{
 @end smallexample
 @sp 1
 
-@item
+\item
 A brace preceding a catch keyword appears on a separate line as the catch. 
 @sp 1
 
@@ -303,7 +303,7 @@ catch(Error SomeError)
 @end smallexample
 @sp 1
 
-@item
+\item
 A value in a return statement is parenthesized where it contains more than one term.
 @sp 1
 
@@ -321,7 +321,7 @@ return a + b;
 @end smallexample
 @sp 1
 
-@item
+\item
 If the body of an if, for, while or similar statement consists of a single statement, the statement does not need to be surrounded by braces.
 @sp 1
 
@@ -337,8 +337,8 @@ if(x == 3)
 \subsection{Naming}
 @sp 1
 
-@itemize
-@item
+\itemize
+\item
 Do not use Hungarian notation. We prefix objects to denote scope only.
 @sp 1
 
@@ -360,7 +360,7 @@ ms_Wheels
 @end smallexample
 @sp 1
 
-@item
+\item
 Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums can afford to spare brevity, allowing for greater clarity.
 @sp 1
 
@@ -390,24 +390,24 @@ cam log;
 
 \subsection{Structure}
 @sp 1
-@itemize
-@item
+\itemize
+\item
 Source lines may be up to 100 characters long. (You can configure gedit to display a margin at 100 characters; that may help you follow this convention.)
 @sp 1
 
-@item
+\item
 Functions or methods should be broken down into other functions or methods if they get too long and this is reasonable to do.
 @sp 1
 
-@item
+\item
 Use @i{assert()} to check your assumptions for things that ought to always be true. Do not abuse it for situations where it is reasonable for a condition to not be true, such as a socket connection failure or a file that could not be opened.
 @sp 1
 
-@item
+\item
 Follow the @i{GNU Coding Standards} as much as reasonably possible, save the code formatting points made in this handbook. There is a great deal of wisdom in it.
 @sp 1
 
-@item
+\item
 A comment which indicates task which needs to be done at some point should look like this: 
 @sp 1
 
@@ -421,12 +421,12 @@ A comment which indicates task which needs to be done at some point should look 
 \subsection{Comments}
 @sp 1
 
-@itemize
-@item
+\itemize
+\item
 All comments should be written in Canadian English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
 @sp 1
 
-@item
+\item
 Comments should begin with a single space, then a capital letter and end with a trailing ellipses. 
 @sp 1
 
@@ -443,7 +443,7 @@ GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image
 @end smallexample
 @sp 1
 
-@item
+\item
 The farther left the comment, the higher level and abstract what you are trying to do is. The farther right, the more detailed they are. You can think of a given level of indentation as elaborating on how to carry out what was described at a higher (less indented) level. It should be possible in many cases to strip away all the code, except the comments, and still understand what it is that you were trying to do.
 @sp 1
 
@@ -503,15 +503,15 @@ Stripped:
 @end smallexample
 @sp 1
 
-@item
+\item
 A single blank line should appear between each pair of functions or methods. 
 @sp 1
 
-@item
+\item
 Do not use a blank line after an opening brace or before a closing brace.
 @sp 1
 
-@item
+\item
 Do not use duplicate blank lines.
 @sp 1
 @end itemize

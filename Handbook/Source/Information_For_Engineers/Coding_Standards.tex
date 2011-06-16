@@ -1,0 +1,522 @@
+% Coding standards section...
+\startsection{Coding Standards}
+
+Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where everyone applies their own. Try to apply the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere.
+
+\startsubsection{Legal}
+Headers (*.h), implementations (*.cpp), and other code, as defined under @ref{Licensing Rationale}, should have prefixed the following legal notice. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
+@sp 1
+
+@smallexample
+/*
+    AresEngine, a 3D game engine.
+    Copyright (C) 2011 Kshatra Corp <kip@@thevertigo.com>.
+
+    Public discussion on IRC available at #avaneya (irc.freenode.net)
+    or on the mailing list <avaneya@@lists.avaneya.com>.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+@end smallexample
+
+\startsubsection{Mathematical}
+@sp 1
+
+\itemize
+\item
+All angles should be worked with in degrees, not radians, whenever possible.
+@sp 1
+
+\item
+All floating point calculations should be done in single precision whenever possible.
+@sp 1
+
+@end itemize
+
+\startsubsection{Formatting}
+@sp 1
+
+\itemize
+
+\item
+English (Canadian) should be used for everything non-localized and saved in UTF-8 whenever possible.
+@sp 1
+
+\item
+Always use spaces and not tabs. You can use the latter, if you like, but just as long as your editor converts them to spaces when saving.
+@sp 1
+
+\item
+Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier, in which case it should be indented so that the identifier begins at a four space interval.
+@sp 1
+
+Right:
+@smallexample
+float SomeFunction()
+@{
+    int i = 0;
+  ++i;
+    return 1.0f;
+@}
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+float SomeFunction()
+@{
+    int i = 0;
+    ++i;
+        return 1.0f;
+@}
+@end smallexample
+@sp 1
+
+\item
+You do not need to indent to accommodate a namespace when an entire source file is enclosed within one. If only part of the source is enclosed in a namespace, then those parts affected should be indented.
+@sp 1
+
+\item
+An opening brace appears on the next line as preceding code.
+@sp 1
+
+Right:
+@smallexample
+float SomeFunction()
+@{
+    for(int x = 0; x < 100; ++x)
+    @{
+        ...
+    @}
+@}
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+float SomeFunction() @{
+    for(int x = 0; x < 100; ++x) @{
+        ...
+    @}
+@}
+@end smallexample
+@sp 1
+
+\item
+Put spaces around binary operands
+@sp 1
+
+Right:
+@smallexample
+A = X + Y;
+if(X == Y)
+    ...
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+A = X+Y;
+if(X==Y)
+    ...
+@end smallexample
+@sp 1
+
+\item
+There is no space between unary operators and the affected variable's name.
+@sp 1
+
+\item
+When accessing an array, there is no space between the array name and the opening left bracket. 
+@sp 1
+
+Right:
+@smallexample
+int n[100];
+y = n[3];
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+int n [100];
+y = n [3];
+@end smallexample
+@sp 1
+
+\item
+The if, for, and while keywords are not followed by a space separating them and the left parenthesis. 
+@sp 1
+
+Right:
+@smallexample
+if(x == 4)
+    return;
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+if (x == 4)
+    return;
+@end smallexample
+@sp 1
+
+\item
+When declaring variables, align the variable names on the same column evenly divisible by four.
+@sp 1
+
+Right:
+@smallexample
+int     Count;
+bool    Complete;
+Window  MainWindow;
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+int Count;
+bool Complete;
+Window MainWindow;
+@end smallexample
+@sp 1
+
+\item
+When calling a function, definitions and function declarations should have no space between the function name and the following left parenthesis.
+@sp 1
+
+Right:
+@smallexample
+int Add(int a, int b)
+@{ 
+    ... 
+@}
+@sp 1
+
+int i = Add(4, 5);
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+int Add (int a, int b)
+@{
+    ...
+@}
+@sp 1
+
+int i = Add (4, 5);
+@end smallexample
+@sp 1
+
+\item
+When calling a function or making a function declaration, no space appears after the left parenthesis or before the right parenthesis.
+@sp 1
+
+Right:
+@smallexample
+foo(x, y);
+bar(z);
+baz();
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+foo( x, y );
+bar( z );
+baz( );
+@end smallexample
+@sp 1
+
+\item
+A brace preceding or following an else keyword appears on the same line as the else. A statement following an else keyword appears on the same line as the else. 
+@sp 1
+
+Right:
+@smallexample
+if(x == 4)
+@{
+    ...
+@}
+else
+  ++y;
+
+if(x == 4)
+@{
+    ...
+@}
+else
+@{
+    ...
+@}
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+if(x == 4) @{
+    ...
+@}
+else ++y;
+
+if(x == 4) @{
+    ...
+@} else ++y;
+
+if(x == 4) @{
+    ...
+@}
+else @{
+    ...
+@}
+@end smallexample
+@sp 1
+
+\item
+A brace preceding a catch keyword appears on a separate line as the catch. 
+@sp 1
+
+Right:
+@smallexample
+try
+@{
+    ...
+@}
+
+catch(Error SomeError)
+@{
+    ...
+@}
+@end smallexample
+@sp 1
+
+\item
+A value in a return statement is parenthesized where it contains more than one term.
+@sp 1
+
+Right:
+@smallexample
+return x;
+return (a + b);
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+return (x);
+return a + b;
+@end smallexample
+@sp 1
+
+\item
+If the body of an if, for, while or similar statement consists of a single statement, the statement does not need to be surrounded by braces.
+@sp 1
+
+Right:
+@smallexample
+if(x == 3)
+  ++x;
+@end smallexample
+@sp 1
+
+@end itemize
+
+\startsubsection{Naming}
+@sp 1
+
+\itemize
+\item
+Do not use Hungarian notation. We prefix objects to denote scope only.
+@sp 1
+
+Member of a global namespace:
+@smallexample
+g_Wheels
+@end smallexample
+@sp 1
+
+Member of a structure or class:
+@smallexample
+m_Wheels
+@end smallexample
+@sp 1
+
+Static member of a structure or class:
+@smallexample
+ms_Wheels
+@end smallexample
+@sp 1
+
+\item
+Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums can afford to spare brevity, allowing for greater clarity.
+@sp 1
+
+Right:
+@smallexample
+// Class for abstracting a camera interface...
+class Camera
+@{
+    ...
+@};
+
+// Create a camera...
+Camera LogitechCamera;
+@end smallexample
+
+Wrong:
+@smallexample
+class cam
+@{
+    ...
+@};
+
+cam log;
+@end smallexample
+
+@end itemize
+
+\startsubsection{Structure}
+@sp 1
+\itemize
+\item
+Source lines may be up to 100 characters long. (You can configure gedit to display a margin at 100 characters; that may help you follow this convention.)
+@sp 1
+
+\item
+Functions or methods should be broken down into other functions or methods if they get too long and this is reasonable to do.
+@sp 1
+
+\item
+Use @i{assert()} to check your assumptions for things that ought to always be true. Do not abuse it for situations where it is reasonable for a condition to not be true, such as a socket connection failure or a file that could not be opened.
+@sp 1
+
+\item
+Follow the @i{GNU Coding Standards} as much as reasonably possible, save the code formatting points made in this handbook. There is a great deal of wisdom in it.
+@sp 1
+
+\item
+A comment which indicates task which needs to be done at some point should look like this: 
+@sp 1
+
+@smallexample
+// TODO: Check portability here...
+@end smallexample
+@sp 1
+
+@end itemize
+
+\startsubsection{Comments}
+@sp 1
+
+\itemize
+\item
+All comments should be written in Canadian English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
+@sp 1
+
+\item
+Comments should begin with a single space, then a capital letter and end with a trailing ellipses. 
+@sp 1
+
+Right:
+@smallexample
+// Load the image...
+GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
+@end smallexample
+@sp 1
+
+Wrong:
+@smallexample
+GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image.
+@end smallexample
+@sp 1
+
+\item
+The farther left the comment, the higher level and abstract what you are trying to do is. The farther right, the more detailed they are. You can think of a given level of indentation as elaborating on how to carry out what was described at a higher (less indented) level. It should be possible in many cases to strip away all the code, except the comments, and still understand what it is that you were trying to do.
+@sp 1
+
+Before:
+@smallexample
+// Analyze single image...
+void AnalysisThread::AnalyzeImage(wxString Path)
+@{
+    // Variables...
+    IplImage   *GrayImage   = NULL;
+    wxString    TempString;
+
+    // Reset the tracker, if not already...
+    Frame.Tracker.Reset(0);
+
+    // Load the image...
+    GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
+
+        // Failed to load media...
+        if(!GrayImage)
+        @{
+            // Alert...
+            wxLogError(wxT("Unable to load image."));
+            
+            // Abort...
+            return;
+        @}
+
+    // Feed into tracker...
+    Frame.Tracker.Advance(pGrayImage);
+    
+    // Cleanup gray image...
+    cvReleaseImage(&GrayImage);
+@}
+@end smallexample
+@sp 1
+
+Stripped:
+@smallexample
+// Analyze single image...
+
+    // Variables...
+
+    // Reset the tracker, if not already...
+
+    // Load the image...
+
+        // Failed to load media...
+
+            // Alert...
+
+            // Abort...
+
+    // Feed into tracker...
+    
+    // Cleanup gray image...
+@end smallexample
+@sp 1
+
+\item
+A single blank line should appear between each pair of functions or methods. 
+@sp 1
+
+\item
+Do not use a blank line after an opening brace or before a closing brace.
+@sp 1
+
+\item
+Do not use duplicate blank lines.
+@sp 1
+@end itemize
+
+\startsubsection{Developer Tools}
+You are welcome to use any editor or IDE you like, provided it does not require non-standard IDE-specific project files. @xref{Dependent Technology Developer Tools} for a list of all of the developer tools that are required for the project.
+@sp 1
+

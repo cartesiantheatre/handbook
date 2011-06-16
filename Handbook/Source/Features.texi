@@ -1,4 +1,0 @@
-@c Features chapter...
-@node Features
-@chapter Features
-

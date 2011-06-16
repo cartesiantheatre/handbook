@@ -1,0 +1,107 @@
+\startproduct Product_Handbook
+\project Source/Project_Handbook
+
+% Setup interaction...
+\setupinteraction
+  [state=start,
+   color=red,
+   title=Avaneya Crew Handbook,
+   subtitle=Compiled from Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
+   author=The Avaneya Crew,
+   keyword={Avaneya, Handbook}]
+
+\setupbackgrounds
+   [rightpage]
+   [background=]
+
+\startmakeup[standard][doublesided=no]
+    \setupalign[center]
+    \bft \setupspacing \setstrut
+    \strut Avaneya Crew Handbook
+    \par
+    {\em \strut A project canonically defined.}
+    \setupspacing \setstrut
+    \vfill
+    {\em The Avaneya Crew}
+\stopmakeup
+
+\startmakeup[standard][page=,doublesided=no]
+    \vfill
+
+    Visit us on the web at \fullahref{https://www.avaneya.com}.
+    
+    Compiled on \currentdate \space from Bazaar revision \cldcontext{os.resultof"bzr revno"}.
+    \blank
+
+    This document was typeset using \CONTEXT \space and GNOME Evince 2.32.0 for testing.
+    \blank
+
+    \copyright 2010--2011 Kshatra Corp
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of this license is included in \in{section}[GNU Free Documentation License].
+\stopmakeup
+
+% Front matter...
+\startfrontmatter
+	
+    % Table of contents...
+    \completecontent
+
+\stopfrontmatter
+
+% Contents...
+\startbodymatter
+
+	% Each component is used as one chapter logical unit...
+    \component Source/Preface/Preface
+    % \component Source/Core_Leitmotifs/Core_Leitmotifs
+    % \component Source/The_Game/The_Game
+    % \component Source/Terminology_Used/Terminology_Used
+    % \component Source/Learning_Resources/Learning_Resources
+    % \component Source/Timeline/Timeline
+    % \component Source/The_Characters/The_Characters
+    % \component Source/The_Story/The_Story
+    % \component Source/The_Game_World/The_Game_World
+    % \component Source/Gameplay/Gameplay
+    % % \component Source/Features/Features
+    % \component Source/Selected_Technologies/Selected_Technologies
+    % \component Source/Information_For_Everyone/Information_For_Everyone
+    % \component Source/Information_For_Artists/Information_For_Artists
+    % % \component Source/Information_For_Audio_Engineers/Information_For_Audio_Engineers
+    % % \component Source/Information_For_Cinematic_Artists/Information_For_Cinematic_Artists
+    % \component Source/Information_For_Engineers/Information_For_Engineers
+    % % \component Source/Information_For_Modeller/Information_For_Modeller
+    % % \component Source/Information_For_Musicians/Information_For_Musicians
+    % % \component Source/Information_For_Researchers/Information_For_Researchers
+    % % \component Source/Information_For_Scripters/Information_For_Scripters
+    % % \component Source/Information_For_System_Administrators/Information_For_System_Administrators
+    % % \component Source/Information_For_Translators/Information_For_Translators
+    % % \component Source/Information_For_Voice_Actors/Information_For_Voice_Actors
+    % % \component Source/Information_For_Web_Developers/Information_For_Web_Developers
+    % % \component Source/Information_For_Writers/Information_For_Writers
+    % \component Source/Licensing_Rationale/Licensing_Rationale
+
+\stopbodymatter
+
+% Appendices...
+\startappendices
+
+	% License appendix...
+    \component Source/Licenses/Licenses
+
+\stopappendices
+
+% Back matter...
+\startbackmatter
+
+	% Index...
+	\completeindex
+	
+\stopbackmatter
+
+% Done...
+\stopproduct
+

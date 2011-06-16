@@ -1,6 +1,15 @@
 \startproduct Product_Handbook
 \project Source/Project_Handbook
 
+% Setup interaction...
+\setupinteraction
+  [state=start,
+   color=red,
+   title=Avaneya Crew Handbook,
+   subtitle=Compiled from Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
+   author=The Avaneya Crew,
+   keyword={Avaneya, Handbook}]
+
 \setupbackgrounds
    [rightpage]
    [background=]
@@ -19,10 +28,12 @@
 \startmakeup[standard][page=,doublesided=no]
     \vfill
 
+    Visit us on the web at \fullahref{https://www.avaneya.com}.
+    
     Compiled on \currentdate \space from Bazaar revision \cldcontext{os.resultof"bzr revno"}.
     \blank
 
-    This document was typeset using \CONTEXT.
+    This document was typeset using \CONTEXT \space and GNOME Evince 2.32.0 for testing.
     \blank
 
     \copyright 2010--2011 Kshatra Corp
@@ -30,8 +41,7 @@
     under the terms of the GNU Free Documentation License, Version 1.3
     or any later version published by the Free Software Foundation;
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-    A copy of the license is included in the section entitled `GNU
-    Free Documentation License'.
+    A copy of this license is included in \in{section}[GNU Free Documentation License].
 \stopmakeup
 
 % Front matter...
@@ -80,7 +90,7 @@
 \startappendices
 
 	% License appendix...
-    %\component Source/Licenses/Licenses
+    \component Source/Licenses/Licenses
 
 \stopappendices
 

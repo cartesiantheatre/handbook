@@ -1,0 +1,11 @@
+You'll need ConTeXt Minimal installed to build the handbook. Here are
+instructions for installing it from source on a variety of different
+platforms:
+
+    <http://wiki.contextgarden.net/ConTeXt_Minimals>
+
+If you are running Ubuntu, Adam Reviczky <adam.reviczky@kcl.ac.uk> 
+was kind enough to provide us with a PPA:
+
+    <https://launchpad.net/~reviczky/+archive/ppa>
+

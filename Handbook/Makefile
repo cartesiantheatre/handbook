@@ -39,6 +39,6 @@ $(UMBRELLO_ENGINE_DIAGRAM_EPS): $(UMBRELLO_ENGINE_DIAGRAM)
 
 clean:
 	@ context --purgeall --nonstopmode --noconsole #&> /dev/null
-	@ rm -vf $(OUTPUT)
+	@ rm -vf $(OUTPUT).pdf
 	@ rm -vf Images/AresEngine/*.eps
 

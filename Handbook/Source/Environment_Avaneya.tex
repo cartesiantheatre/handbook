@@ -5,7 +5,9 @@
 
 \preloadtypescripts
 
-\doifmode{screen}{\setupinteraction[state=start]}
+% Set compression level, default is 3, so set to maximum...
+\setupbackend
+  [level=9]
 
 \setupsystem
   [\c!random=\v!big]
@@ -52,6 +54,24 @@
 
 \setuppagenumbering
   [\c!alternative=\v!doublesided]
+
+\def\startchapter#1%
+{\chapter[#1]{#1}\index{#1}}
+
+\def\startsection#1%
+{\section[#1]{#1}\index{#1}}
+
+\def\startsubsection#1%
+{\subsection[#1]{#1}\index{#1}}
+
+\def\startsubsubsection#1%
+{\subsubsection[#1]{#1}\index{#1}}
+
+\def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}                                                                                                               
+
+\def\ahref#1{\color[linkcolor]{\ttx \href{#1}{<#1>}}}                                                                                                                          
+
+\def\fullahref#1{\color[linkcolor]{\ttx \href{#1}{#1}}}                                                                                                                 
 
 \def\startexample
   {\blank

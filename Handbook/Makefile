@@ -25,20 +25,20 @@ CACHE                       = Cache
 CONTEXT_OPTIONS             = --purgeresult --nonstopmode
 
 # Umbrello can generate only all or none at once, so only need to specify one...
-UMBRELLO_ENGINE_DIAGRAM_EPS = Images/AresEngine/Engine.eps
+UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
 
 all: $(OUTPUT) Makefile
 
-$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_EPS)
+$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 	context $(PROJECT_SOURCE) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
-$(UMBRELLO_ENGINE_DIAGRAM_EPS): $(UMBRELLO_ENGINE_DIAGRAM)
-#	umbrello --export eps $(UMBRELLO_ENGINE_DIAGRAM) --directory Images/AresEngine 1> /dev/null
+$(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
+#	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Images/AresEngine 1> /dev/null
 #	find Images/AresEngine/ -type f -name '*.eps' -execdir epstopdf {} \;
 #	@ rm -vf Images/AresEngine/*.eps
 
 clean:
 	@ context --purgeall --nonstopmode --noconsole #&> /dev/null
 	@ rm -vf $(OUTPUT).pdf
-	@ rm -vf Images/AresEngine/*.eps
+	@ rm -vf Images/AresEngine/*.svg
 

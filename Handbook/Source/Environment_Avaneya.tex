@@ -5,6 +5,8 @@
 
 \preloadtypescripts
 
+\usemodule[units,chemic]
+
 % Set compression level, default is 3, so set to maximum...
 \setupbackend
   [level=9]
@@ -56,16 +58,16 @@
   [\c!alternative=\v!doublesided]
 
 \def\startchapter#1%
-{\chapter[#1]{#1}\index{#1}}
+{\chapter[#1]{#1}\index{#1}\bookmark{#1}}
 
 \def\startsection#1%
-{\section[#1]{#1}\index{#1}}
+{\section[#1]{#1}\index{#1}\bookmark{#1}}
 
 \def\startsubsection#1%
-{\subsection[#1]{#1}\index{#1}}
+{\subsection[#1]{#1}\index{#1}\bookmark{#1}}
 
 \def\startsubsubsection#1%
-{\subsubsection[#1]{#1}\index{#1}}
+{\subsubsection[#1]{#1}\index{#1}\bookmark{#1}}
 
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}                                                                                                               
 
@@ -102,6 +104,10 @@
    \c!frame=\v!off,
    \c!before=,
    \c!after=]
+
+% Number formulae etc. using the chapter number...
+\setupnumbering
+    [way=bychapter]
 
 \setuppagenumbering
   [\c!location=]

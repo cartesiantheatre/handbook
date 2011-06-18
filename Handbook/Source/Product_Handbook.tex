@@ -1,14 +1,18 @@
 \startproduct Product_Handbook
 \project Source/Project_Handbook
 
-% Setup interaction...
+% Setup PDF metadata...
 \setupinteraction
   [state=start,
    color=red,
    title=Avaneya Crew Handbook,
-   subtitle=Compiled from Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
+   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
    author=The Avaneya Crew,
    keyword={Avaneya, Handbook}]
+
+% Show the PDF bookmarks and expand to the chapter and section level...
+\placebookmarks[chapter,section,subsection][chapter,section]
+\setupinteractionscreen[option=bookmark]
 
 \setupbackgrounds
    [rightpage]
@@ -19,7 +23,7 @@
     \bft \setupspacing \setstrut
     \strut Avaneya Crew Handbook
     \par
-    {\em \strut A project canonically defined.}
+    {\em \strut A guidebook for new and current contributors.}
     \setupspacing \setstrut
     \vfill
     {\em The Avaneya Crew}
@@ -59,7 +63,7 @@
     \component Source/Preface/Preface
     % \component Source/Core_Leitmotifs/Core_Leitmotifs
     % \component Source/The_Game/The_Game
-    % \component Source/Terminology_Used/Terminology_Used
+    \component Source/Terminology_Used/Terminology_Used
     % \component Source/Learning_Resources/Learning_Resources
     % \component Source/Timeline/Timeline
     % \component Source/The_Characters/The_Characters
@@ -86,14 +90,6 @@
 
 \stopbodymatter
 
-% Appendices...
-\startappendices
-
-	% License appendix...
-    \component Source/Licenses/Licenses
-
-\stopappendices
-
 % Back matter...
 \startbackmatter
 
@@ -101,6 +97,14 @@
 	\completeindex
 	
 \stopbackmatter
+
+% Appendices...
+\startappendices
+
+	% License appendix...
+    \component Source/Licenses/Licenses
+
+\stopappendices
 
 % Done...
 \stopproduct

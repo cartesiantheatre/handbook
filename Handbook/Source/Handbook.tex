@@ -1,22 +1,5 @@
-\startproduct Product_Handbook
-\project Source/Project_Handbook
-
-% Setup PDF metadata...
-\setupinteraction
-  [state=start,
-   color=red,
-   title=Avaneya Crew Handbook,
-   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
-   author=The Avaneya Crew,
-   keyword={Avaneya, Handbook}]
-
-% Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection][chapter,section]
-\setupinteractionscreen[option=bookmark]
-
-\setupbackgrounds
-   [rightpage]
-   [background=]
+\startproduct Handbook
+\environment Source/Environment
 
 \startmakeup[standard][doublesided=no]
     \setupalign[center]
@@ -33,11 +16,9 @@
     \vfill
 
     Visit us on the web at \fullahref{https://www.avaneya.com}.
-    
-    Compiled on \currentdate \space from Bazaar revision \cldcontext{os.resultof"bzr revno"}.
     \blank
 
-    This document was typeset using \CONTEXT \space and GNOME Evince 2.32.0 for testing.
+    This document was compiled on \currentdate\ from Bazaar revision \cldcontext{os.resultof"bzr revno"}, typeset using \CONTEXT\ \contextversion, rendered with \texenginename\ \texengineversion\, and tested with GNOME Evince 2.32.0.
     \blank
 
     \copyright 2010--2011 Kshatra Corp
@@ -90,21 +71,21 @@
 
 \stopbodymatter
 
-% Back matter...
-\startbackmatter
-
-	% Index...
-	\completeindex
-	
-\stopbackmatter
-
 % Appendices...
 \startappendices
+
+	% Index...
+	\completeindex{title=foo}
 
 	% License appendix...
     \component Source/Licenses/Licenses
 
 \stopappendices
+
+% Back matter...
+\startbackmatter
+
+\stopbackmatter
 
 % Done...
 \stopproduct

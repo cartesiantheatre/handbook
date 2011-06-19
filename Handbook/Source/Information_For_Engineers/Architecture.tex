@@ -1,7 +1,7 @@
 % AresEngine architectural design...
 \startsection{Architecture}
 
-The {\sl AresEngine} is responsible for delivering Avaneya. It is designed by the Avaneya crew to provide for the game, but kept architecturally general enough to lend itself to other projects of similar technical requirements (e.g. a city builder / real time strategy genre). If you do not know what a game engine is, Jason Gregory's book {\sl Game Engine Programming},@footnote{@xref{Resources For Engineers} for details.} is highly recommended.
+The {\it AresEngine} is responsible for delivering Avaneya. It is designed by the Avaneya crew to provide for the game, but kept architecturally general enough to lend itself to other projects of similar technical requirements (e.g. a city builder / real time strategy genre). If you do not know what a game engine is, Jason Gregory's book {\it Game Engine Programming},@footnote{@xref{Resources For Engineers} for details.} is highly recommended.
 
 The AresEngine is divided up into many subsystems, each responsible for a given logical task. These include audio, responding to input devices, updating the graphical user interface, artificial intelligence, and so on.
 
@@ -15,7 +15,7 @@ The following architectural diagrams were pulled from the AresEngine's Umbrello 
 \startsubsection{Artificial Intelligence}
 This diagram concerns itself with useful artificial intelligence algorithms, though not of an entire subsystem itself.
 
-It contains an implementation of the A* search strategy algorithm.@footnote{See {\sl Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} The problem here is represented as a pattern for an abstract base class called {\sl AStarBase}. The {\sl h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
+It contains an implementation of the A* search strategy algorithm.@footnote{See {\it Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} The problem here is represented as a pattern for an abstract base class called {\it AStarBase}. The {\it h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
 
 \placefigure
     [][fig:ArtificialIntelligenceUML]
@@ -25,9 +25,9 @@ It contains an implementation of the A* search strategy algorithm.@footnote{See 
 % Audio subsection...
 @page
 \startsubsection{Audio}
-The {\sl AudioManager} subsystem is responsible for all tasks related to audio. Audio playback is divided into streaming and static audio sources. Streaming sources need to be continuously updated by loading new data from disk, decompressing it, and playing it. A common example would be music or narrative. Static sources are usually smaller and only need to played once before being freed. Static source examples would be things like the sound of an object contacting another.
+The {\it AudioManager} subsystem is responsible for all tasks related to audio. Audio playback is divided into streaming and static audio sources. Streaming sources need to be continuously updated by loading new data from disk, decompressing it, and playing it. A common example would be music or narrative. Static sources are usually smaller and only need to played once before being freed. Static source examples would be things like the sound of an object contacting another.
 
-Decoding is done through an appropriate subclass of an {\sl Ares::AudioDecoderBase} abstract class, instantiated via the {\sl Ares::AudioDecoderFactory} class. Most decoding is done through a subclass of the aforementioned via {\sl SDL_audio}.
+Decoding is done through an appropriate subclass of an {\it Ares::AudioDecoderBase} abstract class, instantiated via the {\it Ares::AudioDecoderFactory} class. Most decoding is done through a subclass of the aforementioned via {\it SDL_audio}.
 
 Playback is accomplished through OpenAL.
 
@@ -40,7 +40,7 @@ Playback is accomplished through OpenAL.
 % Configuration subsection...
 @page
 \startsubsection{Configuration}
-The {\sl ConfigurationManager} subsystem is responsible for storing all user configuration. Its {\sl Load()} method reads all configuration variables from disk, and then adds variables from command line as well, in that order. 
+The {\it ConfigurationManager} subsystem is responsible for storing all user configuration. Its {\it Load()} method reads all configuration variables from disk, and then adds variables from command line as well, in that order. 
 
 Latter configuration variables read are set as non-archivable. A non-archivable configuration variable is one that is not saved to disk.
 
@@ -68,9 +68,9 @@ Console commands are implemented in Lua.
 \startsubsection{Design Patterns}
 This diagram contains a number of common place design patterns found in many software projects, such as the singleton and multi-factory. 
 
-There seems to be two kinds of singleton design patterns in the literature that are not distinguished, but should be. There is the kind whose instantiation is implicit, meaning you don't care when it is created, just as long as it is there when you need it and that there is only at most one of them ever at a given time. We refer to this as the {\sl implicit singleton} and it typically uses lazy instantiation.
+There seems to be two kinds of singleton design patterns in the literature that are not distinguished, but should be. There is the kind whose instantiation is implicit, meaning you don't care when it is created, just as long as it is there when you need it and that there is only at most one of them ever at a given time. We refer to this as the {\it implicit singleton} and it typically uses lazy instantiation.
 
-The second kind, like the first, only ever has one instance, but you control when you want it instantiated and deconstructed explicitly. We refer to this as the {\sl explicit singleton}. This is useful for engine subsystems since C++ does not define the order in which constructors for global objects are invoked across translation units. This is important to consider, given that the order of subsystem initialization is very important (e.g. resource management must precede audio management).
+The second kind, like the first, only ever has one instance, but you control when you want it instantiated and deconstructed explicitly. We refer to this as the {\it explicit singleton}. This is useful for engine subsystems since C++ does not define the order in which constructors for global objects are invoked across translation units. This is important to consider, given that the order of subsystem initialization is very important (e.g. resource management must precede audio management).
 
 \placefigure
     [DesignPatternsUML][fig:]
@@ -90,9 +90,9 @@ This diagram captures the engine at the highest level and provides an overview o
 % subsection...
 @page 
 \startsubsection{Events}
-The {\sl EventManager} is responsible for intercommunication between various engine components and scripts. The steps for working with events are as follows.
+The {\it EventManager} is responsible for intercommunication between various engine components and scripts. The steps for working with events are as follows.
 
-An event handler can either contain an {\sl Ares::EventHandler} class, or can derive from it and override the {\sl OnEvent()} method. It registers interest in one or more events via the {\sl Register()} method:
+An event handler can either contain an {\it Ares::EventHandler} class, or can derive from it and override the {\it OnEvent()} method. It registers interest in one or more events via the {\it Register()} method:
 @sp 1
 
 @smallexample
@@ -112,7 +112,7 @@ Ares::EventManager::GetSingleton().Enqueue(SomeEvent);
 @end smallexample
 @sp 1
 
-Every frame, the {\sl EventManager::DispatchEvents()} method is called to pump the message queue. It will get an event from the internal priority queue that is due for processing. Once an event is fetched, it calls {\sl Event.Dispatch()} to pass it to all registered handlers so that they may do whatever it is that they would like to do when that event occurs.
+Every frame, the {\it EventManager::DispatchEvents()} method is called to pump the message queue. It will get an event from the internal priority queue that is due for processing. Once an event is fetched, it calls {\it Event.Dispatch()} to pass it to all registered handlers so that they may do whatever it is that they would like to do when that event occurs.
 
 Events.xsd defines the XML schema that the engine uses at runtime to check builtin event types (Events.xml) against. This is done to ensure the event types defined are syntactically correct and self documenting.
 
@@ -136,13 +136,13 @@ Accessing files on disk for textures, shaders, scripts, models, sounds, and so o
 % subsection...
 @page 
 \startsubsection{Gooey}
-The {\sl GooeyManager} is responsible for managing all graphical user interface overlays and user interaction with them. Its underlying functionality is provided by CEGUI which integrates well into OGRE 3D.
+The {\it GooeyManager} is responsible for managing all graphical user interface overlays and user interaction with them. Its underlying functionality is provided by CEGUI which integrates well into OGRE 3D.
 
-{\sl GooeyManager::Initialize()} calls {\sl CEGUI::OgreRenderer::bootstrapSystem()}. This bootstraps {\sl CEGUI::System} with an {\sl OgreRenderer} object that uses the default Ogre rendering window as the default output surface, an Ogre based {\sl ResourceProvider}, and an Ogre based {\sl ImageCodec}.
+{\it GooeyManager::Initialize()} calls {\it CEGUI::OgreRenderer::bootstrapSystem()}. This bootstraps {\it CEGUI::System} with an {\it OgreRenderer} object that uses the default Ogre rendering window as the default output surface, an Ogre based {\it ResourceProvider}, and an Ogre based {\it ImageCodec}.
 
-{\sl Update()} is called every frame, but we do not need to call {\sl System::renderGUI()} since Ogre does this automatically. We do, however, need to call {\sl CEGUI::System::injectTimePulse()} within there.
+{\it Update()} is called every frame, but we do not need to call {\it System::renderGUI()} since Ogre does this automatically. We do, however, need to call {\it CEGUI::System::injectTimePulse()} within there.
 
-{\sl Shutdown()} calls {\sl CEGUI::OgreRenderer::destroySystem()}.
+{\it Shutdown()} calls {\it CEGUI::OgreRenderer::destroySystem()}.
 
 Most of the interesting interfaces are within CEGUI singletons themselves, with appropriate accessors and mutators exported to Lua.
 
@@ -154,7 +154,7 @@ Most of the interesting interfaces are within CEGUI singletons themselves, with 
 % subsection...
 @page 
 \startsubsection{Human Interface}
-The {\sl HumanInterfaceManager} takes care of routing all events from input devices to the appropriate code that has registered to be notified of that event. In that sense, the manager is mostly unidirectional, but also allows to send information the other way back to the input device if it supports a haptic interface (sometimes called force feedback).
+The {\it HumanInterfaceManager} takes care of routing all events from input devices to the appropriate code that has registered to be notified of that event. In that sense, the manager is mostly unidirectional, but also allows to send information the other way back to the input device if it supports a haptic interface (sometimes called force feedback).
 
 \placefigure
     [][fig:HumanInterfaceUML]
@@ -164,14 +164,14 @@ The {\sl HumanInterfaceManager} takes care of routing all events from input devi
 % subsection...
 @page 
 \startsubsection{Logging & Error Control}
-The {\sl LogManager} is responsible for providing a central logging subsystem for all the other subsystems.
+The {\it LogManager} is responsible for providing a central logging subsystem for all the other subsystems.
 
 \placefigure
     [][fig:LoggingUML]
     {The logging and error control subsystem.}
     {\externalfigure[AresEngine/Logging and Error Control]}
     
-Since message can be emitted from any number of places, such as within the engine, or within some other externally linked component, such as CEGUI or OGRE, messages have to be intercepted and channeled through the {\sl LogManager}. The following diagram makes this more clear.
+Since message can be emitted from any number of places, such as within the engine, or within some other externally linked component, such as CEGUI or OGRE, messages have to be intercepted and channeled through the {\it LogManager}. The following diagram makes this more clear.
 
 \placefigure
     [][fig:LoggingStateUML]
@@ -201,7 +201,7 @@ This is a catch-all for classes and functions that had no business elsewhere.
 % subsection...
 @page 
 \startsubsection{Physics}
-The {\sl PhysicsManager} needs to be seriously refactored since {\sl OgreBullet} was found as a viable option for physics support. This is the original, incomplete, design before that decision was made.
+The {\it PhysicsManager} needs to be seriously refactored since {\it OgreBullet} was found as a viable option for physics support. This is the original, incomplete, design before that decision was made.
 
 \placefigure
     [][fig:ScriptingUML]
@@ -211,7 +211,7 @@ The {\sl PhysicsManager} needs to be seriously refactored since {\sl OgreBullet}
 % subsection...
 @page 
 \startsubsection{Resources}
-The {\sl ResourceManager} is responsible for ensuring that whenever code needs a piece of game data, such as a model or animation, all of its requisites are loaded, in the correct order, only once, and take up only as much room as they absolutely must. The {\sl ResourceManager} and the {\sl FileManager} communicate to help the former locate what it needs physically on disk.
+The {\it ResourceManager} is responsible for ensuring that whenever code needs a piece of game data, such as a model or animation, all of its requisites are loaded, in the correct order, only once, and take up only as much room as they absolutely must. The {\it ResourceManager} and the {\it FileManager} communicate to help the former locate what it needs physically on disk.
 
 \placefigure
     [][fig:ResourcesUML]
@@ -221,7 +221,7 @@ The {\sl ResourceManager} is responsible for ensuring that whenever code needs a
 % subsection...
 @page 
 \startsubsection{Scripting}
-The {\sl ScriptManager} is responsible for exposing all useful aspects of the game engine to the game scripters. Since the engine itself is defined in code, the role of defining what makes Avaneya, Avaneya, is left to script writers.
+The {\it ScriptManager} is responsible for exposing all useful aspects of the game engine to the game scripters. Since the engine itself is defined in code, the role of defining what makes Avaneya, Avaneya, is left to script writers.
 
 \placefigure
     [][fig:ScriptingUML]

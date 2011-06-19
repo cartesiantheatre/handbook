@@ -9,3 +9,5 @@ was kind enough to provide us with a PPA:
 
     <https://launchpad.net/~reviczky/+archive/ppa>
 
+You will also need the texlive-math-extra package.
+

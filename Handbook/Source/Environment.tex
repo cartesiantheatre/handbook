@@ -1,11 +1,28 @@
 % The environment file is used to setup the typesetting that relate to 
 %  any product, but at present, just the crew handbook...
 
-\startenvironment Environment_Avaneya
+\startenvironment Environment
 
 \preloadtypescripts
 
-\usemodule[units,chemic]
+\usemodule[units,chemic,math]
+
+% Setup PDF metadata...
+\setupinteraction
+  [state=start,
+   color=red,
+   title=Avaneya Crew Handbook,
+   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
+   author=The Avaneya Crew,
+   keyword={Avaneya, handbook, Mars, GNU, game}]
+
+% Show the PDF bookmarks and expand to the chapter and section level...
+\placebookmarks[chapter,section,subsection][chapter,section]
+\setupinteractionscreen[option=bookmark]
+
+\setupbackgrounds
+   [rightpage]
+   [background=]
 
 % Set compression level, default is 3, so set to maximum...
 \setupbackend
@@ -136,9 +153,9 @@
   [\v!text]
   [][{\hfill\getmarking[\v!chapter]\hfill}]
 
-\setupfootertexts
-  [\v!text]
-  [][{\hfill\getmarking[\v!section]\hfill}]
+%\setupfootertexts
+%  [\v!text]
+%  [][{\hfill\getmarking[\v!section]\hfill}]
 
 \setupbodyfontenvironment
   [default]

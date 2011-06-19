@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-PROJECT_SOURCE              = Source/Product_Handbook.tex
+CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Crew\ Handbook
@@ -30,7 +30,7 @@ UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
 all: $(OUTPUT) Makefile
 
 $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
-	context $(PROJECT_SOURCE) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
+	context $(CONTEXT_PRODUCT) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 #	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Images/AresEngine 1> /dev/null

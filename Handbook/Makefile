@@ -20,12 +20,11 @@
 CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
-OUTPUT                      = Avaneya\ Crew\ Handbook
-CACHE                       = Cache
+OUTPUT                      = Avaneya\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS             = --purgeresult --nonstopmode
 
 # Umbrello can generate only all or none at once, so only need to specify one...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
+#UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
 
 all: $(OUTPUT) Makefile
 
@@ -39,6 +38,6 @@ $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 
 clean:
 	@ context --purgeall --nonstopmode --noconsole #&> /dev/null
-	@ rm -vf $(OUTPUT).pdf
+	@ rm -vf $(OUTPUT)
 	@ rm -vf Images/AresEngine/*.svg
 

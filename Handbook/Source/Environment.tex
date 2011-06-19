@@ -5,7 +5,7 @@
 
 \preloadtypescripts
 
-\usemodule[units,chemic,math]
+\usemodule[units]
 
 % Setup PDF metadata...
 \setupinteraction
@@ -75,16 +75,16 @@
   [\c!alternative=\v!doublesided]
 
 \def\startchapter#1%
-{\chapter[#1]{#1}\index{#1}\bookmark{#1}}
+{\chapter[#1]{#1}\index{#1}}
 
 \def\startsection#1%
-{\section[#1]{#1}\index{#1}\bookmark{#1}}
+{\section[#1]{#1}\index{#1}}
 
 \def\startsubsection#1%
-{\subsection[#1]{#1}\index{#1}\bookmark{#1}}
+{\subsection[#1]{#1}\index{#1}}
 
 \def\startsubsubsection#1%
-{\subsubsection[#1]{#1}\index{#1}\bookmark{#1}}
+{\subsubsection[#1]{#1}\index{#1}}
 
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}                                                                                                               
 

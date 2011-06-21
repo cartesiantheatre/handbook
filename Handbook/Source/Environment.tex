@@ -17,7 +17,7 @@
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection][chapter,section]
+\placebookmarks[chapter,section,subsection][chapter]
 \setupinteractionscreen[option=bookmark]
 
 \setupbackgrounds
@@ -86,11 +86,12 @@
 \def\startsubsubsection#1%
 {\subsubsection[#1]{#1}\index{#1}}
 
-\def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}                                                                                                               
+% Usage: \href{http://www.someurl.com}{Text}
+\def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
 
-\def\ahref#1{\color[linkcolor]{\ttx \href{#1}{<#1>}}}                                                                                                                          
+\def\ahref#1{\color[linkcolor]{\ttx \href{#1}{<#1>}}}
 
-\def\fullahref#1{\color[linkcolor]{\ttx \href{#1}{#1}}}                                                                                                                 
+\def\fullahref#1{\color[linkcolor]{\ttx \href{#1}{#1}}}
 
 \def\startexample
   {\blank
@@ -209,7 +210,6 @@
       #2}}
 
 \setupcaptions[width=14cm,align=right]
-
 
 \setMPtext{text}{some test text}
 

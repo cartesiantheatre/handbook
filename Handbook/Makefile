@@ -38,6 +38,6 @@ $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 
 clean:
 	@ context --purgeall --nonstopmode --noconsole #&> /dev/null
-	@ rm -vf $(OUTPUT)
+	@ rm -vf $(OUTPUT) Handbook.pdf
 	@ rm -vf Images/AresEngine/*.svg
 

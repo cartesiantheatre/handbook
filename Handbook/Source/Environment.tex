@@ -1,3 +1,8 @@
+% This is part of the Avaneya Crew Handbook.
+% Copyright (C) 2010, 2011
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
 % The environment file is used to setup the typesetting that relate to 
 %  any product, but at present, just the crew handbook...
 
@@ -17,7 +22,7 @@
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection][chapter]
+\placebookmarks[chapter,section,subsection][chapter,section]
 \setupinteractionscreen[option=bookmark]
 
 \setupbackgrounds
@@ -92,6 +97,19 @@
 \def\ahref#1{\color[linkcolor]{\ttx \href{#1}{<#1>}}}
 
 \def\fullahref#1{\color[linkcolor]{\ttx \href{#1}{#1}}}
+
+\def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
+
+\def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
+
+\def\ShellExample#1
+{
+\blank
+\startframedtext[width=broad,bottom=\vss,top=\vss,align=right,corner=round]
+\tt {#1}
+\stopframedtext
+\blank
+}
 
 \def\startexample
   {\blank

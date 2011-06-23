@@ -8,9 +8,10 @@
 
 \startenvironment Environment
 
+% Speedup typescripting considerably at the cost of using additional memory...
 \preloadtypescripts
 
-\usemodule[units]
+\usemodule[units,simplefonts]
 
 % Setup PDF metadata...
 \setupinteraction
@@ -22,7 +23,7 @@
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection][chapter,section]
+\placebookmarks[chapter,section,subsection,subsubsection][chapter,section]
 \setupinteractionscreen[option=bookmark]
 
 \setupbackgrounds
@@ -59,6 +60,7 @@
 \usetypescript[palatino][ec]
 
 \setupbodyfont[palatino,11pt]
+%\setupbodyfont[ubuntu,11pt][file:ubuntu-r][features=default]
 
 \definefontsynonym[chapternumberfont][RegularBold]
 \definefontsynonym[chaptertextfont]  [RegularBold]
@@ -66,6 +68,8 @@
 \definebodyfont[11pt][rm][bfe=RegularBold at 30pt]
 \definebodyfont[11pt][rm][bft=RegularBold at 30pt]
 
+\setmainfont[Ubuntu]
+\switchtobodyfont[11pt]
 
 \definelayout
   [fullpage]
@@ -90,6 +94,27 @@
 
 \def\startsubsubsection#1%
 {\subsubsection[#1]{#1}\index{#1}}
+
+\def\StartTimelineDate#1%
+{\subsubsubject{\bf #1}}
+
+\def\StopTimelineDate%
+{
+\crlf
+}
+
+\def\StartTimelineDocument%
+{
+\crlf
+\startframedtext[width=broad,bottom=\vss,top=\vss,align=right,corner=round]
+\it 
+}
+
+\def\StopTimelineDocument%
+{
+\stopframedtext
+\crlf
+}
 
 % Usage: \href{http://www.someurl.com}{Text}
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}

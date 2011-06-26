@@ -23,7 +23,7 @@
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection,subsubsection][chapter,section]
+\placebookmarks[chapter,section,subsection,subsubsection][chapter]
 \setupinteractionscreen[option=bookmark]
 
 \setupbackgrounds
@@ -47,21 +47,6 @@
    \c!margin=2.5cm,
    \c!height=\v!middle]
 
-% re-defined because the default rscale=1.075 for modern doesn't 
-% look right
-
-\starttypescript [palatino]
-\definetypeface [palatino] [rm] [serif] [palatino] [default]
-\definetypeface [palatino] [ss] [sans]  [modern]   [default]
-\definetypeface [palatino] [tt] [mono]  [modern]   [default]
-\definetypeface [palatino] [mm] [math]  [palatino] [default]
-\stoptypescript
-
-\usetypescript[palatino][ec]
-
-\setupbodyfont[palatino,11pt]
-%\setupbodyfont[ubuntu,11pt][file:ubuntu-r][features=default]
-
 \definefontsynonym[chapternumberfont][RegularBold]
 \definefontsynonym[chaptertextfont]  [RegularBold]
 
@@ -69,7 +54,7 @@
 \definebodyfont[11pt][rm][bft=RegularBold at 30pt]
 
 \setmainfont[Ubuntu]
-\switchtobodyfont[11pt]
+\setupbodyfont[11pt]
 
 \definelayout
   [fullpage]
@@ -83,16 +68,25 @@
 \setuppagenumbering
   [\c!alternative=\v!doublesided]
 
-\def\startchapter#1%
-{\chapter[#1]{#1}\index{#1}}
+\def\StartChapter#1%
+{
+    \startcomponent{#1}
+    \chapter[#1]{#1}
+    \index{#1}
+}
 
-\def\startsection#1%
+\def\StopChapter%
+{
+    \stopcomponent
+}
+
+\def\StartSection#1%
 {\section[#1]{#1}\index{#1}}
 
-\def\startsubsection#1%
+\def\StartSubSection#1%
 {\subsection[#1]{#1}\index{#1}}
 
-\def\startsubsubsection#1%
+\def\StartSubSubSection#1%
 {\subsubsection[#1]{#1}\index{#1}}
 
 \def\StartTimelineDate#1%

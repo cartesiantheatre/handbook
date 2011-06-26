@@ -5,9 +5,31 @@ platforms:
     <http://wiki.contextgarden.net/ConTeXt_Minimals>
 
 If you are running Ubuntu, Adam Reviczky <adam.reviczky@kcl.ac.uk> 
-was kind enough to provide us with a PPA:
+was kind enough to provide us with a PPA. Consider yourself warned,
+however, that Adam's build recipe pulls from the latest upstream
+source on a daily basis which means ConTeXt may work one day and be
+busted to shit on another:
 
     <https://launchpad.net/~reviczky/+archive/ppa>
 
-You will also need the texlive-math-extra package.
+You will also need the texlive-math-extra and ttf-ubuntu-font-family 
+packages. To do all of the above on Ubuntu, run the following:
+
+    $ sudo add-apt-repository ppa:reviczky/ppa
+    $ sudo aptitude update
+    $ sudo aptitude install     \
+        umbrello                \
+        texlive-math-extra      \
+        ttf-ubuntu-font-family  \
+        context                 \
+        context-extra           \
+        context-fonts-extra
+
+Once you have the dependencies installed, simply run the following 
+within Avaneya/Documentation/Contributors/Handbook:
+
+    $ make
+
+If everything went well, you should have the Avaneya Crew Handbook.pdf 
+sitting in the aforementioned folder ready to go.
 

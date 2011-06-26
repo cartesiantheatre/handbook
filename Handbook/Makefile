@@ -21,7 +21,7 @@ CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Crew\ Handbook.pdf
-CONTEXT_OPTIONS             = --purgeresult --nonstopmode
+CONTEXT_OPTIONS             = --purgeresult --nonstopmode #--nostats
 
 # Umbrello can generate only all or none at once, so only need to specify one...
 #UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
@@ -37,7 +37,7 @@ $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 #	@ rm -vf Images/AresEngine/*.eps
 
 clean:
-	@ context --purgeall --nonstopmode --noconsole #&> /dev/null
+	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 	@ rm -vf $(OUTPUT) Handbook.pdf
 	@ rm -vf Images/AresEngine/*.svg
 

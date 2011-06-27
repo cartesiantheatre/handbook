@@ -11,29 +11,47 @@ We use Bazaar for revision control. Our master branch is hosted on Launchpad. He
 
 You may prefer to work with the source on your local machine instead of using a browser. To download and install Bazaar on Ubuntu, run the following:
 
-\ShellExample{\type{$} sudo aptitude install\\ \type{$} bzr}
+\StartCodeExample
+\type{$} sudo aptitude install
+\type{$} bzr
+\StopCodeExample
 
 A {\it graphical user interface} for Bazaar that integrates well into Nautilus is available on Ubuntu. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again:
 
-\ShellExample{\type{$} sudo aptitude install nautilus-bzr \\ \type{$} killall -9 nautilus}
+\StartCodeExample
+\type{$} sudo aptitude install nautilus-bzr
+\type{$} killall -9 nautilus
+\StopCodeExample
 
 To {\tt identify} yourself to Bazaar and in any commits you make, run the following:
 
-\ShellExample{\type{$} bzr whoami "Your Name <your@email_address.com>"}
+\StartCodeExample
+\type{$} bzr whoami "Your Name <your@email_address.com>"
+\StopCodeExample
 
 To {\tt checkout} a copy of the Avaneya source to a folder called Avaneya in the current working directory, run the following:
 
-\ShellExample{\type{$} lp:avaneya Avaneya}
+\StartCodeExample
+\type{$} lp:avaneya Avaneya
+\StopCodeExample
 
 To {\tt update} your working copy to the latest revision in the Launchpad master branch, run the following within the directory you checked out your local working copy to:
 
-\ShellExample{\type{$} bzr update}
+\StartCodeExample
+\type{$} bzr update
+\StopCodeExample
 
 To check the {\it commit log}, run the following within the directory you checked out your local working copy to:
 
-\ShellExample{\type{$} bzr log \type{|} less}
+\StartCodeExample
+\type{$} bzr log \type{|} less
+\StopCodeExample
 
 If you are a member of the Avaneya Crew on Launchpad, you will have write access to the repository which is necessary to commit to the master branch. After making your changes, run the following within the directory you checked out your local working copy to see what files you have changed ({\it status}), what changed inside of them ({\it diff}), and to finally upload ({\it commit}) your changes to the master branch:
 
-\ShellExample{\type{$} bzr status \\ \type{$} bzr diff \\ \type{$} bzr commit --message "Some commit log message..."}
+\StartCodeExample
+\type{$} bzr status
+\type{$} bzr diff
+\type{$} bzr commit --message "Some commit log message..."
+\StopCodeExample
 

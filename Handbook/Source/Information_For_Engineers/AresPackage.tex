@@ -30,17 +30,41 @@ Providing a layer of abstraction between the actual raw data and the client that
 The {\tt ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
 
 \StartSubSection{Design}
-A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package. The following diagram is a graphical representation of the schema.
+A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package. Let's take a look inside of it.
+
 \placefigure
-    [][figure:AresPackageManifestSchema]
+[force][figure:AresSamplePackage.xml]
+{A sample package's manifest file conforming to the AresPackage.xsd schema.}
+{
+\StartCodeExample
+\starttyping
+<?xml version="1.0" encoding="UTF-8" ?>
+<AresPackage Name="Title" SchemaFormat="1">
+    <Files NamePrefix="Title/">
+        <File Source="../Title/Scripts/Script.lua" Name="Title.luac">
+            <Parameter Name="Compile" Value="true" />
+        </File>
+        <File Source="../Title/Artwork/*.png" Compress="0">
+            <Parameter Name="Gamma" Value="0.5" />
+        </File>
+        <File Source="../Title/Artwork/Splash.mkv" Compress="0" />
+    </Files>
+</AresPackage>
+\stoptyping
+\StopCodeExample
+}
+
+The following diagram is a graphical representation of the schema.
+\placefigure
+    [force][figure:AresPackageManifestSchema]
     {The schema for the {\tt AresPackage} root node of a manifest.}
-    {\externalfigure[Images/AresPackage/Root.png][][width=.95\textwidth]}
+    {\externalfigure[Images/AresPackage/Root.png][][width=1\textwidth]}
 \placefigure
-    [][figure:AresPackageManifestSchema]
+    [force][figure:AresPackageManifestSchema]
     {The schema for the {\tt Files} element of an AresPackage manifest.}
-    {\externalfigure[Images/AresPackage/Files.png][][width=.95\textwidth]}
+    {\externalfigure[Images/AresPackage/Files.png][][width=1\textwidth]}
 \placefigure
-    [][figure:AresPackageManifestSchema]
+    [force][figure:AresPackageManifestSchema]
     {The schema for the {\tt File} tag of an AresPackage manifest.}
-    {\externalfigure[Images/AresPackage/File.png][][width=.95\textwidth]}
+    {\externalfigure[Images/AresPackage/File.png][][width=1\textwidth]}
 

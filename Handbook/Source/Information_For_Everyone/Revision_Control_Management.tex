@@ -12,8 +12,7 @@ We use Bazaar for revision control. Our master branch is hosted on Launchpad. He
 You may prefer to work with the source on your local machine instead of using a browser. To download and install Bazaar on Ubuntu, run the following:
 
 \StartCodeExample
-\type{$} sudo aptitude install
-\type{$} bzr
+\type{$} sudo aptitude install bzr
 \StopCodeExample
 
 A {\it graphical user interface} for Bazaar that integrates well into Nautilus is available on Ubuntu. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again:
@@ -32,7 +31,7 @@ To {\tt identify} yourself to Bazaar and in any commits you make, run the follow
 To {\tt checkout} a copy of the Avaneya source to a folder called Avaneya in the current working directory, run the following:
 
 \StartCodeExample
-\type{$} lp:avaneya Avaneya
+\type{$} bzr checkout lp:avaneya Avaneya
 \StopCodeExample
 
 To {\tt update} your working copy to the latest revision in the Launchpad master branch, run the following within the directory you checked out your local working copy to:
@@ -41,7 +40,7 @@ To {\tt update} your working copy to the latest revision in the Launchpad master
 \type{$} bzr update
 \StopCodeExample
 
-To check the {\it commit log}, run the following within the directory you checked out your local working copy to:
+To check the {\it commit log}, run the following within the directory you checked out your local working copy to, hitting {\tt q} to exit:
 
 \StartCodeExample
 \type{$} bzr log \type{|} less

@@ -18,7 +18,7 @@
   [state=start,
    color=red,
    title=Avaneya Crew Handbook,
-   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno"}.,
+   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno | tr -d '\\n'"}.,
    author=The Avaneya Crew,
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
@@ -67,9 +67,6 @@
 
 \definepapersize[main][A4][A4]
 \definepapersize[diagram][A4,landscape][A4,landscape]
-
-\setuppagenumbering
-  [\c!alternative=\v!doublesided]
 
 \def\CopyrightDates{2010, 2011}
 \def\CopyrightHolder{Kshatra Corp}

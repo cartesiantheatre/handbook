@@ -25,7 +25,7 @@
     Visit us on the web at \fullahref{https://www.avaneya.com}.
     \blank
 
-    This document was compiled on \currentdate\ from Bazaar revision \cldcontext{os.resultof"bzr revno"}, typeset using \CONTEXT\ \contextversion, rendered with \texenginename\ \texengineversion, and tested with GNOME Evince 2.32.0.
+    This document was compiled on \currentdate\ from Bazaar revision \cldcontext{os.resultof"bzr revno | tr -d '\\n'"}, typeset using \CONTEXT\ \contextversion, rendered with \texenginename\ \texengineversion, and tested with GNOME Evince 2.32.0.
     \blank
 
     Copyright \copyright\ \CopyrightDates\ \CopyrightHolder. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of this license is included in \in{section}[GNU Free Documentation License].
@@ -77,11 +77,11 @@
 % Appendices...
 \startappendices
 
-	% Index...
-	\completeindex
-
 	% License appendix...
     \component Source/Licenses/Licenses.tex
+
+	% Index...
+	\completeindex
 
 \stopappendices
 

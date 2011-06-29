@@ -35,17 +35,34 @@
   [level=9]
 
 \setupsystem
-  [\c!random=\v!big]
+  [random=big]
 
+\unprotect
 \setuplayout
-  [\c!location=\v!middle,
-   \c!style=\ss,
-   \c!backspace=2.5cm,
-   \c!topspace=1.5cm,
-   \c!width=16cm,
-   \c!margindistance=.25cm,
-   \c!margin=2.5cm,
-   \c!height=\v!middle]
+  [location=middle,
+   style=\ss,
+   backspace=2.5cm,
+   topspace=1.5cm,
+   width=16cm,
+   margindistance=.25cm,
+   margin=2.5cm,
+   height=middle]
+
+\definelayout
+  [fullpage]
+  [backspace=0pt,
+   topspace=0pt,
+   width=middle,
+   height=middle,
+   header=0pt,
+   footer=0pt]
+\protect
+
+\definepapersize[main][A4][A4]
+\definepapersize[diagram][A4,landscape][A4,landscape]
+
+% Remove surrounding quotation marks on references...
+\setupreferencing[left=, right=]
 
 \definefontsynonym[chapternumberfont][RegularBold]
 \definefontsynonym[chaptertextfont]  [RegularBold]
@@ -56,20 +73,23 @@
 \setmainfont[Ubuntu]
 \setupbodyfont[11pt]
 
-\definelayout
-  [fullpage]
-  [\c!backspace=0pt,
-   \c!topspace=0pt,
-   \c!width=\v!middle,
-   \c!height=\v!middle,
-   \c!header=0pt,
-   \c!footer=0pt]
-
-\definepapersize[main][A4][A4]
-\definepapersize[diagram][A4,landscape][A4,landscape]
-
 \def\CopyrightDates{2010, 2011}
 \def\CopyrightHolder{Kshatra Corp}
+
+% Insert a full page landscape diagram, parameters are node name, caption, and path...
+\def\FullPageLandscapeDiagram#1#2#3%
+{
+    \page 
+    \setuppapersize[diagram]
+    \setuplayout[fullpage]
+    \placefigure
+        [force][figure:#1]
+        {#2}
+        {\externalfigure[#3][factor=max]}
+    \page
+    \setuppapersize[main]
+    \setuplayout[reset]
+}
 
 \def\StartChapter#1%
 {
@@ -149,7 +169,7 @@
 
 \def\startreality
   {\blank
-   \page[\v!preference]
+   \page[preference]
    \begingroup}
 
 \def\stopreality
@@ -159,93 +179,93 @@
 
 \defineframedtext
   [MiniFile]
-  [\c!width=25em,
-   \c!offset=0.25ex,
-   \c!bodyfont=7pt,
-   \c!background=\v!color,
-   \c!backgroundcolor=GrayColor,
-   \c!backgroundoffset=.25ex,
-   \c!frame=\v!off,
-   \c!before=,
-   \c!after=]
+  [width=25em,
+   offset=0.25ex,
+   bodyfont=7pt,
+   background=color,
+   backgroundcolor=GrayColor,
+   backgroundoffset=.25ex,
+   frame=off,
+   before=,
+   after=]
 
 % Number formulae etc. using the chapter number...
 \setupnumbering
     [way=bychapter]
 
 \setuppagenumbering
-  [\c!location=]
+  [location=]
 
 \setuptolerance
-  [\v!verytolerant,\v!stretch]
+  [verytolerant,stretch]
 
 \setupblank
-  [\v!medium]
+  [medium]
 
 \setupwhitespace
-  [\v!medium]
+  [medium]
 
 \setuptyping
-  [\c!blank=\v!medium]
+  [blank=medium]
 
 \setupheadertexts
-  [\v!margin]
+  [margin]
   [][\hfill\pagenumber\hfill]
 
 \setupfootertexts
-  [\v!margin]
-  [][{\hfill\doifnotmode{*\v!frontpart}{\getmarking[\v!chapter\v!number]}\hfill}]
+  [margin]
+  [][{\hfill\doifnotmode{*frontpart}{\getmarking[chapternumber]}\hfill}]
 
 \setupheadertexts
-  [\v!text]
-  [][{\hfill\getmarking[\v!chapter]\hfill}]
+  [text]
+  [][{\hfill\getmarking[chapter]\hfill}]
 
 %\setupfootertexts
-%  [\v!text]
-%  [][{\hfill\getmarking[\v!section]\hfill}]
+%  [text]
+%  [][{\hfill\getmarking[section]\hfill}]
 
 \setupbodyfontenvironment
   [default]
   [em=italic]
 
-\setupsectionblock[\v!frontpart] [\c!page=\v!yes]
-\setupsectionblock[\v!bodypart]  [\c!page=\v!yes]
-\setupsectionblock[\v!appendix]  [\c!page=\v!yes]
-\setupsectionblock[\v!frontpart] [\c!before=,\c!after=]
+\setupsectionblock[frontpart] [page=yes]
+\setupsectionblock[bodypart]  [page=yes]
+\setupsectionblock[appendix]  [page=yes]
+\setupsectionblock[frontpart] [before=,after=]
 
 \setuphead
-  [\v!chapter]
-  [\c!command=\PlaceSection,
-   \c!page=\v!yes,
-   \c!before=,
-   \c!header=\v!nomarking,
-   \c!style=\bfd]
+  [chapter]
+  [command=\PlaceSection,
+   page=yes,
+   before=,
+   header=nomarking,
+   style=\bfd]
 
 \setuphead
-  [\v!title]
-  [\c!command=\PlaceSection,
-   \c!page=\v!right,
-   \c!before=,
-   \c!header=\v!nomarking,
-   \c!style=\bfd]
+  [title]
+  [command=\PlaceSection,
+   page=right,
+   before=,
+   header=nomarking,
+   style=\bfd]
 
 \setuphead
-  [\v!section]
-  [\c!command=\PlaceSection,
-   \c!inbetween=,
-   \c!style=\bfb]
+  [section]
+  [command=\PlaceSection,
+   inbetween=,
+   style=\bfb]
 
 \setuphead
-  [\v!subsection]
-  [\c!command=\PlaceSection,
-   \c!before=\blank,
-   \c!style=\bfa]
+  [subsection]
+  [command=\PlaceSection,
+   before=\blank,
+   style=\bfa]
 
 \setuphead
-  [\v!subsubsection]
-  [\c!command=\PlaceSection,
-   \c!before=\blank,
-   \c!style=\bsa]
+  [subsubsection]
+  [command=\PlaceSection,
+   before=\blank,
+   style=\bsa]
 
 \def\PlaceSection#1#2%
   {\goodbreak
@@ -271,14 +291,14 @@
 \stopusableMPgraphic
 
 \setuptype
-  [\c!option=\v!slanted]
+  [option=slanted]
 
 \setuptyping
-  [\c!option=\v!slanted]
+  [option=slanted]
 
 \setuplist
-  [\v!section]
-  [\c!width=3em]
+  [section]
+  [width=3em]
 
 \defineregister
   [texmacro]
@@ -286,27 +306,27 @@
 
 \setupregister
   [texmacro]
-  [\c!indicator=\v!off,
-   \c!distance=1em minus .25em]
+  [indicator=off,
+   distance=1em minus .25em]
 
 \setupfootnotes
-  [\c!rule=\v!on]
+  [rule=on]
 
 \setuphead
-  [\v!chapter]
-  [\c!header=\v!empty]
+  [chapter]
+  [header=empty]
 
-\setupitemgroup[\v!itemize]
-  [\v!each]
-  [\c!headstyle=\v!bold]
+\setupitemgroup[itemize]
+  [each]
+  [headstyle=bold]
 
-\setupitemgroup[\v!itemize]
-  [\v!each]
-  [\v!stopper]
+\setupitemgroup[itemize]
+  [each]
+  [stopper]
 
 \setupsubpagenumber
-  [\c!way=\v!by\v!chapter,
-   \c!state=\v!start]
+  [way=bychapter,
+   state=start]
 
 \stopenvironment
 

@@ -25,7 +25,7 @@ CONTEXT_OPTIONS             = --purgeresult --nonstopmode #--nostats
 
 # Umbrello can only export all or none of its diagrams, so we specify 
 #  an arbitrary one...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Images/AresEngine/Engine.svg
+UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Information_For_Engineers/Images/AresEngine/Engine.svg
 
 # Generate handbook PDF, but also check if this makefile is updated...
 all: $(OUTPUT) Makefile
@@ -36,14 +36,12 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Images/AresEngine 1> /dev/null
-#	find Images/AresEngine/ -type f -name '*.eps' -execdir epstopdf {} \;
-#	@ rm -vf Images/AresEngine/*.eps
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Engineers/Images/AresEngine 1> /dev/null
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
-	@ rm -vf Images/AresEngine/*.svg
-	@ rm -vf Images/AresEngine/m_k_i_v_*.pdf
+	@ rm -vf Source/Information_For_Engineers/Images/AresEngine/*.svg
+	@ rm -vf Source/Information_For_Engineers/Images/AresEngine/m_k_i_v_*.pdf
 
 # Clean most intermediate build files, including the generated PDF...
 clean:

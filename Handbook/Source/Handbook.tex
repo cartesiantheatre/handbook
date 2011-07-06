@@ -6,6 +6,8 @@
 \startproduct Handbook
 \environment Source/Environment.tex
 
+\startcolor[colour_head]
+
 \startmakeup[standard][doublesided=no]
     \setupalign[center]
     \bft \setupspacing \setstrut
@@ -16,8 +18,13 @@
     {\em \strut A guidebook for new and current contributors.}
     \setupspacing \setstrut
     \vfill
-    {\em The Avaneya Crew}
+    The Avaneya Crew\crlf
+    {\small Bazaar revision \cldcontext{os.resultof"bzr revno | tr -d '\\n'"}}
 \stopmakeup
+
+\stopcolor
+
+\startcolor[colour_text]
 
 \startmakeup[standard][page=,doublesided=no]
     \vfill
@@ -89,6 +96,8 @@
 \startbackmatter
 
 \stopbackmatter
+
+\stopcolor
 
 % Done...
 \stopproduct

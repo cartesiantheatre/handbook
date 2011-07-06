@@ -13,14 +13,34 @@
 
 \usemodule[units,simplefonts]
 
+% Define colours...
+\definecolor[colour_text][r=.754,g=.516,b=.324]
+\definecolor[colour_head][r=.828,g=.313,b=.176]
+\definecolor[colour_item][colour_head]
+\definecolor[colour_link][colour_head]
+\definecolor[colour_frame_border][colour_head]
+\definecolor[colour_page][r=0,g=0,b=0]
+\definecolor[colour_page_number][colour_head]
+\definecolor[colour_footnote_text][colour_text]
+\definecolor[colour_footnote_background][colour_page]
+
 % Setup PDF metadata...
 \setupinteraction
   [state=start,
-   color=red,
+   color=colour_link,
+   contrastcolor=colour_link,
+   focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
    title=Avaneya Crew Handbook,
    subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno | tr -d '\\n'"}.,
    author=The Avaneya Crew,
    keyword={Avaneya, handbook, Mars, GNU, game}]
+
+\setupurl
+   [color=colour_link,
+    style=\bf]
+
+\setupframedtexts
+  [framecolor=colour_frame_border]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
 \placebookmarks[chapter,section,subsection,subsubsection][chapter]
@@ -28,7 +48,7 @@
 
 \setupbackgrounds
    [rightpage]
-   [background=]
+   [background=color,backgroundcolor=colour_page]
 
 % Set PDF compression level, default is 3, so set to maximum...
 \setupbackend
@@ -82,10 +102,12 @@
     \page 
     \setuppapersize[diagram]
     \setuplayout[fullpage]
+    \startframedtext[width=.95\textwidth,bottom=\vss,top=\vss,align=right,corner=rectangular]
     \placefigure
         [force][figure:#1]
         {#2}
-        {\externalfigure[#3][factor=max]}
+        {\externalfigure[#3][width=.95\textwidth]}
+    \stopframedtext
     \page
     \setuppapersize[main]
     \setuplayout[reset]
@@ -123,7 +145,12 @@
 \def\StartTimelineDocument%
 {
 \crlf
-\startframedtext[width=broad,bottom=\vss,top=\vss,align=right,corner=round]
+\startframedtext
+    [width=broad,
+     bottom=\vss,
+     top=\vss,
+     align=right,
+     corner=rectangular]
 \it 
 }
 
@@ -136,9 +163,9 @@
 % Usage: \href{http://www.someurl.com}{Text}
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
 
-\def\ahref#1{\color[linkcolor]{\ttx \href{#1}{<#1>}}}
+\def\ahref#1{\color[colour_link]{\ttx \href{#1}{<#1>}}}
 
-\def\fullahref#1{\color[linkcolor]{\ttx \href{#1}{#1}}}
+\def\fullahref#1{\color[colour_link]{\ttx \href{#1}{#1}}}
 
 \def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
 
@@ -183,7 +210,7 @@
    offset=0.25ex,
    bodyfont=7pt,
    background=color,
-   backgroundcolor=GrayColor,
+   backgroundcolor=colour_page,
    backgroundoffset=.25ex,
    frame=off,
    before=,
@@ -194,7 +221,11 @@
     [way=bychapter]
 
 \setuppagenumbering
-  [location=]
+  [location=top,
+   way=bytext,
+   left={\lettertilde\space},right={\space\lettertilde},
+   color=colour_page_number,
+   style=bold]
 
 \setuptolerance
   [verytolerant,stretch]
@@ -208,21 +239,21 @@
 \setuptyping
   [blank=medium]
 
-\setupheadertexts
-  [margin]
-  [][\hfill\pagenumber\hfill]
-
 \setupfootertexts
   [margin]
-  [][{\hfill\doifnotmode{*frontpart}{\getmarking[chapternumber]}\hfill}]
+  [][{
+\hfill
+%\doifnotmode{*frontpart}{\getmarking[chapternumber]}
+\hfill
+    }]
 
-\setupheadertexts
-  [text]
-  [][{\hfill\getmarking[chapter]\hfill}]
-
-%\setupfootertexts
+%\setupheadertexts
 %  [text]
-%  [][{\hfill\getmarking[section]\hfill}]
+%  [][{
+%\hfill
+%\getmarking[chapter]
+%\hfill
+%    }]
 
 \setupbodyfontenvironment
   [default]
@@ -233,9 +264,14 @@
 \setupsectionblock[appendix]  [page=yes]
 \setupsectionblock[frontpart] [before=,after=]
 
+\setupfootnotes
+  [color=colour_footnote_text,
+   backgroundcolor=colour_footnote_background]
+
 \setuphead
   [chapter]
   [command=\PlaceSection,
+   color=colour_head,
    page=yes,
    before=,
    header=nomarking,
@@ -244,6 +280,7 @@
 \setuphead
   [title]
   [command=\PlaceSection,
+   color=colour_head,
    page=right,
    before=,
    header=nomarking,
@@ -252,18 +289,21 @@
 \setuphead
   [section]
   [command=\PlaceSection,
+   color=colour_head,
    inbetween=,
    style=\bfb]
 
 \setuphead
   [subsection]
   [command=\PlaceSection,
+   color=colour_head,
    before=\blank,
    style=\bfa]
 
 \setuphead
   [subsubsection]
   [command=\PlaceSection,
+   color=colour_head,
    before=\blank,
    style=\bsa]
 
@@ -276,19 +316,6 @@
       #2}}
 
 \setupcaptions[width=14cm,align=right]
-
-\setMPtext{text}{some test text}
-
-\startusableMPgraphic{text}
-  picture r ;
-  r := image ( graphictext
-    \MPstring{text}
-    randomized .4pt
-    scaled 6pt
-    withfillcolor .8\MPcolor{maincolor}
-    withpen pencircle scaled 1pt ; ) ;
-  draw r ;
-\stopusableMPgraphic
 
 \setuptype
   [option=slanted]
@@ -315,6 +342,9 @@
 \setuphead
   [chapter]
   [header=empty]
+
+%\setupitems
+%  [color=colour_item]
 
 \setupitemgroup[itemize]
   [each]

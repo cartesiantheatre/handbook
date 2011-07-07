@@ -4,7 +4,7 @@
 % See the file License for copying conditions.
 
 % The environment file is used to setup the typesetting that relate to 
-%  any product, but at present, just the crew handbook...
+%  any product, but at present, just the handbook...
 
 \startenvironment Environment
 
@@ -16,13 +16,18 @@
 % Define colours...
 \definecolor[colour_text][r=.754,g=.516,b=.324]
 \definecolor[colour_head][r=.828,g=.313,b=.176]
-\definecolor[colour_item][colour_head]
+\definecolor[colour_item][r=.864,g=.426,b=.234]
 \definecolor[colour_link][colour_head]
-\definecolor[colour_frame_border][colour_head]
+\definecolor[colour_frame_border][colour_text]
 \definecolor[colour_page][r=0,g=0,b=0]
 \definecolor[colour_page_number][colour_head]
 \definecolor[colour_footnote_text][colour_text]
 \definecolor[colour_footnote_background][colour_page]
+\definecolor[colour_table_row_odd][r=.1,g=.1,b=.1]
+\definecolor[colour_table_row_even][r=.115,g=.115,b=.115]
+
+% Bzr version...
+\def\BazaarRevision{\cldcontext{os.resultof"bzr revno | tr -d '\\n'"}}
 
 % Setup PDF metadata...
 \setupinteraction
@@ -31,13 +36,24 @@
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
    title=Avaneya Crew Handbook,
-   subtitle=A guidebook for new and current contributors. Bazaar revision \cldcontext{os.resultof"bzr revno | tr -d '\\n'"}.,
-   author=The Avaneya Crew,
+   subtitle=A guidebook for new and current contributors.,
+   author=The Avaneya Crew from Bazaar revision \BazaarRevision.,
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
+\setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
+\setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
+
+\setupexternalfigures
+  [frame=on,
+   corner=0,
+   framecolor=colour_frame_border,
+   background=color, 
+   backgroundcolor=colour_page,
+   rulethickness=2pt]
+
 \setupurl
-   [color=colour_link,
-    style=\bf]
+  [color=colour_link,
+   style=\bf]
 
 \setupframedtexts
   [framecolor=colour_frame_border]
@@ -117,7 +133,7 @@
 {
     \startcomponent{#1}
     \chapter[#1]{#1}
-    \index{#1}
+%    \index{#1}
 }
 
 \def\StopChapter%
@@ -126,38 +142,49 @@
 }
 
 \def\StartSection#1%
-{\section[#1]{#1}\index{#1}}
+{
+    \section[#1]{#1}
+%    \index{#1}
+}
 
 \def\StartSubSection#1%
-{\subsection[#1]{#1}\index{#1}}
+{
+    \subsection[#1]{#1}
+%    \index{#1}
+}
 
 \def\StartSubSubSection#1%
-{\subsubsection[#1]{#1}\index{#1}}
+{
+    \subsubsection[#1]{#1}
+%    \index{#1}
+}
 
 \def\StartTimelineDate#1%
-{\subsubsubject{\bf #1}}
+{
+    \subsubsubject{\bf #1}
+}
 
 \def\StopTimelineDate%
 {
-\crlf
+    \crlf
 }
 
 \def\StartTimelineDocument%
 {
-\crlf
-\startframedtext
-    [width=broad,
-     bottom=\vss,
-     top=\vss,
-     align=right,
-     corner=rectangular]
-\it 
+    \crlf
+    \startframedtext
+        [width=broad,
+         bottom=\vss,
+         top=\vss,
+         align=right,
+         corner=round]
+    \it 
 }
 
 \def\StopTimelineDocument%
 {
-\stopframedtext
-\crlf
+    \stopframedtext
+    \crlf
 }
 
 % Usage: \href{http://www.someurl.com}{Text}
@@ -315,7 +342,7 @@
       \inleftmargin{\hbox to \leftmarginwidth{\hss#1\hss}}%
       #2}}
 
-\setupcaptions[width=14cm,align=right]
+\setupcaptions[location=bottom]
 
 \setuptype
   [option=slanted]
@@ -343,8 +370,8 @@
   [chapter]
   [header=empty]
 
-%\setupitems
-%  [color=colour_item]
+\setupitemize
+  [color=colour_item]
 
 \setupitemgroup[itemize]
   [each]

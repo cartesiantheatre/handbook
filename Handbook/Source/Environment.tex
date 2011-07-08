@@ -169,23 +169,22 @@
     \crlf
 }
 
-\def\StartTimelineDocument%
-{
-    \crlf
-    \startframedtext
-        [width=broad,
-         bottom=\vss,
-         top=\vss,
-         align=right,
-         corner=round]
-    \it 
-}
-
-\def\StopTimelineDocument%
-{
-    \stopframedtext
-    \crlf
-}
+\definestartstop
+    [TimelineDocument]
+    [before={
+        \setupbackground[frame=on,
+                         before=\blank,
+                         after=\blank,
+                         corner=round,
+                         topoffset=0.5cm,
+                         leftoffset=0.5cm,
+                         rightoffset=0.5cm,
+                         bottomoffset=0.5cm]
+        \startbackground
+            },
+     after=\stopbackground,
+     commands={\setupalign[yes]},
+     style=italic]
 
 % Usage: \href{http://www.someurl.com}{Text}
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
@@ -198,38 +197,28 @@
 
 \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
 
-\def\StartCodeExample%
-{
-\blank
-\startframedtext[width=broad,bottom=\vss,top=\vss,align=right,corner=round]
-\startlines
-\tt
-}
-
-\def\StopCodeExample%
-{
-\stoplines
-\stopframedtext
-\blank
-}
-
-\def\startexample
-  {\blank
-   \begingroup}
-
-\def\stopexample
-  {\endgroup
-   \blank}
-
-\def\startreality
-  {\blank
-   \page[preference]
-   \begingroup}
-
-\def\stopreality
-  {\relax
-   \endgroup
-   \blank}
+\definestartstop
+    [CodeExample]
+    [before={
+        \crlf
+        \setupbackground[frame=on,
+                         before=\blank,
+                         after=\blank,
+                         corner=round,
+                         topoffset=0.5cm,
+                         leftoffset=0.5cm,
+                         rightoffset=0.5cm,
+                         bottomoffset=0.5cm]
+        \startbackground
+        \startlines
+            },
+     after={
+        \stoplines
+        \stopbackground
+        \crlf
+           },
+     commands={\setupalign[right]},
+     style=type]
 
 \defineframedtext
   [MiniFile]
@@ -273,14 +262,6 @@
 %\doifnotmode{*frontpart}{\getmarking[chapternumber]}
 \hfill
     }]
-
-%\setupheadertexts
-%  [text]
-%  [][{
-%\hfill
-%\getmarking[chapter]
-%\hfill
-%    }]
 
 \setupbodyfontenvironment
   [default]
@@ -371,7 +352,7 @@
   [header=empty]
 
 \setupitemize
-  [color=colour_item]
+  [each][fit,broad,color=colour_item][distance=.25em]
 
 \setupitemgroup[itemize]
   [each]

@@ -95,12 +95,12 @@ The {\it EventManager} is responsible for intercommunication between various eng
 
 An event handler can either contain an {\it Ares::EventHandler} class, or can derive from it and override the {\tt OnEvent()} method. It registers interest in one or more events via the {\tt Register()} method:
 
-\StartCodeExample
+\startCodeExample
 EventHandler::Register("some_event");
-\StopCodeExample
+\stopCodeExample
 
 Next, to create and enqueue an event, one would do as follows:
-\StartCodeExample
+\startCodeExample
 \starttyping
 // Create a some_event event...
 Ares::Event SomeEvent("some_event");
@@ -108,7 +108,7 @@ Ares::Event SomeEvent("some_event");
 // Enqueue event...
 Ares::EventManager::GetSingleton().Enqueue(SomeEvent);
 \stoptyping
-\StopCodeExample
+\stopCodeExample
 
 Every frame, the {\tt EventManager::DispatchEvents()} method is called to pump the message queue. It will get an event from the internal priority queue that is due for processing. Once an event is fetched, it calls {\tt Event.Dispatch()} to pass it to all registered handlers so that they may do whatever it is that they would like to do when that event occurs.
 

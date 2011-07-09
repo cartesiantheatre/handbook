@@ -67,11 +67,12 @@ The {\it Armstrong Limit\index{Armstrong Limit}} of 62.62 millibars is the lowes
 
 \placetable[force][table:Pressure Ratings]{Martian building pressure ratings.}
 {
-\bTABLE[split=repeat,option=stretch]
-    \setupTABLE[r][each][align=center]
+    \bTABLE[split=repeat,option=stretch]
     \setupTABLE[column][4]
         [width=.50\textwidth,
         align=yes]
+    \setupTABLE[row][each][align=center]
+    \setupTABLE[4][1][align=center]
 
     \bTABLEhead
     \bTR[bottomframe=on]
@@ -170,51 +171,53 @@ As an example, compare the specific impulse of some of the different types of ro
 
 \placetable[here][table:Specific Impulse Comparison]{Comparison of different rocket specific impulses.}
 {
-\bTABLE[split=repeat,option=stretch]% head on every page, stretch columns
-\bTABLEhead
-\bTR
-  \bTH Rocket Type \eTH
-  \bTH Fuel \eTH
-  \bTH \math{\bf I_{sp}} \eTH
-\eTR
-\eTABLEhead
-\bTABLEbody
-%
-\bTR
-  \bTC Ancient Chinese Rocket \eTC
-  \bTC Gunpowder \eTC
-  \bTC 80 \eTC
-\eTR
-\bTR
-  \bTC Modern Rocket (e.g. ICBM) \eTC
-  \bTC Solid \eTC
-  \bTC 250 \eTC
-\eTR
-\bTR
-  \bTC Saturn V \eTC
-  \bTC LOx / kerosene \eTC
-  \bTC 260 \eTC
-\eTR
-\bTR
-  \bTC Space Shuttle Main Engine \eTC
-  \bTC LOx / \chemical{H_2} \eTC
-  \bTC 400 \eTC
-\eTR
-\bTR
-  \bTC Nuclear Thermal \eTC
-  \bTC Solid \eTC
-  \bTC 800 \eTC
-\eTR
-\bTR
-  \bTC Nuclear Thermal \eTC
-  \bTC Liquid \eTC
-  \bTC 1300 \eTC
-\eTR
-\bTR
-  \bTC Jet Engine \eTC
-  \bTC Compressed Air \eTC
-  \bTC 3000 \eTC
-\eTR
+    \bTABLE[split=repeat,option=stretch]% head on every page, stretch columns
+    \setupTABLE[row][each][align=center]
+
+    \bTABLEhead
+    \bTR
+      \bTH Rocket Type \eTH
+      \bTH Fuel \eTH
+      \bTH \math{\bf I_{sp}} \eTH
+    \eTR
+    \eTABLEhead
+    \bTABLEbody
+    %
+    \bTR
+      \bTC Ancient Chinese Rocket \eTC
+      \bTC Gunpowder \eTC
+      \bTC 80 \eTC
+    \eTR
+    \bTR
+      \bTC Modern Rocket (e.g. ICBM) \eTC
+      \bTC Solid \eTC
+      \bTC 250 \eTC
+    \eTR
+    \bTR
+      \bTC Saturn V \eTC
+      \bTC LOx / kerosene \eTC
+      \bTC 260 \eTC
+    \eTR
+    \bTR
+      \bTC Space Shuttle Main Engine \eTC
+      \bTC LOx / \chemical{H_2} \eTC
+      \bTC 400 \eTC
+    \eTR
+    \bTR
+      \bTC Nuclear Thermal \eTC
+      \bTC Solid \eTC
+      \bTC 800 \eTC
+    \eTR
+    \bTR
+      \bTC Nuclear Thermal \eTC
+      \bTC Liquid \eTC
+      \bTC 1300 \eTC
+    \eTR
+    \bTR
+      \bTC Jet Engine \eTC
+      \bTC Compressed Air \eTC
+      \bTC 3000 \eTC
+    \eTR
 \eTABLEbody
 \eTABLE
 }

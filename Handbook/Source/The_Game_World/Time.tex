@@ -6,24 +6,138 @@
 % Time section...
 \StartSection{Time}
 
-The colonists use a different calendar than on Earth for both practical and political reasons.
+Time keeping in Avaneya is different from how it is kept on Earth. It is useful to be familiar with this for understanding both the gameplay and the storyline.
 
-Practical, because the Gregorian calendar is useless in a world where the orbital period, seasons, and length of a solar day are different than on Earth. The calendar's months, for instance, are not meaningful in the absence of the natural cycles of the Earth's Moon.
+\StartSubSection{Seconds, Minutes, Hours, Days, and Years}
 
-Political, partly because the original Avaneya settlers were predominantly secular, the Gregorian calendar's year zero being incompatible with that; and partly that they desired a calendar which was meaningful in the context of {\it their own} collective memory.
-
-% Explain hours...
-But as the details go, a Martian hour is the same as a Terran hour, composed of 3600 Terran seconds.
+% Explain seconds, minutes, and hours...
+A Martian second, minute, and hour are still the same as their Terran counterparts (e.g. a Martian hour is still 3600 Terran seconds). There are no timezones. All clocks are set to those of Arcadia, the first settlement in Utopia Planitia.
 
 % Explain solar day...
-A {\it sol\index{sol}} is a solar day.\footnote{A {\it yestersol\index{yestersol}} being the sol preceding the current one.} This is the Martian analogue to a Terran day, but 2.7 \% longer. The conversion of 1.027491 Terran days to Martial sols means that a sol is slightly longer than on Earth. Martian clocks are therefore designed to {\it time slip} at midnight for 39 minutes, 40 seconds. This allows Martians to use a 24 hour clock which they are accustomed to.
+A {\it sol\index{sol}} is a solar day.\footnote{A {\it yestersol\index{yestersol}} being the sol preceding the current one.} This is the Martian analogue to a Terran day, but 2.7 \% longer. The conversion of 1.027491 Terran days to Martial sols means that a sol is slightly longer than on Earth. Martian clocks are therefore designed to {\it time slip} at midnight for 39 minutes, 40 seconds. This allows Arcadians to use a 24 hour clock which they are accustomed to.
 
 % Explain year...
-A Martian year, abbreviated {\it MYr}, contains 668.6 sols, or 689 days by a terrestrial metric. That means there are 88775.245 seconds in a Martian year with 1.8876712 Martian years for every Terran year (1 year, 320 days, and 18.2 hours). 
+A Martian year, abbreviated {\it MYr} and pronounced "m-year", contains 668.6 sols, or 689 days by a terrestrial metric. That means there are 88775.245 seconds in a Martian year with 1.8876712 Martian years for every Terran year (1 year, 320 days, and 18.2 hours). These years are enumerated relative to a temporal datum, as described in \in{chapter}[Timeline].
 
-Three Martian years would be pronounced, "three m-years".
+\StartSubSection{Calendar}
 
-The \math{L_s} system is used to designate the solar longitude, the angle Mars makes with respect to the Sun. This is measured from the northern hemisphere with the vernal or spring equinox (\math{L_s=0^{\circ}}). Therefore \math{L_s=90^{\circ}} is the summer solstice; \math{L_s=180^{\circ}}, the autumn equinox; and \math{L_s=270^{\circ}} the winter solstice.
+The colonists use a different calendar than on Earth for both practical and political reasons. The practical reason is that the Gregorian calendar is useless in a world where the orbital period, seasons, and length of a solar day are different than those of Earth. The calendar's months, for instance, are not meaningful in the absence of the natural cycles of the Earth's Moon. As a consequence, they needed a calender that is meaningful to the physical idiosyncrasies of their own planet.
 
-There are no timezones. All clocks are set to those of the first settlement location.
+The political reason is partly because the original Arcadians were predominantly secular, the Gregorian calendar's year zero being theological in nature. The other reason is that they desired a calendar which was meaningful in the context of {\it their own} indigenous history.
+
+In terms of the practical reason given, had the equipartitioned Terran months been brought to Mars, they would not be of equal length because the Martian orbit has high eccentricity. In orbital mechanics, this is the degree an orbital path deviates from a perfect circle to form an ellipse. This means its seasons are not of equal length. 
+
+To be useful, a calendar must be divided such that equal segments correspond to equal angles about the Sun so one can predict the seasons. The Arcadians kept the concept of twelve months, each one therefore still being the same as \math{30^{\circ}} around the Sun. However, they gave them different names taken from the zodiac. This is clever since the names of the zodiac can be generalized since they are heliocentric, as opposed to geocentric. This means they are physically meaningful for any planet of our solar system. 
+
+In ancient times, Terrans of a geocentric view named the months after whatever zodiacal constellation the Sun, as seen from Earth, appeared to be positioned in. The Arcadians applied the same process on Mars, as proposed by aerospace engineer Robert Zubrin (see \in{section}[Mars Direct]) and adopted the following calendar:
+\crlf
+
+\placetable[force][table:Martian Months]{The Martian calendar of twelve months.}
+{
+    \bTABLE[split=repeat,option=stretch]
+    \setupTABLE[column][4]
+        [width=.60\textwidth,
+        align=yes]
+    \setupTABLE[row][each][align=center]
+    \setupTABLE[4][1][align=center]
+
+\bTABLEhead
+    \bTR[bottomframe=on]
+      \bTH  Month \eTH
+      \bTH  First Sol \eTH
+      \bTH  Total Sols \eTH
+      \bTH  Notes \eTH
+    \eTR
+\eTABLEhead
+
+\bTABLEbody
+    \bTR
+      \bTC Gemini \eTC
+      \bTC 1 \eTC
+      \bTC 61 \eTC
+      \bTC Beginning of the year begins with the vernal equinox on Gemini 1 (beginning of spring)\eTC
+    \eTR
+    
+    \bTR
+      \bTC Cancer \eTC
+      \bTC 62 \eTC
+      \bTC 65 \eTC
+      \bTC  \eTC
+    \eTR
+    
+    \bTR
+      \bTC Leo \eTC
+      \bTC 127 \eTC
+      \bTC 66 \eTC
+      \bTC Aphelion on Leo 24 (farthest from Sun)\eTC
+    \eTR
+    
+    \bTR
+      \bTC Virgo \eTC
+      \bTC 193 \eTC
+      \bTC 65 \eTC
+      \bTC Northern hemisphere's summer solstice on Virgo 1 (Sun at its northernmost)\eTC
+    \eTR
+    
+    \bTR
+      \bTC Libra \eTC
+      \bTC 258 \eTC
+      \bTC 60 \eTC
+      \bTC  \eTC
+    \eTR
+    
+    \bTR
+      \bTC Scorpius \eTC
+      \bTC 318 \eTC
+      \bTC 54 \eTC
+      \bTC  \eTC
+    \eTR
+    
+    \bTR
+      \bTC Sagittarius \eTC
+      \bTC 372 \eTC
+      \bTC 50 \eTC
+      \bTC Autumnal equinox on Sagittarius 1 (Sun over equator)\eTC
+    \eTR
+    
+    \bTR
+      \bTC Capricorn \eTC
+      \bTC 422 \eTC
+      \bTC 47 \eTC
+      \bTC Dust storm season starts \eTC
+    \eTR
+    
+    \bTR
+      \bTC Aquarius \eTC
+      \bTC 469 \eTC
+      \bTC 46 \eTC
+      \bTC Perihelion on Aquarius 16 (nearest to Sun)\eTC
+    \eTR
+    
+    \bTR
+      \bTC Pisces \eTC
+      \bTC 515 \eTC
+      \bTC 48 \eTC
+      \bTC Northern hemisphere's winter solstice on Pisces 1 (Sun at its southernmost) \eTC
+    \eTR
+    
+    \bTR
+      \bTC Aries \eTC
+      \bTC 563 \eTC
+      \bTC 51 \eTC
+      \bTC Dust storm season ends \eTC
+    \eTR 
+
+    \bTR
+      \bTC Taurus \eTC
+      \bTC 614 \eTC
+      \bTC 56 \eTC
+      \bTC End of year on Taurus 56 \eTC
+    \eTR 
+\eTABLEbody
+
+\eTABLE
+}
+
+In case you are unfamiliar with the concept of the solstice and equinox, a solstice happens twice a year when the Sun's apparent position in the sky reaches its northernmost or southernmost extremes. The equinox also happens twice a year, but when the tilt of Earth's axis is inclined neither away from nor towards Sun, the Sun's centre being in same plane as the planet's equator.
 

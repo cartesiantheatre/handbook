@@ -18,6 +18,7 @@
 \definecolor[colour_head][r=.828,g=.313,b=.176]
 \definecolor[colour_item][r=.864,g=.426,b=.234]
 \definecolor[colour_link][colour_head]
+\definecolor[colour_figure_border][colour_head]
 \definecolor[colour_frame_border][colour_text]
 \definecolor[colour_page][r=0,g=0,b=0]
 \definecolor[colour_page_number][colour_head]
@@ -45,11 +46,11 @@
 
 \setupexternalfigures
   [frame=on,
-   corner=0,
-   framecolor=colour_frame_border,
+   corner=rectangular,
+   framecolor=colour_figure_border,
    background=color, 
    backgroundcolor=colour_page,
-   rulethickness=2pt]
+   rulethickness=1pt]
 
 \setupurl
   [color=colour_link,
@@ -305,7 +306,7 @@
   [subsection]
   [command=\PlaceSection,
    color=colour_head,
-   before=\blank,
+   before=\crlf,
    style=\bfa]
 
 \setuphead

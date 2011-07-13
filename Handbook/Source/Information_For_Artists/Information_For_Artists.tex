@@ -13,8 +13,8 @@ Getting the Avaneya game experience right means at least replicating the visual 
 
 \placefigure
     [right,2*hang]
-    {A photograph of Martian rocks recovered from a rotting magnetic tape captured by a Viking Lander.}
-    {\externalfigure[Source/Information_For_Artists/Images/Rocks.png][][width=.6\textwidth]}
+    {The Martian landscape captured by a Viking Lander and later recovered from rotting magnetic tape {\tt \#0902}.}
+    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_0902.png][][width=.6\textwidth]}
 
 Arda's settlers erected their settlement of Arcadia in the Arcadia Planitia region. It is named after the Arcadia region of Ancient Greece, so, in turn, named after the legend of Arcas\index{Arcas}. The region is located mid-latitude in the Northern hemisphere. 
 
@@ -36,7 +36,7 @@ A bit of background. In 1976 NASA placed two spacecraft into Martian orbit. The 
 
 While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking Landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for the layman.
 
-All of the image source\footnote{\fullahref{http://pds-imaging.jpl.nasa.gov/volumes/viking.html}} data for the Viking mission that NASA made available was produced by the Science Digital Data Preservation Task at NASA's Jet Propulsion Laboratory by copying data directly off of old, decaying tape media onto more stable optical media. They did not otherwise alter them. They have been provided courtesy of NASA's Planetary Data System and represent EDR (Experimental Data Record), which is a processing level at NASA to denote "raw data" as captured by onboard instrumentation.
+All of the image source\footnote{\fullahref{http://pds-imaging.jpl.nasa.gov/volumes/viking.html}} data for the Viking mission that NASA made available was produced by the Science Digital Data Preservation Task at NASA's Jet Propulsion Laboratory by copying data directly off of old, decaying tape media onto more stable optical media. They did not otherwise alter them. They have been provided courtesy of NASA's Planetary Data System and represent EDR (Experimental Data Record), which is a processing level at NASA to denote "raw data" that was returned to Earth as captured by the onboard instrumentation.
 
 And while such raw data is now available to everyone as public domain, much of it is encoded in a useless, archaic, format used during the Viking mission between July 20, 1976 to November 5, 1982. As you might expect, few remain today at NASA to explain its specification. We will return to this in a moment.
 
@@ -46,7 +46,7 @@ The {\it Viking Lander Processed Images} were the second source. They were taken
 
 \placefigure
     [left,2*hang]
-    {A digital photograph recovered from a rotting magnetic tape originally captured by the second Viking Lander, Utopia Planitia, Mars.}
+    {Another digital photograph recovered from a rotting magnetic tape originally captured by the second Viking Lander, Utopia Planitia, Mars.}
     {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_fnm602.vic.png][][width=.6\textwidth]}
 
 As a consequence, the archaic magnetic tapes the images were stored on began to rot\footnote{Magnetic tapes can experience "bit rot"\index{bit rot} as bits lose magnetic orientation. When stored where it is warm and humid, the tapes can literally rot.} as the years went on. Even if they had been safe on magnetic tapes, the VICAR\index{VICAR} (Video Image Communication and Retrieval)\index{Video Image Communication and Retrieval} format they were encoded in is an ancient format having its origins nearly half a century ago. Moreover, the few remaining functional VICAR image loaders the team managed to access are for much newer file format versions than that used during the Viking era.\footnote{{\tt Xloadimage 4.1} and {\tt ImageMagick 6.7.0} are some examples that can decode newer VICAR data, but not that from the Viking era.}
@@ -59,7 +59,7 @@ The second we were not permitted access to even the binary. Its distribution is 
 
 In keeping with the {\it software libre} philosophy, we did not wait on proprietary software vendors to hold access to the data hostage, so we wrote the {\tt VikingExtractor}\footnote{If you would like to explore the {\tt VikingExtractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the source code whose access is described in \in{section}[Revision Control Management].} tool. We did this because our contributors should not have to perform digital archaeology to see what Mars looks like when the photos were already taken decades ago and paid for with public money.
 
-The {\it Viking Lander Processed Images} archive, we transcoded with the {\tt VikingExtractor} tool from the volumes containing only images into interlaced lossless PNGs. They were identified based on their description containing words like {\tt COLOR}, {\tt CLR}, {\tt IR} (for the colour products made from the infra-red filters), or {\tt RADCAM}, for the program used to generate colour products. These words were located within EBCDIC encoded "label records" intended probably for old mainframe computers. All of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. This is not so useful for most, but the {\it VikingExtractor} tool made it trivial to preserve with little effort.} the on-board instrumentation provided was also preserved.
+The {\it Viking Lander Processed Images} archive, we transcoded with the {\tt VikingExtractor} tool from the volumes containing only images into interlaced lossless PNGs. They were identified based on their description containing words like {\tt COLOR}, {\tt CLR}, {\tt IR} (for the colour products made from the infra-red filters), or {\tt RADCAM}, for the program used to generate colour products. These words were located within EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded "label records" intended probably for old mainframe computers. All of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. This is not so useful for most, but the {\it VikingExtractor} tool made it trivial to preserve with little effort.} the on-board instrumentation provided was also preserved.
 
 When relying on the image archive, make sure you are looking at the right place. So if you want to know what Arcadia Planitia looks like, look at its nearest explored neighbour that was explored by the second Viking Lander, Utopia Planitia. The other lander landed on the other side of the planet in Chryse Planitia.
 

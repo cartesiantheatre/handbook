@@ -32,7 +32,7 @@ At present, no lander has explored Arcadia Planitia returning images. However, t
 
 A bit of background. In 1976 NASA placed two spacecraft into Martian orbit. The Viking Orbiters both carried their own landers which they deployed successfully. They were capable of capturing high resolution photographs and other data from the surface of the planet and relaying their findings through the orbiters back to Earth. They continued to provide us with copious amounts of data without any issues for four years before finally succumbing to a battery failure on one and a software update bug which shutdown the communication antenna on the other.
 
-\StartSection{Avaneya: Mars Viking Lander Remaster}
+\StartSection{Viking Mission Remastered}
 
 While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking Landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for the layman.
 
@@ -40,7 +40,7 @@ All of the image source\footnote{\fullahref{http://pds-imaging.jpl.nasa.gov/volu
 
 And while such raw data is now available to everyone as public domain, much of it is encoded in a useless, archaic, format used during the Viking mission between July 20, 1976 to November 5, 1982. As you might expect, few remain today at NASA to explain its specification. We will return to this in a moment.
 
-{\it Avaneya: Mars Viking Lander Remaster} is an effort to remedy this situation constructively. This archive contains accessible PNG images from two sources. The {\it Viking Lander High Resolution Mosaics, Stereo Images and Range Data Sets} volumes marked {\tt VL_0001} through {\tt VL_0002} was the first. It is the result of NASA stitching together multiple images to form mosaics. Some of them may be rather Frankensteinian in appearance, but understand that they were intended for operational use in a hectic environment at the time. Fortunately we did not have to do any significant digital archaeology on this set. We simply made the logical directory layout, file names, and documentation more intuitive. We also got rid of many things that would have confused most people and that they probably would not have found very useful anyways.
+The {\it Viking Mission Remastered} archive is an effort to remedy this situation constructively. This archive contains accessible PNG images from two sources. The {\it Viking Lander High Resolution Mosaics, Stereo Images and Range Data Sets} volumes marked {\tt VL_0001} through {\tt VL_0002} was the first. It is the result of NASA stitching together multiple images to form mosaics. Some of them may be rather Frankensteinian in appearance, but understand that they were intended for operational use in a hectic environment at the time. Fortunately we did not have to do any significant digital archaeology on this set. We simply made the logical directory layout, file names, and documentation more intuitive. We also got rid of many things that would have confused most people and that they probably would not have found very useful anyways.
 
 The {\it Viking Lander Processed Images} were the second source. They were taken from the volumes marked {\tt VL_2101} through {\tt VL_2124}. The photographs in this set can be looked at individually, as opposed to forming mosaics. They form the bulk of the archive, but required a great deal of digital archaeology\index{digital archaeology}. This is because NASA was not thinking at the time of a need for a long term image archival strategy\index{image archival strategy}. This is understandable, given the overwhelming excitement and immediate requirements that must have come with getting real data and real photographs of another world.
 
@@ -61,19 +61,84 @@ The second we were not permitted access to even the binary. Its distribution is 
 
 In keeping with the {\it software libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt VikingExtractor}.\footnote{If you would like to explore the {\tt VikingExtractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the source tree. Access is described in \in{section}[Revision Control Management].} We did this because people should not have to perform digital forensic archaeology to get an idea of what Mars looks like when photos were already taken, paid for with public resources, and have already existed for decades - albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out lock nobody seems to have a key for, at best, or refuses to share, at worst.
 
-Both Viking Landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes, intended for capturing different portions of the electromagnetic spectrum for various purposes. 
+Both Viking Landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes, intended for capturing different portions of the electromagnetic spectrum for various purposes. These are described below in \in{table}[table:Viking Lander PSA] with the diode types supported by {\tt VikingExtractor} noted under the supported column.
 
-Four of these diodes were high resolution broad band diodes for different focal distances. They are probably not of much interest to the average person, so we did not spend time implementing support for them in the {\tt VikingExtractor} tool. 
+\placetable[force][table:Viking Lander PSA]{Viking Lander photosensor array.}
+{
+    \bTABLE[split=repeat,option=stretch]
+    \setupTABLE[column][6]
+        [width=.50\textwidth,
+        align=yes]
+    \setupTABLE[row][each][align=center]
+    \setupTABLE[4][1][align=center]
 
-Six low resolution narrow band diodes for colour (red, green, and blue) and three more for infrared colour imaging of different wavelengths.
+\bTABLEhead
+    \bTR[bottomframe=on]
+      \bTH  Band Type \eTH
+      \bTH  Qty \eTH
+      \bTH  Spectrum \eTH
+      \bTH  Resolution \eTH
+      \bTH  Supported \eTH
+      \bTH  Description \eTH
+    \eTR
+\eTABLEhead
 
-One low resolution broad band survey diode for panoramic images.
+\bTABLEbody
+    \bTR
+      \bTC Broad band \eTC
+      \bTC 4 \eTC
+      \bTC Broad \eTC
+      \bTC High \eTC
+      \bTC No \eTC
+      \bTC Used for different focal distances. \eTC
+    \eTR
 
-Low resolution for looking at the sun that was covered with a red filter. Support for all except the broad band diodes was implemented in {\tt VikingExtractor}. 
+    \bTR
+      \bTC Colour \eTC
+      \bTC 3 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC Yes \eTC
+      \bTC One for red, green, and blue. \eTC
+    \eTR
+
+    \bTR
+      \bTC Infrared \eTC
+      \bTC 3 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC Yes \eTC
+      \bTC Infrared colour imaging.\footnote{The infrared filters degraded with time because they were effected by the neutron radiation from the lander's plutonium-238 power generator.} \eTC
+    \eTR
+
+    \bTR
+      \bTC Survey \eTC
+      \bTC 1 \eTC
+      \bTC Broad \eTC
+      \bTC Low \eTC
+      \bTC Yes \eTC
+      \bTC Monochrome for panoramic images. \eTC
+    \eTR
+    
+    \bTR
+      \bTC Sun \eTC
+      \bTC 1 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC Yes \eTC
+      \bTC For looking at the sun through a red filter. \eTC
+    \eTR
+
+\eTABLEbody
+
+\eTABLE
+}
+
+Note that the broad band band types are probably not of much interest to most people, so we did not spend time implementing support in {\tt VikingExtractor}.
 
 A great deal of the original data was corrupt (e.g. tape rot) or suffered from very heterogeneous file by file {\it ad-hoc} formatting, making it difficult to write a reliable parser. However, with the aid of some heuristics, the tool is reasonably robust and can tolerate a fair amount of abuse.
 
-The {\it Viking Lander Processed Images} archive, we transcoded with the {\tt VikingExtractor} tool from the volumes containing only images into interlaced lossless PNGs. They were identified based on their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set, {\tt IR1} for infrared 1\footnote{The infrared filters degraded with time because they were effected by the neutron radiation from the lander's plutonium-238 power generator.}, and so on. This metadata is located within all intact EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded headers. These headers are made up of "label records" which were designed and suited for old mainframe computers equipped with magnetic tapes. All of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. This is not so useful for most, but the {\it VikingExtractor} tool made it trivial to preserve with little effort.} the on-board instrumentation provided was also preserved for the curious.
+The {\it Viking Lander Processed Images} archive, we transcoded with the {\tt VikingExtractor} tool from the volumes containing only images into interlaced lossless PNGs. They were identified based on their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set, {\tt IR1} for infrared 1, and so on. This metadata is located within all intact EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded headers. These headers are made up of "label records" which were designed and suited for old mainframe computers equipped with magnetic tapes. All of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. This is not so useful for most, but the {\it VikingExtractor} tool made it trivial to preserve with little effort.} the on-board instrumentation provided was also preserved for the curious.
 
 When relying on the image archive, make sure you are looking at the right place. So if you want to know what Arcadia Planitia looks like, look at its nearest explored neighbour that was explored by the second Viking Lander, Utopia Planitia. The other lander landed on the other side of the planet in Chryse Planitia.
 

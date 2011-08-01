@@ -8,6 +8,20 @@
 
 Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where everyone applies their own. Use the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere. These are guidelines, not written in stone, so use common sense.
 
+\StartSubSection{Declarations and Definitions}
+
+\startitemize[3]
+\setupwhitespace[big]
+\item
+All classes should be defined in their own header file. The only exception is for small trivial classes whose relation to another "parent" class is expressed through aggregation or composition.
+
+\item
+Class method declarations in the class header should be listed in alphabetical order relative to its siblings of the same access rights (e.g. {\tt protected}, {\tt public}, {\tt private}).
+
+\item
+Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order, with exceptions made for constructors and deconstructors, which should be listed first and last respectively.
+\stopitemize
+
 \StartSubSection{Legal}
 Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapter}[Licensing Rationale], should have prefixed the following legal notice for engine related code. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
 

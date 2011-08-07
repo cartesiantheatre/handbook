@@ -9,22 +9,30 @@
 % The Martian Landscape
 \StartSection{The Martian Landscape}
 
-Getting the Avaneya game experience right means at least replicating the visual environmental conditions of the Martian landscape as closely as we can. Since artists depend on their eyes to provide tools like Blender with an aesthetic experience, as opposed to readings from a mass spectrometer, it is more important that they know what Martian rocks and a sunrise would actually look like if they were standing there than, say, the peroxide concentration of Martian regolith when designing a material shader\index{shader}. This means they will need large sets of high resolution reference photographs\index{reference photographs} to study. But Mars, like Earth, is a large place of greatly varied terrain and climate, so we must be more specific
+Getting the Avaneya game experience right means at least replicating the visual environmental conditions of the Martian landscape as closely as possible. We can do much better than simply making it red, and users appreciate this because it makes the experience feel more genuine.
+
+Since artists depend on their eyes to define an aesthetic experience through tools like Blender, as opposed to readings from a mass spectrometer, it is more important that they know what Martian rocks and a sunrise would look like if they were actually standing there than, say, the peroxide concentration of Martian regolith or the average atmospheric pressure when designing material shaders\index{shader}. This means they must have access to large sets of high resolution reference photographs\index{reference photographs} to study. But Mars, like Earth, is a large place of greatly varied terrain and climate, so we must be more specific.
 
 \placefigure
     [right,2*hang]
-    {The Martian landscape captured by a Viking Lander and later recovered from rotting magnetic tape {\tt \#0902}.}
+    {{\it Chryse Planitia} captured by Viking Lander 1, later recovered from rotting magnetic tape {\tt \#0902}.}
     {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_0902.png][][width=.6\textwidth]}
 
-Arda's settlers erected their settlement of Arcadia in the Arcadia Planitia region. It is named after the Arcadia region of Ancient Greece, so, in turn, named after the legend of Arcas\index{Arcas}. The region is located mid-latitude in the Northern hemisphere. 
+Arda's settlers erected their settlement of Arcadia in the Arcadia Planitia region. It is named after the Arcadia region of Ancient Greece, so, in turn, named after the legend of Arcas\index{Arcas}. 
 
-Martian areas of that latitude have their benefits, such as year round sunlight and plenty of water ice. The centre of Arcadia Planitia is mostly uniform in appearance, with its centre roughly at \math{46.7^{\circ}}N \math{192.0^{\circ}}E. It has also experienced recent lava flows. By recent, we mean in geological time (as in, in the last few million years). This means Mars may still be volcanically active and probably has a molten core.
+The centre of Arcadia Planitia is mostly uniform in appearance, with its centre roughly at \math{46.7^{\circ}}N \math{192.0^{\circ}}E. This is mid-latitude in the Northern hemisphere. 
 
-Arcadia Planitia's windswept landscape consists of a vast, mostly flat, pale tan coloured plain. It has sand dunes of modest height, never approaching anything higher than a few feet, with small uniformly sized rocks littering the surface. Like all other explored regions, it undergoes constant sterilization through intense ultraviolet radiation. This ensures that there is no {\it known} life on the {\it surface} of Mars.
+There is plenty of water ice, a stable climate, and year round sunlight. 
 
 Images of a fresh meteorite crater 12 metres across taken in 2008 revealed under the surface a massive blanket of water ice.\footnote{\href{http://www.cbc.ca/news/technology/story/2009/09/24/tech-space-water-mars-crater.html}{Ice on Mars revealed in fresh craters. }{\it CBC News}. 24 Sep. 2009.} It also turns out fortuitously that this ice is almost completely pure, with only about one percent of it dirt.
 
 Even though there is a great deal of ice on Mars, it is unstable in the thin Martian atmosphere and you rarely ever see it anywhere other than in the polar regions. This is because the ice rapidly sublimates\footnote{When a solid material sublimates, it means it skips melting to a liquid and turns directly into vapour.} as soon as it is exposed.
+
+The region has also experienced recent lava flows. By recent, in a geological time scale, that means within the last few million years. Therefore Mars may still be volcanically active and probably has a molten core, although it does not appear to spin which is why there is no magnetic field and magnetic compasses are useless.
+
+Arcadia Planitia's windswept landscape consists of a vast, mostly flat, pale tan coloured plain. It has sand dunes of modest height, never approaching anything higher than a few feet, with small uniformly sized rocks littering the surface. As the prevailing theory goes, these rocks are remnants of some of the underlying bedrock which is an older layer of solidified lava. Every time an asteroid impacts, penetrating the younger upper layer, the underlying bedrock ejecta is scattered everywhere.
+
+Like all other explored regions, it undergoes constant sterilization through intense ultraviolet radiation. This ensures that there is no {\it known} life on the {\it surface} of Mars.
 
 \StartSection{Viking Landers}
 
@@ -136,7 +144,7 @@ Both Viking Landers were equipped with a multipurpose photosensor array (PSA). T
 
 Note that the broad band band types are probably not of much interest to most people, so we did not spend time implementing support in {\tt VikingExtractor}.
 
-A great deal of the original data was corrupt (e.g. tape rot) or suffered from very heterogeneous file by file {\it ad-hoc} formatting, making it difficult to write a reliable parser. However, with the aid of some heuristics, the tool is reasonably robust and can tolerate a fair amount of abuse.
+A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting, making it difficult to write a reliable parser. The general rule of thumb with the Viking Lander data set was that there was no general rule of thumb. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise.
 
 The {\it Viking Lander Processed Images} archive, we transcoded with the {\tt VikingExtractor} tool from the volumes containing only images into interlaced lossless PNGs. They were identified based on their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set, {\tt IR1} for infrared 1, and so on. This metadata is located within all intact EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded headers. These headers are made up of "label records" which were designed and suited for old mainframe computers equipped with magnetic tapes. All of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. This is not so useful for most, but the {\it VikingExtractor} tool made it trivial to preserve with little effort.} the on-board instrumentation provided was also preserved for the curious.
 

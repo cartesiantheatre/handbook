@@ -53,7 +53,7 @@ At present, no lander has explored Arda's area of settlement, Arcadia Planitia. 
     {{\it Chryse Planitia} as captured by Viking Lander I, later salvaged from a rotting magnetic tape.}
     {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
 
-\StartSection{Avaneya: Viking Mission Remastered}
+\StartSection{Avaneya: Viking Lander Remastered}
 
 While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking Landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for a layman.
 
@@ -61,7 +61,7 @@ We do, however, have access to the original image source data\footnote{\fullahre
 
 And while such raw data is now available to everyone as public domain, nearly all of it is encoded in a useless, archaic, format used during the Viking mission between July 20, 1976 to November 5, 1982. As you might expect, few remain today at NASA to explain its specification.
 
-The {\it Avaneya: Viking Mission Remastered} archive is an effort to remedy this situation constructively. It doubles in giving our artists what they need, and also provides the general public with an invaluable educational resource. The software tool we engineered generates most of our remastered archive in the form of lossless PNG images which everyone already has software that can open. This software is described in greater detail in \in{section}[VikingExtractor]. We used two source data sets as the basis for our new archive.
+The {\it Avaneya: Viking Lander Remastered} archive is an effort to remedy this situation constructively. It doubles in giving our artists what they need, and also provides the general public with an invaluable educational resource. The software tool we engineered generates most of our remastered archive in the form of lossless PNG images which everyone already has software that can open. This software is described in greater detail in \in{section}[VikingExtractor]. We used two source data sets as the basis for our new archive.
 
 NASA's {\it Viking Lander High Resolution Mosaics, Stereo Images and Range Data Sets} volumes marked {\tt VL_0001} through {\tt VL_0002} were the first. They are the result of NASA stitching together multiple images to form mosaics. Some of them may be rather Frankensteinian in appearance, but understand that they were intended for operational use in a hectic environment at the time. Fortunately we did not have to do any significant work on this set. We simply made the logical directory layout, file names, and documentation more intuitive. We also got rid of many things that most people, either would have found confusing, or they probably would not have had much use for anyways.
 
@@ -76,9 +76,7 @@ As a consequence, the archaic magnetic tapes the images were stored on began to 
 
 VICAR was the image processing software used at the time. Unfortunately its specification has gone through many revisions over the decades with little, if any, formal documentation of the format used during the Viking era. The most recent documentation available is from 1994,\footnote{\fullahref{http://www-mipl.jpl.nasa.gov/external/vug/vugfinal.html}} and even that is still too recent to be useful.
 
-The only two image loaders we know of are both held by NASA, both proprietary. The first, {\tt NASAView}, has no source code publicly available, can only export to lossy non-free imaging formats, and its interface is too primitive to allow for batch processing with large image sets in the order of many thousands as we require.
-
-The second we were not permitted access to even the binary. Its distribution is severely restricted. NASA's Jet Propulsion Laboratory informed us that they could {\it "only provide a royalty-free license to universities (signed by a department head) or a government subcontractor, where the requested software is required to support the effort. At the end of the contract, it must be deleted. [They] cannot provide software to individuals or for R&D purposes."} Even if we had been granted access, there is still no guarantee that it could have consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation we require. In all likelihood, after examining the data in detail, there is probable reason to suspect that not even NASA really has anything useful in recovering these images.
+The only known image loader NASA claims to be in possession of, but we were not permitted access to even just the binary. Its distribution is severely restricted. NASA's Jet Propulsion Laboratory informed us that they could {\it "only provide a royalty-free license to universities (signed by a department head) or a government subcontractor, where the requested software is required to support the effort. At the end of the contract, it must be deleted. [They] cannot provide software to individuals or for R&D purposes."} Even if we had been granted access, there is still no guarantee that it could have consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation we require. In all likelihood, after examining the data in detail and having made inquiries, there is probable reason to suspect that not even NASA has any existing software available to recover these images.
 
 \StartSection{VikingExtractor}
 

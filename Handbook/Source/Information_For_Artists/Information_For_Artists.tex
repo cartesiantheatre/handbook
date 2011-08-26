@@ -87,7 +87,7 @@ As a consequence, the archaic magnetic tapes the images were stored on began to 
 
 VICAR was the image processing software used at the time. Unfortunately its specification has gone through many revisions over the decades with little, if any, formal documentation of the format used during the Viking era. The most recent documentation available is from 1994,\footnote{\fullahref{http://www-mipl.jpl.nasa.gov/external/vug/vugfinal.html}} and even that is still too recent to be useful.
 
-The only known image loader NASA claims to be in possession of, but we were not permitted access to even just the binary. Its distribution is severely restricted. NASA's Jet Propulsion Laboratory informed us that they could {\it "only provide a royalty-free license to universities (signed by a department head) or a government subcontractor, where the requested software is required to support the effort. At the end of the contract, it must be deleted. [They] cannot provide software to individuals or for research and development purposes".} Even if we had been granted access, there is still no guarantee that it could have consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation we require. In all likelihood, after examining the data in detail and having made inquiries, one might be able to call NASA's bluff with confidence in that there is ample reason to suspect that not even NASA has any existing software available to recover these images.
+The only known allegedly working image loader, NASA claims to be in possession of. However, we were not permitted access to {\it even just the binary} to verify. Its distribution is severely restricted. NASA's Jet Propulsion Laboratory informed us that they could {\it "only provide a royalty-free license to universities (signed by a department head) or a government subcontractor, where the requested software is required to support the effort. At the end of the contract, it must be deleted. [They] cannot provide software to individuals or for research and development purposes".} Even if we had been granted access, there is still no guarantee that it could have consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation we require. In all likelihood, after examining the data in detail and having made inquiries, one might be able to call NASA's bluff with confidence in that there is ample reason to suspect that not even NASA has any existing software available to recover these images.
 
 \StartSection{VikingExtractor}
 
@@ -95,12 +95,12 @@ In keeping with the {\it software libre} philosophy, we did not wait on propriet
 
 \placefigure
     [here, force]
-    {Programming the software to recover the Viking Lander images.}
+    {Writing the software to recover images from the Viking landers.}
     {\externalfigure[Source/Information_For_Artists/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
 
-Both Viking Landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes, intended for capturing different portions of the electromagnetic spectrum for various purposes. These are described below in \in{table}[table:Viking Lander PSA].
+Both Viking landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes, intended for capturing different portions of the electromagnetic spectrum for various purposes. These are described below in \in{table}[table:Viking lander PSA].
 
-\placetable[force][table:Viking Lander PSA]{Viking Lander photosensor array.}
+\placetable[force][table:Viking lander PSA]{Viking lander photosensor types.}
 {
     \bTABLE[split=repeat,option=stretch]
     \setupTABLE[column][5]
@@ -133,7 +133,7 @@ Both Viking Landers were equipped with a multipurpose photosensor array (PSA). T
       \bTC 3 \eTC
       \bTC Narrow \eTC
       \bTC Low \eTC
-      \bTC One for red, green, and blue \eTC
+      \bTC One each for red, green, and blue \eTC
     \eTR
 
     \bTR
@@ -185,9 +185,11 @@ Output/Utopia Planitia/Scorpius/Colour/22H220.png
 ...
 \stopCodeExample
 
-The software in the above example catalogues over ten thousand files, organizes them, locates all scattered pieces of the same image, performs optical character recognition, orients them right side up as necessary, compares duplicates for quality, builds a matching set, and reassembles whatever possible. It identifies potentially recoverable images based on, among many other things, their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set). On a quad core 2 GHz amd64 machine, this fully automated process took about forty minutes. On a low power 64-bit mipsel netbook, this took over six hours.
+The software in the above example catalogues over ten thousand files, organizes them, locates all scattered pieces of the same image, performs optical character recognition, orients them right side up as necessary, compares duplicates for quality, builds a matching set, and reassembles whatever possible. It identifies potentially recoverable images based on, among many other things, their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set). 
 
-Some of the metadata it needs to make unattended decisions is located within EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded file headers. These headers are made up of "label records" which are meaningful only in the context of old mainframe machines equipped with magnetic tape drives. Some of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. It is only available in the PDS data set, but other metadata, such as camera azimuth and elevation almost always are. In any case, such metadata is usually not so useful for most, but the {\it VikingExtractor} can preserve what it can recover if the user wishes.} the on-board instrumentation provided can be preserved for the curious.
+On a quad core 2 GHz amd64 machine, this fully automated process took about forty minutes. On a low power 64-bit mipsel netbook, this took about six hours.
+
+Some of the metadata it needs to make unattended decisions is located within EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded file headers. These headers are made up of "label records" which are meaningful only in the context of old mainframe machines equipped with magnetic tape drives. Some of the metadata\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. It is only available in the PDS data set, but other metadata, such as camera azimuth and elevation almost always are. In any case, such metadata is usually not so useful for most, but the {\it VikingExtractor} can preserve whatever it can recover if the user wishes.} the on-board instrumentation provided can be preserved for the curious.
 
 When relying on the image archive, make sure you are looking at the right place. So if you want to know what {\it Arcadia Planitia} looks like, look at its very similar neighbour that was explored by the second Viking Lander, {\it Utopia Planitia}. The other lander touched down on the other side of the planet on {\it Chryse Planitia} (Plains of Gold). They look similar to the untrained eye, but they have many subtle differences.
 

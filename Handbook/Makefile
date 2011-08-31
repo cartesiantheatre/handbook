@@ -1,4 +1,4 @@
-# Avaneya Crew Handbook
+# Avaneya Project Crew Handbook
 # Copyright (C) 2010, 2011 Kshatra Corp <kip@thevertigo.com>.
 #
 # Public discussion on IRC available at #avaneya (irc.freenode.net) or
@@ -20,7 +20,7 @@
 CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
-OUTPUT                      = Avaneya\ Crew\ Handbook.pdf
+OUTPUT                      = Avaneya\ Project\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS             = --purgeresult --nonstopmode #--nostats
 
 # Umbrello can only export all or none of its diagrams, so we specify 
@@ -38,10 +38,14 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Engineers/Images/AresEngine 1> /dev/null
 
+# Just produce the information for artists chapter...
+Artists.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+	context Source/Information_For_Artists/Information_For_Artists.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
+
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
 	@ rm -vf Source/Information_For_Engineers/Images/AresEngine/*.svg
-	@ rm -vf Source/Information_For_Engineers/Images/AresEngine/m_k_i_v_*.pdf
+	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
 
 # Clean most intermediate build files, including the generated PDF...
 clean:

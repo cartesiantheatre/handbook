@@ -1,4 +1,4 @@
-% This is part of the Avaneya Crew Handbook.
+% This is part of the Avaneya Project Crew Handbook.
 % Copyright (C) 2010, 2011
 %   Kshatra Corp.
 % See the file License for copying conditions.
@@ -36,13 +36,18 @@
    color=colour_link,
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
-   title=Avaneya Crew Handbook,
+   title=Avaneya Project Crew Handbook,
    subtitle=A guidebook for new and current contributors.,
-   author=The Avaneya Crew (Bzr revision \BazaarRevision),
+   author=The Avaneya Project Crew (Bzr r\BazaarRevision),
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 \setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
 \setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
+
+% Setup default text colour...
+\setupcolors[
+    state=start,
+    textcolor=colour_text]
 
 \setupexternalfigures
   [frame=on,

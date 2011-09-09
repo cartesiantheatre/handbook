@@ -19,6 +19,7 @@
 \definecolor[colour_item][r=0.864,g=0.426,b=0.234]
 \definecolor[colour_link][colour_head]
 \definecolor[colour_figure_border][r=0,g=0,b=0]
+\definecolor[colour_figure_background][r=0.5,g=0.5,b=0.5]
 \definecolor[colour_frame_border][colour_text]
 \definecolor[colour_page][r=0,g=0,b=0]
 \definecolor[colour_page_number][colour_head]
@@ -128,7 +129,7 @@
     \placefigure
         [force][figure:#1]
         {#2}
-        {\externalfigure[#3][width=.95\textwidth]}
+        {\externalfigure[#3][width=.95\textwidth,background=color,backgroundcolor=colour_figure_background]}
     \stopframedtext
     \page
     \setuppapersize[main]

@@ -21,7 +21,7 @@ CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Project\ Crew\ Handbook.pdf
-CONTEXT_OPTIONS             = --purgeresult --nonstopmode #--nostats
+CONTEXT_OPTIONS             = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
 
 # Umbrello can only export all or none of its diagrams, so we specify 
 #  an arbitrary one...
@@ -36,7 +36,7 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Engineers/Images/AresEngine 1> /dev/null
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Engineers/Images/AresEngine > /dev/null
 
 # Just produce the information for artists chapter...
 Artists.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)

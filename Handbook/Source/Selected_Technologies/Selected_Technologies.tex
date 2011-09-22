@@ -3,18 +3,24 @@
 %   Kshatra Corp.
 % See the file License for copying conditions.
 
-% Selected Technology chapter...
-\StartChapter{Selected Technology}
+% Selected Technologies chapter...
+\StartChapter{Selected Technologies}
 
 It is generally a bad engineering practise to re-invent the wheel by creating something in a vacuum when there are already many usable components. Avaneya's dependent technology is examined here, grouped by category. It is sometimes explained in their maintainer's own words.
 
 We always try to stick to using free software whenever possible. The only time we might use a non-free tool is to use it as a model in designing a suitable replacement. Another time would be where writing a replacement would be far too difficult and we have no choice.
+
+Note that not all of these technologies necessarily form components of the AresEngine itself, such as Audacity and GIMP, but may be used in preparing game media for the engine.
 
 % Audio section...
 \StartSection{Audio}
 
 \startitemize[3]
 \setupwhitespace[big]
+\head {\it Audacity}
+
+We use Audacity for audio recording, editing, post-processing, effects, and more. It can take advantage of any of the multitude of LADSPA and VST plugins. It can also export to surround sound formats, such as AC3 and DTS.
+
 \head {\it libmikmod}
 
 We use libmikmod for playback of tracker music modules. Some people were requesting tracker support, and since it should not take very much effort to integrate into the engine's {\about[AudioManager]} subsystem, it seems reasonable. The library also needs to be built thread safe.
@@ -63,18 +69,14 @@ Umbrello is a powerful diagramming tool which lends itself well to the creation 
 \stopitemize
 
 
-% Documentation and Localization section...
-\StartSection{Documentation & Localization}
+% Documentation section...
+\StartSection{Documentation}
 
 \startitemize[3]
 \setupwhitespace[big]
 \head {\it \CONTEXT}
 
 \CONTEXT\ is used for typesetting documents, such as this one. This document was compiled on \currentdate\ from Bazaar revision \BazaarRevision, typeset using \CONTEXT\ \contextversion, and rendered with \texenginename\ \texengineversion.
-
-\head {\it GNU gettext}
-
-GNU gettext is used for localization and translation to different human languages by making it possible to substitute strings that are marked for translation in our C++ code with a string from another language.
 \stopitemize
 
 % Graphics section...
@@ -133,6 +135,24 @@ The SDL_haptic API is used for providing force feedback, provided the API is ava
 The SDL_input API is used to provide input handling.
 \stopitemize
 
+% Localization section...
+\StartSection{Localization}
+
+\startitemize[3]
+\setupwhitespace[big]
+\head {\it GNU gettext}
+
+GNU gettext is used for localization and translation to different human languages by making it possible to substitute strings that are marked for translation in our C++ code with a string from another language.
+
+\head {\it lua-gettext}
+
+The lua-gettext API is a Lua package that acts as a Lua wrapper for gettext bindings.
+
+\head {\it lua-xgettext}
+
+The lua-xgettext tool is a small program for message extraction of marked strings from Lua code so they can be made available for translation to other languages. It is similar to GNU xgettext, but far more primitive; it just extracts the strings and prints them out without any additional information. It was written because GNU `xgettext` did not support Lua at the time it was created.
+\stopitemize
+
 % Networking section...
 \StartSection{Networking}
 
@@ -140,7 +160,7 @@ The SDL_input API is used to provide input handling.
 \setupwhitespace[big]
 \head {\it ENet}
 
-The ENet library provides the low level library which Avaneya's mutliplayer protocol is built upon. Its purpose is to provide a relatively thin, simple and robust network communication layer on top of UDP (User Datagram Protocol). The primary feature it provides is optional reliable, in-order delivery of packets. It omits certain higher level networking features such as authentication, lobbying, server discovery, encryption (which we provide via GnuTLS), or other similar tasks that are particularly application specific so that the library remains flexible, portable, and easily embeddable.
+ENet provides the low level library which Avaneya's mutliplayer protocol is built upon. Its purpose is to provide a relatively thin, simple and robust network communication layer on top of UDP (User Datagram Protocol). The primary feature it provides is optional reliable, in-order delivery of packets. It omits certain higher level networking features such as authentication, lobbying, server discovery, encryption (which we provide via GnuTLS), or other similar tasks that are particularly application specific so that the library remains flexible, portable, and easily embeddable.
 
 \head {\it GNU Transport Layer Security Library}
 
@@ -184,14 +204,6 @@ The libtolua++ library is used to integrate our C++ code with Lua. It is an upda
 \head {\it Lua}
 
 Lua is used to provide scripting support to the AresEngine. The runtime environment needs to have {\tt package.loadlib} present.
-
-\head {\it lua-gettext}
-
-The lua-gettext API is a Lua package that acts as a Lua wrapper for gettext bindings.
-
-\head {\it lua-xgettext}
-
-The lua-xgettext tool is a small program for message extraction of marked strings from Lua code so they can be made available for translation to other languages. It is similar to GNU xgettext, but far more primitive; it just extracts the strings and prints them out, without any additional information. It was written, because GNU `xgettext` did not support Lua at the time.
 \stopitemize
 
 \StopChapter

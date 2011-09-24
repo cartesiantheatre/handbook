@@ -31,7 +31,7 @@ UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Information_For_Engineers/Images/AresEngine
 all: $(OUTPUT) Makefile
 
 # Generate handbook PDF...
-$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 	context $(CONTEXT_PRODUCT) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
 # Export engine diagram images...

@@ -179,23 +179,6 @@
     \crlf
 }
 
-\definestartstop
-    [TimelineDocument]
-    [before={
-        \setupbackground[frame=on,
-                         before=\blank,
-                         after=\blank,
-                         corner=round,
-                         topoffset=0.5cm,
-                         leftoffset=0.5cm,
-                         rightoffset=0.5cm,
-                         bottomoffset=0.5cm]
-        \startbackground
-            },
-     after=\stopbackground,
-     commands={\setupalign[yes]},
-     style=italic]
-
 % Usage: \href{http://www.someurl.com}{Text}
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
 
@@ -206,6 +189,27 @@
 \def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
 
 \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
+
+\definestartstop
+    [TimelineDocument]
+    [before={
+        \crlf
+        \setupbackground[frame=on,
+                         before=\blank,
+                         after=\blank,
+                         corner=round,
+                         topoffset=0.5cm,
+                         leftoffset=0.5cm,
+                         rightoffset=0.5cm,
+                         bottomoffset=0.5cm]
+        \startbackground
+            },
+     after={
+        \stopbackground
+        \crlf
+           },
+     commands={\setupalign[yes]},
+     style=italic]
 
 \definestartstop
     [CodeExample]

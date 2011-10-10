@@ -188,7 +188,9 @@ The D-Bus (Desktop Bus) API is a simple inter-process communication (IPC) system
 \setupwhitespace[big]
 \head {\it OgreBullet}
 
-OgreBullet is a plugin adding physics support to the OGRE 3D rendering engine. It is built upon {\it Bullet}, a free physics engine featuring 3D collision detection, soft body dynamics, and rigid body dynamics. It is used in games, and in visual effects in movies.
+OgreBullet is a plugin that augments the OGRE 3D rendering engine with powerful physics capabilities. It is an interface to the underlying free {\it Bullet} physics engine which features 3D collision detection, soft body dynamics, and rigid body dynamics. It is used in many games and for providing visual effects in movies. 
+
+The underlying physics engine can also leverage the user's available hardware acceleration whenever CUDA (Compute Unified Device Architecture) functionality is present, allowing the offloading of resource demanding physics calculations to specialized hardware and freeing the main CPU for other tasks. This is the case with all modern off the shelf nVidia graphics cards.
 \stopitemize
 
 

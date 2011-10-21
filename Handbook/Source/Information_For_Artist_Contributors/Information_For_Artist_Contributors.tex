@@ -3,8 +3,8 @@
 %   Kshatra Corp.
 % See the file License for copying conditions.
 
-% Information For Artists chapter...
-\StartChapter{Information For Artists}
+% Information For Artist Contributors chapter...
+\StartChapter{Information For Artist Contributors}
 
 % The Martian Landscape
 \StartSection{The Martian Landscape}
@@ -12,7 +12,7 @@
 \placefigure
     [right, 0*hang]
     {A dust storm captured by Viking Lander I in the early morning on {\it Chryse Planitia}. The grid on the panel is used to track the movement of Martian dust.}
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_12E018.png][][width=.4\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_12E018.png][][width=.4\textwidth]}
 Getting the Avaneya game experience right means at least replicating the visual environmental conditions of the Martian landscape as closely as possible. We can do much better than simply making it red, and users appreciate this because it makes the experience feel more genuine.
 
 Since artists depend on their eyes to define an aesthetic experience through tools like Blender, as opposed to readings from a mass spectrometer, it is more important that they know what Martian rocks, a sunrise, and the winter season would look like if they were actually standing there than, say, the peroxide concentration of Martian regolith or the average atmospheric pressure when designing material shaders\index{shader}. This means they must have access to large sets of high resolution reference photographs\index{reference photographs} to study. But Mars, like Earth, is a large place of greatly varied terrain and climate, so we must be more specific.
@@ -32,9 +32,9 @@ The region has also experienced recent lava flows. By recent, in a geological ti
     [figure:Viking_Lander_21A028]
     {{\it Utopia Planitia's} rocky surface captured by Viking Lander II.}
     \startcombination[2*1]
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_21A028.png][][width=.4\textwidth]} 
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_21A028.png][][width=.4\textwidth]} 
     {}
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_21C174.png][][width=.4\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_21C174.png][][width=.4\textwidth]}
     {}
     \stopcombination
 
@@ -51,7 +51,7 @@ At present, no lander has explored Arda's area of settlement, {\it Arcadia Plani
 \placefigure
     [here, force]
     {{\it Chryse Planitia} as captured by Viking Lander I, later salvaged from a rotting magnetic tape.}
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
 
 \StartSection{Avaneya: Viking Lander Remastered}
 
@@ -72,7 +72,7 @@ We used three source data sets as the basis for our new archive as shown in \in{
     [here, force]
     [figure:Viking_Lander_Remastered_Layout]
     {A diagram of the {\it Avaneya: Viking Mission Remastered} image processing pipeline.}
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_Remastered_Layout.svg][][width=.8\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_Remastered_Layout.svg][][width=.8\textwidth]}
 
 The PDS EDR archive was the first. The format they are encoded in was straightforward to transcode since it is well documented and standardized. The data was cleaned up and re-organized for easier access. For example, if you want to know what {\it Utopia Planitia} looks like in mid-winter, all of the images are sorted by Martian month. See \in{subsection}[Calendar] for more information on the Martian calendar.
 
@@ -83,7 +83,7 @@ The SDDPT's {\it Viking Lander Processed Images} were the third source. They wer
 \placefigure
     [right, 2*hang]
     {Viking Lander II captures a beautiful early morning sunrise, {\it Utopia Planitia}.}
-    {\externalfigure[Source/Information_For_Artists/Images/Viking_Lander_22H093.png][][width=.1\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/Viking_Lander_22H093.png][][width=.1\textwidth]}
 
 As a consequence, the archaic magnetic tapes the images were stored on began to rot\footnote{Magnetic tapes can experience "bit rot"\index{bit rot} as the bits of information they contain lose their magnetic orientation. When stored where it is warm and humid, the tapes can literally rot.} as the years went on. Even if they had been safe on magnetic tapes, the VICAR\index{VICAR} (Video Image Communication and Retrieval)\index{Video Image Communication and Retrieval} format they were encoded in is an ancient format having its origins nearly half a century ago. Moreover, the few remaining functional VICAR image loaders the team managed to access are for much newer file format versions than those used during the Viking era.\footnote{{\tt Xloadimage 4.1} and {\tt ImageMagick 6.7.0} are some examples that can decode newer VICAR data, but not that from the Viking mission era.}
 
@@ -100,7 +100,7 @@ In keeping with the {\it software libre} philosophy, we did not wait on propriet
 \placefigure
     [here, force]
     {Writing the software to recover images from the Viking landers.}
-    {\externalfigure[Source/Information_For_Artists/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
+    {\externalfigure[Source/Information_For_Artist_Contributors/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
 
 Both Viking landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes, intended for capturing different portions of the electromagnetic spectrum for various purposes. These are described below in \in{table}[table:Viking lander PSA].
 

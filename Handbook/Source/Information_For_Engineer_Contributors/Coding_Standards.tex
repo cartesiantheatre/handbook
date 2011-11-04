@@ -26,7 +26,6 @@ Class method definitions should be provided in the implementation file ({\tt *.c
 Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapter}[Licensing Rationale], should have prefixed the following legal notice for engine related code. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
 
 \startCodeExample
-\starttyping
 /*
     AresEngine, a 3D game engine.
     Copyright (C) 2010, 2011 Kshatra Corp <kip@thevertigo.com>.
@@ -47,20 +46,17 @@ Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapte
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-\stoptyping
 \stopCodeExample
 
 Change the description line from referencing the engine to referencing the mod itself, Avaneya, if it is for Avaneya specific code. This should look as such.
 
 \startCodeExample
-\starttyping
 /*
     Avaneya, a cerebral science fiction game for GNU.
     Copyright (C) 2010, 2011 <kip@thevertigo.com>.
 
     Public discussion on IRC available at #avaneya (irc.freenode.net)
     ...
-\stoptyping
 \stopCodeExample
 
 \StartSubSection{Mathematical}
@@ -89,26 +85,22 @@ Each level of nesting should be indented by four spaces. The exception to this i
 
 Right:
 \startCodeExample
-\starttyping
 float SomeFunction()
 {
     int i = 0;
   ++i;
     return 1.0f;
 }
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 float SomeFunction()
 {
     int i = 0;
     ++i;
         return 1.0f;
 }
-\stoptyping
 \stopCodeExample
 
 \item
@@ -119,7 +111,6 @@ An opening brace appears on the next line as preceding code.
 
 Right:
 \startCodeExample
-\starttyping
 float SomeFunction()
 {
     for(int x = 0; x < 100; ++x)
@@ -127,18 +118,15 @@ float SomeFunction()
         ...
     }
 }
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 float SomeFunction() {
     for(int x = 0; x < 100; ++x) {
         ...
     }
 }
-\stoptyping
 \stopCodeExample
 
 \item
@@ -146,20 +134,16 @@ Put spaces around binary operands
 
 Right:
 \startCodeExample
-\starttyping
 A = X + Y;
 if(X == Y)
     ...
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 A = X+Y;
 if(X==Y)
     ...
-\stoptyping
 \stopCodeExample
 
 \item
@@ -170,18 +154,14 @@ When accessing an array, there is no space between the array name and the openin
 
 Right:
 \startCodeExample
-\starttyping
 int n[100];
 y = n[3];
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 int n [100];
 y = n [3];
-\stoptyping
 \stopCodeExample
 
 \item
@@ -189,18 +169,14 @@ The if, for, and while keywords are not followed by a space separating them and 
 
 Right:
 \startCodeExample
-\starttyping
 if(x == 4)
     return;
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 if (x == 4)
     return;
-\stoptyping
 \stopCodeExample
 
 \item
@@ -208,20 +184,16 @@ When declaring variables, align the variable names on the same column evenly div
 
 Right:
 \startCodeExample
-\starttyping
 int     Count;
 bool    Complete;
 Window  MainWindow;
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 int Count;
 bool Complete;
 Window MainWindow;
-\stoptyping
 \stopCodeExample
 
 \item
@@ -229,26 +201,22 @@ When calling a function, definitions and function declarations should have no sp
 
 Right:
 \startCodeExample
-\starttyping
 int Add(int a, int b)
 { 
     ... 
 }
 
 int i = Add(4, 5);
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 int Add (int a, int b)
 {
     ...
 }
 
 int i = Add (4, 5);
-\stoptyping
 \stopCodeExample
 
 \item
@@ -256,20 +224,16 @@ When calling a function or making a function declaration, no space appears after
 
 Right:
 \startCodeExample
-\starttyping
 foo(x, y);
 bar(z);
 baz();
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 foo( x, y );
 bar( z );
 baz( );
-\stoptyping
 \stopCodeExample
 
 \item
@@ -277,7 +241,6 @@ A brace preceding or following an else keyword appears on the same line as the e
 
 Right:
 \startCodeExample
-\starttyping
 if(x == 4)
 {
     ...
@@ -293,12 +256,10 @@ else
 {
     ...
 }
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 if(x == 4) {
     ...
 }
@@ -314,7 +275,6 @@ if(x == 4) {
 else {
     ...
 }
-\stoptyping
 \stopCodeExample
 
 \item
@@ -322,7 +282,6 @@ A brace preceding a catch keyword appears on a separate line as the catch.
 
 Right:
 \startCodeExample
-\starttyping
 try
 {
     ...
@@ -332,7 +291,6 @@ catch(Error SomeError)
 {
     ...
 }
-\stoptyping
 \stopCodeExample
 
 \item
@@ -340,18 +298,14 @@ A value in a return statement is parenthesized where it contains more than one t
 
 Right:
 \startCodeExample
-\starttyping
 return x;
 return (a + b);
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 return (x);
 return a + b;
-\stoptyping
 \stopCodeExample
 
 \item
@@ -360,10 +314,8 @@ If the body of an if, for, while or similar statement consists of a single state
 
 Right:
 \startCodeExample
-\starttyping
 if(x == 3)
   ++x;
-\stoptyping
 \stopCodeExample
 
 \stopitemize
@@ -379,23 +331,17 @@ Do not use Hungarian notation\index{Hungarian notation}. We prefix objects to de
 
 Member of a global namespace:
 \startCodeExample
-\starttyping
 g_Wheels
-\stoptyping
 \stopCodeExample
 
 Member of a structure or class:
 \startCodeExample
-\starttyping
 m_Wheels
-\stoptyping
 \stopCodeExample
 
 Static member of a structure or class:
 \startCodeExample
-\starttyping
 ms_Wheels
-\stoptyping
 \stopCodeExample
 
 \item
@@ -404,7 +350,6 @@ Class and object names should be intuitive, try to avoid abbreviations, and each
 
 Right:
 \startCodeExample
-\starttyping
 // Class for abstracting a camera interface...
 class Camera
 {
@@ -413,19 +358,16 @@ class Camera
 
 // Create a camera...
 Camera LogitechCamera;
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 class cam
 {
     ...
 };
 
 cam log;
-\stoptyping
 \stopCodeExample
 
 \stopitemize
@@ -450,9 +392,7 @@ Follow the {\it GNU Coding Standards} as much as reasonably possible, save the c
 A comment which indicates task which needs to be done at some point should look like this: 
 
 \startCodeExample
-\starttyping
 // TODO: Check portability here...
-\stoptyping
 \stopCodeExample
 
 \stopitemize
@@ -469,17 +409,13 @@ Comments should begin with a single space, then a capital letter and end with a 
 
 Right:
 \startCodeExample
-\starttyping
 // Load the image...
 GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
-\stoptyping
 \stopCodeExample
 
 Wrong:
 \startCodeExample
-\starttyping
 GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image.
-\stoptyping
 \stopCodeExample
 
 \item
@@ -487,7 +423,6 @@ The farther left the comment, the higher level and abstract what you are trying 
 
 Before:
 \startCodeExample
-\starttyping
 // Analyze single image...
 void AnalysisThread::AnalyzeImage(wxString Path)
 {
@@ -517,12 +452,10 @@ void AnalysisThread::AnalyzeImage(wxString Path)
     // Cleanup gray image...
     cvReleaseImage(&GrayImage);
 }
-\stoptyping
 \stopCodeExample
 
 Stripped:
 \startCodeExample
-\starttyping
 // Analyze single image...
 
     // Variables...
@@ -540,7 +473,6 @@ Stripped:
     // Feed into tracker...
     
     // Cleanup gray image...
-\stoptyping
 \stopCodeExample
 
 \item

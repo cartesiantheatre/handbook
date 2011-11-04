@@ -37,7 +37,6 @@ A package manifest is checked against an XML schema (AresPackage.xsd) to verify 
 {A sample package's manifest file conforming to the AresPackage.xsd schema.}
 {
 \startCodeExample
-\starttyping
 <?xml version="1.0" encoding="UTF-8" ?>
 <AresPackage Name="Title" SchemaFormat="1">
     <Files NamePrefix="Title/">
@@ -50,7 +49,6 @@ A package manifest is checked against an XML schema (AresPackage.xsd) to verify 
         <File Source="../Title/Artwork/Splash.mkv" Compress="0" />
     </Files>
 </AresPackage>
-\stoptyping
 \stopCodeExample
 }
 
@@ -65,6 +63,7 @@ The following diagrams are a graphical representation of the schema, beginning w
     {figure:AresPackageManifestSchema_Files}
     {The schema for the {\tt Files} element of an AresPackage manifest.}
     {Source/Information_For_Engineer_Contributors/Images/AresPackage/Files.png}
+
 \FullPageLandscapeDiagram
     {figure:AresPackageManifestSchema_File}
     {The schema for the {\tt File} tag of an AresPackage manifest.}

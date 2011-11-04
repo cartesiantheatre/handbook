@@ -215,28 +215,44 @@
      commands={\setupalign[yes]},
      style=italic]
 
-\definestartstop
-    [CodeExample]
-    [before={
-        \crlf
-        \setupbackground[frame=on,
-                         before=\blank,
-                         after=\blank,
-                         corner=round,
-                         topoffset=0.5cm,
-                         leftoffset=0.5cm,
-                         rightoffset=0.5cm,
-                         bottomoffset=0.5cm]
-        \startbackground
-        \startlines
-            },
-     after={
-        \stoplines
-        \stopbackground
-        \crlf
-           },
-     commands={\setupalign[right]},
-     style=type]
+\definetextbackground
+      [CodeExampleFrame]
+      [before=\blank,
+       after=\blank,
+       corner=round,
+       frame=on,
+       background=,
+       location=paragraph,
+       topoffset=0.5cm,
+       leftoffset=0.5cm]
+    
+    \definetyping
+      [CodeExample]
+      [before=\startCodeExampleFrame,
+       after=\stopCodeExampleFrame]
+
+%\definestartstop
+%    [CodeExample]
+%    [before={
+%        \crlf
+%        \setupbackground[frame=on,
+%                         before=\blank,
+%                         after=\blank,
+%                         corner=round,
+%                         topoffset=0.5cm,
+%                         leftoffset=0.5cm,
+%                         rightoffset=0.5cm,
+%                         bottomoffset=0.5cm]
+%        \startbackground
+%        \startlines
+%            },
+%     after={
+%        \stoplines
+%        \stopbackground
+%        \crlf
+%           },
+%     commands={\setupalign[right]},
+%     style=type]
 
 \defineframedtext
   [MiniFile]
@@ -270,9 +286,6 @@
 
 \setupwhitespace
   [medium]
-
-\setuptyping
-  [blank=medium]
 
 \setupfootertexts
   [margin]
@@ -348,7 +361,8 @@
   [option=slanted]
 
 \setuptyping
-  [option=slanted]
+  [option=slanted,
+   blank=medium]
 
 \setuplist
   [section]

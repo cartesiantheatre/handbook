@@ -50,5 +50,5 @@ clean-all: clean
 # Clean most intermediate build files, including the generated PDF...
 clean:
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null
-	@ rm -vf $(OUTPUT) Handbook.pdf
+	@ rm -vf $(OUTPUT) Handbook.pdf Artists.pdf
 

@@ -194,26 +194,41 @@
 
 \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
 
-\definestartstop
-    [TimelineDocument]
-    [before={
-        \crlf
-        \setupbackground[frame=on,
-                         before=\blank,
-                         after=\blank,
-                         corner=round,
-                         topoffset=0.5cm,
-                         leftoffset=0.5cm,
-                         rightoffset=0.5cm,
-                         bottomoffset=0.5cm]
-        \startbackground
-            },
-     after={
-        \stopbackground
-        \crlf
-           },
-     commands={\setupalign[yes]},
-     style=italic]
+\definetextbackground[TimelineGeneralDocument][
+        location=paragraph,
+        color=color_text,
+        background=color,
+        backgroundcolor=colour_page,
+        framecolor=colour_text,
+        leftoffset=1.0\bodyfontsize,
+        rightoffset=1.0\bodyfontsize,
+        before={
+            \blank
+        },
+        after={
+            \blank
+        },
+        style=italic,
+        corner=round,
+        frame=on]
+
+\definetextbackground[TimelineCorrespondenceDocument][
+        location=paragraph,
+        color=color_text,
+        background=color,
+        backgroundcolor=colour_page,
+        framecolor=colour_text,
+        leftoffset=1.0\bodyfontsize,
+        rightoffset=1.0\bodyfontsize,
+        before={
+            \blank
+        },
+        after={
+            \blank
+        },
+        style=smalltype,
+        corner=round,
+        frame=on]
 
 \definetextbackground
       [CodeExampleFrame]
@@ -230,29 +245,6 @@
       [CodeExample]
       [before=\startCodeExampleFrame,
        after=\stopCodeExampleFrame]
-
-%\definestartstop
-%    [CodeExample]
-%    [before={
-%        \crlf
-%        \setupbackground[frame=on,
-%                         before=\blank,
-%                         after=\blank,
-%                         corner=round,
-%                         topoffset=0.5cm,
-%                         leftoffset=0.5cm,
-%                         rightoffset=0.5cm,
-%                         bottomoffset=0.5cm]
-%        \startbackground
-%        \startlines
-%            },
-%     after={
-%        \stoplines
-%        \stopbackground
-%        \crlf
-%           },
-%     commands={\setupalign[right]},
-%     style=type]
 
 \defineframedtext
   [MiniFile]

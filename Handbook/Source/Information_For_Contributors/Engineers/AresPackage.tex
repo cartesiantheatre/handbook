@@ -3,10 +3,10 @@
 %   Kshatra Corp.
 % See the file License for copying conditions.
 
-% AresPackages section...
-\StartSection{AresPackages}
+% AresPackages subsection...
+\StartSubSection{AresPackages}
 
-\StartSubSection{Purpose}
+\StartSubSubSection{Purpose}
 
 The AresEngine uses a custom game archive format built using EBML, an extensible language akin to XML, but tailored to handling binary data. The Matroska multimedia container is its most prominent client.
 
@@ -26,10 +26,10 @@ As a single file (*.AresPackage), file seek, open, and load times are reduced.
 Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
 \stopitemize
 
-\StartSubSection{Usage}
+\StartSubSubSection{Usage}
 The {\tt ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
 
-\StartSubSection{Design}
+\StartSubSubSection{Design}
 A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package. Let's take a look inside of it.
 
 \placefigure
@@ -57,15 +57,15 @@ The following diagrams are a graphical representation of the schema, beginning w
 \FullPageLandscapeDiagram
     {figure:AresPackageManifestSchema_Root}
     {The schema for the {\tt AresPackage} root node of a manifest.}
-    {Source/Information_For_Engineer_Contributors/Images/AresPackage/Root.png}
+    {Source/Information_For_Contributors/Engineers/Images/AresPackage/Root.png}
 
 \FullPageLandscapeDiagram
     {figure:AresPackageManifestSchema_Files}
-    {The schema for the {\tt Files} element of an AresPackage manifest.}
-    {Source/Information_For_Engineer_Contributors/Images/AresPackage/Files.png}
+    {The schema for the {\tt Files} element of an AresPackage manifest (multiple File).}
+    {Source/Information_For_Contributors/Engineers/Images/AresPackage/Files.png}
 
 \FullPageLandscapeDiagram
     {figure:AresPackageManifestSchema_File}
     {The schema for the {\tt File} tag of an AresPackage manifest.}
-    {Source/Information_For_Engineer_Contributors/Images/AresPackage/File.png}
+    {Source/Information_For_Contributors/Engineers/Images/AresPackage/File.png}
 

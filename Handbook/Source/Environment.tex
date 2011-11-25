@@ -53,6 +53,14 @@
     state=start,
     textcolor=colour_text]
 
+\setupinmargin[
+    background=color, 
+    color=colour_text,
+    backgroundcolor=colour_page,
+    bodyfont=3pt,
+    before={\switchtobodyfont[3pt]}
+    style=\ss\tfx\setupinterlinespace]
+
 \setupexternalfigures
   [frame=on,
    corner=rectangular,
@@ -60,6 +68,9 @@
    background=color, 
    backgroundcolor=colour_page,
    rulethickness=0.5pt]
+
+% Tables of width <0.5 times textwidth are automatically placed at the inner margin...
+\setupfloat[table][criterium=0.5\textwidth,default=inner]
 
 % Jenya inline figure
 \useexternalfigure[jenya_inline][Source/Terminology/Images/Jenya_beige.svg][factor=8]
@@ -200,15 +211,17 @@
         background=color,
         backgroundcolor=colour_page,
         framecolor=colour_text,
-        leftoffset=1.0\bodyfontsize,
-        rightoffset=1.0\bodyfontsize,
+        topoffset=1.0cm,
+        bottomoffset=1.0cm,
+        leftoffset=1.0cm,
+        rightoffset=1.0cm,
         before={
-            \blank
+            \blank[2*big]
         },
         after={
-            \blank
+            \blank[2*big]
         },
-        style=italic,
+        style=small,
         corner=round,
         frame=on]
 
@@ -218,13 +231,15 @@
         background=color,
         backgroundcolor=colour_page,
         framecolor=colour_text,
-        leftoffset=1.0\bodyfontsize,
-        rightoffset=1.0\bodyfontsize,
+        topoffset=1.0cm,
+        bottomoffset=1.0cm,
+        leftoffset=1.0cm,
+        rightoffset=1.0cm,
         before={
-            \blank
+            \blank[2*big]
         },
         after={
-            \blank
+            \blank[2*big]
         },
         style=smalltype,
         corner=round,
@@ -232,14 +247,23 @@
 
 \definetextbackground
       [CodeExampleFrame]
-      [before=\blank,
-       after=\blank,
-       corner=round,
+      [corner=round,
        frame=on,
-       background=,
+       before={
+            \blank[2*big]
+       },
+       after={
+            \blank[2*big]
+       },
+       color=color_text,
+       background=color,
+       backgroundcolor=colour_page,
+       framecolor=colour_text,
        location=paragraph,
        topoffset=0.5cm,
-       leftoffset=0.5cm]
+       bottomoffset=0.5cm,
+       leftoffset=0.5cm,
+       rightoffset=0.5cm]
     
     \definetyping
       [CodeExample]

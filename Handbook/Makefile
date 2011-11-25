@@ -25,7 +25,7 @@ CONTEXT_OPTIONS             = --purgeresult --batchmode --directives=logs.blocke
 
 # Umbrello can only export all or none of its diagrams, so we specify 
 #  an arbitrary one...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Information_For_Engineer_Contributors/Images/AresEngine/Engine.svg
+UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Information_For_Contributors/Engineers/Images/AresEngine/Engine.svg
 
 # Generate handbook PDF, but also check if this makefile is updated...
 all: $(OUTPUT) Makefile
@@ -36,15 +36,15 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Engineer_Contributors/Images/AresEngine > /dev/null
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Contributors/Engineers/Images/AresEngine > /dev/null
 
 # Just produce the information for artists chapter...
 Artists.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
-	context Source/Information_For_Artist_Contributors/Information_For_Artist_Contributors.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
+	context Source/Information_For_Contributors/Artists/Artists.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
-	@ rm -vf Source/Information_For_Engineer_Contributors/Images/AresEngine/*.svg
+	@ rm -vf Source/Information_For_Contributors/Engineers/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
 
 # Clean most intermediate build files, including the generated PDF...

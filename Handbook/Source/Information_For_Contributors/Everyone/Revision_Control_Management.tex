@@ -3,54 +3,56 @@
 %   Kshatra Corp.
 % See the file License for copying conditions.
 
-% Revision control management section...
-\StartSection{Revision Control Management}
+% Revision control management subsection...
+\StartSubSection{Revision Control Management}
 We use Bazaar for revision control. Our master branch is hosted on Launchpad. Here is how to interact with it. You can browse the master branch on Launchpad through a web browser by navigating it here:
 
-\ahref{https://code.launchpad.net/~avaneya/avaneya/trunk}
+\startnarrower[3*left]
+\fullahref{https://code.launchpad.net/~avaneya/avaneya/trunk}
+\stopnarrower
 
 You may prefer to work with the source on your local machine instead of using a browser. To download and install Bazaar on Ubuntu, run the following:
 
 \startCodeExample
-\type{$} sudo aptitude install bzr
+$ sudo aptitude install bzr
 \stopCodeExample
 
 A {\it graphical user interface} for Bazaar that integrates well into Nautilus is available on Ubuntu. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again:
 
 \startCodeExample
-\type{$} sudo aptitude install nautilus-bzr
-\type{$} killall -9 nautilus
+$ sudo aptitude install nautilus-bzr
+$ killall -9 nautilus
 \stopCodeExample
 
 To {\tt identify} yourself to Bazaar and in any commits you make, run the following:
 
 \startCodeExample
-\type{$} bzr whoami "Your Name <your@email_address.com>"
+$ bzr whoami "Your Name <your@email_address.com>"
 \stopCodeExample
 
 To {\tt checkout} a copy of the Avaneya source to a folder called Avaneya in the current working directory, run the following:
 
 \startCodeExample
-\type{$} bzr checkout lp:avaneya Avaneya
+$ bzr checkout lp:avaneya Avaneya
 \stopCodeExample
 
 To {\tt update} your working copy to the latest revision in the Launchpad master branch, run the following within the directory you checked out your local working copy to:
 
 \startCodeExample
-\type{$} bzr update
+$ bzr update
 \stopCodeExample
 
 To check the {\it commit log}, run the following within the directory you checked out your local working copy to, hitting {\tt q} to exit:
 
 \startCodeExample
-\type{$} bzr log \type{|} less
+$ bzr log | less
 \stopCodeExample
 
 If you are a member of the Avaneya Project Crew on Launchpad, you will have write access to the repository which is necessary to commit to the master branch. After making your changes, run the following within the directory you checked out your local working copy to see what files you have changed ({\it status}), what changed inside of them ({\it diff}), and to finally upload ({\it commit}) your changes to the master branch:
 
 \startCodeExample
-\type{$} bzr status
-\type{$} bzr diff
-\type{$} bzr commit --message "Some commit log message..."
+$ bzr status
+$ bzr diff
+$ bzr commit --message "Some commit log message..."
 \stopCodeExample
 

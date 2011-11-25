@@ -3,12 +3,12 @@
 %   Kshatra Corp.
 % See the file License for copying conditions.
 
-% Coding standards section...
-\StartSection{Coding Standards}
+% Coding standards subsection...
+\StartSubSection{Coding Standards}
 
 Try to abide by the project coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it, as opposed to where everyone applies their own. Use the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere. These are guidelines, not written in stone, so use common sense.
 
-\StartSubSection{Declarations and Definitions}
+\StartSubSubSection{Declarations and Definitions}
 
 \startitemize[3]
 \setupwhitespace[big]
@@ -22,7 +22,7 @@ Class method declarations in the class header should be listed in alphabetical o
 Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order, with exceptions made for constructors and deconstructors, which should be listed first and last respectively.
 \stopitemize
 
-\StartSubSection{Legal}
+\StartSubSubSection{Legal}
 Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapter}[Licensing Rationale], should have prefixed the following legal notice for engine related code. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
 
 \startCodeExample
@@ -59,7 +59,7 @@ Change the description line from referencing the engine to referencing the mod i
     ...
 \stopCodeExample
 
-\StartSubSection{Mathematical}
+\StartSubSubSection{Mathematical}
 
 \startitemize[3]
 \setupwhitespace[big]
@@ -70,7 +70,7 @@ All angles should be worked with in degrees, not radians, whenever possible.
 All floating point calculations should be done in single precision whenever possible.
 \stopitemize
 
-\StartSubSection{Formatting}
+\StartSubSubSection{Formatting}
 
 \startitemize[3]
 \setupwhitespace[big]
@@ -320,7 +320,7 @@ if(x == 3)
 
 \stopitemize
 
-\StartSubSection{Naming}
+\StartSubSubSection{Naming}
 
 
 \startitemize[3]
@@ -372,7 +372,7 @@ cam log;
 
 \stopitemize
 
-\StartSubSection{Structure}
+\StartSubSubSection{Structure}
 
 \startitemize[3]
 \setupwhitespace[big]
@@ -397,7 +397,7 @@ A comment which indicates task which needs to be done at some point should look 
 
 \stopitemize
 
-\StartSubSection{Comments}
+\StartSubSubSection{Comments}
 
 \startitemize[3]
 \setupwhitespace[big]
@@ -485,7 +485,7 @@ Do not use a blank line after an opening brace or before a closing brace.
 Do not use duplicate blank lines.
 \stopitemize
 
-\StartSubSection{Integrated Development Environment (IDE)}
+\StartSubSubSection{Integrated Development Environment (IDE)}
 
 You are welcome to use any editor or IDE you like, provided it does not require non-standard IDE-specific project files to pollute the repository's source tree. See \in{section}[Developer Tools] for a list of all other developer tools required for this project.
 

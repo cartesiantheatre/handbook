@@ -53,13 +53,15 @@
     state=start,
     textcolor=colour_text]
 
-\setupmargindata[
-    style={smallitalic\switchtobodyfont[3pt]}]
+\setupmargindata
+  [inmargin]
+  [style={\switchtobodyfont[6pt]\bi]},
+   color=colour_text]
 
-\setupinmargin[
-    background=color, 
-    color=colour_text,
-    backgroundcolor=colour_page]
+\setupmarginframed
+  [inmargin]
+  [background=color,
+   backgroundcolor=colour_page]
 
 \setupexternalfigures
   [frame=on,
@@ -101,7 +103,7 @@
 \unprotect
 \setuplayout
   [location=middle,
-   style=\ss,
+   style=\bi,
    backspace=2.5cm,
    topspace=1.5cm,
    width=16cm,

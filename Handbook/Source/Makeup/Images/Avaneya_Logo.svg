@@ -8,11 +8,11 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="600"
+   width="475.37906"
    id="svg3025"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   height="600"
+   height="475.37906"
    sodipodi:docname="Avaneya_Logo.svg"
    style="fill:none;stroke:#000000;stroke-width:3">
   <title
@@ -110,8 +110,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="1.046404"
-     inkscape:cx="147.31906"
-     inkscape:cy="307.04354"
+     inkscape:cx="-161.07228"
+     inkscape:cy="244.73306"
      inkscape:window-x="0"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -126,16 +126,16 @@
      sodipodi:cy="29"
      sodipodi:rx="11"
      sodipodi:ry="11"
-     transform="matrix(15.334808,0,0,15.334808,-83.3702,-98.705008)"
-     style="fill:none;stroke:#d3502d;stroke-opacity:1" />
+     transform="matrix(15.334808,0,0,15.334808,-145.68068,-161.01546)"
+     style="fill:none;stroke:#990000;stroke-opacity:1" />
   <path
-     d="M 361.33923,238.66074 514.68731,85.312664 m -122.67846,0 H 514.68731 V 207.99113"
+     d="M 299.02875,176.35029 452.37683,23.002213 m -122.67846,0 H 452.37683 V 145.68068"
      id="path3029"
      inkscape:connector-curvature="0"
-     style="fill:none;stroke:#d3502d;stroke-width:46.00442505;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:none" />
+     style="fill:none;stroke:#990000;stroke-width:46.00442505000000182;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:none" />
   <path
      id="path3039"
-     d="M 163.14146,325.62659 H 344.8497 l -146.98507,106.81798 56.20449,-172.88034 56.20451,172.88034 z"
+     d="M 43.491752,235.02271 H 336.73087 L 99.527701,407.40462 190.22998,128.41188 280.93231,407.40462 z"
      inkscape:connector-curvature="0"
-     style="fill:#d3502d;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;" />
+     style="fill:#990000;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none" />
 </svg>

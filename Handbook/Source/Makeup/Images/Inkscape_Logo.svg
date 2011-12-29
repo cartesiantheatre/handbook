@@ -2,16 +2,64 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
    width="128"
    height="128"
-   id="svg2">
+   id="svg2"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Inkscape_Logo.svg">
+  <metadata
+     id="metadata141">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#323232"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1912"
+     inkscape:window-height="1127"
+     id="namedview139"
+     showgrid="false"
+     inkscape:zoom="3.6875"
+     inkscape:cx="27.901289"
+     inkscape:cy="57.274048"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
   <defs
      id="defs4">
+    <linearGradient
+       id="linearGradient3888">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3890" />
+      <stop
+         style="stop-color:#c08453;stop-opacity:0;"
+         offset="1"
+         id="stop3892" />
+    </linearGradient>
     <linearGradient
        id="WhiteTransparent"
        gradientUnits="userSpaceOnUse">
@@ -559,10 +607,28 @@
        xlink:href="#linearGradient10981-3-9"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-130.16572,-83.352786)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3888"
+       id="radialGradient3894"
+       cx="64.271187"
+       cy="63.050845"
+       fx="64.271187"
+       fy="63.050845"
+       r="60.889832"
+       gradientTransform="matrix(1,0,0,0.99777307,0,0.14040965)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <style
      type="text/css"
      id="style26" />
+  <rect
+     style="fill:url(#radialGradient3894);fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     id="rect3118"
+     width="118.77966"
+     height="118.50847"
+     x="4.8813558"
+     y="3.7966104" />
   <g
      transform="matrix(0.9939405,0,0,0.9939405,0.38937111,-1.4450758)"
      id="g9139"

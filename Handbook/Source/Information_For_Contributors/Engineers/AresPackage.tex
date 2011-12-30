@@ -30,12 +30,8 @@ Providing a layer of abstraction between the actual raw data and the client that
 The {\tt ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
 
 \StartSubSubSection{Design}
-A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package. Let's take a look inside of it.
+A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package conforming to the AresPackage.xsd schema. Let's take a look inside of it.
 
-\placefigure
-[force][figure:AresSamplePackage.xml]
-{A sample package's manifest file conforming to the AresPackage.xsd schema.}
-{
 \startCodeExample
 <?xml version="1.0" encoding="UTF-8" ?>
 <AresPackage Name="Title" SchemaFormat="1">
@@ -50,7 +46,6 @@ A package manifest is checked against an XML schema (AresPackage.xsd) to verify 
     </Files>
 </AresPackage>
 \stopCodeExample
-}
 
 The following diagrams are a graphical representation of the schema, beginning with the root node.
 

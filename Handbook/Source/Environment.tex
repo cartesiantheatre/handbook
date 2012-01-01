@@ -18,7 +18,7 @@
 
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
-\definecolor[colour_figure_border][r=0,g=0,b=0]
+\definecolor[colour_figure_border][r=1,g=1,b=1]
 \definecolor[colour_footnote_background][colour_page]
 \definecolor[colour_footnote_text][colour_text]
 \definecolor[colour_frame_border][colour_text]
@@ -140,18 +140,18 @@
 \def\CopyrightHolder{Kshatra Corp}
 
 % Insert a full page landscape diagram, parameters are node name, caption, and path...
-\def\FullPageLandscapeDiagram#1#2#3%
+\def\FullPageDiagram#1#2#3%
 {
     \startTEXpage[offset=0mm]
-    \startframedtext[width=0.95\textwidth,align=center,corner=rectangular]
+%    \startframedtext[align=center,corner=rectangular]
     \placefigure
         [force][figure:#1]
         {#2}
-        {\externalfigure[#3][width=0.95\textwidth,
+        {\externalfigure[#3][factor=max,
                              align=center,
                              background=color,
                              backgroundcolor=colour_figure_background]}
-    \stopframedtext
+%    \stopframedtext
     \stopTEXpage
 %    \page 
 %    \setuppapersize[diagram]

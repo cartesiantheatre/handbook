@@ -124,6 +124,16 @@
 \definepapersize[main][A4][A4]
 \definepapersize[diagram][A4,landscape][A4,landscape]
 
+% Setup descriptions...
+\definedescription[definition]
+  [location=top,
+   headstyle=boldslanted,
+   width=broad]
+
+\setuphead
+  [definition]
+  [color=colour_head]
+
 % Remove surrounding quotation marks on references...
 \setupreferencing[left=, right=]
 

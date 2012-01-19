@@ -38,9 +38,9 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Contributors/Engineers/Images/AresEngine > /dev/null
 
-# Just produce the information for artists chapter...
-Artists.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
-	context Source/Information_For_Contributors/Artists/Artists.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
+# Just produce the Viking Lander Remastered chapter...
+Viking_Lander_Remastered.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+	context Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
@@ -50,5 +50,5 @@ clean-all: clean
 # Clean most intermediate build files, including the generated PDF...
 clean:
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null
-	@ rm -vf $(OUTPUT) Handbook.pdf Artists.pdf
+	@ rm -vf $(OUTPUT) Handbook.pdf Viking_Lander_Remastered.pdf
 

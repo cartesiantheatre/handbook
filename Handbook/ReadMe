@@ -7,15 +7,18 @@ platforms:
 If you are running Ubuntu, Adam Reviczky <adam.reviczky@kcl.ac.uk> 
 was kind enough to provide us with a PPA. Consider yourself warned,
 however, that Adam's build recipe pulls from the latest upstream
-source on a daily basis which means ConTeXt may work one day and be
-busted to shit on another:
+source on a daily basis which means ConTeXt may work one day and
+possibly busted to shit on another. You'll need both his ConTeXt
+and LuaTeX PPA's available:
 
-    <https://launchpad.net/~reviczky/+archive/ppa>
+    <https://launchpad.net/~reviczky/+archive/context-daily>
+    <https://launchpad.net/~reviczky/+archive/luatex-daily>
 
 You will also need the texlive-math-extra and ttf-ubuntu-font-family 
 packages. To do all of the above on Ubuntu, run the following:
 
-    $ sudo add-apt-repository ppa:reviczky/ppa
+    $ sudo add-apt-repository ppa:reviczky/context-daily
+    $ sudo add-apt-repository ppa:reviczky/luatex-daily
     $ sudo aptitude update
     $ sudo aptitude install     \
         umbrello                \

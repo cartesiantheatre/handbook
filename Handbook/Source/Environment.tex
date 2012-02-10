@@ -31,6 +31,12 @@
 \definecolor[colour_table_row_odd][r=0.2,g=0.2,b=0.2]
 \definecolor[colour_text][r=0.754,g=0.516,b=0.324]
 
+% Set the colours of various list items...
+\setuplist[chapter][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
+\setuplist[section][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
+\setuplist[subsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
+\setuplist[subsubsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
+        
 % Bzr version...
 \def\BazaarRevision{\cldcontext{os.resultof"bzr revno | tr -d '\\n'"}}
 

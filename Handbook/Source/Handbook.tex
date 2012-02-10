@@ -19,7 +19,7 @@
     \setupspacing \setstrut
     \vfill
     \midaligned{\externalfigure[Source/Makeup/Images/Avaneya_Logo.svg][][width=0.25\textwidth]}
-    \midaligned{\rotate[rotation=42]{\color[red]{\bft FIRST DRAFT. NOT READY FOR PUBLIC REDISTRIBUTION!}}}
+    \midaligned{\rotate[rotation=42]{\color[red]{\bft FIRST DRAFT. UNREADY FOR PUBLIC REDISTRIBUTION!}}}
     \vfill
     The Avaneya Project Crew\crlf
     {\small Bazaar revision \href{http://bazaar.launchpad.net/~avaneya/avaneya/trunk/view/head:/Documentation/Contributors/Handbook/Avaneya\%20Project\%20Crew\%20Handbook.pdf}{\BazaarRevision}}
@@ -50,8 +50,13 @@
 % Front matter...
 \startfrontmatter
 	
-    % Table of contents...
-    \completecontent
+	% Contents at a glance...
+    \title{Contents at a Glance}
+	\placelist[chapter]
+	
+    % Complete table of contents...
+    \title{Table of Contents}
+    \placecontent
     
     % Preface...
     \component Source/Preface/Preface.tex

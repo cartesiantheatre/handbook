@@ -36,7 +36,7 @@ $(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Contributors/Engineers/Images/AresEngine > /dev/null
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Contributors/Engineers/Images/AresEngine
 
 # Just produce the Viking Lander Remastered chapter...
 Viking_Lander_Remastered.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)

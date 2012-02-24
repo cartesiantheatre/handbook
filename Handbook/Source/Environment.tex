@@ -157,6 +157,24 @@
 \def\CopyrightDates{2010, 2011, 2012}
 \def\CopyrightHolder{Kshatra Corp}
 
+\def\SetupCharacterTable
+{
+    \bTABLE[width=0.25\textwidth,split=yes]
+    \setupTABLE[column][1]
+        [align={middle,lohi},
+         background=color,
+         backgroundcolor=colour_table_row_even,
+         style=\bfxx,
+         width=2.3cm]
+    \setupTABLE[column][2]
+        [align=flushleft,
+         option=stretch,
+         background=color,
+         backgroundcolor=colour_table_row_odd]
+    \setupTABLE[each][each]
+        [style=\tfxx]
+}
+
 % Insert a full page landscape diagram, parameters are node name, caption, and path...
 \def\FullPageDiagram#1#2#3%
 {

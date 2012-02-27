@@ -254,65 +254,64 @@
 
 \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
 
-\definetextbackground[TimelineGeneralDocument][
-        location=paragraph,
-        color=color_text,
-        background=color,
-        backgroundcolor=colour_page,
-        framecolor=colour_text,
-        topoffset=1.0cm,
-        bottomoffset=1.0cm,
-        leftoffset=1.0cm,
-        rightoffset=1.0cm,
-        before={
-            \blank[2*big]
-        },
-        after={
-            \blank[2*big]
-        },
-        style=small,
-        corner=round,
-        frame=on]
+\definetextbackground[TimelineGeneralDocument]
+   [location=paragraph,
+    color=color_text,
+    background=color,
+    backgroundcolor=colour_page,
+    framecolor=colour_text,
+    topoffset=1.0cm,
+    bottomoffset=1.0cm,
+    leftoffset=1.0cm,
+    rightoffset=1.0cm,
+    before={
+        \blank[2*big]
+    },
+    after={
+        \blank[2*big]
+    },
+    style=small,
+    corner=round,
+    frame=on]
 
-\definetextbackground[TimelineCorrespondenceDocument][
-        location=paragraph,
-        color=color_text,
-        background=color,
-        backgroundcolor=colour_page,
-        framecolor=colour_text,
-        topoffset=1.0cm,
-        bottomoffset=1.0cm,
-        leftoffset=1.0cm,
-        rightoffset=1.0cm,
-        before={
-            \blank[2*big]
-        },
-        after={
-            \blank[2*big]
-        },
-        style=smalltype,
-        corner=round,
-        frame=on]
+\definetextbackground[TimelineCorrespondenceDocument]
+   [location=paragraph,
+    color=color_text,
+    background=color,
+    backgroundcolor=colour_page,
+    framecolor=colour_text,
+    topoffset=1.0cm,
+    bottomoffset=1.0cm,
+    leftoffset=1.0cm,
+    rightoffset=1.0cm,
+    before={
+        \blank[2*big]
+    },
+    after={
+        \blank[2*big]
+    },
+    style=smalltype,
+    corner=round,
+    frame=on]
 
-\definetextbackground
-      [CodeExampleFrame]
-      [corner=round,
-       frame=on,
-       before={
-            \blank[2*big]
-       },
-       after={
-            \blank[2*big]
-       },
-       color=color_text,
-       background=color,
-       backgroundcolor=colour_page,
-       framecolor=colour_text,
-       location=paragraph,
-       topoffset=0.5cm,
-       bottomoffset=0.5cm,
-       leftoffset=0.5cm,
-       rightoffset=0.5cm]
+\definetextbackground[CodeExampleFrame]
+   [corner=round,
+    frame=on,
+    before={
+        \blank[2*big]
+    },
+    after={
+        \blank[2*big]
+    },
+    color=color_text,
+    background=color,
+    backgroundcolor=colour_page,
+    framecolor=colour_text,
+    location=paragraph,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm]
     
     \definetyping
       [CodeExample]

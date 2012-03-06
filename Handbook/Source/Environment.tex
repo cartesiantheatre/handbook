@@ -39,7 +39,22 @@
 \setuplist[subsubsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
         
 % Bzr version...
-\def\BazaarRevision{\cldcontext{os.resultof"bzr revno | tr -d '\\n'"}}
+\def\initializeBazaar
+        {\ctxlua{context("\\global\\edef\\BazaarRevision{\%s}",
+                 os.resultof"bzr revno | tr -d '\\n'")}}
+\initializeBazaar
+
+% Evince version...
+\def\initializeEvince
+        {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
+                 os.resultof"evince --version | tr -d '\\n'")}}
+\initializeEvince
+
+% Umbrello version...
+\def\initializeUmbrello
+        {\ctxlua{context("\\global\\edef\\UmbrelloVersion{\%s}",
+                 os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
+\initializeUmbrello
 
 % Setup PDF metadata...
 \setupinteraction
@@ -135,12 +150,32 @@
 
 \definehspace[star_hspace][1.75em]
 
-% Setup descriptions...
+% Define definitions used in terms & concepts chapter...
 \definedescription[definition]
   [location=top,
+   hang=20,
    headcolor=colour_head,
    headstyle=boldslanted,
-   width=broad]
+   command=\hskip-1cm,
+   margin=1cm]
+
+% Define article item groups...
+\defineitemgroup[article]
+
+\setupitemgroup
+   [article]
+   [
+    left={Article },
+    stopper=,
+    symbol=R,
+    before=\blank,
+    after=\blank,
+    command=\blank,
+    distance=0.5em]
+
+\setupitemgroup
+    [article]
+    [color=colour_head]
 
 % Remove surrounding quotation marks on references...
 \setupreferencing[left=, right=]

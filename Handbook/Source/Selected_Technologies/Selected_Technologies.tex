@@ -17,19 +17,19 @@ Note that not all of these technologies necessarily form components of the AresE
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em Audacity}
+\head {\em Audacity}
 
 We use Audacity for audio recording, editing, post-processing, effects, and more. It can take advantage of any of the multitude of LADSPA and VST plugins. It can also export to surround sound formats, such as AC3 and DTS.
 
-\item {\em libmikmod}
+\head {\em libmikmod}
 
 We use libmikmod for playback of tracker music modules. Some people were requesting tracker support, and since it should not take very much effort to integrate into the engine's {\about[AudioManager]} subsystem, it seems reasonable. The library also needs to be built thread safe.
 
-\item {\em OpenAL}
+\head {\em OpenAL}
 
 OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is done through other APIs.
 
-\item {\em SDL_audio}
+\head {\em SDL_audio}
 
 The SDL library is used to provide audio decoding through its SDL_audio API. It decodes popular formats like Ogg Vorbis. Since we are dependent on some features that are bleeding edge, like haptic support, we require SDL 1.3. Since it is unlikely that any distributions carry it at present, we may have to provide Ubuntu packages.
 \stopitemize
@@ -39,31 +39,31 @@ The SDL library is used to provide audio decoding through its SDL_audio API. It 
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em CppUnit}
+\head {\em CppUnit}
 
 The CppUnit library is a unit testing framework module for the C++ programming language, used only when the engine is built in debug mode.
 
-\item {\em GNU Autotools}
+\head {\em GNU Autotools}
 
 The GNU Autotools are used to reconcile and harmonize the idiosyncrasies of different platforms. It makes portability far more straightforward than without it.
 
-\item {\em GNU Compiler Collection}
+\head {\em GNU Compiler Collection}
 
 The GNU Compiler Collection is used for the engine's dependency calculation, compilation, and linking, among other things. Ports of virtually all of its compilers are available everywhere.
 
-\item {\em libebml}
+\head {\em libebml}
 
 The libebml library is the backbone of the Matroska multimedia container format. EBML stands for {\it Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans. See \in{section}[AresPackages] for details on how we are using it in this project.
 item
-\item {\em streflop}
+\head {\em streflop}
 
 The streflop library ({\it STandalone REproducible FLOating-Point}) allows you to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments.
 
-\item {\em xmlstarlet}
+\head {\em xmlstarlet}
 
 The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests and the engine event definition for syntactical errors.
 
-\item {\em Umbrello}
+\head {\em Umbrello}
 
 Umbrello is a powerful diagramming tool which lends itself well to the creation of UML modelling. The AresEngine's architectural design was modelled in Umbrello as seen in \in{section}[Architecture]. The two projects compliment each other well since modelling the AresEngine put very heavy demands on Umbrello, thus allowing the stress testing to identify, solve, and enhance many aspects of Umbrello. We are very grateful to the very cooperative developers working on the Umbrello project.
 \stopitemize
@@ -74,7 +74,7 @@ Umbrello is a powerful diagramming tool which lends itself well to the creation 
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em \CONTEXT}
+\head {\em \CONTEXT}
 
 \CONTEXT\ is used for typesetting documents, such as this one. This document was compiled on \currentdate\ from Bazaar revision \BazaarRevision, typeset using \CONTEXT\ \contextversion, and rendered with \texenginename\ \texengineversion.
 \stopitemize
@@ -84,39 +84,39 @@ Umbrello is a powerful diagramming tool which lends itself well to the creation 
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em Blender}
+\head {\em Blender}
 
 All modelling is generally done with Blender, but modellers are free to use whatever free modelling application they like, as long as it supports common free formats. One popular alternative is {\it Wings 3D}. Ultimately though, all models have to importable into Blender since we are dependent on the OGRE 3D\index{OGRE 3D} exporter for it in order to integrate with the rendering engine.
 
-\item {\em Caelum}
+\head {\em Caelum}
 
 Caelum is a weather generation plugin for the OGRE 3D rendering engine. It is used to provide weather effects wherever necessary on Mars.
 
-\item {\em CEGUI}
+\head {\em Crazy Eddie's Graphical User Interface}
 
-The CEGUI library allows graphical user interfaces to be built on top of the OGRE 3D rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts accessing its Lua interface.
+The Crazy Eddie's Graphical User Interface (CEGUI) library allows graphical user interfaces to be built on top of the OGRE 3D rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts accessing its Lua interface.
 
-\item {\em Hydrax}
+\head {\em Hydrax}
 
 Hydrax is a fluid dynamics plugin for the OGRE 3D rendering engine. It is used to provide fluid effects wherever necessary on Mars.
 
-\item {\em OGRE 3D}
+\head {\em OGRE 3D}
 
 The {\it OGRE 3D} rendering engine is a powerful, cross-platform, API generally aimed at game developers. It has a rich and simple to use API with a plethora of plugins available for it. It is strictly a rendering engine and does not, however, cover input, audio, and other standard game engine subsystems.
 
-\item {\em OpenGL}
+\head {\em OpenGL}
 
 The OpenGL library provides the rendering backend for the OGRE 3D rendering engine. Although the latter supports other backends, it is very difficult to write and maintain shaders for all of them. OpenGL is ubiquitous these days, can do virtually everything Direct3D can, and does not hold you hostage to any specific platform.
 
-\item {\em OpenGL Extension Wrangler Library}
+\head {\em OpenGL Extension Wrangler Library}
 
 The OpenGL Extension Wrangler Library library ({\it GLEW}, helps in querying and loading OpenGL extensions. It provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform. All supported OpenGL extensions are exposed in a single header file, which is machine-generated from the official extension list.
 
-\item {\em Terrain}
+\head {\em Terrain}
 
 Terrain is another plugin for the OGRE 3D rendering engine allowing for, as the name suggests, terrain generation.
 
-\item {\em SDL}
+\head {\em SDL}
 
 The SDL library is used to provide image and font loading through its SDL_image and SDL_pango APIs respectively.
 \stopitemize
@@ -126,11 +126,11 @@ The SDL library is used to provide image and font loading through its SDL_image 
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em SDL_haptic}
+\head {\em SDL_haptic}
 
 The SDL_haptic API is used for providing force feedback, provided the API is available and the user's input device supports it. SDL version 1.3 or greater is required.
 
-\item {\em SDL_input}
+\head {\em SDL_input}
 
 The SDL_input API is used to provide input handling.
 \stopitemize
@@ -140,15 +140,15 @@ The SDL_input API is used to provide input handling.
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em GNU gettext}
+\head {\em GNU gettext}
 
 GNU gettext is used for localization and translation to different human languages by making it possible to substitute strings that are marked for translation in our C++ code with a string from another language.
 
-\item {\em lua-gettext}
+\head {\em lua-gettext}
 
 The lua-gettext API is a Lua package that acts as a Lua wrapper for gettext bindings.
 
-\item {\em lua-xgettext}
+\head {\em lua-xgettext}
 
 The lua-xgettext tool is a small program for message extraction of marked strings from Lua code so they can be made available for translation to other languages. It is similar to GNU xgettext, but far more primitive; it just extracts the strings and prints them out without any additional information. It was written because GNU `xgettext` did not support Lua at the time it was created.
 \stopitemize
@@ -158,11 +158,11 @@ The lua-xgettext tool is a small program for message extraction of marked string
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em ENet}
+\head {\em ENet}
 
 ENet provides the low level library which Avaneya's mutliplayer protocol is built upon. Its purpose is to provide a relatively thin, simple and robust network communication layer on top of UDP (User Datagram Protocol). The primary feature it provides is optional reliable, in-order delivery of packets. It omits certain higher level networking features such as authentication, lobbying, server discovery, encryption (which we provide via GnuTLS), or other similar tasks that are particularly application specific so that the library remains flexible, portable, and easily embeddable.
 
-\item {\em GNU Transport Layer Security Library}
+\head {\em GNU Transport Layer Security Library}
 
 The GNU Transport Layer Security Library (GnuTLS) is a free software implementation of the SSL and TLS protocols. It is used to provide encryption at the application level to make it more difficult for an uninvited third party to be a nuisance.
 \stopitemize
@@ -172,11 +172,11 @@ The GNU Transport Layer Security Library (GnuTLS) is a free software implementat
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em Apport}
+\head {\em Apport}
 
 Apport intercepts program crashes, collects debugging information about the crash and the operating system environment, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
 
-\item {\em D-Bus}
+\head {\em D-Bus}
 
 The D-Bus (Desktop Bus) API is a simple inter-process communication (IPC) system for software applications to communicate with one another. Avaneya can use it to determine the state of the user's network connection, among other things. It is available only under supported POSIX compliant operating systems.
 \stopitemize
@@ -186,7 +186,7 @@ The D-Bus (Desktop Bus) API is a simple inter-process communication (IPC) system
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em OgreBullet}
+\head {\em OgreBullet}
 
 OgreBullet is a plugin that augments the OGRE 3D rendering engine with powerful physics capabilities. It is an interface to the underlying free {\it Bullet} physics engine which features 3D collision detection, soft body dynamics, and rigid body dynamics. It is used in many games and for providing visual effects in movies. 
 
@@ -199,11 +199,11 @@ The underlying physics engine can also leverage the user's available hardware ac
 
 \startitemize[4]
 \setupwhitespace[big]
-\item {\em libtolua++}
+\head {\em libtolua++}
 
 The libtolua++ library is used to integrate our C++ code with Lua. It is an updated replacement to the older toLua tool. It makes it possible for engine code to invoke Lua code, and vise versa.
 
-\item {\em Lua}
+\head {\em Lua}
 
 Lua is used to provide scripting support to the AresEngine. The runtime environment needs to have {\tt package.loadlib} present.
 \stopitemize

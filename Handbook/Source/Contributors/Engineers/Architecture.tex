@@ -12,7 +12,7 @@ The AresEngine is divided up into many subsystems, each responsible for a given 
 
 Umbrello was used to come up with the architectural design. At this time, you may need to use the latest Umbrello built from source because the task at hand was so demanding, only Umbrello's bleeding edge was able to handle it. Unfortunately the pre-compiled binary available in most distributions had many show stopper bugs in it that would have have made work impossible. Even building from source, it still has many problems. Nevertheless, it was the most mature and functional free design tool available at the time and may still be. We are very grateful to the Umbrello crew who were especially helpful in fixing bugs as they were discovered through the engine design stress testing it.
 
-The following architectural diagrams were pulled from the AresEngine's Umbrello project file automatically at the time this handbook was compiled on \currentdate\ from Bazaar revision \BazaarRevision, and using \cldcontext{os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'"}.
+The following architectural diagrams were pulled from the AresEngine's Umbrello project file automatically at the time this handbook was compiled on \currentdate\ from Bazaar revision \BazaarRevision, and using \UmbrelloVersion.
 
 % Engine subsubsection...
 \StartSubSubSection{Engine}
@@ -21,7 +21,7 @@ This diagram captures the engine at the highest level of abstraction and provide
 \FullPageDiagram
     {EngineUML}
     {The AresEngine high level overview.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Engine.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Engine.svg}
 
 % Artificial intelligence subsubsection...
 \StartSubSubSection{Artificial Intelligence}
@@ -32,7 +32,7 @@ It contains an implementation of the A* search strategy algorithm.\footnote{See 
 \FullPageDiagram
     {ArtificialIntelligenceUML}
     {Engine's artificial intelligence facilities.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Artificial Intelligence.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Artificial Intelligence.svg}
 
 % Audio subsubsection...
 \page
@@ -46,7 +46,7 @@ Playback is accomplished through OpenAL.
 \FullPageDiagram
     {AudioUML}
     {The audio subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Audio.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Audio.svg}
 
 % Configuration subsubsection...
 \page
@@ -60,7 +60,7 @@ Much of the manager is implemented in Lua because of its excellent database hand
 \FullPageDiagram
     {ConfigurationUML}
     {The configuration subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Configuration.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Configuration.svg}
 
 % Console subsubsection...
 \page
@@ -72,7 +72,7 @@ Console commands are implemented in Lua.
 \FullPageDiagram
     {ConsoleUML}
     {The console subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Console.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Console.svg}
 
 % Design patterns subsubsection...
 \page
@@ -86,7 +86,7 @@ The second kind, like the first, only ever has one instance, but you control whe
 \FullPageDiagram
     {DesignPatternsUML}
     {Useful design patterns.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Design Patterns.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Design Patterns.svg}
 
 % Events subsubsection...
 \page 
@@ -117,7 +117,7 @@ Events.xml contains a list of built-in event types, game engine mod agnostic, fo
 \FullPageDiagram
     {EventUML}
     {The event subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Events.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Events.svg}
 
 % File System subsubsection...
 \page 
@@ -129,7 +129,7 @@ It also has performance advantages because only a single file (*.AresPackage) ne
 \FullPageDiagram
     {FileSystemUML}
     {The file system subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/File System.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/File System.svg}
 
 % Gooey subsubsection...
 \page 
@@ -147,7 +147,7 @@ Most of the interesting interfaces are within CEGUI singletons themselves, with 
 \FullPageDiagram
     {GooeyUML}
     {The graphical user interface subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Gooey.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Gooey.svg}
 
 % Human Interface subsubsection...
 \page 
@@ -157,7 +157,7 @@ The {\it HumanInterfaceManager} takes care of routing all events from input devi
 \FullPageDiagram
     {HumanInterfaceUML}
     {The human interface subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Human Interface.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Human Interface.svg}
 
 % Logging & Error Control subsubsection...
 \page 
@@ -167,14 +167,14 @@ The {\tt LogManager} is responsible for providing a central logging subsystem fo
 \FullPageDiagram
     {LoggingUML}
     {The logging and error control subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Logging and Error Control.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Logging and Error Control.svg}
     
 Since message can be emitted from any number of places, such as within the engine, or within some other externally linked component, such as CEGUI or OGRE, messages have to be intercepted and channeled through the {\tt LogManager}. The following diagram makes this more clear.
 
 \FullPageDiagram
     {LoggingStateUML}
     {The logging pipeline.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Logging State Diagram.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Logging State Diagram.svg}
 
 % Mathematical subsubsection...
 \page 
@@ -184,7 +184,7 @@ Most mathematical routines for matrices and other linear algebra are provided by
 \FullPageDiagram
     {MathematicalUML}
     {Various mathematical facilities.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Mathematical.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Mathematical.svg}
 
 % Miscellaneous subsubsection...
 \page 
@@ -194,7 +194,7 @@ This is a catch-all for classes and functions that had no business elsewhere.
 \FullPageDiagram
     {MiscellaneousUML}
     {Miscellaneous engine components.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Miscellaneous.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Miscellaneous.svg}
 
 % Physics subsubsection...
 \page 
@@ -204,7 +204,7 @@ The {\tt PhysicsManager} needs to be seriously refactored since OgreBullet was f
 \FullPageDiagram
     {ScriptingUML}
     {The scripting subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Physics.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Physics.svg}
 
 % Resources subsubsection...
 \page 
@@ -214,7 +214,7 @@ The {\tt ResourceManager} is responsible for ensuring that whenever code needs a
 \FullPageDiagram
     {ResourcesUML}
     {The resources subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Resources.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Resources.svg}
 
 % Scripting subsubsection...
 \page 
@@ -224,5 +224,5 @@ The {\tt ScriptManager} is responsible for exposing all useful aspects of the ga
 \FullPageDiagram
     {ScriptingUML}
     {The scripting subsystem.}
-    {Source/Information_For_Contributors/Engineers/Images/AresEngine/Scripting.svg}
+    {Source/Contributors/Engineers/Images/AresEngine/Scripting.svg}
 

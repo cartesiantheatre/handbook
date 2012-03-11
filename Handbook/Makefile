@@ -18,37 +18,43 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 CONTEXT_PRODUCT             = Source/Handbook.tex
-ALL_SOURCE                  = $(shell find Source/ -type f -name '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
+ALL_TEX_SOURCE              = $(shell find Source/ -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
+ALL_DOT_GRAPHS              = $(patsubst %.gv,%.pdf, $(shell find Source/ -type f -iname '*.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Project\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS             = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
 
-# Umbrello can only export all or none of its diagrams, so we specify 
-#  an arbitrary one...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Information_For_Contributors/Engineers/Images/AresEngine/Engine.svg
+# Umbrello can only export all or none of its diagrams, so we specify an 
+#  arbitrary one...
+UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Contributors/Engineers/Images/AresEngine/Engine.svg
 
 # Generate handbook PDF, but also check if this makefile is updated...
 all: $(OUTPUT) Makefile
 
 # Generate handbook PDF...
-$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
+$(OUTPUT): ${ALL_DOT_GRAPHS} $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 	context $(CONTEXT_PRODUCT) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Information_For_Contributors/Engineers/Images/AresEngine
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Contributors/Engineers/Images/AresEngine
 
 # Just produce the Viking Lander Remastered chapter...
-Viking_Lander_Remastered.pdf: $(ALL_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+Viking_Lander_Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 	context Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
-	@ rm -vf Source/Information_For_Contributors/Engineers/Images/AresEngine/*.svg
+	@ rm -vf Source/Contributors/Engineers/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
+	@ rm -vf ${ALL_DOT_GRAPHS}
+
+# Graphviz dotty file to pdf...
+%.pdf: %.gv
+	dot -Tpdf $< -o $@
 
 # Clean most intermediate build files, including the generated PDF...
 clean:
-	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 	@ rm -vf $(OUTPUT) Handbook.pdf Viking_Lander_Remastered.pdf
+	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 

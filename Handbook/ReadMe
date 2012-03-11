@@ -14,8 +14,8 @@ and LuaTeX PPA's available:
     <https://launchpad.net/~reviczky/+archive/context-daily>
     <https://launchpad.net/~reviczky/+archive/luatex-daily>
 
-You will also need the texlive-math-extra and ttf-ubuntu-font-family 
-packages. To do all of the above on Ubuntu, run the following:
+You will also need the texlive-math-extra, ttf-ubuntu-font-family, graphviz,
+and inkscape packages. To do all of the above on Ubuntu, run the following:
 
     $ sudo add-apt-repository ppa:reviczky/context-daily
     $ sudo add-apt-repository ppa:reviczky/luatex-daily
@@ -26,7 +26,9 @@ packages. To do all of the above on Ubuntu, run the following:
         ttf-ubuntu-font-family  \
         context                 \
         context-extra           \
-        context-fonts-extra
+        context-fonts-extra     \
+        graphviz                \
+        inkscape
 
 Once you have the dependencies installed, simply run the following 
 within Avaneya/Documentation/Contributors/Handbook:

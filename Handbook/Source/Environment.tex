@@ -18,7 +18,7 @@
 
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
-\definecolor[colour_figure_border][colour_page]
+\definecolor[colour_figure_border][colour_text]
 \definecolor[colour_footnote_background][colour_page]
 \definecolor[colour_footnote_text][colour_text]
 \definecolor[colour_frame_border][colour_text]
@@ -49,6 +49,12 @@
         {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
                  os.resultof"evince --version | tr -d '\\n'")}}
 \initializeEvince
+
+% Graphviz version...
+\def\initializeGraphviz
+        {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
+                 os.resultof"dot -V")}}
+\initializeGraphviz
 
 % Umbrello version...
 \def\initializeUmbrello
@@ -86,7 +92,8 @@
    backgroundcolor=colour_page]
 
 \setupexternalfigures
-  [frame=on,
+  [location={local,default},
+   frame=off,
    corner=rectangular,
    framecolor=colour_figure_border,
    background=color, 
@@ -153,19 +160,16 @@
 % Define definitions used in terms & concepts chapter...
 \definedescription[definition]
   [location=top,
-   hang=20,
+   alternative=top,
    headcolor=colour_head,
-   headstyle=boldslanted,
-   command=\hskip-1cm,
-   margin=1cm]
+   headstyle=boldslanted]
 
 % Define article item groups...
 \defineitemgroup[article]
 
 \setupitemgroup
    [article]
-   [
-    left={Article },
+   [left={Article },
     stopper=,
     symbol=R,
     before=\blank,
@@ -213,10 +217,10 @@
 % Insert a full page landscape diagram, parameters are node name, caption, and path...
 \def\FullPageDiagram#1#2#3%
 {
-    \startTEXpage[offset=0mm]
+    \startTEXpage[offset=0mm,width=30cm]
 %    \startframedtext[align=center,corner=rectangular]
     \placefigure
-        [force][figure:#1]
+        [force][#1]
         {#2}
         {\externalfigure[#3][factor=max,
                              align=center,
@@ -403,9 +407,9 @@
 \setupsectionblock[appendix]  [page=yes]
 \setupsectionblock[frontpart] [before=,after=]
 
-\setupfootnotes
-  [color=colour_footnote_text,
-   backgroundcolor=colour_footnote_background]
+\setupnotation[footnote]
+    [color=colour_footnote_text,
+     backgroundcolor=colour_footnote_background]
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes...

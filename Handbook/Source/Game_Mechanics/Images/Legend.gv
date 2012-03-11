@@ -1,0 +1,49 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf Resources.gv -o Resources.pdf
+*/
+
+// Legend graph...
+digraph Legend {
+
+    // Graph attributes...
+	bgcolor="black";
+	fontname="Ubuntu Bold"
+    labelfontname="Ubuntu Bold";
+	margin="0";
+	nodesep="0.5 equally";
+	rankdir="LR";
+    pad="0.5,0.5";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu Bold"];
+	node[shape=box];
+	node[style=filled];
+//	node[margin="0.2"];
+	node[fontsize="25"];
+
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.5"];
+	edge[arrowsize="2.0"];
+	edge[minlen="2.0"];
+	
+    // Legends...
+    "Sink"[shape="invtriangle"];
+    "Resource"[shape=octagon];
+    "Mutator"[shape=box3d];
+    "Source"[shape=triangle];
+    
+    // Relations...
+    "Source" -> "Mutator" -> "Resource" -> "Sink";
+}
+

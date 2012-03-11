@@ -1,0 +1,220 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf Resources.gv -o Resources.pdf
+*/
+
+// Units graph...
+digraph Units {
+
+    // Graph attributes...
+	bgcolor="black";
+	fontname="Ubuntu Bold";
+    labelfontname="Ubuntu Bold";
+    fontsize="25";
+	margin="0";
+	nodesep="0.5 equally";
+	rankdir="LR";
+    ranksep=4;
+    smoothing="power_dist";
+    pad="1,1";
+    concentrate="true";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu Bold"];
+	node[shape=box];
+	node[style=filled];
+	node[margin="0.2"];
+	node[fontsize="25"];
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.5"];
+	edge[arrowsize="2.0"];
+
+    // Sources...
+    subgraph cluster_Sources
+    {
+        // Cluster attributes...
+        label="Sources";
+        fontcolor="#c08453ff";
+        node[fontsize="50"];
+	    node[fontname="Ubuntu Bold"];
+        fontsize="80";
+        labelfontname="Ubuntu Bold";
+        bgcolor="black";
+        color="black";
+        
+        // Node attributes...
+        node[margin="0.4"];
+        
+        // Nodes...
+        "Solar"[shape=triangle];
+        "Atmosphere"[shape=triangle];
+        "Ground"[shape=triangle];
+        "Import"[shape=triangle];
+    }
+
+    // Sources...
+    subgraph cluster_Sinks
+    {
+        // Cluster attributes...
+        label="Sinks";
+        fontcolor="#c08453ff";
+        node[fontsize="50"];
+	    node[fontname="Ubuntu Bold"];
+        fontsize="80";
+        labelfontname="Ubuntu Bold";
+        bgcolor="black";
+        color="black";
+        
+        // Node attributes...
+        node[margin="0.4"];
+        
+        // Nodes...
+        "Atmosphere"[shape=invtriangle];
+        "Ground"[shape=invtriangle];
+        "Export"[shape=invtriangle];
+    }
+    
+    // Resources...
+    "Bamboo"[shape=octagon];
+    "Bricks"[shape=octagon];
+    "Carbon"[shape=octagon];
+    "Carbon Monoxide"[shape=octagon];
+    "Ceramics"[shape=octagon];
+    "Clay"[shape=octagon];
+    "Copper"[shape=octagon];
+    "Deuterium"[shape=octagon];
+    "Dimethyl ether"[shape=octagon];
+    "Electricity"[shape=octagon];
+    "Food"[shape=octagon];
+    "Glass"[shape=octagon];
+    "Gold"[shape=octagon];
+    "Gypsum"[shape=octagon];
+    "Heat"[shape=octagon];
+    "Heavy Water"[shape=octagon];
+    "Hydrogen"[shape=octagon];
+    "Iron"[shape=octagon];
+    "Jenyas"[shape=octagon];
+    "Kelp Fertilizer"[shape=octagon];
+    "Magnesium"[shape=octagon];
+    "Methane"[shape=octagon];
+    "Methanol"[shape=octagon];
+    "Ore"[shape=octagon];
+    "Oxygen"[shape=octagon];
+    "Plastics"[shape=octagon];
+    "Platinum"[shape=octagon];
+    "Portland Cement"[shape=octagon];
+    "Rhodium"[shape=octagon];
+    "Silicon"[shape=octagon];
+    "Silicon Dioxide"[shape=octagon];
+    "Silver"[shape=octagon];
+    "Steel"[shape=octagon];
+    "Water"[shape=octagon];
+    "Wood"[shape=octagon];
+    
+    // Units... (as processes)
+    "RWGS Reactor"[shape=box3d];
+    "Sabatier Reactor"[shape=box3d];
+    "Deuterium Isolator"[shape=box3d];
+    "Greenhouse"[shape=box3d];
+    "Nuclear Fission Reactor"[shape=box3d];
+    "Biophotoreactor Plant"[shape=box3d];
+    "Photovoltaic Farm"[shape=box3d];
+    "Mushroom Ranch"[shape=box3d];
+    "Mine"[shape=box3d];
+    "Geothermal Power Plant"[shape=box3d];
+
+    // Relations...
+    "Atmosphere" -> "Carbon Dioxide";
+    "Biophotoreactor Plant" -> "Kelp Fertilizer";
+    "Carbon Dioxide" -> "Biophotoreactor Plant";
+    "Carbon Dioxide" -> "RWGS Reactor";
+    "Carbon Dioxide" -> "Sabatier Reactor";
+    "Carbon Monoxide" -> "Methanol Reactor";
+    "Clay" -> "Ceramics";
+    "Deuterium Isolator" -> "Deuterium";
+    "Deuterium Isolator" -> "Heavy Water";
+    "Dynamic Isotope Power System" -> "Electricity";
+    "Dynamic Isotope Power System" -> "Heat";
+    "Electricity" -> "Biophotoreactor Plant";
+    "Electricity" -> "Deuterium Isolator";
+    "Electricity" -> "Greenhouse";
+    "Electricity" -> "Heat";
+    "Electricity" -> "Mine";
+    "Electricity" -> "Mushroom Ranch";
+    "Electricity" -> "RWGS Reactor";
+    "Electricity" -> "Sabatier Reactor";
+    "Geothermal Power Plant" -> "Electricity";
+    "Geothermal Power Plant" -> "Heat";
+    "Geothermal Power Plant" -> "Water";
+    "Gold" -> "Jenyas";
+    "Greenhouse" -> "Bamboo";
+    "Greenhouse" -> "Food";
+    "Greenhouse" -> "Plant Waste";
+    "Greenhouse" -> "Wood";
+    "Ground" -> "Ice";
+    "Ground" -> "Regolith";
+    "Gypsum" -> "Portland Cement";
+    "Heavy Water" -> "Nuclear Fission Reactor";
+    "Hydrogen" -> "Methanol Reactor";
+    "Hydrogen" -> "RWGS Reactor";
+    "Hydrogen" -> "Sabatier Reactor";
+    "Ice" -> "Carbon Dioxide";
+    "Ice" -> "Water";
+    "Import" -> "Dynamic Isotope Power System";
+    "Import" -> "Hydrogen";
+    "Import" -> "Nuclear Fission Reactor";
+    "Kelp Fertilizer" -> "Greenhouse";
+    "Light" -> "Biophotoreactor Plant";
+    "Light" -> "Greenhouse";
+    "Methanol" -> "Plastics Factory";
+    "Methanol Reactor" -> "Methanol";
+    "Mine" -> "Biophotoreactor Plant";
+    "Mine" -> "Ore";
+    "Mushroom Ranch" -> "Food";
+    "Nuclear Fission Reactor" -> "Electricity";
+    "Ore" -> "Carbon";
+    "Ore" -> "Copper";
+    "Ore" -> "Gold";
+    "Ore" -> "Iron";
+    "Ore" -> "Magnesium";
+    "Ore" -> "Platinum";
+    "Ore" -> "Rhodium";
+    "Ore" -> "Silicon Dioxide";
+    "Ore" -> "Silver";
+    "Ore" -> "Steel";
+    "Plant Waste" -> "Mushroom Ranch";
+    "Plastics Factory" -> "Dimethyl ether";
+    "Plastics Factory" -> "Plastics";
+    "Platinum" -> "Jenyas";
+    "Regolith" -> "Bricks";
+    "Regolith" -> "Clay";
+    "Regolith" -> "Greenhouse";
+    "Regolith" -> "Gypsum";
+    "Regolith" -> "Mine";
+    "Rhodium" -> "Jenyas";
+    "RWGS Reactor" -> "Carbon Monoxide";
+    "RWGS Reactor" -> "Oxygen";
+    "Sabatier Reactor" -> "Methane";
+    "Sabatier Reactor" -> "Water";
+    "Silicon Dioxide" -> "Glass";
+    "Silicon Dioxide" -> "Silicon";
+    "Silver" -> "Jenyas";
+    "Solar" -> "Light";
+    "Solar" -> "Photovoltaic Farm" -> "Electricity";
+    "Water" -> "Biophotoreactor Plant";
+    "Water" -> "Deuterium Isolator";
+    "Water" -> "Hydrogen"
+    "Water" -> "Oxygen";
+}
+

@@ -14,6 +14,7 @@
 % Speedup typescripting considerably at the cost of using additional memory...
 \preloadtypescripts
 
+% Plugins needed...
 \usemodule[units,simplefonts]
 
 % Define colours...
@@ -76,6 +77,9 @@
 \setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
 \setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
 
+% Select language...
+\language[en]
+
 % Setup default text colour...
 \setupcolors[
     state=start,
@@ -100,8 +104,16 @@
    backgroundcolor=colour_page,
    rulethickness=0.5pt]
 
-% Tables of width <0.5 times textwidth are automatically placed at the inner margin...
-\setupfloat[table][criterium=0.5\textwidth,default=inner]
+% Setup floats...
+    
+    % Tables of width <0.5 times textwidth are automatically placed at the inner margin...
+    \setupfloat[table]
+        [criterium=0.5\textwidth,
+         default=inner]
+
+    \setupfloats
+        [spacebefore=1*medium,
+         spaceafter=1*medium]
 
 % Jenya inline figure
 \useexternalfigure[jenya_inline][Source/Terms_and_Concepts/Images/Jenya_red.svg][factor=8]
@@ -161,6 +173,7 @@
 \definedescription[definition]
   [location=top,
    alternative=top,
+   width=fit,
    headcolor=colour_head,
    headstyle=boldslanted]
 

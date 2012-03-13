@@ -39,11 +39,32 @@ digraph Legend {
 	
     // Legends...
     "Sink"[shape="invtriangle"];
-    "Resource"[shape=octagon];
+    "Resource D"[shape=octagon];
     "Mutator"[shape=box3d];
-    "Source"[shape=triangle];
-    
+    "Source"[
+        style = "filled, bold" 
+        fontname = "Ubuntu" 
+        shape = "none" 
+        label =
+            <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                <tr>
+                    <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Source</font></td>
+                </tr>
+                <tr>
+                    <td align="center" port="r1">Resource A</td>
+                </tr>
+                <tr>
+                    <td align="center" port="r2">Resource B</td>
+                </tr>
+                <tr>
+                    <td align="center" port="r3">Resource C</td>
+                </tr>
+            </table>>];
+
     // Relations...
-    "Source" -> "Mutator" -> "Resource" -> "Sink";
+    "Source":r1 -> "Mutator";
+    "Source":r2 -> "Mutator";
+    "Source":r3 -> "Mutator";
+    "Mutator" -> "Resource D" -> "Sink";
 }
 

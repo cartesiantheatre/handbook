@@ -15,12 +15,12 @@ digraph Units {
     // Graph attributes...
 	bgcolor="black";
 	fontname="Ubuntu Bold";
-    labelfontname="Ubuntu Bold";
+    labelfontname="Ubuntu";
     fontsize="25";
 	margin="0";
 	nodesep="0.5 equally";
 	rankdir="LR";
-    ranksep=4;
+    ranksep=8;
     smoothing="power_dist";
     pad="1,1";
     concentrate="true";
@@ -29,7 +29,7 @@ digraph Units {
 	node[color="#d3502dff"];
 	node[fillcolor="gray10"];
     node[fontcolor="#c08453ff"];
-    node[fontname="Ubuntu Bold"];
+    node[fontname="Ubuntu"];
 	node[shape=box];
 	node[style=filled];
 	node[margin="0.2"];
@@ -46,44 +46,120 @@ digraph Units {
         // Cluster attributes...
         label="Sources";
         fontcolor="#c08453ff";
-        node[fontsize="50"];
-	    node[fontname="Ubuntu Bold"];
-        fontsize="80";
+        fontsize="40";
         labelfontname="Ubuntu Bold";
         bgcolor="black";
         color="black";
         
         // Node attributes...
         node[margin="0.4"];
+        node[fontsize="25"];
+	    node[fontname="Ubuntu Bold"];
         
-        // Nodes...
-        "Solar"[shape=triangle];
-        "Atmosphere"[shape=triangle];
-        "Ground"[shape=triangle];
-        "Import"[shape=triangle];
+        // Atmosphere source...
+        "Atmosphere"[
+            style = "filled, bold" 
+            fontname = "Ubuntu" 
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Atmosphere</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Carbon Dioxide">Carbon Dioxide</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Nitrogen">Nitrogen</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Water Vapour">Water Vapour</td>
+                    </tr>
+                </table>>];
+        
+        // Ground source...
+        "Ground"[
+            style = "filled, bold" 
+            fontname = "Ubuntu" 
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Ground</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dry Ice">Dry Ice</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Regolith">Regolith</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Water Ice">Water Ice</td>
+                    </tr>
+                </table>>];
+
+        // Import source...
+        "Imports"[
+            style = "filled, bold" 
+            fontname = "Ubuntu" 
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Imports</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dynamic Isotope Power System">Dynamic Isotope Power System</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Hydrogen">Hydrogen</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Nuclear Fission Reactor">Nuclear Fission Reactor</td>
+                    </tr>
+                </table>>];
+
+        // Solar flux source...
+        "Solar Flux"[
+            style = "filled, bold" 
+            fontname = "Ubuntu" 
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Solar Flux</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Photons">Photons</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Heat">Heat</td>
+                    </tr>
+                </table>>];
     }
 
-    // Sources...
+    /* Sinks...
     subgraph cluster_Sinks
     {
         // Cluster attributes...
         label="Sinks";
         fontcolor="#c08453ff";
-        node[fontsize="50"];
-	    node[fontname="Ubuntu Bold"];
-        fontsize="80";
+        fontsize="40";
         labelfontname="Ubuntu Bold";
         bgcolor="black";
         color="black";
         
         // Node attributes...
-        node[margin="0.4"];
+        node[
+            margin="0.4"
+            fontsize="25"
+            fontname="Ubuntu Bold"
+            style="circle"
+            ];
         
         // Nodes...
-        "Atmosphere"[shape=invtriangle];
-        "Ground"[shape=invtriangle];
-        "Export"[shape=invtriangle];
-    }
+        
+    }*/
     
     // Resources...
     "Bamboo"[shape=octagon];
@@ -135,17 +211,16 @@ digraph Units {
     "Geothermal Power Plant"[shape=box3d];
 
     // Relations...
-    "Atmosphere" -> "Carbon Dioxide";
     "Biophotoreactor Plant" -> "Kelp Fertilizer";
-    "Carbon Dioxide" -> "Biophotoreactor Plant";
-    "Carbon Dioxide" -> "RWGS Reactor";
-    "Carbon Dioxide" -> "Sabatier Reactor";
+    "Atmosphere":"Carbon Dioxide" -> "Biophotoreactor Plant";
+    "Atmosphere":"Carbon Dioxide" -> "RWGS Reactor";
+    "Atmosphere":"Carbon Dioxide" -> "Sabatier Reactor";
     "Carbon Monoxide" -> "Methanol Reactor";
     "Clay" -> "Ceramics";
     "Deuterium Isolator" -> "Deuterium";
     "Deuterium Isolator" -> "Heavy Water";
-    "Dynamic Isotope Power System" -> "Electricity";
-    "Dynamic Isotope Power System" -> "Heat";
+    "Imports":"Dynamic Isotope Power System" -> "Electricity";
+    "Imports":"Dynamic Isotope Power System" -> "Heat";
     "Electricity" -> "Biophotoreactor Plant";
     "Electricity" -> "Deuterium Isolator";
     "Electricity" -> "Greenhouse";
@@ -162,21 +237,16 @@ digraph Units {
     "Greenhouse" -> "Food";
     "Greenhouse" -> "Plant Waste";
     "Greenhouse" -> "Wood";
-    "Ground" -> "Ice";
-    "Ground" -> "Regolith";
     "Gypsum" -> "Portland Cement";
     "Heavy Water" -> "Nuclear Fission Reactor";
+    "Imports":"Hydrogen" -> "Hydrogen";
     "Hydrogen" -> "Methanol Reactor";
     "Hydrogen" -> "RWGS Reactor";
     "Hydrogen" -> "Sabatier Reactor";
-    "Ice" -> "Carbon Dioxide";
-    "Ice" -> "Water";
-    "Import" -> "Dynamic Isotope Power System";
-    "Import" -> "Hydrogen";
-    "Import" -> "Nuclear Fission Reactor";
+    "Ground":"Water Ice" -> "Water";
     "Kelp Fertilizer" -> "Greenhouse";
-    "Light" -> "Biophotoreactor Plant";
-    "Light" -> "Greenhouse";
+    "Solar Flux":"Photons" -> "Biophotoreactor Plant";
+    "Solar Flux":"Photons" -> "Greenhouse";
     "Methanol" -> "Plastics Factory";
     "Methanol Reactor" -> "Methanol";
     "Mine" -> "Biophotoreactor Plant";
@@ -197,11 +267,11 @@ digraph Units {
     "Plastics Factory" -> "Dimethyl ether";
     "Plastics Factory" -> "Plastics";
     "Platinum" -> "Jenyas";
-    "Regolith" -> "Bricks";
-    "Regolith" -> "Clay";
-    "Regolith" -> "Greenhouse";
-    "Regolith" -> "Gypsum";
-    "Regolith" -> "Mine";
+    "Ground":"Regolith" -> "Bricks";
+    "Ground":"Regolith" -> "Clay";
+    "Ground":"Regolith" -> "Greenhouse";
+    "Ground":"Regolith" -> "Gypsum";
+    "Ground":"Regolith" -> "Mine";
     "Rhodium" -> "Jenyas";
     "RWGS Reactor" -> "Carbon Monoxide";
     "RWGS Reactor" -> "Oxygen";
@@ -210,8 +280,8 @@ digraph Units {
     "Silicon Dioxide" -> "Glass";
     "Silicon Dioxide" -> "Silicon";
     "Silver" -> "Jenyas";
-    "Solar" -> "Light";
-    "Solar" -> "Photovoltaic Farm" -> "Electricity";
+    "Solar Flux":"Photons" -> "Photovoltaic Farm";
+    "Photovoltaic Farm" -> "Electricity";
     "Water" -> "Biophotoreactor Plant";
     "Water" -> "Deuterium Isolator";
     "Water" -> "Hydrogen"

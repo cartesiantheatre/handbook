@@ -41,6 +41,8 @@ digraph Legend {
     "Sink"[shape="invtriangle"];
     "Resource D"[shape=octagon];
     "Mutator"[shape=box3d];
+    "Resource A"[shape=octagon];
+    "Resource C"[shape=octagon];
     "Source"[
         style = "filled, bold" 
         fontname = "Ubuntu" 
@@ -62,9 +64,10 @@ digraph Legend {
             </table>>];
 
     // Relations...
-    "Source":r1 -> "Mutator";
-    "Source":r2 -> "Mutator";
-    "Source":r3 -> "Mutator";
+    "Source":r1 -> "Resource A";
+    "Source":r3 -> "Resource C";
+    "Resource A" -> "Mutator";
+    "Resource C" -> "Mutator";
     "Mutator" -> "Resource D" -> "Sink";
 }
 

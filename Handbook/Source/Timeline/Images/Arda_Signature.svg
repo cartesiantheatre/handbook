@@ -57,7 +57,7 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>Arda's Signature</dc:title>
-        <dc:description>See Licensing for details.</dc:description>
+        <dc:description>See Copying for details.</dc:description>
       </cc:Work>
     </rdf:RDF>
   </metadata>

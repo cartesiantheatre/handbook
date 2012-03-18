@@ -19,7 +19,7 @@
 
 CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_TEX_SOURCE              = $(shell find Source/ -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
-ALL_DOT_GRAPHS              = $(patsubst %.gv,%.pdf, $(shell find Source/ -type f -iname '*.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_DOT_GRAPHS              = $(patsubst %.dot.gv,%.pdf, $(shell find Source/ -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Project\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS             = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
@@ -50,7 +50,7 @@ clean-all: clean
 	@ rm -vf ${ALL_DOT_GRAPHS}
 
 # Graphviz dotty file to pdf...
-%.pdf: %.gv
+%.pdf: %.dot.gv
 	dot -Tpdf $< -o $@
 
 # Clean most intermediate build files, including the generated PDF...

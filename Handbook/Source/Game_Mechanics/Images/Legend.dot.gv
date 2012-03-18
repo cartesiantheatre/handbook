@@ -10,7 +10,7 @@
 */
 
 // Legend graph...
-digraph Legend {
+digraph Legend {  
 
     // Graph attributes...
 	bgcolor="black";

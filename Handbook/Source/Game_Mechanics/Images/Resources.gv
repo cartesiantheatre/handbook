@@ -9,8 +9,8 @@
       $ dot -Tpdf Resources.gv -o Resources.pdf
 */
 
-// Units graph...
-digraph Units {
+// Resources graph...
+digraph Resources {
 
     // Graph attributes...
 	bgcolor="black";
@@ -18,12 +18,14 @@ digraph Units {
     labelfontname="Ubuntu";
     fontsize="25";
 	margin="0";
-	nodesep="0.5 equally";
+	nodesep="2.15";
 	rankdir="LR";
     ranksep=8;
-    smoothing="power_dist";
+    overlap=false;
+    splines=ortho;
     pad="1,1";
-    concentrate="true";
+//    concentrate="true";
+//    mode=hier;
 
 	// Node attributes...
 	node[color="#d3502dff"];
@@ -48,14 +50,15 @@ digraph Units {
         fontcolor="#c08453ff";
         fontsize="40";
         labelfontname="Ubuntu Bold";
-        bgcolor="black";
+//        bgcolor="gray10";
         color="black";
         
         // Node attributes...
         node[margin="0.4"];
         node[fontsize="25"];
 	    node[fontname="Ubuntu Bold"];
-        
+
+            pos = "100,100"        
         // Atmosphere source...
         "Atmosphere"[
             style = "filled, bold" 
@@ -256,6 +259,7 @@ digraph Units {
     "Ore" -> "Carbon";
     "Ore" -> "Copper";
     "Ore" -> "Gold";
+    "Ore" -> "Gypsum";
     "Ore" -> "Iron";
     "Ore" -> "Magnesium";
     "Ore" -> "Platinum";
@@ -270,7 +274,6 @@ digraph Units {
     "Ground":"Regolith" -> "Bricks";
     "Ground":"Regolith" -> "Clay";
     "Ground":"Regolith" -> "Greenhouse";
-    "Ground":"Regolith" -> "Gypsum";
     "Ground":"Regolith" -> "Mine";
     "Rhodium" -> "Jenyas";
     "RWGS Reactor" -> "Carbon Monoxide";

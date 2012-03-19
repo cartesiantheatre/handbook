@@ -6,63 +6,41 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ dot -Tpdf Resources.gv -o Resources.pdf
+      $ neato -Tpdf Resources.neato.gv -o Resources.pdf
 */
 
 // Resources graph...
-digraph Resources {
-
+digraph Resources 
+{
     // Graph attributes...
 	bgcolor="black";
-	fontname="Ubuntu Bold";
-    labelfontname="Ubuntu";
-    fontsize="25";
 	margin="0";
-	nodesep="2.15";
 	rankdir="LR";
-    ranksep=8;
-    overlap=false;
-    splines=ortho;
-    pad="1,1";
-//    concentrate="true";
-//    mode=hier;
+//    ranksep="1";
+    splines="ortho";
+    pad="0.5,0.5";
+    concentrate="true";
+    nodesep="0.5";
 
 	// Node attributes...
 	node[color="#d3502dff"];
 	node[fillcolor="gray10"];
     node[fontcolor="#c08453ff"];
     node[fontname="Ubuntu"];
-	node[shape=box];
-	node[style=filled];
-	node[margin="0.2"];
-	node[fontsize="25"];
 	
 	// Edge attributes...
 	edge[color="#c08453ff"];
-	edge[penwidth="1.5"];
-	edge[arrowsize="2.0"];
+	edge[penwidth="1.3"];
 
     // Sources...
     subgraph cluster_Sources
     {
         // Cluster attributes...
-        label="Sources";
-        fontcolor="#c08453ff";
-        fontsize="40";
         labelfontname="Ubuntu Bold";
-//        bgcolor="gray10";
-        color="black";
-        
-        // Node attributes...
-        node[margin="0.4"];
-        node[fontsize="25"];
-	    node[fontname="Ubuntu Bold"];
+        rank="same";
 
-            pos = "100,100"        
         // Atmosphere source...
         "Atmosphere"[
-            style = "filled, bold" 
-            fontname = "Ubuntu" 
             shape = "none" 
             label =
                 <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
@@ -82,8 +60,6 @@ digraph Resources {
         
         // Ground source...
         "Ground"[
-            style = "filled, bold" 
-            fontname = "Ubuntu" 
             shape = "none" 
             label =
                 <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
@@ -91,7 +67,13 @@ digraph Resources {
                         <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Ground</font></td>
                     </tr>
                     <tr>
+                        <td align="center" port="Dry Ice">Artesian Aquifer</td>
+                    </tr>
+                    <tr>
                         <td align="center" port="Dry Ice">Dry Ice</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Ore">Ore</td>
                     </tr>
                     <tr>
                         <td align="center" port="Regolith">Regolith</td>
@@ -103,8 +85,6 @@ digraph Resources {
 
         // Import source...
         "Imports"[
-            style = "filled, bold" 
-            fontname = "Ubuntu" 
             shape = "none" 
             label =
                 <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
@@ -124,8 +104,6 @@ digraph Resources {
 
         // Solar flux source...
         "Solar Flux"[
-            style = "filled, bold" 
-            fontname = "Ubuntu" 
             shape = "none" 
             label =
                 <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
@@ -164,66 +142,97 @@ digraph Resources {
         
     }*/
     
-    // Resources...
-    "Bamboo"[shape=octagon];
-    "Bricks"[shape=octagon];
-    "Carbon"[shape=octagon];
-    "Carbon Monoxide"[shape=octagon];
-    "Ceramics"[shape=octagon];
-    "Clay"[shape=octagon];
-    "Copper"[shape=octagon];
-    "Deuterium"[shape=octagon];
-    "Dimethyl ether"[shape=octagon];
-    "Electricity"[shape=octagon];
-    "Food"[shape=octagon];
-    "Glass"[shape=octagon];
-    "Gold"[shape=octagon];
-    "Gypsum"[shape=octagon];
-    "Heat"[shape=octagon];
-    "Heavy Water"[shape=octagon];
-    "Hydrogen"[shape=octagon];
-    "Iron"[shape=octagon];
-    "Jenyas"[shape=octagon];
-    "Kelp Fertilizer"[shape=octagon];
-    "Magnesium"[shape=octagon];
-    "Methane"[shape=octagon];
-    "Methanol"[shape=octagon];
-    "Ore"[shape=octagon];
-    "Oxygen"[shape=octagon];
-    "Plastics"[shape=octagon];
-    "Platinum"[shape=octagon];
-    "Portland Cement"[shape=octagon];
-    "Rhodium"[shape=octagon];
-    "Silicon"[shape=octagon];
-    "Silicon Dioxide"[shape=octagon];
-    "Silver"[shape=octagon];
-    "Steel"[shape=octagon];
-    "Water"[shape=octagon];
-    "Wood"[shape=octagon];
+    subgraph cluster_Basic_Resources
+    {
+        rank="same";
+        
+        node[shape=octagon];
+        
+        // First order resources...
+        "Carbon Dioxide";
+        "Hydrogen";
+        "Oxygen";
+        "Photons";
+        "Regolith";
+        "Water Ice";
+    }
     
-    // Units... (as processes)
-    "RWGS Reactor"[shape=box3d];
-    "Sabatier Reactor"[shape=box3d];
-    "Deuterium Isolator"[shape=box3d];
-    "Greenhouse"[shape=box3d];
-    "Nuclear Fission Reactor"[shape=box3d];
-    "Biophotoreactor Plant"[shape=box3d];
-    "Photovoltaic Farm"[shape=box3d];
-    "Mushroom Ranch"[shape=box3d];
-    "Mine"[shape=box3d];
-    "Geothermal Power Plant"[shape=box3d];
+//    subgraph cluster_Derived_Resources
+    {
+        node[shape=octagon];
+
+        // All resources...
+        "Bamboo";
+        "Bricks";
+        "Carbon Monoxide";
+        "Ceramics";
+        "Clay";
+        "Copper";
+        "Deuterium";
+        "Dimethyl ether";
+        "Dynamic Isotope Power System";
+        "Electricity";
+        "Food";
+        "Glass";
+        "Gold";
+        "Gypsum";
+        "Heat";
+        "Heavy Water";
+        "Hydrogen";
+        "Iron";
+        "Jenyas";
+        "Kelp Fertilizer";
+        "Magnesium";
+        "Methane";
+        "Methanol";
+        "Ore";
+        "Oxygen";
+        "Plant Waste";
+        "Plastics";
+        "Platinum";
+        "Portland Cement";
+        "Rhodium";
+        "Silicon";
+        "Silicon Dioxide";
+        "Silver";
+        "Steel";
+        "Aqua";
+        "Wood";
+    }
+
+//    subgraph cluster_Units
+    {
+//        rank="same";
+        node[shape=box3d]
+
+        // Mutators...
+        "Biophotoreactor Plant";
+        "Deuterium Isolator";
+        "Geothermal Station";
+        "Greenhouse";
+        "Methanol Reactor";
+        "Mine";
+        "Mushroom Ranch";
+        "Nuclear Fission Reactor";
+        "Photovoltaic Farm";
+        "Plastics Factory";
+        "RWGS Reactor";
+        "Sabatier Reactor";
+    }
 
     // Relations...
+    "Artesian Aquifer" -> "Aqua";
+    "Atmosphere" -> "Carbon Dioxide";
     "Biophotoreactor Plant" -> "Kelp Fertilizer";
-    "Atmosphere":"Carbon Dioxide" -> "Biophotoreactor Plant";
-    "Atmosphere":"Carbon Dioxide" -> "RWGS Reactor";
-    "Atmosphere":"Carbon Dioxide" -> "Sabatier Reactor";
+    "Carbon Dioxide" -> "Biophotoreactor Plant";
+    "Carbon Dioxide" -> "RWGS Reactor";
+    "Carbon Dioxide" -> "Sabatier Reactor";
     "Carbon Monoxide" -> "Methanol Reactor";
     "Clay" -> "Ceramics";
     "Deuterium Isolator" -> "Deuterium";
     "Deuterium Isolator" -> "Heavy Water";
-    "Imports":"Dynamic Isotope Power System" -> "Electricity";
-    "Imports":"Dynamic Isotope Power System" -> "Heat";
+    "Dynamic Isotope Power System" -> "Electricity";
+    "Dynamic Isotope Power System" -> "Heat";
     "Electricity" -> "Biophotoreactor Plant";
     "Electricity" -> "Deuterium Isolator";
     "Electricity" -> "Greenhouse";
@@ -232,31 +241,34 @@ digraph Resources {
     "Electricity" -> "Mushroom Ranch";
     "Electricity" -> "RWGS Reactor";
     "Electricity" -> "Sabatier Reactor";
-    "Geothermal Power Plant" -> "Electricity";
-    "Geothermal Power Plant" -> "Heat";
-    "Geothermal Power Plant" -> "Water";
+    "Geothermal Station" -> "Electricity";
+    "Geothermal Station" -> "Heat";
+    "Geothermal Station" -> "Aqua";
     "Gold" -> "Jenyas";
     "Greenhouse" -> "Bamboo";
     "Greenhouse" -> "Food";
     "Greenhouse" -> "Plant Waste";
     "Greenhouse" -> "Wood";
+    "Ground" -> "Artesian Aquifer";
+    "Ground" -> "Ore";
+    "Ground" -> "Regolith";
+    "Ground" -> "Water Ice";
     "Gypsum" -> "Portland Cement";
     "Heavy Water" -> "Nuclear Fission Reactor";
-    "Imports":"Hydrogen" -> "Hydrogen";
     "Hydrogen" -> "Methanol Reactor";
     "Hydrogen" -> "RWGS Reactor";
     "Hydrogen" -> "Sabatier Reactor";
-    "Ground":"Water Ice" -> "Water";
+    "Imports" -> "Dynamic Isotope Power System";
+    "Imports" -> "Hydrogen";
+    "Imports" -> "Nuclear Fission Reactor";
     "Kelp Fertilizer" -> "Greenhouse";
-    "Solar Flux":"Photons" -> "Biophotoreactor Plant";
-    "Solar Flux":"Photons" -> "Greenhouse";
     "Methanol" -> "Plastics Factory";
     "Methanol Reactor" -> "Methanol";
     "Mine" -> "Biophotoreactor Plant";
     "Mine" -> "Ore";
     "Mushroom Ranch" -> "Food";
     "Nuclear Fission Reactor" -> "Electricity";
-    "Ore" -> "Carbon";
+    "Nuclear Fission Reactor" -> "Heat";
     "Ore" -> "Copper";
     "Ore" -> "Gold";
     "Ore" -> "Gypsum";
@@ -267,27 +279,31 @@ digraph Resources {
     "Ore" -> "Silicon Dioxide";
     "Ore" -> "Silver";
     "Ore" -> "Steel";
+    "Photons" -> "Biophotoreactor Plant";
+    "Photons" -> "Greenhouse";
+    "Photons" -> "Photovoltaic Farm";
+    "Photovoltaic Farm" -> "Electricity";
     "Plant Waste" -> "Mushroom Ranch";
     "Plastics Factory" -> "Dimethyl ether";
     "Plastics Factory" -> "Plastics";
     "Platinum" -> "Jenyas";
-    "Ground":"Regolith" -> "Bricks";
-    "Ground":"Regolith" -> "Clay";
-    "Ground":"Regolith" -> "Greenhouse";
-    "Ground":"Regolith" -> "Mine";
+    "Regolith" -> "Bricks";
+    "Regolith" -> "Clay";
+    "Regolith" -> "Greenhouse";
+    "Regolith" -> "Mine";
     "Rhodium" -> "Jenyas";
     "RWGS Reactor" -> "Carbon Monoxide";
     "RWGS Reactor" -> "Oxygen";
     "Sabatier Reactor" -> "Methane";
-    "Sabatier Reactor" -> "Water";
+    "Sabatier Reactor" -> "Aqua";
     "Silicon Dioxide" -> "Glass";
     "Silicon Dioxide" -> "Silicon";
     "Silver" -> "Jenyas";
-    "Solar Flux":"Photons" -> "Photovoltaic Farm";
-    "Photovoltaic Farm" -> "Electricity";
-    "Water" -> "Biophotoreactor Plant";
-    "Water" -> "Deuterium Isolator";
-    "Water" -> "Hydrogen"
-    "Water" -> "Oxygen";
+    "Solar Flux" -> "Photons";
+    "Aqua" -> "Biophotoreactor Plant";
+    "Aqua" -> "Deuterium Isolator";
+    "Aqua" -> "Hydrogen"
+    "Water Ice" -> "Aqua";
+    "Aqua" -> "Oxygen";
 }
 

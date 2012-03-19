@@ -6,7 +6,7 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ dot -Tpdf Resources.gv -o Resources.pdf
+      $ dot -Tpdf Resources.dot.gv -o Resources.pdf
 */
 
 // Legend graph...

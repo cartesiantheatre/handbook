@@ -1,0 +1,78 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf Sinks.dot.gv -o Sinks.pdf
+*/
+
+// Sinks graph...
+digraph Sinks 
+{  
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	rankdir="LR";
+//    ranksep="1";
+//    splines="ortho";
+    pad="0.5,0.5";
+    concentrate="true";
+    nodesep="0.5";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[fontcolor="#c08453ff"];
+	edge[fontname="Ubuntu"];
+	edge[penwidth="1.3"];
+
+    // Sources...
+    subgraph cluster_Sources
+    {
+        // Cluster attributes...
+        labelfontname="Ubuntu Bold";
+        rank="same";
+
+        // Ground source...
+        "Ground"[
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Ground</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dry Ice">Artesian Aquifer</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Water Ice">&#10998;</td>
+                    </tr>
+                </table>>];
+    }
+
+	// Resources...
+	"Aqua"[shape="octagon"];
+	"Electricity"[shape="octagon"];
+    
+    // Mutators...
+    "Geothermal\nStation"[shape=box3d];
+    
+    // Sinks...
+    "Other\nUses"[shape=invtriangle];
+
+    // Relations...
+    "Ground" -> "Geothermal\nStation";
+    "Geothermal\nStation" -> "Aqua";
+    "Geothermal\nStation" -> "Electricity";
+    "Aqua" -> "Ground"[label="Replenish"];
+    "Aqua" -> "Other\nUses"[label="Deplete"];
+}
+

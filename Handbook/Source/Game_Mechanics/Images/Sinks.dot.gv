@@ -16,11 +16,12 @@ digraph Sinks
 	bgcolor="black";
 	margin="0";
 	rankdir="LR";
-//    ranksep="1";
+    ranksep="1";
 //    splines="ortho";
     pad="0.5,0.5";
     concentrate="true";
-    nodesep="0.5";
+   // nodesep="0.5";
+   
 
 	// Node attributes...
 	node[color="#d3502dff"];
@@ -39,11 +40,14 @@ digraph Sinks
     {
         // Cluster attributes...
         labelfontname="Ubuntu Bold";
-        rank="same";
+        fontname="Ubuntu Bold";
+        fontcolor="#c08453ff"
+//        rank="same";
 
         // Ground source...
         "Ground"[
-            shape = "none" 
+            shape = "none"
+            
             label =
                 <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
                     <tr>
@@ -52,27 +56,26 @@ digraph Sinks
                     <tr>
                         <td align="center" port="Dry Ice">Artesian Aquifer</td>
                     </tr>
-                    <tr>
-                        <td align="center" port="Water Ice">&#10998;</td>
-                    </tr>
                 </table>>];
     }
 
 	// Resources...
 	"Aqua"[shape="octagon"];
 	"Electricity"[shape="octagon"];
+	"Heat"[shape="octagon"];
     
     // Mutators...
     "Geothermal\nStation"[shape=box3d];
     
     // Sinks...
-    "Other\nUses"[shape=invtriangle];
+    "Some\nSink"[shape=invtriangle];
 
     // Relations...
     "Ground" -> "Geothermal\nStation";
     "Geothermal\nStation" -> "Aqua";
     "Geothermal\nStation" -> "Electricity";
+    "Geothermal\nStation" -> "Heat";
     "Aqua" -> "Ground"[label="Replenish"];
-    "Aqua" -> "Other\nUses"[label="Deplete"];
+    "Aqua" -> "Some\nSink"[label="Deplete"];
 }
 

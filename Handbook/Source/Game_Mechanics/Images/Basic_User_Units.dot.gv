@@ -6,31 +6,31 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ dot -Tpdf Units.gv -o Units.pdf
+      $ dot -Tpdf Basic_User_Units.dot.gv -o Units.pdf
 */
 
-// Units graph...
-digraph Units {
-
+// Basic user units graph...
+digraph Basic_User_Units 
+{
     // Graph attributes...
-	graph[bgcolor="gray10"];
-	nodesep="0.5 equally";
+	bgcolor="black";
 	margin="0";
 	rankdir="LR";
-
-    graph[ranksep=4]
-    graph[root="Units"];
+//    ranksep="1";
+    splines="ortho";
+    pad="0.5,0.5";
+    concentrate="true";
+    nodesep="0.5";
 
 	// Node attributes...
 	node[color="#d3502dff"];
-	node[fillcolor="black"];
-	node[fontcolor="#c08453ff"];
-	node[fontname="Ubuntu"];
-	node[shape=box];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
 	
 	// Edge attributes...
 	edge[color="#c08453ff"];
-	edge[arrowhead="vee"];
+	edge[penwidth="1.3"];
 
     /* Root to categories...
     "Units"[shape=folder];

@@ -1,0 +1,49 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf User_Agricultural_Tree.dot.gv -o User_Agricultural_Tree.pdf
+*/
+
+// User agricultural tree...
+digraph User_Agricultural_Tree
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	rankdir="LR";
+    concentrate="true";
+    color="#c08453ff";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape=octagon];
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Agricultural units...
+    subgraph cluster_Agricultural
+    {
+        // Cluster attributes...
+        label="Agricultural";
+        fontcolor="#c08453ff";
+        fontname="Ubuntu Bold";
+        
+        // Units...
+        "Biophotoreactor Plant";
+        "Greenhouse (340 mb)";
+        "Greenhouse (68 mb)";
+        "Mushroom Ranch";
+        "Seed Store";
+    }
+}
+

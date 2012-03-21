@@ -23,6 +23,9 @@ It can be easier to distribute a few files containing many, than many to the end
 As a single file (*.AresPackage), file seek, open, and load times are reduced.
 
 \item
+The EBML format already has a portable interface.
+
+\item
 Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
 \stopitemize
 
@@ -34,7 +37,7 @@ A package manifest is checked against an XML schema (AresPackage.xsd) to verify 
 
 \startCodeExample
 <?xml version="1.0" encoding="UTF-8" ?>
-<AresPackage Name="Title" SchemaFormat="1">
+<AresPackage Name="Title" SchemaFormat="1" Thumbnail="../Title/Artwork/Logo.png">
     <Files NamePrefix="Title/">
         <File Source="../Title/Scripts/Script.lua" Name="Title.luac">
             <Parameter Name="Compile" Value="true" />
@@ -52,15 +55,15 @@ The following diagrams are a graphical representation of the schema, beginning w
 \FullPageDiagram
     {figure:AresPackageManifestSchema_Root}
     {The schema for the {\tt AresPackage} root node of a manifest.}
-    {Source/Contributors/Engineers/Images/AresPackage/Root.png}
+    {Source/Contributors/Engineers/Images/AresPackage/Root.svg}
 
 \FullPageDiagram
     {figure:AresPackageManifestSchema_Files}
     {The schema for the {\tt Files} element of an AresPackage manifest (multiple File).}
-    {Source/Contributors/Engineers/Images/AresPackage/Files.png}
+    {Source/Contributors/Engineers/Images/AresPackage/Files.svg}
 
 \FullPageDiagram
     {figure:AresPackageManifestSchema_File}
     {The schema for the {\tt File} tag of an AresPackage manifest.}
-    {Source/Contributors/Engineers/Images/AresPackage/File.png}
+    {Source/Contributors/Engineers/Images/AresPackage/File.svg}
 

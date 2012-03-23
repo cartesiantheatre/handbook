@@ -17,7 +17,7 @@ digraph Sinks
 	margin="0";
 	rankdir="LR";
     ranksep="1";
-//    splines="ortho";
+    splines="ortho";
     pad="0.5,0.5";
     concentrate="true";
    // nodesep="0.5";
@@ -75,7 +75,7 @@ digraph Sinks
     "Geothermal\nStation" -> "Aqua";
     "Geothermal\nStation" -> "Electricity";
     "Geothermal\nStation" -> "Heat";
-    "Aqua" -> "Ground"[label="Replenish"];
-    "Aqua" -> "Some\nSink"[label="Deplete"];
+    "Aqua" -> "Ground"[label="Replenish\nAquifer\n "];
+    "Aqua" -> "Some\nSink"[label="Deplete\nAquifer\n "];
 }
 

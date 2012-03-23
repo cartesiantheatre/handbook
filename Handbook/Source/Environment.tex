@@ -54,7 +54,7 @@
 % Graphviz version...
 \def\initializeGraphviz
         {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
-                 os.resultof"dot -V")}}
+                 os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
 \initializeGraphviz
 
 % Umbrello version...
@@ -76,6 +76,7 @@
 
 \setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
 \setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
+\setupTABLE[row][each][offset=2mm]
 
 % Select language...
 \language[en]

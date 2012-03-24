@@ -6,7 +6,7 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ neato -Tpdf Resources.neato.gv -o Resources.pdf
+      $ dot -Tpdf Resources.dot.gv -o Resources.pdf
 */
 
 // Resources graph...

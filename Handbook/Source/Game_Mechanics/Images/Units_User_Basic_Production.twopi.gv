@@ -1,0 +1,52 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Production.twopi.gv -o Units_User_Basic_Production.pdf
+*/
+
+digraph Units_User_Basic_Production
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Production";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Production"[shape="folder"];
+        "Factories"[shape="folder"];
+        "Production" -> "Factories";
+            "Factories" -> "Assembly Plant";
+            "Factories" -> "Ethylene Plastics Factory";
+            "Factories" -> "Metallurgical Engineering Facility"; // (needs CO from RWGS)
+            "Factories" -> "Mill";
+        "In-situ Propellant Production"[shape="folder"];
+        "Production" -> "In-situ Propellant Production";
+            "In-situ Propellant Production" -> "Methanol Reactor";
+            "In-situ Propellant Production" -> "Reverse Water Gas Shift Reactor";
+            "In-situ Propellant Production" -> "Sebatier Reactor";
+        "Production" -> "Gas Extractor";
+        "Production" -> "Mine";
+        "Production" -> "Deuterium Isolator";
+}
+

@@ -1,0 +1,48 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Health_Recreational_and_Social.twopi.gv -o Units_User_Basic_Health_Recreational_and_Social.pdf
+*/
+
+digraph Units_User_Basic_Health_Recreational_and_Social
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Health, Recreational, & Social";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Health, Recreational, & Social"[shape="folder"];
+        "Health"[shape="folder"];
+        "Health, Recreational, & Social" -> "Health";
+            "Health" -> "Addiction Resource Centre";
+            "Health" -> "Hospital";
+        "Recreational & Social"[shape="folder"];
+        "Health, Recreational, & Social" -> "Recreational & Social";
+            "Recreational & Social" -> "Community Centre";
+            "Recreational & Social" -> "Community Garden";
+            "Recreational & Social" -> "Playhouse";
+            "Recreational & Social" -> "Stadium";
+}
+

@@ -1,0 +1,49 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Vehicles.twopi.gv -o Units_User_Basic_Vehicles.pdf
+*/
+
+digraph Units_User_Basic_Vehicles
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Vehicles";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Vehicles"[shape="folder"];
+        "Air"[shape="folder"];
+            "Air" -> "Survey Balloon";
+        "Ground"[shape="folder"];
+            "Ground" -> "Cargo Rover";
+            "Ground" -> "Construction Robot";
+            "Ground" -> "Methanol Motorbike";
+            "Ground" -> "Personnel Rover";
+            "Ground" -> "Subterrene Robot";
+            "Ground" -> "Survey Rover";
+            "Ground" -> "Unpressurized Rover";
+            "Ground" -> "Water Drilling Rig";
+}
+

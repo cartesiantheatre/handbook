@@ -20,7 +20,7 @@
 CONTEXT_PRODUCT             = Source/Handbook.tex
 ALL_TEX_SOURCE              = $(shell find Source/ -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 ALL_DOT_PDF              = $(patsubst %.dot.gv,%.pdf, $(shell find Source/ -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
-ALL_NEATO_PDF              = $(patsubst %.neato.gv,%.pdf, $(shell find Source/ -type f -iname '*.neato.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_TWOPI_PDF              = $(patsubst %.twopi.gv,%.pdf, $(shell find Source/ -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
 UMBRELLO_ENGINE_DIAGRAM     = ../AresEngine/UML/Engine.xmi
 OUTPUT                      = Avaneya\ Project\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS             = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
@@ -33,7 +33,7 @@ UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Contributors/Engineers/Images/AresEngine/En
 all: $(OUTPUT) Makefile
 
 # Generate handbook PDF...
-$(OUTPUT): ${ALL_DOT_PDF} $(ALL_NEATO_PDF) $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
+$(OUTPUT): ${ALL_DOT_PDF} $(ALL_TWOPI_PDF) $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
 	context $(CONTEXT_PRODUCT) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
 # Export engine diagram images...
@@ -48,15 +48,15 @@ Viking_Lander_Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 clean-all: clean
 	@ rm -vf Source/Contributors/Engineers/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
-	@ rm -vf ${ALL_DOT_PDF} ${ALL_NEATO_PDF}
+	@ rm -vf ${ALL_DOT_PDF} ${ALL_TWOPI_PDF}
 
 # Graphviz dotty source file to pdf...
 %.pdf: %.dot.gv
 	dot -Tpdf $< -o $@
 
-# Graphviz neato source file to pdf...
-%.pdf: %.neato.gv
-	neato -Tpdf $< -o $@
+# Graphviz twopi source file to pdf...
+%.pdf: %.twopi.gv
+	twopi -Tpdf $< -o $@
 
 # Clean most intermediate build files, including the generated PDF...
 clean:

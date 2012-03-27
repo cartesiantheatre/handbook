@@ -1,0 +1,53 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_All.twopi.gv -o Units_User_Basic_All.pdf
+*/
+
+// High level categories for all of the user's basic units graph...
+digraph Units_User_Basic_All
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	rankdir="LR";
+	ratio="auto";
+    ranksep="3";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="User";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="folder"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // User root node...
+    "User"[shape=tripleoctagon];
+    
+    // Link all categories to user...
+    "User" -> "Agricultural";
+    "User" -> "Construction";
+    "User" -> "Economy & Commerce";
+    "User" -> "Education & Research";
+    "User" -> "Energy";
+    "User" -> "Health, Recreational, & Social";
+    "User" -> "Justice";
+    "User" -> "Militia";
+    "User" -> "Production";
+    "User" -> "Transportation";
+    "User" -> "Zones";
+}
+

@@ -33,10 +33,22 @@ digraph Units_User_Basic_Transportation
 	edge[penwidth="1.3"];
 
     // Units...
+    "Airport"[label="Airport\n[Type: Building]"];
+    "Bridge"[label="Bridge\n[Type: Building]"];
+    "Maglev Station"[label="Maglev Station\n[Type: Building]"];
+    "Maglev Track"[label="Maglev Track\n[Type: Building]"];
+    "Railgun Yard"[label="Railgun Yard\n[Type: Building]"];
+    "Road"[label="Road\n[Type: Building]"];
+    "Starport"[label="Starport\n[Type: Building]"];
+    "Vactrain Station"[label="Vactrain Station\n[Type: Building]"];
+    "Vactrain Track"[label="Vactrain Track\n[Type: Building]"];
+
+    // Relations...
     "Transportation"[shape="folder"];
         "Transportation" -> "Airport";
+        "Transportation" -> "Bridge";
         "Transportation" -> "Railgun Yard";
-        "Transportation" -> "Road";
+        "Transportation" -> "Road"; // Allow curved
         "Transportation" -> "Starport";
         "Trains"[shape="folder"];
         "Transportation" -> "Trains";

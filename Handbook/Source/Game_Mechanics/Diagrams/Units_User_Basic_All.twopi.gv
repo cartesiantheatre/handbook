@@ -39,7 +39,6 @@ digraph Units_User_Basic_All
     
     // Link all categories to user...
     "User" -> "Agricultural";
-    "User" -> "Construction";
     "User" -> "Economy & Commerce";
     "User" -> "Education & Research";
     "User" -> "Energy";

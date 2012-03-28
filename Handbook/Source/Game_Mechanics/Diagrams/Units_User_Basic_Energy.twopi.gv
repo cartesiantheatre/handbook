@@ -33,6 +33,12 @@ digraph Units_User_Basic_Energy
 	edge[penwidth="1.3"];
 
     // Units...
+    "Dynamic Isotope Power System"[label="Dynamic Isotope Power System\n[Type: Building]"];
+    "Geothermal Station"[label="Geothermal Station\n[Type: Building]"];
+    "Nuclear Fission Reactor"[label="Nuclear Fission Reactor\n[Type: Building]"];
+    "Photovoltaic Farm"[label="Photovoltaic Farm\n[Type: Building]"];
+
+    // Relations...
     "Energy"[shape="folder"];
         "Energy" -> "Dynamic Isotope Power System";
         "Energy" -> "Geothermal Station";

@@ -1,0 +1,61 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Civic.twopi.gv -o Units_User_Basic_Civic.pdf
+*/
+
+digraph Units_User_Basic_Civic
+{
+    // Graph attributes...
+	bgcolor="black";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Civic";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Court"[label="Court\n[Type: Building]"];
+    "Police Station"[label="Police Station\n[Type: Building]"];
+    "Prison"[label="Prison\n[Type: Building]"];
+    "Armoured Dragoons Regiment"[label="Armoured Dragoons Regiment\n[Type: Building]"];
+    "Artillery Regiment"[label="Artillery Regiment\n[Type: Building]"];
+    "Combat Support Engineers Regiment"[label="Combat Support Engineers Regiment\n[Type: Building]"];
+    "Drill Hall"[label="Drill Hall\n[Type: Building]"];
+    "Mechanized Infantry Regiment"[label="Mechanized Infantry Regiment\n[Type: Building]"];
+
+    // Relations...
+    "Civic"[shape="folder"];
+        "Civic" -> "Court";
+        "Civic" -> "Fire Hall";
+        "Civic" -> "Full Reserve Bank";
+        "Civic" -> "Police Station";
+        "Civic" -> "Prison";
+        "Civic" -> "Militia";
+        "Civic" -> "Water Tower";
+        "Militia"[shape="folder"];
+            "Militia" -> "Armoured Dragoons Regiment";
+            "Militia" -> "Artillery Regiment";
+            "Militia" -> "Combat Support Engineers Regiment";
+            "Militia" -> "Drill Hall";
+            "Militia" -> "Mechanized Infantry Regiment";
+}
+

@@ -33,6 +33,17 @@ digraph Units_User_Basic_Vehicles
 	edge[penwidth="1.3"];
 
     // Units...
+    "Cargo Rover"[label="Cargo Rover\n[Type: Building]"];
+    "Construction Robot"[label="Construction Robot\n[Type: Building]"];
+    "Methanol Motorbike"[label="Methanol Motorbike\n[Type: Building]"];
+    "Personnel Rover"[label="Personnel Rover\n[Type: Building]"];
+    "Subterrene Robot"[label="Subterrene Robot\n[Type: Building]"];
+    "Survey Balloon"[label="Survey Balloon\n[Type: Building]"];
+    "Survey Rover"[label="Survey Rover\n[Type: Building]"];
+    "Unpressurized Rover"[label="Unpressurized Rover\n[Type: Building]"];
+    "Water Drilling Rig"[label="Water Drilling Rig\n[Type: Building]"];
+    
+    // Relations...
     "Vehicles"[shape="folder"];
         "Air"[shape="folder"];
             "Air" -> "Survey Balloon";

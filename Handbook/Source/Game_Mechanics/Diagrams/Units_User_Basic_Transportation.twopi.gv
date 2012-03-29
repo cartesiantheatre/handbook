@@ -40,16 +40,18 @@ digraph Units_User_Basic_Transportation
     "Railgun Yard"[label="Railgun Yard\n[Type: Building]"];
     "Road"[label="Road\n[Type: Building]"];
     "Starport"[label="Starport\n[Type: Building]"];
+    "Tunnel"[label="Tunnel\n[Type: Building]"];
     "Vactrain Station"[label="Vactrain Station\n[Type: Building]"];
     "Vactrain Track"[label="Vactrain Track\n[Type: Building]"];
 
-    // Relations...
+    // Categorical relations, but not build dependencies...
     "Transportation"[shape="folder"];
         "Transportation" -> "Airport";
         "Transportation" -> "Bridge";
         "Transportation" -> "Railgun Yard";
         "Transportation" -> "Road"; // Allow curved
         "Transportation" -> "Starport";
+        "Transportation" -> "Tunnel";
         "Trains"[shape="folder"];
         "Transportation" -> "Trains";
             "Trains" -> "Maglev Station";

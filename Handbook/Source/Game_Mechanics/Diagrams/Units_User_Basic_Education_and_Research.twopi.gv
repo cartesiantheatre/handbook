@@ -42,7 +42,7 @@ digraph Units_User_Basic_Education_and_Research
     "School"[label="School\n[Type: Building]"];
     "University"[label="University\n[Type: Building]"];
 
-    // Research...
+    // Categorical relations, but not build dependencies...
     "Education & Research"[shape="folder"];
         "Education & Research" -> "Library";
         "Education & Research" -> "School";

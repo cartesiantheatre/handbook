@@ -16,7 +16,7 @@ But most units can and will change with time depending on various factors that t
 
 We should now take a look at some of the different categories that form the basic unit tree available to the user. This is a very modest subset of all units the user can possibly create, but does not illustrate the variety each unit can express. For buildings these categories are {\it Agricultural}; {\it Construction}; {\it Economic}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones} for commercial or residential use. Because these are high level categories, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
 
-If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the user. The figures that follow are an exploration of each of these high level categories.
+If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the user. The figures that follow are an exploration of each of these high level categories. Note that they illustrate only the categorical relations, but not which unit is required to be built in order to provide for the availability of another unit (build dependencies).
 
 \page
 \placefigure
@@ -72,4 +72,11 @@ If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of
     [figure:Units_User_Basic_Zones]
     {User's basic zone unit tree.}
     {\externalfigure[Source/Game_Mechanics/Diagrams/Units_User_Basic_Zones.pdf][][frame=off,height=0.45\textheight]}
+
+Some of the user's basic units, usually buildings, can produce different types of vehicles. Some of these vehicular units are ground based, some airborne, and yet others capable of entering suborbital or transplanetary regions. We will now take a look at all the different types of mobile units that are available in the basic unit tree and which units are responsible for their creation and how they organize them categorically. Assume that when a building is selected in the graphical user interface, options are conditionally available to create supported vehicles.
+
+\FullPageDiagram
+    {figure:Units_User_Basic_Vehicles}
+    {User's basic vehicular unit tree and the units responsible for their creation.}
+    {Source/Game_Mechanics/Diagrams/Units_User_Basic_Vehicles.pdf}
 

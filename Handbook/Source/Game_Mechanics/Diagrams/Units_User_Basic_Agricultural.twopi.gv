@@ -39,7 +39,7 @@ digraph Units_User_Basic_Agricultural
     "Mushroom Ranch"[label="Mushroom Ranch\n[Type: Building]"];
     "Seed Store"[label="Seed Store\n[Type: Building]"];
 
-    // Relations...
+    // Categorical relations, but not build dependencies...
     "Agricultural"[shape="folder"];
         "Agricultural" -> "Biophotoreactor Plant";
         "Agricultural" -> "Greenhouse (68 mb)";

@@ -32,7 +32,7 @@ digraph Units_User_Basic_Zones
 	edge[color="#c08453ff"];
 	edge[penwidth="1.3"];
 
-    // Zones...
+    // Units...
     "Habitat"[label="Habitat\n[Type: Zone]"];
     "Industrial"[label="Industrial\n[Type: Zone]"];
     "Service"[label="Service\n[Type: Zone]"];

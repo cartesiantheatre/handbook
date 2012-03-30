@@ -27,7 +27,7 @@ This diagram captures the engine at the highest level of abstraction and provide
 \StartSubSubSection{Artificial Intelligence}
 This diagram concerns itself with useful artificial intelligence algorithms, though not of an entire subsystem itself.
 
-It contains an implementation of the A* search strategy algorithm.\footnote{See {\it Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} The problem here is represented as a pattern for an abstract base class called {\tt AStarBase}. The {\it h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
+It contains an implementation of the A\top{*} search strategy algorithm. The problem here is represented as a pattern for an abstract base class called {\tt AStarBase}. The {\it h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
 
 \FullPageDiagram
     {figure:ArtificialIntelligenceUML}

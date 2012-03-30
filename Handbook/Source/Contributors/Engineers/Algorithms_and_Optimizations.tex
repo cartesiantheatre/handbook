@@ -1,0 +1,66 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% Algorithms & Optimizations subsection...
+\StartSubSection{Algorithms & Optimizations}
+We will share in this subsection some of the different algorithms and optimization techniques we selected to tackle the many different problems the project must address. Consider the following methods tentative without thought of absolute commitment. This is necessary since deep into the project's implementation we may find any of these solutions to be problematic, prompting a need to explore alternatives. 
+
+Some of the methods are useful in only one specific domain, such as working with the geometry of a landscape (e.g. terrain generation), whereas others are general enough that they can be considered domain agnostic (e.g. parallelization) for solving many different types of seemingly unrelated problems.
+
+\StartSubSubSection{Procedural Generation}
+Procedural generation is a mathematical technique for algorithmically producing some kind of data automatically, as opposed to manually. As a general rule with this project, whenever we can reasonably get away with it, as opposed to providing static data, we will. The advantages are many, but we can name a few. These include a reduced storage footprint, increased performance, a theoretical infinite resolution in some situations, and most importantly, an opportunity for every user to experience something unique that would not have been possible with static data.
+
+In the context of graphics, procedural generation is certainly not a new concept, most graphics engineers probably having at least heard of it by now. But it is comparatively unheard of as far as creating a dynamic auditory experience. Some possibilities to consider: We could experiment with attempting to dynamically create the rumbles of a marsquake which are streamed to the user's subwoofer, the sound of dry-ice hail impacting on the frozen Martian tundra; the static heard over a radio, or what have you. Many books and papers have been written on the subject.\footnote{Game universe books} The possibilities are largely limited by the imagination of the engineer.
+
+Terrain generation is another application. The terrain problems are common to any game that requires the rendering of a three-dimensional landscape. Height maps? Not if we want overhangs. High resolution detail at any level of magnification? Not if we want an interactive frame rate.
+
+What about using real topographical data of Mars? Possible, but there is a problem. The spatial resolution of the data NASA's Planetary Data System has provided at the time of writing is not fine enough.\footnote{http://pds-geosciences.wustl.edu/missions/mgs/megdr.html} It might be fine when the user is zoomed out, but what about if they are zoomed in really close to the landscape. Even if the data's spatial resolution was fine enough to determine elevation at distances as small as a metre, we're now left with the problem of too much geometry for the machine to realistically handle at an interactive frame rate. Whatever was viewable at a micro-level, even if we hide everything else not visible, surely must still be present at a macro-level in all that is present in the viewport. Or does it?
+
+Ryan Geiss is well known for his non-free Geiss visualizer for Winamp. The plugin is considered a classic because its author was a pioneer in the field of sound activated graphics (visualization). But Ryan has also made contributions few have heard about in other fields, such as in procedural terrain generation. His article on {\it Generating Complex Procedural Terrains Using the GPU}\footnote{http://www.geisswerks.com/about_terrain.html} provides an attractive candidate solution for our needs. The method he describes even allow overhangs, something traditional height maps cannot handle. It also generates rich and highly detailed geometry. He manages to do this actually at an interactive frame rate by generating the geometry entirely on the fly. This is accomplished by offloading the entire computation to the GPU where he relies on fractals and several octaves of noise to produce the vertex data. Consider taking a look at one of the demonstrations he provides.\footnote{http://www.geisswerks.com/gpugems3ch/MVI_7867.avi}
+
+However, we are still left to solve the problems of terrain deformation, as well as satisfying the user's preference for incorporating real topographical data if possible. In the case of the latter, it may be theoretically possible to influence Ryan's algorithm at a macro-level by \quote{seeding it} with an initial brute-force approach using what is topographically known now, while dynamically \quote{filling in} the details between algorithmically.
+
+We might see another performance improvement by harnessing hardware based GLSL {\tt noise*()} functions which can provide pseudo-random numbers for the shaders workhorses responsible for accomplishing the aforemention. At the time of writing, most hardware vendors do not implement this function (e.g. it always returns 0.0), so we must check at runtime whether it is implemented, and if not, use a software fallback.
+
+\StartSubSubSection{Lighting}
+For lighting, we will have to experiment with the capabilities of OGRE 3D, our rendering engine. Still, there are some algorithms to consider earmarking for the time being. For static objects, such as buildings and terrain, we may be able to take advantage of spherical harmonics for real-time lighting.\footnote{vid Orange p.365} We can also consider using deferred shading for volume shadows.\footnote{Ibid p.392} For global or ambient illumination, we might leverage a hemispherical lighting model. Time will tell, as there is no {\it a priori} substitute for actual experimentation.
+
+\StartSubSubSection{Random Number Generation}
+Random numbers are vital to most games and many different types of simulations. The stream of random numbers a game needs usually do not need to be as high quality as in statistical and scientific computing, but clearly are wanting of something better than most standard library's implementations such as your C++ compiler's {\tt std::srand()} and {\tt std::rand()} functions with small periods. 
+
+The random number stream may be consumed thousands of times a second where they can be decisive in determining the causal flow of events a user experiences in a game. Considering this, we selected Makoto Matsumoto's algorithm, a popular high quality pseudo-random number generator.\footnote{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_rand.aspx\#mersenne} The algorithm offers an excellent balance between performance and quality of output.
+
+As a possibility for one of its many novel uses, it may be possible to parametrically define a unit's model with a random parameter. Consider the object using it for expressing its idiosyncrasies. For example, two building units that would ordinarily be the same, such as a pressurized habitat, could use the random parameter to make, say, the foliage in their indoor courtyards different from one another by seeding the vegetation generation subroutine something different than the other model. The possibilities are largely limited by the imagination of the artist.
+
+\StartSubSubSection{General Simulation}
+For modelling some aspects of a social simulation, it is very difficult to commit to specific algorithms and models until the game's implementation is more mature. The reason being is that it is hard to tell how well an approach will perform until tried. Something to consider for the time being, however, is using a Hubbert curve for representing resource consumption models of limited natural resources.\footnote{https://en.wikipedia.org/wiki/Hubbert_curve}
+
+\StartSubSubSection{Asymptotic Complexity}
+With every bit of eye candy, bell, and whistle we add to any software, there is the inherent problem of an increased burden on hardware. We need to take advantage of optimizations whenever and wherever possible. As a general rule, it is more important to be concerned with how your algorithm scales (asymptotic complexity) than getting bogged down in the details of a specific stage of its execution that only offers modest improvement at best (a constant time optimization). Asymptotic complexity can be daunting, but you do not need a degree in computer science to understand it.\footnote{http://www.eternallyconfuzzled.com/arts/jsw_art_bigo.aspx}
+
+Nevertheless, sometimes having already taken an algorithm's complexity to its practical limit, such as refactoring it to be parallelized, constant time optimizations are all that remain and sometimes offer remarkable performance improvements. Most libraries the AresEngine links against are probably already optimized whatever architecture their compilation is supported on, such as SDL, but not everything our engine consists of is found in 3\high{rd}-party libraries. If that were the case, we would have much less work to do with not having to write so much as a line of engine code. With that in mind, here there are many useful tips to be cognisant of.
+
+\StartSubSubSection{Square Roots}
+Square roots are common in game programming and nearly always pop up whenever vectors, trigonometry, and so on are involved. Nevertheless, avoid them whenever possible. Use the squared magnitude instead. The former is slow, the latter faster - albeit at the cost of accuracy. This is useful whether you are writing code for either the CPU or GPU.
+
+\StartSubSubSection{Vectorization}
+Take advantage of the vectorization a given architecture's accelerated instruction set is furnished with whenever possible. This is sometimes called single instruction, multiple data (SIMD). These days, virtually every major architecture offers some variant of this concept under a name of its.
+
+Since we are using the GNU Compiler Collection, we can leverage their already existing implementation of Intel's specification whenever dealing with {\tt amd64} and {\tt i686} architecture, as found in {\tt xmmintrin.h}. This is especially useful for linear algebra and other math related routines. But it is probably be better if we use a more general method that takes advantage of vectorization whenever possible in an architecturally agnostic manner by using GCC's built--in vector extensions.\footnote{http://gcc.gnu.org/onlinedocs/gcc/Vector-Extensions.html\#Vector-Extensions}
+
+\StartSubSubSection{Inline Methods}
+Whenever you want a C++ class's declaration to contain some inline code, leave the class's declaration as usual in its own header, but consider moving the actual inline definitions into a separate header. You can then include the latter into the former (e.g. {\tt \#include <SomeClass.inl>}) after its declaration. This way you get the benefits of inline methods where you need them for whatever reason, but without confusing clients of the class in having them do something unusual. They only have to {\tt \#include <SomeClass.h>} as usual.
+
+\StartSubSubSection{Memoization}
+Memoization, not to be confused with memorization, is a technique in algorithm design that preserves the results of costly computations whenever it is possible to re-use the result without having to perform the entire calculation again for a given input. When scripting, we should take advantage of Lua's {\tt memoization(f)} function whenever possible.\footnote{p26 of Lua Gems} The function works by creating a new function that returns the same result as {\tt f} on a given input, but by memoizing its result. As long as {\tt f} does not have any side effects, we can use the memoized variant.
+
+\StartSubSubSection{Instrumentation & Performance Analysis}
+A general software engineering principle is to make a program work first, then to make it faster. There will come a point when some comprehensive analysis will be necessary of the engine when it is sufficiently mature to help identify performance bottlenecks that were not obvious earlier on. This typically comes either through instrumentation (e.g. {\tt gprof}) or some other performance analysis technique. On Intel architectures, we should examine the machine's performance counters to check for the frequency of cache misses. This is very important, especially on consoles.
+
+\StartSubSubSection{Path Finding}
+A path finding algorithm is necessary for mobile units, such as any of the vehicles described in \in{figure}[figure:Units_User_Basic_Vehicles]. They sometimes need to self-navigate from one location to another where a non-trivial path may be necessary. By non-trivial, we mean the best path could involve balancing a number of constraints, such as minimizing fuel expenditure, time, distance, going around obstacles, or what have you. 
+
+For this problem we have selected the tried and true A\top{*} search strategy algorithm.\footnote{See {\it Computational Intelligence: A Logical Approach}, Poole et al., 1998 for an explanation on the algorithm.} Most textbooks on artificial intelligence that cover search strategy algorithms deal with it, though they vary in clarity. For our proposed implementation, take a look at \in{section}[Artificial Intelligence].
+

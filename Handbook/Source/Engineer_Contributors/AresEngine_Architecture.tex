@@ -4,7 +4,7 @@
 % See the file License for copying conditions.
 
 % AresEngine architectural design...
-\StartSubSection{Architecture}
+\StartSection{AresEngine's Architecture}
 
 The AresEngine is responsible for delivering Avaneya, the mod. It is designed by the Avaneya Project Crew to provide for the game, but kept architecturally general enough to lend itself to other projects of similar technical requirements (e.g. a city builder / real time strategy genre). If you do not know what a game engine is, Jason Gregory's book {\it Game Engine Programming},\footnote{See \in{section}[Resources For Engineers] for details on this book.} is highly recommended.
 
@@ -15,28 +15,28 @@ Umbrello was used to come up with the architectural design. At this time, you ma
 The following architectural diagrams were pulled from the AresEngine's Umbrello project file automatically at the time this handbook was compiled on \currentdate\ from Bazaar revision \BazaarRevision, and using \UmbrelloVersion.
 
 % Engine subsubsection...
-\StartSubSubSection{Engine}
+\StartSubSection{Engine}
 This diagram captures the engine at the highest level of abstraction and provides an overview of its components.
 
 \FullPageDiagram
     {figure:EngineUML}
     {The AresEngine high level overview.}
-    {Source/Contributors/Engineers/Images/AresEngine/Engine.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Engine.svg}
 
 % Artificial intelligence subsubsection...
-\StartSubSubSection{Artificial Intelligence}
+\StartSubSection{Artificial Intelligence}
 This diagram concerns itself with useful artificial intelligence algorithms, though not of an entire subsystem itself.
 
-It contains an implementation of the A\top{*} search strategy algorithm. The problem here is represented as a pattern for an abstract base class called {\tt AStarBase}. The {\it h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
+It contains an implementation of the A\high{*} search strategy algorithm. The problem here is represented as a pattern for an abstract base class called {\tt AStarBase}. The {\it h(x)} heuristic function is implemented via an override a context specific superclass. The abstract base class is deliberately kept general so as to not be limited to searching for a solution in a spatial sense, but in any representable solution space (e.g. time, language, etc.).
 
 \FullPageDiagram
     {figure:ArtificialIntelligenceUML}
     {Engine's artificial intelligence facilities.}
-    {Source/Contributors/Engineers/Images/AresEngine/Artificial Intelligence.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Artificial Intelligence.svg}
 
 % Audio subsubsection...
 \page
-\StartSubSubSection{Audio}
+\StartSubSection{Audio}
 The {\tt AudioManager} subsystem is responsible for all tasks related to audio. Audio playback is divided into streaming and static audio sources. Streaming sources need to be continuously updated by loading new data from disk, decompressing it, and playing it. A common example would be music or narrative. Static sources are usually smaller and only need to played once before being freed. Static source examples would be things like the sound of an object contacting another.
 
 Decoding is done through an appropriate subclass of an {\tt Ares::AudioDecoderBase} abstract class, instantiated via the {\tt Ares::AudioDecoderFactory} class. Most decoding is done through a subclass of the aforementioned via {\tt SDL_audio}.
@@ -46,11 +46,11 @@ Playback is accomplished through OpenAL.
 \FullPageDiagram
     {figure:AudioUML}
     {The audio subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Audio.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Audio.svg}
 
 % Configuration subsubsection...
 \page
-\StartSubSubSection{Configuration}
+\StartSubSection{Configuration}
 The {\tt ConfigurationManager} subsystem is responsible for storing all user configuration. Its {\tt Load()} method reads all configuration variables from disk, and then adds variables from command line as well, in that order. 
 
 Latter configuration variables read are set as non-archivable. A non-archivable configuration variable is one that is not saved to disk.
@@ -60,11 +60,11 @@ Much of the manager is implemented in Lua because of its excellent database hand
 \FullPageDiagram
     {figure:ConfigurationUML}
     {The configuration subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Configuration.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Configuration.svg}
 
 % Console subsubsection...
 \page
-\StartSubSubSection{Console}
+\StartSubSection{Console}
 The in game console allows users to access aspects of the game engine at runtime. This is useful for debugging or other purposes.
 
 Console commands are implemented in Lua.
@@ -72,11 +72,11 @@ Console commands are implemented in Lua.
 \FullPageDiagram
     {figure:ConsoleUML}
     {The console subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Console.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Console.svg}
 
 % Design patterns subsubsection...
 \page
-\StartSubSubSection{Design Patterns}
+\StartSubSection{Design Patterns}
 This diagram contains a number of common place design patterns found in many software projects, such as the singleton and multi-factory. 
 
 There seems to be two kinds of singleton design patterns in the literature that are not distinguished, but should be. There is the kind whose instantiation is implicit, meaning you don't care when it is created, just as long as it is there when you need it and that there is only at most one of them ever at a given time. We refer to this as the {\it implicit singleton} and it typically uses lazy instantiation.
@@ -86,11 +86,11 @@ The second kind, like the first, only ever has one instance, but you control whe
 \FullPageDiagram
     {figure:DesignPatternsUML}
     {Useful design patterns.}
-    {Source/Contributors/Engineers/Images/AresEngine/Design Patterns.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Design Patterns.svg}
 
 % Events subsubsection...
 \page 
-\StartSubSubSection{Events}
+\StartSubSection{Events}
 The {\it EventManager} is responsible for intercommunication between various engine components and scripts. The steps for working with events are as follows.
 
 An event handler can either contain an {\it Ares::EventHandler} class, or can derive from it and override the {\tt OnEvent()} method. It registers interest in one or more events via the {\tt Register()} method:
@@ -117,11 +117,11 @@ Events.xml contains a list of built-in event types, game engine mod agnostic, fo
 \FullPageDiagram
     {figure:EventUML}
     {The event subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Events.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Events.svg}
 
 % File System subsubsection...
 \page 
-\StartSubSubSection{File System}
+\StartSubSection{File System}
 Accessing files on disk for textures, shaders, scripts, models, sounds, and so on, requires an intermediary in most game engines. The AresEngine is no different. Files are stored inside of an EBML encoded container format called an AresPackage. You can read more about it in \in{section}[AresPackages]. The EBML format was selected because it enables extendability for future format changes and allows arbitrary metadata. 
 
 It also has performance advantages because only a single file (*.AresPackage) needs to be located for a group of files contained within it. This reduces file seek and access times. This is further enhanced with the fact that the AresPackage files can be compressed. Accessing a single AresPackage file containing many compressed files means that the engine will take less time to access its payload since transferring a single small file from disk and decompressing it in RAM to unpack many files is much faster than transferring a single large or multitude of uncompressed files from disk to RAM. The CPU is fast because it is purely electronic. The hard drive and optical media are slow because they are electromechanical and must wait for the disk to spin to the right location before it can read, which is, on average, half the worst case seek time.
@@ -129,11 +129,11 @@ It also has performance advantages because only a single file (*.AresPackage) ne
 \FullPageDiagram
     {figure:FileSystemUML}
     {The file system subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/File System.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/File System.svg}
 
 % Gooey subsubsection...
 \page 
-\StartSubSubSection{Gooey}
+\StartSubSection{Gooey}
 The {\it GooeyManager} is responsible for managing all graphical user interface overlays and user interaction with them. Its underlying functionality is provided by CEGUI which integrates well into OGRE 3D.
 
 {\tt GooeyManager::Initialize()} calls {\tt CEGUI::OgreRenderer::bootstrapSystem()}. This bootstraps {\tt CEGUI::System} with an {\tt OgreRenderer} object that uses the default Ogre rendering window as the default output surface, an Ogre based {\it ResourceProvider}, and an Ogre based {\it ImageCodec}.
@@ -147,82 +147,82 @@ Most of the interesting interfaces are within CEGUI singletons themselves, with 
 \FullPageDiagram
     {figure:GooeyUML}
     {The graphical user interface subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Gooey.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Gooey.svg}
 
 % Human Interface subsubsection...
 \page 
-\StartSubSubSection{Human Interface}
+\StartSubSection{Human Interface}
 The {\it HumanInterfaceManager} takes care of routing all events from input devices to the appropriate code that has registered to be notified of that event. In that sense, the manager is mostly unidirectional, but also allows to send information the other way back to the input device if it supports a haptic interface (sometimes called force feedback).
 
 \FullPageDiagram
     {figure:HumanInterfaceUML}
     {The human interface subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Human Interface.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Human Interface.svg}
 
 % Logging & Error Control subsubsection...
 \page 
-\StartSubSubSection{Logging & Error Control}
+\StartSubSection{Logging & Error Control}
 The {\tt LogManager} is responsible for providing a central logging subsystem for all the other subsystems.
 
 \FullPageDiagram
     {figure:LoggingUML}
     {The logging and error control subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Logging and Error Control.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Logging and Error Control.svg}
     
 Since message can be emitted from any number of places, such as within the engine, or within some other externally linked component, such as CEGUI or OGRE, messages have to be intercepted and channeled through the {\tt LogManager}. The following diagram makes this more clear.
 
 \FullPageDiagram
     {figure:LoggingStateUML}
     {The logging pipeline.}
-    {Source/Contributors/Engineers/Images/AresEngine/Logging State Diagram.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Logging State Diagram.svg}
 
 % Mathematical subsubsection...
 \page 
-\StartSubSubSection{Mathematical}
+\StartSubSection{Mathematical}
 Most mathematical routines for matrices and other linear algebra are provided by OGRE 3D. Some things like more advanced random number generation have to be implemented ourselves here.
 
 \FullPageDiagram
     {figure:MathematicalUML}
     {Various mathematical facilities.}
-    {Source/Contributors/Engineers/Images/AresEngine/Mathematical.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Mathematical.svg}
 
 % Miscellaneous subsubsection...
 \page 
-\StartSubSubSection{Miscellaneous}
+\StartSubSection{Miscellaneous}
 This is a catch-all for classes and functions that had no business elsewhere.
 
 \FullPageDiagram
     {figure:MiscellaneousUML}
     {Miscellaneous engine components.}
-    {Source/Contributors/Engineers/Images/AresEngine/Miscellaneous.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Miscellaneous.svg}
 
 % Physics subsubsection...
 \page 
-\StartSubSubSection{Physics}
+\StartSubSection{Physics}
 The {\tt PhysicsManager} needs to be seriously refactored since OgreBullet was found as a viable option for physics support. This is the original, incomplete, design before that decision was made.
 
 \FullPageDiagram
     {figure:ScriptingUML}
     {The scripting subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Physics.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Physics.svg}
 
 % Resources subsubsection...
 \page 
-\StartSubSubSection{Resources}
+\StartSubSection{Resources}
 The {\tt ResourceManager} is responsible for ensuring that whenever code needs a piece of game data, such as a model or animation, all of its requisites are loaded, in the correct order, only once, and take up only as much room as they absolutely must. The {\tt ResourceManager} and the {\tt FileManager} communicate to help the former locate what it needs physically on disk.
 
 \FullPageDiagram
     {figure:ResourcesUML}
     {The resources subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Resources.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Resources.svg}
 
 % Scripting subsubsection...
 \page 
-\StartSubSubSection{Scripting}
+\StartSubSection{Scripting}
 The {\tt ScriptManager} is responsible for exposing all useful aspects of the game engine to the game scripters. Since the engine itself is defined in code, the role of defining what makes Avaneya, Avaneya, is left to script writers.
 
 \FullPageDiagram
     {figure:ScriptingUML}
     {The scripting subsystem.}
-    {Source/Contributors/Engineers/Images/AresEngine/Scripting.svg}
+    {Source/Engineer_Contributors/Images/AresEngine/Scripting.svg}
 

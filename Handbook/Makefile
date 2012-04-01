@@ -27,8 +27,8 @@ OUTPUT                  = Avaneya\ Project\ Crew\ Handbook.pdf
 CONTEXT_OPTIONS         = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
 
 # Umbrello can only export all or none of its diagrams, so we specify an 
-#  arbitrary one...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Contributors/Engineers/Images/AresEngine/Engine.svg
+#  arbitrary one to trigger exporting all of them...
+UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Engineer_Contributors/Images/AresEngine/Engine.svg
 
 # Generate handbook PDF, but also check if this makefile is updated...
 all: $(OUTPUT) Makefile
@@ -42,7 +42,7 @@ graphviz: ${ALL_DOT_PDF} $(ALL_TWOPI_PDF)
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Contributors/Engineers/Images/AresEngine
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Engineer_Contributors/Images/AresEngine
 
 # Just produce the Viking Lander Remastered chapter...
 Viking_Lander_Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
@@ -50,7 +50,7 @@ Viking_Lander_Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
-	@ rm -vf Source/Contributors/Engineers/Images/AresEngine/*.svg
+	@ rm -vf Source/Engineer_Contributors/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
 	@ rm -vf ${ALL_GRAPHVIZ_PDF}
 

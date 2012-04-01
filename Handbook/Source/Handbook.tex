@@ -54,14 +54,9 @@
 % Front matter...
 \startfrontmatter
 	
-	% Contents at a glance...
-    \title{Contents at a Glance}
-	\placelist[chapter]
-	
-    % Complete table of contents...
-    \title{Table of Contents}
-    \placecontent
-    
+    % Table of contents...
+    \input Source/Makeup/Table_of_Contents.tex
+
     % Preface...
     \component Source/Preface/Preface.tex
 
@@ -82,7 +77,8 @@
     % \component Source/Features/Features.tex
     \component Source/Selected_Technologies/Selected_Technologies.tex
     \component Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex
-    \component Source/Contributors/Contributors.tex
+    \component Source/All_Contributors/All_Contributors.tex
+    \component Source/Engineer_Contributors/Engineer_Contributors.tex
     \component Source/Licensing_Rationale/Licensing_Rationale.tex
     % \component Source/Closing_Remarks/Closing_Remarks.tex
 

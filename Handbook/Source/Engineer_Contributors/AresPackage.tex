@@ -4,9 +4,9 @@
 % See the file License for copying conditions.
 
 % AresPackages subsection...
-\StartSubSection{AresPackages}
+\StartSection{AresPackages}
 
-\StartSubSubSection{Purpose}
+\StartSubSection{Purpose}
 
 The AresEngine uses a custom game archive format built using EBML, an extensible language akin to XML, but tailored to handling binary data. The Matroska multimedia container is its most prominent client.
 
@@ -29,10 +29,10 @@ The EBML format already has a portable interface.
 Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
 \stopitemize
 
-\StartSubSubSection{Usage}
+\StartSubSection{Usage}
 The {\tt ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
 
-\StartSubSubSection{Design}
+\StartSubSection{Design}
 A package manifest is checked against an XML schema (AresPackage.xsd) to verify it is syntactically correct. AresSamplePackage.xml is a sample package conforming to the AresPackage.xsd schema. Let's take a look inside of it.
 
 \startCodeExample

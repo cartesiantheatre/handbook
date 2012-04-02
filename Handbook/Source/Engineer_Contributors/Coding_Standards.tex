@@ -20,6 +20,9 @@ Class method declarations in the class header should be listed in alphabetical o
 
 \item
 Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order, with exceptions made for constructors and deconstructors, which should be listed first and last respectively.
+
+\item
+Whenever you want a C++ class's declaration to contain some inline code, leave the class's declaration as usual in its own header, but mov the actual inline definitions into a separate header. You can then include the latter into the former after its declaration with the use of an {\tt \#include <SomeClass.inl>}. This way you get the benefits of inline methods where you need them for whatever reason, but without confusing clients of the class in having them do something unusual. They only have to {\tt \#include <SomeClass.h>} as they normally would with any other class.
 \stopitemize
 
 \StartSubSection{Legal}

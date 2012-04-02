@@ -34,7 +34,7 @@ UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Engineer_Contributors/Images/AresEngine/Eng
 all: $(OUTPUT) Makefile
 
 # Generate handbook PDF...
-$(OUTPUT): ${ALL_GRAPHVIZ_PDF} $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) Makefile
+$(OUTPUT): ${ALL_GRAPHVIZ_PDF} $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 	context $(CONTEXT_PRODUCT) --result=$(OUTPUT) $(CONTEXT_OPTIONS)
 
 # Generate all graphviz diagrams...
@@ -44,8 +44,14 @@ graphviz: ${ALL_DOT_PDF} $(ALL_TWOPI_PDF)
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Engineer_Contributors/Images/AresEngine
 
+# Just produce the table of contents...
+toc: Table\ of\ Contents.pdf
+Table\ of\ Contents.pdf: $(OUTPUT)
+	gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=3 -dLastPage=8 -sOutputFile=Table\ of\ Contents.pdf $(OUTPUT)
+
 # Just produce the Viking Lander Remastered chapter...
-Viking_Lander_Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+viking: Viking\ Lander\ Remastered.pdf
+Viking\ Lander\ Remastered.pdf: $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
 	context Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
 
 # Clean everything, including the cached engine diagram images...
@@ -64,6 +70,6 @@ clean-all: clean
 
 # Clean most intermediate build files, including the generated PDF...
 clean:
-	@ rm -vf $(OUTPUT) Handbook.pdf Viking_Lander_Remastered.pdf
+	@ rm -vf $(OUTPUT) Handbook.pdf Viking\ Lander\ Remastered.pdf Table\ of\ Contents.pdf
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 

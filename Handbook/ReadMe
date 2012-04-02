@@ -14,8 +14,8 @@ and LuaTeX PPA's available:
     <https://launchpad.net/~reviczky/+archive/context-daily>
     <https://launchpad.net/~reviczky/+archive/luatex-daily>
 
-You will also need the texlive-math-extra, ttf-ubuntu-font-family, graphviz,
-and inkscape packages. To do all of the above on Ubuntu, run the following:
+You will also need some support packages. To do all of the above on Ubuntu, run 
+the following:
 
     $ sudo add-apt-repository ppa:reviczky/context-daily
     $ sudo add-apt-repository ppa:reviczky/luatex-daily
@@ -28,6 +28,7 @@ and inkscape packages. To do all of the above on Ubuntu, run the following:
         context-extra           \
         context-fonts-extra     \
         graphviz                \
+        ghostscript             \
         inkscape
 
 Once you have the dependencies installed, simply run the following 

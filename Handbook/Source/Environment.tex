@@ -15,8 +15,10 @@
 \preloadtypescripts
 
 % Plugins needed...
-\usemodule[units,simplefonts]
-
+    
+    % Metric units and simple fonts...
+    \usemodule[units,simplefonts]
+    
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
 \definecolor[colour_figure_border][colour_text]
@@ -212,7 +214,7 @@
 
 \def\SetupCharacterTable
 {
-    \bTABLE[width=0.25\textwidth,split=yes]
+    \bTABLE[width=0.25\textwidth]
     \setupTABLE[column][1]
         [align={middle,lohi},
          background=color,

@@ -47,7 +47,7 @@ $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 # Just produce the table of contents...
 toc: Table\ of\ Contents.pdf
 Table\ of\ Contents.pdf: $(OUTPUT)
-	gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=3 -dLastPage=9 -sOutputFile=Table\ of\ Contents.pdf $(OUTPUT)
+	pdftk A=$(OUTPUT) cat A3-9 output "$@"
 
 # Just produce the Viking Lander Remastered chapter...
 viking: Viking\ Lander\ Remastered.pdf

@@ -11,13 +11,14 @@ We use Bazaar for revision control. Our master branch is hosted on Launchpad. He
 \fullahref{https://code.launchpad.net/~avaneya/avaneya/trunk}
 \stopnarrower
 
+\StartSubSection{Installing Bzr Under Ubuntu}
 You may prefer to work with the source on your local machine instead of using a browser. To download and install Bazaar on Ubuntu, run the following:
 
 \startCodeExample
 $ sudo aptitude install bzr
 \stopCodeExample
 
-A {\it graphical user interface} for Bazaar that integrates well into Nautilus is available on Ubuntu. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again:
+A graphical user interface for Bazaar that integrates well into the popular Nautilus file manager for Gnome is available. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again. Be careful, this will kill Nautilus so make sure it is not doing anything important like in the middle of copying a file.
 
 \startCodeExample
 $ sudo aptitude install nautilus-bzr
@@ -30,16 +31,37 @@ To {\tt identify} yourself to Bazaar and in any commits you make, run the follow
 $ bzr whoami "Your Name <your@email_address.com>"
 \stopCodeExample
 
-To {\tt checkout} a copy of the Avaneya source to a folder called Avaneya in the current working directory, run the following:
+To retrieve a copy of the Avaneya source to a folder called Avaneya in the current working directory if you do not have write access to the master branch, run the following.
+
+\startCodeExample
+$ bzr branch lp:avaneya Avaneya
+$ cd Avaneya
+\stopCodeExample
+
+This retrieves a local copy of the entire repository which is called a {\it branch} in the Bzr terminology. It can function entirely independent of the project's official repository. You can take it with you on the road, save changes into it incrementally in the form of {\it revisions}, revert back to previous ones, and so on. 
+
+However, if you happen to have write access to the repository, replace the word {\tt branch} in the previous example with {\tt checkout} instead. If you do not know whether you have write access or not, you probably do not. Otherwise, this would look like the following if you do.
 
 \startCodeExample
 $ bzr checkout lp:avaneya Avaneya
+$ cd Avaneya
 \stopCodeExample
 
-To {\tt update} your working copy to the latest revision in the Launchpad master branch, run the following within the directory you checked out your local working copy to:
+The difference here with the example that used {\tt branch} instead of {\tt checkout} is that the former is decentralized and not tied to our master branch. The latter, on the other hand, is centralized and tied to the our master branch. 
+
+When saving changes in a branch that was retrieved using the former method, the changes are saved locally only. In the case of a checkout, the changes are saved on the remote project server. We will talk about this further in \in{section}[Sending Changes Without Write Access] and \in{section}[Sending Changes With Write Access].
+
+\StartSubSection{Retrieving Latest Revision}
+To {\tt update} your working copy to the latest revision in the Launchpad master branch, run the following within the local branch directory if you performed a {\tt checkout}.
 
 \startCodeExample
 $ bzr update
+\stopCodeExample
+
+If instead you performed a {\tt branch}, perform its analogue to the previous.
+
+\startCodeExample
+$ bzr pull
 \stopCodeExample
 
 To check the {\it commit log}, run the following within the directory you checked out your local working copy to, hitting {\tt q} to exit:
@@ -48,7 +70,50 @@ To check the {\it commit log}, run the following within the directory you checke
 $ bzr log | less
 \stopCodeExample
 
-If you are a member of the Avaneya Project Crew on Launchpad, you will have write access to the repository which is necessary to commit to the master branch. After making your changes, run the following within the directory you checked out your local working copy to see what files you have changed ({\it status}), what changed inside of them ({\it diff}), and to finally upload ({\it commit}) your changes to the master branch:
+\StartSubSection{Sending Changes Without Write Access}
+Go ahead and make any changes you like as you see fit. When you are done making those changes, you can then check to see a list of all the files that you added, modified, removed, etc. by running the following command.
+
+\startCodeExample
+$ cd Avaneya
+$ bzr status
+added:
+  Handbook/Source/Engineer_Contributors/Images/Fluid_Dynamics.png
+modified:
+  Handbook/Makefile
+  Handbook/ReadMe
+  Handbook/Source/Environment.tex
+\stopCodeExample
+
+The above example shows the user the status of his current local branch. Bzr reports that he has added one file named {\tt Fluid_Dynamics.png} and modified three other files. 
+
+The next step is to send those changes to the project's official master branch, or what is sometimes called {\it upstream}. Depending on whether you have write access to the repository or not, there are two methods to do this. 
+
+If you do not have write access, you generate what is called a {\it bundle} file which you can email to the public mailing list described in \in{section}[Public Discussion] for peer review. Start by checking how your local branch has been modified from upstream's.
+
+\startCodeExample
+$ bzr status
+\stopCodeExample
+
+Now commit your changes into your local branch. Note that the {\tt --message} switch is used to specify the log message for the revision. If you need more than one line, omit this switch and you will be prompted to enter a multiline log entry.
+
+\startCodeExample
+$ bzr commit --message "Some commit log message..."
+\stopCodeExample
+
+Now we can instruct Bzr to generate the bundle which contains every commit we have made, our log messages, and any other book keeping details a project maintainer needs to merge your changes after review into the master branch. 
+
+\startCodeExample
+$ bzr bundle > ~/Desktop/MyChanges.bundle
+\stopCodeExample
+
+This will generate the bundle file on your desktop called {\tt MyChanges.bundle} which you can then email to the public mailing list described in \in{section}[Public Discussion] for peer review and constructive feedback. The file is both machine and human readable, making it mailing list friendly.
+
+For the astute reader, you may be wondering why the bundle has a {\tt .bundle} extension rather than a {\tt .patch} or {\tt .diff}. Bundles are not vanilla unified diffs, though similar. They contain metadata specific to Bzr and so we do not recommend using any of the extensions common to the latter to avoid confusion.
+
+\StartSubSection{Sending Changes With Write Access}
+If you are a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad, you probably have write access and can send your changes directly into the master branch on the project's remote server. 
+
+After making your changes, run the following within the directory you checked out your local working copy to see what files you changed ({\it status}), what is different about them ({\it diff}), and to finally upload ({\it commit}) your changes to the master branch:
 
 \startCodeExample
 $ bzr status

@@ -17,6 +17,11 @@ With that in mind, what follows is some useful advice. Some of it is useful in o
 
 \StartSubSection{Fallbacks Shaders}
 Those who work in the non-free software industry sometimes over inflate the capabilities of their target user's hardware. This is because the corporations they work for are unconcerned with getting the most out of what the user already has. They profit, at least in part, when users are perpetually convinced their hardware is inadequate so as to coerce them into undue, mindless, and wasteful consumption that only creates more garbage.\footnote{Caroll, Chris. \href{http://ngm.nationalgeographic.com/2008/01/high-tech-trash/carroll-text}{High-Tech Trash}. {\it National Geographic}, Jan. 2008. Web.} That is not to say that users should never upgrade, but only so long as it is actually in {\it their} interest and not merely the {\it vendor's}.
+\placefigure
+    [right, 3*hang]
+    [figure:Fluid_Dynamics]
+    {Early fluid dynamics prototype generated entirely on the GPU.}
+    {\externalfigure[Source/Engineer_Contributors/Images/Fluid_Dynamics.png][][width=.35\textwidth]}
 
 Learning tools, like Avaneya, need not be bland. We rely on visual effects, like any game, to make it interesting. Consider some creative examples. The scanline effect of a fictional terminal's interface; gas sublimation of exposed Martian ice and the ensuing dust devils; a solar lens flare; atmospheric \chemical{CO_2} clouds visible in the day sky, or glowing meteorites at night; a construction site's flood lights and the welder's sparks; the Fresnel effect to model the amount of reflection and refraction at a fluid body's material boundary,\footnote{Rost, Randi J., and Bill Licea-Kane. {\it OpenGL Shading Language}. 3rd ed. Upper Saddle River, NJ: Addison Wesley, 2010. Print. p.404.} of chromatic aberation of ice,\footnote{{\it ibid.}, p. 409.} a jet's exhaust; or what have you, are all some of the many examples we need to implement. All of these are typically written in a high performance shader language that executes directly on the user's video card.
 
@@ -41,7 +46,8 @@ In the case of AMD's video cards, querying the {\tt GL_ATI_meminfo} function can
 
     // Perform the query and store the result in TotalMemory...
     int TotalMemory = 0;
-    XNVCTRLQueryAttribute(CurrentDisplay, 0, 0, NV_CTRL_VIDEO_RAM, &TotalMemory);
+    XNVCTRLQueryAttribute(
+        CurrentDisplay, 0, 0, NV_CTRL_VIDEO_RAM, &TotalMemory);
     
     // Cleanup...
     XCloseDisplay(CurrentDisplay);
@@ -62,21 +68,40 @@ Memoization, not to be confused with memorization, is a technique in algorithm d
 
 \StartSubSection{Path Finding}
 A path finding algorithm is necessary for mobile units, such as any of the vehicles described in \in{figure}[figure:Units_User_Basic_Vehicles]. Sometimes units need to self--navigate from one location to another where their movement could involve a non--trivial solution. By non--trivial, we mean the optimal path could involve balancing a number of different constraints, such as minimizing fuel expenditure; time of travel; time before the unit's solar array is deprived of sunlight; distance; severity of the terrain; negotiating obstacles, some of them possibly moving, unfriendly; or what have you.
+\crlf
+
+\placefigure
+    [force,here]
+    [figure:A_Star_Simple]
+    {A\high{*} pathfinder algorithm with a simple test case.}
+    {\externalfigure[Source/Engineer_Contributors/Images/PathFinder_Simple.png][][width=.8\textwidth]}
 
 For this problem we have selected the tried and true A\high{*} search strategy algorithm.\footnote{Poole, David L., Alan K. Mackworth, and Randy Goebel. {\it Computational Intelligence: A Logical Approach}. New York: Oxford UP, 1998. Print.} Most textbooks on artificial intelligence that cover search strategy algorithms include some mention of it, though varying in clarity. It is an interesting algorithm. For our implementation, take a look in \in{section}[Artificial Intelligence].
 
-\StartSubSection{Procedurally Generated Audio}
+\placefigure
+    [force,here]
+    [figure:A_Star_Complex]
+    {A\high{*} pathfinder algorithm with a complex test case.}
+    {\externalfigure[Source/Engineer_Contributors/Images/PathFinder_Complex.png][][width=.8\textwidth]}
+
+\StartSubSection{Procedurally Materials & Audio}
 Procedural generation is a mathematical technique for algorithmically producing some kind of data automatically, as opposed to manually. Think of a computer \quote{understanding} what wood looks like and creating a suitable material for a model on the fly, as opposed to an artist having to manually provide one. 
+
+\placefigure
+    [force, here]
+    [figure:Procedural_Generation]
+    {Starting from the top-left and going clockwise with granite, wood, magma, and marble procedurally generated respectively.}
+    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation.png][][width=.5\textwidth]}
 
 As a general rule with this project, whenever we can reasonably get away with procedural generation, as opposed to providing static data, we will. The advantages are many, but we can name a few. These include a reduced storage footprint, increased performance, a theoretical infinite resolution in some situations, and most importantly, an opportunity for every user to experience something unique that would not have been possible with static data.
 
-In the context of graphics, procedural generation is certainly not a new concept, most graphics engineers probably have at least heard of the concept by now. But it is comparatively unheard of as far as creating dynamic audio in a game. 
+In the context of graphics, procedural generation is certainly not a new concept, most graphics engineers probably have at least heard of the concept by now. But it is comparatively unheard of as far as creating dynamic audio in a game. See \in{figure}[figure:Procedural_Generation] for some examples.
 
 There are many possibilities to consider. We could experiment with attempting to dynamically recreate the low-frequency rumbles of a marsquake streamed to a subwoofer, the sound of dry--ice hail impacting on the frozen Martian tundra, static heard over a radio, or what have you. Some books and papers have been written on the subject,\footnote{Lecky-Thompson, Guy W. {\it Infinite Game Universe: Level Design, Terrain, and Sound}. Vol. 2. Hingham, MA: Charles River Media, 2002. Print.} although it is seldom done. The possibilities are limited in part by the imagination of the engineer.
 
 Whenever we use procedural generation for creating audio, we will need to do it all in software -- for now. There may come a time, however, when the low--level audio API we are dependent on, OpenAL, will offer a programmable shader interface for code to execute on specialized hardware that interfaces directly with the user's digital signal processor (DSP). This idea has been discussed before on the OpenAL mailing list.\footnote{Warner, Kip. \href{http://opensource.creative.com/pipermail/openal/2010-January/011972.html}{OpenAL Shaders}. Mailing list. {\it OpenAL Usage Issues}. Creative Labs, 26 Jan. 2010. Web. 31 Mar. 2012.}
 
-\StartSubSection{Procedurally Generated Terrain}
+\StartSubSection{Procedurally Terrain}
 Terrain generation is another application of procedural generation. Terrain problems are common to any game that requires the rendering of three--dimensional landscapes. Let us start by considering the seemingly obvious approach.
 
 What about height maps? Not if we wish for overhangs. You always have them in terrain any time, for instance, that you have an underground tunnel carrying a train.
@@ -107,7 +132,21 @@ As one of its many novel uses, it may be possible to parametrically define some 
 \StartSubSection{Social Simulation}
 For aspects of the game concerned with social simulation, it is very difficult to commit to specific algorithms and information representation models until the establishment of more of the game's peripheral aspects. The reason being is that it is hard to tell how well an approach will perform until there is a means of trying it. Compounding the challenges further yet, of all the different subfields of game development, social simulation is probably amongst the most absent in the literature.
 
-Something to consider at least for the time being, however, is the use of a Hubbert curve for modelling resource consumption of finite supplies of natural resources.\footnote{\href{https://en.wikipedia.org/wiki/Hubbert_curve}{Hubbert curve. }{\it Wikipedia}. 18 Mar. 2012.}
+Something to consider at least for the time being, however, is the use of a Hubbert curve for modelling resource consumption of finite supplies of natural resources.\footnote{\href{https://en.wikipedia.org/wiki/Hubbert_curve}{Hubbert curve. }{\it Wikipedia}. 18 Mar. 2012.} Whatever models we use, there are some things we need to keep in mind that are fairly fundamental to this project. 
+
+Let us consider for a moment the way people behave. We attribute a person or group's destructive behaviour to their nature (genetic) when we say that there will always be some people like that in society. We make these claims with ease as if we had dedicated years of our lives to having studied and reflected on the matter.
+
+The truth is, however, that research strongly suggests that {\it there is no such thing as human nature, only human needs}.\footnote{See {\it Zeitgeist: Moving Forward} in \in{chapter}[Resources For Everyone] for an excellent introduction.} Very little behaviour is genetic, if any. All organisms have needs, such as oxygen, water, security, a sense of belonging, community, a meaningful existence, nutrients, sunlight, or what have you. It is more reasonable to suggest that human behaviour manifests from whether and how fundamental needs are met, rather that they must absolutely and unconditionally always be a certain way.
+
+We also know now that one's genetic material can actually change throughout one's life and they are not static. This is called epigenetics.
+
+Take violence for instance. There is an asymmetrical spatial distribution of it across the planet. If violence were truly human nature, we should expect to be able to rotate the globe, stop, and randomly land our finger anywhere where there are people and expect to find a serial killer with the same \math{1/n} probability we should expect anywhere else. This does not happen. 
+
+As one of many influences, where there is poverty, there is despair. Where there is despair, there is crime. Provide for all fundamental human needs and problems like this disappear. It is neither random nor magic. Humans, and probably all organisms, have little in their nature, only needs.
+
+The evidence {\it The Equality Trust}\index{The Equality Trust} has aggregated powerfully reasserts this idea. It is a non-profit organization that aims to reduce income inequality through a programme of public and political education designed to achieve a widespread understanding of the harm caused by income inequality.
+
+Since Avaneya should rely on as much as reasonably possible on actual scientific research to substantiate the quantitative models it uses, {\it The Equality Trust} will be an invaluable repository of research we can continuously mine.\footnote{\href{http://www.equalitytrust.org.uk/resources/publications}{Publications. }{\it The Equality Trust}. 3 Apr. 2012.}
 
 \StartSubSection{Square Roots}
 Square roots are common in game programming and nearly always pop up whenever vectors, trigonometry, linear algebra, and so on, are involved. Nevertheless, avoid them whenever possible. Use the squared magnitude instead. The former is slow, the latter faster -- albeit at the cost of accuracy.

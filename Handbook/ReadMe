@@ -28,7 +28,7 @@ the following:
         context-extra           \
         context-fonts-extra     \
         graphviz                \
-        ghostscript             \
+        pdftk                   \
         inkscape
 
 Once you have the dependencies installed, simply run the following 

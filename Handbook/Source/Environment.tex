@@ -103,8 +103,8 @@
    frame=off,
    corner=rectangular,
    framecolor=colour_figure_border,
-   background=color, 
-   backgroundcolor=colour_page,
+%   background=color, 
+%   backgroundcolor=colour_page,
    rulethickness=0.5pt]
 
 % Setup floats...
@@ -132,10 +132,11 @@
 \placebookmarks[chapter,section,subsection,subsubsection][chapter]
 \setupinteractionscreen[option=bookmark]
 
+% Set the background image...
+\defineoverlay[BackgroundImage][\overlayfigure{Source/Makeup/Images/Background.png}]
 \setupbackgrounds
-   [rightpage]
-   [background=color,
-    backgroundcolor=colour_page]
+    [page]
+    [background=BackgroundImage]
 
 % Set PDF compression level, default is 3, so set to maximum...
 \setupbackend
@@ -240,8 +241,9 @@
         {#2}
         {\externalfigure[#3][factor=max,
                              align=center,
-                             background=color,
-                             backgroundcolor=colour_figure_background]}
+                             %background=color,
+                             %backgroundcolor=colour_figure_background
+                            ]}
 %    \stopframedtext
     \stopTEXpage
 %    \page 
@@ -312,8 +314,8 @@
 \definetextbackground[TimelineGeneralDocument]
    [location=paragraph,
     color=color_text,
-    background=color,
-    backgroundcolor=colour_page,
+%    background=color,
+%    backgroundcolor=colour_page,
     framecolor=colour_text,
     topoffset=1.0cm,
     bottomoffset=1.0cm,
@@ -332,8 +334,8 @@
 \definetextbackground[TimelineCorrespondenceDocument]
    [location=paragraph,
     color=color_text,
-    background=color,
-    backgroundcolor=colour_page,
+%    background=color,
+%    backgroundcolor=colour_page,
     framecolor=colour_text,
     topoffset=1.0cm,
     bottomoffset=1.0cm,
@@ -359,8 +361,8 @@
         \blank[2*big]
     },
     color=color_text,
-    background=color,
-    backgroundcolor=colour_page,
+%    background=color,
+%    backgroundcolor=colour_page,
     framecolor=colour_text,
     location=paragraph,
     topoffset=0.5cm,

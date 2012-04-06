@@ -12,7 +12,7 @@
 digraph Units_User_Basic_Health_Recreational_and_Social
 {
     // Graph attributes...
-	bgcolor="black";
+	bgcolor="transparent";
 	margin="0";
 	ratio="auto";
     ranksep="2.5";

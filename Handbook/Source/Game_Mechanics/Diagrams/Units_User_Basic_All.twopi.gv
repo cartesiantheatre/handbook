@@ -13,7 +13,7 @@
 digraph Units_User_Basic_All
 {
     // Graph attributes...
-	bgcolor="black";
+	bgcolor="transparent";
 	margin="0";
 	rankdir="LR";
 	ratio="auto";

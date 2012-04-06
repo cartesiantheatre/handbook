@@ -13,7 +13,7 @@
 digraph Resources 
 {
     // Graph attributes...
-	bgcolor="black";
+	bgcolor="transparent";
 	margin="0";
 	rankdir="LR";
 //    ranksep="1";

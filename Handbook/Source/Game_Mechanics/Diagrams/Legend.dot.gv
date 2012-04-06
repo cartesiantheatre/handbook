@@ -13,7 +13,7 @@
 digraph Legend {  
 
     // Graph attributes...
-	bgcolor="black";
+	bgcolor="transparent";
 	fontname="Ubuntu Bold"
     labelfontname="Ubuntu Bold";
 	margin="0";

@@ -12,7 +12,7 @@
 digraph Units_User_Basic_Transportation
 {
     // Graph attributes...
-	bgcolor="black";
+	bgcolor="transparent";
 	margin="0";
 	ratio="auto";
     ranksep="2.5";

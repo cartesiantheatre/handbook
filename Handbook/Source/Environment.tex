@@ -30,10 +30,12 @@
 \definecolor[colour_link][colour_head]
 \definecolor[colour_page_number][colour_head]
 \definecolor[colour_page][r=0,g=0,b=0]
-\definecolor[colour_table_row_even][r=0.157,g=0.157,b=0.157]
-\definecolor[colour_table_row_odd][r=0.1,g=0.1,b=0.1]
+\definecolor[colour_table_row_even][r=0.157,g=0.157,b=0.157,t=0.4,a=1]
+\definecolor[colour_table_row_odd][r=0.1,g=0.1,b=0.1,t=0.4,a=1]
 \definecolor[colour_table_dark_column][r=0.05,g=0.05,b=0.05]
 \definecolor[colour_text][r=0.754,g=0.516,b=0.324]
+\definecolor[colour_text_background_shaded][r=0,g=0,b=0,t=0.4,a=1]
+\definecolor[colour_text_background_clear][r=0,g=0,b=0,t=0.0,a=1]
 
 % Set the colours of various list items...
 \setuplist[chapter][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
@@ -215,20 +217,21 @@
 
 \def\SetupCharacterTable
 {
-    \bTABLE[width=0.25\textwidth]
+    \bTABLE[width=0.2\textwidth]
+    \switchtobodyfont[6pt]
     \setupTABLE[column][1]
         [align={middle,lohi},
          background=color,
          backgroundcolor=colour_table_row_even,
-         style=\bfxx,
-         width=2.3cm]
+         style=\bf,
+         width=2cm]
     \setupTABLE[column][2]
         [align=flushleft,
          option=stretch,
          background=color,
          backgroundcolor=colour_table_row_odd]
     \setupTABLE[each][each]
-        [style=\tfxx]
+        [style=\tf]
 }
 
 % Insert a full page landscape diagram, parameters are node name, caption, and path...
@@ -314,13 +317,13 @@
 \definetextbackground[TimelineGeneralDocument]
    [location=paragraph,
     color=color_text,
-%    background=color,
-%    backgroundcolor=colour_page,
+    background=color,
+    backgroundcolor=colour_text_background_clear,
     framecolor=colour_text,
-    topoffset=1.0cm,
-    bottomoffset=1.0cm,
-    leftoffset=1.0cm,
-    rightoffset=1.0cm,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm,
     before={
         \blank[2*big]
     },
@@ -329,18 +332,18 @@
     },
     style=small,
     corner=round,
-    frame=on]
+    frame=off]
 
 \definetextbackground[TimelineCorrespondenceDocument]
    [location=paragraph,
     color=color_text,
-%    background=color,
-%    backgroundcolor=colour_page,
+    background=color,
+    backgroundcolor=colour_text_background_clear,
     framecolor=colour_text,
-    topoffset=1.0cm,
-    bottomoffset=1.0cm,
-    leftoffset=1.0cm,
-    rightoffset=1.0cm,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm,
     before={
         \blank[2*big]
     },
@@ -349,20 +352,23 @@
     },
     style=smalltype,
     corner=round,
-    frame=on]
+    frame=off]
 
 \definetextbackground[CodeExampleFrame]
    [corner=round,
     frame=on,
     before={
-        \blank[2*big]
+        \blank[0.5cm]
+        \startlinecorrection
     },
     after={
-        \blank[2*big]
+        \blank[0.5cm]
+        \stoplinecorrection
     },
     color=color_text,
-%    background=color,
-%    backgroundcolor=colour_page,
+    bodyfont=5pt,
+    background=color,
+    backgroundcolor=colour_text_background_shaded,
     framecolor=colour_text,
     location=paragraph,
     topoffset=0.5cm,
@@ -374,18 +380,6 @@
       [CodeExample]
       [before=\startCodeExampleFrame,
        after=\stopCodeExampleFrame]
-
-\defineframedtext
-  [MiniFile]
-  [width=25em,
-   offset=0.25ex,
-   bodyfont=7pt,
-   background=color,
-   backgroundcolor=colour_page,
-   backgroundoffset=.25ex,
-   frame=off,
-   before=,
-   after=]
 
 % Number formulae etc. using the chapter number...
 \setupnumbering
@@ -405,8 +399,9 @@
 \setupblank
   [medium]
 
+% Spacing between paragraphs...
 \setupwhitespace
-  [medium]
+  [big]
 
 \setupfootertexts
   [margin]
@@ -432,7 +427,7 @@
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text
 %  background frame borders vanishing...
-%\kindofpagetextareas\plusone
+\kindofpagetextareas\plusone
 
 \automigrateinserts
 
@@ -511,15 +506,18 @@
   [header=empty]
 
 \setupitemize
-  [each][fit,broad,color=colour_item][distance=.25em]
-
-\setupitemgroup[itemize]
   [each]
-  [headstyle=bold]
+  [fit,2*broad]
+  [color=colour_item,
+   distance=.25em] % Distance between indicator and body text
 
 \setupitemgroup[itemize]
   [each]
   [stopper]
+  [headstyle=bold,
+   inbetween={\blank[0.5cm]},
+   before={\blank[0.5cm]},
+   after={\blank[0.5cm]}]
 
 \setupsubpagenumber
   [way=bychapter,

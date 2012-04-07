@@ -16,7 +16,6 @@ Note that not all of these technologies necessarily form components of the AresE
 \StartSection{Audio}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em Audacity}
 
 We use Audacity for audio recording, editing, post-processing, effects, and more. It can take advantage of any of the multitude of LADSPA and VST plugins. It can also export to surround sound formats, such as AC3 and DTS.
@@ -38,7 +37,6 @@ The SDL library is used to provide audio decoding through its SDL_audio API. It 
 \StartSection{Collaboration}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em Bazaar}
 
 We use Bazaar for all revision control management. Our development model favours the cathedral approach, rather than the bazaar approach. For a project like this, we feel that is most appropriate. For more information on the rationale behind why we chose Bazaar over its many counterparts, see \in{section}[Rationale for Bazaar Revision Control].
@@ -52,7 +50,6 @@ We use IRC for realtime communication over the internet. For more information on
 \StartSection{Developer Tools}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em CppUnit}
 
 The CppUnit library is a unit testing framework module for the C++ programming language, used only when the engine is built in debug mode.
@@ -87,7 +84,6 @@ Umbrello is a powerful diagramming tool which lends itself well to the creation 
 \StartSection{Documentation}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em \CONTEXT}
 
 \CONTEXT\ is used for typesetting documents, such as this one. This document was compiled on \currentdate\ from Bazaar revision \BazaarRevision, typeset using \CONTEXT\ \contextversion, and rendered with \texenginename\ \texengineversion.
@@ -101,7 +97,6 @@ Graphviz is a powerful tool for drawing graphs specified in the DOT language. Gr
 \StartSection{Graphics}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em Blender}
 
 All modelling is generally done with Blender, but modellers are free to use whatever free modelling application they like, as long as it supports common free formats. One popular alternative is {\it Wings 3D}. Ultimately though, all models have to importable into Blender since we are dependent on the OGRE 3D\index{OGRE 3D} exporter for it in order to integrate with the rendering engine.
@@ -143,7 +138,6 @@ The SDL library is used to provide image and font loading through its SDL_image 
 \StartSection{Input}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em SDL_haptic}
 
 The SDL_haptic API is used for providing force feedback, provided the API is available and the user's input device supports it. SDL version 1.3 or greater is required.
@@ -157,7 +151,6 @@ The SDL_input API is used to provide input handling.
 \StartSection{Localization}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em GNU gettext}
 
 GNU gettext is used for localization and translation to different human languages by making it possible to substitute strings that are marked for translation in our C++ code with a string from another language.
@@ -175,7 +168,6 @@ The lua-xgettext tool is a small program for message extraction of marked string
 \StartSection{Networking}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em ENet}
 
 ENet provides the low level library which Avaneya's mutliplayer protocol is built upon. Its purpose is to provide a relatively thin, simple and robust network communication layer on top of UDP (User Datagram Protocol). The primary feature it provides is optional reliable, in-order delivery of packets. It omits certain higher level networking features such as authentication, lobbying, server discovery, encryption (which we provide via GnuTLS), or other similar tasks that are particularly application specific so that the library remains flexible, portable, and easily embeddable.
@@ -189,7 +181,6 @@ The GNU Transport Layer Security Library (GnuTLS) is a free software implementat
 \StartSection{Operating System}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em Apport}
 
 Apport intercepts program crashes, collects debugging information about the crash and the operating system environment, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
@@ -203,7 +194,6 @@ The D-Bus (Desktop Bus) API is a simple inter-process communication (IPC) system
 \StartSection{Physics}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em OgreBullet}
 
 OgreBullet is a plugin that augments the OGRE 3D rendering engine with powerful physics capabilities. It is an interface to the underlying free {\it Bullet} physics engine which features 3D collision detection, soft body dynamics, and rigid body dynamics. It is used in many games and for providing visual effects in movies. 
@@ -216,7 +206,6 @@ The underlying physics engine can also leverage the user's available hardware ac
 \StartSection{Scripting}
 
 \startitemize[4]
-\setupwhitespace[big]
 \head {\em libtolua++}
 
 The libtolua++ library is used to integrate our C++ code with Lua. It is an updated replacement to the older toLua tool. It makes it possible for engine code to invoke Lua code, and vise versa.

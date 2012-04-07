@@ -181,9 +181,19 @@ A great deal of the original data was corrupt (e.g. tape rot) or suffered from i
 One recovers whatever can be of the aforementioned by transcoding with {\tt VikingExtractor} from VICAR formatted data into lossless PNGs. Here is an example of its use, but keep in mind that you should use the {\tt --help} switch for more information on its usage.
 
 \startCodeExample
-\type{$} viking-extractor --directorize-band-class --directorize-month --directorize-location --ignore-bad-files --interlace --recursive --save-metadata --summarize-only Processed\ Images/ Output/
+$ viking-extractor              \
+    --directorize-band-class    \
+    --directorize-month         \
+    --directorize-location      \
+    --ignore-bad-files          \
+    --interlace                 \
+    --recursive                 \
+    --save-metadata             \
+    --summarize-only            \
+     Processed\ Images          \
+     Output
 
-\type{$} find Output/
+$ find Output/
 ...
 Output/Chryse Planitia
 Output/Chryse Planitia/Leo/Colour/11J070.png

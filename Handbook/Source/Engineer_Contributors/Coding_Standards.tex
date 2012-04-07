@@ -11,7 +11,6 @@ Try to abide by the project coding standards whenever possible. It is easier to 
 \StartSubSection{Declarations and Definitions}
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 All classes should be defined in their own header file. The only exception is for small trivial classes whose relation to another "parent" class is expressed through aggregation or composition.
 
@@ -51,7 +50,7 @@ Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapte
 */
 \stopCodeExample
 
-Change the description line from referencing the engine to referencing the mod itself, Avaneya, if it is for Avaneya specific code. This should look as such.
+Change the description line from referencing the engine to Avaneya, if it is a script or other media that drives the engine, as opposed to the engine itself. This would look as such.
 
 \startCodeExample
 /*
@@ -65,7 +64,6 @@ Change the description line from referencing the engine to referencing the mod i
 \StartSubSection{Mathematical}
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 All angles should be worked with in degrees, not radians, whenever possible.
 
@@ -76,7 +74,6 @@ All floating point calculations should be done in single precision whenever poss
 \StartSubSection{Formatting}
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 English (Canadian) should be used for everything non-localized and saved in UTF-8 whenever possible.
 
@@ -327,7 +324,6 @@ if(x == 3)
 
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 Do not use Hungarian notation\index{Hungarian notation}. We prefix objects to denote scope only.
 
@@ -378,7 +374,6 @@ cam log;
 \StartSubSection{Structure}
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 Source lines may be up to 100 characters long. (You can configure gedit to display a margin at 100 characters; that may help you follow this convention.)
 
@@ -403,7 +398,6 @@ A comment which indicates task which needs to be done at some point should look 
 \StartSubSection{Comments}
 
 \startitemize[4]
-\setupwhitespace[big]
 \item
 All comments should be written in Canadian English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
 

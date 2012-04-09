@@ -58,7 +58,7 @@ At present, no lander has explored Arda's area of settlement, {\it Arcadia Plani
     {{\it Chryse Planitia} as captured by Viking Lander I, later salvaged from a rotting magnetic tape.}
     {\externalfigure[Source/Viking_Lander_Remastered/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
 
-\StartSection{Rotting Magnetic Tapes & Dead Technology}
+\StartSection{Problem: Rotting Tapes, Dead Technology}
 
 While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for a layman.
 
@@ -101,7 +101,7 @@ Even if we had been granted access, there is still no guarantee that their softw
 
 \StartSection{Solution: VikingExtractor}
 
-In keeping with the {\it software libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt VikingExtractor}.\footnote{If you would like to explore the {\tt VikingExtractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the source tree. To easily get a copy of the source, see \in{section}[Revision Control Management].} We did this because people should not have to perform digital forensic archaeology to get an idea of what Mars looks like when photos were already taken, paid for with a billion dollars of public money, and have already existed for decades -- albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out proprietary lock nobody seems to have a key for at best, or refuses to share, at worst.
+In keeping with the {\it software libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt VikingExtractor}. We did this because people should not have to perform digital forensic archaeology to get an idea of what Mars looks like when photos were already taken, paid for with a billion dollars of public money, and have already existed for decades -- albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out proprietary lock nobody seems to have a key for at best, or refuses to share, at worst.
 
 \placefigure
     [here, force]
@@ -213,6 +213,8 @@ On a quad core 2 GHz amd64 machine, this fully automated process took about fort
 Some of the metadata it needs to make unattended decisions are located within EBCDIC\footnote{Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8-bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s.} encoded file headers. These headers are made up of "label records" which are meaningful only in the context of old mainframe machines equipped with magnetic tape drives. Some of the metadata the on-board instrumentation provided can be preserved for the curious.\footnote{As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. It is only available in the PDS data set, but other metadata, such as camera azimuth and elevation almost always are. In any case, such metadata is usually not so useful for most, but the {\it VikingExtractor} can preserve whatever it can recover if the user wishes.}
 
 When relying on the image archive, make sure you are looking at the right place. So if you want to know what {\it Arcadia Planitia} looks like, look at its very similar neighbour that was explored by the second Viking Lander, {\it Utopia Planitia}. The other lander touched down on the other side of the planet on {\it Chryse Planitia} (Plains of Gold). They may look very similar to the untrained eye, but they have many subtle differences.
+
+If you would like to explore the {\tt VikingExtractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the project's source tree. To do this, follow the instructions in \in{section}[Using Bzr].
 
 \StopChapter
 

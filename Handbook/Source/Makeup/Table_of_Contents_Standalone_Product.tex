@@ -1,0 +1,18 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% This product file can be used to dump a PDF just containing the table of contents...
+
+\def\loaddatafile#1%
+    {\ctxlua {
+        job.initialize("#1.tuc","#1.tua")
+    }}%
+
+\loaddatafile{../Handbook.tex}
+
+\starttext
+\placelist[chapter]
+\stoptext
+

@@ -5,7 +5,7 @@
 
 % Using Bzr section
 \StartSection{Using Bzr}
-As discussed already in \in{section}[Rationale for Bzr], we opted for Bzr as our revision control management software. We host our master branch on Launchpad. The branch contains the source code to Avaneya, game media, and all relevant documentation - including the book you are reading now. 
+As discussed already in \in{section}[Rationale for Bzr], we opted for Bzr as our revision control management software. We host our master branch on Launchpad. The branch contains the source code to Avaneya, game media, and all relevant documentation - including the source to the book you are reading now. 
 
 This section contains instructions on how to interact with it. You can browse the master branch on Launchpad through a web browser by navigating it here.
 
@@ -51,9 +51,9 @@ $ bzr checkout lp:avaneya Avaneya
 $ cd Avaneya
 \stopCodeExample
 
-The difference here with the example that used {\tt branch} instead of {\tt checkout} is that the former is decentralized and not tied to our master branch. The latter, on the other hand, is centralized and tied to the our master branch. 
+The difference here with the example that used {\tt branch} instead of {\tt checkout} is that the former is decentralized and not tied to our master branch. The latter, on the other hand, is centralized and tied to our master branch. 
 
-When saving changes in a branch that was retrieved using the former method, the changes are saved locally only. In the case of a checkout, the changes are saved on the remote project server. We will talk about this further in \in{section}[Committing Changes].
+When saving changes in a branch that was retrieved using the former {\tt branch} method, the changes are saved locally only. In the case of a {\tt checkout}, the changes will be saved on the remote project server if you have been given adequate permissions. We will discuss further the concept of commits in \in{section}[Committing Changes].
 
 \StartSubSection{Updating}
 If you performed a {\tt checkout} instead of a {\tt pull} while following the instructions in \in{section}[Creation of Local Branch], you can update your local branch to the latest revision in Launchpad's master branch by running the following.
@@ -63,25 +63,25 @@ $ cd Avaneya
 $ bzr update
 \stopCodeExample
 
-If instead you performed a {\tt branch} in \in{section}[Creation of Local Branch], execute the appropriate analogue with a {\tt pull} instead.
+If instead you performed a {\tt branch} in \in{section}[Creation of Local Branch], execute the appropriate analogue with a {\tt pull}.
 
 \startCodeExample
 $ cd Avaneya
 $ bzr pull
 \stopCodeExample
 
-To check the {\it commit log}, run the following within the directory you checked out your local working copy to, hitting {\tt q} to exit:
+To view the latest {\it commit log} after either executing a {\tt pull} or an {\tt update}, run the following within the directory containing your local working copy. Hitting the {\tt q} key will exit the log.
 
 \startCodeExample
 $ bzr log | less
 \stopCodeExample
 
 \StartSubSection{Committing Changes}
-Go ahead and make any changes you like as you see fit. When you are done making those changes, you can then check to see a list of all the files that you added, modified, removed, etc. by running the following command.
+Go ahead and make any changes you like as you see fit. When you are done making those changes, you can then check to see a list of all the files that you added, modified, and removed, that Bzr is currently tracking by running the following.
 
 \startCodeExample
-$ cd Avaneya
-$ bzr status
+$ cd Avaneya/Documentation/Contributors/Handbook
+$ bzr status .
 added:
   Handbook/Source/Engineer_Contributors/Images/Fluid_Dynamics.png
 modified:
@@ -90,9 +90,9 @@ modified:
   Handbook/Source/Environment.tex
 \stopCodeExample
 
-The above example shows the user the status of his current local branch. Bzr reports that he has added one file named {\tt Fluid_Dynamics.png} and modified three other files. 
+The above example shows the user the status of their local branch within the current working directory. Bzr reports that they have added one file named {\tt Fluid_Dynamics.png} and modified three others.
 
-The next step is to send those changes either back {\it upstream} or saved into your local branch. Depending on whether you have write access to the repository or not, there are two methods to do this. If you are a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad, you probably have write access and can send your changes directly into the master branch on the project's remote server. In that case, you checked out the repository and your commits will be stored on the remote project server.
+The next step is to send those changes either back {\it upstream} or to save them into your local branch. Depending on whether you have write access to the repository or not, there are two methods to do this. If you are a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad, you probably have write access and can send your changes directly into the master branch on the project's remote server. In that case, you checked out the repository and your commits will be stored on the remote project server.
 
 If you do not have write access, you generate what is called a {\it bundle} file which can be emailed to the public mailing list described in \in{section}[Public Discussion] for peer review. Your changes will be committed locally only.
 

@@ -1,0 +1,37 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% Signing the Code of Conduct section...
+\StartSection{Signing the Code of Conduct}
+
+All contributors need to sign the Avaneya Code of Conduct. You will need an OpenPGP compliant key pair in order to do this. Usage of OpenPGP is beyond the scope of this book, but if you need help, consult any of the many online tutorials available. {\it Just remember to make sure you backup your key pair.}
+
+If you are not using a GNU operating system, such as Ubuntu, do not worry. GnuPG is almost guaranteed to be available for it - possibly even with an attractive, easy to use, GUI that integrates into your shell like {\tt Seahorse}. If this is the case, you will have to consult with the appropriate documentation or tutorial for your environment to perform the analogous steps described here.
+
+Once you have read the Avaneya Code of Conduct in \in{section}[Avaneya Code of Conduct], you can generate your digital signature using GnuPG with the following. Of course, replace {\tt FirstName} and {\tt LastName} with your first and last names respectively.
+
+\startCodeExample
+$ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
+$ gpg --armour --output FirstName\ LastName.gpg --clearsign \
+    ../Code\ of\ Conduct
+\stopCodeExample
+
+This will generate a digital signature within the {\tt Signatures} directory. This file can then be committed into the repository, or bundled as part of a larger commit, as described in \in{section}[Using Bzr]. 
+
+The signature is in human readable ({\tt --armour}) and clearsign ({\tt --clearsign}) format. This means that the signature file generated contains both a copy of the original document within it as well as your digital signature. Thus, the file is self contained, portable, and viewable in any text editor.
+
+To verify someone's signature, run the following. You will need the signer's verified public key available in your keyring in order for GnuPG to check the file's authenticity against it. If you are verifying your own signature, then you probably already have it installed.
+
+\startCodeExample
+$ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
+$ gpg --verify Dicky\ Chow.gpg 
+gpg: Signature made Sun 08 Apr 2012 09:40:48 PM PDT using DSA key ID ABCD1234
+gpg: Good signature from "Dicky Chow <dicky_chow@some_domain.com>"
+\stopCodeExample
+
+In the above example, the signature appeared to be authentic.
+
+Note that if the contents of the Avaneya Code of Conduct ever changes and you are still project crew, you will need to resign the document using the previously described method.
+

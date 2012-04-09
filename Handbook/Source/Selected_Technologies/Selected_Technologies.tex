@@ -37,9 +37,9 @@ The SDL library is used to provide audio decoding through its SDL_audio API. It 
 \StartSection{Collaboration}
 
 \startitemize[4]
-\head {\em Bazaar}
+\head {\em Bzr}
 
-We use Bazaar for all revision control management. Our development model favours the cathedral approach, rather than the bazaar approach. For a project like this, we feel that is most appropriate. For more information on the rationale behind why we chose Bazaar over its many counterparts, see \in{section}[Rationale for Bazaar Revision Control].
+We use Bzr for all revision control management. Our development model favours the {\it cathedral} approach, rather than the {\it bazaar}. For a project like this, we feel it is most appropriate because of the amount of coordination necessary to produce a high quality game. For more information on the rationale behind why we chose Bazaar over its many counterparts, see \in{section}[Rationale for Bzr].
 
 \head {\em Internet Relay Chat (IRC)}
 
@@ -66,6 +66,7 @@ The GNU Compiler Collection is used for the engine's dependency calculation, com
 
 The libebml library is the backbone of the Matroska multimedia container format. EBML stands for {\it Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans. See \in{section}[AresPackages] for details on how we are using it in this project.
 item
+
 \head {\em streflop}
 
 The streflop library ({\it STandalone REproducible FLOating-Point}) allows you to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments.
@@ -73,10 +74,6 @@ The streflop library ({\it STandalone REproducible FLOating-Point}) allows you t
 \head {\em xmlstarlet}
 
 The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests and the engine event definition for syntactical errors.
-
-\head {\em Umbrello}
-
-Umbrello is a powerful diagramming tool which lends itself well to the creation of UML modelling. The AresEngine's architectural design was modelled in Umbrello as seen in \in{section}[Architecture]. The two projects compliment each other well since modelling the AresEngine put very heavy demands on Umbrello, thus allowing the stress testing to identify, solve, and enhance many aspects of Umbrello. We are very grateful to the very cooperative developers working on the Umbrello project.
 \stopitemize
 
 
@@ -91,6 +88,10 @@ Umbrello is a powerful diagramming tool which lends itself well to the creation 
 \head {\em Graphviz}
 
 Graphviz is a powerful tool for drawing graphs specified in the DOT language. Graphviz's {\tt dot} was used for several of ours, such as \in{figure}[figure:Resources_Pipeline] on \at{page}[figure:Resources_Pipeline]. We used \GraphvizVersion.
+
+\head {\em Umbrello}
+
+Umbrello is a powerful diagramming tool which lends itself well to the creation of UML modelling. The AresEngine's architectural design was modelled in Umbrello as seen in \in{section}[AresEngine's Architecture]. The two projects compliment each other well since modelling the AresEngine put very heavy demands on Umbrello, thus allowing the stress testing to identify, solve, and enhance many aspects of Umbrello. We are very grateful to the very cooperative developers working on the Umbrello project.
 \stopitemize
 
 % Graphics section...
@@ -132,6 +133,10 @@ Terrain is another plugin for the OGRE 3D rendering engine allowing for, as the 
 \head {\em SDL}
 
 The SDL library is used to provide image and font loading through its SDL_image and SDL_pango APIs respectively.
+
+\head {\em VikingExtractor}
+
+This powerful tool helps provide graphic artists and shader designers with reference imagery from the original Viking Mission to Mars. See \in{chapter}[Viking Lander Remastered] for more information.
 \stopitemize
 
 % Input section...
@@ -149,6 +154,7 @@ The SDL_input API is used to provide input handling.
 
 % Localization section...
 \StartSection{Localization}
+
 
 \startitemize[4]
 \head {\em GNU gettext}

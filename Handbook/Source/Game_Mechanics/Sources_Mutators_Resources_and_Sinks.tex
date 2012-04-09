@@ -11,7 +11,7 @@ The set of diagrams in this section show how resources can be transformed throug
     [force,here]
     [figure:Resource_Legend]
     {A simple resource processing pipeline.}
-    {\externalfigure[Source/Game_Mechanics/Diagrams/Legend.pdf][][width=1.0\textwidth]}
+    {\externalfigure[Source/Game_Mechanics/Graphviz/Legend.pdf][][width=1.0\textwidth]}
 
 A {\it source} could be any logical group of resources, such as the atmosphere, the ground, or perhaps even imports from another city or off world.  They act as suppliers or sets of resources that feed a resource processing pipeline. But except in the case of imports, a source's resources are usually in some unrefined state. We denote sources on our diagrams as tables, with the resources they are capable of supplying listed within them.
 
@@ -23,7 +23,7 @@ A {\it sink} is the terminal end of a resource's journey through the pipeline, t
 
 Sources and sinks may also sometimes be related. Depending on the resource and sink, any number of things could happen when the former enters the latter. As an example, consider Earth's atmosphere as a sink. The sink is capable of absorbing certain resources, such as anthropogenic \chemical{CO_2} to a certain extent. But one of the many adverse side effects is that this will trigger an increase in carbonic acid (\chemical{H_2CO_3}) uptake in the oceans. The oceans are a source because they furnish many resources that are critical for supporting life on Earth. But more carbonic acid in the oceans will reduce their ability to support life.\footnote{Neoclassical economists refer euphemistically to this as an {\it externality}\index{externality}.} 
 
-As another example, consider the Martian atmosphere as a source. We can do this because it contains resources which are useful to us on Mars, such as \chemical{CO_2}. This atmospheric \chemical{CO_2} can be fed into the RWGS reactor (described on \at{page}[definition:Reverse-Water-Gas-Shift Reactor]) to produce new resources. These resources are carbon monoxide (\chemical{CO}) and molecular hydrogen and oxygen. The carbon monoxide could, in turn, undergo further refinement when combined with other resources and mutators to produce yet additional resources like methanol, plastics, or what have you. The hydrogen was cycled back into the reactor as a reagent and the oxygen used for life support. Human respiration, a resource mutator, produces \chemical{CO_2} from \chemical{O_2} and food resources, with the \chemical{CO_2} vented back out into an atmospheric sink.
+As another example, consider the Martian atmosphere as a source. We can do this because it contains resources which are useful to us on Mars, such as \chemical{CO_2}. This atmospheric \chemical{CO_2} can be fed into the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor] to produce new resources. These resources are carbon monoxide (\chemical{CO}) and molecular hydrogen and oxygen. The carbon monoxide could, in turn, undergo further refinement when combined with other resources and mutators to produce yet additional resources like methanol, plastics, or what have you. The hydrogen was cycled back into the reactor as a reagent and the oxygen used for life support. Human respiration, a resource mutator, produces \chemical{CO_2} from \chemical{O_2} and food resources, with the \chemical{CO_2} vented back out into an atmospheric sink.
 
 Whenever a resource enters a sink and efficiently replenishes all of a source's resources that went into its creation, we call this recycling. Whenever this is not the case and a resource is non-renewable, we know that the source's supply of the resource will eventually become depleted. This is one of the many reasons why the models adopted by neoclassical economists are wrong, because they presuppose the indefinite viability of linear transformation pipelines that draw on finite resources.
 
@@ -34,17 +34,17 @@ An over simplified model is illustrated in \in{figure}[figure:Resources_Pipeline
 \FullPageDiagram
     {figure:Resources_Pipeline}
     {The resource pipeline of all the core sources, resources, mutators, and sinks.}
-    {Source/Game_Mechanics/Diagrams/Resources.pdf}
+    {Source/Game_Mechanics/Graphviz/Resources.pdf}
 
 For the purpose of clarity, we added the same resource sometimes twice, once in its source, and once again as a separate node on the diagram. The reason for this is because sometimes there may be more than one way of getting the same resource that does not involve the original source, such as the ground. 
 
-If you look carefully at \in{figure}[figure:Resources_Pipeline], you will notice that there are no sinks. We avoided putting these on the diagram because it would make it harder to read in linking every resource to all possible sinks to cover every conceivable situation. Instead, let us consider \in{figure}[figure:Resources_Sinks] to illustrate some of the possibilities with a reduced resource set.
+If you look carefully at \in{figure}[figure:Resources_Pipeline], you will notice that there are no sinks. We avoided putting these on the diagram because it would make it harder to read in linking every resource to all possible sinks to cover every conceivable situation. Instead, let us consider \in{figure}[figure:Resource_Sinks] to illustrate some of the possibilities with a reduced resource set.
 
 \placefigure
     [force,here]
     [figure:Resource_Sinks]
     {Resources and sinks.}
-    {\externalfigure[Source/Game_Mechanics/Diagrams/Sinks.pdf][][width=1.0\textwidth]}
+    {\externalfigure[Source/Game_Mechanics/Graphviz/Sinks.pdf][][width=1.0\textwidth]}
 
 Here again the ground is a source of resources, including an artesian aquifer. When tapped with a geothermal station, it will provide aqua or liquid water, electricity, and heat. The electricity and heat can be used for any number of things, but we must be careful with what we do with the water. If the underground well is not replenished, it will eventually become depleted. If this happens, the dangerous likelihood of a collapse sinkhole forming is greatly increased.
 

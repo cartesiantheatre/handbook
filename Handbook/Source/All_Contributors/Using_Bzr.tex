@@ -5,46 +5,46 @@
 
 % Using Bzr section
 \StartSection{Using Bzr}
-As discussed already in \in{section}[Rationale for Bzr], we opted for Bzr as our revision control management software. We host our master branch on Launchpad. The branch contains the source code to Avaneya, game media, and all relevant documentation - including the source to the book you are reading now. 
+As discussed already in \in{section}[Rationale for Bzr], we opted for Bzr as our revision control management software. We host the project's Bzr master branch on Launchpad. The branch contains the source code to Avaneya, game media, and all relevant documentation - including the source to the book you are reading now. 
 
-This section contains instructions on how to interact with it. You can browse the master branch on Launchpad through a web browser by navigating it here.
+This section contains instructions on how to interact with the repository. You can browse the master branch on Launchpad through a web browser at the following link.
 
 \startnarrower[3*left]
 \fullahref{https://code.launchpad.net/~avaneya/avaneya/trunk}
 \stopnarrower
 
 \StartSubSection{Installing Bzr Under Ubuntu}
-Most prefer to work with the source on their local machines instead of using a browser for casual viewing. To download and install the needed Bzr software on Ubuntu, run the following.
+Most prefer to work with the source code on their local machines instead of using a browser. The latter is fine for casual viewing, but not really a viable option as a contributor. To access the source locally, you will need to download and install Bzr. We will cover the installation on Ubuntu only, but other operating systems should have documentation available for them. Start by instructing your package manager to fetch and install the latest version of the Bzr software it has available to it.
 
 \startCodeExample
 $ sudo aptitude install bzr
 \stopCodeExample
 
-Bzr is purely a command line tool, however, there is a mature and helpful graphical user interface that integrates well into the popular Nautilus file manager for Gnome. If you would like to use it, run the following command to download and install it. The second command will restart Nautilus to make it available without logging out and back in again. Be careful, this will kill Nautilus so make sure it is not doing anything important like in the middle of copying a file.
+Bzr is a purely command line tool written in Python, however, there is a mature and attractive graphical user interface that integrates well into the popular Nautilus file manager for Gnome. If you would like to use it, run the following command to download and install it. Note that the second command will restart Nautilus to make it available without having to log out and back in again. Be careful, this will kill Nautilus so make sure it is not doing anything important like copying a file.
 
 \startCodeExample
 $ sudo aptitude install nautilus-bzr
 $ killall -9 nautilus
 \stopCodeExample
 
-To {\tt identify} yourself to Bzr and in any commits you make, run the following command. Please do not use handles, but your actual name with proper spelling and punctuation if possible. The reason being is that we would like to maintain clean commit logs.
+To {\tt identify} yourself to Bzr and in any commits you make, run the following command. Please do not use handles, but your actual name with proper spelling and punctuation if possible. The reason being is that we would like to maintain clean commit logs for the benefit of the general public.
 
 \startCodeExample
-$ bzr whoami "Your Name <your@email_address.com>"
+$ bzr whoami "FirstName LastName <your@email_address.com>"
 \stopCodeExample
 
-\StartSubSection{Creation of Local Branch}
+\StartSubSection{Creation of a Local Branch}
 
-If you do not have write access to the master branch, run the following command to retrieve a copy of the Avaneya source to a folder called Avaneya in the current working directory. You will know if you have write access because you are probably a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad. If you do not know whether you have write access or not, you probably do not. 
+If you do not have write access to the master branch, run the following command to retrieve a copy of the Avaneya source to a folder called Avaneya in the current working directory. You will know if you have write access because you are probably a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad. If you do not know whether you have write access, you probably do not. 
 
 \startCodeExample
 $ bzr branch lp:avaneya Avaneya
 $ cd Avaneya
 \stopCodeExample
 
-This retrieves a local copy of the entire repository which is called a {\it branch} in the Bzr terminology. It can function entirely independent of a project's official repository. You can take it with you on the road, save changes into it incrementally in the form of {\it revisions}, revert back to previous ones, and so on. 
+This retrieves a local copy of the entire repository which is called a {\it branch} in the Bzr terminology. It can function entirely independent of a project's official repository ({\it upstream}). You can take it with you on the road, save changes into it incrementally in the form of {\it revisions}, revert back to previous ones in the absence of an internet connection, and more.
 
-However, if you happen to have write access to the repository, replace the word {\tt branch} in the previous example with {\tt checkout} instead. This would have looked as follows in that case.
+However, if you happen to have write access to the repository, replace the word {\tt branch} in the previous example with {\tt checkout} instead. This would have looked as follows in this case.
 
 \startCodeExample
 $ bzr checkout lp:avaneya Avaneya
@@ -56,14 +56,14 @@ The difference here with the example that used {\tt branch} instead of {\tt chec
 When saving changes in a branch that was retrieved using the former {\tt branch} method, the changes are saved locally only. In the case of a {\tt checkout}, the changes will be saved on the remote project server if you have been given adequate permissions. We will discuss further the concept of commits in \in{section}[Committing Changes].
 
 \StartSubSection{Updating}
-If you performed a {\tt checkout} instead of a {\tt pull} while following the instructions in \in{section}[Creation of Local Branch], you can update your local branch to the latest revision in Launchpad's master branch by running the following.
+If you performed a {\tt checkout} instead of a {\tt pull} while following the instructions in \in{section}[Creation of Local Branch], you can update your local branch to the latest revision available in Launchpad's master branch by running the following.
 
 \startCodeExample
 $ cd Avaneya
 $ bzr update
 \stopCodeExample
 
-If instead you performed a {\tt branch} in \in{section}[Creation of Local Branch], execute the appropriate analogue with a {\tt pull}.
+If instead you performed a {\tt branch} in \in{section}[Creation of Local Branch], execute the appropriate analogue with a {\tt pull}. Note that in either case a working internet connection is required.
 
 \startCodeExample
 $ cd Avaneya
@@ -77,26 +77,26 @@ $ bzr log | less
 \stopCodeExample
 
 \StartSubSection{Committing Changes}
-Go ahead and make any changes you like as you see fit. When you are done making those changes, you can then check to see a list of all the files that you added, modified, and removed, that Bzr is currently tracking by running the following.
+Go ahead and make any changes you like as you see fit. When you are done making those changes, you can then check to see a list of all the files that you added, modified, and removed that Bzr is currently tracking. Do this by running the following.
 
 \startCodeExample
 $ cd Avaneya/Documentation/Contributors/Handbook
 $ bzr status .
 added:
-  Handbook/Source/Engineer_Contributors/Images/Fluid_Dynamics.png
+  Source/Engineer_Contributors/Images/Fluid_Dynamics.png
 modified:
-  Handbook/Makefile
-  Handbook/ReadMe
-  Handbook/Source/Environment.tex
+  Makefile
+  ReadMe
+  Source/Environment.tex
 \stopCodeExample
 
-The above example shows the user the status of their local branch within the current working directory. Bzr reports that they have added one file named {\tt Fluid_Dynamics.png} and modified three others.
+The above example shows the user the status of their local branch within the current working directory. Bzr reports that they have added one file named {\tt Fluid_Dynamics.png} and modified three others within the subdirectory containing the source to this handbook.
 
-The next step is to send those changes either back {\it upstream} or to save them into your local branch. Depending on whether you have write access to the repository or not, there are two methods to do this. If you are a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad, you probably have write access and can send your changes directly into the master branch on the project's remote server. In that case, you checked out the repository and your commits will be stored on the remote project server.
+The next step is to send the changes either back {\it upstream} or to locally into your local branch. Depending on whether you have write access to the repository or not, there are two methods to do this. If you are a member of the \href{https://launchpad.net/~avaneya}{Avaneya Project Crew} on Launchpad, you probably have write access and can send your changes directly into the master branch on the project's remote server. In that case, you checked out the repository and your commits will be stored on the remote project server.
 
-If you do not have write access, you generate what is called a {\it bundle} file which can be emailed to the public mailing list described in \in{section}[Public Discussion] for peer review. Your changes will be committed locally only.
+If you do not have write access, you generate what is called a {\it bundle} file which can be emailed to the public mailing list described in \in{section}[Public Discussion] for peer review. Your changes will commit locally only.
 
-In either case, you need to first perform the commit like in the following example. Note that the {\tt --message} switch is used to specify the log message for the revision. If you need more than one line, omit this switch and you will be prompted to enter a multiline log entry.
+In either case, you need to first perform the commit like in the following example. Note that the {\tt --message} switch is used to specify the log message for the revision. If you need more than one line, omit this switch and you will be prompted to enter a multiline log entry in your default text editor.
 
 \startCodeExample
 $ bzr commit --message "Some commit log message..."
@@ -110,5 +110,5 @@ $ bzr bundle > ~/Desktop/MyChanges.bundle
 
 This will generate the bundle file on your desktop called {\tt MyChanges.bundle} which you can then email to the public mailing list described in \in{section}[Public Discussion] for peer review. The file is both machine and human readable, making it mailing list friendly. 
 
-For the astute reader familiar already with unified diffs and other revision control systems, you may be wondering why the file has a {\tt .bundle} extension rather than a {\tt .patch} or {\tt .diff}. Bundles are not vanilla unified diffs, though similar. Bundles contain metadata specific to Bzr and so we do not recommend using any of the generic patch extensions to avoid confusion with other revision control management software, like Git.
+For the astute reader familiar already with unified diffs and other revision control systems, you may be wondering why the file has a {\tt .bundle} extension rather than a {\tt .patch} or {\tt .diff}. Bundles are not vanilla unified diffs, though similar. Bundles contain metadata specific to Bzr and so we do not recommend using any of the generic patch extensions to avoid confusion with other revision control management software like Git.
 

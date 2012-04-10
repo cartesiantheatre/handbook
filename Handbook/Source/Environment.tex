@@ -420,9 +420,13 @@
 \setupsectionblock[appendix]  [page=yes]
 \setupsectionblock[frontpart] [before=,after=]
 
+% Setup footnotes...
 \setupnotation[footnote]
     [color=colour_footnote_text,
      backgroundcolor=colour_footnote_background]
+
+\setupfootnotes
+  [rule=on]
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text
@@ -497,9 +501,6 @@
   [texmacro]
   [indicator=off,
    distance=1em minus .25em]
-
-\setupfootnotes
-  [rule=on]
 
 \setuphead
   [chapter]

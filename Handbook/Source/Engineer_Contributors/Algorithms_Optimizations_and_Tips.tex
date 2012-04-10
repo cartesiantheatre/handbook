@@ -88,10 +88,19 @@ For this problem we have selected the tried and true A\high{*} search strategy a
 Procedural generation is a mathematical technique for algorithmically producing some kind of data automatically, as opposed to manually. Think of a computer \quote{understanding} what wood looks like and creating a suitable material for a model on the fly, as opposed to an artist having to manually provide one. 
 
 \placefigure
-    [force, here]
+    [here,force]
     [figure:Procedural_Generation]
-    {Starting from the top-left and going clockwise with granite, wood, magma, and marble procedurally generated respectively.}
-    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation.png][][width=.5\textwidth]}
+    {Starting from the left, procedurally generated granite, wood, magma, and marble respectively.}
+    \startcombination[4*1]
+    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation_Granite.png][][width=.25\textwidth]}
+    {}
+    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation_Wood.png][][width=.25\textwidth]}
+    {}
+    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation_Magma.png][][width=.25\textwidth]}
+    {}
+    {\externalfigure[Source/Engineer_Contributors/Images/Procedural_Generation_Marble.png][][width=.25\textwidth]}
+    {}
+    \stopcombination
 
 As a general rule with this project, whenever we can reasonably get away with procedural generation, as opposed to providing static data, we will. The advantages are many, but we can name a few. These include a reduced storage footprint, increased performance, a theoretical infinite resolution in some situations, and most importantly, an opportunity for every user to experience something unique that would not have been possible with static data.
 
@@ -129,7 +138,7 @@ Considering this, we selected Makoto Matsumoto's algorithm,\footnote{\href{http:
 
 As one of its many novel uses, it may be possible to parametrically define some idiosyncrasies of a graphical object by having it take advantage of an element of randomness. For example, two otherwise identical building units, such as a pressurized habitat, could incorporate random parameters to make the foliage in their indoor courtyards different from one another by seeding a foliage generation subroutine with different values. The possibilities are limited in part by the technical and artistic creativity of the artists and engineers involved.
 
-\StartSubSection{Social Simulation}
+\StartSubSection{Socioeconomic Simulation}
 For aspects of the game concerned with social simulation, it is very difficult to commit to specific algorithms and information representation models until the establishment of more of the game's peripheral aspects. The reason being is that it is hard to tell how well an approach will perform until there is a means of trying it. Compounding the challenges further yet, of all the different subfields of game development, social simulation is probably amongst the most absent in the literature.
 
 Something to consider at least for the time being, however, is the use of a Hubbert curve for modelling resource consumption of finite supplies of natural resources.\footnote{\href{https://en.wikipedia.org/wiki/Hubbert_curve}{Hubbert curve. }{\it Wikipedia}. 18 Mar. 2012.} Whatever models we use, there are some things we need to keep in mind that are fairly fundamental to this project. 

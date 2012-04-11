@@ -39,3 +39,20 @@ within Avaneya/Documentation/Contributors/Handbook:
 If everything went well, you should have the Avaneya Project Crew Handbook.pdf 
 sitting in the aforementioned folder ready to go.
 
+If your context or luatex packages ever are upgraded, Adam recommends you do the
+following.
+
+    * Update packages (e.g. aptitude upgrade)
+    * remove ~/.texmf-var
+    * run: luatools --generate
+    * run: mtxrun --generate
+    * run: context --make
+    * run: context --make cont-en cont-nl
+    * run: mtxrun --script fonts --reload
+    * run: context hello.tex
+        ...with hello.tex being just:
+
+        \starttext
+        Hello world!
+        \stoptext
+

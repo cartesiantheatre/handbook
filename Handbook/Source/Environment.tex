@@ -14,10 +14,13 @@
 % Speedup typescripting considerably at the cost of using additional memory...
 \preloadtypescripts
 
-% Plugins needed...
+% Plugin modules needed...
     
-    % Metric units and simple fonts...
-    \usemodule[units,simplefonts]
+    % Metric units...
+    \usemodule[units]
+    
+    % Simple fonts...
+    \usemodule[simplefonts]
     
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
@@ -42,30 +45,32 @@
 \setuplist[section][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
 \setuplist[subsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
 \setuplist[subsubsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
-        
-% Bzr version...
-\def\initializeBazaar
-        {\ctxlua{context("\\global\\edef\\BazaarRevision{\%s}",
-                 os.resultof"bzr revno | tr -d '\\n'")}}
-\initializeBazaar
 
-% Evince version...
-\def\initializeEvince
-        {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
-                 os.resultof"evince --version | tr -d '\\n'")}}
-\initializeEvince
+% External program version strings...
 
-% Graphviz version...
-\def\initializeGraphviz
-        {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
-                 os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
-\initializeGraphviz
+    % Bzr version...
+    \def\initializeBazaar
+            {\ctxlua{context("\\global\\edef\\BazaarRevision{\%s}",
+                     os.resultof"bzr revno | tr -d '\\n'")}}
+    \initializeBazaar
 
-% Umbrello version...
-\def\initializeUmbrello
-        {\ctxlua{context("\\global\\edef\\UmbrelloVersion{\%s}",
-                 os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
-\initializeUmbrello
+    % Evince version...
+    \def\initializeEvince
+            {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
+                     os.resultof"evince --version | tr -d '\\n'")}}
+    \initializeEvince
+
+    % Graphviz version...
+    \def\initializeGraphviz
+            {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
+                     os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
+    \initializeGraphviz
+
+    % Umbrello version...
+    \def\initializeUmbrello
+            {\ctxlua{context("\\global\\edef\\UmbrelloVersion{\%s}",
+                     os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
+    \initializeUmbrello
 
 % Setup PDF metadata...
 \setupinteraction
@@ -108,6 +113,21 @@
 %   background=color, 
 %   backgroundcolor=colour_page,
    rulethickness=0.5pt]
+
+% Setup bibliography...
+    
+    % References database and other general settings...
+    \setupbibtex[database={Source/References/References}, sort=author]
+
+    % Other setup commands...
+    \setuppublications[
+        alternative=num,
+        monthconversion=month]
+
+    % et al. settings...
+    \setuppublicationlist[authoretallimit=3]
+    \setuppublicationlist[authoretaltext={\it\ et al.}]
+    \setuppublicationlist[authoretaldisplay=1] 
 
 % Setup floats...
     

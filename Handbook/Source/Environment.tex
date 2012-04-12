@@ -121,13 +121,20 @@
 
     % Other setup commands...
     \setuppublications[
-        alternative=num,
+        alternative=mla,
+        numbering=yes,
         monthconversion=month]
+    
+    % Enable clickable links...
+    \setupcite[interaction=start, compress=no]
 
     % et al. settings...
     \setuppublicationlist[authoretallimit=3]
     \setuppublicationlist[authoretaltext={\it\ et al.}]
     \setuppublicationlist[authoretaldisplay=1] 
+
+%    \def\footnotecite[#1][#2]%
+%    {(\cite[alternative=authoryear,left={},inbetween={ },extras={, p. #2}][#1]}
 
 % Setup floats...
     
@@ -325,13 +332,9 @@
 
 % Usage: \href{http://www.someurl.com}{Text}
 \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
-
 \def\ahref#1{\color[colour_link]{\ttx \href{#1}{<#1>}}}
-
 \def\fullahref#1{\color[colour_link]{\ttx \href{#1}{#1}}}
-
 \def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
-
 \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
 
 \definetextbackground[TimelineGeneralDocument]

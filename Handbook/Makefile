@@ -21,6 +21,7 @@ CONTEXT_PRODUCT         = Source/Handbook.tex
 ALL_TEX_SOURCE          = $(shell find Source/ -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find Source/ -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
 ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find Source/ -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_BIBTEX              = Source/References/References.bib
 ALL_GRAPHVIZ_PDF        = $(ALL_DOT_PDF) $(ALL_TWOPI_PDF)
 UMBRELLO_ENGINE_DIAGRAM = ../AresEngine/UML/Engine.xmi
 CONTEXT_OPTIONS         = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
@@ -38,7 +39,7 @@ UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Engineer_Contributors/Images/AresEngine/Eng
 all: $(OUTPUT_PDF) Makefile
 
 # Generate handbook PDF...
-$(OUTPUT_PDF): ${ALL_DOT_PDF} $(ALL_TWOPI_PDF) $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+$(OUTPUT_PDF): ${ALL_DOT_PDF} $(ALL_TWOPI_PDF) $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
 	context $(CONTEXT_PRODUCT) --result=$(OUTPUT_PDF) $(CONTEXT_OPTIONS)
 
 # Generate all graphviz diagrams...
@@ -55,7 +56,7 @@ $(TOC_PDF): $(OUTPUT_PDF)
 
 # Just produce the Viking Lander Remastered chapter...
 viking: graphviz $(VIKING_PDF)
-$(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG)
+$(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
 	context Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
 
 # Clean everything, including the cached engine diagram images...
@@ -75,7 +76,7 @@ clean-all: clean
 # Clean most intermediate build files, including the generated PDF...
 clean:
 	@ rm -vf $(OUTPUT_PDF)
-	@ rm -vf Handbook.pdf 
+	@ rm -vf Handbook.pdf Handbook.aux Handbook.bbl Handbook.blg
 	@ rm -vf $(VIKING_PDF)
 	@ rm -vf $(TOC_PDF)
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null

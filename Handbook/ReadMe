@@ -23,7 +23,6 @@ the following:
     $ sudo aptitude install     \
         umbrello                \
         texlive-math-extra      \
-        texlive-latex-extra     \
         ttf-ubuntu-font-family  \
         context                 \
         context-extra           \

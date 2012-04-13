@@ -22,6 +22,9 @@
     % Simple fonts...
     \usemodule[simplefonts]
     
+    % Provides the \BIBTEX macro...
+    \usemodule[abr-01]
+    
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
 \definecolor[colour_figure_border][colour_text]
@@ -46,13 +49,24 @@
 \setuplist[subsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
 \setuplist[subsubsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
 
-% External program version strings...
+% Revision control...
 
-    % Bzr version...
-    \def\initializeBazaar
-            {\ctxlua{context("\\global\\edef\\BazaarRevision{\%s}",
+    % Bzr revision...
+    \def\initializeBzr
+            {\ctxlua{context("\\global\\edef\\BzrRevision{\%s}",
                      os.resultof"bzr revno | tr -d '\\n'")}}
-    \initializeBazaar
+    \initializeBzr
+
+    % URL of latest handbook...
+    \def\LatestHandbookURL{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}
+
+    % Clickable Bzr revision...
+    \def\BzrRevisionClickable{%
+        \href{http://www.google.ca}{\BzrRevision}
+    }
+    
+
+% External program version strings...
 
     % Evince version...
     \def\initializeEvince
@@ -78,9 +92,9 @@
    color=colour_link,
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
-   title=Avaneya Project Crew Handbook (Revision \BazaarRevision),
+   title=Avaneya Project Crew Handbook (Revision \BzrRevision),
    subtitle=A guidebook for new and current contributors.,
-   author=The Avaneya Project Crew (Revision \BazaarRevision),
+   author=The Avaneya Project Crew (Revision \BzrRevision),
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
 \setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
@@ -88,6 +102,7 @@
 \setupTABLE[row][each][offset=2mm]
 
 % Select language...
+\mainlanguage[en]
 \language[en]
 
 % Setup default text colour...
@@ -119,22 +134,32 @@
     % References database and other general settings...
     \setupbibtex[database={Source/References/References}, sort=author]
 
-    % Other setup commands...
+    % Global settings...
     \setuppublications[
-        alternative=mla,
+        alternative=apa, % Anything other than apa typesets [[error 2]]???
         numbering=yes,
-        monthconversion=month]
-    
-    % Enable clickable links...
-    \setupcite[interaction=start, compress=no]
+        monthconversion=month,
+        autohang=yes,
+        sorttype=cite]
 
-    % et al. settings...
-    \setuppublicationlist[authoretallimit=3]
-    \setuppublicationlist[authoretaltext={\it\ et al.}]
-    \setuppublicationlist[authoretaldisplay=1] 
+    % Individial citation settings...
 
-%    \def\footnotecite[#1][#2]%
-%    {(\cite[alternative=authoryear,left={},inbetween={ },extras={, p. #2}][#1]}
+        % Enable clickable links...
+        \setupcite[interaction=start, compress=no]
+
+    % Publication list setups for end of the book list...
+
+        % Settings for triggering et al...
+        \setuppublicationlist[authoretallimit=3]
+        \setuppublicationlist[authoretaltext={\it\ et al.}]
+        \setuppublicationlist[authoretaldisplay=2] 
+
+        % List the author, editor, or article author's full name, inverted...
+        \setuppublicationlist[%
+            author=\invertedauthor,%
+            artauthor=\invertedauthor,%
+            editor=\invertedauthor,%
+            title=References]
 
 % Setup floats...
     
@@ -444,12 +469,13 @@
 \setupsectionblock[frontpart] [before=,after=]
 
 % Setup footnotes...
-\setupnotation[footnote]
-    [color=colour_footnote_text,
-     backgroundcolor=colour_footnote_background]
 
-\setupfootnotes
-  [rule=on]
+    \setupnotation[footnote]
+        [color=colour_footnote_text,
+         backgroundcolor=colour_footnote_background]
+
+    \setupfootnotes
+      [rule=on]
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text

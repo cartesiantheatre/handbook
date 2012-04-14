@@ -62,7 +62,7 @@
 
     % Clickable Bzr revision...
     \def\BzrRevisionClickable{%
-        \href{http://www.google.ca}{\BzrRevision}
+        \href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}
     }
     
 
@@ -141,6 +141,10 @@
         monthconversion=month,
         autohang=yes,
         sorttype=cite]
+
+    % Macro to put the cites in the footer...
+    %\let \citeasfootnote \cite
+    %        \unexpanded\def\cite#1{\footnote{\citeasfootnote{#1}}}
 
     % Individial citation settings...
 
@@ -473,6 +477,9 @@
     \setupnotation[footnote]
         [color=colour_footnote_text,
          backgroundcolor=colour_footnote_background]
+
+    %\setupnote[footnote]
+    %    [textseparator={,}]
 
     \setupfootnotes
       [rule=on]

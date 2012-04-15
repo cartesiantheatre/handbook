@@ -44,10 +44,34 @@
 \definecolor[colour_text_background_clear][r=0,g=0,b=0,t=0.0,a=1]
 
 % Set the colours of various list items...
-\setuplist[chapter][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
-\setuplist[section][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
-\setuplist[subsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
-\setuplist[subsubsection][color=colour_text, numbercolor=colour_head, pagecolor=colour_page_number]
+
+    % Chapters...
+    \setuplist[chapter]
+        [color=colour_text, 
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Section...
+    \setuplist[section]
+        [color=colour_text,
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Subsection...
+    \setuplist[subsection]
+        [color=colour_text, 
+         numbercolor=colour_head,
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Subsubsection...
+    \setuplist[subsubsection]
+        [color=colour_text, 
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
 
 % Revision control...
 
@@ -61,10 +85,7 @@
     \def\LatestHandbookURL{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}
 
     % Clickable Bzr revision...
-    \def\BzrRevisionClickable{%
-        \href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}
-    }
-    
+    \def\BzrRevisionClickable{\href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}}
 
 % External program version strings...
 

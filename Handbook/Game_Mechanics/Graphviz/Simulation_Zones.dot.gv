@@ -1,0 +1,50 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Kshatra Corp.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Simulation_Zones.twopi.gv -o Simulation_Zones.pdf
+*/
+
+digraph Simulation_Zones
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Zones";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Zones...
+    "Commercial"[label="Commercial\n[Type: Zone]"];
+    "Habitat / Commercial"[label="Habitat / Commercial\n[Type: Zone]"]
+    "Habitat"[label="Habitat\n[Type: Zone]"];
+    "Industrial"[label="Industrial\n[Type: Zone]"];
+    "Unzoned"[label="Unzoned\n[Type: Zone]"];    
+
+    // Relations...
+    "Zones"[shape="folder"];
+        "Zones" -> "Commercial";
+        "Zones" -> "Habitat";
+        "Zones" -> "Habitat / Commercial";
+        "Zones" -> "Industrial";
+        "Zones" -> "Unzoned";
+}
+

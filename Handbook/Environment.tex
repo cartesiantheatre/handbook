@@ -1,0 +1,635 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% The environment file is used to setup the typesetting that relate to 
+%  any product, but at present, just the handbook...
+
+\startenvironment Environment
+
+% Quiet...
+\showmessagesfalse
+
+% Speedup typescripting considerably at the cost of using additional memory...
+\preloadtypescripts
+
+% Plugin modules needed...
+    
+    % Metric units...
+    \usemodule[units]
+    
+    % Simple fonts...
+    \usemodule[simplefonts]
+    
+    % Provides the \BIBTEX macro...
+    \usemodule[abr-01]
+    
+% Define colours...
+\definecolor[colour_figure_background][colour_page]
+\definecolor[colour_figure_border][colour_text]
+\definecolor[colour_footnote_background][colour_page]
+\definecolor[colour_footnote_text][colour_text]
+\definecolor[colour_frame_border][colour_text]
+\definecolor[colour_head][r=0.828,g=0.313,b=0.176]
+\definecolor[colour_item][r=0.864,g=0.426,b=0.234]
+\definecolor[colour_link][colour_head]
+\definecolor[colour_page_number][colour_head]
+\definecolor[colour_page][r=0,g=0,b=0]
+\definecolor[colour_table_row_even][r=0.157,g=0.157,b=0.157,t=0.4,a=1]
+\definecolor[colour_table_row_odd][r=0.1,g=0.1,b=0.1,t=0.4,a=1]
+\definecolor[colour_table_dark_column][r=0.05,g=0.05,b=0.05]
+\definecolor[colour_text][r=0.754,g=0.516,b=0.324]
+\definecolor[colour_text_background_shaded][r=0,g=0,b=0,t=0.4,a=1]
+\definecolor[colour_text_background_clear][r=0,g=0,b=0,t=0.0,a=1]
+
+% Embed colour profile information in PDF to make consistent across viewers...
+
+    \startluacode
+    backends                = backends                or { }
+    backends.codeinjections = backends.codeinjections or { }
+
+    function backends.codeinjections.rgbtransparencygroup()
+        local d = lpdf.dictionary {
+            S  = lpdf.constant("Transparency"),
+            CS = lpdf.constant("DeviceRGB"),
+            I  = true }
+        lpdf.registerpagefinalizer(function()
+    lpdf.addtopageattributes("Group",d) end)
+    end
+
+    backends.codeinjections.rgbtransparencygroup()
+    \stopluacode
+
+% Set the colours of various list items...
+
+    % Chapters...
+    \setuplist[chapter]
+        [color=colour_text, 
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Section...
+    \setuplist[section]
+        [color=colour_text,
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Subsection...
+    \setuplist[subsection]
+        [color=colour_text, 
+         numbercolor=colour_head,
+         pagecolor=colour_page_number,
+         symbol=R]
+
+    % Subsubsection...
+    \setuplist[subsubsection]
+        [color=colour_text, 
+         numbercolor=colour_head, 
+         pagecolor=colour_page_number,
+         symbol=R]
+
+% Revision control...
+
+    % Bzr revision...
+    \def\initializeBzr
+            {\ctxlua{context("\\global\\edef\\BzrRevision{\%s}",
+                     os.resultof"bzr revno | tr -d '\\n'")}}
+    \initializeBzr
+
+    % URL of latest handbook...
+    \def\LatestHandbookURL{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}
+
+    % Clickable Bzr revision...
+    \def\BzrRevisionClickable{\href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}}
+
+% External program version strings...
+
+    % Evince version...
+    \def\initializeEvince
+            {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
+                     os.resultof"evince --version | tr -d '\\n'")}}
+    \initializeEvince
+
+    % Graphviz version...
+    \def\initializeGraphviz
+            {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
+                     os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
+    \initializeGraphviz
+
+    % Umbrello version...
+    \def\initializeUmbrello
+            {\ctxlua{context("\\global\\edef\\UmbrelloVersion{\%s}",
+                     os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
+    \initializeUmbrello
+
+% Setup PDF metadata...
+\setupinteraction
+  [state=start,
+   color=colour_link,
+   contrastcolor=colour_link,
+   focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
+   title=Avaneya Project Crew Handbook (Revision \BzrRevision),
+   subtitle=A guidebook for contributing members of our community.,
+   author=The Avaneya Project Crew (Revision \BzrRevision),
+   keyword={Avaneya, handbook, Mars, GNU, game}]
+
+\setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
+\setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
+\setupTABLE[row][each][offset=2mm]
+
+% Select language...
+\mainlanguage[en]
+\language[en]
+
+% Setup default text colour...
+\setupcolors[
+    state=start,
+    textcolor=colour_text]
+
+\setupmargindata
+  [inmargin]
+  [style={\switchtobodyfont[6pt]\bi]},
+   color=colour_text]
+
+\setupmarginframed
+  [inmargin]
+  [background=color,
+   backgroundcolor=colour_page]
+
+\setupexternalfigures
+  [location={local,default},
+   frame=off,
+   corner=rectangular,
+   framecolor=colour_figure_border,
+%   background=color, 
+%   backgroundcolor=colour_page,
+   rulethickness=0.5pt]
+
+% Setup bibliography...
+    
+    % References database and other general settings...
+    \setupbibtex[database={References/References}, sort=author]
+
+    % Global settings...
+    \setuppublications[
+        alternative=apa, % Anything other than apa typesets [[error 2]]???
+        numbering=yes,
+        monthconversion=month,
+        autohang=yes,
+        sorttype=cite]
+
+    % Macro to put the cites in the footer...
+    %\let \citeasfootnote \cite
+    %        \unexpanded\def\cite#1{\footnote{\citeasfootnote{#1}}}
+
+    \unexpanded\def\footnotecite{\dodoubleempty\domycite}
+    \def\domycite[#1][#2]%
+        {\ifsecondargument
+            \footnote{\cite[alternative=data,#1][#2]}%
+        \else
+            \footnote{\cite[data][#1]}%
+        \fi}
+
+    % Individial citation settings...
+
+        % Enable clickable links...
+        \setupcite[alternative=interaction=start, compress=no]
+
+    % Publication list setups for end of the book list...
+
+        % Settings for triggering et al...
+        \setuppublicationlist[authoretallimit=3]
+        \setuppublicationlist[authoretaltext={\it\ et al.}]
+        \setuppublicationlist[authoretaldisplay=2] 
+
+        % List the author, editor, or article author's full name, inverted...
+        \setuppublicationlist[%
+            author=\invertedauthor,%
+            artauthor=\invertedauthor,%
+            editor=\invertedauthor,%
+            title=References]
+
+% Setup floats...
+    
+    % Tables of width <0.5 times textwidth are automatically placed at the inner margin...
+    \setupfloat[table]
+        [criterium=0.5\textwidth,
+         default=inner]
+
+    \setupfloats
+        [spacebefore=1*medium,
+         spaceafter=1*medium]
+
+% Jenya inline figure
+\useexternalfigure[jenya_inline][Terms_and_Concepts/Images/Jenya_red.svg][factor=8]
+
+\setupurl
+  [color=colour_link,
+   style=\bf]
+
+\setupframedtexts
+  [framecolor=colour_frame_border]
+
+% Show the PDF bookmarks and expand to the chapter and section level...
+\placebookmarks[chapter,section,subsection,subsubsection][chapter]
+\setupinteractionscreen[option=bookmark]
+
+% Set the background image...
+\defineoverlay[BackgroundImage][\overlayfigure{Makeup/Images/Background.png}]
+\setupbackgrounds
+    [page]
+    [background=BackgroundImage]
+
+% Set PDF compression level, default is 3, so set to maximum...
+\setupbackend
+  [level=9]
+\pdfcompresslevel9
+\maximumpdfcompression
+
+\setupsystem
+  [random=big]
+
+\unprotect
+\setuplayout
+  [location=middle,
+   style=\bi,
+   backspace=2.5cm,
+   topspace=1.5cm,
+   width=16cm,
+   margindistance=.25cm,
+   margin=2.5cm,
+   height=middle]
+
+\definelayout
+  [fullpage]
+  [backspace=0pt,
+   topspace=0pt,
+   width=middle,
+   height=middle,
+   header=0pt,
+   footer=0pt]
+\protect
+
+\definepapersize[main][A4][A4]
+\definepapersize[diagram][A4,landscape][A4,landscape]
+
+\definehspace[star_hspace][1.75em]
+
+% Define definitions used in terms & concepts chapter...
+\definedescription[definition]
+  [location=top,
+   alternative=top,
+   width=fit,
+   headcolor=colour_head,
+   headstyle=boldslanted]
+
+% Define article item groups...
+\defineitemgroup[article]
+
+\setupitemgroup
+   [article]
+   [left={Article },
+    stopper=,
+    symbol=R,
+    before=\blank,
+    after=\blank,
+    command=\blank,
+    distance=0.5em]
+
+\setupitemgroup
+    [article]
+    [color=colour_head]
+
+% Remove surrounding quotation marks on references...
+\setupreferencing[left=, right=]
+
+% Font setup...
+
+    \definefontsynonym[chapternumberfont][RegularBold]
+    \definefontsynonym[chaptertextfont]  [RegularBold]
+
+    \definebodyfont[11pt][rm][bfe=RegularBold at 30pt]
+    \definebodyfont[11pt][rm][bft=RegularBold at 30pt]
+
+    % Font to use...
+    \setmainfont[Ubuntu]
+    \setupbodyfont[11pt]
+
+\def\CopyrightDates{2010, 2011, 2012}
+\def\CopyrightHolder{Kshatra Corp}
+
+\def\SetupCharacterTable
+{
+    \bTABLE[width=0.2\textwidth]
+    \switchtobodyfont[6pt]
+    \setupTABLE[column][1]
+        [align={middle,lohi},
+         background=color,
+         backgroundcolor=colour_table_row_even,
+         style=\bf,
+         width=2cm]
+    \setupTABLE[column][2]
+        [align=flushleft,
+         option=stretch,
+         background=color,
+         backgroundcolor=colour_table_row_odd]
+    \setupTABLE[each][each]
+        [style=\tf]
+}
+
+% Insert a full page landscape diagram, parameters are node name, caption, and path...
+\def\FullPageDiagram#1#2#3%
+{
+    \startTEXpage[offset=0mm,width=30cm]
+%    \startframedtext[align=center,corner=rectangular]
+    \placefigure
+        [force][#1]
+        {#2}
+        {\externalfigure[#3][factor=max,
+                             align=center,
+                             %background=color,
+                             %backgroundcolor=colour_figure_background
+                            ]}
+%    \stopframedtext
+    \stopTEXpage
+%    \page 
+%    \setuppapersize[diagram]
+%    \setuplayout[fullpage]
+%    \startframedtext[width=.95\textwidth,bottom=\vss,top=\vss,align=right,corner=rectangular]
+%    \placefigure
+%        [force][figure:#1]
+%        {#2}
+%        {\externalfigure[#3][width=.95\textwidth,background=color,backgroundcolor=colour_figure_background]}
+%    \stopframedtext
+%    \page
+%    \setuppapersize[main]
+%    \setuplayout[reset]
+}
+
+\def\StartChapter#1%
+{
+    \startcomponent{#1}
+    \chapter[#1]{#1}
+%    \index{#1}
+}
+
+\def\StopChapter%
+{
+    \stopcomponent
+}
+
+\def\StartSection#1%
+{
+    \section[#1]{#1}
+%    \index{#1}
+}
+
+\def\StartSubSection#1%
+{
+    \subsection[#1]{#1}
+%    \index{#1}
+}
+
+\def\StartSubSubSection#1%
+{
+    \subsubsection[#1]{#1}
+%    \index{#1}
+}
+
+\def\StartTimelineDate#1%
+{
+    \subsubsubject{\bf #1}
+}
+
+\def\StopTimelineDate%
+{
+    \crlf
+}
+
+% Usage: \href{http://www.someurl.com}{Text}
+\def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
+\def\ahref#1{\color[colour_link]{\ttx \href{#1}{<#1>}}}
+\def\fullahref#1{\color[colour_link]{\ttx \href{#1}{#1}}}
+\def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
+\def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
+
+\definetextbackground[TimelineGeneralDocument]
+   [location=paragraph,
+    color=color_text,
+    background=color,
+    backgroundcolor=colour_text_background_clear,
+    framecolor=colour_text,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm,
+    before={
+        \blank[2*big]
+    },
+    after={
+        \blank[2*big]
+    },
+    style=small,
+    corner=round,
+    frame=off]
+
+\definetextbackground[TimelineCorrespondenceDocument]
+   [location=paragraph,
+    color=color_text,
+    background=color,
+    backgroundcolor=colour_text_background_clear,
+    framecolor=colour_text,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm,
+    before={
+        \blank[2*big]
+    },
+    after={
+        \blank[2*big]
+    },
+    style=smalltype,
+    corner=round,
+    frame=off]
+
+\definetextbackground[CodeExampleFrame]
+   [corner=round,
+    frame=on,
+    before={
+        \blank[0.5cm]
+        \startlinecorrection
+    },
+    after={
+        \blank[0.5cm]
+        \stoplinecorrection
+    },
+    color=color_text,
+    bodyfont=5pt,
+    background=color,
+    backgroundcolor=colour_text_background_shaded,
+    framecolor=colour_text,
+    location=paragraph,
+    topoffset=0.5cm,
+    bottomoffset=0.5cm,
+    leftoffset=0.5cm,
+    rightoffset=0.5cm]
+    
+    \definetyping
+      [CodeExample]
+      [before=\startCodeExampleFrame,
+       after=\stopCodeExampleFrame]
+
+% Number formulae etc. using the chapter number...
+\setupnumbering
+    [way=bychapter]
+
+\setuppagenumbering
+  [location=top,
+   way=bytext,
+   left={\lettertilde\space},right={\space\lettertilde},
+%   left={(\space},right={\space)},
+   color=colour_page_number,
+   style=bold]
+
+\setuptolerance
+  [verytolerant,stretch]
+
+\setupblank
+  [medium]
+
+% Spacing between paragraphs...
+\setupwhitespace
+  [big]
+
+\setupfootertexts
+  [margin]
+  [][{
+\hfill
+%\doifnotmode{*frontpart}{\getmarking[chapternumber]}
+\hfill
+    }]
+
+\setupbodyfontenvironment
+  [default]
+  [em=italic]
+
+\setupsectionblock[frontpart] [page=yes]
+\setupsectionblock[bodypart]  [page=yes]
+\setupsectionblock[appendix]  [page=yes]
+\setupsectionblock[frontpart] [before=,after=]
+
+% Setup footnotes...
+
+    \setupnotation[footnote]
+        [color=colour_footnote_text,
+         backgroundcolor=colour_footnote_background]
+
+    % Implemented by Hans in bleeding edge ConTeXt...
+    \setupnote[footnote]
+        [textseparator={\textcomma}]
+
+    \setupfootnotes
+      [rule=on]
+
+% To move footnotes inside of text boxes to the bottom of the page with
+%  the rest of the footnotes. Disabled temporarily to fix issue of text
+%  background frame borders vanishing...
+\kindofpagetextareas\plusone
+
+\automigrateinserts
+
+\setuphead
+  [chapter]
+  [command=\PlaceSection,
+   color=colour_head,
+   page=yes,
+   before=,
+   header=nomarking,
+   style=\bfd]
+
+\setuphead
+  [title]
+  [command=\PlaceSection,
+   color=colour_head,
+   page=right,
+   before=,
+   header=nomarking,
+   style=\bfd]
+
+\setuphead
+  [section]
+  [command=\PlaceSection,
+   color=colour_head,
+   inbetween=,
+   style=\bfb]
+
+\setuphead
+  [subsection]
+  [command=\PlaceSection,
+   color=colour_head,
+   before=\crlf,
+   style=\bfa]
+
+\setuphead
+  [subsubsection]
+  [command=\PlaceSection,
+   color=colour_head,
+   before=\blank,
+   style=\bsa]
+
+\def\PlaceSection#1#2%
+  {\goodbreak
+   \vbox
+     {\localheadsetup
+      \begstrut
+      \inleftmargin{\hbox to \leftmarginwidth{\hss#1\hss}}%
+      #2}}
+
+\setupcaptions[location=bottom]
+
+\setuptype
+  [option=slanted]
+
+\setuptyping
+  [option=slanted,
+   blank=medium]
+
+\def\DotAfterNumber#1{\doiftext{#1}{#1.}}
+
+\defineregister
+  [texmacro]
+  [texmacros]
+
+\setupregister
+  [texmacro]
+  [indicator=off,
+   distance=1em minus .25em]
+
+\setuphead
+  [chapter]
+  [header=empty]
+
+\setupitemize
+  [each]
+  [fit,2*broad]
+  [color=colour_item,
+   distance=.25em] % Distance between indicator and body text
+
+\setupitemgroup[itemize]
+  [each]
+  [stopper]
+  [headstyle=bold,
+   inbetween={\blank[0.5cm]},
+   before={\blank[0.5cm]},
+   after={\blank[0.5cm]}]
+
+\setupsubpagenumber
+  [way=bychapter,
+   state=start]
+
+\stopenvironment
+

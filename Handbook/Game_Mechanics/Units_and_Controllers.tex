@@ -1,0 +1,90 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% Units & Controllers section...
+\StartSection{Units & Controllers}
+
+A unit is any vehicle, building, or other special object that needs to have its own unique properties and behaviours. It will always have a {\it controller}. This could be a human, either the user or someone else during a multiplayer session, or the computer's artificial intelligence.
+
+It is the project's desire for an extensive unit tree. Although the user may direct the locations and activities of units under their control, not all units in the unit tree they will have access to -- nor will they necessarily even know about or want them. Some units, such as certain types of vehicles and buildings, only the simulation can create at various times. We refer to these as non-playable units\index{Non-playable units} (NPUs)\index{NPUs}. At other times still, the user will be able to create certain units in specific scenarios that in others they would not.
+
+As an example, you can and should build a greenhouse. But other influences in the game world might have the Clown Food\index{Clown Food} franchise erect a restaurant without having asked if the circumstance was right. Nevertheless, NPUs can usually be influenced by the decisions that you make, even if you are not directly in control of them. Nearly everything influences everything in the game.
+
+But most units can and will change with time depending on various factors that take place in the game world. For example, an area zoned for residential usage may start with only a few pressurized yurts, but after time, it may develop into an extravagant, full fledged, pressurized biodome. With further time yet, it may fall into a state of disrepair with the underprivileged seeking shelter within its ruins - should the social, economic, and other conditions be met.
+
+We should now take a look at some of the different categories that form the basic unit tree available to the user. This is a very modest subset of all units the user can possibly create, but does not illustrate the variety each unit can express. For buildings these categories are {\it Agricultural}; {\it Construction}; {\it Economic}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones} for commercial or residential use. Because these are high level categories, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
+
+If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the user. The figures that follow are an exploration of each of these high level categories. Note that they illustrate only the categorical relations, but not which unit is required to be built in order to provide for the availability of another unit (build dependencies).
+
+\page
+\placefigure
+    []
+    [figure:Units_User_Basic_All]
+    {All high level categories of the user's basic unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_All.pdf][][height=0.45\textheight]}
+
+\placefigure
+    []
+    [figure:Units_User_Basic_Agricultural]
+    {User's basic agricultural unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Agricultural.pdf][][width=1.25\textwidth]}
+
+\page
+\placefigure
+    []
+    [figure:Units_User_Basic_Civic]
+    {User's basic civic unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Civic.pdf][][width=1.25\textwidth]}
+
+\placefigure
+    []
+    [figure:Units_User_Basic_Education_and_Research]
+    {User's basic education and research unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Education_and_Research.pdf][][width=1.25\textwidth]}
+
+\page
+\placefigure
+    []
+    [figure:Units_User_Basic_Energy]
+    {User's basic energy unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Energy.pdf][][width=1.25\textwidth]}
+
+\placefigure
+    []
+    [figure:Units_User_Basic_Health_Recreational_and_Social]
+    {User's basic health, recreational, and social unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Health_Recreational_and_Social.pdf][][width=1.25\textwidth]}
+
+\page
+\placefigure
+    []
+    [figure:Units_User_Basic_Production]
+    {User's basic production unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Production.pdf][][width=1.25\textwidth]}
+    
+\placefigure
+    []
+    [figure:Units_User_Basic_Transportation]
+    {User's basic transportation unit tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Transportation.pdf][][width=1.25\textwidth]}
+
+\page
+\placefigure
+    []
+    [figure:Simulation_Zones]
+    {Simulation zones tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Simulation_Zones.pdf][][width=0.75\textwidth]}
+
+If you look carefully at \in{figure}[figure:Simulation_Zones], concrete units were not given, but rather, zones that the user can allocate for the simulation to manage at the user's discretion. A residential zone, for instance, can provide a space for the simulation to erect any kind of residential building. In addition, the user can specify zoning restrictions on an area when it is allocated. These restrictions can limit the maximum building height, density,\footnote{By density, as an example in a residential zone, this means whether the zone is at most something rudimentary, like a single inflatable pressurized yurt, or all the way to a large scale high-rise apartment complex.} maximum amount of space in the zone a building can occupy, whether parking must be provided, noise emissions, and possibly others.
+
+Moving on now to things that are mobile. Some of the user's basic units, usually buildings, can produce different types of vehicles. Some of these vehicular units are ground based (e.g. rovers), some airborne, and yet others capable of suborbital or transplanetary flight. 
+
+We can take a look at all of the different types of mobile units that are available in the user's basic unit tree, which units are prerequisite to their creation, and how they are categorically organized. This is illustrated in \in{figure}[figure:Units_User_Basic_Vehicles]. Assume that when a building is selected in the graphical user interface, options can be available to create the supported vehicles.
+
+\FullPageDiagram
+    {figure:Units_User_Basic_Vehicles}
+    {User's basic vehicular unit tree and the units responsible for their creation.}
+    {Game_Mechanics/Graphviz/Units_User_Basic_Vehicles.pdf}
+

@@ -17,11 +17,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-CONTEXT_PRODUCT         = Source/Handbook.tex
-ALL_TEX_SOURCE          = $(shell find Source/ -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
-ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find Source/ -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
-ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find Source/ -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
-ALL_BIBTEX              = Source/References/References.bib
+CONTEXT_PRODUCT         = Handbook.tex
+ALL_TEX_SOURCE          = $(shell find . -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
+ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find . -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find . -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_BIBTEX              = References/References.bib
 ALL_GRAPHVIZ_PDF        = $(ALL_DOT_PDF) $(ALL_TWOPI_PDF)
 UMBRELLO_ENGINE_DIAGRAM = ../AresEngine/UML/Engine.xmi
 CONTEXT_OPTIONS         = --purgeresult --batchmode --directives=logs.blocked,system.nostatistics #--nostats
@@ -33,7 +33,7 @@ VIKING_PDF              = Viking_Lander_Remastered.pdf
 
 # Umbrello can only export all or none of its diagrams, so we specify an 
 #  arbitrary one to trigger exporting all of them...
-UMBRELLO_ENGINE_DIAGRAM_SVG = Source/Engineer_Contributors/Images/AresEngine/Engine.svg
+UMBRELLO_ENGINE_DIAGRAM_SVG = Engineer_Contributors/Images/AresEngine/Engine.svg
 
 # Generate handbook PDF, but also check if this makefile is updated...
 all: $(OUTPUT_PDF) Makefile
@@ -47,7 +47,7 @@ graphviz: ${ALL_DOT_PDF} $(ALL_TWOPI_PDF)
 
 # Export engine diagram images...
 $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
-	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Source/Engineer_Contributors/Images/AresEngine
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Engineer_Contributors/Images/AresEngine
 
 # Just produce the table of contents...
 toc: $(TOC_PDF)
@@ -57,11 +57,11 @@ $(TOC_PDF): $(OUTPUT_PDF)
 # Just produce the Viking Lander Remastered chapter...
 viking: graphviz $(VIKING_PDF)
 $(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
-	context Source/Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Source/Environment.tex
+	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Environment.tex
 
 # Clean everything, including the cached engine diagram images...
 clean-all: clean
-	@ rm -vf Source/Engineer_Contributors/Images/AresEngine/*.svg
+	@ rm -vf Engineer_Contributors/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
 	@ rm -vf ${ALL_GRAPHVIZ_PDF}
 

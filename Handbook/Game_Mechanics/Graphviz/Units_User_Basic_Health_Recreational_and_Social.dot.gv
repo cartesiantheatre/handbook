@@ -38,7 +38,7 @@ digraph Units_User_Basic_Health_Recreational_and_Social
     "Community Garden"[label="Community Garden\n[Type: Building]"];
     "Detoxification Centre"[label="Detoxification Centre\n[Type: Building]"];
     "Gymnasium"[label="Gymnasium\n[Type: Building]"];
-    "Hospital"[label="Hospital\n[Type: Building]"];
+    "Infirmary"[label="Infirmary\n[Type: Building]"];
     "Playhouse"[label="Playhouse\n[Type: Building]"];
 
     // Categorical relations, but not build dependencies...
@@ -47,7 +47,7 @@ digraph Units_User_Basic_Health_Recreational_and_Social
         "Health, Recreational, & Social" -> "Health";
             "Health" -> "Addiction Resource Centre";
             "Health" -> "Detoxification Centre";
-            "Health" -> "Hospital";
+            "Health" -> "Infirmary";
         "Recreational & Social"[shape="folder"];
         "Health, Recreational, & Social" -> "Recreational & Social";
             "Recreational & Social" -> "Community Centre";

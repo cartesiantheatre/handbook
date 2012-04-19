@@ -43,7 +43,9 @@
 \definecolor[colour_text_background_shaded][r=0,g=0,b=0,t=0.4,a=1]
 \definecolor[colour_text_background_clear][r=0,g=0,b=0,t=0.0,a=1]
 
-% Embed colour profile information in PDF to make consistent across viewers...
+% Embed colour profile information in PDF to make consistent across viewers. 
+%  This is a temporary workaround to solve this problem:
+%  <http://archive.contextgarden.net/message/20120415.060028.20f62826.en.html>
 
     \startluacode
     backends                = backends                or { }
@@ -181,10 +183,7 @@
         autohang=yes,
         sorttype=cite]
 
-    % Macro to put the cites in the footer...
-    %\let \citeasfootnote \cite
-    %        \unexpanded\def\cite#1{\footnote{\citeasfootnote{#1}}}
-
+    % Macro to put the citations as footnotes...
     \unexpanded\def\footnotecite{\dodoubleempty\domycite}
     \def\domycite[#1][#2]%
         {\ifsecondargument
@@ -211,6 +210,26 @@
             artauthor=\invertedauthor,%
             editor=\invertedauthor,%
             title=References]
+
+% Setup footnotes...
+
+    \setupnotation[footnote]
+        [color=colour_footnote_text,
+         backgroundcolor=colour_footnote_background]
+
+    % Implemented by Hans in bleeding edge ConTeXt...
+    \setupnote[footnote]
+        [textseparator={\textcomma}]
+
+    \setupfootnotes
+      [rule=on]
+
+% To move footnotes inside of text boxes to the bottom of the page with
+%  the rest of the footnotes. Disabled temporarily to fix issue of text
+%  background frame borders vanishing...
+\kindofpagetextareas\plusone
+
+\automigrateinserts
 
 % Setup floats...
     
@@ -521,26 +540,6 @@
 \setupsectionblock[bodypart]  [page=yes]
 \setupsectionblock[appendix]  [page=yes]
 \setupsectionblock[frontpart] [before=,after=]
-
-% Setup footnotes...
-
-    \setupnotation[footnote]
-        [color=colour_footnote_text,
-         backgroundcolor=colour_footnote_background]
-
-    % Implemented by Hans in bleeding edge ConTeXt...
-    \setupnote[footnote]
-        [textseparator={\textcomma}]
-
-    \setupfootnotes
-      [rule=on]
-
-% To move footnotes inside of text boxes to the bottom of the page with
-%  the rest of the footnotes. Disabled temporarily to fix issue of text
-%  background frame borders vanishing...
-\kindofpagetextareas\plusone
-
-\automigrateinserts
 
 \setuphead
   [chapter]

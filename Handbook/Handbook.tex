@@ -15,7 +15,7 @@
     \strut Avaneya Project Crew Handbook
     \setupbodyfont[11pt]
     \par
-    {\em \strut A guidebook for contributing members of our community.}
+    {\em \strut \BookShortDescription}
     \setupspacing \setstrut
     \vfill
     %\midaligned{\externalfigure[Makeup/Images/Avaneya_Logo.svg][][width=0.25\textwidth]} % This temporary logo is just awful.
@@ -38,16 +38,45 @@
     Copyright \copyright\ \CopyrightDates\ \CopyrightHolder. The {\it Avaneya: Project Crew Handbook} by \CopyrightHolder\ is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. A copy of the license is available online at the link below.
     \crlf
     \crlf
-    \midaligned{\externalfigure[Makeup/Images/By-nc-sa_plain.svg][][width=0.95\textwidth]}
-    \crlf
-    \crlf
     \midaligned{
-        \externalfigure[Makeup/Images/Bazaar_Logo.svg][][width=0.1\textwidth]
-        \externalfigure[Makeup/Images/ConTeXt_Logo.svg][][width=0.1\textwidth]
-        \externalfigure[Makeup/Images/Gedit_Logo.svg][][width=0.1\textwidth]
-        \externalfigure[Makeup/Images/Graphviz_Logo.png][][width=0.1\textwidth]
-        \externalfigure[Makeup/Images/Inkscape_Logo.svg][][width=0.1\textwidth]
-        \externalfigure[Makeup/Images/Umbrello_Logo.svg][][width=0.1\textwidth]
+        \goto{\externalfigure[Makeup/Images/By-nc-sa_plain.svg][][width=0.95\textwidth]}
+            [url(https://creativecommons.org/licenses/by-nc-sa/3.0/)]
+        }
+    \crlf
+    \crlf
+    \framed
+       [frame=off,
+        location=middle, % vertically centered
+        align=middle,
+        width=\hsize] % align=no (default) is a normal hbox
+                         % align=flushleft/middle/flushright/normal is used for multiple lines
+                         % to make the frame wider (as in LaTeX)
+    {
+        \goto{\externalfigure[Makeup/Images/Bazaar_Logo.svg][][width=0.1\textwidth]}
+            [url(http://bazaar.canonical.com/)]
+        \goto{\externalfigure[Makeup/Images/ConTeXt_Logo.svg][][width=0.1\textwidth]}
+            [url(http://www.contextgarden.net/)]
+        \goto{\externalfigure[Makeup/Images/Gedit_Logo.svg][][width=0.1\textwidth]}
+            [url(http://projects.gnome.org/gedit/)]
+        \goto{\externalfigure[Makeup/Images/Graphviz_Logo.png][][width=0.1\textwidth]}
+            [url(http://www.graphviz.org/)]
+        \goto{\externalfigure[Makeup/Images/Inkscape_Logo.svg][][width=0.1\textwidth]}
+            [url(http://inkscape.org/)]
+        \goto{\externalfigure[Makeup/Images/Umbrello_Logo.svg][][width=0.1\textwidth]}
+            [url(http://uml.sourceforge.net/)]
+    }
+    \crlf
+    \crlf
+    \framed
+       [frame=off,
+        location=middle, % vertically centered
+        align=middle,
+        width=\hsize] % align=no (default) is a normal hbox
+                         % align=flushleft/middle/flushright/normal is used for multiple lines
+                         % to make the frame wider (as in LaTeX)
+    {
+        \goto{\externalfigure[Makeup/Images/Ubuntu_Vancouver_LoCo_Logo.svg][][width=0.2\textwidth]}
+                    [url(http://www.meetup.com/ubuntuvancouver/)]
     }
 \stopmakeup
 

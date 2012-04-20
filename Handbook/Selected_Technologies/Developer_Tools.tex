@@ -1,0 +1,43 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012
+%   Kshatra Corp.
+% See the file License for copying conditions.
+
+% Developer tools section...
+\StartSection{Developer Tools}
+
+\startitemize[4]
+\head {\em Apport}
+
+Apport intercepts program crashes, collects debugging information about the crash and the operating system environment, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
+
+\head {\em CppUnit}
+
+The CppUnit library is a unit testing framework module for the C++ programming language, used only when the engine is built in debug mode.
+
+\head {\em GNU Autotools}
+
+The GNU Autotools are used to reconcile and harmonize the idiosyncrasies of different platforms. It makes portability far more straightforward than without it.
+
+\head {\em GNU Compiler Collection}
+
+The GNU Compiler Collection is used for the engine's dependency calculation, compilation, and linking, among other things. Ports of virtually all of its compilers are available everywhere.
+
+\head {\em libebml}
+
+The libebml library is the backbone of the Matroska multimedia container format. EBML stands for {\it Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be read and written by machines and not humans. See \in{section}[AresPackages] for details on how we are using it in this project.
+item
+
+\head {\em Smolt}
+
+Smolt is both a software utility for gathering user hardware information and a publicly accessible central server it anonymously submits to. This is very important for us because we require a hardware database that can be consulted with to indicate the minimal expected hardware capabilities of our users in the wild. The Ubuntu hardware database was also considered, but it is not as of yet sufficiently mature to be useful in this capacity.
+
+\head {\em streflop}
+
+The streflop library ({\it STandalone REproducible FLOating-Point}) allows you to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments.
+
+\head {\em xmlstarlet}
+
+The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests and the engine event definition for syntactical errors.
+\stopitemize
+

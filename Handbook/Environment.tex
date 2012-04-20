@@ -127,6 +127,9 @@
                      os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
     \initializeUmbrello
 
+% Document description...
+\def\BookShortDescription{A guidebook for our community of contributors.}
+
 % Setup PDF metadata...
 \setupinteraction
   [state=start,
@@ -134,7 +137,7 @@
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
    title=Avaneya Project Crew Handbook (Revision \BzrRevision),
-   subtitle=A guidebook for contributing members of our community.,
+   subtitle=\BookShortDescription,
    author=The Avaneya Project Crew (Revision \BzrRevision),
    keyword={Avaneya, handbook, Mars, GNU, game}]
 
@@ -245,9 +248,19 @@
 % Jenya inline figure
 \useexternalfigure[jenya_inline][Terms_and_Concepts/Images/Jenya_red.svg][factor=8]
 
-\setupurl
-  [color=colour_link,
-   style=\bf]
+% URL macros and setups...
+
+    % Usage: \href{http://www.someurl.com}{Text}
+    \def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
+    \def\ahref#1{\color[colour_link]{\ttx \href{#1}{<#1>}}}
+    \def\fullahref#1{\color[colour_link]{\ttx \href{#1}{#1}}}
+    \def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
+    \def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
+
+    % Style...
+    \setupurl
+      [color=colour_link,
+       style=\bf]
 
 \setupframedtexts
   [framecolor=colour_frame_border]
@@ -427,13 +440,6 @@
 {
     \crlf
 }
-
-% Usage: \href{http://www.someurl.com}{Text}
-\def\href#1#2{\useURL[#2][{#2}][][{#1}]\goto{\url[#2]}[url(#1)]}
-\def\ahref#1{\color[colour_link]{\ttx \href{#1}{<#1>}}}
-\def\fullahref#1{\color[colour_link]{\ttx \href{#1}{#1}}}
-\def\mailto#1{\useURL[#1][mailto:#1][][#1]\from[{#1}]}
-\def\MailTo#1#2{\useURL[#1][mailto:#1][][#2]\from[{#1}]}
 
 \definetextbackground[TimelineGeneralDocument]
    [location=paragraph,

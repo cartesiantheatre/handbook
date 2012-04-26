@@ -33,7 +33,7 @@ digraph Units_User_Basic_Agricultural
 	edge[penwidth="1.3"];
 
     // Units...
-    "Biophotoreactor Plant"[label="Biophotoreactor Plant\n[Type: Building]"];
+    "Photobioreactor Farm"[label="Photobioreactor Farm\n[Type: Building]"];
     "Greenhouse (68 mb)"[label="Greenhouse (68 mb)\n[Type: Building]"];
     "Greenhouse (340 mb)"[label="Greenhouse (340 mb)\n[Type: Building]"];
     "Mushroom Ranch"[label="Mushroom Ranch\n[Type: Building]"];
@@ -41,7 +41,7 @@ digraph Units_User_Basic_Agricultural
 
     // Categorical relations, but not build dependencies...
     "Agricultural"[shape="folder"];
-        "Agricultural" -> "Biophotoreactor Plant";
+        "Agricultural" -> "Photobioreactor Farm";
         "Agricultural" -> "Greenhouse (68 mb)";
         "Agricultural" -> "Greenhouse (340 mb)";
         "Agricultural" -> "Mushroom Ranch";

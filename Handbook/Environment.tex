@@ -64,35 +64,39 @@
     backends.codeinjections.rgbtransparencygroup()
     \stopluacode
 
-% Set the colours of various list items...
+% Setup various lists...
+
+    % Fill space to page number with dots...
+    \setupcombinedlist[content]
+        [alternative=c]
 
     % Chapters...
     \setuplist[chapter]
         [color=colour_text, 
          numbercolor=colour_head, 
          pagecolor=colour_page_number,
-         symbol=R]
+         style=bold]
 
     % Section...
     \setuplist[section]
         [color=colour_text,
          numbercolor=colour_head, 
-         pagecolor=colour_page_number,
-         symbol=R]
+         pagecolor=colour_page_number
+         width=15mm]
 
     % Subsection...
     \setuplist[subsection]
         [color=colour_text, 
          numbercolor=colour_head,
-         pagecolor=colour_page_number,
-         symbol=R]
+         pagecolor=colour_page_number
+         width=20mm]
 
     % Subsubsection...
     \setuplist[subsubsection]
         [color=colour_text, 
          numbercolor=colour_head, 
-         pagecolor=colour_page_number,
-         symbol=R]
+         pagecolor=colour_page_number
+         width=25mm]
 
 % Revision control...
 
@@ -129,7 +133,7 @@
     \initializeUmbrello
 
 % Document description...
-\def\BookShortDescription{A guidebook for our community of contributors.}
+\def\BookShortDescription{A guidebook for our community's contributors.}
 
 % Setup PDF metadata...
 \setupinteraction

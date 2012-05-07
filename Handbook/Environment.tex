@@ -48,21 +48,21 @@
 %  <http://archive.contextgarden.net/message/20120415.060028.20f62826.en.html>
 %  Note: Resolved upstream in latest beta. Use \setupcolors[pagecolormodel=rgb]
 
-    \startluacode
-    backends                = backends                or { }
-    backends.codeinjections = backends.codeinjections or { }
+    %\startluacode
+    %backends                = backends                or { }
+    %backends.codeinjections = backends.codeinjections or { }
 
-    function backends.codeinjections.rgbtransparencygroup()
-        local d = lpdf.dictionary {
-            S  = lpdf.constant("Transparency"),
-            CS = lpdf.constant("DeviceRGB"),
-            I  = true }
-        lpdf.registerpagefinalizer(function()
-    lpdf.addtopageattributes("Group",d) end)
-    end
+    %function backends.codeinjections.rgbtransparencygroup()
+        %local d = lpdf.dictionary {
+            %S  = lpdf.constant("Transparency"),
+            %CS = lpdf.constant("DeviceRGB"),
+            %I  = true }
+        %lpdf.registerpagefinalizer(function()
+    %lpdf.addtopageattributes("Group",d) end)
+    %end
 
-    backends.codeinjections.rgbtransparencygroup()
-    \stopluacode
+    %backends.codeinjections.rgbtransparencygroup()
+    %\stopluacode
 
 % Setup various lists...
 
@@ -484,8 +484,7 @@
         \blank[2*big]
     },
     style=smalltype,
-    corner=round,
-    frame=off]
+    corner=round]
 
 \definetextbackground[CodeExampleFrame]
    [corner=round,

@@ -451,7 +451,8 @@
    [location=paragraph,
     color=color_text,
     background=color,
-    backgroundcolor=colour_text_background_clear,
+    backgroundcolor=colour_text_background_shaded,
+    frame=on,
     framecolor=colour_text,
     topoffset=0.5cm,
     bottomoffset=0.5cm,
@@ -464,14 +465,14 @@
         \blank[2*big]
     },
     style=small,
-    corner=round,
-    frame=off]
+    corner=round]
 
 \definetextbackground[TimelineCorrespondenceDocument]
    [location=paragraph,
     color=color_text,
     background=color,
-    backgroundcolor=colour_text_background_clear,
+    backgroundcolor=colour_text_background_shaded,
+    frame=on,
     framecolor=colour_text,
     topoffset=0.5cm,
     bottomoffset=0.5cm,
@@ -488,7 +489,6 @@
 
 \definetextbackground[CodeExampleFrame]
    [corner=round,
-    frame=on,
     before={
         \blank[0.5cm]
         \startlinecorrection
@@ -497,10 +497,11 @@
         \blank[0.5cm]
         \stoplinecorrection
     },
-    color=color_text,
     bodyfont=5pt,
+    color=color_text,
     background=color,
     backgroundcolor=colour_text_background_shaded,
+    frame=on,
     framecolor=colour_text,
     location=paragraph,
     topoffset=0.5cm,

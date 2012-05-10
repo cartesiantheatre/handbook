@@ -13,15 +13,12 @@
 % Speedup typescripting considerably at the cost of using additional memory...
 \preloadtypescripts
 
-% Plugin modules needed...
-    
-    % Metric units...
-    \usemodule[units]
+% Plugin modules we need to import...
     
     % Simple fonts...
     \usemodule[simplefonts]
     
-    % Provides the \BIBTEX macro...
+    % \BIBTEX macro...
     \usemodule[abr-01]
     
 % Define colours...
@@ -473,10 +470,10 @@
     backgroundcolor=colour_text_background_shaded,
     frame=on,
     framecolor=colour_text,
-    topoffset=0.5cm,
-    bottomoffset=0.5cm,
-    leftoffset=0.5cm,
-    rightoffset=0.5cm,
+    topoffset=1.0cm,
+    bottomoffset=1.0cm,
+    leftoffset=1.5cm,
+    rightoffset=1.5cm,
     before={
         \blank[2*big]
     },
@@ -484,6 +481,7 @@
         \blank[2*big]
     },
     style=smalltype,
+    bodyfont=4pt,
     corner=round]
 
 \definetextbackground[CodeExampleFrame]

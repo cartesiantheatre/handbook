@@ -34,16 +34,16 @@ digraph Units_User_Basic_Agricultural
 
     // Units...
     "Photobioreactor Farm"[label="Photobioreactor Farm\n[Type: Building]"];
-    "Greenhouse (68 mb)"[label="Greenhouse (68 mb)\n[Type: Building]"];
-    "Greenhouse (340 mb)"[label="Greenhouse (340 mb)\n[Type: Building]"];
+    "Greenhouse (6.8 kPa)"[label="Greenhouse (6.8 kPa)\n[Type: Building]"];
+    "Greenhouse (34.0 kPa)"[label="Greenhouse (34.0 kPa)\n[Type: Building]"];
     "Mushroom Ranch"[label="Mushroom Ranch\n[Type: Building]"];
     "Seed Store"[label="Seed Store\n[Type: Building]"];
 
     // Categorical relations, but not build dependencies...
     "Agricultural"[shape="folder"];
         "Agricultural" -> "Photobioreactor Farm";
-        "Agricultural" -> "Greenhouse (68 mb)";
-        "Agricultural" -> "Greenhouse (340 mb)";
+        "Agricultural" -> "Greenhouse (6.8 kPa)";
+        "Agricultural" -> "Greenhouse (34.0 kPa)";
         "Agricultural" -> "Mushroom Ranch";
         "Agricultural" -> "Seed Store";
 }

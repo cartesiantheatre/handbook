@@ -16,19 +16,21 @@ Since most buildings are pressurized, they need proper anchorage to prevent them
 \StartSubSection{Computer Control Systems}
 Buildings will require an integrated computer control system for managing a number of things, including power, communications, heating, cooling, life support, and internal or external automated lighting.
 
-Heating and cooling needs to be managed intelligently. If you lose power, the building will freeze up and possibly damage things inside of it.
+Heating and cooling needs to be managed intelligently. If you lose power, the building will freeze and possibly damage the things inside.
 
-Life support needs to manage air--dust filtration. This is important since Martian dust will get into everything, especially every time anything passes through an airlock. 
+An air--dust filtration system is necessary to keep the air clean. This is important since Martian dust will inevitably get into everything, especially every time anything passes through an airlock. 
 
-Life support manages the atmospheric pressure for habitat modules at a 340 mb pressure rating. We will discuss pressure ratings more in \in{section}[Pressure Ratings]. For now, we just need to know that the atmosphere needs to contain the following partial pressures of 200 mb \chemical{O_2}, 120 mb of \chemical{N_2}, and 0.5 mb of \chemical{CO_2}. The oxygen is obvious because it is an essential nutrient. The nitrogen acts as an inert nonflammable buffer gas to provide enough partial pressure for oxygen to pass freely through the lung's alveolar membrane. We use the lowest possible amount since nitrogen gas is hard to find on Mars with only 4.3\% of its atmosphere being a blend of that and argon. The \chemical{CO_2} is maintained at the level it is at because any more than 1\% and it becomes toxic to humans.
+The atmospheric pressure for the habitat modules must be maintained at 34.0 kPa. We will discuss pressure ratings more in \in{section}[Pressure Ratings]. For now, we just need to know that the atmosphere needs to contain the following partial pressures of 20.0 kPa \chemical{O_2}, 12.0 kPa of \chemical{N_2}, and 0.05 kPa of \chemical{CO_2}. The oxygen is obvious because it is an essential nutrient. The nitrogen acts as an inert non--flammable buffer gas to provide enough partial pressure for oxygen to pass freely through the lung's alveolar membrane. We use the lowest possible amount since nitrogen gas is hard to find on Mars with only 4.3\% of its atmosphere being a blend of that and argon. The \chemical{CO_2} is maintained at the level it is because any more than 1\% and it will become toxic.
 
-Life support also provides waste recycling and water purification. Chemical--physical reactors are used for scrubbing \chemical{CO_2} out and the \goto{RWGS reactor}[Reverse-Water-Gas-Shift Reactor] is used for \chemical{O_2} generation. Waste can be pyrolyzed. Microbial--based biological recycling systems were considered, but experiments have shown that they are not very reliable.
+Life support also provides waste recycling and water purification. Chemical--physical reactors are used for scrubbing \chemical{CO_2} out and the RWGS reactor is used for replenishing the \chemical{O_2} supply. 
+
+Waste needs to be pyrolyzed. Microbial--based biological recycling systems were considered, but experiments have shown that they are not particularly reliable.
 
 % Pressure rating...
 \StartSubSection{Pressure Ratings}
-The mean sea level atmospheric pressure on Mars ranges from 30 Pa to 1135 Pa, which is about the same as one would find at 36 km above the Earth's surface. The mean sea level atmospheric pressure on Earth, by contrast is 101,300 Pa (101.3 kPa). This means that the surface pressure on Mars is only about 1\% of that experienced at mean sea level on Earth.
+The mean sea level (MSL) atmospheric pressure on Mars ranges from 30 Pa to 1135 Pa, which is about the same as one would expect at 36 km above the Earth's surface. The MSL atmospheric pressure on Earth, by contrast, is 101,300 Pa (101.3 kPa). This means that it is only about 1\% of Earth's.
 
-This has an impact on the way buildings must be engineered on Mars. The main difference between inflatable buildings is their pressure rating. A lower pressure rating means the fabric can be thinner, the building lighter, and therefore lower in cost to manufacture. The pressure rating also determines whether you need to wear a full pressure suit, just a respirator, or nothing special at all. Take a look at \in{table}[table:Pressure Ratings] for a list of all of the most common building pressure ratings in Avaneya. These also apply to vehicles.
+This has an impact on the way buildings must be designed for use on Mars. The main difference between inflatable buildings is in their pressure rating. A lower pressure rating means the fabric can be thinner, the building lighter, and therefore lower in cost to manufacture. It also determines whether you need to wear a full pressure suit, just a respirator, or nothing special at all. Take a look at \in{table}[table:Pressure Ratings] for a list of all of the building pressure ratings in Avaneya.
 
 \crlf
 \crlf
@@ -55,28 +57,28 @@ This has an impact on the way buildings must be engineered on Mars. The main dif
       \bTC 6.8 kPa \eTC
       \bTC Needed \eTC
       \bTC Needed \eTC
-      \bTC These buildings are attractive because they are economical and very light to pack, requiring fabric only 0.2 mm in thickness. For plants, they are fine since plants require only 5.0 kPa of pressure. But for humans, they need at least 17.0 kPa to be able to live. \eTC
+      \bTC These buildings are attractive because they are economical, very light to pack, and require fabric only 0.2 mm thick. For plants this is fine since they only need 5.0 kPa of pressure. \eTC
     \eTR
 
     \bTR
       \bTC 17.0 kPa \eTC
       \bTC Needed \eTC
       \bTC Unneeded \eTC
-      \bTC These buildings cost a little bit more, but you can work in them without wearing a pressure suit. You still need to wear a respirator, otherwise you will pass out. \eTC
+      \bTC These buildings cost a little bit more, but you can work in them without a pressure suit. You still need a respirator however, otherwise you will pass out. \eTC
     \eTR
 
     \bTR
       \bTC 34.0 kPa \eTC
       \bTC Unneeded \eTC
       \bTC Unneeded \eTC
-      \bTC These buildings cost a little bit more, but you can work in them without wearing a pressure suit or respirator, although the O₂ partial pressure levels still need to be enriched. The other main advantage is that the pressure can also be equalized with a habitat making movement easier. As added bonuses, bees pollinate better at this low pressure when coupled with the lower gravity. \eTC
+      \bTC These buildings cost a little bit more, but you can work in them without a pressure suit or respirator, although the O₂ partial pressure levels still need to be enriched. The pressure can be equalized with a habitat which makes movement easier. As a bonus, bees pollinate better at this low pressure and gravity. \eTC
     \eTR
 
     \bTR
       \bTC 100.0 kPa \eTC
       \bTC Unneeded \eTC
       \bTC Unneeded \eTC
-      \bTC These buildings cost the most, but they offer at least the same pressure as on Earth. Since everything needs to be three times as heavy as it needs to be, it is a waste of resources, too costly, and unnecessary. \eTC
+      \bTC These buildings cost the most, but offer the same pressure at MSL as on Earth. Since everything needs to be three times heavier than needed, they are a costly waste of resources. \eTC
     \eTR
     \eTABLEbody
 
@@ -84,11 +86,11 @@ This has an impact on the way buildings must be engineered on Mars. The main dif
 }
 
 \StartSubSection{Design}
-There are many different designs available for buildings on Mars. The rigid aluminium tin--can shape seen in some government space program concept artwork is an option, but it tends to be expensive and is usually non--relocatable.
+There are many different designs available for buildings on Mars. The rigid aluminium tin--can shape seen in some government space program concept artwork is an option, but it tends to be expensive and is difficult to relocate.
 
-Inflatable structures will probably be a very popular option. The fabric could be made out of polypropylene and reinforced with Kevlar\high{\registered}, spectral, or nanecta webbing. It would need an anti uv--coating (e.g. acrylic tarp) to protect both the inhabitants as well as the fabric from radiation induced deterioration. 
+Inflatable structures will probably be a very popular option. The fabric could be made out of polypropylene and reinforced with Kevlar, spectral, or nanecta webbing. It would need an anti uv--coating (e.g. acrylic tarp) to protect both the inhabitants from the effects of radiation as well as the fabric from premature deterioration.
 
-These structures are ideal for greenhouses, cheap, light weight, and can be packed in a box. Their disadvantages are that they are weak and vulnerable to micrometeorite strikes, faulty electrical wiring melts, and a potentially unreliable computer regulating their pressure. This latter most concern is especially problematic if the pressure regulator software is proprietary and cannot be audited for safety concerns and repaired.\footnotecite[free_software_more_reliable]
+These structures are cheap, light weight, can be packed in a box, and are ideal for greenhouses. The disadvantages are that they are weak and vulnerable to micrometeorite strikes, faulty electrical wiring melts, and potentially unreliable computers regulating their pressure. The latter can be a potentially grave safety concern if the pressure regulation software is proprietary since it cannot be audited or repaired by anyone other than the vendor, and only even then if it is in their interest to do so.\footnotecite[free_software_more_reliable]
 
 Tensile structures are yet another option. These buildings carry only tension forces and do not experience compression or bending. If they are pressurized and their fabric is stiffened with internal framework from aluminium or steel struts after its initial pressurization, they could work very well.
 

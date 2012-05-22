@@ -33,9 +33,14 @@ digraph Units_User_Basic_All
 	// Edge attributes...
 	edge[color="#c08453ff"];
 	edge[penwidth="1.3"];
+	edge[fontcolor="#c08453ff"];
+	edge[fontname="Ubuntu"];
+	edge[labeldistance="5.0"];
 
     // User root node...
     "User"[shape=tripleoctagon];
+    
+    "Simulation"[shape=tripleoctagon];
     
     // Link all categories to user...
     "User" -> "Agricultural";
@@ -47,6 +52,7 @@ digraph Units_User_Basic_All
     "User" -> "Militia";
     "User" -> "Production";
     "User" -> "Transportation";
-    "User" -> "Zones";
+    "User" -> "Zones"[headlabel="Creates"];
+    "Simulation" -> "Zones"[headlabel="Controls"];
 }
 

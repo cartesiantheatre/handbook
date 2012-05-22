@@ -8,11 +8,25 @@
 \startitemize[4]
 \head {\em Audacity}
 
-We use Audacity for audio recording, editing, post-processing, effects, and more. It can take advantage of any of the multitude of LADSPA and VST plugins. It can also export to surround sound formats, such as AC3 and DTS.
+We use Audacity for audio recording, editing, post--processing, effects, and more. It can take advantage of any of the multitude of the LADSPA and VST plugins compatible with it. It can also export to surround sound formats.
+
+\head {\em libasound_module_pcm_a52}
+
+Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the analog method with a wire for every speaker connected to the back of the user's sound card. This usually makes a mess. The better way is the digital method. This works by passing a compressed digital stream unmolested from the source medium out to dedicated hardware usually in the form of a digital home theatre receiver. The receiver decodes a superior signal to the analog method which it then amplifies before sending out on its way again to the user's connected speakers. For the former method, the application developer does not really have to do much work since OpenAL already does most of the heavy lifting.
+
+But there is a problem to take advantage of the latter digital method. At present, nearly every digital home theatre receiver supports only two digital surround sound compressed formats. One of these is Dolby Digital, or sometimes called AC--3 or A52, and the other is the Digital Theatre System or DTS. Both are covered by patents and so we need to be careful how we encode to these bitstreams if we choose to. 
+
+The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It provides a way to encode a digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. 
+
+The problem is that this library is seldom available in most operating system distributions that provide precompiled packages of ALSA. This is due to the aforementioned licensing issue. What we need to do is several things in order to provide A52 output. First we need to ensure at runtime that the user has the {\it libasound2-plugins} package installed. This provides the needed {\tt libasound_module_pcm_a52.so} library. Secondly we need to either verify that the user's libavcodec was built with the A52 encoder enabled, which the former is just an interface for, or to ship our own either statically or dynamically linked. 
+
+Whatever we decide to do, we need to make sure that this feature is disabled by default, due to Dolby's licensing requirement. We can leave it as an option for the user to enable if they know that software patents are not valid in their jurisdiction, but we still need to balance several constraints. These include legalities, reasonable expectations and ease of use for the user, and ease of maintenance on our part. Perhaps the best way to do this is to provide all of this functionality separately, such as within an optional and properly disclaimered {\it avaneya-restricted} package.
+
+If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other. Moreover, we do not know of any {\it libre} encoders for DTS bitstreams at this time anyways.
 
 \head {\em libmikmod}
 
-We use libmikmod for playback of tracker music modules. Some people were requesting tracker support, and since it should not take very much effort to integrate into the engine's {\about[AudioManager]} subsystem, it seems reasonable. The library also needs to be built thread safe.
+We use libmikmod for playback of tracker music modules. Some people were requesting tracker support. Since it should not take very much effort to integrate into our engine's audio subsystem, as described in \in{section}[Audio], we considered this a reasonable request. One caveat is that we need to make sure the library is compiled thread safe.
 
 \head {\em OpenAL}
 
@@ -20,6 +34,6 @@ OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is 
 
 \head {\em SDL_audio}
 
-The SDL library is used to provide audio decoding through its SDL_audio API. It decodes popular formats like Ogg Vorbis. Since we are dependent on some features that are bleeding edge, like haptic support, we require SDL 1.3. Since it is unlikely that any distributions carry it at present, we may have to provide Ubuntu packages.
+This SDL module is used to provide audio decoding. It provides a standardized interface to various decoder backends, such as Ogg Vorbis and others.
 \stopitemize
 

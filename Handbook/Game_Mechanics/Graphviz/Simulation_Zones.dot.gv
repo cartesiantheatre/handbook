@@ -34,7 +34,7 @@ digraph Simulation_Zones
 
     // Zones...
     "Commercial"[label="Commercial\n[Type: Zone]"];
-    "Habitat / Commercial"[label="Habitat / Commercial\n[Type: Zone]"]
+    "Habitat & Commercial"[label="Habitat & Commercial\n[Type: Zone]"]
     "Habitat"[label="Habitat\n[Type: Zone]"];
     "Industrial"[label="Industrial\n[Type: Zone]"];
     "Unzoned"[label="Unzoned\n[Type: Zone]"];    
@@ -43,7 +43,7 @@ digraph Simulation_Zones
     "Zones"[shape="folder"];
         "Zones" -> "Commercial";
         "Zones" -> "Habitat";
-        "Zones" -> "Habitat / Commercial";
+        "Zones" -> "Habitat & Commercial";
         "Zones" -> "Industrial";
         "Zones" -> "Unzoned";
 }

@@ -35,15 +35,15 @@ digraph Units_User_Basic_Transportation
     // Units...
     "Airport (Subsonic)"[label="Airport (Subsonic)\n[Type: Building]"];
     "Airport (Supersonic)"[label="Airport (Supersonic)\n[Type: Building]"];
-    "Bridge"[label="Bridge\n[Type: Building\nNote: Bezier Curvable]"];
+    "Bridge"[label="Bridge\n[Type: Building]\n[Note: Bezier Curvable]"];
     "Maglev Station"[label="Maglev Station\n[Type: Building]"];
-    "Maglev Track"[label="Maglev Track\n[Type: Building\nNote: Bezier Curvable]"];
-    "Pressurized Walkway"[label="Pressurized Walkway\n[Type: Building\nNote: Bezier Curvable]"];
+    "Maglev Track"[label="Maglev Track\n[Type: Building]\n[Note: Bezier Curvable]"];
+    "Pressurized Walkway"[label="Pressurized Walkway\n[Type: Building]\n[Note: Bezier Curvable]"];
     "Railgun Yard"[label="Railgun Yard\n[Type: Building]"];
-    "Road"[label="Road\n[Type: Building\nNote: Bezier Curvable]"];
+    "Road"[label="Road\n[Type: Building]\n[Note: Bezier Curvable]"];
     "Starport"[label="Starport\n[Type: Building]"];
     "Vactrain Station"[label="Vactrain Station\n[Type: Building]"];
-    "Vactrain Tube"[label="Vactrain Tube\n[Type: Building\nNote: Bezier Curvable]"];
+    "Vactrain Tube"[label="Vactrain Tube\n[Type: Building]\n[Note: Bezier Curvable]"];
 
     // Categorical relations, but not build dependencies...
     "Transportation"[shape="folder"];

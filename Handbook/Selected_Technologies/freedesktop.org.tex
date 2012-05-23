@@ -1,0 +1,29 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% freedesktop.org section...
+\StartSection{freedesktop.org}
+
+Freedesktop.org is an organization committed to providing community driven standards and applications for a consistent user experience across various, usually GNU, platforms.
+
+\startitemize[4]
+\head {\em D--Bus}
+
+The D--Bus (Desktop Bus) API is a simple inter--process communication (IPC) system for software applications to communicate with one another. Avaneya can use it to determine the state of the user's network connection. It is available only under supported POSIX compliant operating systems.
+
+\head {\em Desktop Entry Specification}
+
+Several desktop environments for GNU have adopted the same convention for applications to provide \quote{desktop entries}. These describe where an application is, how it is to be launched, where it appears in the user's menu, and so on. 
+
+The specification allows this to be done in a desktop environment agnostic manner, allowing the developer to write only one file that works the same under any freedesktop.org compliant desktop environment, such as Xfce, Gnome, and KDE, without making assumptions over the user's preferred desktop environment. This is important because unlike some non--free platforms, GNU gives users the freedom to select whatever desktop environment they like.
+
+\head {\em Media Player Remote Interfacing Specification}
+
+MPRIS is a standardized interface for compliant media players. We could provide an option in Avaneya that stops the user's media player if currently playing upon launch and then instruct it to resume playback on exit.
+
+\head {\em Startup Notification}
+
+This specification defines a method that allows any compliant desktop environment to monitor Avaneya as it starts up and to provide the user with feedback.
+\stopitemize
+

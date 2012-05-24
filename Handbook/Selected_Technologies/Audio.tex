@@ -12,17 +12,7 @@ We use Audacity for audio recording, editing, post--processing, effects, and mor
 
 \head {\em libasound_module_pcm_a52}
 
-Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the analog method with a wire for every speaker connected to the back of the user's sound card. This usually makes a mess. The better way is the digital method. This works by passing a compressed digital stream unmolested from the source medium out to dedicated hardware usually in the form of a digital home theatre receiver. The receiver decodes a superior signal to the analog method which it then amplifies before sending out on its way again to the user's connected speakers. For the former method, the application developer does not really have to do much work since OpenAL already does most of the heavy lifting.
-
-But there is a problem to take advantage of the latter digital method. At present, nearly every digital home theatre receiver supports only two digital surround sound compressed formats. One of these is Dolby Digital, or sometimes called AC--3 or A52, and the other is the Digital Theatre System or DTS. Both are covered by patents and so we need to be careful how we encode to these bitstreams if we choose to. 
-
-The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It provides a way to encode a digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. 
-
-The problem is that this library is seldom available in most operating system distributions that provide precompiled packages of ALSA. This is due to the aforementioned licensing issue. What we need to do is several things in order to provide A52 output. First we need to ensure at runtime that the user has the {\it libasound2-plugins} package installed. This provides the needed {\tt libasound_module_pcm_a52.so} library. Secondly we need to either verify that the user's libavcodec was built with the A52 encoder enabled, which the former is just an interface for, or to ship our own either statically or dynamically linked. 
-
-Whatever we decide to do, we need to make sure that this feature is disabled by default, due to Dolby's licensing requirement. We can leave it as an option for the user to enable if they know that software patents are not valid in their jurisdiction, but we still need to balance several constraints. These include legalities, reasonable expectations and ease of use for the user, and ease of maintenance on our part. Perhaps the best way to do this is to provide all of this functionality separately, such as within an optional and properly disclaimered {\it avaneya-restricted} package.
-
-If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other. Moreover, we do not know of any {\it libre} encoders for DTS bitstreams at this time anyways.
+The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It provides a way to encode a digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. We have to be careful here. See \in{section}[{Restricted Data Considerations}] for more information on why.
 
 \head {\em libmikmod}
 

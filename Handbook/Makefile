@@ -37,7 +37,7 @@ $(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
 # Just produce the table of contents...
 toc: $(TOC_PDF)
 $(TOC_PDF): $(OUTPUT_PDF)
-	pdftk A=$(OUTPUT_PDF) cat A3-12 output $@
+	pdftk A=$(OUTPUT_PDF) cat A3-16 output $@
 
 # Just produce the Viking Lander Remastered chapter...
 viking: graphviz $(VIKING_PDF)

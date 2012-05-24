@@ -1,0 +1,18 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Package Maintainer Contributors chapter...
+\StartChapter{Package Maintainer Contributors}
+Package maintainers are responsible for building and preparing Avaneya packages for the community. They need to be familiar with the standard methods of rolling out software for a given platform. In our case, we are mostly concerned just with Ubuntu. Other GNU platforms are important too, but only so far as demand and available resources allow.
+
+Package maintainers need to work with the engineers to adapt the build environment to be flexible for producing packages for all supported architectures, such as {\it amd64}, {\it armel}, {\it armhf}, {\it i686}, {\it lpia}, {\it mips64el}, or what have you. They might also need to be familiar with the various quirks of different architectures and advise the engineers where possible when we have decided to port to a new architecture.
+
+Package maintainers need to ensure that package contents meet the packaging guidelines of a distribution so that they can be hosted in a given software channel (e.g. Ubuntu's {\it universe} or {\it multiverse}). This is sometimes a very difficult and tedious task and we must be careful to avoid stepping on the wrong toes. There is no point on spending years of labour only to not have it available anywhere where most users would have thought to have looked, so be careful to pay heed to their packaging guidelines.
+
+The package names must be consistent with the naming schemes adopted by the GNU distribution as used within their respective package management systems. We should also break them up into multiple logical packages. This saves users from having to update a single large package when it can instead be split up into multiple packages such that only whatever needs to actually be updated, gets updated. This also saves us bandwidth costs and build server resources.
+
+\input Package_Maintainer_Contributors/Ubuntu_Packages.tex
+
+\StopChapter
+

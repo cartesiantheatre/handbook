@@ -7,9 +7,9 @@
 
 All contributing members of our community need to sign the Avaneya Code of Conduct presented in \in{section}[Avaneya Code of Conduct]. If you would like to be one of them, you will need an OpenPGP compliant key pair in order to do this. Usage of OpenPGP is beyond the scope of this book, but if you need help, consult any of the many online tutorials available. {\it Just remember to make sure you backup your key pair.}
 
-If you are not using a GNU operating system, such as Ubuntu, do not worry. GnuPG is almost guaranteed to be available for it -- possibly even with an attractive, easy to use, GUI that integrates into your shell like Seahorse.\footnotecite[seahorse] If this is the case, you will have to consult with the appropriate documentation or tutorial for your environment to perform the analogous steps described here.
+If you are not using a GNU operating system, such as Ubuntu, do not worry. GnuPG is almost guaranteed to be available for it -- possibly even with an attractive, easy to use, GUI that integrates into your shell like Seahorse.\footnotecite[seahorse] If this is the case, you will have to consult with the appropriate documentation or tutorial for your environment to achieve the same goal attempted here.
 
-Once you have read the Avaneya Code of Conduct, you can generate your digital signature using GnuPG as follows. Of course, replace {\tt FirstName} and {\tt LastName} with your first and last names respectively.
+Once you have read the Avaneya Code of Conduct, you can generate your digital signature using GnuPG as follows. Of course, replace \quote{FirstName} and \quote{LastName} with your first and last names respectively.
 
 \startCodeExample
 $ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
@@ -17,7 +17,7 @@ $ gpg --armour --output FirstName\ LastName.gpg --clearsign \
     ../Code\ of\ Conduct
 \stopCodeExample
 
-This will generate a digital signature within the {\tt Signatures} directory. This file can then be commit into the repository, or bundled as part of a larger commit, as described in \in{section}[Using Bzr]. 
+This will generate a digital signature within the {\tt Signatures/} directory. This file can then be added and commit into the repository, or bundled as part of a larger commit, as described in \in{section}[Using Bzr]. 
 
 The signature is in human readable ({\tt --armour}) and clearsign ({\tt --clearsign}) format. This means that the signature file generated contains both a copy of the original document within it as well as your digital signature. Thus, the file is self contained, portable, and viewable in any text editor.
 
@@ -27,10 +27,10 @@ To verify someone's signature, run the following. You will need the signer's ver
 $ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
 $ gpg --verify Dicky\ Chow.gpg 
 gpg: Signature made Sun 08 Apr 2012 09:40:48 PM PDT using DSA key ID ABCD1234
-gpg: Good signature from "Dicky Chow <dicky_chow@some_domain.com>"
+gpg: Good signature from "Dicky Chow <dicky_chow@some_domain.cn>"
 \stopCodeExample
 
 In the above example, the signature appeared to be authentic.
 
-Note that if the contents of the Avaneya Code of Conduct ever changes and you are still project crew, you will need to resign the document using the previously described method.
+Note that if the contents of the Avaneya Code of Conduct ever changes and you are still a contributor, you will need to sign the document again using the previously described method to update your signature.
 

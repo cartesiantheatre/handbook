@@ -7,14 +7,14 @@
 Ubuntu package maintainers are responsible for building and preparing Avaneya packages for the Ubuntu community. They are comfortable with standard Debian packaging conventions, their requisite structure, key signing, and any helper tools like CDBS, debhelper, and lintian that can aid with the tasks at hand. They integrate any hooks that need to execute at various times during user installation to perform required actions, such as registering a file extension or desktop launchers in a freedesktop.org compliant manner. They know how to maintain an apt repository which is used to roll out our packages. When they do not know on how to do something, they know where to ask.
 
 \StartSubSection{Dependencies}
-Package maintainers must be careful to ensure our packages describe the appropriate dependencies that the game actually requires to function. Without that, a user's package manager cannot make automated intelligent decisions to reconcile dependencies. 
+Package maintainers must be careful to ensure our packages describe the appropriate dependencies that the game actually requires to function. Without that, a user's package manager cannot make automated intelligent decisions to reconcile dependencies and the game will fail to launch when executed.
 
 Sometimes this might mean being very careful to avoid known bugs in specific versions of our dependent runtime libraries. If that is the case, we need to work around those problems possibly by including a dependency that, although already available within the user's distribution, is a custom patched or newer version within our own repository than the user's distribution supplies. This allows us to take advantage, for instance, of a bleeding edge features of an experimental API.
 
 \StartSubSection{Package List}
-There are many packages that need to be maintained for Ubuntu, such as the game's main binaries; media files, such as textures, models, audio, and cinematics; user extras, such as a screensaver or Plymouth boot theme; documentation; debugging symbols; developer related files, and so on. Each of these different types of objects should be contained within a distinct package representing a logical type. Take a look at \in{table}[table:ubuntu_packages] for a list of all of them.
+There are many packages that need to be maintained for Ubuntu, such as the game's main binaries; media files, such as textures, models, audio, and cinematics; user extras, such as a screensaver or Plymouth boot theme; documentation; debugging symbols; developer related files, and so on. Each of these different types of objects should be contained within a distinct package representing a logical type. It is important to plan these things in advance because it is vital to see things from the user's perspective too.
 
-Some packages do not actually contain anything, but are just {\it metapackages}. That is, they are just aliases for a collection of one or more other packages. 
+Take a look at \in{table}[table:ubuntu_packages] for a list of all of our proposed packages. Some packages do not actually contain anything, but are just {\it metapackages}. That is, they are just aliases for a collection of one or more other packages. 
 \crlf
 
 \placetable[force,split][table:ubuntu_packages]{List of all Ubuntu packages.}
@@ -76,7 +76,7 @@ Some packages do not actually contain anything, but are just {\it metapackages}.
 
     \bTR
       \bTC {\tt avaneya-extras} \eTC
-      \bTC Virtual package which pulls a collection of non--essential binaries, such as the Plymouth boot theme and screensaver. \eTC
+      \bTC Metapackage which pulls a collection of non--essential binaries, such as the Plymouth boot theme and screensaver. \eTC
     \eTR
 
     \bTR
@@ -101,7 +101,7 @@ Some packages do not actually contain anything, but are just {\it metapackages}.
 
 The {\tt avaneya-restricted} package contains anything potentially useful to an Avaneya user that may be restricted in some localities. This includes the patent encumbered Dolby Digital surround sound technology.
 
-Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the analog method with a wire for every speaker connected to the back of the user's sound card. This usually makes a mess. The better way is the digital method. This works by passing a compressed digital stream unmolested from the source medium out to dedicated hardware usually in the form of a digital home theatre receiver. The receiver decodes a superior signal to the analog method which it then amplifies before sending out on its way again to the user's connected speakers. For the former method, the application developer does not really have to do much work since OpenAL already does most of the heavy lifting.
+Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the analog method with a wire for every speaker connected to the back of the user's sound card. This usually makes a mess. The better way is the digital method. This works by passing a compressed digital stream unmolested from the source medium out to dedicated hardware usually in the form of a digital home theatre receiver. The receiver decodes a superior signal to the analog method which it then amplifies before sending out on its way again to the user's connected speakers. For the former method, the application developer does not really have to do much work on a system that has the surround sound speakers connected properly since OpenAL will do most of the heavy lifting.
 
 But there is a problem to take advantage of the latter digital method. At present, nearly every digital home theatre receiver supports only two digital surround sound compressed formats. One of these is Dolby Digital, or sometimes called AC--3 or A52, and the other is the Digital Theatre System or DTS. Both are covered by patents and so we need to be careful how we encode to these bitstreams if we choose to. 
 
@@ -111,5 +111,5 @@ The problem is that this library is seldom available in most operating system di
 
 Whatever we decide to do, we need to make sure that this feature is disabled by default, due to Dolby's licensing requirement. We can leave it as an option for the user to enable if they know that software patents are not valid in their jurisdiction, but we still need to balance several constraints. These include legalities, reasonable expectations and ease of use for the user, and ease of maintenance on our part. Perhaps the best way to do this is to provide all of this functionality separately, such as within an optional and properly disclaimered {\tt avaneya-restricted} package.
 
-If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other. Moreover, we do not know of any {\it libre} encoders for DTS bitstreams at this time anyways.
+If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other. Moreover, we do not know of any {\it libre} DTS encoders at this time anyways.
 

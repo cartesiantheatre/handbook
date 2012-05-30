@@ -1,0 +1,143 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+\startproduct Handbook
+\environment Environment.tex
+
+\startcolor[colour_head]
+
+\startmakeup[standard][doublesided=no]
+    \setupalign[center]
+    \bft \setupspacing \setstrut
+    \setupbodyfont[25pt]
+    \strut Avaneya Project Crew Handbook
+    \setupbodyfont[11pt]
+    \par
+    {\em \strut \BookShortDescription}
+    \setupspacing \setstrut
+    \vfill
+    %\midaligned{\externalfigure[Makeup/Images/Avaneya_Logo.svg][][width=0.25\textwidth]} % This temporary logo is just awful.
+    \midaligned{\rotate[rotation=42]{\color[red]{\bft FIRST DRAFT. UNREADY FOR PUBLIC REDISTRIBUTION!}}}
+    \vfill
+    The Avaneya Project Crew\crlf
+    {\small Bzr revision \BzrRevisionClickable}
+\stopmakeup
+
+\stopcolor
+
+\startmakeup[standard][page=,doublesided=no]
+    \vfill
+
+    Visit us on the web at \fullahref{https://www.avaneya.com}.
+    \blank
+
+    This document was compiled on \currentdate\ from Bzr revision \BzrRevisionClickable, typeset using the \CONTEXT\ document engineering system, \contextmark\ \contextversion, and rendered with \texenginename\ \texengineversion. References were managed with \BIBTEX. Inkscape, Graphviz \GraphvizVersion, and \UmbrelloVersion\ were used for various illustrations. The resulting document was tested against \EvinceVersion, a poppler based PDF viewer. All of the aforementioned were software {\it libre} at the time of writing.
+    \blank
+    Copyright \copyright\ \CopyrightDates\ \CopyrightHolder. The {\it Avaneya: Project Crew Handbook} by \CopyrightHolder\ is licensed under the default terms of the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. A copy of the license is available online at the link below.
+    \crlf
+    \crlf
+    \midaligned{
+        \goto{\externalfigure[Makeup/Images/By-nc-sa_plain.svg][][width=0.95\textwidth]}
+            [url(https://creativecommons.org/licenses/by-nc-sa/3.0/)]
+        }
+    \crlf
+    \crlf
+    \framed
+       [frame=off,
+        location=middle, % vertically centered
+        align=middle,
+        width=\hsize] % align=no (default) is a normal hbox
+                         % align=flushleft/middle/flushright/normal is used for multiple lines
+                         % to make the frame wider (as in LaTeX)
+    {
+        \goto{\externalfigure[Makeup/Images/Bazaar_Logo.svg][][width=0.1\textwidth]}
+            [url(http://bazaar.canonical.com/)]
+        \goto{\externalfigure[Makeup/Images/ConTeXt_Logo.svg][][width=0.1\textwidth]}
+            [url(http://www.contextgarden.net/)]
+        \goto{\externalfigure[Makeup/Images/Gedit_Logo.svg][][width=0.1\textwidth]}
+            [url(http://projects.gnome.org/gedit/)]
+        \goto{\externalfigure[Makeup/Images/Graphviz_Logo.png][][width=0.1\textwidth]}
+            [url(http://www.graphviz.org/)]
+        \goto{\externalfigure[Makeup/Images/Inkscape_Logo.svg][][width=0.1\textwidth]}
+            [url(http://inkscape.org/)]
+        \goto{\externalfigure[Makeup/Images/Umbrello_Logo.svg][][width=0.1\textwidth]}
+            [url(http://uml.sourceforge.net/)]
+    }
+    \crlf
+    \crlf
+    \framed
+       [frame=off,
+        location=middle, % vertically centered
+        align=middle,
+        width=\hsize] % align=no (default) is a normal hbox
+                         % align=flushleft/middle/flushright/normal is used for multiple lines
+                         % to make the frame wider (as in LaTeX)
+    {
+        \goto{\externalfigure[Makeup/Images/Ubuntu_Vancouver_LoCo_Logo.svg][][width=0.2\textwidth]}
+                    [url(http://www.meetup.com/ubuntuvancouver/)]
+    }
+\stopmakeup
+
+% Front matter...
+\startfrontmatter
+	
+    % Table of contents...
+    \input Makeup/Table_of_Contents.tex
+
+    % Foreword...
+    %\component Foreword/Foreword.tex
+
+    % Preface...
+    \component Preface/Preface.tex
+
+\stopfrontmatter
+
+% Contents...
+\startbodymatter
+
+	% Each component is used as one chapter logical unit...
+	\component How_To_Read_This_Book/How_To_Read_This_Book.tex
+    \component Leitmotifs/Leitmotifs.tex
+    \component The_Game/The_Game.tex
+    \component Terms_and_Concepts/Terms_and_Concepts.tex
+    \component Learning_Resources/Learning_Resources.tex
+    \component Leading_Characters/Leading_Characters.tex
+    \component Timeline/Timeline.tex
+    \component Game_World/Game_World.tex
+    \component Game_Mechanics/Game_Mechanics.tex
+    \component Selected_Technologies/Selected_Technologies.tex
+    \component Viking_Lander_Remastered/Viking_Lander_Remastered.tex
+    \component Specialities/Specialities.tex
+    \component All_Contributors/All_Contributors.tex
+    \component Writer_Contributors/Writer_Contributors.tex
+    \component Engineer_Contributors/Engineer_Contributors.tex
+    \component Package_Maintainer_Contributors/Package_Maintainer_Contributors.tex
+    \component Licensing_Rationale/Licensing_Rationale.tex
+    \component Closing_Remarks/Closing_Remarks.tex
+
+\stopbodymatter
+
+% Appendices...
+\startappendices
+
+	% License appendix...
+    \component Licenses/Licenses.tex
+
+    % References...
+    \component References/References.tex
+
+	% Index...
+	\StartChapter{Index}
+	\placeindex
+	\StopChapter
+
+\stopappendices
+
+% Back matter...
+\startbackmatter
+\stopbackmatter
+
+% Done...
+\stopproduct
+

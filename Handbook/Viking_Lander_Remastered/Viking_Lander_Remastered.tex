@@ -1,0 +1,227 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Note: This chapter needs to be able to be extracted from the handbook 
+%       standalone. Maybe we can use it as the VLR DVD's jewel case insert.
+
+% Viking Lander Remastered chapter...
+\StartChapter{Viking Lander Remastered}
+
+% The Martian Landscape
+\StartSection{The Martian Landscape}
+
+\placefigure
+    [right, 0*hang]
+    [figure:Viking_Lander_12E018]
+    {A dust storm captured by Viking Lander I in the early morning on {\it Chryse Planitia}. The grid on the panel is used to track the movement of Martian dust.}
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_12E018.png][][width=.4\textwidth]}
+Getting the Avaneya game experience right is important to us. That means we need to replicate the visual environmental conditions of the Martian landscape as closely as possible. We can do much better than simply making it red, and users appreciate that because it makes their experience feel more genuine.
+
+Since artists and shader engineers depend on their eyes to define an aesthetic experience through tools like Blender, as opposed to readings from a mass spectrometer, it is more important that they know what Martian rocks, a sunrise, and the winter season would look like if they were actually standing there than, say, the peroxide concentration of Martian regolith when writing material shaders\index{shader}. This means they must have access to large sets of high resolution reference photographs\index{reference photographs} to study. But Mars, like Earth, is a large place of greatly varied terrain and climate, so we must be more specific.
+
+Arda and his settlers erected their settlement of Arcadia in the {\it Arcadia Planitia} region. It is named after the Arcadia region of Ancient Greece, so in turn named after the Greek legend of Arcas\index{Arcas}. This location was selected because there is plenty of water ice, a stable climate, and year round sunlight.
+
+The centre of {\it Arcadia Planitia} is mostly uniform in appearance. Its centre is roughly at \math{46.7^{\circ}}N \math{192.0^{\circ}}E. This is mid--latitude in the Northern hemisphere. 
+
+Images of a fresh meteorite crater 12 metres across taken in 2008 revealed under the surface a massive blanket of water ice.\footnotecite[water_ice_on_mars] It also turns out fortuitously that this ice is almost completely pure, with only about one percent of it dirt.
+
+Even though there is a great deal of ice on Mars, it is unstable in the thin Martian atmosphere and you rarely ever see it anywhere other than in the polar regions. This is because the ice rapidly sublimates\footnote{When a solid material sublimates, it means it skips melting to a liquid and turns directly into vapour.} as soon as it is exposed.
+
+The region has also experienced recent lava flows. By recent, in a geological time scale, that means within the last few hundred--million years. Therefore, Mars most likely is still volcanically active and still has a molten core. It does not, however, appear to spin around its core which is why there is no magnetic field -- rendering a magnetic compass useless.
+
+\placefigure
+    [here,force]
+    [figure:Viking_Lander_21A028]
+    {{\it Utopia Planitia's} rocky surface captured by Viking Lander II.}
+    \startcombination[2*1]
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_21A028.png][][width=.4\textwidth]} 
+    {}
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_21C174.png][][width=.4\textwidth]}
+    {}
+    \stopcombination
+
+{\it Arcadia Planitia's} windswept landscape consists of a vast, mostly flat, pale tan coloured plain. It has sand dunes of modest height, never approaching anything higher than a few feet, with small uniformly sized rocks littering the surface. As the prevailing theory goes, these rocks are remnants of some of the underlying bedrock which is an older layer of solidified lava. Every time an asteroid impacts, penetrating the younger upper layer, the underlying bedrock ejecta is scattered everywhere.
+
+Like all other explored regions, it undergoes constant sterilization through intense ultraviolet radiation. This ensures that there is no {\it known} life on the {\it surface} of Mars.
+
+\StartSection{Viking Mission}
+
+In 1976 NASA successfully placed two spacecraft into Martian orbit after many years of failed American and Russian attempts. These initial failures became unofficially attributed to the {\it Mars Curse}, owing to their high number. The Viking orbiters both carried their own landers which they successfully landed. 
+
+The landers were capable of capturing high resolution photographs and other data from the surface of the planet, buffering temporarily onto internal magnetic tapes, and then relaying this data back to Earth through one the orbiters when it was in position, or sometimes directly through a UHF uplink when possible. They provided us with large amounts of data without any issues for four years before finally succumbing to a battery failure on one and a software update bug which shutdown the communication antenna on the other.
+
+At present, no lander has explored Arda's area of settlement, {\it Arcadia Planitia}. This would have been a problem for us, except that the neighbouring plains of {\it Utopia Planitia} are very similar in appearance and we have a multitude of images captured by Viking Lander II. It did this from the location of \math{47.7^{\circ}}N \math{225.9^{\circ}}W back on September 3, 1976.
+
+\placefigure
+    [here, force]
+    [figure:Viking_Lander_0902]
+    {{\it Chryse Planitia} as captured by Viking Lander I, later salvaged from a rotting magnetic tape.}
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
+
+\StartSection{Problem: Rotting Tapes, Dead Technology}
+
+While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for a layman.
+
+We do, however, have access to the original image source data\footnotecite[viking_mission_source_data] from the Viking mission that NASA made available. Some of it is official NASA Planetary Data Systems archival data and some of it is from the Science Digital Preservation Task of NASA's Jet Propulsion Laboratory which preceded it. The PDS is a branch of NASA charged with mission data archival. It was established because of concerns that data from previous missions, such as Viking, were in danger of being lost, or rendered unreadable because of failures in saving documentation.
+
+The SDDPT archive was prepared by recovering what data they could by copying directly off of old, decaying magnetic tapes onto more stable optical media in the 1990s when CDs first became available. That data was \quote{working data,} akin to notes scattered in an office. The images it contains may or may not be useful, but they were expensive to acquire and may contain images not found in the official PDS archive, and vice versa. They did not otherwise alter them. They represent EDR (Experimental Data Record) level data, which is a processing level at NASA to denote the raw working data that was returned to Earth as captured by each Viking landers' onboard instrumentation.
+
+And while both sources' raw data are now available to everyone as public domain, the entire latter SDDPT archive is encoded in a useless archaic format used during the Viking mission between July 20, 1976 to November 5, 1982. As you might expect, few remain today at NASA to explain its specification. We know this because they told us so.
+
+The {\it Avaneya: Viking Lander Remastered} archive is an effort to remedy this situation constructively. It doubles in giving our artists and shader engineers what they need, and also provides the general public with an invaluable educational resource. The software we engineered, as described in \in{section}[Solution: VikingExtractor], generates most of our remastered archive in the form of lossless PNG images which everyone already has software that can access.
+
+We used three source data sets as the basis for our new archive as shown in \in{figure}[figure:Viking_Lander_Remastered_Layout].
+\crlf
+
+\placefigure
+    [here, force]
+    [figure:Viking_Lander_Remastered_Layout]
+    {A diagram of the {\it Avaneya: Viking Lander Remastered} image processing pipeline.}
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_Remastered_Layout.svg][][width=.8\textwidth]}
+
+The PDS EDR archive was the first. The format they are encoded in was straightforward to transcode since it is well documented and standardized. The data was cleaned up and re--organized for easier access. For example, if you want to know what {\it Utopia Planitia} looks like in mid--winter, all of the images are sorted by Martian month. See \in{section}[Calendar] for more information on the Martian calendar.
+
+The SDDPT's {\it Viking Lander High Resolution Mosaics, Stereo Images and Range Data Sets} volumes marked {\tt VL_0001} and {\tt VL_0002} contain raw data recovered from several thousand magnetic tapes in various stages of decay. This was the second archive used. They were the result of NASA stitching together multiple images to form mosaics. Some of them may be rather Frankensteinian in appearance, but understand that they were intended for use in a hectic operational environment at the time. Fortunately we did not have to do any significant work on this set. We simply made the logical directory layout, file names, and documentation more intuitive to the layman. We also got rid of many things that most people either would have found confusing, or probably would not have had much use for.
+
+The SDDPT's {\it Viking Lander Processed Images} were the third source. They were taken from the volumes marked {\tt VL_2101} through {\tt VL_2124}. The photographs in this set, after restoration, can be looked at individually, as opposed to forming mosaics. They form the bulk of the archive's disk size and required a great deal of digital forensic archaeology\index{digital forensic archaeology} to recover. This is because NASA was not thinking at the time of a need for a long term image archival strategy\index{image archival strategy}. This may be hard to believe, but even NASA makes mistakes.\footnotecite[nasa_audit_missing_samples] This is understandable when put in the context of a very difficult mission to a planet with a long history of catastrophic failures and finally succeeding with the acquisition of real data and photographs of another world.
+
+\placefigure
+    [right, 2*hang]
+    [figure:Viking_Lander_22H093]
+    {Viking Lander II captures a beautiful early morning sunrise, {\it Utopia Planitia}.}
+    {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_22H093.png][][width=0.3\textwidth]}
+
+As a consequence, the archaic magnetic tapes the images were stored on began to rot\footnote{Magnetic tapes can experience \quote{bit rot}\index{bit rot} as the bits of information they contain lose their magnetic orientation. When stored where it is warm and humid, the tapes can literally rot.} as the years went on. As surprising as this may sound, it is actually a major problem that NASA is having to deal with.\footnotecite[the_economist_bitrot2012]
+
+Even if they had been safe on magnetic tapes, the VICAR\index{VICAR} (Video Image Communication and Retrieval)\index{Video Image Communication and Retrieval} format they were encoded in is an ancient format having its origins nearly half a century ago. Moreover, the few remaining functional VICAR image loaders the team managed to access are for much newer file format versions than those used during the Viking era.\footnote{{\tt Xloadimage 4.1} and {\tt ImageMagick 6.7.0} are some examples that can decode newer VICAR data, but not that from the Viking mission era.}
+
+VICAR was the image processing software used at the time. Unfortunately its specification has gone through many revisions over the decades with little, if any, formal documentation of the format used during the Viking era. The most recent documentation available is from 1994, and even that is still too recent to be useful.\footnotecite[vicar_shitty_user_guide]
+
+The only known allegedly working image loader, NASA claims to be in possession of. However, we were not permitted access to {\it even just the binary} to verify. Its distribution is severely restricted. NASA's Jet Propulsion Laboratory informed us that they could \quote{\it only provide a royalty--free license to universities (signed by a department head) or a government subcontractor, where the requested software is required to support the effort. At the end of the contract, it must be deleted. [They] cannot provide software to individuals or for research and development purposes.}
+
+Even if we had been granted access, there is still no guarantee that their software would have successfully consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation that we required for a massive data set. In all likelihood, after having examined the data in detail, and following many repeated inquiries, with confidence, we could probably call NASA's bluff. There is good reason to suspect that no one, not even NASA, has any currently usable software to recover these images. It is not that they are deliberately misleading us, but probably just that no one has inquired in decades for them to know that.
+
+\StartSection{Solution: VikingExtractor}
+
+In keeping with the software {\it libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt viking-extractor}. This was done through a combination of a great deal of reverse engineering and helpful advice with the scientists at NASA, especially Susan Slavney of the Geosciences Node of NASA's Planetary Data System. 
+
+Why bother? Mainly because we needed the images. But also because people should not have to perform digital archaeology to get an idea of what Mars looks like when photos were already taken, paid for with a billion dollars of public money, and stored for decades -- albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out proprietary lock nobody seems to have a key for at best, or refuses to share at worst.
+
+\placefigure
+    [here, force]
+    [figure:VikingExtractor_Source]
+    {Writing the software to recover images from the Viking landers.}
+    {\externalfigure[Viking_Lander_Remastered/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
+
+Both Viking landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes. These were intended for capturing different portions of the electromagnetic spectrum for different purposes. They are described below in \in{table}[table:Viking lander PSA].
+
+\placetable[force][table:Viking lander PSA]{Viking lander photosensor types.}
+{
+    \bTABLE[split=repeat,option=stretch]
+    \setupTABLE[column][5]
+        [width=.43\textwidth,
+        align=yes]
+    \setupTABLE[row][each][align=center]
+    \setupTABLE[4][1][align=center]
+
+\bTABLEhead
+    \bTR[bottomframe=on]
+      \bTH  Band Type \eTH
+      \bTH  Qty \eTH
+      \bTH  Spectrum \eTH
+      \bTH  Resolution \eTH
+      \bTH  Description \eTH
+    \eTR
+\eTABLEhead
+
+\bTABLEbody
+    \bTR
+      \bTC Broad band \eTC
+      \bTC 4 \eTC
+      \bTC Broad \eTC
+      \bTC High \eTC
+      \bTC Used for different focal distances. \eTC
+    \eTR
+
+    \bTR
+      \bTC Colour \eTC
+      \bTC 3 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC One each for red, green, and blue. \eTC
+    \eTR
+
+    \bTR
+      \bTC Infrared \eTC
+      \bTC 3 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC Infrared colour imaging.\footnote{The infrared filters degraded with time from the neutron radiation from the lander's plutonium--238 radioisotope thermoelectric generator.} \eTC
+    \eTR
+
+    \bTR
+      \bTC Survey \eTC
+      \bTC 1 \eTC
+      \bTC Broad \eTC
+      \bTC Low \eTC
+      \bTC Monochrome for panoramic images. \eTC
+    \eTR
+    
+    \bTR
+      \bTC Sun \eTC
+      \bTC 1 \eTC
+      \bTC Narrow \eTC
+      \bTC Low \eTC
+      \bTC For looking at the sun through a red filter. \eTC
+    \eTR
+
+\eTABLEbody
+
+\eTABLE
+}
+
+A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting. This made it difficult to write a reliable parser. The general rule of thumb when studying the SDDPT's data set was that there was none. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise. It recovers what it can and picks itself up and carries on where it cannot.
+
+The tool recovers whatever it can while transcoding from the VICAR formatted data into lossless PNGs. Here is an example of its use, but keep in mind that you should use the {\tt --help} switch for more information on the software's usage.
+
+\startCodeExample
+$ viking-extractor              \
+    --directorize-band-class    \
+    --directorize-month         \
+    --directorize-location      \
+    --ignore-bad-files          \
+    --interlace                 \
+    --recursive                 \
+    --save-metadata             \
+    --summarize-only            \
+     Processed\ Images          \
+     Output
+
+$ find Output/
+...
+Output/Chryse Planitia
+Output/Chryse Planitia/Leo/Colour/11J070.png
+Output/Chryse Planitia/Leo/Survey/11J071.png
+Output/Chryse Planitia/Capricorn/Colour/12C200.txt
+...
+Output/Utopia Planitia/Aquarius/Colour/22D220.png
+...
+Output/Utopia Planitia/Scorpius/Colour/22H220.png
+...
+\stopCodeExample
+
+The previous sample usage of {\it viking-extractor} catalogues over ten thousand files, organizes them, locates all scattered pieces of the same image, performs optical character recognition, orients them right side up as necessary, compares duplicates for quality, builds a matching set, and reassembles whatever possible. It identifies potentially recoverable images based on, among many other things, their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set). 
+
+Using a quad core 2 GHz amd64 hardware, this fully automated process takes about forty minutes. On low power mips64el hardware, this took about six hours.
+
+Some of the metadata it needs to make unattended decisions are located within EBCDIC encoded file headers. Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8--bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s. These headers are made up of \quote{label records} which are meaningful only in the context of these old mainframe machines equipped with magnetic tape drives. Some of the metadata the on--board instrumentation provided can be preserved for the curious. 
+
+As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. It is only available in the PDS data set, but other metadata, such as camera azimuth and elevation almost always are. In any case, this metadata is usually not very useful for most, but the {\tt viking-extractor} can preserve whatever it can if the user wishes.
+
+When relying on the image archive, make sure you are looking at the right place. So if you want to know what {\it Arcadia Planitia} looks like, look at its very similar neighbour that was explored by the second Viking Lander, {\it Utopia Planitia}. The other lander touched down on the other side of the planet on {\it Chryse Planitia} (Plains of Gold). They may look very similar to the untrained eye, but they have many subtle differences.
+
+If you would like to explore the {\tt viking-extractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the project's source tree. To do this, follow the instructions in \in{section}[Using Bzr].
+
+\StopChapter
+

@@ -1,0 +1,66 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Environmental section...
+\StartSection{Environmental}
+
+This section covers some of the relevant environmental characteristics of Mars. This is important for shader writers, scripters, and artists in particular.
+
+\StartSubSection{Atmosphere}
+The Martian atmosphere is 95\% \chemical{CO_2}. The mean sea level pressure ranges from 30 Pa to 1135 Pa. This is about the same as at 36 km above the Earth's surface.
+
+Because there is very little atmospheric buffering, the temperature will rise and fall in rapid synchronicity with its proximity to the Sun. This varies with its position in its orbit. The temperature ranges from a minimal \math{-90^{\circ}}C to a maximum of \math{20^{\circ}}C and with an average of only \math{-63^{\circ}}C. But despite the extreme temperatures, the greater threat to an exposed human is actually the low atmospheric pressure.
+
+The {\it Armstrong Limit\index{Armstrong Limit}} of 6,262 Pa is the lowest the human body can survive before the vapour pressure of all exposed liquids, such as tears, saliva, and the liquid wetting the lung's alveolar membrane, but not liquids like blood within the skin's pressure barrier, exceed that of its surrounding atmosphere. They will begin to boil away at this point. On Earth, the Armstrong Limit begins at about 19 km above the surface. On Mars, it is already well exceeded just on the surface.
+
+\StartSubSection{Desert Threats}
+Deserts are dangerous on Earth and the vast ones of Mars are no exception. It is very easy for one to get lost in the event that their MPS stops working due to a hardware failure, a solar flare affecting a relay satellite, a cosmic ray affecting a receiver, or defects in the proprietary software used in the communications equipment.
+
+Compounding things, there is very little light at night. This is because Mars' two moons, Phobos and Deimos, do not catch much light and so it is virtually pitch black at night on the surface. Vehicles and dismounted persons would need proper lighting.
+
+But there are other threats. One can also freeze to death in the \math{-90^{\circ}}C weather if their suit loses power or the integrated heating element fails for whatever reason. If they are out for long enough, they will run out of oxygen.
+
+One could also run out of water which they need about 1 kg per day of under normal circumstance. To extract the water from the soil, perhaps in an emergency, one could setup a greenhouse--tent to condense the water in the regolith. The regolith contains anywhere from 3\% to as high as 60\% water. If the equipment is available, a photovoltaic oven could even be used to melt the water in the soil. Whatever the process of extraction used, water from the soil still needs to undergo distillation due to its high salinity.
+
+\StartSubSection{Regional Characteristics}
+
+The planet's north and south poles are different. The north is mostly water ice, containing about 821,000 km\high{3} of it. It has a more moderate climate than the south and is wettest in the spring. The south is mostly \chemical{CO_2} ice and colder. Both locations have gale strength winds and thick permafrost mantles.
+
+Climate varies throughout Mars, like on Earth, and not just at its poles. The northern hemisphere is advantageous because it has less seasonal variation in temperature. This is because the planet is closer to the Sun in the northern winter and farthest during summer. There are far more lower altitude locations where pressure would be highest if the mean atmospheric pressure were increased through terraformation.
+
+It was for these reasons that UNSA sought a mid--latitude location in {\it Arcadia Planitia}, roughly half way between the north pole and the equator. The centre of {\it Arcadia Planitia} is mostly uniform in appearance, with its centre at roughly \math{46.7^{\circ}}N \math{192.0^{\circ}}E. The name of the region was borrowed from its original in Ancient Greece, so named after the Greek legend of Arcas\index{Arcas}.
+
+The seasons here are not only more predictable, but there is a great deal of water ice and sunlight for year round greenhouse use. Images of a fresh meteorite crater 12 m across taken in 2008 revealed under the surface a massive blanket of water ice.\footnotecite[water_ice_on_mars] It also turns out fortuitously that this ice is almost completely pure, with only about one percent of it being dirt.
+
+Even though there is a great deal of ice on Mars, it is unstable in the thin Martian atmosphere and you rarely ever see it exposed anywhere other than in the polar regions. This is because the ice rapidly sublimates as soon as it is exposed. A material is said to sublimate when it skips melting to a liquid and turns directly into a vapour state. 
+
+The region has experienced recent lava flows. By recent, in a geological time scale, that means within the last few hundred--million years. Therefore, Mars most likely is still volcanically active and must have a molten core. It does not, however, appear to spin around this core which is why there is no magnetic field. This is why magnetic compasses are useless on Mars, as described in \in{section}[Navigation].
+
+{\it Arcadia Planitia's} windswept landscape consists of a vast, mostly flat, pale tan coloured plain. It has sand dunes of modest height, never approaching anything higher than a few feet, with small uniformly sized rocks littering the surface. As the prevailing theory goes, these rocks are remnants of some of the underlying bedrock which is an older layer of solidified lava. Every time an asteroid impacts, penetrating the younger upper layer, the underlying bedrock ejecta is scattered everywhere.
+
+Like all other explored regions, it undergoes constant sterilization through intense ultraviolet radiation. This ensures that there is no {\it known} life on the {\it surface} of Mars.
+
+Artists and shader writers are encouraged to draw on the resources provided by our {\it Viking Lander Remastered Archive} described in detail in \in{chapter}[Viking Lander Remastered] since no amount of writing really compares with actual photographs of the region.
+
+\StartSubSection{Radiation}
+
+Radiation is a always concern on Mars since its levels are 50 times those of Earth. It is usually measured in either rems or Sieverts (sv in SI). One rem is the equivalent of \math{1/100} sv.
+
+The amount or dosage received, combined with various weighting factors, determine how effective the radiation is likely to cause in terms of biological damage.
+
+Exposure can be grouped into two categories, acute and extended. Acute or prompt exposure is shorter than the time of cellular regeneration. Anything less than 50 rems is typically sub--clinical and should not produce anything other than blood changes. 50 to 200 rems can cause illness but is rarely fatal. 200 to 1,000 rems will cause serious illness and with anything greater than 450 usually killing half of all those exposed. Anything greater than 1,000 rems and it is almost always fatal.
+
+An extended exposure is any exposure that took longer than the normal time of cellular regeneration. A low exposure will not make you sick, but a medium dose will increase the likelihood of cancer.
+
+Sources of natural radiation on Mars are solar flares and cosmic rays. Solar flares are of no danger to people on Mars, but only to space travellers. This is because even though the planet's atmosphere is thin, it is still thick enough to protect you. Even then, although mostly unpredictable, they average only one per terrestrial year. They tend to happen more frequently during the planet's solar max and less frequently during the solar minimum. They can last for several hours at several thousand rems and consist mostly of protons with a few million volts. Shielding with 12 cm of water or comparable mass of \math{12g/cm^{2}} or greater is sufficient for protection.
+
+Cosmic rays are another significant source of radiation and are of concern both to Martians and space travellers. Unlike solar radiation, their particles have energies in the billions of volts and no one is certain where they come from -- although we are certain they do not come from the Sun. Interstellar crew would be subjected to about 30 rems per year. That is about 21 rems for an 8.5 month type--II Hohmann transfer.
+
+Despite all of the emphasis NASA gives the dangers of cosmic radiation on Mars, there are several reasons to not be alarmed. Half of the sky is always blocked out to anyone anywhere on the surface. The remaining radiation is reduced by roughly a factor of half to only about 10 rems per year actually reaching the surface. Proper shielding of buildings, therefore, makes this not a concern.
+
+Moreover, we know now that cancer on Earth is nearly always dietary induced and so nutrition needs to be given more than a head nod.\footnotecite[the_china_study] Many foods and drinks can even help repair cellular DNA damage caused by radiation, such as certain fermented beverages like kombucha.\footnotecite[cavusoglu2009]
+
+\StartSubSection{Sky}
+Mars has a beautiful sky. At night time, it may be possible to see auroras. During the day, one can see \chemical{CO_2} and water clouds. Artists are encouraged to examine the images provided by our {\it Viking Lander Remastered Archive} described in detail in \in{chapter}[Viking Lander Remastered] to get an idea of the sky's appearance, though we have no photographs of the auroras.
+

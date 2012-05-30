@@ -1,0 +1,49 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Sources, Mutators, Resources, & Sinks section...
+\StartSection{Sources, Mutators, Resources, & Sinks}
+The set of diagrams in this section show how resources can be transformed through the game's underlying abstract resource processing pipeline model. The relationship between {\it sources}, {\it mutators}, {\it resources}, and {\it sinks} is illustrated in \in{figure}[figure:Resource_Legend].
+
+\placefigure
+    [force,here]
+    [figure:Resource_Legend]
+    {A simple resource processing pipeline.}
+    {\externalfigure[Game_Mechanics/Graphviz/Legend.pdf][][width=1.0\textwidth]}
+
+A {\it source} could be any logical group of resources, such as the atmosphere, the ground, or perhaps even imports from another city or off world.  They act as suppliers or sets of resources that feed a resource processing pipeline. But except in the case of imports, a source's resources are usually in some unrefined state. We denote sources on our diagrams as tables, with the resources they are capable of supplying listed within them.
+
+A {\it resource} is anything that can be used to provide for or produce some other resource. It is usually, though not necessarily, useful to someone living on Mars. It could be a kind of energy, such as thermal, chemical potential, electrical, or what have you. On the other hand, it could be organic waste. Resources are denoted on our diagrams as octagons.
+
+A {\it mutator} is an abstract entity that transforms one type of resource into another. They are denoted on our diagrams as three dimensional boxes. Usually mutators are physical buildings, such as a plastics factory, but not necessarily. Note how the mutator in \in{figure}[figure:Resource_Legend] combines several resources to produce a new one.
+
+A {\it sink} is the terminal end of a resource's journey through the pipeline, though it may make another one. We denote them on our diagrams as inverted triangles. Sinks are defined in the game as abstract objects with a set of behaviours to carry out on input resource having met certain condition. They usually map to some physical entity in the world. 
+
+Sources and sinks may also sometimes be related. Depending on the resource and sink, any number of things could happen when the former enters the latter. As an example, consider Earth's atmosphere as a sink. The sink is capable of absorbing certain resources, such as anthropogenic \chemical{CO_2} to a certain extent. But one of the many adverse side effects is that this will trigger an increase in carbonic acid (\chemical{H_2CO_3}) uptake in the oceans. The oceans are a source because they furnish many resources that are critical for supporting life on Earth. But more carbonic acid in the oceans will reduce their ability to support life.\footnote{Neoclassical economists refer euphemistically to this phenomenon as an {\it externality}\index{externality}.} 
+
+As another example, consider the Martian atmosphere as a source. We can do this because it contains resources which are useful to us on Mars, such as \chemical{CO_2}. This atmospheric \chemical{CO_2} can be fed into the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor] to produce new resources. These resources are carbon monoxide (\chemical{CO}) and molecular hydrogen and oxygen. The carbon monoxide could, in turn, undergo further refinement when combined with other resources and mutators to produce yet additional resources like methanol, plastics, or what have you. The hydrogen was cycled back into the reactor as a reagent and the oxygen used for life support. Human respiration, a resource mutator, produces \chemical{CO_2} from \chemical{O_2} and food resources, with the \chemical{CO_2} vented back out into an atmospheric sink.
+
+Whenever a resource enters a sink and efficiently replenishes all of a source's resources that went into its creation, we call this recycling. Whenever this is not the case and a resource is non--renewable, we know that the source's supply of the resource will eventually become depleted. This is one of the many reasons why the models adopted by neoclassical economists are wrong, because they presuppose the indefinite viability of linear transformation pipelines that draw on finite resources.
+
+With these basic building blocks, it is possible to have a resource processing pipelines as complex or over simplified as one chooses. Since all of Avaneya's sources, resources, mutators, and sinks are data driven, to add more one simply defines new ones through the Lua interface (see \in{section}[Scripting]). Although there is no theoretical limit to its complexity, the diversity of resources, and the things one can do with them, it is convenient to examine some of a \quote{core set}.
+
+An over simplified model is illustrated in \in{figure}[figure:Resources_Pipeline]. Note that not all resources require processing to be considered a resource. For instance, although the atmosphere is mostly \chemical{CO_2}, that gas is already a resource in and of itself since it has many applications, even though it could still undergo further refinement.
+
+\FullPageDiagram
+    {figure:Resources_Pipeline}
+    {The resource pipeline of all the core sources, resources, mutators, and sinks.}
+    {Game_Mechanics/Graphviz/Resources.pdf}
+
+For the purpose of clarity, we added the same resource sometimes twice, once in its source, and once again as a separate node on the diagram. The reason for this is because sometimes there may be more than one way of getting a resource, such as through an off--world import or from the ground.
+
+If you look carefully at \in{figure}[figure:Resources_Pipeline], you will notice that there are no sinks. We avoided putting these on the diagram because it would make it harder to read in linking every resource to all possible sinks to cover every conceivable situation. Instead, let us consider \in{figure}[figure:Resource_Sinks] to illustrate some of the possibilities with a reduced resource set.
+
+\placefigure
+    [force,here]
+    [figure:Resource_Sinks]
+    {Resources and sinks.}
+    {\externalfigure[Game_Mechanics/Graphviz/Sinks.pdf][][width=1.0\textwidth]}
+
+Here again the ground is a source of resources, including an artesian aquifer. When tapped with a geothermal station, it will provide aqua or liquid water, electricity, and heat. The electricity and heat can be used for any number of things, but we must be careful with what we do with the water. If the underground well is not replenished, it will eventually become depleted. If this happens, the dangerous likelihood of a collapse sinkhole forming is greatly increased.
+

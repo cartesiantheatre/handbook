@@ -1,0 +1,309 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Cartesian Theatre.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf Resources.dot.gv -o Resources.pdf
+*/
+
+// Resources graph...
+digraph Resources 
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	rankdir="LR";
+//    ranksep="1";
+    splines="ortho";
+    pad="0.5,0.5";
+    concentrate="true";
+    nodesep="0.5";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Sources...
+    subgraph cluster_Sources
+    {
+        // Cluster attributes...
+        labelfontname="Ubuntu Bold";
+        rank="same";
+
+        // Atmosphere source...
+        "Atmosphere"[
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Atmosphere</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Carbon Dioxide">Carbon Dioxide</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Nitrogen">Nitrogen</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Water Vapour">Water Vapour</td>
+                    </tr>
+                </table>>];
+        
+        // Ground source...
+        "Ground"[
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Ground</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dry Ice">Artesian Aquifer</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dry Ice">Dry Ice</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Ore">Ore</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Regolith">Regolith</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Water Ice">Water Ice</td>
+                    </tr>
+                </table>>];
+
+        // Import source...
+        "Imports"[
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Imports</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Dynamic Isotope Power System">Dynamic Isotope Power System</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Hydrogen">Hydrogen</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Nuclear Fission Reactor">Nuclear Fission Reactor</td>
+                    </tr>
+                </table>>];
+
+        // Solar flux source...
+        "Solar Flux"[
+            shape = "none" 
+            label =
+                <<table border="0" cellborder="1" cellpadding="3" bgcolor="gray10" align="center">
+                    <tr>
+                        <td bgcolor="gray20" align="center"><font face="Ubuntu Bold">Solar Flux</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Photons">Photons</td>
+                    </tr>
+                    <tr>
+                        <td align="center" port="Heat">Heat</td>
+                    </tr>
+                </table>>];
+    }
+
+    /* Sinks...
+    subgraph cluster_Sinks
+    {
+        // Cluster attributes...
+        label="Sinks";
+        fontcolor="#c08453ff";
+        fontsize="40";
+        labelfontname="Ubuntu Bold";
+        bgcolor="black";
+        color="black";
+        
+        // Node attributes...
+        node[
+            margin="0.4"
+            fontsize="25"
+            fontname="Ubuntu Bold"
+            style="circle"
+            ];
+        
+        // Nodes...
+        
+    }*/
+    
+    subgraph cluster_Basic_Resources
+    {
+        rank="same";
+        
+        node[shape=octagon];
+        
+        // First order resources...
+        "Carbon Dioxide";
+        "Hydrogen";
+        "Oxygen";
+        "Photons";
+        "Regolith";
+        "Water Ice";
+    }
+    
+//    subgraph cluster_Derived_Resources
+    {
+        node[shape=octagon];
+
+        // All resources...
+        "Bamboo";
+        "Bricks";
+        "Carbon Monoxide";
+        "Ceramics";
+        "Clay";
+        "Copper";
+        "Deuterium";
+        "Dimethyl ether";
+        "Dynamic Isotope Power System";
+        "Electricity";
+        "Food";
+        "Glass";
+        "Gold";
+        "Gypsum";
+        "Heat";
+        "Heavy Water";
+        "Hydrogen";
+        "Iron";
+        "Jenyas";
+        "Kelp Fertilizer";
+        "Magnesium";
+        "Methane";
+        "Methanol";
+        "Ore";
+        "Oxygen";
+        "Plant Waste";
+        "Plastics";
+        "Platinum";
+        "Portland Cement";
+        "Rhodium";
+        "Silicon";
+        "Silicon Dioxide";
+        "Silver";
+        "Steel";
+        "Aqua";
+        "Wood";
+    }
+
+//    subgraph cluster_Units
+    {
+//        rank="same";
+        node[shape=box3d]
+
+        // Mutators...
+        "Biophotoreactor Plant";
+        "Deuterium Isolator";
+        "Geothermal Station";
+        "Greenhouse";
+        "Methanol Reactor";
+        "Mine";
+        "Mushroom Ranch";
+        "Nuclear Fission Reactor";
+        "Photovoltaic Farm";
+        "Plastics Factory";
+        "RWGS Reactor";
+        "Sabatier Reactor";
+    }
+
+    // Relations...
+    "Artesian Aquifer" -> "Aqua";
+    "Atmosphere" -> "Carbon Dioxide";
+    "Biophotoreactor Plant" -> "Kelp Fertilizer";
+    "Carbon Dioxide" -> "Biophotoreactor Plant";
+    "Carbon Dioxide" -> "RWGS Reactor";
+    "Carbon Dioxide" -> "Sabatier Reactor";
+    "Carbon Monoxide" -> "Methanol Reactor";
+    "Clay" -> "Ceramics";
+    "Deuterium Isolator" -> "Deuterium";
+    "Deuterium Isolator" -> "Heavy Water";
+    "Dynamic Isotope Power System" -> "Electricity";
+    "Dynamic Isotope Power System" -> "Heat";
+    "Electricity" -> "Biophotoreactor Plant";
+    "Electricity" -> "Deuterium Isolator";
+    "Electricity" -> "Greenhouse";
+    "Electricity" -> "Heat";
+    "Electricity" -> "Mine";
+    "Electricity" -> "Mushroom Ranch";
+    "Electricity" -> "RWGS Reactor";
+    "Electricity" -> "Sabatier Reactor";
+    "Geothermal Station" -> "Electricity";
+    "Geothermal Station" -> "Heat";
+    "Geothermal Station" -> "Aqua";
+    "Gold" -> "Jenyas";
+    "Greenhouse" -> "Bamboo";
+    "Greenhouse" -> "Food";
+    "Greenhouse" -> "Plant Waste";
+    "Greenhouse" -> "Wood";
+    "Ground" -> "Artesian Aquifer";
+    "Ground" -> "Ore";
+    "Ground" -> "Regolith";
+    "Ground" -> "Water Ice";
+    "Gypsum" -> "Portland Cement";
+    "Heavy Water" -> "Nuclear Fission Reactor";
+    "Hydrogen" -> "Methanol Reactor";
+    "Hydrogen" -> "RWGS Reactor";
+    "Hydrogen" -> "Sabatier Reactor";
+    "Imports" -> "Dynamic Isotope Power System";
+    "Imports" -> "Hydrogen";
+    "Imports" -> "Nuclear Fission Reactor";
+    "Kelp Fertilizer" -> "Greenhouse";
+    "Methanol" -> "Plastics Factory";
+    "Methanol Reactor" -> "Methanol";
+    "Mine" -> "Biophotoreactor Plant";
+    "Mine" -> "Ore";
+    "Mushroom Ranch" -> "Food";
+    "Nuclear Fission Reactor" -> "Electricity";
+    "Nuclear Fission Reactor" -> "Heat";
+    "Ore" -> "Copper";
+    "Ore" -> "Gold";
+    "Ore" -> "Gypsum";
+    "Ore" -> "Iron";
+    "Ore" -> "Magnesium";
+    "Ore" -> "Platinum";
+    "Ore" -> "Rhodium";
+    "Ore" -> "Silicon Dioxide";
+    "Ore" -> "Silver";
+    "Ore" -> "Steel";
+    "Photons" -> "Biophotoreactor Plant";
+    "Photons" -> "Greenhouse";
+    "Photons" -> "Photovoltaic Farm";
+    "Photovoltaic Farm" -> "Electricity";
+    "Plant Waste" -> "Mushroom Ranch";
+    "Plastics Factory" -> "Dimethyl ether";
+    "Plastics Factory" -> "Plastics";
+    "Platinum" -> "Jenyas";
+    "Regolith" -> "Bricks";
+    "Regolith" -> "Clay";
+    "Regolith" -> "Greenhouse";
+    "Regolith" -> "Mine";
+    "Rhodium" -> "Jenyas";
+    "RWGS Reactor" -> "Carbon Monoxide";
+    "RWGS Reactor" -> "Oxygen";
+    "Sabatier Reactor" -> "Methane";
+    "Sabatier Reactor" -> "Aqua";
+    "Silicon Dioxide" -> "Glass";
+    "Silicon Dioxide" -> "Silicon";
+    "Silver" -> "Jenyas";
+    "Solar Flux" -> "Photons";
+    "Aqua" -> "Biophotoreactor Plant";
+    "Aqua" -> "Deuterium Isolator";
+    "Aqua" -> "Hydrogen"
+    "Water Ice" -> "Aqua";
+    "Aqua" -> "Oxygen";
+}
+

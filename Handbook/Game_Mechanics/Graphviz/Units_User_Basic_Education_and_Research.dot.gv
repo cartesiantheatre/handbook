@@ -1,0 +1,56 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Cartesian Theatre.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Education_and_Research.twopi.gv -o Units_User_Basic_Education_and_Research.pdf
+*/
+
+digraph Units_User_Basic_Education_and_Research
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Education & Research";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Agricultural Research Facility"[label="Agricultural Research Facility\n[Type: Building]"];
+    "A.I. Research Facility"[label="A.I. Research Facility\n[Type: Building]"];
+    "Engineering Research Facility"[label="Engineering Research Facility\n[Type: Building]"];
+    "Library"[label="Library\n[Type: Building]"];
+    "Medical Research Facility"[label="Medical Research Facility\n[Type: Building]"];
+    "Observatory"[label="Observatory\n[Type: Building]"];
+    "School"[label="School\n[Type: Building]"];
+    "University"[label="University\n[Type: Building]"];
+
+    // Categorical relations, but not build dependencies...
+    "Education & Research"[shape="folder"];
+        "Education & Research" -> "Library";
+        "Education & Research" -> "School";
+        "Education & Research" -> "University";
+            "University" -> "Agricultural Research Facility";
+            "University" -> "A.I. Research Facility";
+            "University" -> "Engineering Research Facility";
+            "University" -> "Medical Research Facility";
+            "University" -> "Observatory";
+}
+

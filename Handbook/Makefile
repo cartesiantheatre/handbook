@@ -1,44 +1,68 @@
-# Avaneya Crew Handbook
-# Copyright (C) 2011 Kshatra Corp <kip@thevertigo.com>.
-#
-# Public discussion on IRC available at #avaneya (irc.freenode.net) or
-# on the mailing list <avaneya@lists.avaneya.com>.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or 
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful, but 
-# WITHOUT ANY WARRANTY; without even the implied warranty of 
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
-# General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
+# This is part of the Avaneya Project Crew Handbook.
+# Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+# See the file Copying for details on copying conditions.
 
-MAIN_SOURCE             = Source/Main.texi
-ALL_SOURCE              = $(shell find Source/ -type f -name '*.texi' -exec echo "{}" \; | sed 's/ /\\ /g')
-UMBRELLO_DIAGRAM        = ../Engineers/AresEngine/UML/Engine.xmi
-PRE_OUTPUT              = Main.pdf
-OUTPUT                  = Handbook.pdf
-CACHE                   = Cache
+CONTEXT_PRODUCT         = Handbook.tex
+ALL_TEX_SOURCE          = $(shell find . -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
+ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find . -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find . -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
+ALL_BIBTEX              = References/References.bib
+ALL_GRAPHVIZ_PDF        = $(ALL_DOT_PDF) $(ALL_TWOPI_PDF)
+UMBRELLO_ENGINE_DIAGRAM = ../AresEngine/UML/Engine.xmi
+CONTEXT_OPTIONS         = --purgeresult --directives=logs.blocked,system.nostatistics #--nostats --batchmode
 
-# Umbrello can generate only all or none at once, so only need to specify one...
-UMBRELLO_DIAGRAM_PDF    = Images/AresEngine/Artificial\ Intelligence.pdf
+# Major PDF's output targets...
+TOC_PDF                 = Table_of_Contents.pdf
+OUTPUT_PDF              = Avaneya_Project_Crew_Handbook.pdf
+VIKING_PDF              = Viking_Lander_Remastered.pdf
 
-all: $(OUTPUT)
+# Umbrello can only export all or none of its diagrams, so we specify an 
+#  arbitrary one to trigger exporting all of them...
+UMBRELLO_ENGINE_DIAGRAM_SVG = Engineer_Contributors/Images/AresEngine/Engine.svg
 
-$(OUTPUT): $(ALL_SOURCE) $(UMBRELLO_DIAGRAM_PDF)
-	texi2dvi --pdf -I Images --build-dir=$(CACHE) $(MAIN_SOURCE) && mv $(PRE_OUTPUT) $(OUTPUT)
+# Generate handbook PDF, but also check if this makefile is updated...
+all: $(OUTPUT_PDF) Makefile
 
-$(UMBRELLO_DIAGRAM_PDF): $(UMBRELLO_DIAGRAM)
-	umbrello --export eps $(UMBRELLO_DIAGRAM) --directory Images/AresEngine
-	find Images/AresEngine/ -type f -name '*.eps' -execdir epstopdf {} \;
-	@ rm -vf Images/AresEngine/*.eps
+# Generate handbook PDF...
+$(OUTPUT_PDF): ${ALL_DOT_PDF} $(ALL_TWOPI_PDF) $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
+	context $(CONTEXT_PRODUCT) --result=$(OUTPUT_PDF) $(CONTEXT_OPTIONS)
 
+# Generate all graphviz diagrams...
+graphviz: ${ALL_DOT_PDF} $(ALL_TWOPI_PDF)
+
+# Export engine diagram images...
+$(UMBRELLO_ENGINE_DIAGRAM_SVG): $(UMBRELLO_ENGINE_DIAGRAM)
+	umbrello --export svg $(UMBRELLO_ENGINE_DIAGRAM) --directory Engineer_Contributors/Images/AresEngine
+
+# Just produce the table of contents...
+toc: $(TOC_PDF)
+$(TOC_PDF): $(OUTPUT_PDF)
+	pdftk A=$(OUTPUT_PDF) cat A3-16 output $@
+
+# Just produce the Viking Lander Remastered chapter...
+viking: graphviz $(VIKING_PDF)
+$(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
+	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Environment.tex
+
+# Clean everything, including the cached engine diagram images...
+clean-all: clean
+	@ rm -vf Engineer_Contributors/Images/AresEngine/*.svg
+	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
+	@ rm -vf ${ALL_GRAPHVIZ_PDF}
+
+# Graphviz dotty source file to pdf...
+%.pdf: %.dot.gv
+	dot -Tpdf $< -o $@
+
+# Graphviz twopi source file to pdf...
+%.pdf: %.twopi.gv
+	twopi -Tpdf $< -o $@
+
+# Clean most intermediate build files, including the generated PDF...
 clean:
-	@ rm -vf $(OUTPUT)
-	@ rm -vf Images/AresEngine/*.pdf
-	@ rm -vf Images/AresEngine/*.eps
+	@ rm -vf $(OUTPUT_PDF)
+	@ rm -vf Handbook.pdf Handbook.aux Handbook.bbl Handbook.blg
+	@ rm -vf $(VIKING_PDF)
+	@ rm -vf $(TOC_PDF)
+	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 

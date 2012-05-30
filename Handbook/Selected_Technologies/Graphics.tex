@@ -1,0 +1,49 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Graphics section...
+\StartSection{Graphics}
+
+\startitemize[4]
+\head {\em Blender}
+
+All modelling is generally done with Blender, but modellers are free to use whatever free modelling application they like, as long as it supports common free formats. One popular alternative is {\it Wings 3D}. Ultimately though, all models have to be importable into Blender since we are dependent on its OGRE 3D\index{OGRE 3D} Exporter plugin to provide usable data for the OGRE 3D rendering engine.
+
+\head {\em Caelum}
+
+Caelum is a weather generation plugin for the OGRE 3D rendering engine. It is used to provide weather effects on Mars.
+
+\head {\em Crazy Eddie's Graphical User Interface}
+
+The Crazy Eddie's Graphical User Interface (CEGUI) library allows graphical user interfaces to be built on top of the OGRE 3D rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts that drive a Lua interface to control all dynamic and static graphical elements. The actual graphical elements themselves need to be provided by an artist, such as images for buttons, scrollbars, and so on.
+
+\head {\em Hydrax}
+
+Hydrax is a fluid dynamics plugin for the OGRE 3D rendering engine. It is used to provide fluid effects on Mars.
+
+\head {\em OGRE 3D}
+
+The {\it OGRE 3D} rendering engine is a powerful cross--platform API generally aimed at game developers. It has a rich and simple to use API with a plethora of plugins available for it. It is strictly a rendering engine and does not provide facilities for input, audio, physics, or any other subsystem typically found in a modern game engine.
+
+\head {\em OpenGL}
+
+The OpenGL library provides the rendering backend for the OGRE 3D rendering engine. Although the latter supports other backends, it is very difficult to write and maintain shaders for all of them. OpenGL is ubiquitous these days, can do virtually everything Direct3D can, and does not hold you hostage to any specific platform.
+
+\head {\em OpenGL Extension Wrangler Library}
+
+The OpenGL Extension Wrangler Library library ({\it GLEW}) helps to query and load OpenGL extensions. It provides efficient runtime mechanisms for determining which OpenGL extensions are supported on the target platform. All supported OpenGL extensions are exposed in a single header file which is machine--generated from an official extension list.
+
+\head {\em Terrain}
+
+Terrain is another plugin for the OGRE 3D rendering engine. As its name suggests, it is responsible for terrain generation.
+
+\head {\em SDL}
+
+The SDL library is used to provide support for font loading through its SDL_image and SDL_pango APIs respectively, as well as input, force feedback, and audio decoding.
+
+\head {\em VikingExtractor}
+
+This tool helps provide graphic artists and shader designers with reference imagery from the original Viking Mission to Mars. See \in{chapter}[Viking Lander Remastered] for more information on how this technology was created specifically for this project.
+\stopitemize
+

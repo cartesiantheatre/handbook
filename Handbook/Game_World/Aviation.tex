@@ -1,0 +1,79 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Aviation section...
+\StartSection{Aviation}
+
+Aviation is as viable a means of transportation and exploration on Mars as it is on Earth. This section raises some of the considerations that must be taken into account in the design of any vehicle capable of flight on Mars.
+
+\StartSubSection{Aerostats}
+Aerostats are a class of aerial vehicles, such as balloons and dirigibles, that are kept afloat through the buoyant force provided by the gas trapped within inflatable bags. They can lift the equivalent mass contained in the volume of fluid they displace. This is known as the {\it Archimedes' principle}. 
+
+Since air is a fluid, the size of the bag indicates how much it can lift. The larger the bag, the larger the payload. Further, since the Martian atmosphere is less dense than on Earth, they need to be larger on Mars to lift the same mass. About 10 g of effective lift is available for every cubic metre of balloon. This is the same as on Earth, but up at an elevation of 30 km. So a bag of 30,000 m\high{3} on Mars could lift a 300 kg mass. It would be about 40 m in diameter and have a mass of about 50 kg, if using the standard plastic film that is only 10 microns thick.
+
+\crlf
+\placeformula[formula:aerostat diameter to payload]
+\startformula
+\math{M(d) = \frac{{\rho}_a\pi d^{3}}{8}}
+\stopformula
+\startlegend
+\leg M \\ total mass that can be lifted \\ kg \\
+\leg d \\ preferred diameter of bag \\ m \\
+\leg {\rho}_a \\ atmospheric density \\ g/m^{3} \\
+\stoplegend
+\crlf
+
+We have prepared a useful formula for modellers in \in{formula}[formula:aerostat diameter to payload]. It determines how much mass an aerostat can lift as a function of the bag's diameter. You can use a value of \math{{\rho}_a = 16 g/m^{3}} for the atmospheric density on Mars at its mean sea level. Bear in mind that the payload must not only account for the mass of the bag's fabric, but also for the gondola or basket area for passengers and instruments, such as cameras or communications equipment, depending on what it is intended to carry.
+
+A comprehensive evaluation of the different fabrics to select from in the design of the bag has been done by Keshavaraj {\it et al.} in their study.\footnotecite[keshavaraj1996] Biaxial nylon 6 appears to be a good choice. It is only a third the thickness of a plastic bag. Like all nylons, it also ages well. It does not leak and has a high specific strength.\footnote{A material's strength which is the force per unit of area at the time of failure divided by the material's density. Sometimes also called the strength--to--weight ratio} It is abrasion resistant and has good energy--absorption properties in the event it comes in contact with something. Nevertheless, the sometimes rocky surface of Mars will be a concern for the bag because of the potential hazard for punctures.
+
+In terms of the flight characteristics, aerostats should be easier to fly on Mars than on Earth. This is because the molecular weight of the Martian atmosphere's mostly \chemical{CO_2} is 44 amu, but Earth's mostly nitrogen and oxygen mix is only 29 amu. The atmospheric circulation is also simpler and more consistent than on Earth. It has been very well mapped out for a century. You could even fly half way around the planet in less than a week. This turns on the possibility of aerial highways for trade routes between Arcadian cities.
+
+But what to fill the bag with? There are several options. Using \chemical{H_2} is dangerous on Earth because it is explosive in the presence of the oxygen in our atmosphere, but perfectly fine on Mars. Unfortunately it could be expensive in terms of the energy required to produce it. 
+
+Another option is just plain and simple \chemical{H_2O} water vapour. This is possible because a water molecule is only 18 amu, whereas atmospheric \chemical{CO_2} is heavier at 44 amu. It is cheap to produce, but must be heated to at least \math{5^{\circ}}C or the pressure will be too low to fly. If the bag is coloured black, the day's solar flux would warm it up sufficiently -- but only during the day. Remember that a gas's temperature, pressure, and volume are all interrelated as described by the {\it ideal gas law} (\in{formula}[formula:ideal gas law]), and therefore, the amount it can lift as well.
+
+\crlf
+\placeformula[formula:ideal gas law]
+\startformula
+\math{PV = nRT}
+\stopformula
+\startlegend
+\leg P \\ pressure of gas \\ \\
+\leg V \\ volume of gas \\ \\
+\leg n \\ amount of gas \\ moles \\
+\leg R \\ gas constant of 8.314 \\ \math{JK^{-1}mol^{-1}} \\
+\leg T \\ gas temperature \\ kelvin \\
+\stoplegend
+\crlf
+
+Yet another option is even simpler, \chemical{CO_2}. Although it may be the poor man's gas with no shortage of it on Mars, it could still work. It would, however, require a bag larger than the previous options described and would also need to be solar heated.
+
+\StartSubSection{Fixed Wing}
+Fixed wing aircraft are possible on Mars, either unpowered in the case of gliders, or powered. The latter are possible in the Red Planet's thin atmosphere for the same reason as aircraft at high altitude in Earth's stratosphere are possible.
+
+Subsonic aircraft travelling up to about 700 km/h could use long straight wings for a better lift--to--weight ratio. A rocket is not necessarily required and a simple propeller could do the job. If the aircraft's form--factor incorporates a tilt--rotor, then vertical take off and landings would be possible (VTOL). They are also efficient for long range flights, and even more efficient as ultralights.
+
+Supersonic rocket--planes are possible too. Small delta wings would work better than the straight wings in the subsonic profile. Like the subsonic aircraft, VTOL would be possible if designed with ventral jets.
+
+Another supersonic alternative is the combustion ramjet. One could use an engine that burns silane (\chemical{SiH_4}) fuel directly in the atmosphere's \chemical{CO_2}. This is excellent because it means that we would not need to carry an oxidizer and therefore enjoy a very high specific impulse. See \in{section}[Specific Impulse] for more on this concept.
+
+\StartSubSection{Ascent & Descent Rockets}
+Mars ascent vehicles (MAV) are capable of leaving the surface of Mars and entering low Martian orbit. Once landed, they can refuel themselves automatically from the Martian atmosphere using Sabatier reactors. They are typically lighter and carry a much smaller payload than ERVs because they do not have to support the requirements of interplanetary travel. In Avaneya, they eventually become superannuated with the adoption of the MADV technology.
+
+Mars Ascent--Descent Vehicle (MADV) vehicles combine the features of the MAV and a lander into one. They are capable of leaving the surface of Mars to enter low Martian orbit and vice versa. This is useful for carrying personnel and materials in either direction. Some interplanetary spacecraft are not designed for atmospheric entry and landing, so they may transport one or more MADVs with them. Once landed, they can begin refuelling themselves automatically from the Martian atmosphere using Sabatier reactors.
+
+\StartSubSection{Trans--orbital Rockets}
+A rocket \quote{hopper} is another type of rocket vehicle, but with suborbital ballistics. It is useful for trans--global suborbital flights where the atmosphere is so thin, movement through it is nearly drag free. One could travel half way around the planet in less than an hour. 
+
+It has its disadvantages though. Unlike fixed--wing aircraft, any course corrections that need to be made require it to burn more fuel. It is not very manoeuvrable, and for short and medium travel distances, not particularly efficient either.
+
+The hopper has several options as far as propellants go. Using a methane--oxygen (\chemical{CH_4 / O_2})  oxygen propellant is a good choice, but depending on how it is acquired, it could be very expensive.
+
+Using a nuclear--thermal rocket engine (NTR) is another possibility. It does not require a chemical propellant, but instead operates more like a \quote{flying steam kettle}. A solid nuclear fission reactor heats up some kind of fluid, vaporizes it, and then pushes off of it by ejecting it out its nozzle to produce thrust. Any liquid will do, such as \chemical{H_2}, which has an exhaust speed of 9 km/s. Depending on how it is acquired, it too could be energy intensive to produce (e.g. electrolysis).
+
+Cheap \chemical{CO_2} could be used instead, but its exhaust speed is at best only 2.3 km/s. If we did this, we would have a nuclear rocket that uses indigenous Martian fuel (NIMF). Although the fuel is not very exotic, the advantage is that the rocket could refuel itself anywhere and it would not drain a base's \chemical{CH_4 / O_2} stocks. This gives surveyors complete mobility over the entire planet.
+
+The reactor would require bomb--grade fissionable material, such as 93\% enriched uranium--235 or its plutonium equivalent. However, a containment breach would result in the dispersal of radioactive material all over the place. If the rocket was at a high altitude when an accident occurred, it could result in a very large dispersal area.
+

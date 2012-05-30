@@ -1,0 +1,98 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Buildings section...
+\StartSection{Buildings}
+
+In this section we will discuss general considerations in the design of Martian buildings. This is valuable in providing cues for modellers, writers, and others.
+
+\StartSubSection{Airlocks}
+Airlocks require a rubber seal to prevent leaks. It may be useful that they are chemically treated to prevent them from sticking in cold weather. A jam could get someone killed if they need to get either inside of a pressurized building or escape from one in an emergency.
+
+\StartSubSection{Anchorage}
+Since most buildings are pressurized, they need proper anchorage to prevent them from unexpectedly going airborne. One approach is to dig a narrow shallow circular trench and lay a skirt within it. The skirt needs to be staked down with long, deep, barbed stakes that have pipes within them. By piping hot water vapour through them, the water will mix with the surrounding regolith, freezing the two together into an extremely strong ring of permafrost. 
+
+\StartSubSection{Computer Control Systems}
+Buildings will require an integrated computer control system for managing a number of things, including power, communications, heating, cooling, life support, and internal or external automated lighting.
+
+Heating and cooling needs to be managed intelligently. If you lose power, the building will freeze and possibly damage the things inside.
+
+An air--dust filtration system is necessary to keep the air clean. This is important since Martian dust will inevitably get into everything, especially every time anything passes through an airlock. 
+
+The atmospheric pressure for the habitat modules must be maintained at 34.0 kPa. We will discuss pressure ratings more in \in{section}[Pressure Ratings]. For now, we just need to know that the atmosphere needs to contain the following partial pressures of 20.0 kPa \chemical{O_2}, 12.0 kPa of \chemical{N_2}, and 0.05 kPa of \chemical{CO_2}. The oxygen is obvious because it is an essential nutrient. The nitrogen acts as an inert non--flammable buffer gas to provide enough partial pressure for oxygen to pass freely through the lung's alveolar membrane. We use the lowest possible amount since nitrogen gas is hard to find on Mars with only 4.3\% of its atmosphere being a blend of that and argon. The \chemical{CO_2} is maintained at the level it is because any more than 1\% and it will become toxic.
+
+Life support also provides waste recycling and water purification. Chemical--physical reactors are used for scrubbing \chemical{CO_2} out and the RWGS reactor is used for replenishing the \chemical{O_2} supply. 
+
+Waste needs to be pyrolyzed. Microbial--based biological recycling systems were considered, but experiments have shown that they are not particularly reliable.
+
+% Pressure rating...
+\StartSubSection{Pressure Ratings}
+The mean sea level (MSL) atmospheric pressure on Mars ranges from 30 Pa to 1135 Pa, which is about the same as one would expect at 36 km above the Earth's surface. The MSL atmospheric pressure on Earth, by contrast, is 101,300 Pa (101.3 kPa). This means that it is only about 1\% of Earth's.
+
+This has an impact on the way buildings must be designed for use on Mars. The main difference between inflatable buildings is in their pressure rating. A lower pressure rating means the fabric can be thinner, the building lighter, and therefore lower in cost to manufacture. It also determines whether you need to wear a full pressure suit, just a respirator, or nothing special at all. Take a look at \in{table}[table:Pressure Ratings] for a list of all of the building pressure ratings in Avaneya.
+
+\crlf
+\crlf
+\placetable[here,force,split][table:Pressure Ratings]{Martian building pressure ratings.}
+{
+    \bTABLE[split=repeat,option=stretch]
+    \setupTABLE[column][4][
+        width=.50\textwidth,
+        align=yes]
+    \setupTABLE[row][each][align=center]
+    \setupTABLE[4][1][align=center]
+
+    \bTABLEhead
+    \bTR[bottomframe=on]
+      \bTH  Pressure \eTH
+      \bTH  Respirator \eTH
+      \bTH  EVA Suit \eTH
+      \bTH  Description \eTH
+    \eTR
+    \eTABLEhead
+
+    \bTABLEbody
+    \bTR
+      \bTC 6.8 kPa \eTC
+      \bTC Needed \eTC
+      \bTC Needed \eTC
+      \bTC These buildings are attractive because they are economical, very light to pack, and require fabric only 0.2 mm thick. For plants this is fine since they only need 5.0 kPa of pressure. \eTC
+    \eTR
+
+    \bTR
+      \bTC 17.0 kPa \eTC
+      \bTC Needed \eTC
+      \bTC Unneeded \eTC
+      \bTC These buildings cost a little bit more, but you can work in them without a pressure suit. You still need a respirator however, otherwise you will pass out. \eTC
+    \eTR
+
+    \bTR
+      \bTC 34.0 kPa \eTC
+      \bTC Unneeded \eTC
+      \bTC Unneeded \eTC
+      \bTC These buildings cost a little bit more, but you can work in them without a pressure suit or respirator, although the O₂ partial pressure levels still need to be enriched. The pressure can be equalized with a habitat which makes movement easier. As a bonus, bees pollinate better at this low pressure and gravity. \eTC
+    \eTR
+
+    \bTR
+      \bTC 100.0 kPa \eTC
+      \bTC Unneeded \eTC
+      \bTC Unneeded \eTC
+      \bTC These buildings cost the most, but offer the same pressure at MSL as on Earth. Since everything needs to be three times heavier than needed, they are a costly waste of resources. \eTC
+    \eTR
+    \eTABLEbody
+
+\eTABLE
+}
+
+\StartSubSection{Design}
+There are many different designs available for buildings on Mars. The rigid aluminium tin--can shape seen in some government space program concept artwork is an option, but it tends to be expensive and is difficult to relocate.
+
+Inflatable structures will probably be a very popular option. The fabric could be made out of polypropylene and reinforced with Kevlar, spectral, or nanecta webbing. It would need an anti uv--coating (e.g. acrylic tarp) to protect both the inhabitants from the effects of radiation as well as the fabric from premature deterioration.
+
+These structures are cheap, light weight, can be packed in a box, and are ideal for greenhouses. The disadvantages are that they are weak and vulnerable to micrometeorite strikes, faulty electrical wiring melts, and potentially unreliable computers regulating their pressure. The latter can be a potentially grave safety concern if the pressure regulation software is proprietary since it cannot be audited or repaired by anyone other than the vendor, and only even then if it is in their interest to do so.\footnotecite[free_software_more_reliable]
+
+Tensile structures are yet another option. These buildings carry only tension forces and do not experience compression or bending. If they are pressurized and their fabric is stiffened with internal framework from aluminium or steel struts after its initial pressurization, they could work very well.
+
+Radiation is always a concern on Mars, even sometimes with underground facilities. To protect facilities that are underground at a shallow depth, they should be covered with bags of borated water ice or sandbags half a meter thick.
+

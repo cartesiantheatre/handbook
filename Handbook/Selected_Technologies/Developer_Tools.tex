@@ -1,0 +1,43 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Developer tools section...
+\StartSection{Developer Tools}
+
+\startitemize[4]
+\head {\em Apport}
+
+Apport intercepts program crashes, collects debugging information about the crash and the operating system environment, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
+
+\head {\em CppUnit}
+
+The CppUnit library is a unit testing framework module for the C++ programming language. It will be used only when the game is built in debug mode for performance reasons.
+
+\head {\em GNU Autotools}
+
+The GNU Autotools are used to reconcile and harmonize the many idiosyncrasies of different platforms. It makes portability easy to manage when used correctly. 
+
+The important thing to remember is to use the Autotools in such a way to query the platform for specific features of interest, rather than for specific platforms assumed to provide the specific features of interest. The latter route makes assumptions that are bad because they may be conditional on things that are not reliable or subject to change. A good example is in byte ordering. If you want to know the platform's byte ordering, check for that. Do not check for a given platform, such as OS X, as an indicator of what you assume will always be its endianness since that may change one day.
+
+\head {\em GNU Compiler Collection}
+
+The GNU Compiler Collection is used for the engine's dependency calculation, compilation, linking, and probably other things. GCC is not a compiler, but actually a collection of compilers for different platforms. Ports of them are available for virtually every platform under the Sun.
+
+\head {\em libebml}
+
+The libebml library is the backbone of the Matroska multimedia container format. EBML stands for {\it Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be both read and written by machines and not humans. See \in{section}[AresPackages] for details on how we are leveraging it with this project.
+
+\head {\em Smolt}
+
+Smolt is both a software utility for gathering user hardware information and a publicly accessible central server that it interfaces with through anonymous and voluntary submission. This is very important for us because we require a reliable hardware database that can be consulted with to indicate the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
+
+\head {\em streflop}
+
+The streflop library ({\it STandalone REproducible FLOating--Point}) allows us to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments. Consider the possibility that different users may be using different hardware during multiplayer play. This is essential to ensure gameplay is consistent for everyone.
+
+\head {\em xmlstarlet}
+
+The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests, engine event definitions, and whatever other engine data necessary for syntactical errors and to ensure that they are well formed.
+\stopitemize
+

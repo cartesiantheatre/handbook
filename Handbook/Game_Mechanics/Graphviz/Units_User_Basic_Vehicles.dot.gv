@@ -1,0 +1,88 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Cartesian Theatre.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ dot -Tpdf Units_User_Basic_Vehicles.twopi.gv -o Units_User_Basic_Vehicles.pdf
+*/
+
+digraph Units_User_Basic_Vehicles
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Vehicles";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+	
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+    // Units...
+    "Aircraft Assembly Plant"[label="Aircraft Assembly Plant\n[Type: Building]"];
+    "Armoured Personnel Carrier"[label="Armoured Personnel Carrier\n[Type: Vehicle]"];
+    "Assembly Plant"[label="Assembly Plant\n[Type: Building]"];
+    "Cargo Rover"[label="Cargo Rover\n[Type: Vehicle]"];
+    "Combat Support Vehicle"[label="Combat Support Vehicle\n[Type: Vehicle]"];
+    "Construction Robot"[label="Construction Robot\n[Type: Vehicle]"];
+    "Heavy Tank"[label="Heavy Tank\n[Type: Vehicle]"];
+    "Large Dirigible"[label="Large Dirigible\n[Type: Vehicle]"];
+    "Light Tank"[label="Light Tank\n[Type: Vehicle]"];
+    "Medium Tank"[label="Medium Tank\n[Type: Vehicle]"];
+    "Mobile Generator (DIPS)"[label="Mobile Generator (DIPS)\n[Type: Vehicle]"];
+    "Mobile Generator (DME)"[label="Mobile Generator (DME)\n[Type: Vehicle]"];
+    "Personnel Rover"[label="Personnel Rover\n[Type: Vehicle]"];
+    "Small Dirigible"[label="Small Dirigible\n[Type: Vehicle]"];
+    "Subterrene Robot"[label="Subterrene Robot\n[Type: Vehicle]"];
+    "Survey Balloon"[label="Survey Balloon\n[Type: Vehicle]"];
+    "Survey Rover"[label="Survey Rover\n[Type: Vehicle]"];
+    "Water Drilling Rig"[label="Water Drilling Rig\n[Type: Vehicle]"];
+
+    // Units responsible for creating which units...
+    "Vehicles"[shape="folder"];
+        "Aircraft Assembly Plant";
+        "Vehicles" -> "Aircraft Assembly Plant";
+            "Aircraft Assembly Plant" -> "Aerostats";
+            "Aerostats"[shape="folder"];
+                "Aerostats" -> "Small Dirigible";
+                "Aerostats" -> "Large Dirigible";
+                "Aerostats" -> "Survey Balloon";
+        "Assembly Plant";
+        "Vehicles" -> "Assembly Plant";
+            "Energy"[shape="folder"];
+            "Assembly Plant" -> "Energy";
+                "Energy" -> "Mobile Generator (DIPS)";
+                "Energy" -> "Mobile Generator (DME)";
+            "Construction & Survey"[shape="folder"];
+            "Assembly Plant" -> "Construction & Survey";
+                "Construction & Survey" -> "Construction Robot";
+                "Construction & Survey" -> "Subterrene Robot";
+                "Construction & Survey" -> "Water Drilling Rig";
+                "Construction & Survey" -> "Survey Rover";
+            "Transportation"[shape="folder"];
+            "Assembly Plant" -> "Transportation";
+                "Transportation" -> "Cargo Rover";
+                "Transportation" -> "Personnel Rover";
+            "Militia"[shape="folder"];
+            "Assembly Plant" -> "Militia";
+                "Militia" -> "Armoured Personnel Carrier";
+                "Militia" -> "Combat Support Vehicle";
+                "Militia" -> "Heavy Tank";
+                "Militia" -> "Light Tank";
+                "Militia" -> "Medium Tank";
+}
+

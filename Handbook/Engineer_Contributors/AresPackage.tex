@@ -1,0 +1,70 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% AresPackages subsection...
+\StartSection{AresPackages}
+
+\StartSubSection{Purpose}
+
+The AresEngine uses a custom game archive format built using EBML, an extensible language akin to XML, but tailored to handling binary data. The Matroska multimedia container is its most prominent client.
+
+You might be wondering why a game engine requires its media to be delivered to it in a custom archive format, as opposed to being exposed \quote{naked} directly through the platform's native file system. There are a number of benefits to using a custom archive format, as well as EMBL specifically.
+
+\startitemize[4]
+\item
+The EMBL format enables extendability for future format changes.
+
+\item
+It can be easier to distribute a few files containing many, than many to the end user.
+
+\item
+As a single file (*.AresPackage) potentially containing many files, file seek, open, and load times are reduced.
+
+\item
+The EBML format already has a portable interface.
+
+\item
+Providing a layer of abstraction between the actual raw data and the client that requires it allows us to decompress compressed data on the fly. This results in a smaller file, which means a faster disk to RAM transfer. Remember that the disk is slow, while the CPU is much faster.
+\stopitemize
+
+Keep in mind that we might drop this idea. People have raised concerns that this may be a waste of time and it would be more straightforward to leverage an existing format, like a simple zip archive. Feedback is welcome.
+
+\StartSubSection{Usage}
+The {\tt ares-package} tool takes a package manifest file (XML) describing the contents of the package to output. The tool archives the requested files, along with whatever settings that may be required, and outputs the package.
+
+\StartSubSection{Design}
+A package manifest is checked against an XML schema ({\tt AresPackage.xsd}) to verify that it is syntactically correct. {\tt AresSamplePackage.xml} is a sample package conforming to the {\tt AresPackage.xsd} schema. Let's take a look inside of it.
+
+\startCodeExample
+<?xml version="1.0" encoding="UTF-8" ?>
+<AresPackage Name="Title" SchemaFormat="1" Thumbnail="../Title/Artwork/Logo.png">
+    <Files NamePrefix="Title/">
+        <File Source="../Title/Scripts/Script.lua" Name="Title.luac">
+            <Parameter Name="Compile" Value="true" />
+        </File>
+        <File Source="../Title/Artwork/*.png" Compress="0">
+            <Parameter Name="Gamma" Value="0.5" />
+        </File>
+        <File Source="../Title/Artwork/Splash.mkv" Compress="0" />
+    </Files>
+</AresPackage>
+\stopCodeExample
+
+The following diagrams are a graphical representation of the schema, beginning with the root node.
+
+\FullPageDiagram
+    {figure:AresPackageManifestSchema_Root}
+    {The schema for the {\tt AresPackage} root node of a manifest.}
+    {Engineer_Contributors/Images/AresPackage/Root.svg}
+
+\FullPageDiagram
+    {figure:AresPackageManifestSchema_Files}
+    {The schema for the {\tt Files} element of an AresPackage manifest (multiple File).}
+    {Engineer_Contributors/Images/AresPackage/Files.svg}
+
+\FullPageDiagram
+    {figure:AresPackageManifestSchema_File}
+    {The schema for the {\tt File} tag of an AresPackage manifest.}
+    {Engineer_Contributors/Images/AresPackage/File.svg}
+

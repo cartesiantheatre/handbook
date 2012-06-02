@@ -10,16 +10,13 @@
 % Quiet...
 \showmessagesfalse
 
-% Speedup typescripting considerably at the cost of using additional memory...
-\preloadtypescripts
-
 % Plugin modules we need to import...
     
     % Simple fonts...
     \usemodule[simplefonts]
     
     % \BIBTEX macro...
-    \usemodule[abr-01]
+    \usemodule[abr-02]
     
 % Define colours...
 \definecolor[colour_figure_background][colour_page]
@@ -112,20 +109,17 @@
 
     % Evince version...
     \def\initializeEvince
-            {\ctxlua{context("\\global\\edef\\EvinceVersion{\%s}",
-                     os.resultof"evince --version | tr -d '\\n'")}}
+        {\ctxlua{context.setgvalue("EvinceVersion", os.resultof"evince --version | tr -d '\\n'")}}
     \initializeEvince
 
     % Graphviz version...
     \def\initializeGraphviz
-            {\ctxlua{context("\\global\\edef\\GraphvizVersion{\%s}",
-                     os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
+        {\ctxlua{context.setgvalue("GraphvizVersion", os.resultof"dot -V 2>&1 | sed -e 's/dot - graphviz version //g'")}}
     \initializeGraphviz
 
     % Umbrello version...
     \def\initializeUmbrello
-            {\ctxlua{context("\\global\\edef\\UmbrelloVersion{\%s}",
-                     os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
+        {\ctxlua{context.setgvalue("UmbrelloVersion", os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
     \initializeUmbrello
 
 % Document description...

@@ -61,7 +61,7 @@ clean-all: clean
 # Clean most intermediate build files, including the generated PDF...
 clean:
 	@ rm -vf $(OUTPUT_PDF)
-	@ rm -vf Handbook.pdf Handbook.aux Handbook.bbl Handbook.blg
+	@ rm -vf Handbook.pdf Handbook.aux Handbook.blg
 	@ rm -vf $(VIKING_PDF)
 	@ rm -vf $(TOC_PDF)
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null

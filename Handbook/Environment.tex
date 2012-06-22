@@ -169,7 +169,7 @@
 %   backgroundcolor=colour_page,
    rulethickness=0.5pt]
 
-% Setup bibliography...
+% Setup bibliography. Thanks Taco for your help...
     
     % References database and other general settings...
     \setupbibtex[database={References/References}, sort=author]
@@ -181,6 +181,49 @@
         monthconversion=month,
         autohang=yes,
         sorttype=cite]
+
+    % Without this, no hyperlinks at all in the output...
+    \setupinteraction[state=start]
+
+    % This two-part helper creates a hyperlink for url fields...
+    \unprotect
+        \def\bibgotoURL#1#2%
+         {\useURL[#1][#2][][#1]\from[#1]}
+        \def\bibinsertbiburl#1#2#3%
+         {\bibdoifelse{\@@pb@biburl}
+           {#1\expanded{\bibgotoURL{\@@pb@title}{\@@pb@biburl}}#2}{#3}}
+    \protect
+
+    % Book reference layout...
+    \setuppublicationlayout[book]{%
+         \insertauthors{}{. }{\insertthekey{}{. }{}}%
+         \inserttitle{\bgroup\it }{.\egroup\space }{}%
+         \insertpubname{}{. }{}%
+         \insertday{}{ }{}%
+         \insertmonth{\Word }{. }{}%
+         \insertpubyear{}{. }{}%
+         \insertnote{}{.}{}%
+        }
+
+    % Adjusted version of 'misc' typesetting, using \insertbiburl
+    % instead of \inserttitle (and \insertbiburl runs the
+    % \bibinsertbiburl macro defined above)
+    \setuppublicationlayout[misc]{%
+     \insertauthors{}{. }{\insertthekey{}{. }{}}%
+     \insertbiburl{\bgroup\it }{.\egroup\space }{}%
+     \insertpubname{}{. }{}%
+     \insertday{}{ }{}%
+     \insertmonth{\Word }{. }{}%
+     \insertpubyear{}{. }{}%
+     \insertnote{}{.}{}%
+    }
+
+    % finally, this is a horrible hack needed due to bibtex inserting
+    % line breaks in the middle of urls in the output bbl (!)
+    % If you find this hack too ugly, consider editing the .bbl by
+    % hand and forgetting about the .bib file altogether...
+    \let\mydodostartpublication\dodostartpublication
+    \def\dodostartpublication{\catcode`\%=14 \mydodostartpublication}
 
     % Macro to put the citations as footnotes...
     \unexpanded\def\footnotecite{\dodoubleempty\domycite}

@@ -18,7 +18,7 @@
     \setupspacing \setstrut
     \vfill
     %\midaligned{\externalfigure[Makeup/Images/Avaneya_Logo.svg][][width=0.25\textwidth]} % This temporary logo is just awful.
-    \midaligned{\rotate[rotation=42]{\color[red]{\bft FIRST DRAFT. UNREADY FOR PUBLIC REDISTRIBUTION!}}}
+    \midaligned{\rotate[rotation=42]{\color[red]{\bft 2\high{nd} DRAFT. DO NOT REDISTRIBUTE OUTSIDE UVLC YET!}}}
     \vfill
     The Avaneya Project Crew\crlf
     {\small Bzr revision \BzrRevisionClickable}
@@ -45,7 +45,9 @@
     \crlf
 
     \bTABLE
-        \setupTABLE[frame=off, background=none,backgroundcolor=none]
+        \setupTABLE[frame=off, background=none,backgroundcolor=colour_text_background_clear]
+        \setupTABLE[row][odd][background=color,backgroundcolor=colour_text_background_clear]
+        \setupTABLE[row][even][background=color,backgroundcolor=colour_text_background_clear]
         \setupTABLE[c][each][align={middle,lohi}]
         \bTR
             \bTD 

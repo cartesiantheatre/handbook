@@ -1,0 +1,1714 @@
+\setuppublicationlist[samplesize={JNAKDP10},totalnumber=132]
+
+\startpublication[k=the_corporation,t=misc,
+a={{Achbar},{Abbott}},y=2004,
+n=62,s=AA04]
+\author[]{Mark}[M.]{}{Achbar}
+\author[]{Jennifer}[J.]{}{Abbott}
+\pubyear{2004}
+\title{{The Corporation}}
+\pubname{Zeitgeist Films}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=adbusters_issue_85,t=book,
+a={{Adbusters}},y=,
+u={http://www.adbusters.org/cultureshop/backissues/85},
+n=44,s=Adb]
+\author[]{}[]{}{Adbusters}
+\title{{Adbusters: Thought Control In Economics}}
+\volume{85}
+\pubname{Adbusters Media Foundation}
+\keyword{everyone}
+\biburl{http://www.adbusters.org/cultureshop/backissues/85}
+\stoppublication
+
+\startpublication[k=rotten_fruit2011_alarm_over_suicides,t=misc,
+a={{Agencies}},y=2010,
+u={http://www.aljazeera.com/news/asia-pacific/2010/05/201052685433973378.html},
+n=95,s=Age10]
+\author[]{}[]{}{Agencies}
+\pubyear{2010}
+\title{{Alarm over Apple factory suicides}}
+\day{26}
+\month{may}
+\pubname{Al Jazeera}
+\biburl{http://www.aljazeera.com/news/asia-pacific/2010/05/201052685433973378.%
+html}
+\stoppublication
+
+\startpublication[k=project_horizon_volume_1,t=book,
+a={{Agency}},y=1959a,
+u={http://www.history.army.mil/faq/horizon/Horizon_V1.pdf},
+n=105,s=Age59a]
+\author[]{Army Ballistic~Missile}[A.~B.~M.]{}{Agency}
+\pubyear{1959\maybeyear{a}}
+\title{{Project Horizon Report: Volume I, Summary and Supporting
+  Considerations}}
+\volume{1}
+\pubname{United States Army}
+\month{jun}
+\biburl{http://www.history.army.mil/faq/horizon/Horizon_V1.pdf}
+\stoppublication
+
+\startpublication[k=project_horizon_volume_2,t=book,
+a={{Agency}},y=1959b,
+u={http://www.history.army.mil/faq/horizon/Horizon_V2.pdf},
+n=106,s=Age59b]
+\author[]{Army Ballistic~Missile}[A.~B.~M.]{}{Agency}
+\pubyear{1959\maybeyear{b}}
+\title{{Project Horizon Report: Volume II, Technical Considerations & Plans}}
+\volume{2}
+\pubname{United States Army}
+\month{jun}
+\biburl{http://www.history.army.mil/faq/horizon/Horizon_V2.pdf}
+\stoppublication
+
+\startpublication[k=linux_non_free,t=misc,
+a={{America}},y=2010,
+u={http://fsfla.org/svnwiki/anuncio/2010-03-Linux-2.6.33-libre},
+n=78,s=Ame10]
+\author[]{Free Software Foundation~Latin}[F.~S. F.~L.]{}{America}
+\pubyear{2010}
+\title{{Take your freedom back with Linux--2.6.33--libre}}
+\day{1}
+\month{mar}
+\pubname{Free Software Foundation Latin America}
+\biburl{http://fsfla.org/svnwiki/anuncio/2010-03-Linux-2.6.33-libre}
+\stoppublication
+
+\startpublication[k=aapcc_annual_reports,t=misc,
+a={{{American Association of Poison Control Centers}}},y=,
+u={http://www.aapcc.org/dnn/NPDSPoisonData/NPDSAnnualReports.aspx},
+n=89,s={Ame}]
+\author[]{}[]{}{{American Association of Poison Control Centers}}
+\title{{NPDS Annual Reports}}
+\pubname{aapcc.org}
+\biburl{http://www.aapcc.org/dnn/NPDSPoisonData/NPDSAnnualReports.aspx}
+\stoppublication
+
+\startpublication[k=annett2006,t=misc,
+a={{Annett}},y=2006,
+u={http://www.hiddenfromhistory.org/historyfiles/html/academic-suppression.htm%
+l},
+n=121,s=Ann06]
+\author[]{Kevin~D.}[K.~D.]{}{Annett}
+\pubyear{2006}
+\title{{Memorandum on the Suppression of Academic Freedom and the Censorship of
+  Kevin Annett at the University of British Columbia}}
+\day{12}
+\month{may}
+\pubname{Hidden From History}
+\biburl{http://www.hiddenfromhistory.org/historyfiles/html/academic-suppressio%
+n.html}
+\stoppublication
+
+\startpublication[k=cia_drugs_list,t=misc,
+a={{Attias}},y=1996,
+u={http://www.csun.edu/~hfspc002/news/cia.drug.html},
+n=70,s=Att96]
+\author[]{Bernardo}[B.]{}{Attias}
+\pubyear{1996}
+\title{{The U.S. Government Is the Biggest Drug Dealer in the World}}
+\day{12}
+\month{oct}
+\biburl{http://www.csun.edu/~hfspc002/news/cia.drug.html}
+\stoppublication
+
+\startpublication[k=ubuntu_surpasses_osx,t=misc,
+a={{Barton}},y=2006,
+u={http://www.freesoftwaremagazine.com/columns/ubuntu_surpasses_mac_osx},
+n=79,s=Bar06]
+\author[]{Matt}[M.]{}{Barton}
+\pubyear{2006}
+\title{{Ubuntu surpasses Mac OSX}}
+\day{24}
+\month{oct}
+\pubname{Free Software Magazine}
+\biburl{http://www.freesoftwaremagazine.com/columns/ubuntu_surpasses_mac_osx}
+\stoppublication
+
+\startpublication[k=terraforming_creating_habitable_worlds,t=book,
+a={{Beech}},y=2009,
+n=58,s=Bee09]
+\author[]{Martin}[M.]{}{Beech}
+\pubyear{2009}
+\title{{Terraforming: The Creating of Habitable Worlds}}
+\series{Astronomers' Universe}
+\pubname{Springer}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=berger2009_mcveigh,t=misc,
+a={{Berger}},y=2009,
+u={http://intelwire.egoplex.com/2009_09_01_exclusives.html},
+n=92,s=Ber09]
+\author[]{J.~M.}[J.~M.]{}{Berger}
+\pubyear{2009}
+\title{{Oklahoma City Bombing Witness Linked to CIA -- New Filing Reveals}}
+\day{01}
+\month{sep}
+\pubname{INTELWIRE.com}
+\biburl{http://intelwire.egoplex.com/2009_09_01_exclusives.html}
+\stoppublication
+
+\startpublication[k=black2012,t=book,
+a={{Black}},y=2012,
+n=118,s=Bla12]
+\author[]{Edwin}[E.]{}{Black}
+\pubyear{2012}
+\title{{IBM and the Holocaust: The Strategic Alliance Between Nazi Germany and
+  America's Most Powerful Corporation}}
+\isbn{0914153277}
+\pubname{Dialog Press}
+\month{feb}
+\stoppublication
+
+\startpublication[k=system_zoo_1,t=book,
+a={{Bossel}},y=2007b,
+n=40,s=Bos07b]
+\author[]{Hartmut}[H.]{}{Bossel}
+\pubyear{2007\maybeyear{b}}
+\title{{System Zoo 1 Simulation Models -- Elementary Systems, Physics,
+  Engineering}}
+\pubname{BoD}
+\month{jul}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=system_zoo_2,t=book,
+a={{Bossel}},y=2007c,
+n=41,s=Bos07c]
+\author[]{Hartmut}[H.]{}{Bossel}
+\pubyear{2007\maybeyear{c}}
+\title{{System Zoo 2 Simulation Models -- Climate, Ecosystems, Resources}}
+\pubname{BoD}
+\month{aug}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=system_zoo_3,t=book,
+a={{Bossel}},y=2007d,
+n=42,s=Bos07d]
+\author[]{Hartmut}[H.]{}{Bossel}
+\pubyear{2007\maybeyear{d}}
+\title{{System Zoo 3 Simulation Models -- Economy, Society, Development}}
+\pubname{BoD}
+\month{oct}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=systems_and_models,t=book,
+a={{Bossel}},y=2007a,
+n=39,s=Bos07a]
+\author[]{Hartmut}[H.]{}{Bossel}
+\pubyear{2007\maybeyear{a}}
+\title{{Systems and Models. Complexity, Dynamics, Evolution, Sustainability}}
+\pubname{BoD}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=brew2012,t=misc,
+a={{Brew}},y=2012,
+u={http://www.pcpro.co.uk/features/374860/can-you-buy-technology-with-a-clean-%
+conscience},
+n=98,s=Bre12]
+\author[]{Simon}[S.]{}{Brew}
+\pubyear{2012}
+\title{{Can you buy technology with a clean conscience?}}
+\day{25}
+\month{May}
+\pubname{PC Pro}
+\biburl{http://www.pcpro.co.uk/features/374860/can-you-buy-technology-with-a-c%
+lean-conscience}
+\stoppublication
+
+\startpublication[k=blender_3d_architecture,t=book,
+a={{Brito}},y=2008,
+n=27,s=Bri08]
+\author[]{Allan}[A.]{}{Brito}
+\pubyear{2008}
+\title{{Blender 3D Architecture, Buildings, and Scenery}}
+\pubname{Packt Publishing}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=blender_3d_incredible_machines,t=book,
+a={{Brito}},y=2009,
+n=26,s=Bri09]
+\author[]{Allan}[A.]{}{Brito}
+\pubyear{2009}
+\title{{Blender 3D 2.49 Incredible Machines}}
+\pubname{Packt Publishing}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=beginning_iphone_games_development,t=book,
+a={{Cabrera}},y=2010,
+n=33,s=Cab10]
+\author[]{PJ}[P.]{}{Cabrera}
+\pubyear{2010}
+\title{{Beginning iPhone Games Development}}
+\pubname{Apress}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=autotools_practioners_guide,t=book,
+a={{Calcote}},y=2010,
+n=31,s=Cal10]
+\author[]{John}[J.]{}{Calcote}
+\pubyear{2010}
+\title{{Autotools: A Practioner's Guide to GNU Autoconf, Automake, and
+  Libtool}}
+\pubname{No Starch Press}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=the_china_study,t=book,
+a={{Campbell}},y=2006,
+n=61,s=Cam06]
+\author[]{T.~Colin}[T.~C.]{}{Campbell}
+\pubyear{2006}
+\title{{The China Study: The Most Comprehensive Study of Nutrition Ever
+  Conducted and the Startling Implications for Diet, Weight Loss and Long-term
+  Health}}
+\pubname{Benbella Books}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=high_tech_trash,t=misc,
+a={{Caroll}},y=2008,
+u={http://ngm.nationalgeographic.com/2008/01/high-tech-trash/carroll-text},
+n=7,s=Car08]
+\author[]{Chris}[C.]{}{Caroll}
+\pubyear{2008}
+\title{{High-Tech Trash}}
+\month{jan}
+\pubname{National Geographic}
+\biburl{http://ngm.nationalgeographic.com/2008/01/high-tech-trash/carroll-text}
+\stoppublication
+
+\startpublication[k=cavusoglu2009,t=article,
+a={{Cavusoglu},{Guler}},y=2009,
+u={http://www.jeb.co.in/journal_issues/201009_sep10_supp/paper_18.pdf},
+n=115,s=CG09]
+\artauthor[]{Kultigin}[K.]{}{Cavusoglu}
+\artauthor[]{Perihan}[P.]{}{Guler}
+\pubyear{2009}
+\arttitle{{Protective effect of kombucha mushroom (KM) tea on chromosomal
+  aberrations induced by gamma radiation in human peripheral lymphocytes {\it
+  in-vitro}}}
+\journal{Journal of Environmental Biology}
+\volume{31}
+\pages{pp.~851--856}
+\month{aug}
+\biburl{http://www.jeb.co.in/journal_issues/201009_sep10_supp/paper_18.pdf}
+\stoppublication
+
+\startpublication[k=chossudovsky2005,t=misc,
+a={{Chossudovsky}},y=2005,
+u={http://www.globalresearch.ca/index.php?context=va&aid=972},
+n=131,s=Cho05]
+\author[]{Michel}[M.]{}{Chossudovsky}
+\pubyear{2005}
+\title{{British Undercover Soldiers Caught driving Booby Trapped Car}}
+\day{20}
+\month{sept}
+\pubname{Centre for Research on Globalization}
+\biburl{http://www.globalresearch.ca/index.php?context=va&aid=972}
+\stoppublication
+
+\startpublication[k=ruppert_confronts_deutch,t=misc,
+a={{CitizenInvestigator}},y=1996,
+u={http://www.youtube.com/watch?v=UT5MY3C86bk},
+n=72,s=Cit96]
+\author[]{}[]{}{CitizenInvestigator}
+\pubyear{1996}
+\title{{Former LA Police Officer Mike Ruppert Confronts CIA Director John
+  Deutch on Drug Trafficking}}
+\day{15}
+\month{nov}
+\pubname{YouTube}
+\biburl{http://www.youtube.com/watch?v=UT5MY3C86bk}
+\stoppublication
+
+\startpublication[k=cobb1999,t=book,
+a={{Cobb},{}},y=1999,
+u={http://www.nber.org/~rosenbla/econ302/lecture/GPI-GDP/gpi1999.pdf},
+n=108,s=CSGW99]
+\author[]{Clifford}[C.]{}{Cobb}
+\author[]{Gary}[G.]{}{Sue~Goodman}
+\author[]{Mathis}[M.]{}{Wackernagel}
+\pubyear{1999}
+\title{{Why Bigger Isn't Better: The Genuine Progress Indicator -- 1999
+  Update}}
+\pubname{Redefining Progress, San Francisco}
+\month{nov}
+\biburl{http://www.nber.org/~rosenbla/econ302/lecture/GPI-GDP/gpi1999.pdf}
+\stoppublication
+
+\startpublication[k=food_matters,t=misc,
+a={{Colquhoun},{Bosch}},y=2008,
+u={http://www.foodmatters.tv/},
+n=50,s=CB08]
+\author[]{James}[J.]{}{Colquhoun}
+\author[]{Laurentine}[L.]{}{Bosch}
+\pubyear{2008}
+\title{{Food Matters}}
+\pubname{Passion River Films}
+\keyword{everyone}
+\biburl{http://www.foodmatters.tv/}
+\stoppublication
+
+\startpublication[k=case_against_fluoride,t=book,
+a={{Connett},{}},y=2010,
+n=59,s=CBM10]
+\author[]{Paul}[P.]{}{Connett}
+\author[]{James}[J.]{}{Beck}
+\author[]{H.~Spedding}[H.~S.]{}{Micklem}
+\pubyear{2010}
+\title{{The Case Against Fluoride: How Hazardous Waste Ended Up in Our Drinking
+  Water and the Bad Science and Powerful Politics That Keep It There}}
+\pubname{Chelsea Green Publishing}
+\edition{1st}
+\month{oct}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=corbett_nist_satire,t=misc,
+a={{Corbett}},y=2008,
+u={https://www.youtube.com/watch?v=WlqhyZZnH-U},
+n=103,s=Cor08]
+\author[]{James}[J.]{}{Corbett}
+\pubyear{2008}
+\title{{Emergency Warning For Office Workers NIST WTC7}}
+\day{27}
+\month{aug}
+\pubname{YouTube}
+\biburl{https://www.youtube.com/watch?v=WlqhyZZnH-U}
+\stoppublication
+
+\startpublication[k=costanzaa2004,t=article,
+a={{Costanzaa},{}},y=2004,o={10.1016/j.ecolecon.2004.04.009},
+u={http://www.uvm.edu/giee/genuine/Burlington_GPI_paper.pdf},
+n=110,s=CEF{\etalchar{+}}04]
+\artauthor[]{Robert}[R.]{}{Costanzaa}
+\artauthor[]{Jon}[J.]{}{Ericksona}
+\artauthor[]{Karen}[K.]{}{Fliggerb}
+\artauthor[]{Alan}[A.]{}{Adams}
+\artauthor[]{Christian}[C.]{}{Adams}
+\artauthor[]{Ben}[B.]{}{Altschuler}
+\artauthor[]{Stephanie}[S.]{}{Balter}
+\artauthor[]{Brendan}[B.]{}{Fisher}
+\artauthor[]{Jessica}[J.]{}{Hike}
+\artauthor[]{Joe}[J.]{}{Kelly}
+\artauthor[]{Tyson}[T.]{}{Kerr}
+\artauthor[]{Megan}[M.]{}{McCauley}
+\artauthor[]{Keith}[K.]{}{Montone}
+\artauthor[]{Michael}[M.]{}{Rauch}
+\artauthor[]{Kendra}[K.]{}{Schmiedeskamp}
+\artauthor[]{Dan}[D.]{}{Saxton}
+\artauthor[]{Lauren}[L.]{}{Sparacino}
+\artauthor[]{Walter}[W.]{}{Tusinski}
+\artauthor[]{Laurel}[L.]{}{Williams}
+\pubyear{2004}
+\arttitle{{Estimates of the Genuine Progress Indicator (GPI) for Vermont,
+  Chittenden County and Burlington, from 1950 to 2000}}
+\journal{Ecological Economics}
+\volume{51}
+\pages{pp.~139--155}
+\month{nov}
+\doi{10.1016/j.ecolecon.2004.04.009}
+\biburl{http://www.uvm.edu/giee/genuine/Burlington_GPI_paper.pdf}
+\stoppublication
+
+\startpublication[k=rotten_fruit2011_stand_24_hours,t=misc,
+a={{Duell}},y=2012,
+u={http://www.dailymail.co.uk/news/article-2092277/Apple-Poor-working-conditio%
+ns-inside-Chinese-factories-making-iPads.html},
+n=96,s=Due12]
+\author[]{Mark}[M.]{}{Duell}
+\pubyear{2012}
+\title{{Apple -- Poor working conditions inside the Chinese factories making
+  iPads}}
+\day{27}
+\month{jan}
+\pubname{Mail Online}
+\biburl{http://www.dailymail.co.uk/news/article-2092277/Apple-Poor-working-con%
+ditions-inside-Chinese-factories-making-iPads.html}
+\stoppublication
+
+\startpublication[k=vicar_shitty_user_guide,t=misc,
+a={{Duxbury},{Jensen}},y=1994,
+u={http://www-mipl.jpl.nasa.gov/external/vug/vugfinal.html},
+n=83,s=DJ94]
+\author[]{Elizabeth}[E.]{}{Duxbury}
+\author[]{Danika}[D.]{}{Jensen}
+\pubyear{1994}
+\title{{VICAR User's Guide}}
+\day{14}
+\month{oct}
+\pubname{Jet Propulsion Laboratory, NASA}
+\biburl{http://www-mipl.jpl.nasa.gov/external/vug/vugfinal.html}
+\stoppublication
+
+\startpublication[k=adbusters_jamming_neoclassical_economics,t=misc,
+a={{F.~Ruccio}},y=2010,
+u={http://anticap.wordpress.com/2010/10/25/jamming-neoclassical-economics/},
+n=45,s=FR10]
+\author[]{David}[D.]{}{F.~Ruccio}
+\pubyear{2010}
+\title{{Jamming Neoclassical Economics}}
+\day{25}
+\month{oct}
+\pubname{Occasional Links & Commentary on Economics, Culture and Society}
+\keyword{everyone}
+\biburl{http://anticap.wordpress.com/2010/10/25/jamming-neoclassical-economics%
+/}
+\stoppublication
+
+\startpublication[k=wow_deaths,t=misc,
+a={{Ferdinands}},y=2011,
+u={http://www.rpgownage.com/2011/03/697/},
+n=129,s=Fer11]
+\author[]{Ben}[B.]{}{Ferdinands}
+\pubyear{2011}
+\title{{Documented deaths due to Online Game Addictions}}
+\day{15}
+\month{mar}
+\pubname{RPG Ownage}
+\biburl{http://www.rpgownage.com/2011/03/697/}
+\stoppublication
+
+\startpublication[k=lua_programming_gems,t=book,
+a={{Figueiredo},{}},y=2008,
+n=11,s=FCI08]
+\author[]{Luiz Henrique~De.}[L.~H.~D.]{}{Figueiredo}
+\author[]{Waldemar}[W.]{}{Celes}
+\author[]{Roberto}[R.]{}{Ierusalimschy}
+\pubyear{2008}
+\title{{Lua Programming Gems}}
+\pubname{Lua.org}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=fogg1996,t=article,
+a={{Fogg}},y=1996,
+u={http://www.users.globalnet.co.uk/~mfogg/fogg1996.pdf},
+n=123,s=Fog96]
+\artauthor[]{Martyn~J.}[M.~J.]{}{Fogg}
+\pubyear{1996}
+\arttitle{{The Utility of Geothermal Energy on Mars}}
+\journal{Journal of the British Interplanetary Society}
+\volume{49}
+\pages{pp.~403--422}
+\biburl{http://www.users.globalnet.co.uk/~mfogg/fogg1996.pdf}
+\stoppublication
+
+\startpublication[k=gcc_vector_extensions,t=misc,
+a={{Foundation}},y=,
+u={http://gcc.gnu.org/onlinedocs/gcc/Vector-Extensions.html},
+n=22,s=Fou]
+\author[]{Free~Software}[F.~S.]{}{Foundation}
+\title{{Using Vector Instructions through Built-in Functions}}
+\pubname{Free Software Foundation}
+\biburl{http://gcc.gnu.org/onlinedocs/gcc/Vector-Extensions.html}
+\stoppublication
+
+\startpublication[k=free_software_more_reliable,t=misc,
+a={{Foundation}},y=2011,
+u={https://www.gnu.org/software/reliability.html},
+n=114,s=Fou11]
+\author[]{Free~Software}[F.~S.]{}{Foundation}
+\pubyear{2011}
+\title{{Free Software is More Reliable}}
+\day{20}
+\month{sep}
+\pubname{Free Software Foundation}
+\biburl{https://www.gnu.org/software/reliability.html}
+\stoppublication
+
+\startpublication[k=free_software_motives,t=misc,
+a={{Foundation}},y=2012,
+u={https://www.gnu.org/philosophy/fs-motives.html},
+n=99,s=Fou12]
+\author[]{Free~Software}[F.~S.]{}{Foundation}
+\pubyear{2012}
+\title{{Motives For Writing Free Software}}
+\day{12}
+\month{jan}
+\pubname{Free Software Foundation}
+\biburl{https://www.gnu.org/philosophy/fs-motives.html}
+\stoppublication
+
+\startpublication[k=what_is_free_software,t=misc,
+a={{{Free Software Foundation}}},y=2012,
+u={https://www.gnu.org/philosophy/free-sw.html},
+n=76,s={Fre}12]
+\author[]{}[]{}{{Free Software Foundation}}
+\pubyear{2012}
+\title{{What is free software?}}
+\day{23}
+\month{june}
+\pubname{gnu.org}
+\biburl{https://www.gnu.org/philosophy/free-sw.html}
+\stoppublication
+
+\startpublication[k=design_patterns_elements_reusable,t=book,
+a={{Gamma},{}},y=1994,
+n=34,s=GHJV94]
+\author[]{Erich}[E.]{}{Gamma}
+\author[]{Richard}[R.]{}{Helm}
+\author[]{Ralph}[R.]{}{Johnson}
+\author[]{John}[J.]{}{Vlissides}
+\pubyear{1994}
+\title{{Design Patterns: Elements of Reusable Object-Oriented Software}}
+\pubname{Addison-Wesley Professional Computing Series}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=coca_cola_case,t=misc,
+a={{Garcia},{}},y=2009,
+n=111,s=GGGG09]
+\author[]{Carmen}[C.]{}{Garcia}
+\author[]{German}[G.]{}{Gutierrez}
+\author[]{Carmen}[C.]{}{Garcia}
+\author[]{German}[G.]{}{Gutierrez}
+\pubyear{2009}
+\title{{The Coca-Cola Case}}
+\pubname{National Film Board of Canada}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=geiss_fractal_terrain,t=misc,
+a={{Geiss}},y=2008,
+u={http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html},
+n=16,s=Gei08]
+\author[]{Ryan}[R.]{}{Geiss}
+\pubyear{2008}
+\title{{Generating Complex Procedural Terrains Using the GPU}}
+\pubname{Upper Saddle River, NJ: Addison-Wesley}
+\biburl{http://http.developer.nvidia.com/GPUGems3/gpugems3_ch01.html}
+\stoppublication
+
+\startpublication[k=geiss_fractal_terrain_demo,t=misc,
+a={{Geiss}},y=2009,
+u={http://www.geisswerks.com/gpugems3ch/MVI_7867.avi},
+n=17,s=Gei09]
+\author[]{Ryan}[R.]{}{Geiss}
+\pubyear{2009}
+\title{{MVI_7867.avi}}
+\day{20}
+\month{mar}
+\biburl{http://www.geisswerks.com/gpugems3ch/MVI_7867.avi}
+\stoppublication
+
+\startpublication[k=three_d_computer_graphics,t=book,
+a={{Glassner}},y=1994,
+n=23,s=Gla94]
+\author[]{Andrew}[A.]{}{Glassner}
+\pubyear{1994}
+\title{{3D Computer Graphics}}
+\pubname{Green Editorial}
+\edition{Second}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=game_engine_architecture,t=book,
+a={{Gregory}},y=2009,
+n=10,s=Gre09]
+\author[]{Jason}[J.]{}{Gregory}
+\pubyear{2009}
+\title{{Game Engine Architecture}}
+\pubname{A K Peters}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=griffin_andrew2010_murrah_bombing_survivor,t=misc,
+a={{Griffin}},y=2010,
+u={http://www.reddirtreport.com/Story.aspx?id=15077},
+n=91,s=Gri10]
+\author[]{Andrew~W.}[A.~W.]{}{Griffin}
+\pubyear{2010}
+\title{{Murrah bombing survivor says feds involved in blast that killed 168 in
+  '95}}
+\day{19}
+\month{apr}
+\pubname{Red Dirt Report}
+\biburl{http://www.reddirtreport.com/Story.aspx?id=15077}
+\stoppublication
+
+\startpublication[k=debunking_911_debunking,t=book,
+a={{Griffin}},y=2007,
+n=47,s=Gri07]
+\author[]{David~Ray}[D.~R.]{}{Griffin}
+\pubyear{2007}
+\title{{Debunking 9/11 Debunking}}
+\pubname{Olive Branch Pr}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=the_creature_from_jekyll_island,t=book,
+a={{Griffin}},y=2010,
+n=63,s=Gri10]
+\author[]{G.~Edward}[G.~E.]{}{Griffin}
+\pubyear{2010}
+\title{{The Creature from Jekyll Island: A Second Look at the Federal Reserve}}
+\pubname{American Media}
+\edition{5th}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=occupy_poll,t=misc,
+a={{Group}},y=2012,
+u={http://coupmedia.org/the-sovereign-peoples-movement.html},
+n=112,s=Gro12]
+\author[]{Coup~Media}[C.~M.]{}{Group}
+\pubyear{2012}
+\title{{\#Occupy Wall Street Poll}}
+\day{22}
+\month{apr}
+\pubname{coupmedia.org}
+\notes{Sort by votes.}
+\biburl{http://coupmedia.org/the-sovereign-peoples-movement.html}
+\stoppublication
+
+\startpublication[k=harrit2009,t=article,
+a={{H.~Harrit},{}},y=2009,o={10.2174/1874412500902010007},
+u={http://www.benthamscience.com/open/tocpj/articles/V002/7TOCPJ.htm},
+n=84,s=HHFEJ{\etalchar{+}}09]
+\artauthor[]{Niels}[N.]{}{H.~Harrit}
+\artauthor[]{Jeffrey}[J.]{}{Farrer}
+\artauthor[]{Steven}[S.]{}{E.~Jones}
+\artauthor[]{Kevin}[K.]{}{R.~Ryan}
+\artauthor[]{Frank}[F.]{}{M.~Legge}
+\artauthor[]{Daniel}[D.]{}{Farnsworth}
+\artauthor[]{Gregg}[G.]{}{Roberts}
+\artauthor[]{James}[J.]{}{R.~Gourley}
+\artauthor[]{Bradley}[B.]{}{R.~Larsen}
+\pubyear{2009}
+\arttitle{{Active Thermitic Material Discovered in Dust from the 9/11 World
+  Trade Center Catastrophe}}
+\journal{The Open Chemical Physics Journal}
+\issn{1874--4125}
+\month{feb}
+\doi{10.2174/1874412500902010007}
+\biburl{http://www.benthamscience.com/open/tocpj/articles/V002/7TOCPJ.htm}
+\stoppublication
+
+\startpublication[k=hersh2008,t=misc,
+a={{Hersh}},y=2008,
+u={http://www.newyorker.com/reporting/2008/07/07/080707fa_fact_hersh},
+n=120,s=Her08]
+\author[]{Seymour~M.}[S.~M.]{}{Hersh}
+\pubyear{2008}
+\title{{Preparing the Battlefield}}
+\day{7}
+\month{jul}
+\pubname{The New Yorker}
+\biburl{http://www.newyorker.com/reporting/2008/07/07/080707fa_fact_hersh}
+\stoppublication
+
+\startpublication[k=essential_blender,t=book,
+a={{Hess}},y=2007,
+n=30,s=Hes07]
+\author[]{Roland}[R.]{}{Hess}
+\pubyear{2007}
+\title{{The Essential Blender: Guide to 3D Creation with the Open Source Suite
+  Blender}}
+\pubname{No Starch Press}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=lua_reference_manual,t=book,
+a={{Ierusalimschy}},y=2006a,
+n=35,s=Ier06a]
+\author[]{Roberto}[R.]{}{Ierusalimschy}
+\pubyear{2006\maybeyear{a}}
+\title{{Lua 5.1 Reference Manual}}
+\pubname{Lua.org}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=programming_in_lua,t=book,
+a={{Ierusalimschy}},y=2006b,
+n=38,s=Ier06b]
+\author[]{Roberto}[R.]{}{Ierusalimschy}
+\pubyear{2006\maybeyear{b}}
+\title{{Programming in Lua}}
+\pubname{Lua.org}
+\edition{2nd}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=intel_optimization_manual,t=misc,
+a={{Intel}},y=2009,
+u={http://www.intel.com/content/dam/doc/manual/64-ia-32-architectures-optimiza%
+tion-manual.pdf},
+n=9,s=Int09]
+\author[]{}[]{}{Intel}
+\pubyear{2009}
+\title{{Intel 64 and IA--32 Architectures Optimization Reference Manual}}
+\month{nov}
+\pubname{Intel}
+\biburl{http://www.intel.com/content/dam/doc/manual/64-ia-32-architectures-opt%
+imization-manual.pdf}
+\stoppublication
+
+\startpublication[k=html_mail_bad,t=misc,
+a={{Isaac}},y=2002,
+u={https://subversion.american.edu/aisaac/notes/htmlmail.htm},
+n=3,s=Isa02]
+\author[]{Alan~G.}[A.~G.]{}{Isaac}
+\pubyear{2002}
+\title{{HTML Email -- Whenever Possible Turn It Off}}
+\day{15}
+\month{feb}
+\pubname{American.edu}
+\biburl{https://subversion.american.edu/aisaac/notes/htmlmail.htm}
+\stoppublication
+
+\startpublication[k=nutt2010,t=article,
+a={{J.~Nutt},{}},y=2010,
+u={http://is.gd/QXTVmH},
+n=48,s=JNAKDP10]
+\artauthor[]{David}[D.]{}{J.~Nutt}
+\artauthor[]{Leslie}[L.]{}{A.~King}
+\artauthor[]{Lawrence}[L.]{}{D.~Phillips}
+\pubyear{2010}
+\arttitle{{Drug Harms in the UK: a Multicriteria Decision Analysis}}
+\journal{The Lancet}
+\volume{376}
+\pages{pp.~1558--1565}
+\month{nov}
+\keyword{everyone}
+\biburl{http://is.gd/QXTVmH}
+\stoppublication
+
+\startpublication[k=rotten_fruit2011_refused_benefits,t=misc,
+a={{Jason}},y=2010,
+u={http://www.dailytech.com/Employee+Worked+to+Death+at+Apple+Plant+Family+Ref%
+used+Full+Benefits/article18591.htm},
+n=97,s=Jas10]
+\author[]{Mick}[M.]{}{Jason}
+\pubyear{2010}
+\title{{Employee Worked to Death at Apple Plant -- Family Refused Full
+  Benefits}}
+\day{2}
+\month{jun}
+\pubname{Daily Tech}
+\biburl{http://www.dailytech.com/Employee+Worked+to+Death+at+Apple+Plant+Famil%
+y+Refused+Full+Benefits/article18591.htm}
+\stoppublication
+
+\startpublication[k=zeitgeist_the_movie,t=misc,
+a={{Joseph}},y=2007,
+u={http://www.zeitgeistthefilm.com/},
+n=64,s=Jos07]
+\author[]{Peter}[P.]{}{Joseph}
+\pubyear{2007}
+\title{{Zeitgeist: The Movie}}
+\pubname{GMP LLC}
+\keyword{everyone}
+\biburl{http://www.zeitgeistthefilm.com/}
+\stoppublication
+
+\startpublication[k=zeitgeist_addendum,t=misc,
+a={{Joseph}},y=2008,
+u={http://www.zeitgeistaddendum.com/},
+n=65,s=Jos08]
+\author[]{Peter}[P.]{}{Joseph}
+\pubyear{2008}
+\title{{Zeitgeist: Addendum}}
+\pubname{GMP LLC}
+\keyword{everyone}
+\biburl{http://www.zeitgeistaddendum.com/}
+\stoppublication
+
+\startpublication[k=zeitgeist_moving_forward,t=misc,
+a={{Joseph}},y=2011,
+u={http://www.zeitgeistmovingforward.com/},
+n=66,s=Jos11]
+\author[]{Peter}[P.]{}{Joseph}
+\pubyear{2011}
+\title{{Zeitgeist: Moving Forward}}
+\pubname{GMP LLC}
+\keyword{everyone}
+\biburl{http://www.zeitgeistmovingforward.com/}
+\stoppublication
+
+\startpublication[k=pro_ogre_3d_programming,t=book,
+a={{Junker}},y=2006,
+n=37,s=Jun06]
+\author[]{Gregory}[G.]{}{Junker}
+\pubyear{2006}
+\title{{Pro OGRE 3D Programming}}
+\pubname{Apress}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=food_inc,t=misc,
+a={{Kenner}},y=2008,
+u={http://www.takepart.com/foodinc/film/},
+n=49,s=Ken08]
+\author[]{Robert}[R.]{}{Kenner}
+\pubyear{2008}
+\title{{Food Inc}}
+\pubname{Magnolia}
+\keyword{everyone}
+\biburl{http://www.takepart.com/foodinc/film/}
+\stoppublication
+
+\startpublication[k=report_from_iron_mountain,t=misc,
+a={{Kenneth~Galbraith}},y=1967,
+u={http://www.teachpeace.com/Report_from_Iron_Mountain.pdf},
+n=56,s=KG67]
+\author[]{John}[J.]{}{Kenneth~Galbraith}
+\pubyear{1967}
+\title{{Report From Iron Mountain -- On The Possibility And Desirability Of
+  Peace}}
+\pubname{The Dial Press}
+\keyword{everyone}
+\biburl{http://www.teachpeace.com/Report_from_Iron_Mountain.pdf}
+\stoppublication
+
+\startpublication[k=keshavaraj1996,t=article,
+a={{Keshavaraj},{}},y=1996,o={10.1002/(SICI)1097-4628(19960829)61:9<1541::AID-%
+APP13>3.0.CO;2-T},
+u={http://dx.doi.org/10.1002/(SICI)1097-4628(19960829)61:9<1541::AID-APP13>3.0%
+.CO;2-T},
+n=113,s=KTN96]
+\artauthor[]{Ramesh}[R.]{}{Keshavaraj}
+\artauthor[]{Richard~Wm.}[R.~W.]{}{Tock}
+\artauthor[]{Guy~S.}[G.~S.]{}{Nusholtz}
+\pubyear{1996}
+\arttitle{{A realistic comparison of biaxial performance of nylon 6,6 and nylon
+  6 fabrics used in passive restraints--airbags}}
+\journal{Journal of Applied Polymer Science}
+\issn{1097-4628}
+\volume{61}
+\issue{9}
+\pages{pp.~1541--1552}
+\doi{10.1002/(SICI)1097-4628(19960829)61:9<1541::AID-APP13>3.0.CO;2-T}
+\biburl{http://dx.doi.org/10.1002/(SICI)1097-4628(19960829)61:9<1541::AID-APP1%
+3>3.0.CO;2-T}
+\stoppublication
+
+\startpublication[k=king2010,t=misc,
+a={{King}},y=2010,
+u={http://www.veteranstoday.com/2010/11/30/feds-plant-inert-bomb-in-portland-b%
+efore-arresting-muslim-man/},
+n=132,s=Kin10]
+\author[]{Tim}[T.]{}{King}
+\pubyear{2010}
+\title{{Feds Plant Inert Bomb In Portland Before Arresting Muslim Man}}
+\day{30}
+\month{nov}
+\pubname{Veterans Today}
+\biburl{http://www.veteranstoday.com/2010/11/30/feds-plant-inert-bomb-in-portl%
+and-before-arresting-muslim-man/}
+\stoppublication
+
+\startpublication[k=shirer1960,t=book,
+a={{L.~Shirer}},y=1960,
+n=104,s=LS60]
+\author[]{William}[W.]{}{L.~Shirer}
+\pubyear{1960}
+\title{{The Rise and Fall of the Third Reich}}
+\pubname{Simon and Schuster Inc., New York}
+\edition{Twentieth Printing}
+\stoppublication
+
+\startpublication[k=viking_mission_source_data,t=misc,
+a={{Laboratory}},y=2012,
+u={http://pds-imaging.jpl.nasa.gov/volumes/viking.html},
+n=81,s=Lab12]
+\author[]{Jet~Propulsion}[J.~P.]{}{Laboratory}
+\pubyear{2012}
+\title{{Viking Online Data Volumes}}
+\day{10}
+\month{apr}
+\biburl{http://pds-imaging.jpl.nasa.gov/volumes/viking.html}
+\stoppublication
+
+\startpublication[k=lakhani2005_libre_motivators,t=misc,
+a={{Lakhani},{G.~Wolf}},y=2005,
+u={http://mitpress.mit.edu/books/chapters/0262562278.pdf},
+n=101,s=LGW05]
+\author[]{Karim~R.}[K.~R.]{}{Lakhani}
+\author[]{Robert}[R.]{}{G.~Wolf}
+\pubyear{2005}
+\title{{Why Hackers Do What They Do -- Understanding Motivation and Effort in
+  Free/Open Source Software Projects}}
+\day{1}
+\month{jun}
+\pubname{MIT Press}
+\biburl{http://mitpress.mit.edu/books/chapters/0262562278.pdf}
+\stoppublication
+
+\startpublication[k=gnu_linux_support_as_novelty,t=misc,
+a={{Larabel}},y=2011,
+u={http://www.phoronix.com/scan.php?page=news_item&px=OTQxNg},
+n=127,s=Lar11]
+\author[]{Michael}[M.]{}{Larabel}
+\pubyear{2011}
+\title{{NVIDIA Optimus Unofficially Comes To Linux}}
+\day{8}
+\month{may}
+\pubname{Phoronix}
+\biburl{http://www.phoronix.com/scan.php?page=news_item&px=OTQxNg}
+\stoppublication
+
+\startpublication[k=lasn2012occupy,t=book,
+a={{Lasn},{Adbusters}},y=2012,
+n=86,s=LA12]
+\author[]{Kalle}[K.]{}{Lasn}
+\author[]{}[]{}{Adbusters}
+\pubyear{2012}
+\title{{Occupy Econ 101: The Creative Destruction of Neoclassical Economics}}
+\isbn{9781609804329}
+\pubname{Seven Stories Press}
+\month{sept}
+\stoppublication
+
+\startpublication[k=lazarou1998_adr,t=article,
+a={{Lazarou},{}},y=1998,
+n=87,s=LPC98]
+\artauthor[]{Jason}[J.]{}{Lazarou}
+\artauthor[]{Bruce~H.}[B.~H.]{}{Pomeranz}
+\artauthor[]{Paul~N.}[P.~N.]{}{Corey}
+\pubyear{1998}
+\arttitle{{Incidence of Adverse Drug Reactions in Hospitalized Patients: A
+  Meta-analysis of Prospective Studies}}
+\journal{JAMA}
+\volume{279}
+\pages{pp.~1200--1205}
+\month{apr}
+\stoppublication
+
+\startpublication[k=the_economist_bitrot2012,t=misc,
+a={{Leaders}},y=2012,
+u={http://www.economist.com/node/21553445?fsrc=scn/tw/te/ar/bitrot},
+n=122,s=Lea12]
+\author[]{}[]{}{Leaders}
+\pubyear{2012}
+\title{{Digital data: Bit rot}}
+\day{28}
+\month{apr}
+\pubname{The Economist Newspaper Limited}
+\biburl{http://www.economist.com/node/21553445?fsrc=scn/tw/te/ar/bitrot}
+\stoppublication
+
+\startpublication[k=leape2000,t=article,
+a={{Leape}},y=2000,
+u={http://jama.ama-assn.org/content/284/1/95.short},
+n=125,s=Lea00]
+\artauthor[]{Lucian~L.}[L.~L.]{}{Leape}
+\pubyear{2000}
+\arttitle{{Institute of Medicine Medical Error Figures Are Not Exaggerated}}
+\journal{JAMA}
+\volume{284}
+\issue{1}
+\pages{pp.~95--97}
+\month{jul}
+\biburl{http://jama.ama-assn.org/content/284/1/95.short}
+\stoppublication
+
+\startpublication[k=infinite_game_universe_2,t=book,
+a={{Lecky-Thompson}},y=2002,
+n=13,s=LT02]
+\author[]{Guy~W}[G.~W.]{}{Lecky-Thompson}
+\pubyear{2002}
+\title{{Infinite Game Universe: Level Design, Terrain, and Sound}}
+\volume{2}
+\pubname{Hingham, MA: Charles River Media}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=lindsey2012_vitamins_and_diabetes,t=article,
+a={{Lindsey}},y=2012,
+n=102,s=Lin12]
+\artauthor[]{Stuart}[S.]{}{Lindsey}
+\pubyear{2012}
+\arttitle{{Substituting Vitamins and Supplements for Pharmaceuticals in Type 2
+  Diabetes}}
+\journal{JOM}
+\issn{0317-0209}
+\volume{27}
+\pages{pp.~5--8}
+\month{nov}
+\stoppublication
+
+\startpublication[k=blender_25_materials_and_textures_cookbook,t=book,
+a={{Litster}},y=2011,
+n=25,s=Lit11]
+\author[]{Colin}[C.]{}{Litster}
+\pubyear{2011}
+\title{{Blender 2.5 Materials and Textures Cookbook}}
+\pubname{Packt Publishing}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=beginning_game_audio_programming,t=book,
+a={{McCuskey}},y=2003,
+n=32,s=McC03]
+\author[]{Mason}[M.]{}{McCuskey}
+\pubyear{2003}
+\title{{Beginning Game Audio Programming}}
+\pubname{Premier-Trade}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=introducing_character_animation_with_blender,t=book,
+a={{Mullen}},y=2007,
+n=29,s=Mul07]
+\author[]{Tony}[T.]{}{Mullen}
+\pubyear{2007}
+\title{{Introducing Character Animation with Blender}}
+\pubname{Sybex}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=blender_studio_projects,t=book,
+a={{Mullen},{Andaur}},y=2010,
+n=28,s=MA10]
+\author[]{Tony}[T.]{}{Mullen}
+\author[]{Claudio}[C.]{}{Andaur}
+\pubyear{2010}
+\title{{Blender Studio Projects: Digital Movie-Making}}
+\pubname{Sybex}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=water_ice_on_mars,t=misc,
+a={{News}},y=2009,
+u={http://www.cbc.ca/news/technology/story/2009/09/24/tech-space-water-mars-cr%
+ater.html},
+n=80,s=New09]
+\author[]{CBC}[C.]{}{News}
+\pubyear{2009}
+\title{{Ice on Mars revealed in fresh craters}}
+\day{24}
+\month{sep}
+\biburl{http://www.cbc.ca/news/technology/story/2009/09/24/tech-space-water-ma%
+rs-crater.html}
+\stoppublication
+
+\startpublication[k=nasa_audit_missing_samples,t=misc,
+a={{News}},y=2011,
+u={http://www.cbc.ca/news/technology/story/2011/12/09/science-missing-space-sa%
+mples-nasa.html},
+n=82,s=New11]
+\author[]{CBC}[C.]{}{News}
+\pubyear{2011}
+\title{{NASA audit finds hundreds of space samples missing}}
+\month{dec}
+\biburl{http://www.cbc.ca/news/technology/story/2011/12/09/science-missing-spa%
+ce-samples-nasa.html}
+\stoppublication
+
+\startpublication[k=mola,t=misc,
+a={{Node}},y=2012,
+u={http://pds-geosciences.wustl.edu/missions/mgs/mola.html},
+n=15,s=Nod12]
+\author[]{PDS~Geosciences}[P.~G.]{}{Node}
+\pubyear{2012}
+\title{{Mars Global Surveyor: MOLA}}
+\day{21}
+\month{feb}
+\pubname{Jet Propulsion Laboratory, NASA}
+\biburl{http://pds-geosciences.wustl.edu/missions/mgs/mola.html}
+\stoppublication
+
+\startpublication[k=merchants_of_doubt,t=book,
+a={{Oreskes},{Conway}},y=2010,
+n=54,s=OC10]
+\author[]{Naomi}[N.]{}{Oreskes}
+\author[]{Erik~M.}[E.~M.]{}{Conway}
+\pubyear{2010}
+\title{{Merchants of Doubt: How a Handful of Scientists Obscured the Truth on
+  Issues from Tobacco Smoke to Global Warming}}
+\pubname{Bloomsbury Press}
+\month{may}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=raj2010,t=book,
+a={{Patel}},y=2010,
+u={http://archive.org/stream/valueofnothingho00pate/valueofnothingho00pate_djv%
+u.txt},
+n=109,s=Pat10]
+\author[]{Raj}[R.]{}{Patel}
+\pubyear{2010}
+\title{{The Value of Nothing: How to Reshape Market Society and Redefine
+  Democracy}}
+\isbn{031242924X}
+\pubname{Picador}
+\edition{First Edition}
+\month{jan}
+\biburl{http://archive.org/stream/valueofnothingho00pate/valueofnothingho00pat%
+e_djvu.txt}
+\stoppublication
+
+\startpublication[k=afghan_opium_kingpin,t=misc,
+a={{Paul~J.}},y=2009,
+u={http://www.infowars.com/ny-times-afghan-opium-kingpin-on-cia-payroll/},
+n=69,s=PJ09]
+\author[]{Watson}[W.]{}{Paul~J.}
+\pubyear{2009}
+\title{{NY Times: Afghan Opium Kingpin On CIA Payroll}}
+\day{28}
+\month{oct}
+\pubname{Prison Planet.com}
+\biburl{http://www.infowars.com/ny-times-afghan-opium-kingpin-on-cia-payroll/}
+\stoppublication
+
+\startpublication[k=top_mexican_drug_lord,t=misc,
+a={{Paul~J.}},y=2011,
+u={http://www.infowars.com/top-mexican-drug-lord-i-trafficked-cocaine-for-the-%
+u-s-government/},
+n=68,s=PJ11]
+\author[]{Watson}[W.]{}{Paul~J.}
+\pubyear{2011}
+\title{{Top Mexican Drug Lord: I Trafficked Cocaine For The U.S. Government}}
+\day{27}
+\month{apr}
+\pubname{Infowars.com}
+\biburl{http://www.infowars.com/top-mexican-drug-lord-i-trafficked-cocaine-for%
+-the-u-s-government/}
+\stoppublication
+
+\startpublication[k=beginning_gimp,t=book,
+a={{Peck}},y=2009,
+n=24,s=Pec09]
+\author[]{Akkana}[A.]{}{Peck}
+\pubyear{2009}
+\title{{Beginning GIMP: From Novice to Professional}}
+\pubname{Apress}
+\keyword{artists}
+\stoppublication
+
+\startpublication[k=perkins2005,t=book,
+a={{Perkins}},y=2005,
+n=117,s=Per05]
+\author[]{John}[J.]{}{Perkins}
+\pubyear{2005}
+\title{{Confessions of an Economic Hit Man}}
+\isbn{0452287081}
+\pubname{Plume}
+\month{dec}
+\stoppublication
+
+\startpublication[k=computational_intelligence,t=book,
+a={{Poole},{}},y=1998,
+n=12,s=PMG98]
+\author[]{David~L.}[D.~L.]{}{Poole}
+\author[]{Alan~K.}[A.~K.]{}{Mackworth}
+\author[]{Randy}[R.]{}{Goebel}
+\pubyear{1998}
+\title{{Computational Intelligence: A Logical Approach}}
+\pubname{New York: Oxford UP}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=cia_drug_plane_crash,t=misc,
+a={{Press}},y=2008,
+u={http://afp.google.com/article/ALeqM5j6QonBKKMo2gw1e3ql-xUcQEZbVg},
+n=67,s=Pre08]
+\author[]{Associated~Free}[A.~F.]{}{Press}
+\pubyear{2008}
+\title{{Mexico Drug Plane Used for CIA rendition Flights}}
+\day{4}
+\month{sep}
+\pubname{Associated Free Press}
+\biburl{http://afp.google.com/article/ALeqM5j6QonBKKMo2gw1e3ql-xUcQEZbVg}
+\stoppublication
+
+\startpublication[k=seahorse,t=misc,
+a={{Project}},y=2011,
+u={https://live.gnome.org/Seahorse},
+n=6,s=Pro11]
+\author[]{The~GNOME}[T.~G.]{}{Project}
+\pubyear{2011}
+\title{{Seahorse}}
+\day{8}
+\month{apr}
+\biburl{https://live.gnome.org/Seahorse}
+\stoppublication
+
+\startpublication[k=prousky2012_toxicology,t=article,
+a={{Prousky}},y=2012,
+n=88,s=Pro12]
+\artauthor[]{Jonathan~E.}[J.~E.]{}{Prousky}
+\pubyear{2012}
+\arttitle{{Toxicology of Vitamins}}
+\journal{JOM}
+\issn{0317-0209}
+\volume{27}
+\pages{pp.~3--4}
+\month{nov}
+\stoppublication
+
+\startpublication[k=git_sucks,t=misc,
+a={{Remnant}},y=2009,
+u={http://netsplit.com/2009/02/17/git-sucks/},
+n=4,s=Rem09]
+\author[]{Scott~James}[S.~J.]{}{Remnant}
+\pubyear{2009}
+\title{{GIT sucks}}
+\day{17}
+\month{feb}
+\biburl{http://netsplit.com/2009/02/17/git-sucks/}
+\stoppublication
+
+\startpublication[k=rotten_fruit2011_death_toll,t=misc,
+a={{Reuters}},y=2011,
+u={http://www.smh.com.au/digital-life/ipad/death-toll-at-apple-factory-rises-t%
+o-three-20110522-1eyl8.html},
+n=94,s=Reu11]
+\author[]{}[]{}{Reuters}
+\pubyear{2011}
+\title{{Death toll at Apple factory rises to three}}
+\day{23}
+\month{may}
+\pubname{Syndney Morning Herald}
+\biburl{http://www.smh.com.au/digital-life/ipad/death-toll-at-apple-factory-ri%
+ses-to-three-20110522-1eyl8.html}
+\stoppublication
+
+\startpublication[k=ross2007,t=misc,
+a={{Ross},{Esposito}},y=2007,
+u={http://abcnews.go.com/blogs/headlines/2007/05/bush_authorizes/},
+n=119,s=RE07]
+\author[]{Brian}[B.]{}{Ross}
+\author[]{Richard}[R.]{}{Esposito}
+\pubyear{2007}
+\title{{Bush Authorizes New Covert Action Against Iran}}
+\day{22}
+\month{may}
+\pubname{ABC News}
+\biburl{http://abcnews.go.com/blogs/headlines/2007/05/bush_authorizes/}
+\stoppublication
+
+\startpublication[k=opengl_yellow_book,t=book,
+a={{Rost},{Licea-Kane}},y=2009,
+n=8,s=RLK09]
+\author[]{Randi~J.}[R.~J.]{}{Rost}
+\author[]{Bill}[B.]{}{Licea-Kane}
+\pubyear{2009}
+\title{{OpenGL Shading Language}}
+\pubname{Addison-Wesley Professional}
+\edition{3rd}
+\month{jul}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=roy1965,t=book,
+a={{Roy}},y=1969,
+n=107,s=Roy69]
+\author[]{R.~H.}[R.~H.]{}{Roy}
+\pubyear{1969}
+\title{{The Seaforth Highlanders of Canada. 1919--1965}}
+\isbn{0-9685439-0-1}
+\pubname{Evergreen Press, Vancouver}
+\edition{Reprint}
+\month{jun}
+\stoppublication
+
+\startpublication[k=death_by_government,t=book,
+a={{Rummel}},y=1997,
+n=46,s=Rum97]
+\author[]{R.~J.}[R.~J.]{}{Rummel}
+\pubyear{1997}
+\title{{Death by Government}}
+\pubname{Transaction Publishers}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=statistics_of_democide,t=book,
+a={{Rummel}},y=1998,
+n=57,s=Rum98]
+\author[]{Rudolph.~J.}[R.~J.]{}{Rummel}
+\pubyear{1998}
+\title{{Statistics of Democide: Genocide and Mass Murder since 1900}}
+\pubname{LIT Verlag}
+\month{nov}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=santoso2008,t=misc,
+a={{Santoso}},y=2008,
+u={http://www.neatorama.com/2008/07/07/who-owns-what-on-television/},
+n=126,s=San08]
+\author[]{Alex}[A.]{}{Santoso}
+\pubyear{2008}
+\title{{Who Owns What on Television?}}
+\day{7}
+\month{jul}
+\pubname{Neatorama}
+\biburl{http://www.neatorama.com/2008/07/07/who-owns-what-on-television/}
+\stoppublication
+
+\startpublication[k=opengl_red_book,t=book,
+a={{Shreiner},{Group}},y=2009,
+n=36,s=SG09]
+\author[]{Dave}[D.]{}{Shreiner}
+\author[]{Khronos OpenGL ARB~Working}[K.~O. A.~W.]{}{Group}
+\pubyear{2009}
+\title{{OpenGL Programming Guide}}
+\pubname{Addison-Wesley Professional}
+\edition{7th}
+\month{jul}
+\keyword{engineers}
+\stoppublication
+
+\startpublication[k=gnu_users_who_have_never_heard_of_gnu,t=misc,
+a={{Stallman}},y=2011c,
+u={https://www.gnu.org/gnu/gnu-users-never-heard-of-gnu.html},
+n=124,s=Sta11c]
+\author[]{Richard}[R.]{}{Stallman}
+\pubyear{2011\maybeyear{c}}
+\title{{GNU Users Who Have Never Heard of GNU}}
+\day{20}
+\month{oct}
+\pubname{Free Software Foundation}
+\biburl{https://www.gnu.org/gnu/gnu-users-never-heard-of-gnu.html}
+\stoppublication
+
+\startpublication[k=linux_and_gnu,t=misc,
+a={{Stallman}},y=2011a,
+u={http://www.gnu.org/gnu/linux-and-gnu.html},
+n=75,s=Sta11a]
+\author[]{Richard}[R.]{}{Stallman}
+\pubyear{2011\maybeyear{a}}
+\title{{Linux and the GNU Project}}
+\day{20}
+\month{nov}
+\pubname{Free Software Foundation}
+\biburl{http://www.gnu.org/gnu/linux-and-gnu.html}
+\stoppublication
+
+\startpublication[k=open_source_misses_the_point,t=misc,
+a={{Stallman}},y=2011b,
+u={https://www.gnu.org/philosophy/open-source-misses-the-point.html},
+n=100,s=Sta11b]
+\author[]{Richard}[R.]{}{Stallman}
+\pubyear{2011\maybeyear{b}}
+\title{{Why Open Source misses the point of Free Software}}
+\day{20}
+\month{sep}
+\pubname{Free Software Foundation}
+\biburl{https://www.gnu.org/philosophy/open-source-misses-the-point.html}
+\stoppublication
+
+\startpublication[k=nonfree_drm_games_on_gnu_linux,t=misc,
+a={{Stallman}},y=2012,
+u={https://www.gnu.org/philosophy/nonfree-games.html},
+n=130,s=Sta12]
+\author[]{Richard}[R.]{}{Stallman}
+\pubyear{2012}
+\title{{Nonfree DRM'd Games on GNU/Linux: Good or Bad?}}
+\day{16}
+\month{May}
+\pubname{Free Software Foundation}
+\biburl{https://www.gnu.org/philosophy/nonfree-games.html}
+\stoppublication
+
+\startpublication[k=free_software_free_society,t=book,
+a={{Stallman}},y=2009,
+n=51,s=Sta09]
+\author[]{Richard~M.}[R.~M.]{}{Stallman}
+\pubyear{2009}
+\title{{Free Software, Free Society: Selected Essays of Richard M. Stallman}}
+\pubname{Free Software Foundation}
+\month{dec}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=minutes_bank_of_canada,t=misc,
+a={{{Standing Committee on Banking and Commerce}}},y=1939,
+u={http://www.scribd.com/doc/9525141/Standing-Committee-on-Banking-and-Commerc%
+e-1939-p248315-May-3-1939-CANADA},
+n=55,s={Sta}39]
+\author[]{}[]{}{{Standing Committee on Banking and Commerce}}
+\pubyear{1939}
+\title{{Minutes of Proceedings and Evidence Respecting the Bank of Canada}}
+\pubname{Printer to the King's Most Excellent Majesty}
+\keyword{everyone}
+\biburl{http://www.scribd.com/doc/9525141/Standing-Committee-on-Banking-and-Co%
+mmerce-1939-p248315-May-3-1939-CANADA}
+\stoppublication
+
+\startpublication[k=statscan_leading_causes_of_death,t=misc,
+a={{{Statistics Canada}}},y=2008,
+u={http://www.statcan.gc.ca/tables-tableaux/sum-som/l01/cst01/hlth36a-eng.htm},
+n=73,s={Sta}08]
+\author[]{}[]{}{{Statistics Canada}}
+\pubyear{2008}
+\title{{Leading Causes of Death by Sex}}
+\pubname{Statistics Canada}
+\biburl{http://www.statcan.gc.ca/tables-tableaux/sum-som/l01/cst01/hlth36a-eng%
+.htm}
+\stoppublication
+
+\startpublication[k=i_hate_git,t=misc,
+a={{Steveko}},y=2012,
+u={https://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/},
+n=5,s=Ste12]
+\author[]{}[]{}{Steveko}
+\pubyear{2012}
+\title{{10 things I hate about Git}}
+\day{24}
+\month{feb}
+\pubname{Steveko's Blog}
+\biburl{https://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/}
+\stoppublication
+
+\startpublication[k=imf_bancor,t=misc,
+a={{{Strategy, Policy and Review Department of the International Monetary
+  Fund}}},y=2010,
+u={http://www.imf.org/external/np/pp/eng/2010/041310.pdf},
+n=74,s={Str}10]
+\author[]{}[]{}{{Strategy, Policy and Review Department of the International
+  Monetary Fund}}
+\pubyear{2010}
+\title{{Reserve Accumulation and International Monetary Stability}}
+\day{13}
+\month{apr}
+\pubname{imf.org}
+\biburl{http://www.imf.org/external/np/pp/eng/2010/041310.pdf}
+\stoppublication
+
+\startpublication[k=drugs_ineffective_in_space,t=misc,
+a={{TE/HGH}},y=2011,
+u={http://www.presstv.ir/detail/175351.html},
+n=116,s=TE/11]
+\author[]{}[]{}{TE/HGH}
+\pubyear{2011}
+\title{{Drugs not effective in space: Study}}
+\day{17}
+\month{apr}
+\pubname{PressTV}
+\biburl{http://www.presstv.ir/detail/175351.html}
+\stoppublication
+
+\startpublication[k=equality_trust,t=misc,
+a={{Trust}},y=2012,
+u={http://www.equalitytrust.org.uk/resources/publications},
+n=21,s=Tru12]
+\author[]{The~Equality}[T.~E.]{}{Trust}
+\pubyear{2012}
+\title{{Publications}}
+\day{3}
+\month{apr}
+\biburl{http://www.equalitytrust.org.uk/resources/publications}
+\stoppublication
+
+\startpublication[k=turbeville2010_staged_terror,t=misc,
+a={{Turbeville}},y=2010,
+u={http://www.activistpost.com/2010/11/staged-government-terror-open-admission%
+.html},
+n=90,s=Tur10]
+\author[]{Brandon}[B.]{}{Turbeville}
+\pubyear{2010}
+\title{{Staged Government Terror: An Open Admission Within The British House of
+  Lords}}
+\day{11}
+\month{nov}
+\pubname{Activist Post}
+\biburl{http://www.activistpost.com/2010/11/staged-government-terror-open-admi%
+ssion.html}
+\stoppublication
+
+\startpublication[k=vicente_rule,t=misc,
+a={{{United States of America Northern District of Illinois Eastern
+  Division}}},y=2011,
+u={http://narcosphere.narconews.com/userfiles/70/Zambada.Notice.Rule12.3.pdf},
+n=71,s={Uni}11]
+\author[]{}[]{}{{United States of America Northern District of Illinois Eastern
+  Division}}
+\pubyear{2011}
+\title{{United States of America V. Jesus Vicente Zambada-Niebla}}
+\day{15}
+\month{mar}
+\biburl{http://narcosphere.narconews.com/userfiles/70/Zambada.Notice.Rule12.3.%
+pdf}
+\stoppublication
+
+\startpublication[k=gnu_linux_support_non_existent,t=misc,
+a={{Viki}},y=2012,
+u={http://gamesystemrequirements.com/games.php?id=38},
+n=128,s=Vik12]
+\author[]{}[]{}{Viki}
+\pubyear{2012}
+\title{{Half-Life 2 Episode Two}}
+\day{3}
+\month{may}
+\pubname{System Requirements}
+\biburl{http://gamesystemrequirements.com/games.php?id=38}
+\stoppublication
+
+\startpublication[k=asymptotic_notation,t=misc,
+a={{Walker}},y=2012a,
+u={http://www.eternallyconfuzzled.com/arts/jsw_art_bigo.aspx},
+n=1,s=Wal12a]
+\author[]{Julienne}[J.]{}{Walker}
+\pubyear{2012\maybeyear{a}}
+\title{{Asymptotic Notation}}
+\month{apr}
+\pubname{Eternally Confuzzled}
+\biburl{http://www.eternallyconfuzzled.com/arts/jsw_art_bigo.aspx}
+\stoppublication
+
+\startpublication[k=mersenne_twister,t=misc,
+a={{Walker}},y=2012b,
+u={http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_rand.aspx\#merse%
+nne},
+n=19,s=Wal12b]
+\author[]{Julienne}[J.]{}{Walker}
+\pubyear{2012\maybeyear{b}}
+\title{{Mersenne Twister}}
+\day{1}
+\month{apr}
+\biburl{http://www.eternallyconfuzzled.com/tuts/algorithms/jsw_tut_rand.aspx\#%
+mersenne}
+\stoppublication
+
+\startpublication[k=openal_shaders,t=misc,
+a={{Warner}},y=2010,
+u={http://opensource.creative.com/pipermail/openal/2010-January/011972.html},
+n=14,s=War10]
+\author[]{Kip}[K.]{}{Warner}
+\pubyear{2010}
+\title{{OpenAL Shaders}}
+\day{26}
+\month{jan}
+\pubname{OpenAL Usage Issues}
+\biburl{http://opensource.creative.com/pipermail/openal/2010-January/011972.ht%
+ml}
+\stoppublication
+
+\startpublication[k=letter_to_minister_regarding_911,t=misc,
+a={{Warner}},y=2011,
+u={http://www.thecanadiancharger.com/page.php?id=5},
+n=53,s=War11]
+\author[]{Kip}[K.]{}{Warner}
+\pubyear{2011}
+\title{{An Open Letter to Minister of Public Safety Regarding 9/11}}
+\day{23}
+\month{aug}
+\pubname{Canadian Charger}
+\keyword{everyone}
+\biburl{http://www.thecanadiancharger.com/page.php?id=5}
+\stoppublication
+
+\startpublication[k=watson2006_mcveigh,t=misc,
+a={{Watson}},y=2006,
+u={http://www.infowars.com/articles/us/okc_bombing_mcveigh_video_destroys_okc_%
+official_story.htm},
+n=93,s=Wat06]
+\author[]{Paul~Joseph}[P.~J.]{}{Watson}
+\pubyear{2006}
+\title{{McVeigh Video Destroys OKC Bombing Official Story}}
+\day{18}
+\month{dec}
+\pubname{Prison Planet.com}
+\biburl{http://www.infowars.com/articles/us/okc_bombing_mcveigh_video_destroys%
+_okc_official_story.htm}
+\stoppublication
+
+\startpublication[k=blackwater_game,t=misc,
+a={{Wikipedia}},y=2011,
+u={https://secure.wikimedia.org/wikipedia/en/wiki/Blackwater_\%28video_game\%2%
+9},
+n=77,s=Wik11]
+\author[]{}[]{}{Wikipedia}
+\pubyear{2011}
+\title{{Blackwater video game}}
+\day{19}
+\month{dec}
+\pubname{Wikipedia}
+\biburl{https://secure.wikimedia.org/wikipedia/en/wiki/Blackwater_\%28video_ga%
+me\%29}
+\stoppublication
+
+\startpublication[k=hubbert_curve,t=misc,
+a={{Wikipedia}},y=2012b,
+u={https://en.wikipedia.org/wiki/Hubbert_curve},
+n=20,s=Wik12b]
+\author[]{}[]{}{Wikipedia}
+\pubyear{2012\maybeyear{b}}
+\title{{Hubbert curve}}
+\day{18}
+\month{mar}
+\pubname{Wikipedia}
+\biburl{https://en.wikipedia.org/wiki/Hubbert_curve}
+\stoppublication
+
+\startpublication[k=northwoods,t=misc,
+a={{Wikipedia}},y=2012,
+u={https://en.wikipedia.org/wiki/Northwoods},
+n=85,s=Wik12]
+\author[]{}[]{}{Wikipedia}
+\pubyear{2012}
+\title{{Operation Northwoods}}
+\day{25}
+\month{mar}
+\pubname{Wikipedia}
+\biburl{https://en.wikipedia.org/wiki/Northwoods}
+\stoppublication
+
+\startpublication[k=top_posting,t=misc,
+a={{Wikipedia}},y=2012a,
+u={https://secure.wikimedia.org/wikipedia/en/wiki/Top_posting\#Top-posting},
+n=2,s=Wik12a]
+\author[]{}[]{}{Wikipedia}
+\pubyear{2012\maybeyear{a}}
+\title{{Posting style: Top-posting}}
+\day{7}
+\month{mar}
+\pubname{Wikipedia}
+\biburl{https://secure.wikimedia.org/wikipedia/en/wiki/Top_posting\#Top-postin%
+g}
+\stoppublication
+
+\startpublication[k=using_noise_in_shaders,t=inbook,
+a={{Wolff}},y=2011,
+n=18,s=Wol11]
+\author[]{David~A.}[D.~A.]{}{Wolff}
+\pubyear{2011}
+\title{{Using Noise in Shaders}}
+\pubname{Birmingham England: Packt Pub}
+\stoppublication
+
+\startpublication[k=peoples_history_of_united_states,t=book,
+a={{Zinn}},y=2003,
+n=43,s=Zin03]
+\author[]{Howard}[H.]{}{Zinn}
+\pubyear{2003}
+\title{{A People's History of the United States: 1492-Present}}
+\pubname{HarperCollins}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=case_for_mars,t=book,
+a={{Zubrin}},y=1997,
+n=60,s=Zub97]
+\author[]{Robert}[R.]{}{Zubrin}
+\pubyear{1997}
+\title{{The Case for Mars: The Plan to Settle the Red Planet and Why We Must}}
+\pubname{Free Press}
+\keyword{everyone}
+\stoppublication
+
+\startpublication[k=how_to_live_on_mars,t=book,
+a={{Zubrin}},y=2008,
+n=52,s=Zub08]
+\author[]{Robert}[R.]{}{Zubrin}
+\pubyear{2008}
+\title{{How to Live on Mars: A Trusty Guidebook to Surviving and Thriving on
+  the Red Planet}}
+\pubname{Three Rivers Press}
+\keyword{everyone}
+\stoppublication
+

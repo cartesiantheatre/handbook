@@ -129,12 +129,18 @@
 \setupinteraction
   [state=start,
    color=colour_link,
+   click=yes,
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
+   openaction={FitWidth,ToggleViewer},
    title=Avaneya Project Crew Handbook (Revision \BzrRevision),
    subtitle=\BookShortDescription,
    author=The Avaneya Project Crew (Revision \BzrRevision),
    keyword={Avaneya, handbook, Mars, GNU, game}]
+
+% Show the PDF bookmarks and expand to the chapter and section level...
+\placebookmarks[chapter,section,subsection,subsubsection][chapter]
+\setupinteractionscreen[option=bookmark]
 
 \setupTABLE[row][odd][background=color,backgroundcolor=colour_table_row_odd]
 \setupTABLE[row][even][background=color,backgroundcolor=colour_table_row_even]
@@ -303,10 +309,6 @@
 
 \setupframedtexts
   [framecolor=colour_frame_border]
-
-% Show the PDF bookmarks and expand to the chapter and section level...
-\placebookmarks[chapter,section,subsection,subsubsection][chapter]
-\setupinteractionscreen[option=bookmark]
 
 % Set the background image...
 \defineoverlay[BackgroundImage][\overlayfigure{Makeup/Images/Background.png}]

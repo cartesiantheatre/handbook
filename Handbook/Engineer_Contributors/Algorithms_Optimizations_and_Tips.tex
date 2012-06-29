@@ -4,7 +4,7 @@
 
 % Algorithms, Optimizations, & Tips section...
 \StartSection{Algorithms, Optimizations, & Tips}
-We will share in this section some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems the project must address at some point and the thinking that went into them. Consider the following advice tentative, without thought of absolute commitment, and hardly sacrosanct. This is because no one knows with certainty what the future holds and we may find down the road that any one of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others.
+In this section, we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems the project must address at some point and the thinking that went into them. Consider the following advice tentative, without thought of absolute commitment, and hardly sacrosanct. This is because no one knows with certainty what the future holds and we may find down the road that any one of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others.
 
 With every bit of eye candy, bell, and whistle we add to any software, there is the inherent problem of an increased burden on the hardware. Thus, we need to take advantage of optimizations whenever possible. 
 
@@ -15,7 +15,7 @@ Nevertheless, sometimes having improved an algorithm from quadratic to linear lo
 With that in mind, what follows is some useful advice. Some of it is useful in only one specific domain, such as working with the geometry of a landscape. In other cases it is domain agnostic for solving many different types of seemingly unrelated problem, such as refactoring an algorithm to take advantage of parallelization available on multi--core machines.
 
 \StartSubSection{Fallback Shaders}
-Those who work in the non--free software industry sometimes over inflate the capabilities of their target user's hardware. This is because the corporations they work for are unconcerned with getting the most out of what the user already has. They profit, at least in part, when users are perpetually convinced their hardware is inadequate so as to coerce them into undue, mindless, and wasteful consumption that only creates more garbage in the world.\footnotecite[high_tech_trash] That is not to say that users should never upgrade, but only so long as it is actually in {\it their} interest and not merely the {\it vendor's}.
+Those who work in the non--free software industry sometimes over inflate their target user's hardware requirements. This is because the corporations they work for are unconcerned with getting the most out of what the user already has. They profit, at least in part, when users are perpetually convinced their hardware is inadequate so as to coerce them into undue, mindless, and wasteful consumption that only creates more garbage in the world.\footnotecite[high_tech_trash] That is not to say that users should never upgrade, but only so long as it is actually in {\it their} interest and not merely the {\it vendor's}.
 \placefigure
     [right, 3*hang]
     [figure:Fluid_Dynamics]
@@ -28,7 +28,7 @@ The truth is, however, that most people on this planet have never even used a te
 
 For these reasons we need to provide fallback shaders whenever reasonable for those with less capable hardware, or whenever we can expect hiccups on hardware that ought to, drivers aside, be capable enough. This way users who already know their hardware is weak and do not expect it to do what more powerful hardware can do, can still get the most out of it. Meanwhile, those who {\it do} have powerful hardware can be satisfied knowing that its complete feature set is being leveraged to the fullest.
 
-But in aiming for flexibility, we must draw the line somewhere. We still require graphics hardware that at least supports a programmable shader interface. Investing time in appeasing a dead fixed function pipeline is not a useful expenditure of resources in an era where even the cheapest and most primitive graphics hardware typically supports at least {\it some} minimal of a programmable shader interface.
+But in aiming for flexibility, we must draw the line somewhere. We still require \index{system requirements+GPU}graphics hardware that at least supports a programmable shader interface. Investing time in appeasing a dead fixed function pipeline is not a useful expenditure of resources in an era where even the cheapest and most primitive graphics hardware typically supports at least {\it some} minimal of a programmable shader interface.
 
 \StartSubSection{Graphics Memory}
 It is usually a bad idea for games to make assumptions about the capabilities of a user's graphics hardware -- except when it can reliably predict them, safely provide a fallback when it cannot, and of course, do something useful with that information. 

@@ -311,10 +311,16 @@
   [framecolor=colour_frame_border]
 
 % Set the background image...
-\defineoverlay[BackgroundImage][\overlayfigure{Makeup/Images/Background.png}]
-\setupbackgrounds
-    [page]
-    [background=BackgroundImage]
+
+    \defineoverlay
+      [PageBackgroundImage]
+      [{\ifnum\rawcountervalue[realpage]=1\relax
+          \overlayfigure{Makeup/Images/Cover.png}%
+        \else
+          \overlayfigure{Makeup/Images/Background.png}%
+        \fi}]
+    
+    \setupbackgrounds[page][background=PageBackgroundImage]
 
 % Set PDF compression level, default is 3, so set to maximum...
 \setupbackend

@@ -322,11 +322,11 @@
     
     \setupbackgrounds[page][background=PageBackgroundImage]
 
-% Set PDF compression level, default is 3, so set to maximum...
+% PDF related settings...
 \setupbackend
-  [level=9,
-   xmpfile=Copying.xmp]
-\pdfcompresslevel0
+  [level=9,             % PDF compression level defaults to 3, so set maximum...
+   xmpfile=Copying.xmp] % Licensing metadata...
+\pdfcompresslevel9
 \maximumpdfcompression
 
 \setupsystem

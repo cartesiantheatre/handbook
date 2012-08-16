@@ -34,6 +34,7 @@ digraph Units_User_Basic_Health_Recreational_and_Social
 
     // Units...
     "Addiction Resource Centre"[label="Addiction Resource Centre\n[Type: Building]"];
+    "Agora"[label="Agora\n[Type: Building]"];
     "Community Centre"[label="Community Centre\n[Type: Building]"];
     "Community Garden"[label="Community Garden\n[Type: Building]"];
     "Detoxification Centre"[label="Detoxification Centre\n[Type: Building]"];
@@ -50,6 +51,7 @@ digraph Units_User_Basic_Health_Recreational_and_Social
             "Health" -> "Infirmary";
         "Recreational & Social"[shape="folder"];
         "Health, Recreational, & Social" -> "Recreational & Social";
+            "Recreational & Social" -> "Agora";
             "Recreational & Social" -> "Community Centre";
             "Recreational & Social" -> "Community Garden";
             "Recreational & Social" -> "Gymnasium";

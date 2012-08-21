@@ -16,7 +16,7 @@ The CppUnit library is a unit testing framework module for the C++ programming l
 
 \head {\em GNU Autotools}
 
-The GNU Autotools are used to reconcile and harmonize the many idiosyncrasies of different platforms. It makes portability easy to manage when used correctly. 
+The GNU Autotools are used to reconcile and harmonize the many idiosyncrasies of different platforms. It makes \index{portability} portability easy to manage when used correctly. 
 
 The important thing to remember is to use the Autotools in such a way to query the platform for specific features of interest, rather than for specific platforms assumed to provide the specific features of interest. The latter route makes assumptions that are bad because they may be conditional on things that are not reliable or subject to change. A good example is in byte ordering. If you want to know the platform's byte ordering, check for that. Do not check for a given platform, such as OS X, as an indicator of what you assume will always be its endianness since that may change one day.
 
@@ -30,7 +30,7 @@ The libebml library is the backbone of the Matroska multimedia container format.
 
 \head {\em Smolt}
 
-Smolt is both a software utility for gathering user hardware information and a publicly accessible central server that it interfaces with through anonymous and voluntary submission. This is very important for us because we require a reliable hardware database that can be consulted with to indicate the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
+Smolt is both a software utility for gathering user \index{hardware information submission}hardware information and a publicly accessible central server that it interfaces with through anonymous and voluntary submission. This is very important for us because we require a reliable hardware database that can be consulted with to indicate the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
 
 \head {\em streflop}
 

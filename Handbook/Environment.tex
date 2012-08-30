@@ -32,30 +32,9 @@
 \definecolor[colour_table_row_even][r=0.157,g=0.157,b=0.157,t=0.4,a=1]
 \definecolor[colour_table_row_odd][r=0.1,g=0.1,b=0.1,t=0.4,a=1]
 \definecolor[colour_table_dark_column][r=0.05,g=0.05,b=0.05]
-\definecolor[colour_text][r=0.754,g=0.516,b=0.324]
+\definecolor[colour_text][r=0.754,g=0.516,b=0.324] % RGB 0xc08453
 \definecolor[colour_text_background_shaded][r=0,g=0,b=0,t=0.4,a=1]
 \definecolor[colour_text_background_clear][r=0,g=0,b=0,t=0.0,a=1]
-
-% Embed colour profile information in PDF to make consistent across viewers. 
-%  This is a temporary workaround to solve this problem:
-%  <http://archive.contextgarden.net/message/20120415.060028.20f62826.en.html>
-%  Note: Resolved upstream in latest beta. Use \setupcolors[pagecolormodel=rgb]
-
-    %\startluacode
-    %backends                = backends                or { }
-    %backends.codeinjections = backends.codeinjections or { }
-
-    %function backends.codeinjections.rgbtransparencygroup()
-        %local d = lpdf.dictionary {
-            %S  = lpdf.constant("Transparency"),
-            %CS = lpdf.constant("DeviceRGB"),
-            %I  = true }
-        %lpdf.registerpagefinalizer(function()
-    %lpdf.addtopageattributes("Group",d) end)
-    %end
-
-    %backends.codeinjections.rgbtransparencygroup()
-    %\stopluacode
 
 % Setup various lists...
 

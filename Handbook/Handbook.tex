@@ -7,7 +7,7 @@
 
 \startcolor[colour_head]
 
-\startmakeup[standard][doublesided=no]
+\startmakeup[fullpage][doublesided=no]
 %    \setupalign[center]
 %    \bft \setupspacing \setstrut
 %    \setupbodyfont[25pt]
@@ -27,6 +27,9 @@
 \stopcolor
 
 \startmakeup[standard][page=,doublesided=no]
+
+    \vfill
+    \midaligned{\placefigure[here, none]{}{\externalfigure[Makeup/Images/Cartesian_Theatre.svg][][width=0.25\textwidth]}}
     \vfill
 
     Visit us on the web at \fullahref{https://www.avaneya.com}.

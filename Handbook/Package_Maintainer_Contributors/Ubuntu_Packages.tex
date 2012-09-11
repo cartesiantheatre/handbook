@@ -39,19 +39,21 @@ Take a look at \in{table}[table:ubuntu_packages] for a list of all of our propos
       \bTC This package should be the only one a user needs to get plugged into our repository. It provides our keyring, an {\tt avaneya.list} for {\tt /etc/apt/sources.list.d/}, apport hooks, and Ubuntu Software Center integration. This should make all other tasks easy for the layman if they only need this package to get themselves started. \eTC
     \eTR
 
-    \bTR
-      \bTC {\tt avaneya-everything} \eTC
-      \bTC Metapackage that pulls all packages the hardcore enthusiast might want. \eTC
-    \eTR
+%    \bTR
+%      \bTC {\tt avaneya-everything} \eTC
+%      \bTC Metapackage that pulls all packages the hardcore enthusiast might want. \eTC
+%    \eTR
 
     \bTR
       \bTC {\tt avaneya} \eTC
-      \bTC Stripped engine binaries and scripts. \eTC
+      \bTC Stripped architecture dependent binaries, such as the game engine. \eTC
     \eTR
 
     \bTR
       \bTC {\tt avaneya-media} \eTC
-      \bTC Cinematics, models, textures, audio effects, and other media. \eTC
+      \bTC Architecture independent data files, such as cinematics, models, 
+textures, icons, audio effects, and so on. This also includes executable scripts 
+that drive the engine. \eTC
     \eTR
 
     \bTR

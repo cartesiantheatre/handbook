@@ -45,7 +45,7 @@ $(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
 	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Environment.tex
 
 # Clean everything, including the cached engine diagram images...
-clean-all: clean
+clean: mostlyclean
 	@ rm -vf Engineer_Contributors/Images/AresEngine/*.svg
 	@ find . -type f -iname "m_k_i_v_*.pdf" -execdir rm -v {} \;
 	@ rm -vf ${ALL_GRAPHVIZ_PDF}
@@ -59,7 +59,7 @@ clean-all: clean
 	twopi -Tpdf $< -o $@
 
 # Clean most intermediate build files, including the generated PDF...
-clean:
+mostlyclean:
 	@ rm -vf $(OUTPUT_PDF)
 	@ rm -vf Handbook.pdf Handbook.aux Handbook.blg Handbook.bbl
 	@ rm -vf $(VIKING_PDF)

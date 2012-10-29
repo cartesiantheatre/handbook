@@ -29,8 +29,8 @@
 \definecolor[colour_link][colour_head]
 \definecolor[colour_page_number][colour_head]
 \definecolor[colour_page][r=0,g=0,b=0]
-\definecolor[colour_table_row_even][r=0.157,g=0.157,b=0.157,t=0.4,a=1]
-\definecolor[colour_table_row_odd][r=0.1,g=0.1,b=0.1,t=0.4,a=1]
+\definecolor[colour_table_row_even][r=0.357,g=0.357,b=0.357,t=0.4,a=1]
+\definecolor[colour_table_row_odd][r=0.3,g=0.3,b=0.3,t=0.4,a=1]
 \definecolor[colour_table_dark_column][r=0.05,g=0.05,b=0.05]
 \definecolor[colour_text][r=0.754,g=0.516,b=0.324] % RGB 0xc08453
 \definecolor[colour_text_background_shaded][r=0,g=0,b=0,t=0.4,a=1]
@@ -249,7 +249,7 @@
         [textseparator={\textcomma}]
 
     \setupfootnotes
-      [rule=on]
+      [rule=off]
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text
@@ -406,29 +406,13 @@
 \def\FullPageDiagram#1#2#3%
 {
     \startTEXpage[offset=0mm,width=30cm]
-%    \startframedtext[align=center,corner=rectangular]
     \placefigure
         [force][#1]
         {#2}
-        {\externalfigure[#3][factor=max,
-                             align=center,
-                             %background=color,
-                             %backgroundcolor=colour_figure_background
-                            ]}
-%    \stopframedtext
+        {\externalfigure[#3]
+            [factor=max,
+             align=center]}
     \stopTEXpage
-%    \page 
-%    \setuppapersize[diagram]
-%    \setuplayout[fullpage]
-%    \startframedtext[width=.95\textwidth,bottom=\vss,top=\vss,align=right,corner=rectangular]
-%    \placefigure
-%        [force][figure:#1]
-%        {#2}
-%        {\externalfigure[#3][width=.95\textwidth,background=color,backgroundcolor=colour_figure_background]}
-%    \stopframedtext
-%    \page
-%    \setuppapersize[main]
-%    \setuplayout[reset]
 }
 
 \def\StartChapter#1%

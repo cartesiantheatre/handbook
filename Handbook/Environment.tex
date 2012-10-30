@@ -242,11 +242,13 @@
 
     \setupnotation[footnote]
         [color=colour_footnote_text,
-         backgroundcolor=colour_footnote_background]
+         backgroundcolor=colour_footnote_background,
+         numbercommand=] % Remove elevated footnote notation at bottom of page
 
     % Implemented by Hans in bleeding edge ConTeXt...
     \setupnote[footnote]
-        [textseparator={\textcomma}]
+        [textseparator={\textcomma}, % Comma delineated
+         before={\crlf\crlf}] %
 
     \setupfootnotes
       [rule=off]

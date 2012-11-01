@@ -42,7 +42,7 @@ $(TOC_PDF): $(OUTPUT_PDF)
 # Just produce the Viking Lander Remastered chapter...
 viking: graphviz $(VIKING_PDF)
 $(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
-	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ --purgeresult --nonstopmode --environment=Environment.tex
+	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ $(CONTEXT_OPTIONS)
 
 # Clean everything, including the cached engine diagram images...
 clean: mostlyclean

@@ -4,17 +4,19 @@
 
 % Communication section...
 \StartSection{Communication}
-
 \StartSubSection{Satellite Uplink With Earth}
 Communicating with Earth is unfortunately not without high latency. It takes between 4 to 20 minutes to communicate between the two planets, depending on the position of their orbits. When communication is brokered by satellite, the connection will be lost when its orbit takes it to the far side of the planet.
 
+\StartSubSection{Mars Enhanced Telecommunications Orbiter}
+Personal communication across the surface of Mars is best done by relaying through the {\it Mars Enhanced Telecommunications Orbiter} (METO). Provided line of sight with the satellite is available, high bandwidth applications over UHF are available.
+
 \StartSubSection{Personal Citizen Band Radio}
-In terms of personal communication on the surface of the planet, a 2 m antenna should work in the 144 MHz band (VHF). Line-of-sight communication is required, but it is useless past 40 km because the planet is not very large.
+When METO is not available, personal communication on the surface can be done with a 2 m antenna working in the 144 MHz band (VHF). Line--of--sight communication is required. However, this becomes useless at ranges exceeding 40 km due to the planet's curvature, given that it is not very large.
 
-\StartSubSection{Ham Radio}
-In the event that satellites are not available, either because they fail or are too expensive, \index{ham radio}ham radio is a cheap and viable backup. Ham radio works by reflecting radio signals off of the ionosphere in the shortwave radio band. The {\it Mariner 9} and {\it Viking Mission} orbiters and landers provided us with a great deal of information on the Martian ionosphere which consists of about 90\% \chemical{O_2} cations, so we know this is possible to do.
+\StartSubSection{Shortwave DX Radio}
+In the event that neither METO nor line--of--sight communication is possible, shortwave radio reflected off of the ionosphere ({\it DX radio}) is a cheap and viable backup. DX radio works by reflecting radio signals off of the ionosphere in the shortwave radio band (3 to 30 MHz). The {\it Mariner 9} and {\it Viking Mission} orbiters and landers provided us with a great deal of information on the Martian ionosphere so we are able to predict reasonably how well this kind of communications equipment would function on Mars. We know its ionosphere consists of about 90\% \chemical{O_2} cations, so we know this is possible to do.
 
-Being able to communicate with a ham radio is dependent on the electron density peak in the ionosphere which determines the total usable frequencies. This is directly proportional to the square root of the electron density. On Earth, this is as high as 20 MHz which provides a great deal of bandwidth. On Mars, this will vary based on the time of day. During the day, the peak electron density of 200,000 \math{e/cm^{3}} is at an altitude of 135 km. This provides 4 MHz of bandwidth. At night this density is reduced down to only 5,000 \math{e/cm^{3}} at an altitude of 120 km, affording only 700 KHz of bandwidth. That is pretty low for video, but sufficient for voice and any small engineering telemetry that compresses well.
+The effectiveness of DX radio is dependent on the electron density peak in the ionosphere. This determines the total usable frequencies. This is directly proportional to the square root of the electron density. On Earth, this is as high as 20 MHz which provides a great deal of bandwidth. On Mars, this will vary based on the time of day. During the day, the peak electron density of 200,000 \math{e/cm^{3}} is at an altitude of 135 km. This provides 4 MHz of bandwidth. At night this density is reduced down to only 5,000 \math{e/cm^{3}} at an altitude of 120 km, affording only 700 KHz of bandwidth. That is pretty low for video, but sufficient for voice and any small engineering telemetry that compresses well.
 
-One of the added benefits of ham radio on Mars is that, unlike on Earth, signals suffer very little attenuation. This is because there is less interference on a world where there are no distant thunderstorms or other radio stations.
+One of the added benefits of DX radio on Mars is that, unlike on Earth, signals suffer very little attenuation. This is because there is less interference on a world where there are no distant thunderstorms and few radio stations.
 

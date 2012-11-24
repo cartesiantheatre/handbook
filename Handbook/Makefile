@@ -2,6 +2,8 @@
 # Copyright (C) 2010, 2011, 2012 Cartesian Theatre <kip@thevertigo.com>.
 # See the file Copying for details on copying conditions.
 
+# TODO: Use XVFB to attempt to invoke Umbrello headless...
+
 CONTEXT_PRODUCT         = Handbook.tex
 ALL_TEX_SOURCE          = $(shell find . -type f -iname '*.tex' -exec echo "{}" \; | sed 's/ /\\ /g')
 ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find . -type f -iname '*.dot.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))

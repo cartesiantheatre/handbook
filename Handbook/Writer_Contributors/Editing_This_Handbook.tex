@@ -24,16 +24,17 @@ $ sudo add-apt-repository ppa:reviczky/context-daily
 $ sudo add-apt-repository ppa:reviczky/luatex-daily
 $ sudo aptitude update
 $ sudo aptitude install     \
-    umbrello                \
-    texlive-math-extra      \
-    ttf-ubuntu-font-family  \
-    fonts-larabie-deco      \
     context                 \
     context-fonts           \
     context-modules         \
+    fonts-larabie-deco      \
     graphviz                \
+    inkscape                \
     pdftk                   \
-    inkscape
+    texlive-math-extra      \
+    ttf-ubuntu-font-family  \
+    xvfb                    \
+    umbrello
 \stopCodeExample
 
 This will add Adam's PPA, update your package list, download, install, and automatically configure the necessary programs needed to edit and build this book. This may take a while, depending on the speed of your internet connection and computer, but thankfully you only need to do this once. Feel free to go and pour yourself a chilled mug of kombucha while you wait.

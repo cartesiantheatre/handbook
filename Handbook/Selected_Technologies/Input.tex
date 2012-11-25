@@ -10,8 +10,10 @@
 
 The SDL_haptic API is used to provide \index{force feedback}force feedback, provided the API is available and the user's input device supports it. Since this is still considered a bleeding edge feature upstream, SDL version 1.3 or greater is required. Unfortunately it is unlikely that any distributions carry it at present, so we may have to provide packages in our own repository. We also have to be careful to not break the user's system in the process since they may have many packages already installed that probably depend on SDL 1.2.
 
-\head {\em SDL_input}
+A note about the alternatives to SDL_haptic. At this time, the Ogre3D plugins for OgreHaptics and OgreHAPI were both considered, but did not appear to be actively maintained. They were therefore their potential as future liabilities was of greater risk than SDL_haptic.
 
-The SDL_input API is used to provide \index{user input handling}input handling. Input starts at this low level API and is used to message pump CEGUI and anything else that needs to know what the user is doing.
+\head {\em OIS}
+
+OIS is an object--oriented API for Ogre3D which is used to provide \index{user input handling}input handling. Input starts at this low level API and is used to message pump CEGUI and anything else that needs to know what the user is doing.
 \stopitemize
 

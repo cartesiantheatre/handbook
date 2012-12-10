@@ -28,7 +28,6 @@ $ sudo aptitude install     \
     context-fonts           \
     context-modules         \
     fonts-larabie-deco      \
-    fonts-lmodern           \
     graphviz                \
     inkscape                \
     pdftk                   \
@@ -38,7 +37,7 @@ $ sudo aptitude install     \
     umbrello
 \stopCodeExample
 
-Note that you should replace the {\it fonts-lmodern} package name with {\it lmodern} if you are not running Ubuntu Raring, but Ubuntu Quantal. If you are instead using Ubuntu Precise or older, you can \href{http://distribution.contextgarden.net/current/fonts/new/fonts/opentype/public/lm-math/latinmodernmath-regular.otf}{download} the {\tt latinmodernmath-regular.otf} font directly into your {\tt \type{~}/.fonts} path. This font is needed to typeset various mathematical formulae.
+Note that if you are not running {\it Ubuntu Raring} or {\it Quantal}, but {\it Precise} or older, you will need to download the \href{http://distribution.contextgarden.net/current/fonts/new/fonts/opentype/public/lm-math/latinmodernmath-regular.otf}{latinmodernmath-regular.otf} font directly into your {\tt \type{~}/.fonts} path because it is not included in the dependencies \ConTeXt\ pulls. It is needed to typeset various mathematical formulae.
 
 This will add Adam's PPA, update your package list, download, install, and automatically configure the necessary programs needed to edit and build this book. This may take a while, depending on the speed of your internet connection and computer, but thankfully you only need to do this once. Feel free to go and pour yourself a chilled mug of kombucha while you wait.
 

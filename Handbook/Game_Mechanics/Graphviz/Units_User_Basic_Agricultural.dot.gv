@@ -6,7 +6,7 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ twopi -Tpdf Units_User_Basic_Agricultural.twopi.gv -o Units_User_Basic_Agricultural.pdf
+      $ twopi -Tpdf Units_User_Basic_Agricultural.dot.gv -o Units_User_Basic_Agricultural.pdf
 */
 
 digraph Units_User_Basic_Agricultural

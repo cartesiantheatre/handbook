@@ -13,9 +13,9 @@ As an example, you can and should build a greenhouse. But other influences in th
 
 But most units can and will change with time depending on various factors that take place in the game world. For example, an area zoned for habitat usage may start with only a few pressurized yurts, but after time, it may develop into an extravagant, full fledged, pressurized biodome or skyscraper. With further time yet, it may fall into a state of disrepair with the underprivileged seeking shelter within the ruins, but only should the social, economic, and other conditions be met since this is neither accidental nor random.
 
-We should now take a look at some of the different categories that form the basic unit tree available to the user. This is a very modest subset of all units the user can possibly create, but does not illustrate the variety each unit can express. For buildings these categories are {\it Agricultural}; {\it Economy and Commerce}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones}. Because these are high level categories, with the exception of the lattermost, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
+We should now take a look at some of the different categories that form the basic unit tree available to the user. This is a very modest subset of all units the user can possibly create, but does not illustrate the variety each unit can express. For buildings these categories are {\it Economy and Commerce}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones}. Because these are high level categories, with the exception of the lattermost, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
 
-The latter category of {\it Zones} does not necessitate a {\it specific} building for the user to erect, but rather, a region managed by the simulation of which it will control and erect as circumstance warrants. These zones include {\it Commercial}; {\it Habitat}; {\it Habitat and Commercial}; {\it Industrial}; and {\it Unzoned}.
+The latter category of {\it Zones} does not necessitate a {\it specific} building for the user to erect, but rather, a region managed by the simulation of which it will control and erect as circumstance warrants. These zones include {\it Agricultural}, {\it Commercial}, {\it Habitat}, {\it Habitat and Commercial}, {\it Industrial}, and {\it Unzoned}.
 
 If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the user. The figures that follow are an exploration of each of these high level categories. Note that they illustrate only the categorical relations, but not which unit is required to be built in order to provide for the availability of another unit. That is sometimes called a build dependency.
 
@@ -28,9 +28,16 @@ If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of
 
 \placefigure
     []
-    [figure:Units_User_Basic_Agricultural]
-    {User's basic agricultural unit tree.}
-    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Agricultural.pdf][][width=1.25\textwidth]}
+    [figure:Simulation_Zones]
+    {Simulation zones tree.}
+    {\externalfigure[Game_Mechanics/Graphviz/Simulation_Zones.pdf][][width=1.10\textwidth]}
+
+% Kip: Replaced with a simulation managed zone.
+%\placefigure
+%    []
+%    [figure:Units_User_Basic_Agricultural]
+%    {User's basic agricultural unit tree.}
+%    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Agricultural.pdf][][width=1.25\textwidth]}
 
 \page
 \placefigure
@@ -71,13 +78,6 @@ If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of
     {User's basic transportation unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Transportation.pdf][][width=1.25\textwidth]}
 
-\page
-\placefigure
-    []
-    [figure:Simulation_Zones]
-    {Simulation zones tree.}
-    {\externalfigure[Game_Mechanics/Graphviz/Simulation_Zones.pdf][][width=0.75\textwidth]}
-
 If you look carefully at \in{figure}[figure:Simulation_Zones], concrete units were not given, but rather, zones that the user can allocate for the simulation to manage. A habitat zone, for instance, can provide a space for the simulation to erect any kind of residential building. 
 
 In addition, the user can specify zoning restrictions on an area when it is allocated. These restrictions can limit the maximum building height, density, maximum amount of space in the zone a building can occupy, whether parking must be provided, noise emissions, or what have you. By density, we mean the maximum extent the land can be developed. In the case of a habitat zone, setting it low limits its potential maximum development to something rudimentary, such as a single inflatable pressurized yurt. Setting the density higher could lead it to eventually becoming a large, extravagant, high--rise apartment complex.
@@ -95,23 +95,30 @@ Assume that when a building is selected in the graphical user interface, options
 
 
 \StartSubSection{Static Unit Connections}
-Connecting all the object/building units of a city can be of two types
+Connecting all the object / building units of a city can be of two types:
 
-\startitemize[2]
-        \item a physical representation
-        \item a general relation based on distance or area
+\startitemize[4]
+        \item A physical representation,
+        \item A general relation based on distance or area.
 \stopitemize
 
-In a physical representaiton what is connected to a players controlled city is by roads or some other physical marker which not only creates the programmed connection but also the physical connection that allows a player to see that things are connected.
+In a physical representation what is connected to a player's controlled city is by roads or some other physical marker which not only creates the programmed connection but also the physical connection that allows a player to see that things are connected.
 
-In a general relatioship between objects we have no physical markers (this may be because roads are deemed unnecessary due to martian transport being adapted to the terrain) and the player has an understanding that the objects are connnected simply by there proximity. General relationships may also be represented with an area overlay such as a transparent colour showing the distance a water pump can pump water. Overlays are good at presenting information to a player in a quick and easy to understand manner, but they reduce the ability of a player to be able to respond to diverse and changing situations and react to these situations naturally or with reflex, essentially slowing down play. Overlays may also become process intensive. 
+In a general relationship between objects we have no physical markers and the player has an understanding that the objects are connected simply by there proximity. Sometimes this may be because roads are not always required due to Martian rovers or what have you being adapted to the terrain in some situations. 
+
+General relationships may also be represented with an area overlay such as a transparent colour showing the distance a water pump can pump water. Overlays are good at presenting information to a player in a quick and easy to understand manner, but they reduce the ability of a player to be able to respond to diverse and changing situations and react to these situations naturally or with reflex, essentially slowing down play. Overlays may also become process intensive. 
   
- Whether an object or agent is in the form of a physical or general representation is largely determined by what the object or agent is and how practical it is to be represented in either form. Physical representations could be in the form of roads, tubes, powerlines, paths, pipes, or any other civil structure connecting areas through transport or communication. They could also be in the form of non interactive or non functional objects that have no real impact on the game such as lines indicating a connection, however this later option removes elements of immersion, this may be an option that can be turned on and off.
+Whether an object or agent is in the form of a physical or general representation is largely determined by what the object or agent is and how practical it is to be represented in either form. Physical representations could be in the form of roads, tubes, powerlines, paths, pipes, or any other civil structure connecting areas through transport or communication. They could also be in the form of non interactive or non functional objects that have no real impact on the game such as lines indicating a connection, however this later option removes elements of immersion, this may be an option that can be turned on and off.
 
 
 \StartSubSection{Roads and Movement Units}
-All buildings on the game world are connected in some way once they are placed as units may walk to them, even if over the martian landscape and labor or workforce may travel between them in a similar manner. Connecting buildings through transport structures such as roads or transport tubes gives greater access by those who are able to access the particular transport structure. If the city has a network of roads, a building built outside of road access wil have less accessability, connecting the building to the road network give everyone with access to the road network access to the building. Of course road block or restricted areas and the like can be put in place to limit access. Likewise, cities may be connected in a similar fashion and cities outside of this connection will have less accessability to and from other cities, the advantages and disadvantages of this need to be weighed up on a case by case basis by players. A player connecting there city to another city which is in turn connected to 10 others may be opening there city to all these cities; also they may not realise this.
+All buildings on the game world are connected in some way once they are placed as units. Pedestrians may walk to them, even if over the Martian landscape. The labour or workforce may travel between them in a similar manner. Connecting buildings through transport structures such as roads or pressurized transportation tubes for pedestrians gives greater access by those who are able to access that particular transportation infrastructure. 
 
-There are a variety of transport structures that can be used for different purposes. There are vehicle transport such as roads, public transport such as rail and tubing, and then other areas of transport that may use a variety such as freight and shipping, as well as air and space travel. Players can use a variety of these and other transport structures to create a network of these systems to form a functioning city meeting demands of its citizens. Some forms of transport may be costly and others cheap. 
+If the city has a network of roads, a building built outside of road access will have less accessibility. Connecting the building to the road network gives everyone with access to the road network access to the building. Of course road blocks, high traffic and population density, or restricted areas and the like can affect access. 
 
-While roads are the primary method of connecting buildings for pedestrian and vehicle transport there may be other ways buildings can be connected for pedstrian transport or for other means. Buildings may be linked through a network to share data or even physical mail. Adjacent buildings of a similar type may be connected to form something such as a military complex or shopping hub, and farm buildings may be connected to form processing plants with entry points for combines to connect to silos which are connected to mills and processing plants creating products. It can be seen that an exhaustive list of building connections can be made to make some interesting building and playing styles. Different buildings and tranport networks combining to form different production, transport, and city types is part of the creattivity of play.
+Likewise, cities may be connected in a similar fashion through intercity highways and airways. Unpaved highways or aerial routes can be demarcated on the terrain with cost effective transponder beacons to aid with navigation across the terrain or in low visibility, such as at night, in the absence of satellite assisted positioning (MPS), or during seasonal sandstorms. Cities outside of these transportation routes will have less accessibility to and from other cities. The advantages and disadvantages of this need to be weighed up on a case by case basis by the player. A player connecting their city to another city, which is in turn connected to multiple others which the first was not directly, may be opening there city to all these other cities -- though they may not realize this.
+
+There are a variety of transportation structures that can be used for different purposes. There are vehicle transportation routes, such as roads and public transportation systems like the railway and subterranean vacuum tubes. These could be used for both the movement of people and goods. Aerial vehicles such as dirigibles, balloons, and fixed wing aircraft can be used for transportation across the planet of both people and goods. Rockets can be used for heavy lift at greater distance or for suborbital or even interplanetary transportation -- though railguns are more practical for unmanned cargo. Players can use a variety of these and other transport structures to create a network of these systems to form a functioning city meeting the demands of its citizens. Some forms of transportation may be better suited or more cost effective than others for different types of uses. 
+
+While roads are one method of connecting buildings for pedestrian and vehicle transportation, there may be other ways buildings can be connected for pedestrian transportation or for other means. Buildings may be linked through a network to physical goods. Adjacent buildings of a similar type may be connected to form something such as a military complex, industrial process, or a bazaar. Farm buildings may be connected to form processing plants with entry points for combines to connect to silos which are connected to mills and processing plants creating products. It can be seen that an exhaustive list of building connections can be made to make some interesting building and playing styles. Different buildings and transport networks combining to form different production, transport, and city types is part of the creativity of play.
+

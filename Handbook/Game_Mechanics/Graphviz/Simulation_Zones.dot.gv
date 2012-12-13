@@ -33,6 +33,7 @@ digraph Simulation_Zones
 	edge[penwidth="1.3"];
 
     // Zones...
+    "Agricultural"[label="Agricultural\n[Type: Zone]"];
     "Commercial"[label="Commercial\n[Type: Zone]"];
     "Habitat & Commercial"[label="Habitat & Commercial\n[Type: Zone]"]
     "Habitat"[label="Habitat\n[Type: Zone]"];
@@ -41,6 +42,7 @@ digraph Simulation_Zones
 
     // Relations...
     "Zones"[shape="folder"];
+        "Zones" -> "Agricultural";
         "Zones" -> "Commercial";
         "Zones" -> "Habitat";
         "Zones" -> "Habitat & Commercial";

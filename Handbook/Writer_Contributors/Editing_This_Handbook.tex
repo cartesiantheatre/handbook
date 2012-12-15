@@ -37,9 +37,9 @@ $ sudo aptitude install     \
     umbrello
 \stopCodeExample
 
-Note that if you are not running {\it Ubuntu Raring} or {\it Quantal}, but {\it Precise} or older, you will need to download the \href{http://distribution.contextgarden.net/current/fonts/new/fonts/opentype/public/lm-math/latinmodernmath-regular.otf}{latinmodernmath-regular.otf} font directly into your {\tt \type{~}/.fonts} path because it is not included in the dependencies \ConTeXt\ pulls. It is needed to typeset various mathematical formulae.
+Note that if you are a version of Ubuntu prior to {\it Quantal}, such as {\it Precise} or older, you will need to download the \href{http://distribution.contextgarden.net/current/fonts/new/fonts/opentype/public/lm-math/latinmodernmath-regular.otf}{latinmodernmath-regular.otf} font directly into your {\tt \type{~}/.fonts} path. It is needed to typeset various mathematical formulae.
 
-This will add Adam's PPA, update your package list, download, install, and automatically configure the necessary programs needed to edit and build this book. This may take a while, depending on the speed of your internet connection and computer, but thankfully you only need to do this once. Feel free to go and pour yourself a chilled mug of kombucha while you wait.
+The above commands will add Adam's PPA, update your package list, download, install, and automatically configure the necessary programs needed to edit and build this book. This may take a while, depending on the speed of your internet connection and computer, but thankfully you only need to do this once. Feel free to go and pour yourself a chilled mug of kombucha while you wait.
 
 Be warned that the version of Graphviz included in Ubuntu's repositories may not be new enough. You want to make sure you are pulling at least version 2.29. If you are not (check {\tt dot -V}), you can get the latest packages from their \href{http://www.graphviz.org/Download_linux_ubuntu.php}{website}. If you use an older Graphviz, some of the diagrams will come out wrong. If you are not working on them and just editing other parts of the book, this probably will not matter anyways.
 
@@ -52,8 +52,7 @@ $ cd ~/
 $ rm -Rfv ~/.texmf-var
 $ luatools --generate
 $ mtxrun --generate
-$ context --make
-$ context --make cont-en cont-nl
+$ context --make cont-en
 $ mtxrun --script fonts --reload
 \stopCodeExample
 

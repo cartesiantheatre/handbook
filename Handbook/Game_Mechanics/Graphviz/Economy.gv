@@ -1,0 +1,122 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010, 2011, 2012
+    Cartesian Theatre.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Units_User_Basic_Agricultural.dot.gv -o Units_User_Basic_Agricultural.pdf
+*/
+
+digraph Economy
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Economy";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+	
+    // Inputs and Outputs
+    "Taxation"[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+
+
+
+    // Relationships
+    "Budget"[shape="octagon"]
+    "Taxation"[shape="hexagon"]
+    "Exports"[shape="hexagon"]
+    "Imports"[shape="hexagon"]
+    "Resources"[shape="hexagon"]
+    "Infrastructure"[shape="hexagon"]
+    "Zoning"[shape="hexagon"]
+    "Funding"[shape="hexagon"]
+    "City Land"[shape="hexagon"]
+    "Militia"[shape="hexagon"]
+    "Business"[shape="hexagon"]
+    "Ordinance"[shape="hexagon"]
+    "Buildings"[shape="hexagon"]
+    "Business"[shape="hexagon"]
+    "Services"[shape="hexagon"]
+
+	"Taxation" -> "Budget";
+	"Exports" -> "Business";
+	"Imports" -> "Business";
+	"Resources" -> "Business";
+	"Infrastructure" -> "Business";
+	"Zoning" -> "Business";
+	"Zoning" -> "Resources";
+	"Funding" -> "Infrastructure";
+	"Funding" -> "Ordinance";
+	"City Land" -> "Budget";
+	"Militia" -> "Business";
+	"Business" -> "Taxation";
+	"Ordinance" -> "Zoning";
+	"Ordinance" -> "Resources";
+	"Budget" -> "Buildings";
+	
+	"Budget" -> "Zoning";
+		 -> "Infrastructure";
+		 -> "Funding";
+		 -> "Ordinance";
+		 -> "Militia";
+		 -> "Buildings";
+	"Zoning" -> "Business";
+		 -> "Resources";
+	"Infrastructure" -> "Business";
+			 -> "Resources";
+			 -> "Imports";
+			 -> "Exports";
+	"Funding" -> "Infrastructure";
+		  -> "Ordinance";
+		  -> "Militia";
+		  -> "Buildings";
+	"Ordinance" -> "Business";
+		    -> "Zoning";
+		    -> "Infrastructure";
+		    -> "Buildings";
+		    -> "Resources";
+	"Militia" -> "Business";
+		  -> "Infrastructure";
+	"Buildings" -> "Infrastructure";
+		    -> "Business";
+		    -> "Militia";
+	"Zoning" -> "Business";
+		 -> "Resources";
+	"Business" -> "Taxation";
+		   -> "Exports";
+		   -> "Imports";
+	"Imports" -> "Taxation";
+	"Exports" -> "Taxation";
+	"Exports" -> "Budget";
+	"Taxation" -> "Budget";
+	
+	
+
+
+
+		
+
+}

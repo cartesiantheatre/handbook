@@ -5,7 +5,7 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ twopi -Tpdf Economy.dot.gv -o Economy.pdf
+      $ twopi -Tpdf Economy.twopi.gv -o Economy.pdf
 */
 
 digraph Economy

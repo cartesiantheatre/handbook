@@ -10,9 +10,13 @@ The freedesktop.org community is committed to providing standards and applicatio
 The desktop environments that are freedesktop.org compliant in the ways that are relevant to this project include Xfce, Gnome, LXDE, ROX, KDE, and probably others. This is important because unlike some non--free platforms, GNU gives users the freedom to select whatever desktop environment they like.
 
 \startitemize[4]
-\head {\em D--Bus}
+\head {\em D--Bus Specification}
 
 The D--Bus (Desktop Bus) API is a simple inter--process communication (IPC) system for software applications to communicate with one another. Avaneya can use it to determine the state of the user's network connection. It is available only under supported POSIX compliant operating systems.
+
+\head {\em Desktop Application Autostart Specification}
+
+The autostart specification ensures that an application, notwithstanding the user's settings, will automatically launch when the appropriate medium is inserted. This could be a traditional optical media player's are accustomed to, but could also be a USB stick as an example.
 
 \head {\em Desktop Entry Specification}
 
@@ -22,7 +26,7 @@ Several freedesktop.org complaint desktop environments have adopted this convent
 
 MPRIS is a standardized interface for compliant media players. We could provide an option in Avaneya that stops the user's media player if currently playing upon launch and then instruct it to resume playback on exit.
 
-\head {\em Startup Notification}
+\head {\em Startup Notification Specification}
 
 This specification defines a method that allows any compliant desktop environment to monitor Avaneya as it starts up and to provide the user with feedback.
 \stopitemize

@@ -80,18 +80,6 @@ Also individuals may move between workforce types, as in moving through educatio
 
 
 
-\StartSubSection{Education Types}
-%Thinking of giving players micro management control of the education system if they choose.
-A cities education system has large influences over the degree to which the population or workforce are given skills and knowledge to become provicient at certain workforce types.
-
-%notes:
-A method of allowing a comprehensive yet customisable education system in Avaneya is to note certain education or knowledge streams that are generally undertaken by a populations.
-
-This can then allow workforce types to be modified to minute degrees with types such as primary maths 1,2,3 and so on. Education can then be as simple as grades through primary, secondary, etc or as complex as passes required in basic class units before progression to the next with any combination or divergence the player can think of.
-
-In this way I am thinking that 
-
-..also allowing for players to implement economic systems where everyone is learning on the job from a young age, or moving between many careers and educations from you ages or implement Steiner like educational paradigms. 
 
 
 \StartSubSection{Transitioning Between Workforce Types}
@@ -155,19 +143,38 @@ Security Actions
 Belonging Actions
 
 \StartSubSection{Workforce Unit Variables}
+
+
 %Variables which uniquely identify the unit and determine its capabilites.
 
 Unique ID
 [Unique alpha-numeric key](unique to each unit)
-[Date and time stamp of birth](auto generates secondary age variable)
+[Date and time stamp of %birth](auto generates secondary age variable)
 -These above two generate a unique unit, allowing for keys to be recycled, but date/time stamp will change.
 
-[First Name and Last Name](may become unique to a cities cultural influences)
+%[First Name and Last Name](may become unique to a cities cultural influences)
 [Race/Ancestry]
 [Income](fluctuates)
 [Workforce Types](multiple, fluctuates)
-[Health Effects](multiple)
+%[Health Effects](multiple)
 [Social Category](?)
+
+%SAMPLE UNIT VARIABLES
+Here is a sample list of a units variables:
+[UNIQUE ID][DATE/TIME O.B][LATITUDE:LONGITUDE][CURRENT ACTION][EMPLOYMENT][OXYGEN][WATER][FOOD][SECURITY][BELONGING]
+[NAME][FATHERS RACE][MOTHERS RACE][HEALTH EFFECT][HEALTH EFFECT][EDUCATION TYPE][EDUCATION TYPE][WORKFORCE TYPE][WORKFORCE TYPE]
+[WORKFORCE TYPE][WORKFORCE TYPE][INCOME][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][EDUCATION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
+[CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
+
+And here is a sample list of an average labour worker within sub-par city with several Earth influences filling those boxes:
+[A245JK89DJ102SK][2013/17/03:2146.46.12][-37.048601,143.739624][MARCHING IN PROTEST][C+R PTY WELDING LINES][O:9][W:4][F:5][S:4][B:8]
+[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES]
+
+
+
+In this example, the unique ID identifies the unit along with its game time date and time stamp. The games longitutude and latitude place and track where the unit is, current action notes what the unit is involved in and the employment variable shows where he is working.
+ Next we can see the unit has plenty of air (9/10), is a little thirsty, will soon need food, is not feeling secure which is probably why he is protesting, and is fitting in with the crowd with a beloning level of 8. Optional for the game is the tracing of the units bloodlines, showing mothers and fathers ancestry. Next are its health effects which reflect its consumption choices and how the unit may eventually being spending it money (ie on healthcare or medication) or how it will eventually die. Next we can see this unit has obtained general primary and secondary education types which influences the basic skill set it has and therefore determines the work it can obtain. Next we have the workforce types it is involved in which denotes where is has been working, where it is working, so its skills, along with any other non-social activity, in this case he is actively protesting. We can then see he is currently earning the equivalent of 31,000 a year in wages and prefers to socialise by having coffee and going to movies resturants. He also has an education preference for journalism which means if it was available and he could still meet his needs he would be studying journalism instead of what he is currently doing. He has 
+a consumption preference for fast food, movies, bananas, watches, designer boots, and rifles; this means he will spend his disposable income on these goods in no particular order. Note that in this above exmaple, education types does not accurately depict a units education, education types will actually be made up of many types forming an education as chosen by the player. Primary, secondary, etc are just the games default educational system in place without any player management.
 
 
 

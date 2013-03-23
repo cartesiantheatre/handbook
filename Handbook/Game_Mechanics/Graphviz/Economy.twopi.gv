@@ -61,6 +61,7 @@ digraph Economy
     "Residential"[shape="hexagon"]
     "Services"[shape="hexagon"]
 
+	
 	"Taxation" -> "Budget";
 	"Exports" -> "Business";
 	"Resources" -> "Business";
@@ -75,48 +76,62 @@ digraph Economy
 	"Ordinance" -> "Zoning";
 	"Ordinance" -> "Resources";
 	"Budget" -> "Buildings";
+
 	
 	"Budget" -> "Zoning";
-		 -> "Infrastructure";
-		 -> "Funding";
-		 -> "Ordinance";
-		 -> "Militia";
-		 -> "Public Buildings";
+	"Budget" -> "Infrastructure";
+	"Budget" -> "Funding";
+	"Budget" -> "Ordinance";
+	"Budget" -> "Militia";
+	"Budget" -> "Buildings";
+	"Budget" -> "Services";	
+	
 	"Zoning" -> "Business";
-		 -> "Resources";
+	"Zoning" -> "Resources";
+	
 	"Infrastructure" -> "Business";
-			 -> "Residential";
-			 -> "Resources";
-			 -> "Imports";
-			 -> "Exports";
-			 -> "Buildings";
+	"Infrastructure" -> "Residential";
+	"Infrastructure" -> "Resources";
+	"Infrastructure" -> "Imports";
+	"Infrastructure" -> "Exports";
+	"Infrastructure" -> "Buildings";
+	
 	"Funding" -> "Infrastructure";
-		  -> "Ordinance";
-		  -> "Militia";
-		  -> "Buildings";
+	"Funding" -> "Ordinance";
+	"Funding" -> "Militia";
+	"Funding" -> "Buildings";
+	
 	"Ordinance" -> "Business";
-		    -> "Zoning";
-		    -> "Infrastructure";
-		    -> "Buildings";
-		    -> "Resources";
+	"Ordinance" -> "Zoning";
+	"Ordinance" -> "Infrastructure";
+	"Ordinance" -> "Buildings";
+	"Ordinance" -> "Resources";
+	
 	"Militia" -> "Business";
-		  -> "Infrastructure";
+	"Militia" -> "Infrastructure";
+	
 	"Buildings" -> "Infrastructure";
-		    -> "Militia";
+	"Buildings" -> "Militia";
+	
 	"Zoning" -> "Business";
-		 -> "Residential";
-		 -> "Resources";
+	"Zoning" -> "Residential";
+	"Zoning" -> "Resources";
+	
 	"Business" -> "Taxation";
-		   -> "Exports";
-		   -> "Imports";
+	"Business" -> "Exports";
+	"Business" -> "Imports";
+	
 	"Residential" -> "Taxation"
+	
 	"Imports" -> "Taxation";
-		  -> "Ordinance";
+	"Imports" -> "Ordinance";
+	
 	"Exports" -> "Taxation";
-		  -> "Ordinance";
+	"Exports" -> "Ordinance";
+	
 	"Taxation" -> "Budget";
 	
-	
+	"Buildings" -> "Business";	
 	
 	
 

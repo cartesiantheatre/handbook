@@ -1,0 +1,64 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Simulation_Zones.twopi.gv -o Simulation_Zones.pdf
+*/
+
+digraph Needs_Priority
+{
+	// Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Zones";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+
+
+// Needs
+
+	"Workforce Unit"[shape="octagon"]
+	"Oxygen Supplied Room"[shape="hexagon"]
+	"Local Available Water"[shape="hexagon"]
+	"Local Available Food"[shape"hexagon"]
+	"Has: Job, Home"[shape"hexagon"]
+	"Has Friends"[shape"hexagon"]
+	
+	"Base Needs Fulfilled"[shape"octagon"]
+	"Follow Consumption/Social Need"[shape"hexagon"]
+
+
+// Relations
+
+	"Workforce Unit" 	-> "Oxygen Supplied Room"; 
+	"Workforce Unit"	-> "Local Available Water"; 
+	"Workforce Unit"	-> "Local Available Food" ;
+	"Workforce Unit"	-> "Has: Job, Home";
+	"Workforce Unit"	-> "Has Friends";
+	"Workforce Unit"	-> "Base Needs Fulfilled";
+	
+	"Base Needs Fulfilled"	-> "Follow Consumption/Social Need";
+	
+}
+
+
+
+
+
+
+
+
+

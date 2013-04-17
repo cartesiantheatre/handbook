@@ -25,7 +25,7 @@ digraph Needs_Priority
 	node[fillcolor="gray10"];
     node[fontcolor="#c08453ff"];
     node[fontname="Ubuntu"];
-    node[shape="none"]
+    node[shape="none"];
 
 
 // Needs
@@ -33,12 +33,11 @@ digraph Needs_Priority
 	"Workforce Unit"[shape="octagon"]
 	"Oxygen Supplied Room"[shape="hexagon"]
 	"Local Available Water"[shape="hexagon"]
-	"Local Available Food"[shape"hexagon"]
-	"Has: Job, Home"[shape"hexagon"]
-	"Has Friends"[shape"hexagon"]
-	
-	"Base Needs Fulfilled"[shape"octagon"]
-	"Follow Consumption/Social Need"[shape"hexagon"]
+	"Local Available Food"[shape="hexagon"]
+	"Has: Job, Home"[shape="hexagon"]
+	"Has Friends"[shape="hexagon"]
+	"Base Needs Fulfilled"[shape="octagon"]
+	"Follow Consumption/Social Need"[shape="hexagon"]
 
 
 // Relations
@@ -48,8 +47,13 @@ digraph Needs_Priority
 	"Workforce Unit"	-> "Local Available Food" ;
 	"Workforce Unit"	-> "Has: Job, Home";
 	"Workforce Unit"	-> "Has Friends";
-	"Workforce Unit"	-> "Base Needs Fulfilled";
-	
+
+	"Oxygen Supplied Room"	-> "Base Needs Fulfilled";
+	"Local Available Water"	-> "Base Needs Fulfilled";
+	"Local Available Food"	-> "Base Needs Fulfilled";
+	"Has: Job, Home"	-> "Base Needs Fulfilled";
+	"Has Friends"		-> "Base Needs Fulfilled";
+
 	"Base Needs Fulfilled"	-> "Follow Consumption/Social Need";
 	
 }

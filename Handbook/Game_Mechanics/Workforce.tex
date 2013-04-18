@@ -83,7 +83,9 @@ Also individuals may move between workforce types, as in moving through educatio
 
 \StartSubSection{Transitioning Between Workforce Types}
 %Unit gets skill and either upgrades workforce type or adds a workforce type.
-%Hows does units get skill - interests - needs - continual work - education
+%How do units get skill - interests, needs, continual work, education, age, handicaps.
+%How does a unit move between jobs?
+%How does a unit choose an education type?
 
 
 
@@ -119,32 +121,76 @@ To determine the type of action an unit will undertake is complex. It is a matte
 
 Not everything will be required to have an action, breathing and drinking water are just factored into resource use and will not evoke a reaction unless the unit is unable to obtain this resource. The main use for entity ations is to document visually and statistically the units input into the economy and to create dynamic, broad, and creative unit responses to player input.
 
-%Example Entity Actions
+%Example Entity Actions [an (E) signifies emergency/fight flight response]
 Oxygen Actions
 -breath 
--move to air source
--stay calm
--panic and scramble for air
--murder to lessen burden on air supply
+-move to air source (E)
+-stay calm (E)
+-panic and scramble for air (E)
+-murder to lessen burden on air supply (E)
 -partition government for cheaper air
+-protest for cheaper air
+-steal air supply
+-riot for cheaper air
+-ask for air
+-beg for air
 
 Water Actions
 -move to water source
 -stay calm
--panic and scramble for water
--murder to lessen burden on water supply
+-panic and scramble for water (E)
+-murder to lessen burden on water supply (E)
 -partition government for cheaper water
+-protest for cheaper water
+-riot for cheaper water
+-steal water
+-ask for water
+-beg for water
 
 
 Food Actions
-
+-eat food
+-cook food
+-buy food
+-ask for food
+-beg for food
+-steal food 
+-go to resturant/cafe/food court/ etc
+-go to resturant/cafe/food court/ etc with friend
+-murder for food (E)
+-kill animal
+-partition government for cheaper food
+-protest for cheaper food
+-riot for cheaper food (E)
 
 
 Security Actions
-
+-partition government for: militia; police; emergency services
+-partition government for: attack neighbouring city; ethnic cleansing
+-protest government for: above
+-riot for: above
+-buy house
+-rent house
+-squat
+-build house
+-partition/protest/riot government for: cheaper housing
+-purchase firearm/weapon
+-partition/protest/riot government for: access to firearms/weapons
+-fitness/martial arts
+-vigilante group
 
 
 Belonging Actions
+-
+-
+-
+-
+-
+-
+
+
+
+
 
 \StartSubSection{Workforce Unit Variables}
 
@@ -168,11 +214,11 @@ Here is a sample list of a units variables:
 [UNIQUE ID][DATE/TIME O.B][LATITUDE:LONGITUDE]
 [CURRENT ACTION][EMPLOYMENT][OXYGEN][WATER][FOOD][SECURITY][BELONGING]
 [NAME][FATHERS RACE][MOTHERS RACE][HEALTH EFFECT][HEALTH EFFECT][EDUCATION TYPE][EDUCATION TYPE][WORKFORCE TYPE][WORKFORCE TYPE]
-[WORKFORCE TYPE][WORKFORCE TYPE][INCOME][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][EDUCATION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
+[WORKFORCE TYPE][WORKFORCE TYPE][INCOME][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][EDUCATION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][NEGATIVE]
 
 And here is a sample list of an average labour worker within sub-par city with several Earth influences filling those boxes:
 [A245JK89DJ102SK][2013/17/03:2146.46.12][-37.048601,143.739624][MARCHING IN PROTEST][C+R PTY WELDING LINES][O:9][W:4][F:5][S:4][B:8]
-[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES]
+[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES][ASTHEMA]
 
 
 

@@ -86,7 +86,29 @@ Also individuals may move between workforce types, as in moving through educatio
 %How do units get skill - interests, needs, continual work, education, age, handicaps.
 %How does a unit move between jobs?
 %How does a unit choose an education type?
+Workforce units can have multiple workforce types noting there abilities. The methods in which the units gain these varies from default/automatic changes such as units changing types as they move through different age brackets giving them certain effects, abilities, needs, and wants that is particular to that age bracket (or workforce age type) and to a particular cities style, through to workforce types specifically chosen by the unit such as further education or changing jobs.
 
+%Default/Automatic Workforce Changes
+%List of above
+Default workforce changes are those that the game will give a unit automatically as a result of some change, this kind of change does not take into account the units interests or player input.
+
+Age:
+As mentioned above, workforce units will change one of there types as the unit ages. The subsection on unit variables notes that all units have a time stamp noting there creation, from this time stamp the game will calculate what age this unit is and therefore what age bracket it falls within. The age bracket is just another workforce type which allows the game to give attributes or apply conditions to the unit. New borns have different needs and will effect the world differently than middle aged units which in turn will be different from the elderly. 
+
+Specifically the age groups will be new born, toddler, child, adolescent, young adult, middle aged, late middle aged, elderly, elderly infirmed. 
+
+Calamity:
+Units will come across certain situations which will cause them injury and/or disabilty which could be temporary or permanent. 
+
+
+ 
+
+
+%Player Chosen Workforce Changes
+%List of above
+
+%Unit Chosen Workforce Changes
+%List of above  
 
 
 
@@ -463,11 +485,11 @@ Here is a sample list of a units variables:
 [UNIQUE ID][DATE/TIME O.B][LATITUDE:LONGITUDE]
 [CURRENT ACTION][EMPLOYMENT][OXYGEN][WATER][FOOD][SECURITY][BELONGING]
 [NAME][FATHERS RACE][MOTHERS RACE][HEALTH EFFECT][HEALTH EFFECT][EDUCATION TYPE][EDUCATION TYPE][WORKFORCE TYPE][WORKFORCE TYPE]
-[WORKFORCE TYPE][WORKFORCE TYPE][INCOME][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][EDUCATION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
+[WORKFORCE TYPE][WORKFORCE TYPE][INCOME][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][EDUCATION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][ILLNESS]
 
 And here is a sample list of an average labour worker within sub-par city with several Earth influences filling those boxes:
 [A245JK89DJ102SK][2013/17/03:2146.46.12][-37.048601,143.739624][MARCHING IN PROTEST][C+R PTY WELDING LINES][O:9][W:4][F:5][S:4][B:8]
-[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES]
+[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES][ASTHEMA]
 
 
 

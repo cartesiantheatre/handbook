@@ -1,0 +1,84 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Workforce_Types_Changes.twopi.gv -o Workforce_Types_Changes.pdf
+*/
+
+digraph Workforce_Types_Changes
+{
+    // Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Workforce_Types_Changes";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+// Relationships
+
+    "Workforce Unit"[shape="octagon"]
+    "Age Group: 3"[shape="hexagon"]
+    "Physical Labour: Line Worker: 1"[shape="hexagon"]
+    "Seconday Education"[shape="hexagon"]
+    "Seconday Education (retains)"[shape="hexagon"]
+    "Time"[shape="hexagon"]
+    "More Time"[shape="hexagon"]
+    "Age Group: 4"[shape="hexagon"]
+    "Physical Labour: Line Worker: 2"[shape="hexagon"]
+    "Tertiary Education: Economics: 1"[shape="hexagon"]
+    "Tertiary Education: Literature: 1"[shape="hexagon"]
+    "Tertiary Education: Economics: 4"[shape="hexagon"]
+    "Tertiary Education: Literature: 2"[shape="hexagon"]
+    "Mental Labour: Economist: 1"[shape="hexagon"]
+    "Age Group: 4(not changed)"[shape="hexagon"]
+    "Physical Labour: Line Worker: 2(retains)"[shape="hexagon"]
+    "Seconday Education(still retains)"[shape="hexagon"]
+
+
+	"Workforce Unit" 	-> "Age Group: 3";
+	"Workforce Unit"	-> "Physical Labour: Line Worker: 1";
+	"Workforce Unit"	-> "Seconday Education";
+
+	"Age Group: 3"				-> "Time";
+	"Physical Labour: Line Worker: 1"	-> "Time";
+	"Seconday Education"			-> "Time";
+
+	"Time"	-> "Age Group: 4";
+	"Time"	-> "Physical Labour: Line Worker: 2";
+	"Time"	-> "Seconday Education (retains)";
+	"Time"	-> "Tertiary Education: Economics: 1";
+	"Time"	-> "Tertiary Education: Literature: 1";
+			
+	"Age Group: 4"				-> "More Time";
+	"Physical Labour: Line Worker: 2"	-> "More Time";				
+	"Seconday Education (retains)"		-> "More Time";
+	"Tertiary Education: Economics: 1"	-> "More Time";
+	"Tertiary Education: Literature: 1"	-> "More Time";
+
+	"More Time"	-> "Age Group: 4(not changed";
+	"More Time"	-> "Physical Labour: Line Worker: 2(retains)";
+	"More Time"	-> "Seconday Education(still retains)";
+	"More Time"	-> "Tertiary Education: Economics: 4";
+	"More Time"	-> "Tertiary Education: Literature: 2";
+	"More Time"	-> "Mental Labour: Economist: 1";
+
+
+
+}

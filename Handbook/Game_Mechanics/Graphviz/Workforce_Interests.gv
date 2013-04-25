@@ -1,0 +1,83 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Workforce_Interests.twopi.gv -o Workforce_Interests.pdf
+*/
+
+digraph Workforce_Needs
+{
+    // Graph attributes...
+    bgcolor="transparent";
+    margin="0";
+    ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Zones";
+
+    // Node attributes...
+    node[color="#d3502dff"];
+    node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+
+
+// Interests
+
+	"Workforce Unit"[shape="octagon"]
+	"Television"[shape="hexagon"]
+	"Advertisement"[shape="hexagon"]
+	"Program"[shape="hexagon"]
+	"Business/Corporation"[shape="hexagon"]
+	"Government(City/Player)"[shape="hexagon"]
+	"Content Type(A,B,C,D,etc)"[shape="hexagon"]
+	"Content Type(A,B,C,D,E,etc)"[shape="hexagon"]
+	"Unit Viewing"[shape="hexagon"]
+	"Viewed for Required Duration for Interest/Age"[shape="hexagon"]
+	"Generates Appropriate Interest"[shape="hexagon"]
+
+// Relations
+	// Television	
+
+	"Business/Corporation"		-> "Television";
+	"Government(City/Player)"	-> "Television";
+
+	"Television"	-> "Advertisement";
+	"Television"	-> "Program";
+
+	"Advertisement"	-> "Content Type(A,B,C,D,etc)";
+	"Program"	-> "Content Type(A,B,C,D,E,etc)";
+
+	"Content Type(A,B,C,D,etc)"	-> "Unit Viewing";	
+	"Content Type(A,B,C,D,E,etc)"	-> "Unit Viewing";
+
+	"Workforce Unit"	-> "Unit Viewing";	
+	
+	"Unit Viewing"		-> "Viewed for Required Duration for Interest/Age";
+
+	"Viewed for Required Duration for Interest/Age"	-> "Generates Appropriate Interest";	
+
+	"Generates Appropriate Interest" -> "Workforce Unit";
+
+
+	//
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

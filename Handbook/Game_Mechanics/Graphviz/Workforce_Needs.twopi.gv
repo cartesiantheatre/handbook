@@ -5,7 +5,7 @@
   
   To manually compile:
       $ sudo aptitude install graphviz
-      $ twopi -Tpdf Simulation_Zones.twopi.gv -o Simulation_Zones.pdf
+      $ twopi -Tpdf Workforce_Needs.twopi.gv -o Workforce_Needs.pdf
 */
 
 digraph Workforce_Needs

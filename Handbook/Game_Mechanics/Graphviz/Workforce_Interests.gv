@@ -32,41 +32,91 @@ digraph Workforce_Needs
 
 	"Workforce Unit"[shape="octagon"]
 	"Television"[shape="hexagon"]
+	"Radio"[shape="hexagon"]
+	"Billboard"[shape="hexagon"]
+	"Newspaper"[shape="hexagon"]
+	"Solnet"[shape="hexagon"]
 	"Advertisement"[shape="hexagon"]
 	"Program"[shape="hexagon"]
 	"Business/Corporation"[shape="hexagon"]
 	"Government(City/Player)"[shape="hexagon"]
 	"Content Type(A,B,C,D,etc)"[shape="hexagon"]
-	"Content Type(A,B,C,D,E,etc)"[shape="hexagon"]
 	"Unit Viewing"[shape="hexagon"]
 	"Viewed for Required Duration for Interest/Age"[shape="hexagon"]
 	"Generates Appropriate Interest"[shape="hexagon"]
+	"Other Workforce Unit"[shape="hexagon"]
+	"Unit Interest Based Actions"[shape="hexagon"]
+	"Behaviour Category"[shape="hexagon"]
+	"Content Type (A,B,C,D,etc)"[shape="hexagon"]
+	"Interest Category Full?"[shape="hexagon"]
+	"Yes"[shape="hexagon"]
+	"Yes."[shape="hexagon"]
+	"No"[shape="hexagon"]
+	"No."[shape="hexagon"]
+	"Interest Not Generated"[shape="hexagon"]
+	"Unit Variable Created/Changed"[shape="hexagon"]
+
 
 // Relations
-	// Television	
+	// Television & Media	
 
 	"Business/Corporation"		-> "Television";
 	"Government(City/Player)"	-> "Television";
-
+	"Business/Corporation"		-> "Radio";
+	"Government(City/Player)"	-> "Radio";
+	"Business/Corporation"		-> "Billboard";
+	"Government(City/Player)"	-> "Billboard";
+	"Business/Corporation"		-> "Newspaper";
+	"Government(City/Player)"	-> "Newspaper";
+	"Business/Corporation"		-> "Solnet";
+	"Government(City/Player)"	-> "Solnet";	
+	
+	
+	
+	
+	
 	"Television"	-> "Advertisement";
 	"Television"	-> "Program";
+	"Radio"		-> "Program";
+	"Radio"		-> "Advertisement";
+	"Solnet"	-> "Advertisement";
+	"Billboard"	-> "Advertisement";
+	"Newspaper"	-> "Advertisement";
+
 
 	"Advertisement"	-> "Content Type(A,B,C,D,etc)";
-	"Program"	-> "Content Type(A,B,C,D,E,etc)";
+	"Program"	-> "Content Type(A,B,C,D,etc)";
 
 	"Content Type(A,B,C,D,etc)"	-> "Unit Viewing";	
 	"Content Type(A,B,C,D,E,etc)"	-> "Unit Viewing";
 
 	"Workforce Unit"	-> "Unit Viewing";	
 	
-	"Unit Viewing"		-> "Viewed for Required Duration for Interest/Age";
+	"Unit Viewing"		-> "Interest Category Full?";
+					"Interest Category Full?" -> "Yes";
+					"Interest Category Full?" -> "No";
+						"Yes"	-> "Interest Not Generated";
+						"No"	-> "Viewed for Required Duration for Interest/Age";
+								"Viewed for Required Duration for Interest/Age" -> "Yes.";
+								"Viewed for Required Duration for Interest/Age" -> "No.";
 
-	"Viewed for Required Duration for Interest/Age"	-> "Generates Appropriate Interest";	
+									"Yes." 	-> "Generates Appropriate Interest";
+									"No."	-> "Interest Not Generated";
 
-	"Generates Appropriate Interest" -> "Workforce Unit";
+	
+	"Generates Appropriate Interest" -> "Unit Variable Created/Changed";
 
 
-	//
+	// Behavioural Observations
+
+	"Other Workforce Unit"		-> "Unit Interest Based Actions";
+	"Unit Interest Based Actions"	-> "Behaviour Category";
+	"Behaviour Category"		-> "Content Type (A,B,C,D,etc)";
+	"Content Type (A,B,C,D,etc)"	-> "Unit Viewing";
+
+	
+	// 
+	
 
 
 

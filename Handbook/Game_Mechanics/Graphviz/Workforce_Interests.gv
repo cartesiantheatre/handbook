@@ -88,8 +88,7 @@ digraph Workforce_Needs
 	"Program"	-> "Content Type(A,B,C,D,etc)";
 
 	"Content Type(A,B,C,D,etc)"	-> "Unit Viewing";	
-	"Content Type(A,B,C,D,E,etc)"	-> "Unit Viewing";
-
+	
 	"Workforce Unit"	-> "Unit Viewing";	
 	
 	"Unit Viewing"		-> "Interest Category Full?";
@@ -115,6 +114,12 @@ digraph Workforce_Needs
 	"Content Type (A,B,C,D,etc)"	-> "Unit Viewing";
 
 	
+	// Theater 
+
+
+	// Song/Music
+
+
 	// 
 	
 

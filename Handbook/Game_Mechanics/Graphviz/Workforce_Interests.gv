@@ -32,7 +32,7 @@ digraph Workforce_Needs
 
 	"Workforce Unit"[shape="octagon"]
 	"Television"[shape="hexagon"]
-	"Radio"[shape="hexagon"]
+	"Radio/Music"[shape="hexagon"]
 	"Billboard"[shape="hexagon"]
 	"Newspaper"[shape="hexagon"]
 	"Solnet"[shape="hexagon"]
@@ -41,13 +41,12 @@ digraph Workforce_Needs
 	"Business/Corporation"[shape="hexagon"]
 	"Government(City/Player)"[shape="hexagon"]
 	"Content Type(A,B,C,D,etc)"[shape="hexagon"]
-	"Unit Viewing"[shape="hexagon"]
-	"Viewed for Required Duration for Interest/Age"[shape="hexagon"]
+	"Unit Perceiving"[shape="hexagon"]
+	"Perceived for Required Duration for Interest/Age"[shape="hexagon"]
 	"Generates Appropriate Interest"[shape="hexagon"]
 	"Other Workforce Unit"[shape="hexagon"]
 	"Unit Interest Based Actions"[shape="hexagon"]
-	"Behaviour Category"[shape="hexagon"]
-	"Content Type (A,B,C,D,etc)"[shape="hexagon"]
+	"Behaviour Content"[shape="hexagon"]
 	"Interest Category Full?"[shape="hexagon"]
 	"Yes"[shape="hexagon"]
 	"Yes."[shape="hexagon"]
@@ -55,6 +54,14 @@ digraph Workforce_Needs
 	"No."[shape="hexagon"]
 	"Interest Not Generated"[shape="hexagon"]
 	"Unit Variable Created/Changed"[shape="hexagon"]
+	"Theatrical Performance"[shape="hexagon"]
+	"Stereo"[shape="hexagon"]
+	"Buscar"[shape="hexagon"]
+	"Category Indulged Within Needed Timeframe?"[shape="hexagon"]
+	" Yes"[shape="hexagon"]
+	" No"[shape="hexagon"]
+	"Interest Category"[shape="hexagon"]
+
 
 
 // Relations
@@ -62,8 +69,8 @@ digraph Workforce_Needs
 
 	"Business/Corporation"		-> "Television";
 	"Government(City/Player)"	-> "Television";
-	"Business/Corporation"		-> "Radio";
-	"Government(City/Player)"	-> "Radio";
+	"Business/Corporation"		-> "Radio/Music";
+	"Government(City/Player)"	-> "Radio/Music";
 	"Business/Corporation"		-> "Billboard";
 	"Government(City/Player)"	-> "Billboard";
 	"Business/Corporation"		-> "Newspaper";
@@ -77,27 +84,31 @@ digraph Workforce_Needs
 	
 	"Television"	-> "Advertisement";
 	"Television"	-> "Program";
-	"Radio"		-> "Program";
-	"Radio"		-> "Advertisement";
+	"Radio/Music"	-> "Program";
+	"Radio/Music"	-> "Advertisement";
 	"Solnet"	-> "Advertisement";
 	"Billboard"	-> "Advertisement";
 	"Newspaper"	-> "Advertisement";
 
 
-	"Advertisement"	-> "Content Type(A,B,C,D,etc)";
-	"Program"	-> "Content Type(A,B,C,D,etc)";
+	"Advertisement"	-> "Interest Category";
+	"Program"	-> "Interest Category";
 
-	"Content Type(A,B,C,D,etc)"	-> "Unit Viewing";	
+	"Content Type(A,B,C,D,etc)"	-> "Unit Perceiving";	
 	
-	"Workforce Unit"	-> "Unit Viewing";	
+	"Workforce Unit"	-> "Unit Perceiving";	
 	
-	"Unit Viewing"		-> "Interest Category Full?";
+	"Unit Perceiving"	-> "Interest Category Full?";
 					"Interest Category Full?" -> "Yes";
+						"Yes"	-> "Category Indulged Within Needed Timeframe?";
+						"Category Indulged Within Needed Timeframe?" -> " Yes";
+						"Category Indulged Within Needed Timeframe?" -> " No";
+							" Yes" 	-> "Interest Not Generated";
+							" No"	-> "Perceived for Required Duration for Interest/Age";
 					"Interest Category Full?" -> "No";
-						"Yes"	-> "Interest Not Generated";
-						"No"	-> "Viewed for Required Duration for Interest/Age";
-								"Viewed for Required Duration for Interest/Age" -> "Yes.";
-								"Viewed for Required Duration for Interest/Age" -> "No.";
+						"No"	-> "Perceived for Required Duration for Interest/Age";
+								"Perceived for Required Duration for Interest/Age" -> "Yes.";
+								"Perceived for Required Duration for Interest/Age" -> "No.";
 
 									"Yes." 	-> "Generates Appropriate Interest";
 									"No."	-> "Interest Not Generated";
@@ -106,19 +117,24 @@ digraph Workforce_Needs
 	"Generates Appropriate Interest" -> "Unit Variable Created/Changed";
 
 
+	"Interest Category"	-> "Content Type(A,B,C,D,etc)";
+	
+	
+
 	// Behavioural Observations
 
 	"Other Workforce Unit"		-> "Unit Interest Based Actions";
-	"Unit Interest Based Actions"	-> "Behaviour Category";
-	"Behaviour Category"		-> "Content Type (A,B,C,D,etc)";
-	"Content Type (A,B,C,D,etc)"	-> "Unit Viewing";
-
+	"Unit Interest Based Actions"	-> "Behaviour Content";
+	"Behaviour Content"		-> "Interest Category";
 	
-	// Theater 
+	
+	
+	// Theater/Song/Music
 
-
-	// Song/Music
-
+	"Theatrical Performance"	-> "Interest Category";
+	"Stereo"			-> "Interest Category";	
+	"Buscar"			-> "Interest Category";
+ 
 
 	// 
 	

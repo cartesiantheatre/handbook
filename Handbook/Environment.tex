@@ -1,5 +1,5 @@
 % This is part of the Avaneya Project Crew Handbook.
-% Copyright (C) 2010-2013 Cartesian Theatre <kip@thevertigo.com>.
+% Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
 % See the file Copying for details on copying conditions.
 
 % The environment file is used to setup the typesetting that relate to 
@@ -73,9 +73,13 @@
 % Revision control...
 
     % Bzr revision...
-    \def\initializeBzr
-            {\ctxlua{context("\\global\\edef\\BzrRevision{\%s}",
-                     os.resultof"bzr revno | tr -d '\\n'")}}
+    \def\initializeBzr{
+        \ctxlua{
+            context.setxvalue(
+                "BzrRevision",
+                os.resultof("bzr revno | tr -d '\string\n'"))}
+    }
+
     \initializeBzr
 
     % URL of latest handbook...

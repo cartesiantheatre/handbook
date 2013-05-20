@@ -5,6 +5,11 @@
 % Algorithms, Optimizations, & Tips section...
 \StartSection{Algorithms, Optimizations, & Tips}
 In this section, we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems the project must address at some point and the thinking that went into them. Consider the following advice tentative, without thought of absolute commitment, and hardly sacrosanct. This is because no one knows with certainty what the future holds and we may find down the road that any one of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others.
+\placefigure
+    [right, 0*hang]
+    [figure:Kip_Pad]
+    {Engineers need to be comfortable when they work hard, otherwise the best algorithms in the world will not save code from imploding in on itself. Hammocks, kale chips, and kombucha should be covered early in their textbooks.}
+    {\externalfigure[Engineer_Contributors/Images/Kip_Pad.png][][width=.55\textwidth]}
 
 With every bit of eye candy, bell, and whistle we add to any software, there is the inherent problem of an increased burden on the hardware. Thus, we need to take advantage of optimizations whenever possible. 
 
@@ -138,7 +143,7 @@ Considering this, we selected Makoto Matsumoto's algorithm,\footnotecite[mersenn
 
 As one of its many novel uses, it may be possible to parametrically define some idiosyncrasies of a graphical object by having it take advantage of an element of randomness. For example, two otherwise identical building units, such as a pressurized habitat, could incorporate random parameters to make the foliage in their indoor courtyards different from one another by seeding a foliage generation subroutine with different values. But we need not stop at just geometry, but also use random parameters to generate a colour palette. The possibilities are limited in part by the technical and artistic creativity of the artists and engineers involved.
 
-\StartSubSection{Socio--economic Simulation}
+\StartSubSection{Socio-economic Simulation}
 For aspects of the game concerned with social simulation, it is very difficult to commit to specific algorithms and information representation models until the establishment of more of the game's peripheral aspects. The reason being is that it is hard to tell how well an approach will perform until there is a means of trying it. Compounding the challenges further yet, of all the different sub--fields of game development, social simulation is probably amongst the most absent in the literature.
 
 Regardless, we are reasonably confident about some features. We would prefer to have an agent based simulation model, as opposed to a statistically driven model. For example, seeing an aircraft in the former would just be a representation of aerial traffic density and it would disappear after a while. In the former, however, each unit that moves is its own agent and represents itself. In other words, in a statistically driven model the aircraft is only an {\it expression} of the simulation, whereas in the agent based model the aircraft {\it is} the simulation. In older strategy games, the lack of available computing power meant things had to be done statistically. Times have changed.

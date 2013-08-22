@@ -105,6 +105,9 @@
         {\ctxlua{context.setgvalue("UmbrelloVersion", os.resultof"umbrello --version | grep -i umbrello | tr -d ':\\n'")}}
     \initializeUmbrello
 
+% LuaTeX / LuajitTex backend version...
+\def\texjitenginename{\ctxlua{if (texenginename == LuaTeX and jit ~= nil) then context("LuajitTeX") else context.texenginename() end }}
+
 % Document description...
 \def\BookShortDescription{A guidebook for our community's contributors.}
 

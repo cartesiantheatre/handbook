@@ -181,7 +181,7 @@ Both Viking landers were equipped with a multipurpose photosensor array (PSA). T
 \eTABLE
 }
 
-A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting. This made it difficult to write a reliable parser. The general rule of thumb when studying the SDDPT's data set was that there was none. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise. It recovers what it can and picks itself up and carries on where it cannot.
+A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting. This made it difficult to write a reliable extractor. The general rule of thumb when studying the SDDPT's data set was that there was none. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment living in the moment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise. It recovers what it can and picks itself up and carries on where it cannot.
 
 The tool recovers whatever it can while transcoding from the VICAR formatted data into lossless PNGs. Here is an example of its use, but keep in mind that you should use the {\tt --help} switch for more information on the software's usage.
 
@@ -193,21 +193,21 @@ $ viking-extractor              \
     --ignore-bad-files          \
     --interlace                 \
     --recursive                 \
-    --save-metadata             \
+    --generate-metadata         \
     --summarize-only            \
-     Processed\ Images          \
-     Output
-
-$ find Output/
+     "Input Directory"          \
+     "Output Directory"
+     
+$ find "Output Directory/"
 ...
-Output/Chryse Planitia
-Output/Chryse Planitia/Leo/Colour/11J070.png
-Output/Chryse Planitia/Leo/Survey/11J071.png
-Output/Chryse Planitia/Capricorn/Colour/12C200.txt
+Output Directory/Chryse Planitia
+Output Directory/Chryse Planitia/Leo/Colour/11J070.png
+Output Directory/Chryse Planitia/Leo/Survey/11J071.png
+Output Directory/Chryse Planitia/Capricorn/Colour/12C200.txt
 ...
-Output/Utopia Planitia/Aquarius/Colour/22D220.png
+Output Directory/Utopia Planitia/Aquarius/Colour/22D220.png
 ...
-Output/Utopia Planitia/Scorpius/Colour/22H220.png
+Output Directory/Utopia Planitia/Scorpius/Colour/22H220.png
 ...
 \stopCodeExample
 
@@ -223,7 +223,11 @@ When relying on the image archive, make sure you are looking at the right place.
 
 If you would like to explore the {\tt viking-extractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the project's source tree. To do this, follow the instructions in \in{section}[Using Bzr].
 
-In closing, we felt NASA's archive and our recovery software were potentially useful to others outside of the Avaneya project. The Committee on Data for Science and Technology (CODATA)\index{Committee on Data for Science and Technology (CODATA)} at the Data at Risk Task Group (DARTG)\index{Data at Risk Task Group (DARTG)} is an organization that manages the {\it Data--at--Risk Inventory}. The DARI is a project to produce a catalog of valuable scientific data that are at risk of being lost. This includes deteriorating formats such as magnetic tapes.\footnotecite[dari_about] In 2012, the {\it Avaneya: Viking Lander Remastered} software and archive were accepted into the inventory.\footnotecite[dari_vlr]
+\StartSection{Epilogue}
+
+Eventually when our technology was up and running, we took up correspondence with NASA again to share what we had come up with. In reflecting on the predicament we initially faced with respect to the original state of the archive and its inaccessibility to the general public, a scientist with the Instrument Software and Science Data Systems Section at the Jet Propulsion Laboratory remarked, \quote{\it You're right that the Viking Lander archive has been largely inaccessible. Fortunately, we were successful in salvaging the data thru the migration from magnetic tape to CD so that someone, someday could write software to read and use the data. It sounds like you've done that -- I do indeed understand how difficult a job that was}.
+
+The Committee on Data for Science and Technology (CODATA)\index{Committee on Data for Science and Technology (CODATA)} at the Data at Risk Task Group (DARTG)\index{Data at Risk Task Group (DARTG)}, supported in part by the University of North Carolina, is an organization that manages the {\it Data--at--Risk Inventory}. The DARI is a project to produce a catalog of valuable scientific data that are at risk of being lost.\footnotecite[murillo2012] This includes deteriorating formats such as magnetic tapes.\footnotecite[dari_about] In closing, we believed the software might be useful to others outside of the Avaneya project. In 2012, the {\it Avaneya: Viking Lander Remastered} technology was accepted into the inventory.\footnotecite[dari_vlr]
 
 \StopChapter
 

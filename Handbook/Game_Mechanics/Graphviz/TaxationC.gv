@@ -1,0 +1,53 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+
+*/
+
+digraph Taxation
+{
+	//Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+	ranksep="2.5";
+	pad="0.5,0.5";
+	compound="true";
+	overlap="vpsc";
+	root="Taxation";
+
+	//Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+	node[fontcolor="#c08453ff"];
+	node[fontname="Ubuntu"];
+	node[shape="none"];
+
+	//Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+	// Relationships
+	"All Other Companies"[shape="hexagon"]
+	"Farm and Manufacturing Companies"[shape="hexagon"]
+	"Energy Production Companies"[shape="hexagon"]
+	"30 Percent"[shape="hexagon"]
+	"10 Percent"[shape="hexagon"]
+	"20 Percent"[shape="hexagon"]
+	"Tax Income Percentage"[shape="hexagon"]
+	"City Budget Income"[shape="octagon"]
+
+
+	"All Other Companies" 			-> "30 Percent";
+	"Farm and Manufacturing Companies"	-> "10 Percent";
+	"Energy Production Companies"		-> "20 Percent";
+	"30 Percent"				-> "Tax Income Percentage";
+	"10 Percent"				-> "Tax Income Percentage";
+	"20 Percent"				-> "Tax Income Percentage";
+	"Tax Income Percentage"			-> "City Budget Income";
+
+
+	
+
+}

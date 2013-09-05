@@ -1,0 +1,61 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+
+*/
+
+digraph Taxation
+{
+	//Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+	ranksep="2.5";
+	pad="0.5,0.5";
+	compound="true";
+	overlap="vpsc";
+	root="Taxation";
+
+	//Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+	node[fontcolor="#c08453ff"];
+	node[fontname="Ubuntu"];
+	node[shape="none"];
+
+	//Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+	// Relationships
+	"All Companies"[shape="hexagon"]
+	"Manufacturing Companies"[shape="hexagon"]
+	"Metalworks Incorporated"[shape="hexagon"]
+	"30 Percent Profit"[shape="hexagon"]
+	"10 Percent Profit"[shape="hexagon"]
+	"3 Percent Income"[shape="hexagon"]
+	"Tax Income Percentage"[shape="hexagon"]
+	"City Budget Income"[shape="octagon"]
+
+
+	"All Companies" 			-> "30 Percent Profit";
+	"All Companies"				-> "Manufacturing Companies";	
+
+	"Manufacturing Companies"		-> "10 Percent Profit";
+	"Manufacturing Companies"		-> "Metalworks Incorporated";
+
+	"Metalworks Incorporated"		-> "3 Percent Income";
+
+
+	"30 Percent Profit"			-> "Manufacturing Companies";
+	"10 Percent Profit"			-> "Tax Income Percentage";
+	"10 Percent Profit"			-> "Metalworks Incorporated"
+
+	"3 Percent Income"			-> "Tax Income Percentage";
+	"Tax Income Percentage"			-> "City Budget Income";
+
+
+	
+
+}

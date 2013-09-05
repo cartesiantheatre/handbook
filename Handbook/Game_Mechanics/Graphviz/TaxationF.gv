@@ -1,0 +1,70 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+
+*/
+
+digraph Taxation
+{
+	//Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+	ranksep="2.5";
+	pad="0.5,0.5";
+	compound="true";
+	overlap="vpsc";
+	root="Taxation";
+
+	//Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+	node[fontcolor="#c08453ff"];
+	node[fontname="Ubuntu"];
+	node[shape="none"];
+
+	//Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+
+	// Relationships
+	"All People"[shape="hexagon"]
+	"Unemployed"[shape="hexagon"]
+	"Income Earners"[shape="hexagon"]
+	"Families"[shape="hexagon"]
+	"Singles"[shape="hexagon"]
+	"0 Percent Tax"[shape="hexagon"]
+	"10 Percent Income"[shape="hexagon"]
+	"2 Percent Refund"[shape="hexagon"]
+	"3 Percent Income"[shape="hexagon"]
+	"Taxed 13 Percent Total"[shape="hexagon"]
+	"Taxed 8 Percent Total"[shape="hexagon"]
+	"Tax Income Percentage"[shape="hexagon"]
+	"City Budget Income"[shape="octagon"]
+
+
+	"All People"				-> "Unemployed";
+	"All People"				-> "Income Earners";
+	"0 Percent Tax"				-> "Tax Income Percentage";		
+	"Unemployed"				-> "0 Percent Tax";		
+	
+	"Income Earners"			-> "10 Percent Income";
+	"Income Earners"			-> "Families";					
+	"Income Earners"			-> "Singles";
+	
+	"Families"				-> "2 Percent Refund";
+	"Singles"				-> "3 Percent Income";
+	
+	"2 Percent Refund"			-> "Taxed 13 Percent Total";
+	"3 Percent Income"			-> "Taxed 8 Percent Total";
+
+	"Taxed 13 Percent Total"		-> "Tax Income Percentage";
+	"Taxed 8 Percent Total"			-> "Tax Income Percentage";
+
+	"Tax Income Percentage"			-> "City Budget Income";
+
+
+	
+
+}

@@ -50,8 +50,9 @@ digraph Taxation
 	"Unemployed"				-> "0 Percent Tax";		
 	
 	"Income Earners"			-> "10 Percent Income";
-	"Income Earners"			-> "Families";					
-	"Income Earners"			-> "Singles";
+
+	"10 Percent Income"			-> "Families";
+	"10 Percent Income"			-> "Singles";
 	
 	"Families"				-> "2 Percent Refund";
 	"Singles"				-> "3 Percent Income";

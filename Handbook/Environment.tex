@@ -2,7 +2,7 @@
 % Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
 % See the file Copying for details on copying conditions.
 
-% The environment file is used to setup the typesetting that relate to 
+% The environment file is used to setup the typesetting that relate to
 %  any product, but at present, just the handbook...
 
 \startenvironment Environment
@@ -44,29 +44,29 @@
 
     % Chapters...
     \setuplist[chapter]
-        [color=colour_text, 
-         numbercolor=colour_head, 
+        [color=colour_text,
+         numbercolor=colour_head,
          pagecolor=colour_page_number,
          style=bold]
 
     % Section...
     \setuplist[section]
         [color=colour_text,
-         numbercolor=colour_head, 
+         numbercolor=colour_head,
          pagecolor=colour_page_number
          width=15mm]
 
     % Subsection...
     \setuplist[subsection]
-        [color=colour_text, 
+        [color=colour_text,
          numbercolor=colour_head,
          pagecolor=colour_page_number
          width=20mm]
 
     % Subsubsection...
     \setuplist[subsubsection]
-        [color=colour_text, 
-         numbercolor=colour_head, 
+        [color=colour_text,
+         numbercolor=colour_head,
          pagecolor=colour_page_number
          width=25mm]
 
@@ -122,7 +122,7 @@
    title=Avaneya Project Crew Handbook (Revision \BzrRevision),
    subtitle=\BookShortDescription,
    author=The Avaneya Project Crew (Revision \BzrRevision),
-   keyword={Avaneya, handbook, Mars, GNU, game}]
+   keyword={Avaneya, handbook, Mars, GNU, linux, Ubuntu, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...
 \placebookmarks[chapter,section,subsection,subsubsection][chapter]
@@ -157,12 +157,12 @@
    frame=off,
    corner=rectangular,
    framecolor=colour_figure_border,
-%   background=color, 
+%   background=color,
 %   backgroundcolor=colour_page,
    rulethickness=0.5pt]
 
 % Setup bibliography. Thanks Taco for your help...
-    
+
     % References database and other general settings...
     \setupbibtex[database={References/References}, sort=author]
 
@@ -236,7 +236,7 @@
         % Settings for triggering et al...
         \setuppublicationlist[authoretallimit=3]
         \setuppublicationlist[authoretaltext={\it\ et al.}]
-        \setuppublicationlist[authoretaldisplay=2] 
+        \setuppublicationlist[authoretaldisplay=2]
 
         % List the author, editor, or article author's full name, inverted...
         \setuppublicationlist[%
@@ -268,7 +268,7 @@
 \automigrateinserts
 
 % Setup floats...
-    
+
     % Tables of width <0.5 times textwidth are automatically placed at the inner margin...
     \setupfloat[table]
         [criterium=0.5\textwidth,
@@ -310,7 +310,7 @@
         \else
           \overlayfigure{Makeup/Images/Background.png}%
         \fi}]
-    
+
     \setupbackgrounds[page][background=PageBackgroundImage]
 
 % PDF related settings...
@@ -533,7 +533,7 @@
     bottomoffset=0.5cm,
     leftoffset=0.5cm,
     rightoffset=0.5cm]
-    
+
     \definetyping
       [CodeExample]
       [before=\startCodeExampleFrame,
@@ -668,4 +668,3 @@
    state=start]
 
 \stopenvironment
-

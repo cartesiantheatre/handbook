@@ -45,6 +45,7 @@ The region has also experienced recent lava flows. By recent, in a geological ti
 
 Like all other explored regions, it undergoes constant sterilization through intense ultraviolet radiation. This ensures that there is no {\it known} life on the {\it surface} of Mars.
 
+\page
 \StartSection{Viking Mission}
 
 In 1976 NASA successfully placed two spacecraft into Martian orbit after many years of failed American and Russian attempts. These initial failures became unofficially attributed to the {\it Mars Curse}, owing to their high number.\footnotecite[mars_failures] The \index{Viking orbiters}Viking orbiters both carried their own landers which they successfully landed. 
@@ -59,17 +60,23 @@ At present, no lander has explored Arda's area of settlement, {\it Arcadia Plani
     {{\it Chryse Planitia} as captured by Viking Lander I, later salvaged from a rotting magnetic tape.}
     {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_0902.png][][width=.9\textwidth]}
 
+\page
 \StartSection{Problem: Rotting Tapes, Dead Technology}
 
 While researching the aesthetics of the Martian surface, we found it incredulous that in all the decades passed since the Viking landers sent their images back to Earth, there does not appear to be so much as a single, complete, user friendly, archive of all the images. So you can forget downloading a convenient archive of PNGs from NASA's website intended for a layman.\footnotecite[grayzeck2008]
 
 We do, however, have access to the original image source data\footnotecite[viking_mission_source_data] from the Viking mission that NASA made available. Some of it is official \index{PDS, Planetary Data Systems}NASA Planetary Data Systems (PDS) archival data and some of it is from the Science Digital Data Preservation Task (SDDPT) of NASA's Jet Propulsion Laboratory which preceded it. The PDS is a branch of NASA charged with mission data archival. It was established because of concerns that data from previous missions, such as Viking, were in danger of being lost, or rendered unreadable because of failures in saving documentation.
+\placefigure
+    [right, 2*hang]
+    [figure:MagneticTape]
+    {A 9--track 6250 BPI magnetic tape, like those used with the Viking mission.}
+    {\externalfigure[Viking_Lander_Remastered/Images/MagneticTape.png][][width=.4\textwidth]}
 
 The SDDPT archive was prepared by recovering what data they could by copying directly off of old, decaying magnetic tapes onto more stable optical media in the 1990s when CDs first became available. That data was \quote{working data,} akin to notes scattered in an office. The images it contains may or may not be useful, but they were expensive to acquire and may contain images not found in the official PDS archive, and vice versa. They did not otherwise alter them. They represent \index{EDR}EDR (Experimental Data Record) level data, which is a processing level at NASA to denote the raw working data that was returned to Earth as captured by each Viking landers' onboard instrumentation.
 
 And while both sources' raw data are now available to everyone as public domain, the entire latter SDDPT archive is encoded in a useless archaic format used during the Viking mission between July 20, 1976 to November 5, 1982. As you might expect, few remain today at NASA to explain its specification. We know this because they told us so.
 
-The {\it Avaneya: Viking Lander Remastered} archive is an effort to remedy this situation constructively. It doubles in giving our artists and shader engineers what they need, and also provides the general public with an invaluable educational resource. The software we engineered, as described in \in{section}[Solution: VikingExtractor], generates most of our remastered archive in the form of lossless PNG images which everyone already has software that can access.
+The {\it Avaneya: Viking Lander Remastered} DVD is an effort to remedy this situation constructively. It doubles in giving our artists and shader engineers what they need, and also provides the general public with an invaluable educational resource. The software we authored generates most of our remastered archive in the form of lossless PNG images which everyone already has software that can access.
 
 We used three source data sets as the basis for our new archive as shown in \in{figure}[figure:Viking_Lander_Remastered_Layout].
 \crlf
@@ -87,7 +94,7 @@ The SDDPT's {\it Viking Lander High Resolution Mosaics, Stereo Images and Range 
 The SDDPT's {\it Viking Lander Processed Images} were the third source. They were taken from the volumes marked {\tt VL_2101} through {\tt VL_2124}. The photographs in this set, after restoration, can be looked at individually, as opposed to forming mosaics. They form the bulk of the archive's disk size and required a great deal of digital forensic archaeology\index{digital forensic archaeology} to recover. This is because NASA was not thinking at the time of a need for a long term image archival strategy\index{image archival strategy}. This may be hard to believe, but even NASA makes mistakes.\footnotecite[nasa_audit_missing_samples] This is understandable when put in the context of a very difficult mission to a planet with a long history of catastrophic failures and finally succeeding with the acquisition of real data and photographs of another world.
 
 \placefigure
-    [right, 2*hang]
+    [left, 0*hang]
     [figure:Viking_Lander_22H093]
     {Viking Lander II captures a beautiful early morning sunrise, {\it Utopia Planitia}.}
     {\externalfigure[Viking_Lander_Remastered/Images/Viking_Lander_22H093.png][][width=0.3\textwidth]}
@@ -102,21 +109,23 @@ NASA claims to be in possession of the only known allegedly working image loader
 
 Even if we had been granted access, there is still no guarantee that their software would have successfully consumed Viking era imaging data, and even if it could, probably not with the flexibility and automation that we required for a massive data set. In all likelihood, after having examined the data in detail, and following many repeated inquiries, with confidence, we could probably call NASA's bluff. There is good reason to suspect that no one, not even NASA, has any currently usable software to recover these images. It is not that they are deliberately misleading us, but probably just that no one has inquired in decades for them to know that.
 
-\StartSection{Solution: VikingExtractor}
+\page
+\StartSection{Solution: Viking Lander Remastered DVD}
 
-In keeping with the software {\it libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt viking-extractor}. This was done through a combination of a great deal of reverse engineering and helpful advice with the scientists at NASA, especially one particular individual at the Geosciences Node of NASA's Planetary Data System who wished to remain anonymous.
-
-Why bother? Mainly because we needed the images. But also because people should not have to perform digital archaeology to get an idea of what Mars looks like when photos were already taken, paid for with a billion dollars of public money, and stored for decades -- albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out proprietary lock nobody seems to have a key for at best, or refuses to share at worst.
-
+In keeping with the software {\it libre} philosophy, we did not wait on proprietary software vendors to hold data access hostage, so we wrote {\tt viking-extractor}. The latter underlying software supplies the actual recovery power of the {\it Avaneya: Viking Lander Remastered DVD} -- a layman's point--and--click graphical user interface for the former. This was done through a combination of a great deal of reverse engineering of surviving mission data and helpful advice with the scientists at NASA, especially one particular individual at the Geosciences Node of NASA's Planetary Data System who wished to remain anonymous.
 \placefigure
-    [here, force]
-    [figure:VikingExtractor_Source]
-    {Writing the software to recover images from the Viking landers.}
-    {\externalfigure[Viking_Lander_Remastered/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
+    [left, 0*hang, none]
+    [figure:VLR_Boxes]
+    {}
+    {\externalfigure[Viking_Lander_Remastered/Images/Boxes.png][][width=0.55\textwidth]}
 
-Both Viking landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes. These were intended for capturing different portions of the electromagnetic spectrum for different purposes. They are described below in \in{table}[table:Viking lander PSA].
+But why bother? Mainly because we needed the images. But also because people should not have to perform digital archaeology to get an idea of what Mars looks like when photos were already taken, paid for with a billion dollars of public money, and stored for decades -- albeit up in the attic, within a chest, covered in cobwebs, and guarded with a rusted out proprietary lock nobody seems to have a key for at best, or refuses to share at worst.
 
-\placetable[force][table:Viking lander PSA]{Viking lander photosensor types.}
+Back to the actual mission itself, both Viking landers were equipped with a multipurpose photosensor array (PSA). These early digital cameras contained an array of twelve photosensor diodes. These were intended for capturing different portions of the electromagnetic spectrum for different purposes. They are described in \in{table}[table:Viking lander PSA].
+
+A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting. This made it difficult to write a reliable extractor. The general rule of thumb when studying the SDDPT's data set was that there probably was none. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment living in the moment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise. It recovers what it can and picks itself up and carries on where it cannot.
+
+\placetable[here][table:Viking lander PSA]{Viking lander photosensor types.}
 {
     \bTABLE[split=repeat,option=stretch]
     \setupTABLE[column][5]
@@ -181,9 +190,9 @@ Both Viking landers were equipped with a multipurpose photosensor array (PSA). T
 \eTABLE
 }
 
-A great deal of the original data was corrupt (e.g. tape rot) or suffered from inconsistent formatting. This made it difficult to write a reliable extractor. The general rule of thumb when studying the SDDPT's data set was that there was none. You are stuck with a very large heterogeneous mixture of files encoded in {\it ad hoc} formats invented on the fly for a stressed operational environment living in the moment. However, with the aid of some heuristics and image analysis, the tool is reasonably robust and can tolerate a fair amount of noise. It recovers what it can and picks itself up and carries on where it cannot.
-
 The tool recovers whatever it can while transcoding from the VICAR formatted data into lossless PNGs. Here is an example of its use, but keep in mind that you should use the {\tt --help} switch for more information on the software's usage.
+
+The following sample usage of {\it viking-extractor} catalogues over ten thousand files, organizes them, locates all scattered pieces of the same image, performs optical character recognition, orients them right side up as necessary, compares duplicates for quality, builds a matching set, and reassembles whatever possible. It identifies potentially recoverable images based on, among many other things, their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set). 
 
 \startCodeExample
 $ viking-extractor              \
@@ -197,7 +206,12 @@ $ viking-extractor              \
     --summarize-only            \
      "Input Directory"          \
      "Output Directory"
-     
+
+\stopCodeExample
+
+Using a quad core 2 GHz amd64 hardware, this fully automated process takes about forty minutes. On low power mips64el hardware this took about six hours with the results below.
+
+\startCodeExample
 $ find "Output Directory/"
 ...
 Output Directory/Chryse Planitia
@@ -211,10 +225,6 @@ Output Directory/Utopia Planitia/Scorpius/Colour/22H220.png
 ...
 \stopCodeExample
 
-The previous sample usage of {\it viking-extractor} catalogues over ten thousand files, organizes them, locates all scattered pieces of the same image, performs optical character recognition, orients them right side up as necessary, compares duplicates for quality, builds a matching set, and reassembles whatever possible. It identifies potentially recoverable images based on, among many other things, their photosensor diode band type (e.g. {\tt RED/T} denoting red band data as part of a disassembled colour triplet set). 
-
-Using a quad core 2 GHz amd64 hardware, this fully automated process takes about forty minutes. On low power mips64el hardware, this took about six hours.
-
 Some of the metadata it needs to make unattended decisions are located within EBCDIC encoded file headers. Extended Binary Coded Decimal Interchange Code (EBCDIC) was an ASCII alternative 8--bit character encoding scheme used mostly on IBM mainframe computers back in the 1950s and 1960s. These headers are made up of \quote{label records} which are meaningful only in the context of these old mainframe machines equipped with magnetic tape drives. Some of the metadata the on--board instrumentation provided can be preserved for the curious. 
 
 As an example, there was a flag indicating whether the camera lens was cleared of dust with compressed gas prior to shooting. It is only available in the PDS data set, but other metadata, such as camera azimuth and elevation almost always are. In any case, this metadata is usually not very useful for most, but the {\tt viking-extractor} can preserve whatever it can if the user wishes.
@@ -223,9 +233,15 @@ When relying on the image archive, make sure you are looking at the right place.
 
 If you would like to explore the {\tt viking-extractor} source code, see {\tt Avaneya/Tools/VikingExtractor} in the project's source tree. To do this, follow the instructions in \in{section}[Using Bzr].
 
+\placefigure
+    [here, force]
+    [figure:VikingExtractor_Source]
+    {Writing the software to recover images from the Viking landers.}
+    {\externalfigure[Viking_Lander_Remastered/Images/VikingExtractor_Source.png][][width=.8\textwidth]}
+
 \StartSection{Epilogue}
 
-Eventually when our technology was up and running, we took up correspondence with NASA again to share what we had come up with. In reflecting on the predicament we initially faced with respect to the original state of the archive and its inaccessibility to the general public, a scientist with the Instrument Software and Science Data Systems Section at the Jet Propulsion Laboratory remarked, \quote{\it You're right that the Viking Lander archive has been largely inaccessible. Fortunately, we were successful in salvaging the data thru the migration from magnetic tape to CD so that someone, someday could write software to read and use the data. It sounds like you've done that -- I do indeed understand how difficult a job that was}.
+Eventually when our technology was up and running, we took up correspondence with NASA again to share what we had come up with. In reflecting on the predicament we initially faced with respect to the original state of the archive and its inaccessibility to the general public, a section manager with the Instrument Software and Science Data Systems Section at the Jet Propulsion Laboratory, wishing to remain anonymous, shared the following remark. \quote{\it You're right that the Viking Lander archive has been largely inaccessible to the general public. Fortunately, we were successful in salvaging the data thru the migration from magnetic tape to CD so that someone, someday could write software to read and use the data. It sounds like you've done that -- I do indeed understand how difficult a job that was}.
 
 The Committee on Data for Science and Technology (CODATA)\index{Committee on Data for Science and Technology (CODATA)} at the Data at Risk Task Group (DARTG)\index{Data at Risk Task Group (DARTG)}, supported in part by the University of North Carolina, is an organization that manages the {\it Data--at--Risk Inventory}. The DARI is a project to produce a catalog of valuable scientific data that are at risk of being lost.\footnotecite[murillo2012] This includes deteriorating formats such as magnetic tapes.\footnotecite[dari_about] In closing, we believed the software might be useful to others outside of the Avaneya project. In 2012, the {\it Avaneya: Viking Lander Remastered} technology was accepted into the inventory.\footnotecite[dari_vlr]
 

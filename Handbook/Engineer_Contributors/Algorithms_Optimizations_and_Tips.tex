@@ -4,12 +4,13 @@
 
 % Algorithms, Optimizations, & Tips section...
 \StartSection{Algorithms, Optimizations, & Tips}
-In this section, we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems the project must address at some point and the thinking that went into them. Consider the following advice tentative, without thought of absolute commitment, and hardly sacrosanct. This is because no one knows with certainty what the future holds and we may find down the road that any one of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others.
 \placefigure
     [right, 0*hang]
     [figure:Kip_Pad]
-    {Engineers need to be comfortable when they work hard, otherwise the best algorithms in the world will not save code from imploding in on itself. Hammocks, kale chips, and kombucha should be covered early in their textbooks.}
+    {Engineers need to be comfortable when they work hard, otherwise the best algorithms in the world will not save code from imploding in on itself.}
     {\externalfigure[Engineer_Contributors/Images/Kip_Pad.png][][width=.55\textwidth]}
+
+In this section, we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems the project must address at some point and the thinking that went into them. Consider the following advice tentative, without thought of absolute commitment, and hardly sacrosanct. This is because no one knows with certainty what the future holds and we may find down the road that any one of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others. This is why {\it re}--search is given the title that it is.
 
 With every bit of eye candy, bell, and whistle we add to any software, there is the inherent problem of an increased burden on the hardware. Thus, we need to take advantage of optimizations whenever possible. 
 
@@ -18,6 +19,39 @@ As a general rule, it is more important to be concerned with asymptotic complexi
 Nevertheless, sometimes having improved an algorithm from quadratic to linear logarithmic performance, useful constant time optimizations are all that remain if you want to go further. Most libraries the AresEngine described in \in{section}[AresEngine's Architecture] links against, such as SDL and OGRE 3D, are usually already optimized for the most popular architectures their compilation is supported on. But of course not necessarily everything a game engine consists of, as well as the scripts that drive it, are found in 3rd party libraries. If that were the case, our engineers would not have much to do.
 
 With that in mind, what follows is some useful advice. Some of it is useful in only one specific domain, such as working with the geometry of a landscape. In other cases it is domain agnostic for solving many different types of seemingly unrelated problem, such as refactoring an algorithm to take advantage of parallelization available on multi--core machines.
+
+\StartSubSection{Socio-economic Simulation}
+For aspects of the game concerned with social simulation, it is very difficult to commit to specific algorithms and information representation models until the establishment of more of the game's peripheral aspects. The reason being is that it is hard to tell how well a model works until there is a way of trying it. That is to say, you start with the behavioural output generated from some underlying quantitative social simulation which in turn drives some higher level subsystems -- like what your 3D geometry ultimately does -- but it is much harder to tell how well the model is actually working without those higher level subsystems already present. Otherwise, one is left to stare at a bunch of numbers to discern whether the simulated world bares any resemblance to their own.
+
+Compounding the challenges, of all the different sub--fields of game development, social simulation is probably amongst the most absent in the literature. Take any abstract concept like {\it social inertia}\index{social inertia} and ask yourself how it ought best be modelled -- let alone even just formally defined.
+
+For resource consumption modelling, a Hubbert curve of finite supplies of natural resources would probably be a good starting point.\footnotecite[hubbert_curve] That much seems reasonable.
+
+But until we can complete further research, we believe that a substantial basis for the quantitative models driving the simulation can probably be found in Bossel's comprehensive volumes on complex simulations in software. These four volumes cover complexity, dynamics, and evolution;\footnotecite[systems_and_models] elementary systems, physics, and engineering;\footnotecite[system_zoo_1] climate, ecosystems, and resources;\footnotecite[system_zoo_2] and economics, society, and development\footnotecite[system_zoo_3] respectively.
+
+\StartSubSubSection{Agent vs. Simulation Based Modelling}
+
+Some things we are reasonably confident of for the time being, such as our preference for agent based simulations, as opposed to purely statistically driven models. For example, seeing an aircraft in the latter would just be a representation of aerial traffic density and it would disappear after a while. In the former, however, each unit that moves is its own agent and represents itself. In other words, in a statistically driven model, a single aircraft (micro state) is only an {\it expression} of the simulation (macro level), whereas in the agent based model the single aircraft {\it is} its own representation in the simulation. 
+
+In older city--builder simulation games, the lack of available computing power meant things had to be done statistically. Times have changed and offloading complex number crunching to GPUs or other specialized hardware has made this now practical.
+
+\StartSubSubSection{Human Behaviour & Epigenetics}
+
+Individual human behaviour is another topic. Consider for a moment how we describe the way others behave. Sometimes we attribute a person or group's destructive behaviour to their nature (genetic) when we say that there will always be some people like that in society. We make these assumptions with ease as if we had dedicated years of our lives to having studied and reflected on the matter. We make them as though there was a such thing as an organism's {\it default} behaviour.
+
+The truth is, however, there is probably no such thing as human nature. Research strongly indicates that there are, however, {\it human needs}.\footnote{See {\it Zeitgeist: Moving Forward} in \in{chapter}[Resources For Everyone] for an excellent introduction.} Very little of what we call human behaviour is actually genetic, if any. Most of what is called human behaviour is probably cultural and environmental influences that are not universal.\footnotecite[henrich2010] 
+
+All organisms, such as humans, have needs. These could be oxygen, water, security, a sense of belonging, community, a meaningful existence, nutrients, sunlight, or what have you. It is more reasonable to suggest that human behaviour manifests from what and how fundamental needs are met within the context of an environment that to say they were predisposed. Some human genotypes, for instance, do not even express the same phenotypes when varied across different cultures and environments.\footnote{\it Ibid.}
+
+We also know now that genetic expression can actually change throughout an organism's life and is not immutable.\footnotecite[scishow_epigenetics] This is a field called epigenetics; indeed, this field is rapidly driving basic research in genetics across much of the European Union, with millions of Euros being spent each year on furthering our understanding of how our environment shapes our genes. Even simply changing what you eat can change your genetic material.
+
+An excellent case in point of the application of epigenetics in better understanding human behaviour is in the study of violence. There is an asymmetrical spatial distribution of violence across the planet. If violence were truly human nature, we should be able to rotate the globe, stop, and randomly land a finger in, say, a Mennonites community, and expect to find a serial killer with the same \math{1/n} probability expected in Detroit. This does not happen.
+
+As one of many influences, where there is poverty, there is despair. Where there is despair, there is crime. Provide for all fundamental human needs and problems like this disappear. It is neither random nor magic. Humans, and probably all organisms, have little in their nature. They do, however, all have needs.
+
+The evidence {\it The Equality Trust}\index{The Equality Trust}{~}\footnotecite[equality_trust] has compiled powerfully reasserts this idea. It is a non--profit organization that aims to reduce income inequality through a programme of public and political education designed to achieve a widespread understanding of the harm caused by income inequality. This ties in well with efforts of epigeneticists to causally determine the changes in human genes based on their behaviour and external factors.
+
+Since Avaneya should rely on as much as reasonably possible of actual scientific research to substantiate the quantitative models that drive the underlying simulation, {\it The Equality Trust} will be an invaluable repository of research to mine.
 
 \StartSubSection{Fallback Shaders}
 Those who work in the non--free software industry sometimes over inflate their target user's hardware requirements. This is because the corporations they work for are unconcerned with leveraging the most out of what users already have. They profit, at least in part, when users are perpetually convinced their hardware is inadequate so as to coerce them into undue, mindless, and wasteful consumption that only adds to the volume of the mountains of garbage the world already has.\footnotecite[caroll2008] As an example, the US government is one of the largest producers of electronic garbage in the world. It throws out over 10,000 computers every week.\footnotecite[urbina2013] That is not to say that users should never upgrade, but only so long as it is actually rational to do so and not merely for the sake of the vendors' interests.
@@ -142,27 +176,6 @@ The game can query the random number generator many thousands of times per secon
 Considering this, we selected Makoto Matsumoto's algorithm,\footnotecite[mersenne_twister] a popular high quality pseudo--random number generator. The algorithm offers an excellent balance between performance and quality of output within a very large period.
 
 As one of its many novel uses, it may be possible to parametrically define some idiosyncrasies of a graphical object by having it take advantage of an element of randomness. For example, two otherwise identical building units, such as a pressurized habitat, could incorporate random parameters to make the foliage in their indoor courtyards different from one another by seeding a foliage generation subroutine with different values. But we need not stop at just geometry, but also use random parameters to generate a colour palette. The possibilities are limited in part by the technical and artistic creativity of the artists and engineers involved.
-
-\StartSubSection{Socio-economic Simulation}
-For aspects of the game concerned with social simulation, it is very difficult to commit to specific algorithms and information representation models until the establishment of more of the game's peripheral aspects. The reason being is that it is hard to tell how well an approach will perform until there is a means of trying it. Compounding the challenge, of all the different sub--fields of game development, social simulation is probably amongst the most absent in the literature. Take any abstract concept like \quote{\it social inertia}\index{social inertia} and ask yourself how best to quantitatively model it?
-
-Regardless, we are reasonably confident about some features. We would prefer to have an agent based simulation model, as opposed to a statistically driven model. For example, seeing an aircraft in the former would just be a representation of aerial traffic density and it would disappear after a while. In the former, however, each unit that moves is its own agent and represents itself. In other words, in a statistically driven model the aircraft is only an {\it expression} of the simulation, whereas in the agent based model the aircraft {\it is} the simulation. In older strategy games, the lack of available computing power meant things had to be done statistically. Times have changed.
-
-Something to consider at least for the time being, however, is the use of a Hubbert curve for modelling resource consumption of finite supplies of natural resources.\footnotecite[hubbert_curve] Whatever models we use, there are some things we need to keep in mind that are fairly fundamental to this project. 
-
-Let us consider for a moment the way people behave. We attribute a person's or group's destructive behaviour to their nature (genetic) when we say that there will always be some people like that in society. We make these assumptions with ease as if we had dedicated years of our lives to having studied and reflected on the matter. We make them as though there was a such thing as an organism's {\it default} behaviour.
-
-The truth is, however, there is none. Research strongly suggests that {\it there is no such thing as human nature, but only human needs}.\footnote{See {\it Zeitgeist: Moving Forward} in \in{chapter}[Resources For Everyone] for an excellent introduction.} Very little behaviour is genetic, if any. All organisms have needs, such as oxygen, water, security, a sense of belonging, community, a meaningful existence, nutrients, sunlight, and so on. It is more reasonable to suggest that human behaviour manifests from whether and how fundamental needs are met with our relation to our environment, rather than that they must unconditionally always be a certain way.
-
-We also know now that genetic expression can actually change throughout an organism's life and is not static.\footnotecite[scishow_epigenetics] This is called epigenetics; indeed, this field is rapidly driving basic research in genetics across much of the European Union, with millions of Euros being spent each year on furthering our understanding of how our environment shapes our genes.
-
-One example that might shed some light on the role of epigenetics in human behaviour is the concept of violence. There is an asymmetrical spatial distribution of it across the planet. If violence were truly human nature, we should expect to be able to rotate the globe, stop, and randomly land our finger anywhere where there are people and expect to find a serial killer with the same \math{1/n} probability we should expect anywhere else. This does not happen. 
-
-As one of many influences, where there is poverty, there is despair. Where there is despair, there is crime. Provide for all fundamental human needs and problems like this disappear. It is neither random nor magic. Humans, and probably all organisms, have little in their nature, only needs.
-
-The evidence {\it The Equality Trust}\index{The Equality Trust} has aggregated powerfully reasserts this idea. It is a non--profit organization that aims to reduce income inequality through a programme of public and political education designed to achieve a widespread understanding of the harm caused by income inequality. This ties in well with efforts of epigeneticists to causally determine the changes in human genes based on their behaviour and external factors.
-
-Since Avaneya should rely on as much as reasonably possible of actual scientific research to substantiate the quantitative models it uses, {\it The Equality Trust} will be an invaluable repository of research to mine.\footnotecite[equality_trust]
 
 \StartSubSection{Square Roots}
 Square roots are common in game programming and nearly always pop up whenever vectors, trigonometry, linear algebra, and so on, are involved. Nevertheless, we avoid them whenever possible. We use the squared magnitude instead. The former is slow, the latter faster -- albeit at the cost of accuracy.

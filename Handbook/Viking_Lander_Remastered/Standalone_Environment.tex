@@ -1,0 +1,24 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+% See the file Copying for details on copying conditions.
+
+% The environment file is used to setup the typesetting that relate to any 
+%  product. This one in particular is used to override the base settings we 
+%  provided in the handbook's Environment.tex...
+
+
+% Import our environment for the rest of the book...
+\input Environment.tex
+
+% But no need for front cover image...
+
+    \defineoverlay
+      [PageBackgroundImage]
+      [{\overlayfigure{Makeup/Images/Background.png}}]
+
+    \setupbackgrounds[page][background=PageBackgroundImage]
+
+% Hide the chapter and section numbers...
+\setuphead[chapter][number=no]
+\setuphead[section][number=no]
+

@@ -41,9 +41,9 @@ $(TOC_PDF): $(OUTPUT_PDF)
 	pdftk A=$(OUTPUT_PDF) cat A3-16 output $@
 
 # Just produce the Viking Lander Remastered chapter...
-viking: graphviz $(VIKING_PDF)
+vlr: graphviz $(VIKING_PDF)
 $(VIKING_PDF): $(ALL_TEX_SOURCE) $(UMBRELLO_ENGINE_DIAGRAM_SVG) ${ALL_BIBTEX}
-	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ $(CONTEXT_OPTIONS)
+	context Viking_Lander_Remastered/Viking_Lander_Remastered.tex --result=$@ $(CONTEXT_OPTIONS) --environment=Viking_Lander_Remastered/Standalone_Environment.tex
 
 # Clean everything, including the cached engine diagram images...
 clean: mostlyclean
@@ -69,5 +69,5 @@ mostlyclean:
 
 # Directive to make to let it know that these targets don't generate filesystem 
 #  objects / products and therefore no need to check time stamps...
-.PHONY: all clean clean-all graphviz toc viking
+.PHONY: all clean clean-all graphviz toc vlr
 

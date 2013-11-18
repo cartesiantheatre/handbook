@@ -5,7 +5,9 @@
 % Resources section...
 \StartSection{Resources}
 
-There are many types of resources in Avaneya. As described in \in{section}[Commodities], they should all be as data driven as possible by using the engine’s Lua interface. The data should include various parameters, graphics, and any scripted behaviour the resource may require. This section will describe a subset of all of these different types of resources.
+There are many types of resources in Avaneya. As described in \in{section}[Commodities], they should all be as data driven as possible by using the engine’s Lua interface. The data should include various parameters, artwork, and any scripted behaviour the resource may require. This section will describe a small subset of all the possibilities of the many types of resources.
+
+Some of these resources can be used as fuels. Fuels are necessary for moving anything from rockets and rovers to motorbikes. Different types are available, but each one described below has some unique considerations. These include carbon monoxide, dimethyl ether, hydrazine, and methane / oxygen as some examples.
 
 \StartSubSection{Aluminium}
 Aluminium is plentiful on Mars in the form of the tough oxide alumina (\chemical{Al_2O_3}). This makes up about 4\% of the surface material. To extract just the aluminium from the alumina is energy intensive and requires about 20 kWh per kg (e.g. very endothermic). If a base had a 100 kW nuclear reactor, it could only provide enough energy to produce about 123 kg of aluminium per day.
@@ -15,12 +17,15 @@ Aluminium is the second most important metal on Earth. It is useful for wiring a
 \StartSubSection{Bricks}
 Baked bricks are easy to make from fine dust or regolith. You start by wetting it, mold under mild compression, then bake the result at a minimum of \math{300^{\circ}}C. The baking could be done very efficiently by using cheap solar reflectors. By adding shredded parachute fibre, the brick's strength can be increased.
 
-Frozen bricks are also simple to make. The process is similar to baked bricks, but we skip the baking and just freeze the wet regolith in a mold into hard permafrost blocks. The bricks can be sealed together using water as though it were a mortar or cement. This process works fine, but only if the building does not have to be heated, otherwise it will turn into mud. This could be useful for storage sheds, for instance.
+Frozen bricks are also simple to make. The process is similar to baked bricks, but we skip the baking and just freeze the wet regolith in a mold into hard permafrost blocks. The bricks can be sealed together using water as though it were a mortar or cement. This process works fine, but only if the building does not have to be heated -- lest it turn to mud. This could be useful for storage sheds for instance.
 
-A word of caution respecting bricks. They have no tension strength. You can only compress them safely. Buildings that are built out of them need to be reinforced on their outside with two and a half metres of regolith, otherwise the building's internal atmospheric pressure will blow itself apart.
+A word of caution on bricks. They have minimal tension strength. You can only compress them safely. Buildings that are built out of them need to be reinforced on their outside with two and a half metres of regolith, otherwise the building's internal atmospheric pressure will blow itself apart.
 
 \StartSubSection{Carbon Dioxide}
 Most of the Martian atmosphere is \chemical{CO_2} at 95\%. It has plenty of uses. It can be used as a solvent to extract useful materials from rocks. These can include magnesium, hydrogen rocket fuel, breathable oxygen, and water. It can also be used in a number of different chemical reactions for producing a variety of new resources.
+
+\StartSubSection{Carbon Monoxide Fuel}
+Carbon monoxide (\chemical{CO}) is a poor, but usable fuel. It is poisonous, but useful in emergencies.
 
 \StartSubSection{Ceramics}
 Clay minerals are all over the planet. When processed into ceramics, they have many uses, such as in \index{pottery}pottery. They are easy to make and do not require much work for the first settlers.
@@ -31,31 +36,32 @@ Copper's presence on Mars is about the same as on Earth at about 50 ppm in the r
 \StartSubSection{Deuterium}
 All chemical elements have one or more variants of themselves that occur less frequently in nature, even though only their most common form is denoted on the periodic table. When elements share the same atomic number, but vary only in the number of neutrons they contain, they are called {\it isotopes\index{isotope}}.
 
-Hydrogen is denoted as \chemical{H} and is known to occur naturally as either of two isotopes. The more common form has one proton, one electron, and no neutrons. This form is called {\it protium\index{protium}} and is sometimes denoted \chemical{^1H} when distinguishing from another type of hydrogen isotope. Usually when someone is talking about hydrogen, they are talking about protium. The number one located in the notation means that it has an atomic mass of one. It is one because electrons have nearly zero mass, neutrons a mass of one, and protons a mass of one. This means that isotopes of the same element will still vary in mass.
+Hydrogen is denoted as \chemical{H} and is known to occur naturally as either of two isotopes. The more common form has one proton, one electron, and no neutrons. This form is called {\it protium\index{protium}} and is sometimes denoted \chemical{^1H} when distinguishing from another type of hydrogen isotope. Usually when someone is talking about hydrogen, they are talking about protium. The number one located in the notation means that it has an atomic mass of one. It is one because electrons have nearly zero mass and neutrons and protons a mass of one. This means that isotopes of the same element will still vary in mass.
 
-The only other known isotope of hydrogen is \index{deuterium}{\it deuterium}. It is denoted \chemical{^2H}. It has a neutron that protium does not, hence the atomic mass of two in its notation. When two deuterium atoms are combined with an oxygen atom, the resultant is deuterium oxide \chemical{^2H_2O}, or simply {\it heavy water\index{heavy water}}. The name derives from it appearing exactly the same as normal water, only heavier.
+The only other known isotope of hydrogen is \index{deuterium}{\it deuterium}. It is denoted \chemical{^2H}. It has a single neutron that protium does not, hence the atomic mass of two in its notation. When two deuterium atoms are combined with an oxygen atom, the resultant is deuterium oxide \chemical{^2H_2O}, or simply {\it heavy water\index{heavy water}}. The name derives from it appearing exactly the same as normal water, only heavier.
 
 On Earth, deuterium is very rare and accounts for only 0.0156\% of all the hydrogen that naturally occurs in our planet's oceans. On Mars it is more plentiful by a factor of five. About 166 in every million hydrogen atoms are deuterium on Earth, but on Mars that number is about 833. 
 
-The RWGS reactor heavily relied upon by Arcadians to produce water from the Martian atmosphere can also produce deuterium as an inadvertent byproduct. If the water emerging from the reactor is split through electrolysis, hydrogen fuel and oxygen will result. For every 6,000 kg of \chemical{H_2O} the reactor produces, 1 kg of that will contain deuterium. Since heavy water takes slightly longer to split with electrolysis than regular water, if you keep cycling the water that has not yet been split back through electrolysis, eventually the concentration of heavy water increases until it is almost totally pure since the normal water gasses off faster.
+The reverse--water--gas--shift (RWGS) reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor] is heavily relied upon by Arcadians. It produces water from the Martian atmosphere, but inadvertently produces deuterium as a byproduct. If the water emerging from the reactor is split through electrolysis, hydrogen fuel and oxygen will result. For every 6,000 kg of \chemical{H_2O} the reactor produces, 1 kg of that will contain deuterium. Since heavy water takes slightly longer to split with electrolysis than regular water, if you keep cycling the water that has not yet been split back through electrolysis, eventually the concentration of heavy water increases until it is almost totally pure. This works because the normal water gasses off faster.
 
-By the late 20th century, deuterium was valued on Earth at about 70\% that of gold per kilogram. It has wide ranging applications from nuclear fusion and fission reactors, nuclear weapons, medical, biochemical, environmental, and more. As an example, if it is contained as heavy water, it can be used in non--uranium enriched fission reactors that poor Terran countries may benefit from.
+By the late 20th century, deuterium was valued on Earth at about 70\% that of gold per kilogram. It has wide ranging applications from nuclear fusion and fission reactors, nuclear weapons, medical, biochemical, environmental, and more. If contained as heavy water, it can be used in non--uranium enriched fission reactors that poor Terran countries could benefit from.
 
-Since Mars is only a third as massive as Earth, only a fourth the energy needed to exceed Earth's escape velocity is actually required on Mars to get things off the planet. This makes deuterium railgun exports from Mars back to Earth feasible where it is a highly valued commodity. Since all water, oxygen, and many other Arcadian industrial processes relying on the RWGS reactor produce deuterium as an inadvertent byproduct, the settlement theoretically would always have something valuable that is sought after in Terran markets.
+Since Mars is only a third the mass of Earth, only a fourth the energy is needed to exceed the escape velocity to get things off the planet. This makes deuterium railgun exports from Mars back to Earth feasible where it is a highly valued commodity. Since all water, oxygen, and many other Arcadian industrial processes relying on the RWGS reactor produce deuterium as a byproduct, the settlement theoretically would always have something valuable that is sought after in Terran markets.
+
+\StartSubSection{Dimethyl Ether Fuel}
+For higher peak energy uses like for bulldozers and drilling rigs, dimethyl ether \chemical{(CH_3)_2O} (DME) is a good fuel. It can be manufactured {\it in situ}. It is a clean burning fuel that burns in diesel engines, but actually performs better than diesel. It will not freeze at Martian temperatures. It is relatively non--toxic, but highly flammable.
 
 \StartSubSection{Electricity}
 See \in{section}[Power] for more on the different ways electrical energy can be generated on Mars. Like other resources, electricity too can have a commercial dimension.
 
-\StartSubSection{Fuels}
-Fuels are necessary for moving anything from rockets and rovers to motorbikes. Different types are available, but each one involves some unique considerations.
+\StartSubSection{Glass}
+Glass is useful for many applications, from tableware and windows to fibre glass. Silicon dioxide (\chemical{SiO_2}), or silica, is the main ingredients. We know from the {\it Spirit} rover that large deposits of silica in the form of bright white soil are all over Mars, present at about 40\% of the regolith. 
 
-\StartSubSubSection{Carbon Monoxide}
-Carbon monoxide (\chemical{CO}) is a poor, but usable fuel. It is poisonous, but useful in emergencies.
+The problem is that to make clear glass, you need to be free of contaminants. Because iron oxide (\chemical{Fe_2O_3}) makes up about 17\% of the regolith, the glass would have a reddish tint. There are two options for dealing with this problem, assuming you want colourless glass. One approach is to use quartz, which we do not at present know where to locate on Mars. Another approach is to rely on the hot carbon monoxide (\chemical{CO}) waste gas that the RWGS reactor produces. This waste gas when applied to tainted silica would produce iron, \chemical{CO_2} gas, and \chemical{SiO_2}. The gas is not a problem. The iron can easily be pulled out with just a magnet and saved for other things, like making steel.
 
-\StartSubSubSection{Dimethyl Ether}
-For higher peak energy uses like for bulldozers and drilling rigs, dimethyl ether \chemical{(CH_3)_2O} (DME) is a good fuel. It can be manufactured {\it in situ}. It is a clean burning fuel that burns in diesel engines, but actually performs better than diesel. It will not freeze at Martian temperatures. It is relatively non--toxic, but highly flammable.
+Even then, the tinted iron--red glass is not always a problem. One might want glass that colour for whatever reason, say, for decorative purposes in habitat zones or in civic buildings. Alternatively, you could use it to produce fibre glass for other purposes.
 
-\StartSubSubSection{Hydrazine}
+\StartSubSection{Hydrazine Fuel}
 Hydrazine (\chemical{N_2H_4}) is a popular monopropellant that sees use frequently in the small thrusters responsible for maintaining attitude control on spacecrafts. It is chemically attractive because it allows for long term storability and simplicity of use since all that it needs for combustion can be contained within a single storage vessel. That is, it does not require separate tanks for both a fuel and oxidizer. This is why it is called a monopropellant.
 
 Hydrazine reserves can be used to supply a spacecraft, aircraft, or ground vehicle with emergency power for short periods of time. The {\it Avaneya} spacecraft has several of these hydrazine based auxiliary power units (APUs).
@@ -64,25 +70,13 @@ Hydrazine can be dangerous if mishandled because its combustion is extremely exo
 
 More work needs to be done to determine how it could be synthesized {\it in situ}, but it should be possible.
 
-\StartSubSubSection{Methane / Oxygen}
-Methane (\chemical{CH_4}) as a fuel and oxygen as the oxidizer make excellent propellants for use in rockets, reconnaissance drones, and even in internal combustion engines. When used in the last-named, it needs to be diluted with atmospheric \chemical{CO_2}, otherwise it will burn too hot. The exhaust is just more \chemical{CO_2} with some water in it. The water could be captured with a condenser to recover up to 90\% of it.
-
-The water saved could then be used to feed a Sabatier reactor described in \in{section}[Sabatier Reactor] to make additional methane. The oxygen used in the reaction could be produced by using the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor].
-
-\StartSubSection{Glass}
-Glass is useful for many applications, from tableware and windows to fibre glass. Silicon dioxide (\chemical{SiO_2}), or silica, is the main ingredients in glass. We know from the {\it Spirit} rover that large deposits of silica in the form of bright white soil are all over the place. This material is present at 40\% of the regolith. 
-
-The problem is that to make clear glass, you need to be free of contaminants. Because iron oxide (\chemical{Fe_2O_3}) makes up about 17\% of the regolith, the glass would have a reddish tint. There are two options for dealing with this problem, assuming you want colourless glass. One approach is to use quartz, which we do not at present know where to locate on Mars. Another approach is to rely on the hot carbon monoxide (\chemical{CO}) waste gas that the RWGS reactor produces. This waste gas when applied to tainted silica would produce iron, \chemical{CO_2} gas, and \chemical{SiO_2}. The gas is not a problem. The iron can easily be pulled out with just a magnet and saved for other things, like making steel.
-
-Even then, the tinted iron--red glass is not always a problem. You might like glass that colour. In other cases, you could use it to produce fibre glass.
-
 \StartSubSection{Iron}
 If it was not for all of the iron oxide or haematite (\chemical{Fe_2O_3}) dust all over the planet, Mars would not have the reddish hue that it does. Because it is so common, so is commercial grade iron ore. 
 
 There are two methods for extracting the iron out of the haematite. You could remove the \chemical{O_3} by using the same method used in \in{section}[Glass] for glass by running hot \chemical{CO} gas through it to break it down into iron and \chemical{CO_2}. Another approach is to react it with hydrogen gas to produce iron and water. By using a condenser to capture the waste water, it can be electrolysed and cycled back into the reaction. Both methods are almost energy neutral, so you just need enough energy to get the reactions started and very little after that to keep them going.
 
 \StartSubSection{Magnesium}
-Magnesium has many uses and is an excellent lightweight alternative to aluminium for many applications on Earth, such as in engine blocks, as an electrical conductor, a rocket fuel, in signal flares, as fire starter, a structural metal, and in aerospace construction. It can also be used for many everyday household items, such as tables, sinks, cups, faucets, and more. We could call these latter things {\it magware}.
+Magnesium has many uses and is an excellent lightweight alternative to aluminium for many applications on Earth. This includes at least in engine blocks, as an electrical conductor, a rocket fuel, in signal flares, as fire starter, a structural metal, and in aerospace construction. It can also be used for many everyday household items, such as tables, sinks, cups, faucets, and more. We might call these commodities in Avaneya {\it magware}.
 
 Magnesium is highly flammable when exposed to oxygen. This is why pure magnesium products are never used in Earth's oxygenated atmosphere. On Mars it needs to be alloyed with another material to prevent autoignition if used indoors. Otherwise, as long as it remains outside, this would not happen because there is too little free molecular oxygen in the atmosphere.
 
@@ -90,6 +84,11 @@ Magnesium is likely found in the Martian regolith and could be extracted with a 
 
 \StartSubSection{Methane}
 Methane (\chemical{CH_4}) has many uses on Mars, from manufacturing to rocket fuel. It can be manufactured {\it in situ} by using the Sabatier reactor described in \in{section}[Sabatier Reactor].
+
+\StartSubSection{Methane / Oxygen Fuel}
+Methane (\chemical{CH_4}) as a fuel and oxygen as the oxidizer make excellent propellants for use in rockets, reconnaissance drones, and even in internal combustion engines. When used in internal combustion engines, it needs to be diluted with atmospheric \chemical{CO_2} or it will burn too hot. The exhaust is just more \chemical{CO_2} with some water in it. The water could be captured with a condenser to recover up to 90\% of it for other uses.
+
+The saved water could be used to feed a Sabatier reactor, like the one described in \in{section}[Sabatier Reactor], to produce additional methane fuel. The oxygen needed could be produced by using the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor].
 
 \StartSubSection{Methanol}
 Methanol (\chemical{CH_3OH}) is necessary for methanol / oxygen fuel cells found in ground vehicles and EVA suits to produce electrical energy. A chemical reaction describing one approach to its synthesis is provided in \in{reaction}[reaction:Methanol Synthesis].
@@ -102,14 +101,14 @@ Methanol (\chemical{CH_3OH}) is necessary for methanol / oxygen fuel cells found
 If you fill a reactor with copper--on--zinc oxide pellets, heat it to \math{250^{\circ}}C, and provide it with carbon monoxide and hydrogen gas at about 2,000 kPa, you will produce methanol. A full reaction does not happen in a single pass, so you have to recycle the unreacted gas back into the reactor until it has all been consumed.
 
 \StartSubSection{Oxygen}
-Oxygen is both plentiful and not on Mars, depending on how you look at it. There is no breathable molecular oxygen (\chemical{O_2}) in the atmosphere, but there is plenty in the form of carbon dioxide (\chemical{CO_2}) at 95\% of the atmosphere. This oxygen can be extracted from the atmosphere by using the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor]. Another approach is to wet unprocessed peroxide containing regolith so that it evolves \chemical{O_2}.
+Oxygen is both plentiful and not on Mars, depending on how you look at it. There is no breathable molecular oxygen (\chemical{O_2}) in the atmosphere, but there is plenty in the form of carbon dioxide (\chemical{CO_2}) at 95\% of the atmosphere. This oxygen can be extracted from the atmosphere by using the RWGS reactor described in \in{section}[Reverse-Water-Gas-Shift Reactor]. Another approach is to wet unprocessed regolith containing peroxide so that it evolves \chemical{O_2}.
 
 \StartSubSection{Plastics}
 Plastics have all the same uses on Mars as they do on Earth. These range from clothing, bedding, housewares, equipment, storage containers, and more.
 
-To produce, we react methanol with itself in a \math{400^{\circ}}C reactor filled with cheap gamma--alumina pellets at 100 kPa. This will produce dimethyl ether or DME, \chemical{(CH_3)_2O}, which is a useful intermediate or precursor to other organic compounds. As described in \in{section}[Dimethyl Ether], DME is also useful as a fuel.
+To produce, we react methanol with itself in a \math{400^{\circ}}C reactor filled with cheap gamma--alumina pellets at 100 kPa. This will produce dimethyl ether or DME, \chemical{(CH_3)_2O}, which is a useful intermediate or precursor to other organic compounds. As described in \in{section}[Dimethyl Ether Fuel], DME is also useful as a fuel.
 
-The DME is then fed into a second reactor which contains a common zeolites catalyst (ZSM--5) at a temperature of \math{400^{\circ}}C--\math{450^{\circ}}C at a pressure between 100--200 kPa. The DME will turn into either ethylene (\chemical{C_2H_4}) at low pressure or propylene (\chemical{C_3H_6}) at higher pressure. This ethylene could be used as a welding fuel at this point, or if one continues to heat either at a still higher pressure, they will polymerize into polyethylene or polypropylene respectively.
+The DME is then fed into a second reactor which contains a common zeolites catalyst (ZSM--5) at a temperature of \math{400^{\circ}}C--\math{450^{\circ}}C at a pressure between 100--200 kPa. The DME will turn into either ethylene (\chemical{C_2H_4}) at low pressure or propylene (\chemical{C_3H_6}) at higher pressure. This ethylene could be used as a welding fuel at this point. If one continues to heat either at a still higher pressure, they will polymerize into polyethylene or polypropylene respectively.
 
 For simpler uses, we can use polyethylene plastic. For applications requiring a higher quality plastic, we can expend more energy and use polypropylene.
 
@@ -122,7 +121,7 @@ As mentioned in \in{section}[Economics & Commerce], generally the only way of ac
 These deposits may be near the surface and exist in large quantities. These might include, but are not limited to, cerium (\chemical{Ce}), europium (\chemical{Eu}), gadolinium (\chemical{Gd}), gallium (\chemical{Ga}), germanium (\chemical{Ge}), gold (\chemical{Au}), hafnium (\chemical{Hf}), lanthanum (\chemical{La}), rhenium (\chemical{Re}), rubidium (\chemical{Rb}), samarium (\chemical{Sm}), silver (\chemical{Ag}), and the platinoids, such as palladium (\chemical{Pd}), iridium (\chemical{Ir}), platinum (\chemical{Pt}), and rhodium (\chemical{Rh}). Rhodium is used to back Arcadia's indigenous currency, the jenya, as described in \in{section}[Jenya].
 
 \StartSubSection{Silane}
-Silane (\chemical{SiH_4}) burns in \chemical{CO_2}, so it makes for an excellent fuel for rocket propulsion or supersonic combustion ramjet engines on Mars as described in \in{section}[Aviation]. But more work needs to be done to determine how best to synthesize it {\it in situ}.
+Silane (\chemical{SiH_4}) burns in \chemical{CO_2}, so it makes for an excellent fuel for rocket propulsion or supersonic combustion ramjet engine on Mars as described in \in{section}[Aviation]. But more work needs to be done to determine how best to synthesize it {\it in situ}.
 
 \StartSubSection{Silicon}
 Silicon is the third most important metal after steel, aluminium being the second. It is needed in the manufacture of all electronics, photovoltaic panels for collecting solar energy, and many other uses. Fortunately silica (\chemical{SiO_2}) is present at 40\% of the regolith.
@@ -136,7 +135,7 @@ To extract just the silicon out of the silica, take the silica and mix with carb
 
 This works well, but it is a very energy intensive process (endothermic). Nevertheless, it is still less than aluminium and, where you need pure metallic silicon, you usually do not need very much of it anyways. 
 
-If this resulting silicon is to be used in microchips and solar panels, this cannot be done without further refinement because it still contains haematite impurities. By bathing it in hot \chemical{H_2} gas, it will turn into silane (\chemical{SiH_4}). This is a gas at room temperature. You start by piping the silane through a reactor to decompose it under high temperature so as to reduce it to pure \chemical{Si} and \chemical{H_2} gas. The resulting silicon can be doped with phosphorus or some other impurity. Doping is done to change an extremely pure semiconductor's electrical properties into whatever kind of semiconductor we would like.
+If this resulting silicon is to be used in microchips and solar panels, this cannot be done without further refinement because it still contains haematite impurities. By bathing it in hot \chemical{H_2} gas, it will turn into silane (\chemical{SiH_4}). This is a gas at room temperature. You start by piping the silane through a reactor to decompose it under high temperature so as to reduce it to pure \chemical{Si} and \chemical{H_2} gas. The resulting silicon can be doped with phosphorus or some other impurity. Doping is done to change an extremely pure semiconductor's electrical properties into whatever kind of semiconductor needed.
 
 Alternatively, one could have liquefied the silane and stored it for use as either a rocket or ramjet combustion engine fuel if preferred.
 
@@ -148,12 +147,12 @@ As you saw in \in{section}[Iron], iron is the most accessible industrial metal p
 \StartSubSection{Water}
 Without water, there would be no human life. Water is a vital resource, but it will take more work to get than on Earth. The best source is found in \index{artesian wells, underground}underground artesian wells. The next best is water ice which is almost pure. The next best source is in the \index{permafrost}underground permafrost. For extraction by means of artesian aquifer, see \in{section}[Geothermal Power].
 
-For extraction from the permafrost, it is not very difficult. You could use a transparent, lightweight, tensile fabric structure. This greenhouse--tent will warm the first few centimetres of regolith above zero, which is all that is needed to make the water degas. 
+For extraction from the permafrost, it is not very difficult. You could use a transparent, lightweight, tensile fabric structure. This greenhouse--tent will warm the first few centimetres of regolith above zero, which is all that is needed to make the water degas. This could be very useful in survival situations.
 
-Another approach to the permafrost is to use a photovoltaic oven, if available. This route requires a lot of energy and the water that melts out of it still needs to undergo distillation because of its salinity.
+Another approach to the permafrost is to use a photovoltaic oven, if available. This requires a lot of energy. The water that melts out of it still needs to undergo distillation because of its salinity.
 
 \StartSubSection{Wood}
-It may come as a surprise to many, but wood is still very useful on another planet like Mars. Bamboo, for instance, could be grown in a greenhouse. It can be cut into sheets and planks, used in laminating floors, paper, landscaping, and many other uses. It can grow up to 100 cm or more per day. Orchards from the greenhouse can provide wood for furniture, in addition to providing fruit. 
+It may come as a surprise to many, but wood is still very useful on another planet like Mars. Bamboo, for instance, could be grown in a greenhouse. It can be cut into sheets and planks, used in laminating floors, paper, landscaping, and many other uses. It can grow up to 100 cm or more per day. Orchards from a colony's greenhouse can provide wood for furniture, in addition to providing fruit. 
 
 The cellulose waste has other uses too. It could be used in the production of ethylene plastics. This greatly increases the number of different types of plastics that can be produced.
 

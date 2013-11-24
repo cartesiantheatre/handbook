@@ -5,9 +5,9 @@
 % Coding standards section...
 \StartSection{Coding Standards}
 
-Try to abide by the project's coding standards whenever possible. It is easier to adapt to a new coding standard in a project when that standard is uniformly applied to it than where everyone applies their own. Any program's source code is both easier on the eyes and to work with when it appears as though only one person wrote it, no matter how many actual contributors there may have been. 
+Try to abide by the project's coding standards whenever possible. It is easier to adapt to a new coding standard when applied uniformly than for everyone to apply their own in a project. Source code is easier to read when it appears as though only one person wrote it, no matter how many actual contributors there may have been.
 
-Use the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and elsewhere. These are guidelines and not written in stone, so use common sense and break them when you have to.
+Use the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and other languages we may depend on from time to time. These are guidelines and not written in stone, so use your common sense and break them whenever you need to.
 
 \StartSubSection{Declarations and Definitions}
 
@@ -16,7 +16,7 @@ Use the following conventions whenever working in C++, as well as whatever is pr
 All classes should be defined in their own header file. The only exception is for small trivial classes which are meaningful only in the context of a parent class through aggregation or composition design patterns.
 
 \item
-Class method declarations in the class header should be listed in alphabetical order relative to its siblings of the same access rights. That is, sort {\tt protected}, {\tt public}, and {\tt private} methods within themselves, but not globally. In the case of constructors and deconstructors, place these at the beginning and ends respectively.
+Class method declarations in the class header should be listed in alphabetical order relative to its siblings of the same access rights. So sort {\tt protected}, {\tt public}, and {\tt private} methods within themselves, but not globally. In the case of constructors and deconstructors, place these at the beginning and ends respectively.
 
 \item
 Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order, with exceptions made for constructors and deconstructors. These should be defined first and last respectively.
@@ -26,7 +26,7 @@ Whenever you want a C++ class's declaration to contain some inline code, leave t
 \stopitemize
 
 \StartSubSection{Legal}
-Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapter}[Licensing Rationale], should have prefixed the following legal notice for engine related code. Adapt the syntax for comments as necessary for the given machine environment (e.g. shader, makefile, etc.).
+Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapter}[Licensing Rationale], should have prefixed the following legal notice for engine related code. Adapt the syntax for comments as necessary for the given environment (e.g. shaders, makefiles, etc.).
 
 \startCodeExample
 /*
@@ -51,7 +51,7 @@ Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapte
 */
 \stopCodeExample
 
-Change the description line from referencing the engine to Avaneya, if it is a script or other media that drives the engine, as opposed to the engine itself. This would look as such.
+Change the description line from referencing the engine to Avaneya, if it is a script or other media driving the engine. The reason you should avoid using \quote{Avaneya} directly in the copyright notice is because the same engine could be used eventually with other projects not having anything to do with Avaneya. This would look as such.
 
 \startCodeExample
 /*
@@ -68,25 +68,28 @@ Same goes if it is for the Solnet server. If that is the case, use the equivalen
 
 \startitemize[4]
 \item
-All angles should be worked with in degrees, not radians, whenever possible.
+All angles should be calculated in degrees whenever possible. Avoid radians.
 
 \item
-All floating point calculations should be done in single precision whenever possible. They are usually faster, can take up less space, and we generally do not need the extra precision in a game.
+All floating point calculations should be done in single precision whenever possible. Single precision is faster, can take up less space, and we usually do not need the extra precision in a game anyways.
 \stopitemize
 
 \StartSubSection{Formatting}
 
 \startitemize[4]
 \item
-English (Canadian) should be used for everything non--localized and saved in UTF--8 whenever possible.
+English should be used for everything non--localized. Source code and other text files should be saved in UTF--8 for maximum portability.
 
 \item
-Always use spaces and not tabs. You can use the latter, if you like, but just as long as your editor converts them to spaces before saving.
+Line breaks should end with a new line control character only. Do not use both a carriage return and a new line as done on some legacy platforms.
+
+\item
+Use spaces and not tabs for indentation. You can use the latter while editing if you like, but make sure your editor converts them to spaces when saving.
 
 \item
 Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier, in which case it should be indented such that the identifier begins at a four space interval.
 
-Right:
+Good:
 \startCodeExample
 float SomeFunction()
 {
@@ -96,7 +99,7 @@ float SomeFunction()
 }
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 float SomeFunction()
 {
@@ -112,7 +115,7 @@ You do not need to indent to accommodate a namespace when an entire source file 
 \item
 An opening brace appears on the next line as preceding code.
 
-Right:
+Good:
 \startCodeExample
 float SomeFunction()
 {
@@ -123,7 +126,7 @@ float SomeFunction()
 }
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 float SomeFunction() {
     for(int x = 0; x < 100; ++x) {
@@ -135,14 +138,14 @@ float SomeFunction() {
 \item
 Put spaces around binary operands.
 
-Right:
+Good:
 \startCodeExample
 A = X + Y;
 if(X == Y)
     ...
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 A = X+Y;
 if(X==Y)
@@ -155,13 +158,13 @@ There is no space between unary operators and the affected variable's identifier
 \item
 When accessing an array, there is no space between the array name and the opening left bracket. 
 
-Right:
+Good:
 \startCodeExample
 int n[100];
 y = n[3];
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 int n [100];
 y = n [3];
@@ -170,29 +173,29 @@ y = n [3];
 \item
 The {\tt if}, {\tt for}, and {\tt while} keywords are not followed by a space separating them and the left parenthesis. 
 
-Right:
+Good:
 \startCodeExample
 if(x == 4)
     return;
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 if (x == 4)
     return;
 \stopCodeExample
 
 \item
-When declaring variables, align the variable names on the same column evenly divisible by four.
+When declaring variables, align the variable names on the same column evenly divisible by four. The exception is where there is only a single declaration.
 
-Right:
+Good:
 \startCodeExample
 int     Count;
 bool    Complete;
 Thing   MainThing;
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 int Count;
 bool Complete;
@@ -202,7 +205,7 @@ Thing MainThing;
 \item
 When calling a function, definitions and function declarations should have no space between the function name and the following left parenthesis.
 
-Right:
+Good:
 \startCodeExample
 int Add(int a, int b)
 { 
@@ -212,7 +215,7 @@ int Add(int a, int b)
 int i = Add(4, 5);
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 int Add (int a, int b)
 {
@@ -225,14 +228,14 @@ int i = Add (4, 5);
 \item
 When calling a function or making a function declaration, no space appears after the left parenthesis or before the right parenthesis.
 
-Right:
+Good:
 \startCodeExample
 foo(x, y);
 bar(z);
 baz();
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 foo( x, y );
 bar( z );
@@ -242,7 +245,7 @@ baz( );
 \item
 A brace preceding an {\tt else} keyword appears on a separate line as the {\tt else}. A statement following an {\tt else} keyword appears on the following line. 
 
-Right:
+Good:
 \startCodeExample
 if(x == 4)
 {
@@ -261,7 +264,7 @@ else
 }
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 if(x == 4) {
     ...
@@ -283,7 +286,7 @@ else {
 \item
 A brace preceding a {\tt catch} keyword appears on a separate line as the {\tt catch}. 
 
-Right:
+Good:
 \startCodeExample
 try
 {
@@ -297,9 +300,9 @@ catch(Error SomeError)
 \stopCodeExample
 
 \item
-A value in a return statement is parenthesized where it contains more than one term.
+A value in a {\tt return} statement is parenthesized where it contains more than one term.
 
-Right:
+Good:
 \startCodeExample
 {
     return x;
@@ -310,7 +313,7 @@ Right:
 }
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 {
     return (x);
@@ -324,7 +327,7 @@ Wrong:
 \item
 If the body of an {\tt if}, {\tt for}, {\tt while} or similar statement consists of a single statement, the statement does not need to be surrounded by braces.
 
-Right:
+Good:
 \startCodeExample
 if(x == 3)
   ++x;
@@ -336,7 +339,9 @@ if(x == 3)
 
 \startitemize[4]
 \item
-Do not use Hungarian notation\index{Hungarian notation}. We prefix objects to denote scope only. This is a member of the global namespace:
+Do not use Hungarian notation\index{Hungarian notation}. Forget Woe32 and the '90s. Prefix objects to denote scope only. 
+
+Member of a global namespace:
 \startCodeExample
 g_Wheels
 \stopCodeExample
@@ -352,10 +357,9 @@ ms_Wheels
 \stopCodeExample
 
 \item
-Class and object names should be intuitive, try to avoid abbreviations, and each word should begin with a capital letter. Modern storage mediums alleviate us of any need for brevity, allowing for greater clarity.
+Class, structure, and object names should be intuitive. Try to avoid abbreviations. Each word should begin with a capital letter. File size is not an issue. This allows for greater readability.
 
-
-Right:
+Good:
 \startCodeExample
 // Class for abstracting a camera interface...
 class Camera
@@ -367,7 +371,7 @@ class Camera
 Camera LogitechCamera;
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
 class cam
 {
@@ -383,19 +387,19 @@ cam log;
 
 \startitemize[4]
 \item
-Source lines may be up to 100 characters long. You may be able to configure your editor to display a margin at this location.
+Source lines should be up to 80 characters long. You may be able to configure your editor to display a margin at this location. If you need to have it longer, do so.
 
 \item
-Functions or methods should be broken down into other functions or methods if they get too long and this is reasonable to do.
+Functions or methods should be broken down into other functions or methods if they get too long.
 
 \item
-Use {\tt assert()} to check your assumptions for things that ought to always be true. Do not abuse it for situations where it is reasonable for a condition to not be true, such as a socket connection failure or a file that could not be opened.
+Use {\tt assert()} to check your assumptions for things that ought to always be true at runtime. Do not abuse it for situations where it is reasonable a condition could be false, such as a socket connection failure or some file that could not be opened.
 
 \item
-Follow the {\it GNU Coding Standards} as much as reasonably possible, save the code formatting points made in this handbook. There is a great deal of wisdom in it.
+Follow the {\it GNU Coding Standards} as much as reasonably possible -- save the code formatting points made in this handbook. There is a great deal of wisdom in it.
 
 \item
-A comment which indicates task which needs to be done at some point should look like this: 
+A comment which indicates a task which still needs to be done can look like this: 
 
 \startCodeExample
 // TODO: Check portability here...
@@ -407,24 +411,24 @@ A comment which indicates task which needs to be done at some point should look 
 
 \startitemize[4]
 \item
-All comments should be written in Canadian English since nearly all programmers in all countries can read that. If you cannot do that, write them as best you can and have someone help you rewrite them.
+All comments should be written in English. This is not because we are Anglophiles, but because most programmers can read English. If you cannot do that, write them as best you can and have someone help you translate.
 
 \item
-Comments should begin with a single space, then a capital letter and end with a trailing ellipses. 
+Comments should begin with a single space followed by a capital letter and then end with a trailing ellipse.
 
-Right:
+Good:
 \startCodeExample
 // Load the image...
 GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);
 \stopCodeExample
 
-Wrong:
+Bad:
 \startCodeExample
-GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load the image.
+GrayImage = cvLoadImage(Path.mb_str(), CV_LOAD_IMAGE_GRAYSCALE);//load image
 \stopCodeExample
 
 \item
-The farther left the comment, the higher the level of abstraction describing what it is that you are trying to accomplish. The farther right, the more detailed your approach becomes. You can think of a given level of indentation as elaborating on how to carry out what was described at a higher (less indented) level. It should be possible in many cases to strip away all the code, except the comments, and still understand what it is that you were trying to do.
+The farther left the comment, the higher the level of abstraction describing what it is that you are trying to accomplish. The farther right, the more detailed the explanation of how it is that you intend to accomplish something. It should be possible in many cases to strip away all the code, except the comments, and still understand what it is that you were trying to do.
 
 Before:
 \startCodeExample
@@ -481,7 +485,7 @@ Stripped:
 \stopCodeExample
 
 \item
-A single blank line should appear between each pair of functions or methods. 
+A single blank line should appear between each pair of functions or methods and again at the end of the file.
 
 \item
 Do not use a blank line after an opening brace or before a closing brace.
@@ -490,7 +494,9 @@ Do not use a blank line after an opening brace or before a closing brace.
 Do not use duplicate blank lines.
 \stopitemize
 
-\StartSubSection{Integrated Development Environment (IDE)}
+\StartSubSection{Integrated Development Environments (IDEs)}
 
-You are welcome to use any plain text editor or IDE you like, provided it does not require non--standard IDE--specific project files to pollute the repository's source tree. So feel free to use CodeBlocks or whatever you are most comfortable with, just do not commit its project files to the repository or alter the build environment such that everyone requires to use the same. See \in{section}[Developer Tools] for a list of all other developer tools required for this project.
+You are welcome to use whatever plain text editor or IDE you are comfortable with, provided it does not require non--standard IDE--specific project files to pollute the repository's source tree or mangle existing files. If you want to use such an IDE, do not commit the project files into the repository or alter the build environment in any way. 
+
+%See \in{section}[Developer Tools] for a list of some developer tools useful for this project.
 

@@ -4,17 +4,17 @@
 
 % Ubuntu Packages section...
 \StartSection{Ubuntu Packages}
-Ubuntu package maintainers are responsible for building and preparing Avaneya packages for the Ubuntu community. They are comfortable with standard Debian packaging conventions, their requisite structure, key signing, and any helper tools like CDBS, debhelper, and lintian that can aid with the tasks at hand. They integrate any hooks that need to execute at various times during user installation to perform required actions, such as registering a file extension or desktop launchers in a freedesktop.org compliant manner. They know how to maintain an apt repository which is used to roll out our packages. When they do not know on how to do something, they know where to ask.
+Ubuntu package maintainers are responsible for building and preparing Avaneya packages for the Ubuntu community. They are comfortable with standard Debian packaging conventions, their requisite structure, key signing, and any helper tools like CDBS, debhelper, and lintian that can aid with the tasks at hand. They integrate any hooks that need to execute at various times during user installation to perform required actions, such as registering a file extension or desktop launchers in a freedesktop.org compliant manner. They know how to maintain an apt repository which we may use to roll out our packages directly. When they do not know on how to do something, they know where to ask.
 
 \StartSubSection{Dependencies}
-Package maintainers must be careful to ensure our packages describe the appropriate dependencies that the game actually requires to function. Without that, a user's package manager cannot make automated intelligent decisions to reconcile dependencies and the game will fail to launch when executed.
+Package maintainers must be careful to ensure our packages describe the appropriate dependencies the game actually requires to function. Without that, a user's package manager cannot make automated intelligent decisions to reconcile dependencies and the game will fail to launch when executed. 
 
-Sometimes this might mean being very careful to avoid known bugs in specific versions of our dependent runtime libraries. If that is the case, we need to work around those problems possibly by including a dependency that, although already available within the user's distribution, is a custom patched or newer version within our own repository than the user's distribution supplies. This allows us to take advantage, for instance, of a bleeding edge features of an experimental API.
+Sometimes the Debian packaging tools can do this automatically, but other times they need help. This might mean being very careful to avoid known bugs in specific versions of some dependency. If we have to do that, we may need to include our own build prefixed within our package. This also allows us to take advantage of a bleeding edge features of an experimental API not found in a stable package.
 
 \StartSubSection{Package List}
-There are many packages that need to be maintained for Ubuntu, such as the game's main binaries; media files, such as textures, models, audio, and cinematics; user extras, such as a screensaver or Plymouth boot theme; documentation; debugging symbols; developer related files, and so on. Each of these different types of objects should be contained within a distinct package representing a logical type. It is important to plan these things in advance because it is vital to see things from the user's perspective too.
+There are many packages that need to be maintained, such as the game's main binaries; media files, such as textures, models, audio, and cinematics; user extras, such as maybe one day a screensaver or Plymouth boot theme; documentation; debugging symbols; developer related files, and so on. Each of these different types of files should be contained within a distinct package representing that logical type. It is useful to plan these things in advance.
 
-Take a look at \in{table}[table:ubuntu_packages] for a list of all of our proposed packages. Some packages do not actually contain anything, but are just {\it metapackages}. That is, they are just aliases for a collection of one or more other packages. 
+Take a look at \in{table}[table:ubuntu_packages] for a list of all of the proposed packages. Some packages do not actually contain anything, but are just {\it metapackages}. That is, they are just aliases for other packages.
 \crlf
 
 \placetable[force,split][table:ubuntu_packages]{List of all Ubuntu packages.}
@@ -36,7 +36,7 @@ Take a look at \in{table}[table:ubuntu_packages] for a list of all of our propos
 \bTABLEbody
     \bTR
       \bTC {\tt avaneya-repository} \eTC
-      \bTC This package should be the only one a user needs to get plugged into our repository. It provides our keyring, an {\tt avaneya.list} for {\tt /etc/apt/sources.list.d/}, apport hooks, and Ubuntu Software Center integration. This should make all other tasks easy for the layman if they only need this package to get themselves started. \eTC
+      \bTC This package should be the only one a user needs to get plugged into our repository. It provides our keyring, an {\tt avaneya.list} for {\tt /etc/apt/sources.list.d/}, Apport hooks, and Ubuntu Software Centre integration. This should make all other tasks easy for the layman if they only need this one package to get started. \eTC
     \eTR
 
     \bTR
@@ -50,9 +50,9 @@ Take a look at \in{table}[table:ubuntu_packages] for a list of all of our propos
     \eTR
 
     \bTR
-      \bTC {\tt avaneya-media} \eTC
+      \bTC {\tt avaneya-data} \eTC
       \bTC Architecture independent data files, such as cinematics, models, 
-textures, icons, audio effects, and so on. This also includes executable scripts 
+textures, icons, audio effects, and other artwork. This also includes executable scripts 
 that drive the engine. \eTC
     \eTR
 
@@ -68,7 +68,7 @@ that drive the engine. \eTC
 
     \bTR
       \bTC {\tt avaneya-dbg} \eTC
-      \bTC Debugging symbols for main binaries. \eTC
+      \bTC Debugging symbols that were stripped out of the main binaries. \eTC
     \eTR
 
     \bTR
@@ -103,15 +103,17 @@ that drive the engine. \eTC
 
 The {\tt avaneya-restricted} package contains anything potentially useful to an Avaneya user that may be restricted in some localities. This includes the patent encumbered Dolby Digital surround sound technology.
 
-Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the \index{surround sound:+analog}analog method with a wire for every speaker connected to the back of the user's sound card. This usually makes a mess. The better way is the \index{surround sound:+digital}digital method. This works by passing a compressed digital stream unmolested from the source medium out to dedicated hardware usually in the form of a digital home theatre receiver. The receiver decodes a superior signal to the analog method which it then amplifies before sending out on its way again to the user's connected speakers. For the former method, the application developer does not really have to do much work on a system that has the surround sound speakers connected properly since OpenAL will do most of the heavy lifting.
+Currently there are only two ways of getting surround sound from a computer to any kind of home theatre setup. One way is the \index{surround sound:+analog}analog method with a wire for every speaker connected to the back of the user's sound card. This makes a mess, but works for many people. The programmer does not really have to do much work to get this working because OpenAL will do most of the heavy lifting in the case of Avaneya.
 
-But there is a problem to take advantage of the latter digital method. At present, nearly every digital home theatre receiver supports only two digital surround sound compressed formats. One of these is Dolby Digital, or sometimes called AC--3 or A52, and the other is the Digital Theatre System or DTS. Both are covered by patents and so we need to be careful how we encode to these bitstreams if we choose to. 
+A better way is the \index{surround sound:+digital}digital method. This works by passing a compressed digital stream unmodified from the source medium out to specialized dedicated hardware, usually in the form of a digital home theatre receiver (e.g. Logitech Z--5500). The receiver decodes a superior signal compared to the analog method. It then amplifies the signal before sending it out on its way to the user's speakers. 
 
-The {\tt libasound_module_pcm_a52.so} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It provides a way to encode a digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. 
+But there is a problem to take advantage of this latter digital method with Avaneya. At present, nearly every digital home theatre receiver supports only two digital surround sound compressed formats. One of these is Dolby Digital, sometimes called AC--3 or A52, and the other is the Digital Theatre System or DTS. Both are patent encumbered. We need to be careful how we encode to these bitstreams.
 
-The problem is that this library is seldom available in most operating system distributions that provide precompiled packages of ALSA. This is due to the aforementioned licensing issue. What we need to do is several things in order to provide A52 output. First we need to ensure at runtime that the user has the {\tt libasound2-plugins} package installed. This provides the needed {\tt libasound_module_pcm_a52.so} library. Secondly we need to either verify that the user's libavcodec was built with the A52 encoder enabled, which the former is just an interface for, or to ship our own either statically or dynamically linked. 
+The {\tt libasound_module_pcm_a52.so} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It is a frontend for for an encoder in {\tt libav}. The latter provides a way to encode a digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. The difficult is in this {\tt libasound_module_pcm_a52.so} library seldom being available in most distributions that provide pre--compiled packages of ALSA. This may be due to the aforementioned licensing issue. 
 
-Whatever we decide to do, we need to make sure that this feature is disabled by default, due to Dolby's licensing requirement. We can leave it as an option for the user to enable if they know that software patents are not valid in their jurisdiction, but we still need to balance several constraints. These include legalities, reasonable expectations and ease of use for the user, and ease of maintenance on our part. Perhaps the best way to do this is to provide all of this functionality separately, such as within an optional and properly disclaimered {\tt avaneya-restricted} package.
+What we need to do is several things in order to make A52 output work. First we need to ensure at runtime that the user has the {\tt libasound2-plugins} package installed. This provides the needed {\tt libasound_module_pcm_a52.so} library. Secondly we need to either verify that the user's libav was built with the A52 encoder enabled, or fallback to one we ship ourselves somehow.
 
-If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other. Moreover, we do not know of any {\it libre} DTS encoders at this time anyways.
+Whatever we decide to do, we need to make sure that this feature is disabled by default, due to Dolby's licensing requirement. We can leave it as an option for the user to enable if they know that software patents are not valid in their locality, but we still need to balance several constraints. These include legalities, reasonable expectations and ease of use for the user, and ease of maintenance on our part. Probably the best way to do this is to provide all of this functionality separately within an optional and properly disclaimered {\tt avaneya-restricted} package.
+
+If we can get A52 working, there is no reason to spend time on redundant DTS support as well since they both do the same thing. Where one is supported on a given receiver, nearly without exception, so is the other.
 

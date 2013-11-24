@@ -8,7 +8,7 @@
 \startitemize[4]
 \head {\em Apport}
 
-Apport intercepts program crashes, collects debugging information about the crash and the operating system environment, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
+Apport intercepts program crashes. It collects debugging information about the crash, the user's platform, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
 
 \head {\em CppUnit}
 
@@ -16,13 +16,13 @@ The CppUnit library is a unit testing framework module for the C++ programming l
 
 \head {\em GNU Autotools}
 
-The GNU Autotools are used to reconcile and harmonize the many idiosyncrasies of different platforms. It makes \index{portability} portability easy to manage when used correctly. 
+The GNU Autotools are the industry standard and akin to the \quote{construction scaffolding} surrounding a new building under development. They can be used to reconcile and harmonize the many idiosyncrasies of different platforms to make \index{portability} portability easier.
 
-The important thing to remember is to use the Autotools in such a way to query the platform for specific features of interest, rather than for specific platforms assumed to provide the specific features of interest. The latter route makes assumptions that are bad because they may be conditional on things that are not reliable or subject to change. A good example is in byte ordering. If you want to know the platform's byte ordering, check for that. Do not check for a given platform, such as OS X, as an indicator of what you assume will always be its endianness since that may change one day.
+%To use it correctly, it is important to query the platform for specific features of interest, rather than for specific platforms assumed to provide the specific features of interest. The latter route makes assumptions that are bad because they may be conditional on things that are not reliable or subject to change. A good example is in byte ordering. If you want to know the platform's byte ordering, check for that. Do not check for a given platform, such as OS X, as an indicator of what you assume will always be its endianness since that may change one day.
 
 \head {\em GNU Compiler Collection}
 
-The GNU Compiler Collection is used for the engine's dependency calculation, compilation, linking, and probably other things. GCC is not a compiler, but actually a collection of compilers for different platforms. Ports of them are available for virtually every platform under the Sun.
+The GNU Compiler Collection is used for the engine's dependency calculation, compilation, linking, and other things. GCC is not a compiler, but actually a collection of compilers for different platforms. Ports of them are available for virtually every platform under the Sun.
 
 %\head {\em libebml}
 
@@ -30,14 +30,18 @@ The GNU Compiler Collection is used for the engine's dependency calculation, com
 
 \head {\em Smolt}
 
-Smolt is both a software utility for gathering user \index{hardware information submission}hardware information and a publicly accessible central server that it interfaces with through anonymous and voluntary submission. This is very important for us because we require a reliable hardware database that can be consulted with to indicate the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
+Smolt is both a software utility for gathering user \index{hardware information submission}hardware information and a publicly accessible central server containing anonymous and voluntary submissions.
+
+This is very important for us because we require a reliable hardware database that we can consult with to determine the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
 
 \head {\em streflop}
 
-The streflop library ({\it STandalone REproducible FLOating--Point}) allows us to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments. Consider the possibility that different users may be using different hardware during multiplayer play. This is essential to ensure gameplay is consistent for everyone.
+The streflop library ({\it STandalone REproducible FLOating--Point}) allows us to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments. 
 
-\head {\em xmlstarlet}
+A {\it libre} game is more likely to be ported to a greater variety of platforms than a non--free game. Players interacting over Solnet could be using very different platforms. The streflop library will help to ensure that all players are playing by consistent rules.
 
-The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests, engine event definitions, and whatever other engine data necessary for syntactical errors and to ensure that they are well formed.
+%\head {\em xmlstarlet}
+
+%The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests, engine event definitions, and whatever other engine data necessary for syntactical errors and to ensure that they are well formed.
 \stopitemize
 

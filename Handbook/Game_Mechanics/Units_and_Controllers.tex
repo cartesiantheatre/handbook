@@ -5,25 +5,27 @@
 % Units & Controllers section...
 \StartSection{Units & Controllers}
 
-A unit is any vehicle, building, or other special object that needs to have its own unique properties and behaviours. It will always have a {\it controller}. This could be a human, either the user or someone else during a multiplayer session, or the computer's artificial intelligence.
+A unit is any vehicle, building, or other special object that needs to maintain its own dynamic properties and behaviours. It will always have a {\it controller}. This could be a human, either the player or someone else during a multiplayer session, or the computer's artificial intelligence.
 
-It is the project's desire for an extensive unit tree since that is one way a diverse virtual world can express itself. Although the user may direct the locations and activities of units under their control, not all units in the unit tree they will have access to -- nor will they necessarily even know about or want them. Some units, such as certain types of vehicles and buildings, only the simulation can create at various times. We refer to these as non--playable units\index{Non--playable units} (NPUs)\index{NPUs}. At other times still, the user will be able to create certain units in specific scenarios that in others they would not.
+It is this project's desire for an extensive unit tree since. Although the player may direct the locations and activities of units under their control, not all units in the unit tree they will have access to -- nor will they necessarily even know about or want them. Some units, such as certain types of vehicles and buildings, only the simulation can create at various times. We refer to these as non--playable units\index{Non--playable units} (NPUs)\index{NPUs}. At other times still, the player will be able to create certain units in specific scenarios that in others they would not.
 
-As an example, you can and should build a greenhouse. But other influences in the game world might have the Clown Food\index{Clown Food} franchise erect a restaurant if the circumstance was right without having asked your permission. Nevertheless, NPUs can usually be influenced by the decisions that you make, even if you are not directly in control of them. Nearly everything influences everything in the game.
+As an example, you can and should build a greenhouse. But other influences in the game world might have the Clown Food\index{Clown Food} franchise erect a restaurant if the circumstance was right, such as the player having recently erected an elementary school in close proximity, but without ever having asked for the player's permission. Nevertheless, NPUs can usually be influenced by the decisions that you make, even if you are not directly in control of them. Nearly everything can potentially influence everything else in the game.
 
-But most units can and will change with time depending on various factors that take place in the game world. For example, an area zoned for habitat usage may start with only a few pressurized yurts, but after time, it may develop into an extravagant, full fledged, pressurized biodome or skyscraper. With further time yet, it may fall into a state of disrepair with the underprivileged seeking shelter within the ruins, but only should the social, economic, and other conditions be met since this is neither accidental nor random.
+Most units can and will change with time depending on various factors that take place in the game world. For example, an area zoned for habitat use may start with only a few pressurized yurts, but after time, it may develop into an extravagant, full fledged, pressurized biodome or skyscraper. With further time yet, it may fall into a state of disrepair with the underprivileged seeking shelter within the ruins. It might later again undergo yet another transformation through gentrification.
 
-We should now take a look at some of the different categories that form the basic unit tree available to the user. This is a very modest subset of all units the user can possibly create, but does not illustrate the variety each unit can express. For buildings these categories are {\it Economy and Commerce}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones}. Because these are high level categories, with the exception of the lattermost, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
+We should now take a look at some of the different categories that form the basic unit tree available to the player. This is a very modest subset of all units the player can possibly create, but does not illustrate the variety each unit can express. For buildings, these categories are {\it Economy and Commerce}; {\it Education and Research}; {\it Energy}; {\it Health, Recreational, and Social}; {\it Justice}; {\it Militia}; {\it Production}; {\it Transportation}; and {\it Zones}. Because these are high level categories, with the exception of the latter, they can sometimes be further subdivided. For example, {\it Health, Recreational, and Social}, contains a {\it Health} category, which, in turn, contains an Addiction Resource Centre unit.
 
-The latter category of {\it Zones} does not necessitate a {\it specific} building for the user to erect, but rather, a region managed by the simulation of which it will control and erect as circumstance warrants. These zones include {\it Agricultural}, {\it Commercial}, {\it Habitat}, {\it Habitat and Commercial}, {\it Industrial}, and {\it Unzoned}. Unzoned is not allocated for specific use, but may have been at one time as evident perhaps through urban decay\index{urban decay} and gentrification\index{gentrification}.
+The {\it Zones} category does not contain a {\it specific} building for the player to erect, but rather a region managed by the simulation it will control and develop as circumstance warrants. This includes the {\it Agricultural}, {\it Commercial}, {\it Habitat}, {\it Habitat and Commercial}, {\it Industrial}, and {\it Unzoned} zones. 
 
-If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the user. The figures that follow are an exploration of each of these high level categories. Note that they illustrate only the categorical relations, but not which unit is required to be built in order to provide for the availability of another unit. That is sometimes called a build dependency.
+Unzoned is a special zone. It is not allocated for specific use, but may have been at one time. This could be evident in urban decay\index{urban decay} and gentrification\index{gentrification}.
+
+If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of the high level categories we just covered and how they relate to the player. The figures that follow are an exploration of each of these high level categories. Note that they illustrate only the categorical relations, but not which unit must be available before some other is (the build dependency).
 
 \page
 \placefigure
     []
     [figure:Units_User_Basic_All]
-    {All high level categories of the user's basic unit tree.}
+    {All high level categories of the player's basic unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_All.pdf][][height=0.45\textheight]}
 
 \placefigure
@@ -36,89 +38,90 @@ If we take a look at \in{figure}[figure:Units_User_Basic_All], we can see all of
 %\placefigure
 %    []
 %    [figure:Units_User_Basic_Agricultural]
-%    {User's basic agricultural unit tree.}
+%    {Player's basic agricultural unit tree.}
 %    {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Agricultural.pdf][][width=1.25\textwidth]}
 
 \page
 \placefigure
     []
     [figure:Units_User_Basic_Civic]
-    {User's basic civic unit tree.}
+    {Player's basic civic unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Civic.pdf][][width=1.25\textwidth]}
 
 \placefigure
     []
     [figure:Units_User_Basic_Education_and_Research]
-    {User's basic education and research unit tree.}
+    {Player's basic education and research unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Education_and_Research.pdf][][width=1.25\textwidth]}
 
 \page
 \placefigure
     []
     [figure:Units_User_Basic_Energy]
-    {User's basic energy unit tree.}
+    {Player's basic energy unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Energy.pdf][][width=1.25\textwidth]}
 
 \placefigure
     []
     [figure:Units_User_Basic_Health_Recreational_and_Social]
-    {User's basic health, recreational, and social unit tree.}
+    {Player's basic health, recreational, and social unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Health_Recreational_and_Social.pdf][][width=1.25\textwidth]}
 
 \page
 \placefigure
     []
     [figure:Units_User_Basic_Production]
-    {User's basic production unit tree.}
+    {Player's basic production unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Production.pdf][][width=1.25\textwidth]}
     
 \placefigure
     []
     [figure:Units_User_Basic_Transportation]
-    {User's basic transportation unit tree.}
+    {Player's basic transportation unit tree.}
     {\externalfigure[Game_Mechanics/Graphviz/Units_User_Basic_Transportation.pdf][][width=1.25\textwidth]}
 
-If you look carefully at \in{figure}[figure:Simulation_Zones], concrete units were not given, but rather, zones that the user can allocate for the simulation to manage. A habitat zone, for instance, can provide a space for the simulation to erect any kind of residential building. 
+If you look carefully at \in{figure}[figure:Simulation_Zones], concrete units were not given, but rather, zones the player can allocate for the simulation to manage. A habitat zone for instance can provide a space for the simulation to erect any kind of residential building. This has worked well in another classic city builder simulation that was very popular in the 1990s.
 
-In addition, the user can specify zoning restrictions on an area when it is allocated. These restrictions can limit the maximum building height, density, maximum amount of space in the zone a building can occupy, whether parking must be provided, noise emissions, or what have you. By density, we mean the maximum extent the land can be developed. In the case of a habitat zone, setting it low limits its potential maximum development to something rudimentary, such as a single inflatable pressurized yurt. Setting the density higher could lead it to eventually becoming a large, extravagant, high--rise apartment complex.
+In addition, the player can specify zoning restrictions on an area when allocated. These restrictions can limit the maximum building height, density, amount of space buildings can occupy, parking, noise emissions, and what have you. 
 
-Moving on now to things that are mobile. Some of the user's basic units, usually buildings, can produce different types of vehicles which are units too. Some of these vehicles are ground based, such as rovers, some airborne, and yet others capable of suborbital or transplanetary flight.
+Setting the density determines the maximum extent the zone can be developed. In the case of a habitat zone, setting it very low will limit the potential maximum development to something rudimentary, such as a single inflatable pressurized yurt. Setting the density very high could lead it to eventually becoming a large, extravagant, high--rise apartment complex as part of a booming metropolis.
 
-We can take a look at all of the different types of mobile units that are available in the user's basic unit tree, which units are prerequisite to their creation, and their categorically arrangement. This is illustrated in \in{figure}[figure:Units_User_Basic_Vehicles]. 
+Some of the player's basic units, usually buildings, can produce different types of vehicles which are also units too. Some of these vehicles are ground based, such as rovers. Some of these are airborne, such as survey balloons, blimps, fixed wing aircraft, and so on. Yet others are capable of suborbital or even transplanetary flight back to Earth.
 
-Assume that when a building is selected in the graphical user interface, options are available to create the supported vehicles.
+We can take a look at some of the different types of mobile units that are available in the player's basic unit tree and their dependencies. This is illustrated in \in{figure}[figure:Units_User_Basic_Vehicles]. 
 
 \FullPageDiagram
     {figure:Units_User_Basic_Vehicles}
-    {User's basic vehicular unit tree and the units responsible for their creation.}
+    {Player's basic vehicular unit tree and the units responsible for their creation.}
     {Game_Mechanics/Graphviz/Units_User_Basic_Vehicles.pdf}
 
+%\StartSubSection{Static Unit Connections}
+%Connecting all the object / building units of a city can be of two types:
 
-\StartSubSection{Static Unit Connections}
-Connecting all the object / building units of a city can be of two types:
+%\startitemize[4]
+%        \item A physical representation,
+%        \item A general relation based on distance or area.
+%\stopitemize
 
-\startitemize[4]
-        \item A physical representation,
-        \item A general relation based on distance or area.
-\stopitemize
+%In a physical representation what is connected to a player's controlled city is by roads or some other physical marker which not only creates the programmed connection but also the physical connection that allows a player to see that things are connected.
 
-In a physical representation what is connected to a player's controlled city is by roads or some other physical marker which not only creates the programmed connection but also the physical connection that allows a player to see that things are connected.
+%In a general relationship between objects we have no physical markers and the player has an understanding that the objects are connected simply by there proximity. Sometimes this may be because roads are not always required due to Martian rovers or what have you being adapted to the terrain in some situations. 
 
-In a general relationship between objects we have no physical markers and the player has an understanding that the objects are connected simply by there proximity. Sometimes this may be because roads are not always required due to Martian rovers or what have you being adapted to the terrain in some situations. 
-
-General relationships may also be represented with an area overlay such as a transparent colour showing the distance a water pump can pump water. Overlays are good at presenting information to a player in a quick and easy to understand manner, but they reduce the ability of a player to be able to respond to diverse and changing situations and react to these situations naturally or with reflex, essentially slowing down play. Overlays may also become process intensive. 
-  
-Whether an object or agent is in the form of a physical or general representation is largely determined by what the object or agent is and how practical it is to be represented in either form. Physical representations could be in the form of roads, tubes, powerlines, paths, pipes, or any other civil structure connecting areas through transport or communication. They could also be in the form of non interactive or non functional objects that have no real impact on the game such as lines indicating a connection, however this later option removes elements of immersion, this may be an option that can be turned on and off.
+%General relationships may also be represented with an area overlay such as a transparent colour showing the distance a water pump can pump water. Overlays are good at presenting information to a player in a quick and easy to understand manner, but they reduce the ability of a player to be able to respond to diverse and changing situations and react to these situations naturally or with reflex, essentially slowing down play. Overlays may also become process intensive. 
+%  
+%Whether an object or agent is in the form of a physical or general representation is largely determined by what the object or agent is and how practical it is to be represented in either form. Physical representations could be in the form of roads, tubes, powerlines, paths, pipes, or any other civil structure connecting areas through transport or communication. They could also be in the form of non interactive or non functional objects that have no real impact on the game such as lines indicating a connection, however this later option removes elements of immersion, this may be an option that can be turned on and off.
 
 
-\StartSubSection{Roads and Movement Units}
+\StartSubSection{Roads & Movement Units}
 All buildings on the game world are connected in some way once they are placed as units. Pedestrians may walk to them, even if over the Martian landscape. The labour or workforce may travel between them in a similar manner. Connecting buildings through transport structures such as roads or pressurized transportation tubes for pedestrians gives greater access by those who are able to access that particular transportation infrastructure. 
 
-If the city has a network of roads, a building built outside of road access will have less accessibility. Connecting the building to the road network gives everyone with access to the road network access to the building. Of course road blocks, high traffic and population density, or restricted areas and the like can affect access. 
+If the city has a network of roads, a building built outside of road access will have less accessibility. Connecting the building to the road network gives everyone with access to the road network access to the building. Of course road blocks, high traffic, population density, or restricted areas and the like can affect access.
 
-Likewise, cities may be connected in a similar fashion through intercity highways and airways. Unpaved highways or aerial routes can be demarcated on the terrain with cost effective transponder beacons to aid with navigation across the terrain or in low visibility, such as at night, in the absence of satellite assisted positioning (MPS), or during seasonal sandstorms. Cities outside of these transportation routes will have less accessibility to and from other cities. The advantages and disadvantages of this need to be weighed up on a case by case basis by the player. A player connecting their city to another city, which is in turn connected to multiple others which the first was not directly, may be opening there city to all these other cities -- though they may not realize this.
+Likewise, cities may be connected in a similar fashion through intercity highways and air corridors. Unpaved highways or aerial routes can be demarcated on the terrain with cost effective transponder beacons to aid with navigation across the terrain or in low visibility, such as at night, in the absence of satellite assisted positioning (MPS), or during seasonal sandstorms. Cities outside of these transportation routes will have less accessibility to and from other cities. The advantages and disadvantages of this need to be weighed up on a case by case basis by the player. A player connecting their city to another city, which is in turn connected to multiple others which the first was not directly, may affect the life of their city in ways they had not predicted.
 
 There are a variety of transportation structures that can be used for different purposes. There are vehicle transportation routes, such as roads and public transportation systems like the railway and subterranean vacuum tubes. These could be used for both the movement of people and goods. Aerial vehicles such as dirigibles, balloons, and fixed wing aircraft can be used for transportation across the planet of both people and goods. Rockets can be used for heavy lift at greater distance or for suborbital or even interplanetary transportation -- though railguns are more practical for unmanned cargo. Players can use a variety of these and other transport structures to create a network of these systems to form a functioning city meeting the demands of its citizens. Some forms of transportation may be better suited or more cost effective than others for different types of uses. 
 
-While roads are one method of connecting buildings for pedestrian and vehicle transportation, there may be other ways buildings can be connected for pedestrian transportation or for other means. Buildings may be linked through a network to physical goods. Adjacent buildings of a similar type may be connected to form something such as a military complex, industrial process, or a bazaar. Farm buildings may be connected to form processing plants with entry points for combines to connect to silos which are connected to mills and processing plants creating products. It can be seen that an exhaustive list of building connections can be made to make some interesting building and playing styles. Different buildings and transport networks combining to form different production, transport, and city types is part of the creativity of play.
+While roads are one method of connecting buildings for pedestrian and vehicle transportation, there may be other ways buildings can be connected for pedestrian transportation or for other means. Buildings may be linked through a network to physical goods. Adjacent buildings of a similar type may be connected to form something such as a military complex, industrial process, or a bazaar. Farm buildings may be connected to form processing plants, with entry points for combines to connect to silos which are in turn connected to mills and processing plants producing products. 
+
+It can be seen that an exhaustive list of building connections can be made to make some interesting and creative game play.
 

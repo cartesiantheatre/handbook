@@ -13,19 +13,21 @@ Once you have read the Avaneya Code of Conduct, you can generate your digital si
 
 \startCodeExample
 $ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
-$ gpg --armour --output FirstName\ LastName.gpg --clearsign \
+$ gpg --armour --output "FirstName LastName.gpg" --clearsign \
     ../Code\ of\ Conduct
 \stopCodeExample
 
-This will generate a digital signature within the {\tt Signatures/} directory. This file can then be added and commit into the repository, or bundled as part of a larger commit, as described in \in{section}[Using Bzr]. 
+Note that the trailing \quote{\type{\}} character should not appear when you type it, but is written above just to signal a line break to you.
 
-The signature is in human readable ({\tt --armour}) and clearsign ({\tt --clearsign}) format. This means that the signature file generated contains both a copy of the original document within it as well as your digital signature. Thus, the file is self contained, portable, and viewable in any text editor.
+This command generates a digital signature within the {\tt Signatures/} directory. This file can then be added and commit into the repository, or bundled as part of a larger commit, as described in \in{section}[Using Bzr]. 
+
+The signature is also human readable ({\tt --armour}) and clearsign ({\tt --clearsign}) format. This means that the file you just generated contains both a copy of the original document within it as well as your digital signature. This makes it easier for others.
 
 To verify someone's signature, run the following. You will need the signer's verified public key available in your keyring in order for GnuPG to check the file's authenticity against it. If you are verifying your own signature, then you probably already have it installed.
 
 \startCodeExample
 $ cd Avaneya/Documentation/Contributors/Code\ of\ Conduct/Signatures/
-$ gpg --verify Dicky\ Chow.gpg 
+$ gpg --verify "Dicky Chow.gpg"
 gpg: Signature made Sun 08 Apr 2012 09:40:48 PM PDT using DSA key ID ABCD1234
 gpg: Good signature from "Dicky Chow <dicky_chow@some_domain.cn>"
 \stopCodeExample

@@ -8,19 +8,21 @@
 \startitemize[4]
 \head {\em Audacity}
 
-We use Audacity for audio recording, editing, post--processing, effects, and more. It can take advantage of any of the multitude of the LADSPA and VST plugins compatible with it. It can also export to surround sound formats.
+We use Audacity for audio recording, editing, post--processing, effects, and more. It can take advantage of any of the multitude of the LADSPA and VST plugins compatible with it. It can also export to popular digital surround sound formats.
 
-\head {\em libasound_module_pcm_a52}
+\head {\em libav / libasound_module_pcm_a52}
 
-The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms (usually GNU/Linux). It provides a way to encode a \index{surround sound:+digital}digital surround sound stream in A52 format to a pass--through device (e.g S/PDIF). The user's home theatre receiver then takes over from there. We have to be careful here. See \in{section}[{Restricted Data Considerations}] for more information on why.
+The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms  -- usually GNU/Linux. The plugin is a wrapper for the lower level encoder provided through {\tt libav}. The latter provides a way to encode a \index{surround sound:+digital}digital surround sound stream in A52 format to a pass--through device (e.g. S/PDIF). The user's home theatre receiver then decodes and amplifies the stream to the user's surround sound system.
 
-\head {\em libmikmod}
+We need to be careful for legal reasons. See \in{section}[Restricted Data Considerations] for more information on why.
 
-We use libmikmod for playback of tracker music modules. Some people were requesting tracker support. Since it should not take very much effort to integrate into our engine's audio subsystem, as described in \in{section}[Audio], we considered this a reasonable request. One caveat is that we need to make sure the library is compiled thread safe.
+%\head {\em libmikmod}
+
+%We use libmikmod for playback of tracker music modules. Some people were requesting tracker support. Since it should not take very much effort to integrate into our engine's audio subsystem, as described in \in{section}[Audio], we considered this a reasonable request. One caveat is that we need to make sure the library is compiled thread safe.
 
 \head {\em OpenAL}
 
-OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is done through other APIs.
+OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is done through other APIs, such as {\tt SDL_audio}.
 
 \head {\em SDL_audio}
 

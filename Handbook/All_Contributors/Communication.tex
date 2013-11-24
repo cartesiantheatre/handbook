@@ -7,10 +7,12 @@
 The team uses two primary means of intercommunication. The first is through mailing lists. The second is over IRC. The Code of Conduct described in \in{section}[Avaneya Code of Conduct] applies to both.
 
 \StartSubSection{Mailing Lists}
-Mailing lists are not new. They have been around for literally decades. They lack the cosmetics and ease of use of a forum, but until our website is ready, they will suffice for the time being. Avaneya has three mailing lists, each serving a different purpose.
+Mailing lists are not new. They have been around for literally decades. They lack the cosmetics and ease of use of a forum, but until we have setup an appropriate forum, they will have to suffice for the time being. 
+
+Avaneya has three mailing lists, each serving a different purpose. Let's talk about each of them.
 
 \StartSubSubSection{Announcements}
-The first is a unidirectional announcement mailing list. It is low volume and only intended to communicate from the project to the general public about major project press releases. Anyone can subscribe to it. It has many hundreds of subscribers and grows on a daily basis.
+The first is a unidirectional announcement mailing list. It is low volume and only intended to communicate from the project to the general public about major project news releases. Anyone can subscribe to it. It has hundreds of subscribers and grows weekly.
 
 \blank[2*big]
 \startnarrower[3*left]
@@ -24,7 +26,7 @@ Browse the archives:\crlf
 \crlf
 
 \StartSubSubSection{Public Discussion}
-The second list is for anyone to discuss anything related to the project. It is open to everyone. You can post to it by emailing \mailto{avaneya@lists.avaneya.com}.
+The second list is for anyone to discuss anything related to the project. It is open to everyone. You can post to it by writing to \mailto{avaneya@lists.avaneya.com}.
 
 \blank[2*big]
 \startnarrower[3*left]
@@ -38,7 +40,9 @@ Browse the archives:\crlf
 \crlf
 
 \StartSubSubSection{Private Discussion}
-The third list is an internal mailing list open only to project crew. Topics range from game storyline spoilers, unreleased conceptual art, security vulnerabilities, and so on. If you are a contributing member of our community, you should have been sent a subscription invitation and can post by emailing \mailto{avaneya-private@lists.avaneya.com}. Like Vegas, what goes on in that list stays in that list.
+The third list is an internal mailing list open only to project crew. Topics range from game storyline spoilers, unreleased concept art, imminent security vulnerabilities, and so on. 
+
+If you are a contributing member of our community, you should have been sent a subscription invitation. You can post by writing to \mailto{avaneya-private@lists.avaneya.com}.
 
 \blank[2*big]
 \startnarrower[3*left]
@@ -52,34 +56,43 @@ Browse the archives:\crlf
 \crlf
 
 \StartSubSubSection{Etiquette}
-When using our mailing list, consider the following useful advice. It applies not necessarily just to this project, but probably to many other software {\it libre} projects.
+When using our mailing list, consider the following useful advice. It applies not necessarily just to this project, but probably to many others as well.
 
 \startitemize[4]
-\item
-{\bf Do not ever send email formatted in HTML.} Some mail clients cannot render it and you should not assume everyone is using the same software that you are. Even if they are using an HTML capable mail client, there is no guarantee that it will come out the same. People with visually impairments who rely on speech synthesizers can find the latter unreliable when parsing HTML since it is much more difficult for it to interpret. Yes, we do have fans with visual impairments. In other cases, users may even have to pay for additional bandwidth to retrieve your email since HTML encoded email is much larger in size in comparison to plain text. The reasons go on.\footnotecite[html_mail_bad]
+\head {\em Never send HTML formatted email.} 
 
-\item
-{\bf Reply to the list and not just the original sender privately when replying to a post -- unless that was your intention.} Mailing lists are setup so that everyone who subscribes to them can benefit. Sometimes this may not happen until years later when a new subscriber searches through old archives to find a solution to a problem they were having that was solved long ago by someone else with the same issue.
+Some mail clients cannot render it and you should not assume everyone is using the same software that you are. Even if their client can, there is no guarantee it will come out the same. People with visual impairments relying on speech synthesizers do not always work properly when parsing HTML. In other cases, users may have to pay for additional bandwidth to retrieve your email since HTML encoded email is much larger. The reasons are many.\footnotecite[html_mail_bad]
 
-\item
-{\bf Do not copy the whole digest when replying to a post.} If you have your subscription configured to use batch digest mode, just quote the minimum needed for context. When batch digest mode is enabled, the server will {\it batch} together emails until a certain quota has been met before sending them to you as a single compilation instead of each post one at a time. This is useful to cut down on the amount of email you receive when a mailing list is high volume. For low volume mailing lists, this may be a bad idea because you might not get an important post until months after it was sent since it may take a long time for the quota to be met and trigger the send.
+\head {\em Reply to the list and not just the original sender privately when replying to a post -- unless that was your intention.} 
 
-\item
-{\bf Check the subject heading of your reply to make sure it still reflects the original post.} Some mail readers, if you have batch digest mode enabled in your subscription, will change the subject heading to identify only the digest issue, rather than the specific message within it being replied to. If the subject is left mangled, it can make it difficult for readers to follow the thread.
+Mailing lists are setup so that all subscribers can benefit. Sometimes this may not happen until years later when a newcomer searches old archives to find a solution to a problem solved long ago.
 
-\item
-{\bf Do not top post.} When you reply, remember to reply at the {\it bottom} and not at the top of the message. Top posting is generally not encouraged because it makes preservation of the thread's chronological order difficult to follow for readers.\footnotecite[top_posting]
+\head {\em Do not copy the whole digest when replying to a post.} 
 
-\item
-{\bf Sign your post with your OpenPGP key.} This is important for security reasons since no one can be sure that a post allegedly originating from you actually did so. Most mail clients, such as Evolution, Mutt, Thunderbird, KMail, and so on, have some way to integrate the free OpenPGP client, GnuPG. Make sure you enable PGP/MIME encoding, if not already, as is needed in the case of the Enigmail plugin if using Thunderbird since the default inline method it uses is deprecated.
+If you have your subscription configured to use batch digest mode, just quote the minimum needed for context. When batch digest mode is enabled, the server will \quote{batch} emails together until a certain quota is met before sending them as a single compilation. This is useful to cut down on the amount of email you receive when mailing lists are high volume. 
+
+For low volume mailing lists, this may be a bad idea because you might not get an important post until months after it was sent since it may take a long time for the quota to be met and the send triggered.
+
+\head {\em Check the subject heading of your reply to make sure it still reflects the original post.} 
+
+If you have batch digest mode enabled in your subscription, some mail readers will mangle the subject to identify only the generic digest subject, rather than the specific message within being replied to. If the subject is left mangled, it can make it difficult for other software to organize the thread for readers.
+
+\head {\em Do not top post.} 
+
+When you reply, remember to reply at the {\it bottom} and not at the top of the message. Top posting is generally not encouraged because it makes preservation of the thread's chronological order difficult to follow for readers.\footnotecite[top_posting]
+
+\head {\em Sign your post with your OpenPGP key.} 
+
+This is important for security reasons since no one can be sure that a post allegedly originating from you actually did so. Most mail clients, such as Evolution, Mutt, Thunderbird, KMail, and so on, have some way to integrate the free OpenPGP client, GnuPG. If you need help setting this up, ask.
+
+Make sure you enable PGP/MIME encoding because some clients, e.g. Enigmail, default to the older deprecated inline method.
 \stopitemize
 
 \StartSubSection{Internet Relay Chat}
 
-IRC is among the oldest forms of realtime communication over the internet. Avaneya has officially registered with Freenode the \index{irc channel}channel {\bf \tt \type{#}avaneya}. You can point your IRC client to connect to {\bf \tt irc.freenode.net} if you would like to join us. Use whatever client you like, but it is recommended that you use one that at least supports SSL.
+IRC is among the oldest forms of realtime communication over the internet. Avaneya officially registered with Freenode in {\bf \tt \type{#}avaneya} and you can point your client to connect to {\bf \tt irc.freenode.net} if you would like to join us. Use whatever client you like, but it is recommended that you use one that at least supports SSL or TLS.
 
-Make sure you register your chosen nick name with the {\it nickserv} bot on Freenode. This ensures you are consistently identifiable to others in the chat room and makes it difficult for someone to impersonate you.
+Make sure you register your chosen alias with {\it nickserv}. This protects your identity and makes it more difficult for someone to impersonate you.
 
-Whenever you would like to send someone a message publicly in the channel, you should precede your message with their nick name (e.g. \quote{\it Dicky: Hey! How's it going?}). This is because many people have their clients configured to alert them audibly or visually when that happens, as opposed to every time anyone says anything in the channel which can sometimes be very frequent in some channels. Usually you only need to type the first few letters of their nick name and hit tab to have the client complete it for you.
-
+Whenever you would like to send someone a message in the channel, try to precede your message with the alias of the person it is directed to, e.g. \quote{\it Dicky: Hey there!}. This is because many people have their clients configured to alert them audibly or visually when that happens, as opposed to every time anyone says anything in the channel which can sometimes be very frequent in high volume channels. Usually you only need to type the first few letters of their alias and hit tab to have the client complete it for you.
 

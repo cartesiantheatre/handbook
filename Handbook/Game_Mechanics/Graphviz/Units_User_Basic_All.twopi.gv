@@ -8,7 +8,7 @@
       $ twopi -Tpdf Units_User_Basic_All.twopi.gv -o Units_User_Basic_All.pdf
 */
 
-// High level categories for all of the user's basic units graph...
+// High level categories for all of the player's basic units graph...
 digraph Units_User_Basic_All
 {
     // Graph attributes...
@@ -20,7 +20,7 @@ digraph Units_User_Basic_All
     pad="0.5,0.5";
     compound="true";
     overlap="vpsc";
-    root="User";
+    root="Player";
 
 	// Node attributes...
 	node[color="#d3502dff"];
@@ -36,22 +36,22 @@ digraph Units_User_Basic_All
 	edge[fontname="Ubuntu"];
 	edge[labeldistance="5.0"];
 
-    // User root node...
-    "User"[shape=tripleoctagon];
+    // Player root node...
+    "Player"[shape=tripleoctagon];
     
     "Simulation"[shape=tripleoctagon];
     
-    // Link all categories to user...
-    "User" -> "Agricultural";
-    "User" -> "Economy & Commerce";
-    "User" -> "Education & Research";
-    "User" -> "Energy";
-    "User" -> "Health, Recreational, & Social";
-    "User" -> "Justice";
-    "User" -> "Militia";
-    "User" -> "Production";
-    "User" -> "Transportation";
-    "User" -> "Zones"[headlabel="Creates"];
+    // Link all categories to player...
+    "Player" -> "Agricultural";
+    "Player" -> "Economy & Commerce";
+    "Player" -> "Education & Research";
+    "Player" -> "Energy";
+    "Player" -> "Health, Recreational, & Social";
+    "Player" -> "Justice";
+    "Player" -> "Militia";
+    "Player" -> "Production";
+    "Player" -> "Transportation";
+    "Player" -> "Zones"[headlabel="Creates"];
     "Simulation" -> "Zones"[headlabel="Controls"];
 }
 

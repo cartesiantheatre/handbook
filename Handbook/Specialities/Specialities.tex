@@ -4,86 +4,87 @@
 
 % Specialities chapter...
 \StartChapter{Specialities}
-Avaneya is a fairly large, creative, and collaborative endeavour. It should be of little surprise then that it calls upon a variety of disciplines to produce. They are all important in their own way. It should be noted that there is nothing to stop someone from being involved in more than one capacity if they choose to. If you want to model, but also happen to be fluent in Italian, by all means consider translating as well.
-
-In this chapter we will discuss the many different exciting ways members of our community can get involved in whatever capacity they are most comfortable with.
+It should be of no surprise to anyone that a project of this size calls upon a variety of disciplines. There is also nothing to stop someone from being involved in more than one capacity if they would like to. If you want to model, but also happen to be fluent in Italian, by all means consider translating as well.
 
 \StartSection{Audio Engineer}
 
-These folks can take audio samples and creatively transform them into things usable for this game with the right mastering. An example would be sampling the squeak of a chair or a car driving by with a high end portable recorder. This sample could then be remixed into the low rumble of an idling diesel engine in the hands of a skilled audio engineer. 
+These people take audio samples or other sources and creatively master them into something useful for the game. An example would be sampling the squeak of a chair or a car driving by with a high end portable microphone, then remixed into the low rumble of a diesel engine idling on Mars.
 
-These people perfect their craft with {\it libre} tools like Ardour, Rosegarden, Audacity, and portable high resolution hardware audio recorders whenever necessary.
+These people perfect their craft with {\it libre} tools like Ardour, Rosegarden, and Audacity to name a few.
 
-\StartSection{Cinematic Artist}
+%\StartSection{Cinematic Artist}
 
-Cinematics play an important role in games. They prepare the user and set the stage in ways that would be difficult to do during normal game play. These artists work with tools like Blender, Cinelerra, and Lombard, to name a few.
+%Cinematics play an important role in games, though perhaps less so today now that realtime renderers can out perform the pre--rendered cinematics of games in decades past. Cinematics prepare the player in setting the stage in ways that might be difficult to do during normal game play. 
+
+%Cinematic artists work with tools like Blender, Cinelerra, and Lombard, to name a few. We will have more to say on this in the future because this is a very complex field involving many.
 
 \StartSection{Conceptual Illustrator}
 
-Conceptual illustrators prepare high quality artwork drawn from the game world. This can include environments, machines or other equipment, timeline scenes, or characters.
+Illustrators prepare high quality concept artwork. This can include environmentals, machines, timeline scenes, character portraits, cinematic storyboards, and so on.
 
 \StartSection{Engineer}
 
-The engineers design, discuss, and implement the engine specification. They do not write just engine code, but sometimes write the Lua scripts that drive it. They work mostly in the languages of C++ and GLSL. 
-
-The engineers rely on the GNU Autotools as though it were the \quote{construction scaffolding} around the project. It is useful for ensuring the software stays as versatile as possible. 
-
-To get started as an engineer with this project, see \in{chapter}[Engineer Contributors].
+Engineers design and implement the engine specification. They do not only write engine code, but sometimes also the Lua scripts that drive it (game behaviour). They work mostly in the language of C++ and, in the case of writing shaders, GLSL. To get started as an engineer, see \in{chapter}[Engineer Contributors].
 
 \StartSection{Modeller}
 
-Modellers produce the 3D game models the users see during game play. They work with the 2D artists to ensure models are properly textured and lit. They work with Blender, Wings 3D, or any other modelling program that supports standard patent free model formats.
+Modellers produce the 3D game models the users see during game play. They work with the 2D artists to ensure models are properly textured and lit. They work with Blender, Wings 3D, or any other modelling program that can export to standardized non--proprietary formats.
 
 \StartSection{Musician}
 
-The musicians create either new or provide existing tracks for the game. The music falls into two categories. The first is in game ambient music that the user passively listens to. The second is music that is more actively listened to during navigation menus, cinematics, and possibly by way of a separately released game score soundtrack in redbook or some other format.
+Music falls into two categories with Avaneya, ambient and non--ambient. Ambient music is the music the user passively listens to during actual game play. Non--ambient music is more actively listened to during navigation menus, an opening cinematic, and so on. 
+
+More likely the latter, but possibly the best of both, we will consider releasing at a later date on a separately released game score soundtrack. This could either be as a separate download, or possibly even on redbook.
 
 \StartSection{Package Maintainer}
 
-Package maintainers are responsible for building and preparing Avaneya packages for the community. They need to be familiar with the standard methods of rolling out software for a given platform. In our case, we are mostly just concerned with Ubuntu. Other GNU platforms are important too, but only so far as demand and available resources allow. See \in{chapter}[Package Maintainer Contributors] for more information on this topic.
+Package maintainers are responsible for building and preparing Avaneya packages. They need to be familiar with the standard method of rolling out software for a given platform. See \in{chapter}[Package Maintainer Contributors] for more information on how we plan to do this.
 
-\StartSection{Quality Assurance}
+\StartSection{Quality Reassurance}
 
-Quality assurance stress tests our applications, looking for their weaknesses and trying to break them. They spot bugs as well as identify user interface and gameplay issues. They are very important for ensuring that nasty bugs are caught and helping the crew to triage resources so that we can address them before the general public suffers. They are comfortable using the Launchpad interface, with prejudice for the issue tracker, and know how to generate stack traces. This latter skill is very important because it provides critical information engineers need to replicate a problem.
+Quality reassurance looks for game play issues and stress tests our code looking for weaknesses. This is important to help developers find nasty bugs and triage project resources appropriately. They should be comfortable generating stack traces and using the Launchpad bug tracker.
+
+Note that we used the terminology of quality reassurance and not quality assurance. This is because quality is best assured as a design time consideration. Quality reassurance reassures everyone that it still is after implementation.
 
 \StartSection{Researcher}
 
-These people provide the background information and attention to detail that makes the game rich. Perhaps they have an interest in areology\index{areology} (the study of Mars), terraformation, atmospheric geography, simulation and complex modelling, social, political, and economic issues (e.g. the GPI), or what have you. They have some valuable area of knowledge or expertise that they would like to bring to the table.
+Researchers provide the background information and attention to detail that makes this game so rich. Perhaps they have an interest in areology\index{areology} (the study of Mars), terraformation, atmospheric geography, simulation and complex modelling, social, political, and economic issues (e.g. the GPI), game mechanics, or what have you. They have some valuable area of expertise they would like to apply, even if they may not have the direct technical expertise to implement it themselves.
 
 \StartSection{Script Writer}
 
-Script writers produce code in Lua that drives and breathes life into the game engine. They work closely with the engineers to ensure that the API's the engine needs to expose are available to them. They also write the scripts that drive the CEGUI graphical user interface subsystem since its interface is Lua based.
+Script writers author code in Lua that drives the game engine. They work closely with the engineers to ensure that the API's they need are exposed from the engine. Besides implementing game logic, they also implement the CEGUI graphical user interface logic.
 
 \StartSection{SysOp}
 
-System operators administer critical software that form the bridging point between what we produce and our interaction with the general public. A very large number of people are dependent on them to work properly. Sometimes they protect things from the nefarious. Other times they might be moderating forums, chatrooms, mailing lists, managing the issue tracker, and eventually monitoring and administering the Solnet cluster described in \in{section}[Multiplayer: Solnet].
+System operators administer server side software and oversee the facilities open to the public. They also can act as moderators over our forums, IRC, mailing lists, Launchpad, and eventually the Solnet cluster described in \in{section}[Multiplayer: Solnet] to be rolled out.
 
 \StartSection{Translator}
 
-Translators are what makes Avaneya available to a wider audience. They ensure cinematic subtitles, graphical user interface, website, and other interactive elements are properly localized. They work with any tools that support standard GNU gettext and language catalogues, as covered in \in{section}[i18n & L10n]. They must be sensitive to the needs of a given locality which is usually, though not always, their own.
+Translators localize software to meet the needs of a specific culture. This includes familiarity with the language, writing direction, idiom, and so on. 
 
-\StartSection{Typeface Designer}
+Translators localize cinematic subtitles, documentation, the graphical user interface, website, and other interactive elements. They work with any tools that support standard GNU gettext message catalogues, such as Launchpad Translations. 
 
-Typeface designers are involved in all aspects of producing the high quality Avaneya Font Family\index{Avaneya Font Family}. This font family is used mainly at higher resolutions, the user interface, printed media, some documentation, DVD jewel case, and so on. They are familiar with the different font rasterization technologies that control the way fonts render on screen, as well as the {\it TrueType}\index{TrueType} font format and it's successor, {\it OpenType}\index{OpenType}. The fonts produced must ultimately be compatible with {\it SDL_ttf}\index{SDL_ttf}.
+See \in{section}[i18n & L10n] for more information on internationalization and localization.
+
+%\StartSection{Typeface Designer}
+
+%Typeface designers are involved in all aspects of producing the high quality Avaneya Font Family\index{Avaneya Font Family}. This font family is used mainly at higher resolutions, the user interface, printed media, some documentation, DVD jewel case, and so on. They are familiar with the different font rasterization technologies that control the way fonts render on screen, as well as the {\it TrueType}\index{TrueType} font format and it's successor, {\it OpenType}\index{OpenType}. The fonts produced must ultimately be compatible with {\it SDL_ttf}\index{SDL_ttf}.
 
 \StartSection{Voice Actor}
 
-Cinematics and in game audio require real people to play a role at time. This should be fun. Voice actors would need a high quality professional microphone, such as the Zoom H2 or similar. They undoubtedly need to work closely with the audio engineers.
+Cinematics and in game audio need real people to play a role of a given character. We have a number of leading characters, and therefore a need for a number of people.
 
 \StartSection{Web Developer}
 
-Web developers are familiar with free standards. They work with technologies like HTML5, PHP, CSS2/3, jQuery, MySQL, JavaScript, and SVGA. These technologies are important because they are the best way to ensure a reliable and consistent user experience as far as one can hope for.
+Web developers are familiar with the relevant international standards. They work with technologies like HTML5, PHP, CSS3, jQuery, MySQL, JavaScript, and SVGA in building and maintaining our website. These are important because they are the best way to ensure a reliable and consistent user experience -- so far as one can hope for.
 
 \StartSection{Writer}
 
-Writers are important. They are so often overlooked, but are truly key to ensuring users get the best experience they can. They are needed wherever one must write primarily for humans and not machines. 
+Our writers are either of the creative or technical kind, or both. Those more interested in elements of story, dialogue, characters, in game fictional literature, and other creative aspects of the game are creative writers.
 
-Writers can be either of the creative or technical kind, whatever they are most comfortable with, or both. Those more interested in creative writing are concerned more with elements of story, dialogue, characters, in game fictional literature, and other creative fictional aspects of the game. Naturally, they work closely with researchers.
+Technical writers, on the other hand, are responsible for writing and maintaining technical documentation. They work with powerful document engineering software like \BIBTEX\ and \CONTEXT. These are needed for typesetting our literature into books like the one you are reading now.
 
-Technical writers, on the other hand, are responsible for writing and maintaining technical documentation which is just as important. They work with powerful document engineering software like \BIBTEX\ and \CONTEXT\ for typesetting our literature into books like this one, editing wikis, producing man and info pages, and so on.
-
-All writers are responsible for maintaining, editing, and producing most of the documentation related to Avaneya. They are very important for editing material for grammar, spelling, and clarity. They often work closely with researchers, script writers, and other artists as they make suggestions to each other. 
-
-To get started as a writer with this project, see \in{chapter}[Writer Contributors].
+To get started as either, see \in{chapter}[Writer Contributors].
 
 \StopChapter
+

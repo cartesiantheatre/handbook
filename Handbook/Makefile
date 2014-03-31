@@ -9,7 +9,7 @@ ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find . -type f -i
 ALL_BIBTEX              = References/References.bib
 ALL_GRAPHVIZ_PDF        = $(ALL_DOT_PDF) $(ALL_TWOPI_PDF)
 UMBRELLO_ENGINE_DIAGRAM = ../AresEngine/UML/Engine.xmi
-CONTEXT_OPTIONS         = --engine=luajittex --purgeresult --directives=logs.blocked,system.nostatistics #--nostats --batchmode
+CONTEXT_OPTIONS         = --purgeresult --directives=logs.blocked,system.nostatistics #--nostats --batchmode --engine=luajittex 
 
 # Major PDF's output targets...
 TOC_PDF                 = Table_of_Contents.pdf

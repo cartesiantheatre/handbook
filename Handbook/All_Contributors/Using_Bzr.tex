@@ -128,7 +128,9 @@ For the astute reader familiar already with unified diffs and other revision con
 %Depending on your needs and your hardware select the appropriate files. The first, putty.exe allows you to create a SSH key by following the steps. Make sure you save the file appropriately and securely and rememerb your passphrase for future use. Pageant.exe, the second file is the software you will requre to open before pushing commits to lp:avaneya.
 
 %Describe key gen process
-%
+%If you have a key already you can utilize this using pageant, otherwise you can use generate a new one using putty.exe...
+
+
 
 %Describe opening key in pageant
 %Opening pageant.exe will bring up a window that will allow you to select the add key button. Using this you can navigate local files to find your saved SSH which you have either had from previous system/generation or had just generated using putty.
@@ -140,21 +142,55 @@ For the astute reader familiar already with unified diffs and other revision con
 
 %Using BZR in command promt
 %BZR in Windows command promt is similar to using BZR in terminal on GNU. Open command promt (search cmd) and type BZR will bring up an itial list of options allowing you to add files, make commits, and more.
+
 %Pull files in cmd
-%using command promt cd to appropraite branch. Cd to local file then first trunk of local cache.
-%then just type bzr pull lp:avaneya to update all your local files.
+%Using windows command prompt change directory to appropraite branch using the "cd" command, the exact cd command will depend on where you files have been place or where you choose to download them to. For instance you might use the following code: 
 
-%Commit files in cmd
-%In command prompt, chang directory to changed file.
-%CMD bzr add file.tex.
-%CMD bzr commit -m "Notes you want noted about changes made to file go with these quotes."
-%CMD will then display committed revision numver note such as "Committed revision 412."
+%\startCodeExample
+%cd Avaneya
+%bzr pull lp:avaneya
+%\stopCodeExample
+
+%or require of a more complex path like this:
+
+%\startCodeExmaple
+%cd \documents\avaneya\trunk
+%bzr pull lp:avaneya
+%\stopCodeExample
+
+%You can then access the files in an up to date manner and make appropriate changes and modifications. Once you are done you will be ready to commit files to the online launchpad repository for Avaneya. To do this in command prompt is simple:
+
+%\startCodeExmaple
+%bzr commit -m "edits to such and such a file."
+%\stopCodeExample
+
+%Command prompt will then display a revision number and notify you that the commit has been completed (eg "Committed revision 412"). Place a message about the work you've done in the commit within the quotation marks. Note you are required to be in the directory of your Avaneya trunk prior to committing on Windows.
+
+%You may notice there are specifications for entering certain types of commits and the manner in which it should be worded. Just have a browse the recent revisions section of the Avaneya trunk on Launchpad for examples.
+
+%If you have added new files to your local repository, those files are required to be added prior to a commit. First navigate to the appropriate file using the change directory (cd) command: 
+
+%\startCodeExample
+% cd documents\aveneya\trunk\documentation\contributors\handbook\game_mechanics\
+%\stopCodeExample
+
+%then simply add the file using bzr commands:
+
+%\startCodeExample
+%bzr add economy.tex
+%\stopCodeExample
+
+%After this you can run the commit command previously mentioned.
 
 
-%Push files in cmd
-%Once you have done your commit note you are ready to push your local files to lp:avaneya.
-%Simple type bzr push lp:avaneya to push all commits to the repository.
-%CMD wil display its attempts to locate SSH key and appropraite software after an appropraite duratio it will display a revision number, for example 'Pushed up to revision 412.'
+%At this stage the files are committed but they have not been uploaded to the online repository for everyone to access and pull to their local cache. To upload them you will need to run the bzr command push.
+
+%\startCodeExample
+%bzr push lp:avaneya
+%\stopCodeExample
+
+
+%CMD will display its attempts to locate SSH key and appropraite software after an appropraite duratio it will display a revision number, for example 'Pushed up to revision 412.'
 
 
 %Using BZR in GUI
@@ -164,7 +200,13 @@ For the astute reader familiar already with unified diffs and other revision con
 %Push files in GUI
 
 
-%Pageant is required to be opened and the key located each time you want to push a commit to lp:avaneya. Also don't forgot to login into launpad using BZR in command prompt. In addition your first use of BZR will require you to notify BZR and Launchpad of your launchpad ID, BZR and pageant will then link this to your Launchpad credentials contained in your SSH key stored locally and serverside. 
+%An important note is that Pageant is required to be opened and the key located each time you want to pull or push a commit to lp:avaneya. Also don't forgot to login into launchpad using BZR in command prompt. 
+
+%\startCodeExample
+%bzr whoami John Smith <smithy@avaneya.com>
+%\stopCodeExample
+
+%In addition your first use of BZR will require you to notify BZR and Launchpad of your launchpad ID, BZR and pageant will then link this to your Launchpad credentials contained in your SSH key stored locally and serverside. 
 
 
 

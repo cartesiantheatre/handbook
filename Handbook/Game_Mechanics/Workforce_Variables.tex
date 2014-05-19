@@ -1,0 +1,97 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010-2013 Cartesian Theatre <kip@thevertigo.com>.
+% See the file Copying for details on copying conditions.
+
+% Game Mechanics chapter...
+
+\StartSection{Workforce Variables}
+Each human workforce unit has a variety of variables which are used to determine the direction it will take in its spare time as well as determine the way in which it satisfies its needs.
+
+\StartSubsection{Variable Generation}
+
+
+\StartSubsection {Social Interest}
+Social interests are the units favoured 'social class' of interaction and the manner in which they prefer to socialize. Units with the same social class types will generally be found in proximity of eachother.
+
+\StartSubsection {Work Interest}
+Work interest is the units desired type and place of work. This includes educational interests.
+
+\StartSubsection {Consumption Interest}
+Consumption interest is the units prefferred method and style of eating as well as prefferred purchases. 
+
+\StartSubsection {Workforce Type}
+This is the various skills the unit has. It includes its level/type of education, current and previous employment, as well as any other training.
+
+\StartSubsection {Health} 
+Health is the health status of the unit. Most units will just have a sinlge health variable, a scale indicative of its overall health, but many will also have negative health effects and injuries which are noted by additional Health variable tags.
+
+\StartSubsection {Wealth} 
+This is the units wealth status and depending on the manner in which the player's city collects and uses data it will be singular or plural. Generally this is used to note the units income for taxation type purposes.
+
+\StartSubsection {Race}
+This variable may not be implemented. It is used solely to determine generation of unit's skin color of for generation of skin color of offspring.
+
+\StartSubsection {Employment}
+Employment is where the unit is currently working (or if unemployed). It may have multiples if the unit has multiple jobs. This variables is major tracker of where the unit will be and what activities it will be undertaking.
+
+\StartSubsection {}
+
+
+\StartSubsection {Iedology}
+This variable is used in the instance that a unit generates an intense perspective on life, be this a designated set of rules or moral outlook, or the belief and/or following of a religious doctrine.
+
+
+
+\StartSection {Identification and Procedural Variables}
+These variables identify the unit as a unique entity and designate it location and action.
+
+\StartSubsection {Unique ID}
+This id number notes the unit as unique for purposes of coding and tracking. This alphanumeric sequence will be required to be the upper most number of units possible to exist in a city. This variable along with the DTOB (below) gives the unit a complete unique ID.
+
+\StartSubsection {Date and Time Of Birth (DTOB)}
+Date and time of birth along with the unique ID give the unit a complete unique id. Date and time are based on the games date and time.
+
+\StartSubsection {Location}
+This is the units current location depending on the style in which Avaneya will track units, be that longitude:latitude.
+
+\StartSubsection {Current Action}
+This is for procedural purposes. This is the current action the unit it doing, for instance walking, waving, etc.
+
+\StartSubsection {Direction of travel}
+This is where the unit is aiming to be. This may not always be in place as unit's may just be sitting or sleeping. This variable also notes anything the unit is about to do. For instance it may not want to leave the resturant but it is going to talk to another unit. 
+
+
+
+
+
+
+
+
+
+
+
+\StartSubsection{Human Workforce Direction}
+Lets begin the discussion by talking about a general human workforce unit, one that is employed in "regular" employment, and it very basic routine.
+
+Units such as this see out their day to day functions by fulfilling their employment obligations, traveling to and from work, sleeping, and remaining at home.
+
+Traveling to work, the unit will seek to take the quickest route by default (unless interest tags discuss otherwise).
+
+The unit will remain at work for a duration required for the job then return home. Depending the cities setup, the unit may get a meal break or similar.
+
+At home the unit will undertake eating and recreational activites and sleeping.
+
+This pattern will repeat for the units life cycle.
+
+To deveate from this we discuss the various units needs and interests. 
+
+If certain needs are not met the unit will not undertake the predetermined task, it will seek to fulfil the particular need. The severity of neediness will determine the timelyness of action and the manner/extremity in which it acts (needs scale needed?).
+
+In addition if the unit has an interest it will follow this interest in preference of other where appropriate and this will determine how it spends its spare time.
+
+Proximity to action/interaction also affects units choice.
+
+
+
+
+%HOW DO UNITS BALANCE WORK LIFE EVENTS?

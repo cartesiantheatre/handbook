@@ -123,15 +123,13 @@ For the astute reader familiar already with unified diffs and other revision con
 
 %\StartSubSection{Installing BZR in Windows}
 
-%BZR can also be ran in a windows operating system using the command promt or a graphical user interface. The software is available from Canonical at http://bazaar.canonical.com/ and navigating to the downloads section. As Windows does not have SSH key automatically installed the software to connect your private key to Avaneya's launchpad repository also requires downloading. Two things are required, the SSH key generation software and the SSH key authentication software, both can be found in the download section at http://www.chiark.greenend.org.uk/~sgtatham/putty/.
+%BZR can also be ran in a windows operating system using the command promt or a graphical user interface. The software is available from Canonical, just go to http://bazaar.canonical.com/ and navigate to the downloads section. As Windows does not have a SSH key automatically installed, the software to connect your private key to Avaneya's launchpad repository also requires downloading. Two things are required, the SSH key generation software (if you require new key generation) and the SSH key authentication software, both can be found in the download section at http://www.chiark.greenend.org.uk/~sgtatham/putty/.
 
-%Depending on your needs and your hardware select the appropriate files. The first, putty.exe allows you to create a SSH key by following the steps. Make sure you save the file appropriately and securely and remember your passphrase for future use. Also store your key in a secure place and store a secure backup to prevent the need for repeated continual key generation and pairing.
+%Once at chiark.greenend.org, download the appropriate files for you needs and hardware. The first, putty.exe allows you to create a SSH key by following the steps. Make sure you save the file appropriately and securely and remember your passphrase for future use. Also store your key in a secure place and store a secure backup to prevent the need for repeated continual key generation and pairing. Pageant.exe, the second file, is the software you will requre to open before accessing lp:avaneya under you launchpad name.
 
-%Pageant.exe, the second file is the software you will requre to open before pushing commits to lp:avaneya.
+%If you have a key already you can utilize this using pageant, otherwise you can use generate a new one using putty.exe and following the steps on screen, before using pageant.
 
-%If you have a key already you can utilize this using pageant, otherwise you can use generate a new one using putty.exe before using pageant.
-
-%Opening pageant.exe will bring up a window that will allow you to select the add key button. Using this you can navigate local files to find your saved SSH which you have either had from previous system/generation or had just recently generated using putty.
+%To utilize your key, open pageant.exe to bring up a window. This will allow you to select the add key button. Using this you can navigate local files to find your saved SSH key which you have either had from previous system/generation or had just recently generated using putty.
 
 
 %\StartSubSection{BZR Launchpad Login}
@@ -141,7 +139,7 @@ For the astute reader familiar already with unified diffs and other revision con
 %bzr launchpad-login <username>
 %\stopCodeExample
 
-%where you will replace "username" with you laucnhpad login, for example:
+%where you will replace "username" with your laucnhpad login, for example:
 
 %\startCodeExample
 %bzr launchpad-login <John Smith>
@@ -149,9 +147,9 @@ For the astute reader familiar already with unified diffs and other revision con
 
 
 %\StartSubsection{Using BZR in Command Promt}
-%BZR in Windows command promt is similar to using BZR in terminal on GNU. Open command promt (search cmd) and type BZR. This will bring up an itial list of commands allowing you to add files, make commits, and more.
+%BZR in Windows command promt is similar to using BZR in terminal on GNU. Open command promt (search cmd) and type BZR. This will bring up an initial list of commands allowing you to add files, make commits, and more.
 
-%To pull files using command prompt change directory to the appropraite branch using the "cd" command, the exact cd command will depend on where you files have been placed or where you choose to download them to. For instance you might use the following code: 
+%To pull files using command prompt change directory to the appropraite branch using the "cd" command, the exact cd command will depend on where your files have been placed or where you choose to download them to. For instance you might use the following code: 
 
 %\startCodeExample
 %cd Avaneya
@@ -171,10 +169,12 @@ For the astute reader familiar already with unified diffs and other revision con
 %bzr commit -m "edits to such and such a file."
 %\stopCodeExample
 
-%Command prompt will then display a revision number and notify you that the commit has been completed (eg "Committed revision 412"). Place a message about the work you've done in the commit within the quotation marks. Note you are required to be in the directory of your Avaneya trunk prior to committing on Windows.
+%Command prompt will then display a revision number and notify you that the commit has been completed (eg "Committed revision 412"). Place a message about the work you've done in the commit within the quotation marks. Note you are required to be in the directory of your Avaneya trunk prior to committing on Windows (in command prompt change directory to local cache as described above).
 
-%You may notice there are specifications for entering certain types of commits and the manner in which it should be worded. Just have a browse the recent revisions section of the Avaneya trunk on Launchpad for examples.
+%You may notice on the revisions section of Avaneya's Launchpad that there are specifications for entering certain types of commits and the manner in which it should be worded. Just have a browse the recent revisions section of the Avaneya trunk on Launchpad for examples.
 
+
+%\startSubSection{Add New Files} 
 %If you have added new files to your local repository, those files are required to be added prior to a commit. First navigate to the appropriate file using the change directory (cd) command: 
 
 %\startCodeExample
@@ -190,26 +190,27 @@ For the astute reader familiar already with unified diffs and other revision con
 %After this you can run the commit command previously mentioned.
 
 
-%At this stage the files are committed but they have not been uploaded to the online repository for everyone to access and pull to their local cache. To upload them you will need to run the bzr command push.
+%\StartSubSection{Pushing Files to Launchpad}
+%At this stage the files are committed but they have not been uploaded to the online repository for everyone to access and pull to their own local cache. To upload them you will need to run the bzr command push.
 
 %\startCodeExample
 %bzr push lp:avaneya
 %\stopCodeExample
 
-%Command prompt will then display its attempts to locate SSH key and appropraite software. After an appropraite duration it will display a revision number, for example 'Pushed up to revision 412.' Remember than pageant.exe is required to be opened with the correct key added to the list before using bzr to modify lp:avaneya.
+%Command prompt will then display its attempts to locate SSH key and appropraite SSH software. After an appropraite duration it will display a revision number, for example 'Pushed up to revision 412.' Remember that pageant.exe is required to be opened with the correct key added to the list and you are required to set your BZR username before using bzr to modify lp:avaneya
 
 
 %\StartSubsection{Using BZR in GUI}
 %
-%Using BZR in windows through Bazaar Explored is straight forward. Upon opening you will see a list of local projects using bzr. If you have already appropriated the files they will display in the box on the opening screen. Otherwise you will need to get the files from the server.
+%Using BZR in windows through Bazaar Explorer is straight forward. Upon opening you will see a list of local projects using bzr. If you have already appropriated the files they will display in the box on the opening screen. Otherwise you will need to get the files from the server.
 
-%To pull files simply click the pull button on top section of buttons. A new window will open, in location type "lp:avaneya" then click ok. You can then make changes to you files locally. 
+%To pull files simply click the pull button on top section of buttons. A new window will open, in location type "lp:avaneya" then click ok. You can then make changes to you files locally and browse files in the Bazaar Explorer in a similar manner to the Windows file manager.  
 
 %Once you have made these changes and feel they are at an appropriate stage you can commit them by pressing the commit button. This will bring up another window. The branch should show, by default, your local repositoty. In the message box type the message you want publically displayed when your commit is pushed. When you are done you can push files by clicking the push button.
 
-%A new window will open. Once again in location type: "lp:avaneya" and then click ok. This will then upload you locally modified files to avaneya's launchpad.
+%A new window will open. Once again in location type: "lp:avaneya" and then click ok. This will then upload your locally modified files to avaneya's launchpad.
 
-%Remember: pageant and you private SSH key are required to be opened during use of lp:avaneya.
+%Remember: pageant and your private SSH key are required to be opened during use of lp:avaneya through BZR.
 
 
 

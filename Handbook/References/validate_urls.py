@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # validate_urls, to validate urls in a BibTeX database.
-# Copyright (C) 2010-2013 Cartesian Theatre <info@cartesiantheatre.com>.
+# Copyright (C) 2010-2014 Cartesian Theatre <info@cartesiantheatre.com>.
 #
 # Public discussion on IRC available at #avaneya (irc.freenode.net) or
 # on the mailing list <avaneya@lists.avaneya.com>.

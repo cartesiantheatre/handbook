@@ -8,7 +8,7 @@
 \StartSection{Economy}
 A cities economy is a diverse and complex aspect of gameplay in Avaneya yet however complex the implementation of the economy becomes the players use of it should be fluent and intuitive, allowing for varying degrees of complexity and involvement depending on a players style of play. This can be done with a good user interface, solid economic construction, and clever AI. 
 
-This section deals with the variety of ways cities earn and spend money and maps out the paths that spending makes. To begin we will discuss income streams for a players cities. These are primarily made up of taxation, exports (and imports), and city resources and infrastructure. Within each of these categories are several methods which players can use to generate income.
+This section deals with the variety of ways cities earn and spend money and maps out the paths that spending makes. To begin with we will discuss income streams for a players cities. These are primarily made up of taxation, exports (and imports), and city resources and infrastructure. Within each of these categories are several methods which players can use to generate income.
 
 
 %Figure showing flow of city expense and income
@@ -33,9 +33,9 @@ The forms of income used is completely up to the players. They can use as many o
 
 \StartSubsection{Taxation}
 %Taxation forms a wedge between the buyer and seller price equilibrium
-Income is gained through taxation by taking a portion of what is owned by a cities people and/or businesses and industries and using this to fund city amenities, growth, projects, and militia among other things. Taxation is also discussed in 8.8.9.
+Income is gained through taxation by taking a portion of what is owned by a cities people, businesses, or industries and using this to fund city amenities, growth, projects, and militia among other things. (Taxation is also discussed in 8.8.9.)
 
-In Avaneya, taxation levels can range from taking nothing to attempting to take everything and includes being able to give citizens money (or goods) instead of taking money. Managing a taxation levels effectiveness is part of the challenge of running the city and different levels work for different cities and styles of play. In the nature of true sandbox gaming, it may be possible to have 0 percent tax or even 100 percent tax and get it to work if players can divise methods for the citizenry to remain happy or to quell there descent. In addition players can create and implement there own styles of taxation through varying degrees of micro on the tax screen. The below figures show the varying methods in which population can be taxed.
+In Avaneya, taxation levels range from taking nothing to taking everything and includes being able to give to the citizenry instead of taking money. Managing taxation levels effectiveness is part of the challenge of running the city and different levels work for different cities and styles of play. In the nature of true sandbox gaming, it may be possible to have 0 percent tax or even 100 percent tax and get it to work if players can divise methods for the citizenry to remain happy or to quell their descent. In addition players can create and implement there own styles of taxation through varying degrees of micromanagement on the tax screen. The below figures show the varying methods in which population can be taxed.
 
 %TaxationA.gv
 This figure indicates the basic structure of taxation using two base types of income entities, companies and people. Companies and persons generating income are taxed by the city which in turn generates an income for the city.  
@@ -54,14 +54,14 @@ Figure ("TaxationE") shows a tax rate of 30 percent of all companies profit with
 Please note that all of these examples could also be implemented in a similar manner for persons and families. In figure ("TaxationF") is a similar taxation system as those above but with the system based around the taxation of people. With a dynamic and creative tax system players can choose just how much to tax to what class of people. In the example families and sinlges are used but this could be 'high' or 'low' income levels, both, or many other things is multiple combinations.
 
 %TaxationG.gv
-In addition to these above examples, diverse methods of taxation can be implemented. See figure ("TaxationG"), in this figure negatige income tax is partially implemented in both corporate and personal taxation schemes. All commerce companies are given 10 percent of the profit they generate and all low and middle income workforce are given an amount of money. The purpose of this figure is to represent how government, in the economies of certain cities, can pay the wages of some or maybe all workers in one method (ie paying companies) or another (paying working individuals). This method could be expanded to a point where the government does not tax anyone, but rather gives money to all income entities (business and workers). Several examples are: government income could be generated through initially taxing all companies 100 percent and then redistributing the income; generate income through high fees scheduled in ordinance; or "renting out" city land and resources. The primary message here is that numerous methods of distributing wealth are possible with players being able to be creative, resourceful, and fresh in their approach to managing city finance.
+In addition to these above examples, diverse methods of taxation can be implemented. See figure ("TaxationG"), in this figure negative income tax is partially implemented in both corporate and personal taxation schemes. All commerce companies are given 10 percent of the profit they generate and all low and middle income workforce are given an amount of money. The purpose of this figure is to represent how government, in the economies of certain cities, can pay the wages of some or maybe all workers in one method (ie paying companies) or another (paying working individuals). This method could be expanded to a point where the government does not tax anyone, but rather gives money to all income entities (business and workers). Several examples are: government income could be generated through initially taxing all companies 100 percent and then redistributing the income; generate income through high fees scheduled in ordinance; or "renting out" city land and resources. The primary message here is that numerous methods of distributing wealth are possible with players being able to be creative, resourceful, and fresh in their approach to managing city finance.
 
 
 %--TAXATION SCREENS--%
 The exact method in which players implement taxation in live gameplay can be seen in the image below of the taxation screen.
 %Figure showing draft for taxation screen.
 %Screen overlays to be put into each section. 
-Players can initially choose to implement taxation based on the zone types being habitat, commercial &  habitat, commercial, and industrial. These are located on the (LEFT). Below these are other methods of implementing the taxation, in this example the player has set up so regions to micro manage the cities areas of taxation (among other things). Players can click on each of these buttons which will bring them to the next screen offering more options. 
+Players can initially choose to implement taxation based on the zone types, being: commerocial, commercial &  habitat, habitat, and industrial. These are located on the (LEFT). Below these are other methods of implementing the taxation, in this example the player has set up so regions to micro manage the cities areas of taxation (among other things). Players can click on each of these buttons which will bring them to the next screen offering more options. 
 
 On the (RIGHT) side of the initial taxation screen is a table showing every taxation scheme the player has implemented along with its details such as the taxation type and rate, income the taxation generates and whether tax from this is going up or down from a previous time period.
 
@@ -95,38 +95,47 @@ Now this just deals with taxation and incentives. Players can enact ordinance wh
 
 
 %creating boundaries and taxing different areas of the city by there boundary name.
+Players can also use the (TOOL_NAME) tool create boroughs and localities for a variety of purposes, one of those being to create areas that receive different tax conditions.
+ 
 %dividends from stock
-
+If stock/shares are implemented, taxation should be able to used on stock just like any other taxable good.
 
 
 
 
 \StartSubSection{Fees and Ordinance}
-Fees are closely related to taxation in that they take money from individuals or business' for taking action within (or without in cases of crime) the city. 
+Fees are closely related to taxation in that they take from individuals or business' for their actions within the city and ordinance is the guidlines, rules, or standards by which the city is to be held to.
 
-Ordinance is guidlines, rules, or standards by which the city is to be held to.
+Fees generate income for the city whereas ordinance forms the rules or laws that allow fees to be obtained for certain activites. While ordinance can generate income, there is also ordinance that is inacted which costs the city.
 
-Fees generate income for the city where ordinance can generate income but there is also ordinance that can be inacted which costs the city.
-Both can be implemented in broad strokes to individuals and/or companies or can be micro managed to fine detail, focusing only on certain groups.
+Both types can be implemented in broad strokes to individuals and companies or can be micro managed to fine detail, focusing only on certain groups.
 
 Examples of fees include minor fines, rates, tolls.
 Examples of ordinance include permits for land use, permits to operate certain industies, heavier fines, 
 
 %Fees Screen
+This screen shows current fees in place, fee earnings, who pays, and statistics.
 %Ordinance Screen
-%Implementing fees (various examples)
-%Implementing Ordinance (various examples)
+This screen enacted ordinance and costs. From this screen players can reach all ordinance to enact further ordinance, as well as reach screen to brea down statistics. 
 
+
+%Implementing Ordinance (various examples)
+Similar to taxation.
 
 
 \StartSubSection{Exports and Imports}
-Through export and import levies, fees, charges or taxation, income can be gained for the city from its businesses and industries exporting goods or from other cities importing goods to the players cities. Additionally, exports increase the income of a city by bringing in wealth from other cities. Trade in general may increase the income of a city through established trade routes, larger markets, and peaceful diplomacy backed by financial gains. 
+Through export and import levies, fees, charges, or taxation, income can be gained for the city from its businesses and industries exporting goods or from other cities importing goods to the players city. Additionally, exports increase the income of a city by bringing in wealth from other cities in exhange for the player's city's goods. Trade in general may increase the income of a city through established trade routes, larger markets, and peaceful diplomacy backed by financial gains for both parties. 
 
-Charges placed on exports and imports can also be micro managed to focus on the type of goods being ported right down to individual goods themselves by brand and quantity. Cities can even ban the export or import of goods. This may become necessary in food shortages, or in differences in city ordinances. The control of exports and imports through fees is another method of directing workforce conditions. 
+Charges placed on exports and imports can also be micro managed to focus on the type of goods being ported right down to individual goods themselves by brand, quantity, and quality. Cities can even ban the export or import of goods. This may become necessary in food shortages, in differences in city ordinances, or to appease interests groups (both internal and external). The control of exports and imports through fees is another method of controlling workforce conditions. 
 
-Enforcing the import and export of goods may require enforcement officers or similar and strict control against certain opinions/influences may result in varying aspects of criminal workforce.
+Enforcing the import and export of goods may require enforcement officers, or similar and strict control against certain opinions/influences may result in varying aspects of criminal workforce.
 
 %From what screen do players setup exports / imports?
+Imports and exports are accessed via the (TRADE?) screen. This screen shows all trade with other cities and with Earth, and can be broken down into various analyses. This screen will initially show sufficient detail but players can click on any import or export to show greater detail and edit it. 
+
+Depending on the method of play, players may not instigate trade personally, this will be done by the cities business'. On cities ran with a more centralised approach, the player may instigate the trade of goods, however players may do this at anytime. In the trade screen, by clicking (OPEN_TRADE?) the player can seek to trade with any city (or Earth) where diplomatic conditions are appropriate to facilitate. Cities where diplomacy has been established but the underlying conditions to start trade do not exist will also be shown (at the bottom) but will be grey out.  
+
+%compatibly transports and docking are required for trade.
 %Import/Export Screen.
 %Fees for imports / exports screens.
 %Market backed diplomacy.
@@ -135,23 +144,36 @@ Enforcing the import and export of goods may require enforcement officers or sim
 
 \StartSubSection{Commodities}
 %\StartSubSection{Resources}
-Resources themselves don't play a direct role in the economy, its more their volume, demand, value, and how they are utilzed which effects the economy. A city can take advantage to the resources it had available, giving it wealth through cheap materials or exports. Depending on technology, these resources can be obtained and used in different ways. Resources either imported of exported can be used to build or fund infrasture, their extraction can be the backbone of business and zoning, and its effective use may require ordinance being implemented. In addition, resources may attract negative attendtion from external interests and produce conflict. From this is can be seen that resources play a unique role to economic fundamentals, being either the fundamental point on which an economy is based, or hold a tertiary status with the city, being utilized for high levels of processing or political interest.
+Resources, their volume, demand, value, and how they are utilzed  effects a city's economy. A city can take advantage of the resources it had available, giving it wealth through cheap materials or exports. Depending on technology, these resources can be obtained and used in different ways. Resources either imported of exported can be used to build or fund infrasture, their extraction can be the backbone of business and zoning, and its effective use may require ordinance being implemented. In addition, resources may attract negative attendtion from external interests (interest groups) and produce conflict. From this is can be seen that resources play a unique role to economic fundamentals, being either the fundamental point on which an economy is based, or hold a tertiary status within the city, being utilized for high levels of processing or political interest.
+
+%Resource screen(?)
+%What resources are available
+%How are resources shown to players
+%How are resources shown to outside players
+%How are resources extracted
+%How are resources transformed
+%Commodities market
 
 
 \StartSubSection{Land}
 %\StartSubSection{City Land} %work in progress, may be scrapped as conflicts with zoning. may expand zoning to include land being bought by other cities.
 Players are designated an area of land to be owned by them, for use as they wish, their owned land can expand or contract depending on a variety of circumstances. 
 
-Land ownded by a players city can be leased or sold to various interests with various conditions. In this manner a player can generate income from leasing or selling its cities land. This land may be bought by domestic business interest, terran business or government interests, or by other cities and players. The price of land may be dictated by players but its intrinsic value in dependant on its ordinance, local zoning, resource value, or growth potential. %(whatever growth potential is)
-%legal action re changing or interfering with land bought by external interest. 
-A potential problem for the city is that this land's use is then largely outside of city control and potential disasters or problems may not be solvable, leaving areas of disruption within the cities limits.
+Land ownded by a players city can be leased or sold to various interests with various conditions. In this manner a player can generate income from leasing or selling its cities land. This land may be bought by a domestic business interest, terran business or government interest, or by other cities and players. The price of land may be dictated by players but its intrinsic value in dependant on its ordinance, local zoning, resource value, or growth potential. %(whatever growth potential is)
+%legal action re changing or interfering with land bought by external interest. does there need to be a "trust meter" or similar? 
+A potential problem for the city is that this land's use is then largely outside of city control and potential disasters or problems may not be solvable, leaving areas of disruption within the cities limits. In addition, changing city ordinance or conditions which effect the leased or bought land may bring legal action to the players city in the form of a fine or make it less trusted to do business in, hurting investment and local businesses and therefore the city's economy.
+
+%Break up land using the (TOOL_NAME), same as that mention in th taxation screen.
+This land can be selected through the (SCREEN/TOOL). From here the land can be sold, auctioned, or leased under conditions stipulated by the player. These conditions can also be micromanaged.
 
 
 \StartSubSection{Goods and Services}
 %\StartSubSection{City Resources and Infrastructure}
-Utilizing resources and land available to the city and the cities infrasture, through privitization, the city can generate revenue by lease agreements or similar. In addition players can have government run busineess which directly generate profit or loss. If ran correctly these business are a potential income stream. 
+Utilizing resources and land available to the city and the cities infrasture, through privitization, the city can generate revenue by lease agreements or similar. In addition players can have government run busineess which directly generate profit or loss. If ran correctly these business are a potential income stream where the entire profit enter city coffers, rather than a taxable percentage or similar. 
 %\StartSubSection{City Business}
-The creation of business interests setup, controlled, and owned by the player/city allows for profit from these projects to return to the city player, however it also requires constly outlays and potential for massive loss. Players may wish to setup player/government owned mining companies, housing estates, industries, or agriculture. 
+The creation of business interests setup, controlled, and owned by the player/city allows for profit from these projects to return to the city player, however it also requires constant outlays and potential for massive loss. Players may wish to setup player/government owned mining companies, housing estates, industries, or agriculture. 
+
+After enacting the (ORDINANCE_NAMES), players can then implement city ran business. These buildings are selected from the appropriate building tool and are placed anywhere at the player's descretion.
 
 
 
@@ -171,7 +193,7 @@ The creation of business interests setup, controlled, and owned by the player/ci
 3.  Ordinance
 4.  Zoning
 5.  Militia
-6.  
+6.  Goods and Services
 
 
 
@@ -285,8 +307,10 @@ Construciton of local militia is a state/city expense. This includes training, e
 
 Militias form a separet pilar of city expense due to the detailed involvement they play throughout a cities life and the game. While in reality they may be no different from the expences of emergency services in the game they are controlled in a much more detailed manner.
 
+They are also different in that players can control militia directly.
 
-
+\StartSubSection{Goods and Services}
+Goods and services can also cost a city. While they cover things such as city ran businesses they also cover things such as medical and emergecy services, education and various others. Vast metropoleis require healthcare and advanced workforces require thorough and lengthy education, these things may, depending on their implementation, require funding from city coffers.
 
 
 
@@ -328,6 +352,8 @@ This section notes the foundational economic princples the games requires to mod
 \StartSubsection{Effects of levies on imports and exports}
 \StartSubsection{Elasticity}
 \StartSubsection{Producer and Consumer Surplus}
+\StartSubsection{Regulation and Correction
+
 \StartSection{Behavioural Economics}
 %Workforce interaction
 

@@ -1,0 +1,139 @@
+/*
+  This is part of the Avaneya Project Crew Handbook.
+  Copyright (C) 2010-2015 Cartesian Theatre <info@cartesiantheatre.com>.
+  See the file License for copying conditions.
+  
+  To manually compile:
+      $ sudo aptitude install graphviz
+      $ twopi -Tpdf Economy.twopi.gv -o Economy.pdf
+*/
+
+
+digraph Economy
+{
+
+// Graph attributes...
+	bgcolor="transparent";
+	margin="0";
+	ratio="auto";
+    ranksep="2.5";
+    pad="0.5,0.5";
+    compound="true";
+    overlap="vpsc";
+    root="Economy";
+
+	// Node attributes...
+	node[color="#d3502dff"];
+	node[fillcolor="gray10"];
+    node[fontcolor="#c08453ff"];
+    node[fontname="Ubuntu"];
+    node[shape="none"]
+
+	// Edge attributes...
+	edge[color="#c08453ff"];
+	edge[penwidth="1.3"];
+/*	
+    // Inputs and Outputs
+    "Taxation"[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+    ""[label=""\n[Type: ]"];
+*/
+
+
+
+	//relationships
+	"City Economy"[shape = doubleoctagon];
+	"Taxation"[shape = egg];
+	"Imports and Exports"[shape = egg];
+	"Commodities"[shape = egg];
+	"Land"[shape = egg];
+	"Goods and Services"[shape = egg];
+	"Infrastructure and City Buildings"[shape = egg];
+	"Funding"[shape = egg];
+	"Fines and Ordinance"[shape = egg];
+	"Zoning"[shape = egg];
+	"Militia"[shape = egg];
+
+	"Health"[shape = egg];
+	"Security"[shape = egg];
+	"Education"[shape = egg];
+	"Prosperity"[shape = egg];
+
+	"Business Wealth"[shape = egg];
+	
+	"Efficiency"[shape = egg];
+
+	"Innovation"[shape = egg];
+
+	"Sell"[shape = egg];
+	"Lease"[shape = egg];
+
+
+
+
+	"Taxation"	-> "City Economy";
+
+
+	
+	"City Economy" -> "Goods and Services";
+	"City Economy" -> "Infrastructure and City Buildings";
+	"City Economy" -> "Fines and Ordinance";
+	"City Economy" -> "Zoning";
+	"City Economy" -> "Militia";
+	"City Economy" -> "Funding";	
+
+	//Prosperity Loop
+	"Goods and Services" -> "Health";	
+	"Goods and Services" -> "Security";
+	"Goods and Services" -> "Education";
+
+	"Health"	-> "Prosperity";
+	"Security"	-> "Prosperity";
+	"Education"	-> "Prosperity";
+
+	"Prosperity"	-> "Taxation";
+	"Prosperity"	-> "Fines and Ordinance";
+
+
+
+	"Zoning"	-> "Prosperity";
+	
+
+	//Business Wealth Loop
+	"City Economy"		-> "Imports and Exports";
+	"Commodities"		-> "Imports and Exports";	
+	
+	"Imports and Exports"	-> "Business Wealth";
+	"Business Wealth"	-> "Taxation";
+
+	
+	"Infrastructure and City Buildings"	-> "Efficiency";
+	"Efficiency"				-> "Prosperity";
+	"Efficiency"				-> "Business Wealth";
+
+	//Innovation Loop
+	"Funding"	-> "Innovation";
+	"Innovation"	-> "Goods and Services";
+	"Innovation"	-> "Imports and Exports";
+	"Innovation"	-> "Efficiency";
+
+
+	//Land Loop	
+	"Land"		-> "Lease";
+	"Land"		-> "Sell";
+	"Lease"		-> "City Economy";
+	"Sell"		-> "City Economy";
+
+	//Fines Loop	
+	"Fines and Ordinance" -> "City Economy";
+	
+	//Militia Loop
+	"Militia"	-> "Security";
+	"Militia"	-> "Imports and Exports";
+
+}

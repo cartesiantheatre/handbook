@@ -57,8 +57,8 @@ digraph Taxation
 	"Families"				-> "2 Percent Refund";
 	"Singles"				-> "3 Percent Income";
 	
-	"2 Percent Refund"			-> "Taxed 13 Percent Total";
-	"3 Percent Income"			-> "Taxed 8 Percent Total";
+	"2 Percent Refund"			-> "Taxed 8 Percent Total";
+	"3 Percent Income"			-> "Taxed 13 Percent Total";
 
 	"Taxed 13 Percent Total"		-> "Tax Income Percentage";
 	"Taxed 8 Percent Total"			-> "Tax Income Percentage";

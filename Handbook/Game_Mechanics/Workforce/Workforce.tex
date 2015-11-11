@@ -65,16 +65,17 @@ As the unit goes through age brackets which change it, these slots will become o
 
 Once gained interests occupying a slot in the unit will be given a strength number, level, or similar indicator to determine how involved, addicted, interested, needy, etc, the unit is of that interest. 
 
-Various influences will determine this strength. Length of exposure, exposure by family, exposure by peers, acceptance in society, ...
-In addition the interest itself may have a degree of strength imposing itself onto the unit, such as a drug.
+Various influences will determine this strength. Length of exposure, exposure by family, exposure by peers, acceptance in society, will stronger influences and there create an interest quicker. In addition the interest itself may have a degree of strength imposing itself onto the unit, such as a drug. Different experiences and influences affect their specific interest at different rates so interests in some area will be created quicker than in others. A example is food, influences of junk food (food high in fats and sugars) increase at a rate quicker than interests of healthy food. Influences created with social groups also increase quicker, such as sharing meals with family, or seeing movies with 
 
-The stronger the strength of the interests the harder it is to be replaced.
 
-Replacing an interest occurs through exposure to other interests. Lower level interest's will be replaced relatively easilty compared to interests which are higher, representing those that are ingrained. 
+
+The stronger the strength of the interest the harder it is to be replaced.
+
+Replacing an interest occurs through exposure to other interests. Lower level, seasonal, or trend based interest's will be replaced relatively easilty compared to interests which are higher order. This represents interests that are ingrained both individually and socially. 
 
 In the simulation this represents changes in trends, the availability of items, and with the units internal interests, such as education, the units ability to "self examine" and view needs to change. With this in mind there will be a link between many interests or interests will be in categories, allowing units to jump from interest to interest as part of its modeled "internal dialogue".
 
-To aid in interest generation through the ages, units will have slots of the next age open in a hidden manner, the slots are fed information to help determine what interests will fill those slots when they become open. In this way we can model the influence of domestic violence, household drug use, etc, as well as positive influence's such as parents who play instruments, exercise, etc, and even neutral influences, eg food consumption, clothes shopping.
+To aid in interest generation through the ages, units will have slots of the next age open in a hidden manner, the slots are fed information to help determine what interests will fill those slots when they become open. In this way we can model the influence of domestic violence, household drug use, etc, as well as positive influence's such as parents who play instruments, exercise, etc, and even neutral influences, eg food consumption, clothes shopping. Also some interests will only be available or last during certain age groups. A child who liked "Random Childhood Show" and moves up into an age bracket which the show doesn't represent will have the interest slot that this show represents re-opened. 
 
 
 
@@ -86,13 +87,29 @@ Figure [Workforce_Interests.gv] displays the method in which units gain and repl
 %Interest Externalities and Perception Times
 %List of interest by category with times required to be viewed.   
 
-Units will have a list of all influences on them, if a unit has an interest slot open each time its comes across an influence of that same interest than the influence is recorded and summed over time until the interest is finally generated. If it is easier for processing speed these lists can be terminated after a certain amount of time of no increase in influence.
-
-Generally once an interest slot it occupied it will remain so. Each unit will have (...) number of interests slots that may fluctuate over its lifespan allowing for fluidity.
+Units will have a list of all influences on them, if a unit has an interest slot open each time it comes across an influence of that same interest than the influence is recorded and summed over time until the interest is finally generated. If it is easier for processing speed these lists can be terminated after a certain amount of time of no increase in influence.
 
 
-%%%rates of interests generation%%%
-Different experiences and influences affect their specific interest at different rates so interests in some area will be created quicker than in others. A example is be food, influences of junk food (food high in fats and sugars) increase at a rate quicker than interests of healthy food. Influences created with social groups also increase quicker, such as sharing meals with family, or seeing movies with friends.
+%%%Actual workforce interesst creation
+%%%Everything doesn't influence, there will be certain actions and objects that create influences.
+%%%Figure [... (picture and flowchart of unit interacting with environmeny at various stages, underneath is an example representation of influences impacting the unit and how the simulation is tracking them)]
+A unit will have a variety of influences impacting it. As it walks down the street it is impacted by a billboard advertisement, a buscar, and a group of people eating (having a good time).
+
+The unit arrives at work and is influenced by a group of people drinking coffee, a person eating, and a radio advertisement. Notice that different level of influence the lone person eating has in this image compared to that in the previous image of a group of people eating and enjoying themselves.
+
+Next the unit engages in its employed office based work. In this example the unit has no influences impacting it while working. This is not universal but in this case there are no influences.
+
+
+
+%perhaps units with interests in areas can impact other units???
+
+
+
+
+
+%%%% UNITS ACTING ON INTERESTS %%%%
+
+
 
 
 

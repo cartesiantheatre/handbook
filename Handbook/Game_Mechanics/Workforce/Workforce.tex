@@ -39,7 +39,7 @@ The means in which unit movement is performed is based on the units needs and th
 %Expand.
 
 
-
+\StartSubSection{Variables, Needs, and Interests} %Variables vs Needs vs Interests
 
 
 
@@ -73,6 +73,8 @@ In light of the above paragraphs, it can be seen that it is relatively simple to
 \StartSubSection{Workforce Interests}%Interests interacting with needs.
 Each human workforce unit has a variety of interests which dictates to the simulation its consumption pattern, or how the unit will react in certain situations. This will determine the direction it will take in its spare time as well as the way in which it satisfies its needs. 
 
+The majority of workforce unit changes occur at the unit level with each individual unit deciding which direction it will take in furthering (or lessening) its development. The primary way this is undertaking is the unit seeking to meet its units which are its primary goal. Some of its interests are redimentary and based around being more complex way of meeting its needs, such as eating at fine resturants with friends, other interests will be education or career specific. 
+
 Interests are based around the units needs. There are interests for food, shelter, belonging, and less so for water and oxygen.
 
 Units will have a set number of open slots that can acquire interests based on: (1) Their environmental exposure (friends, family, community, etc); (2) Previous variables (education, other interests, age).
@@ -84,9 +86,6 @@ As the unit goes through age brackets which change it, these slots will become o
 Once gained interests occupying a slot in the unit will be given a strength number, level, or similar indicator to determine how involved, addicted, interested, needy, etc, the unit is of that interest. 
 
 Various influences will determine this strength. Length of exposure, exposure by family while growing up, exposure by peers, acceptance in society, are examples of stronger influences that create an interest quicker. In addition the interest itself may have a degree of strength imposing itself onto the unit, such as an addictive drug. Different influences affect their allocated interest at different rates. For example the food need influences of junk food (food high in fats and sugars) increase at a rate quicker than interests of healthy food. Influences created with social groups also increase quicker, such as sharing meals with family, or seeing movies with friends.
-
-
-
 
 
 Replacing an interest occurs through exposure to other interests. Lower level, seasonal, or trend based interest's will be replaced relatively easily compared to interests which are higher order. This represents interests that are ingrained both individually and socially. 
@@ -111,38 +110,39 @@ Interest Externalities and Perception Times
 
 As a unit acts, moves, etc, it will have a record of all influences on it. If a unit has an interest slot open each time it comes across an influence associated with that same interest, than the influence is recorded and summed over time until the interest is finally generated or filled by another influence (if it is easier for processing speed these lists can be terminated after a certain amount of time of no increase in influence).
 
+Each unit has an amount of consumption interests determined by the age variable of the unit, this is to limit a toddler having a complete set of consumption interests too early. The interests are continually changing throughout the units lifespan and are based on the highest averages of external influences which cause consumption interest generation. A units strongest consumption interest might be accredited organic food, the next might be "clown foods" inc, then shot guns, pure water, and finally fast cars. In addition as each in-game second passes the units average yearly ratios of influence are being calculated, with the variables changing places or being replaced completely.   
+ 
 
-%%%Actual workforce interesst creation
-%%%Everything doesn't influence, there will be certain actions and objects that create influences.
-%%%Figure [... (picture and flowchart of unit interacting with environmeny at various stages, underneath is an example representation of influences impacting the unit and how the simulation is tracking them)]
+\StartSubSection{Workforce Interest Creation}
+Figure [... (picture and flowchart of unit interacting with environmeny at various stages, underneath is an example representation of influences impacting the unit and how the simulation is tracking them)]
+%Expand and explain.
+
+%Example 1
 A unit will have a variety of influences impacting it. As it walks down the street it is impacted by a billboard advertisement, a buscar, and a group of people eating (having a good time).
 
+%Example 2
 The unit arrives at work and is influenced by a group of people drinking coffee, a person eating, and a radio advertisement. Notice that different level of influence the lone person eating has in this image compared to that in the previous image of a group of people eating and enjoying themselves.
 
+%Example 3
 Next the unit engages in its employed office based work. In this example the unit has no influences impacting it while working. This is not universal but in this case there are no influences.
 
 
 
-%perhaps units with interests in areas can impact other units???
-
-
-
-
-
-%%%% UNITS ACTING ON INTERESTS %%%%
-
-
+Units with interests in areas impact other units.
+A unit with an interest will act on that interest therefore influencing other units.
+%Expand and explain.
+%Example.
 
 
 
 
 \StartSubsection{Workforce Types}
-The dynamic and multifaceted nature of workforce may become more evident when reading about the various workforce types. From the list below it can be seen that workforce comprises what the population is doing in reaction to the cities governance or that of other cities and also what stage of development a unit is at. Some types of workforce are easy to maintain in a state desired by players, such as industrial machinery. This needs only to be created, maintained, and given a source of energy. Other workforce types are more specific such as "the high school teacher" or "motor mechanic". These require specific circumstances surrounding a population, with just the right levels of affluence and education. Whats more is human workforce types also share needs with other human workforce types and are dependant on eachother to provide those needs. This makes for a complex array of interaction between workforces, and when combined with taxation levels, ordinance, and geopolitical factors the complexitity is multiplied. In addition workforce types applied to a workforce unit can overlap. A unit could be tertiary educated but unemployed, or a physical labourer with a secondary education. 
+The dynamic and multifaceted nature of workforce may become more evident when reading about the various workforce types. From the list below it can be seen that workforce comprises what the population is doing in reaction to the cities governance or that of other cities and also what stage of development a unit is at. Some types of workforce are easy to create and maintain in a state desired by players. Others are more specific and complex requiring specific circumstances surrounding a population such as the right levels of affluence and education. In addition workforce types applied to a workforce unit can overlap. A unit could be tertiary educated but unemployed, or a physical labourer with a secondary education. 
 
-Also individuals may move between workforce types, as in moving through education levels or going from unemployed to employed. Some factors which change workforce types are done through time, others done through city management. The game must track each workforce unit, its movements, its needs, its progress (or degression) through education and work, its workforce types, its use of drugs, or its breaking the law. It must track this and the interaction with other workforce units, and the impact this all has on other units, (either directly through actions or indirectly through policy change or similar) and on the environment and the cities statistics, spending, and policies.
+Units may move between workforce types, as in moving through education levels or going from unemployed to employed. Some factors which change workforce types are done through time, others done through city management.
 
 
-%Workforce Types
+% -> SPREADSHEET -> Workforce Types 
 -Homeless
 -Unemployed
 -Physical labour (varying levels/classes, ie production, mining)
@@ -167,101 +167,106 @@ Also individuals may move between workforce types, as in moving through educatio
 
 
 \StartSubSection{Transitioning Between Workforce Types}
-%Unit gets skill and either upgrades workforce type or adds a workforce type.
-Workforce units can have multiple workforce types noting there abilities. The methods in which the units gain these varies from default/automatic changes such as units changing types as they move through different age brackets giving them certain effects, abilities, needs, and wants that is particular to that age bracket (or workforce age type) and to a particular cities style, through to workforce types specifically chosen by the unit such as further education or changing jobs. 
+Unit gets skill and either upgrades workforce type or adds a workforce type.
 
-Figure [Workforce_Types_Changes.gv] dicpicts the change of a workforce unit over time. We can see in this figure that certain aspects of the unit remain at certain stages of its lifespan. In the first period of time lapse in the example the unit moves from secondary education into tertiary education while still working in a factory (line worker). During this period the unit has aged (age group 2 has changed to 3), gained experience in line working (Line Worker 1 has changed to 2, moving from level 1 to 2) and has completed 2 units of tertiary education giving it the extra workforce types Economics 1 and Literature 1. We can also see that during the first time lapse the unit has not lost his secondary education workforce type even though he is no longer undertaking this education type as this represents skills and knowledge the unit has gained. 
+Workforce units can have multiple workforce types noting the variety of abilities they have. The methods in which the units gain these varies from default/automatic changes (such as units changing types as they move through different age brackets giving them certain effects, abilities, needs, and wants that is particular to that age bracket and to a particular cities style) through to workforce types specifically chosen by the unit such as further education or changing jobs. 
 
-After the second time lapse (more time) the unit will have aged but not so much as to have moved into a new age group so it has retained age group 4. The unit has also studied further at a tertiary level gaining economics 4 and literature 2. Note that these have replaced economics 4 and literature 2 as they represent levels or improved skill in these areas, while they appear to replace the previous economics 1 and literate 1, they are upgrades of these with economics 4 having all that was in economics 1 and more (the same goes for literature 2). This is similar to the unit gaining further experience as a line worker. The unit has also started work in Mental Labour as an Economist. The "Economist 1" represents that the unit is level 1 at being a working economist. Also note that although the unit is currently working as an economist at level 1, he has retained the line worker level 2 workforce type as this is a skill the unit will retain, similar to his secondary education. Given more time this unit may gain levels in "Mental Labour: Economist" and will change through age groups. 
+Figure [Workforce_Types_Changes.gv] dicpicts the change of a workforce unit over time. We can see in this figure that certain aspects of the unit remain at certain stages of its lifespan. In the first period of "time lapse" in the example the unit moves from secondary education into tertiary education while still working in a factory (as a line worker). During this period the unit has aged (age group 2 has changed to 3), gained experience in line working (Line Worker 1 has changed to 2, that is moving from level 1 to 2) and has completed 2 units of tertiary education giving it the extra workforce types Economics 1 and Literature 1. We can also see that during the first time lapse the unit has not lost his secondary education workforce type even though he is no longer undertaking this education type as this represents skills and knowledge the unit has gained. 
 
-From this example we can see that workforce units are gaining experience over time in a variety of areas depending on what they are able to spend their time doing and that this experience is categorised as "workforce types" which can either change/improve or increase in number over time. A workforce type does not note when the unit is currently working only what skills he/she has. The unit variables (see[subsection]), discussed later, contains the information of where the unit is currently working, among other things.
+More time has now passed and the unit will have aged but not so much so as to have moved into a new age group. Therefor it has retained age group 4. The unit has also studied further at a tertiary level gaining economics 4 and literature 2. Note that these have replaced economics 4 and literature 2 as they represent levels or improved skill in these areas, while they appear to replace the previous economics 1 and literate 1, they are upgrades of these with economics 4 having all that was in economics 1 and more (the same goes for literature 2). This is similar to how the unit gained further experience as a line worker in the previous example. The unit has also started work as an economist. The "Economist 1" represents that the unit is level 1 at being a working economist. Also note that although the unit is currently working as an economist at level 1, he has retained the line worker level 2 workforce type as this is a skill the unit will retain, similar to his secondary education, as well as his education of economics 4 and literature 2. Given more time this unit may gain levels in Economist and will also change age groups. 
 
-%How do units get skill - interests, needs, continual work, education, age, handicaps.
+From this example we can see that workforce units are gaining experience over time in a variety of areas depending on what they are doing over time and that each type of experience is categorised as a workforce type which can either change, improve, or increase in number over time. 
+
+A workforce type does not note when the unit is currently working only what skills he/she has. The unit variables (see[subsection]), discussed later, contains the information of where the unit is currently working, among other things.
+
+How units get skills - interests, needs, continual work, education, age, handicaps.
+%Expand and explain.
+%Example.
+
+How units move between jobs?
+%Expand and explain.
+%Example.
+
+How units choose an education type?
+%Expand and explain.
+%Example.
 
 
-%How does a unit move between jobs?
-%How does a unit choose an education type?
-
-
-%Default/Automatic Workforce Changes
-%List of above
-Default workforce changes are those that the game will give a unit automatically as a result of some change, this kind of change does not take into account the units interests or player input.
+\StartSubSection{Workforce Variables}
 
 Age:
+Workforce units change age types as the unit ages, being the changes in the length of time since it the unit was created. 
+
 As mentioned above, workforce units will change one of there types as the unit ages. The subsection on unit variables notes that all units have a time stamp noting there creation, from this time stamp the game will calculate what age this unit is and therefore what age bracket it falls within. The age bracket is just another workforce type which allows the game to give attributes or apply conditions to the unit. New borns have different needs and will effect the world differently than middle aged units which in turn will be different from the elderly. 
 
-Specifically the age groups will be new born, toddler, child, adolescent, young adult, middle aged, late middle aged, elderly, elderly infirmed. 
+Specifically there will be 9 age groups being: the age groups will be new born, toddler, child, adolescent, young adult, middle aged, late middle aged, elderly, elderly infirmed. A unit may not reach all of these age groups but those it does reach it must pass through sequentially.
+
 
 Calamity:
-Units will come across certain situations which will cause them injury and/or disabilty which could be temporary or permanent. This change in workforce is not specifically chosen but an outcome of unit performing certain actions. These units will automatically be given this type which will be listed on its variable.  
+Units will come across certain situations which will cause them injury and/or disabilty which could be temporary or permanent. This change in workforce is not specifically chosen but an outcome of unit performing certain actions or encountering certain things. These units will automatically be given this type which will be listed on its variable.  
 
 
-%Player Chosen Workforce Changes
-%List of above
-Compulory Education:
-Depending on city setup a unit will generally gain at least some form of redimentary education at its younger age types, giving it a workforce type of something like [primary:2] or if the education system is more precisely setup perhaps [maths:1][language:2][geography:1]. These inital education type are chosen by the player in that they may be enforced on the population as "compulsory education".
+%Variables which uniquely identify the unit and determine its capabilites.
 
-Forced Career:
-Players deciding what units will do what. This can be as broad as saying 25 percent of the workforce must farm, or as micro managed as selecting an individual unit and deciding what job it is to have.
+Unique ID
+[Unique alpha-numeric key](unique to each unit)
+[Date and time stamp of birth](auto generates secondary age variable)[>>][Age]
+-These above two generate a unique unit, allowing for keys to be recycled, but date/time stamp will change.
 
+%[First Name and Last Name](may become unique to a cities cultural influences)
+[Race/Ancestry]
+[Income](fluctuates)
+[Workforce Types](multiple, fluctuates)
+%[Health Effects](multiple)
+[Social Category](?)
 
-%Unit Chosen Workforce Changes
-%List of above  
-The majority of workforce unit changes occur at the unit level with each individual unit deciding which direction it will take in furthering (or lessening) its development. The primary way this is undertaking is the unit seeking to meet its units which are its primary goal. If all the units needs are met then it will chose to follow its interests. Some of its interests are redimentary and based around being more complex way of meeting its needs, such as eating at fine resturants with friends, other interests will be education or career specific. An example of this is a unit seeking to study journalism at a university, if circumstances are right then the unit will be able to enter into that education stream and gain an additional workforce unit type of [Journalism] which will change as it moves through its education, for instance: first year [Study:Journalism:1], and in second year this variable will be replaced with [Study:Journalism:2] and so on until it is working in this field when it will also gain [Journalist:1]. Note the method in which units gain workforce types through education vary depending on the education system the player has setup for hir city.
+%[Political](?)maybe just have complex interaction of existing interests with politcal ideals.
 
-Education:
-If players do not enact compulsory workforce then units seeking education are chosing to do so themselves based on their needs. Also, further education outside of a compulsory system is unit directed. Just when an education system leave the players domain and enters the units in different for each city and based on how the player has set up that particular city.
+%SAMPLE UNIT VARIABLES
+Here is a sample list of a units variables:
+[UNIQUE ID][DATE/TIME O.B][LATITUDE:LONGITUDE]
+[CURRENT ACTION][EMPLOYMENT][OXYGEN][WATER][FOOD][SECURITY][BELONGING]
+[NAME][FATHERS RACE][MOTHERS RACE][HEALTH][HEALTH][EDUCATION TYPE][EDUCATION TYPE][WORKFORCE TYPE][WORKFORCE TYPE]
+[WORKFORCE TYPE][WORKFORCE TYPE][WEALTH][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][WORK INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
 
-Career:
-Unless players dictate what job a workforce unit will be doing the unit itself will have chosen this and will chose career progression as it "sees" fit based on its needs, interests, workforce types, and availability of work.  
-
-
-
-
-
-\StartSubSection{Influencing Human Workforce}
-The human workforce is deffernt from other workforce units because they are more complex, being able to manipulate and be manipulated by the economy. 
-
-
-
-
+And here is a sample list of an average labour worker within sub-par city with several Earth influences filling those boxes:
+[A245JK89DJ102SK][2013/17/03:2146.46.12][-37.048601,143.739624][MARCHING IN PROTEST][C&R PTY WELDING LINES][O:9][W:4][F:5][S:4][B:8]
+[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES]
 
 
 
-%
-%
-%
-%
-%
-How people are raised, educated, and conditioned through experience largely determines their consumer patterns and may be reflected in a population's consumer choices. In game, workforce is influenced through players building, inacting ordinance, and other various city policies along with diplomacy. The method in which various workforce units are shaped and changed through the development of a players city are complex and discussed in depth below.
-%
+In this example the unique ID identifies the unit along with its game time date and time stamp. The games longitutude and latitude place and track where the unit is, current action notes what the unit is involved in and the employment variable shows where he is working.
+Next we can see the unit has plenty of air (9/10), is a little thirsty, will soon need food, is not feeling secure which is probably why he is protesting, and is fitting in with the crowd with a beloning level of 8. Optional for the game is the tracing of the units bloodlines, showing mothers and fathers ancestry. Next are its health effects which reflect its consumption choices and how the unit may eventually being spending it money (ie on healthcare or medication) or how it will eventually die. Next we can see this unit has obtained general primary and secondary education types which influences the basic skill set it has and therefore determines the work it can obtain. Next we have the workforce types it is involved in which denotes where is has been working, where it is working, so its skills, along with any other non-social activity, in this case he is actively protesting. We can then see he is currently earning the equivalent of 31,000 a year in wages and prefers to socialise by having coffee and going to movies resturants. He also has an education preference for journalism which means if it was available and he could still meet his needs he would be studying journalism instead of what he is currently doing. He has 
+a consumption preference for fast food, movies, bananas, watches, designer boots, and rifles; this means he will spend his disposable income on these goods in no particular order. Note that in this above exmaple, education types does not accurately depict a units education, education types will actually be made up of many types forming an education as chosen by the player. Primary, secondary, etc are just the games default educational system in place without any player management.
 
-There are various methods in which the human workforces, or parts there of, are influenced to take a certain direction. The main method in which a player can influence his own or someone elses workforce is through economic means such as taxation or ordinance (though not limited to financial insentives but extended to include incentives derrived for economic direction), although other methods may exist such as brute force or through environmental coercion. Additional methods include the use of the media and/or propaganda which can be initiated by the player, another player, or AI representing Earth interests.
+Of the above variables, some are automatically asigned to the unit, such as ID, name, date of birth, and location, however others are generated and changed throughout the game. 
 
-The means in which the workforce itself is influenced is through their various needs (see section Workforce Units Needs). Human workforce units will go about striving to fulfill there needs by a means which is partially predetermined by default programming and partially determine by the needs needing be met and the degree to which they are wanting. Usually, all things being good, this is peaceful but ultimately depends on the situation at hand and at the players influence. Through enacting ordinance, taxation, and various diplomatic relations the player creates variance in the workforce needs levels, and over time the method in which each workforce unit meets its needs.
+%Expand and explain.
+%Examples.
 
-An example may be the implementation of a higher tax level for a certain group of people. This may place strain on there income, causing crime, violence, and other problems for the city. However if this higher tax level is offset with social funding for this group, giving them other means to obtain there needs then the previous situation with crime level increase may not occur. 
 
-Another example is allowing television and private broadcast. While cheaper for the government and good for business, this system may become abused with continual broadcasts leaving people feeling that their belongingness need is to be fulfilled by wearing the same clothes as some Earth celebrity. 
+\StartSubSection{Influencing Workforce}
+How people are raised, educated, and conditioned through experience largely determines their consumer patterns and may be reflected in a population's consumer choices. In game, workforce is influenced through players building, inacting ordinance, and other various city policies along with inter-city diplomacy. The method in which various workforce units are shaped and changed through the development of a players city are complex and discussed in depth below.
 
-The above two examples are simple occurances. In avaneya there will be multiple levels of cultural and economic variance influencing different cultural groups to different degrees causing players to deal with this to keep all aspects of the city functioning while still trying to achieve player goals such as technological innovation and maintain an independent yet peaceful existance with Earth. From this it can be seen that the AI of human workforce will be quite involved.   
+The main method in which a player can influence his own or someone elses workforce is through economic means such as taxation or ordinance (though not limited to financial insentives but extended to include incentives derrived for economic direction), although other methods may exist such as brute force or through environmental coercion. Additional methods include the use of the media and/or propaganda which can be initiated by the player, another player, or AI representing Earth interests.
 
-%Discuss how effected and how entities will react.
-The AI of entities will respond to a variety of inputs from the greater enviroment. The manner in which each entity attempts to reach satisfaction of its needs is determined from this environmental input. To describe the process, an individual entity will go about in its default state provided it has access to all its essentials. When this access is threatened or blocked it will attempt to right the situation by some means. The means in which it can right the situation depends on the enviroment, namely economic, political, and location factors, as well as its education/knowledge and social status, and the need that is being threatened. Further to this, an entity may not even be aware of some changes or threats and therefore might not take action.
+The means in which the workforce itself is influenced is through their needs and interests (see section Workforce Units Needs). Workforce units will go about striving to fulfill there needs. This depends on the situation at hand and at the players influence.
 
-Lets go back to our example on a threat to security. One group of humans with similar workforce types might make business deals to get it out of the city or off the planet. Another might petition government to increase militia spending. Another might encourage the people to take to arms and fight. And another might join the militia. Outliers may take to vigilante justice or investigate to discover possible conspiracies. Of course the degree to which these can occur depend largely on previous player input to the population. There is a multitude of means in which entities will respond to player sitations that threaten or improve their circumstances and these are unique to the needs being effected and resource the unit has available to make a change or maintain safety.
+In avaneya there will be multiple levels of cultural and economic variance influencing different cultural groups to different degrees causing players to deal with this to keep all aspects of the city functioning while still trying to achieve player goals such as technological innovation and maintain an independent yet peaceful existance with Earth.
 
-%Multiple threats to multiple needs
-When there are multiple threats to the same entity, it will respond in order of importance. Clearly, air, then water, then food, then security, then belonging. Entities will not respond to their need to belong when they are dieing from lack of oxygen.
+One group of humans with similar workforce types might make business deals to get it out of the city or off the planet. Another might petition government to increase militia spending. Another might encourage the people to take to arms and fight. And another might join the militia. Outliers may take to vigilante justice or investigate to discover possible conspiracies. Of course the degree to which these can occur depend largely on previous player input to the population. There is a multitude of means in which entities will respond to player sitations that threaten or improve their circumstances and these are unique to the needs being effected and resource the unit has available to make a change or maintain safety.
 
-%Natural State
-In its natural state a workforce unit is only trying to satisfy its needs. The manner in which the unit can do this is chosen by the method in which the city is managed. An unit seeking food could naturally go into the wilderness and find fruit etc., however in Avaneya, on Mars, this is not possible and the unit therefore finds other means of getting food. This may be going to a market, going out to lunch, or stealing from a grocery store. In its default state the unit pursues tasks, or actions, in accordance with its needs.
+When there are multiple threats to the same entity, it will respond in order of importance to which it must meet its needs. Clearly air, then water, then food, then security, then belonging. Entities will not respond to their need to belong when they are dieing from a lack of oxygen.
 
-To determine the type of action an unit will undertake is complex. It is a matter or factoring in its various needs at the time along with its workforce type and other variables such as income level, social status, and location. In this way we determine whether an unit goes home to cook food for dinner, or goes out to dinner with friends, or goes home has dinner then goes bowling. Factors such as the units income or money, degree of hunger, location to food, food quality, need to belong, number of friends (or daily interactions), neighbourhood safety, "governmental" dietary guidelines, work security, and time available, all converge to create the units action. These are automatically calculated by the program and are known as actions or specifically as unit actions. The actions taken by units are classed into categories based on needs. 
+In its natural state a workforce unit is only trying to satisfy its needs. This may be going to a market, going out to lunch, or stealing from a grocery store. In its default state the unit pursues tasks, or actions, in accordance with its needs, using its interests as a guide.
 
-Not everything will be required to have an action, breathing and drinking water are just factored into resource use and will not evoke a reaction unless the unit is unable to obtain this resource. The main use for entity ations is to document visually and statistically the units input into the economy and to create dynamic, broad, and creative unit responses to player input.
+To determine how a unit acts is a matter or factoring in its various needs at the time along with variables such as workforce, income level, social status, and location. In this way we determine whether an unit goes home to cook food for dinner, or goes out to dinner with friends, or goes home has dinner then goes bowling. Factors such as the units income or money, degree of hunger, location to food, food quality, need to belong, number of friends (or daily interactions), neighbourhood safety, "governmental" dietary guidelines, work security, and time available, all converge to determine a units action. 
 
-%Example Entity Actions [an (E) signifies emergency/fight flight response]
+Not everything will be required to have an action, breathing and drinking water are just factored into resource use and will not evoke a reaction unless the unit is unable to obtain or is blocked from this resource.
+
+As each workforce unit is represented by an individual unit in game, moving and performing tasks, as this unit moves through game space it is consuming resources such as air, water, food, and minerals and like subtances through consumerable resources. What a unit can consume is based in part by what is available and what its needs and action influences are
+
+% -> SPREADSHEET -> Example Entity Actions [an (E) signifies emergency/fight flight response]
 Oxygen Actions
 -breath 
 -move to air source (E)
@@ -329,75 +334,13 @@ Belonging Actions
 -
 
 
-
-
-
-\StartSubSection{Workforce Unit Variables}
-
-
-%Variables which uniquely identify the unit and determine its capabilites.
-
-Unique ID
-[Unique alpha-numeric key](unique to each unit)
-[Date and time stamp of birth](auto generates secondary age variable)[>>][Age]
--These above two generate a unique unit, allowing for keys to be recycled, but date/time stamp will change.
-
-%[First Name and Last Name](may become unique to a cities cultural influences)
-[Race/Ancestry]
-[Income](fluctuates)
-[Workforce Types](multiple, fluctuates)
-%[Health Effects](multiple)
-[Social Category](?)
-
-%[Political](?)maybe just have complex interaction of existing interests with politcal ideals.
-
-%SAMPLE UNIT VARIABLES
-Here is a sample list of a units variables:
-[UNIQUE ID][DATE/TIME O.B][LATITUDE:LONGITUDE]
-[CURRENT ACTION][EMPLOYMENT][OXYGEN][WATER][FOOD][SECURITY][BELONGING]
-[NAME][FATHERS RACE][MOTHERS RACE][HEALTH][HEALTH][EDUCATION TYPE][EDUCATION TYPE][WORKFORCE TYPE][WORKFORCE TYPE]
-[WORKFORCE TYPE][WORKFORCE TYPE][WEALTH][SOCIAL INTEREST][SOCIAL INTEREST][SOCIAL INTEREST][WORK INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST][CONSUMPTION INTEREST]
-
-And here is a sample list of an average labour worker within sub-par city with several Earth influences filling those boxes:
-[A245JK89DJ102SK][2013/17/03:2146.46.12][-37.048601,143.739624][MARCHING IN PROTEST][C&R PTY WELDING LINES][O:9][W:4][F:5][S:4][B:8]
-[ABUDL JHAKA][MIDDLE EAST][EURASIAN][OVERWEIGHT][UNFIT][PRIMARY][SECONDARY][MANUAL LABOUR][MANAGING][PROTESTER][TAXI DRIVER][31000][COFFEE][CINEMA][RESTURANT][JOURNALISM][FAST FOOD][MOVIES][BANANAS][WATCHES][DESIGNER BOOTS][RIFLES]
-
-
-
-In this example the unique ID identifies the unit along with its game time date and time stamp. The games longitutude and latitude place and track where the unit is, current action notes what the unit is involved in and the employment variable shows where he is working.
-Next we can see the unit has plenty of air (9/10), is a little thirsty, will soon need food, is not feeling secure which is probably why he is protesting, and is fitting in with the crowd with a beloning level of 8. Optional for the game is the tracing of the units bloodlines, showing mothers and fathers ancestry. Next are its health effects which reflect its consumption choices and how the unit may eventually being spending it money (ie on healthcare or medication) or how it will eventually die. Next we can see this unit has obtained general primary and secondary education types which influences the basic skill set it has and therefore determines the work it can obtain. Next we have the workforce types it is involved in which denotes where is has been working, where it is working, so its skills, along with any other non-social activity, in this case he is actively protesting. We can then see he is currently earning the equivalent of 31,000 a year in wages and prefers to socialise by having coffee and going to movies resturants. He also has an education preference for journalism which means if it was available and he could still meet his needs he would be studying journalism instead of what he is currently doing. He has 
-a consumption preference for fast food, movies, bananas, watches, designer boots, and rifles; this means he will spend his disposable income on these goods in no particular order. Note that in this above exmaple, education types does not accurately depict a units education, education types will actually be made up of many types forming an education as chosen by the player. Primary, secondary, etc are just the games default educational system in place without any player management.
-
-%Calamity:
-%Units will come across certain situations which will cause them injury and/or disabilty which could be temporary or permanent.  
-	
-
-\StartSubSection{Generation of Unit Variables}
-Of the above variables, some are automatically asigned to the unit, such as ID, name, date of birth, and location, however others are generated and changed throughout the game. Need variables are continually changing as influences from the environment affect the unit and may go from being low when the need has not been met for a while to being high when the unit has just had the need satisfied. In addition some variables may come and go completely, such as consumption or social interests. 
-
-Consumption interests are variables that determine where a unit will spend money and/or time when this is available, it also determines preferences when there are multiple options available. The consumption interest variable is specifically created for a unit when it is exposed to media (television or similar, public advertising, radio) or social interaction, both of which are generated when the unit does not have consumption interests already in place. 
-
-Each unit has an amount of consumption interests determined by the age variable of the unit, this is to limit a toddler having a complete set of consumption variables too early. The variables are continually changing throughout the units lifespan and are based on the highest averages of external influences which cause consumption interest generation. So if a unit has 5 consumption variables at age 25, these will be the 5 variables that have had the most influence over the units environment. It's highest consumption varibale might be accredited organic food, the next might be "clown foods" inc, then shot guns, pure water, and finally fast cars. In addition as each in-game second (or minute or whatever period of time is deemed appropriate) passes the units average yearly ratios of influence are being calculated, with the variables changing places or being replaced completely. While it is possible that this could cause rapid change of variables, the gradual nature in which policy and building changes, an these changes in turn influece units should then be causing the influence ratios to be changing just as gradually.   
-
-
-[Age][>>>][Amount of consumption interests] 
-
-
-
-
-
-
-
 \StartSubSection{Needs and Actions Variance}
-%Behvaioural Economics
-%Units must have order's of interests and degree which they value these interests.
 There are two broad categories which influences a units needs. The first is the units own actions, drinking water, eating food, getting a job, visiting a friend, all reduce the need to obtain these things, while excerising increases the need for food and water, and working long hours in isolation increases the need for belonging. The second is external or environmental effects such as propaganda, lack of clean air, food with poor nutitional content, or the action and views of other units. All these happenings have varying amounts of influence on the units needs which in turn effect the manner in which the unit acts to satisfy these needs.
 
-In order to correctly map the degree of influence various needs have on a unit and the degree to which a units actions relieves or increased its needs, all of the variables effecting the needs of a unit are mapped with a point system quantively describing the degree to which needs effect the unit and the degree to which an action or event influences a units needs. Some of these will be wide reaching, effecting many units, such as chemicals in the cities water supply or television, other will be specific, such as health consequences from working shift work. In turn all these effect unit needs which cause unit actions, and may also create or change unit variables (mentioned above). 
+In order to correctly map the degree of influence various needs have on a unit and the degree to which a units actions relieves or increased its needs, all of the variables effecting the needs of a unit are mapped with a quantitative point system. Some of these influences will be wide reaching, effecting many units, such as chemicals in the cities water supply or television, other will be specific, such as health consequences from working shift work. 
 
 
-
-Influence:
+%-> SPREADSHEET -> Influences
 -Workforce Types
 -Food Types
 -Actions
@@ -429,7 +372,7 @@ Influence:
 
 
 \StartSubSection{Workforce Consumption}
-As discussed, in Avaneya a workforce unit is not just a unit producing goods and services, it is also a unit which consumes goods and services; having any influence over the direction of the economy. This includes its patters of consumption. As each workforce unit is represented by an individual unit in game, moving and performing tasks, as this unit moves through game space it is consuming resources such as air, water, food, and minerals and like subtances through consumerable resources. What a unit can consume is based in part by what is available and what its needs and action influences are.
+
 
 Units undertaking actions, buying goods and services (among other things), preferenced by their variables and preferenced further by the hierarchy of needs. A unit 
 

@@ -56,23 +56,64 @@ A cities workforce is influenced through players building, inacting ordinance, a
 \StartSubSection{Visual Representation of the Workforce}
 A cities multi faceted workforce is actually made up of varying amounts (many thousands) of individual humans and are depicted visually as people, each an individual person, performing tasks or moving around the city.  
 
-Visually, the workforce units need to be represented as humans of varying races, ages, sizes, and wearing various clothing and apparel. Depending on the zoomable scale all these units must be able to be seen performing actions and influencing there surroundings and interacting with other units as well as their environment and objects in this. 
+Visually, the workforce units need to be represented as humans of varying skin tones, ages, sizes, and wearing various clothing and apparel. Depending on the zoomable scale all these units must be able to be seen performing actions and influencing there surroundings and interacting with other units as well as their environment and objects in this. 
 
-The depiction of race will be generated from the units parents. This could be simple, such as: 2 white parents make a white child; 1 black and 1 white parent make either white or black (50/50) or a brown child; etc. Another example could be to create an algorithm that determines the color based frequency of skin tone in the family tree and also calculates a skin pigmentation on a spectrum. Skin tone will be determined at the units creation.
+The depiction of skin tone will be generated from the units parents (see subsection workforce unit creation for more detail on unit creation). 
+%Move to unit creation section?
+Each unit will have a skin tone variable from 0 to 6 with 0 being the whitest, 6 being the blackest, and anything in between being degrees between these two. 
 
-Initially the depiction of clothing will be based how characters are shown in the concept art. Eventually clothing will be culturally influenced and the clothes units are depcited in will depend on variables and access to certain clothes. Units with certain interests in fashion may only purchase certain types of clothing, as will units exposed to certain clothing advertisements. The depiction of units in clothes needs to be done in a manner that allows them to change over time, for weather, times of day, trends, and culture.  
+At unit creation the skin tone value will be calculated from the values of the units parents, creating a random value for the newly created unit within limits set by the units parents skin tone value. Refer to table ... 
+%Table showing skin tone examples.
+   M 
+F  0 1 2 3 4 5 6
+0  0 1 2 3 4 5 - 
+1  1 2 3 4 5 6 6
+2  2 3 4 5 6 6 6
+3  3 4 5 6 6 6 6
+4  4 5 6 6 6 6 6
+5  5 6 6 6 6 6 6
+6  - 6 6 6 6 6 6 
 
-The depiction of size is less important. While units of certain ages will vary in size noticeably, units within each age group will vary small amounts. This can be determined randomly within a narrow range.
+This table shows for each parent the skin tone value that each newly created unit will fall between at random with it being increasly more common for a darker value to be predominant as the skin tone value increases. This needs to be reflected in the random generation, the increased proability of darker tones in new offspring in darker couples.
 
-The depcition of age will be based entirely around which age bracket the unit falls within and this will change as the unit moves through various age brackets. 
+The only expcetion to this is where one parent has a skin tone value 0 and the other a skin tone value 6. In this case the unit will default to a value of 3.
+
+While this method does not completely represent polygenic inheritance, its works well as a model for the game.  
+%(source 1 - Biology Campbell Reece Meyers - pg 263)
+%(source 2 - http://multiracial.com/site/index.php/2000/10/01/how-do-we-inherit-our-skin-color/)
+
+
+Initially the depiction of clothing will be based how characters are shown in the concept art. Eventually clothing will be culturally influenced and the clothes units are depcited in will depend on unit variables and its access to certain clothes. Units with certain interests in fashion may only purchase certain types of clothing, as will units exposed to certain clothing advertisements. The depiction of units in clothes needs to be done in a manner that allows them to change over time, for weather, times of day, trends, and culture.  
+
+The depiction of size is less important. Units of will vary in size noticeably between age groups, though some age groups will show no variation in size such as the various stages from young adult to late middle age where little change will occur (refer to section ... on age variables for further). 
+
+The depcition of age will be based entirely around which age bracket the unit falls within and this will change as the unit moves through various age brackets similar to unit size(refer to section ... on age variables for further). Some age bracket changes will be drastic others will be minor changes.
 
 In addition a large variety of animations will be required for the number of potential interactions with an aim of avoiding repetitiveness. These animations will include things such as walking, running, eating, talking, picking things up, etc. Refer to table ... for a complete list of all actions required. This table takes into consideration all events that a unit may end up doing, from basic everyday tasks like thos previously mentioned to specific tasks for specific jobs. 
-
 %-> SPREADSHEET -> animations
 
 
 \StartSubSection{Workforce Unit Creation}
-%Expand (obviously)
+%Units created through sex
+ %2 units have sex, baby unit is made.
+  %How frequently sex/baby making happens?
+   %What determines frequency?
+
+%Units created through other artificial means
+ %Invertro
+  %What determines which units, when, how frequently?
+
+%Unit variables created at unit creation and what influence same.
+
+
+
+
+
+
+
+
+
+
 
 \StartSubSection{Workforce Movement}
 Workforce is a dynamic "resource" and can move city wide (if allowed) and globally (if they are not trapped in the city and have the appropriate travel documents, etc). If your workforce requires cheap housing and this becomes easier to gain in another city, many may migrate to this city seeking better opportunities given that chance. Likewise they can move within your city to different opportunities and movement both within a city and between cities can be controlled to an extent to enable better or worse access to certain locations, increasing and decreasing travel time.

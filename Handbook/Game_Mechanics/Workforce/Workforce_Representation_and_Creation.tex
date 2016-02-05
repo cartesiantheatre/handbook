@@ -1,0 +1,306 @@
+% This is part of the Avaneya Project Crew Handbook.
+% Copyright (C) 2010-2014 Cartesian Theatre <info@cartesiantheatre.com>.
+% See the file Copying for details on copying conditions.
+
+% Game Mechanics chapter...
+%\StartSection{Workforce Representation and Creation}
+%-----------> WORKFORCE <---------------------------------------------
+\SubStartSection{Introduction}
+
+What a city can produce, how much it can produce, and what it is capable of producing are largely byproducts of its workforce, that is the human population interacting, with eachother and technology, to create goods and services. Workforce also determines things such as consumption patterns and criminal behaviour, it is humanness. This section discusses and describe what are the immense variety of workforces, what they represent, how they are created, maintained, and influenced, and what they are capable of. 
+
+A workforce unit is a single entity of the human population which influences economic input and output. This unit exists at a certain level of education, training (or lack there of), life experience and may increase in complexity over its lifespan. The overall workforce is all productivity and idleness factors in measureing the economy, extending to consumers (and even the homeless, criminals, and the unemployed). The workforce of a city is all units in the city capable of exerting influence on the direction in which resources or money flow. So the workforce is the primary means by which labor and skills are utilized and from which productivity is tracked.
+
+Certain workforce units will have vastly greater levels of complexity and therefore overhead than others. For instance a highly educated member of government as a lot more complexity than a basic line worker at a basic factory. The member of government will have gone through multiple levels of education and various types of employment to reach its current state, in contrast the factory worker only requires rudimentary education and could walk into his job without skills. While this is a simple example it serves a point to illustrate that some of the workforce will have more variables than others and be more difficult to create or maintain.
+
+A labour workforce requires certain factors to bring it into fruition which may include a certain level of education, access to work, and even restrictions to certain aspects of these or other factors. An intellectual workforce requires different factors to develop than a manual labour workforce. While the two are not mutually exclusive certain combinations and mixes of labour will be more difficult to create in a single city. In adition, otherwise different workforces may share aspects of influence over the economy, known as workforce types. For instance a workforce unit in manufacturing may have some of the same education level as a workforce unit in commerce. These two units share a couple of "workforce types" (being qualative education) but have been influenced by other means to different outcomes. 
+
+The workforce performs not only the tasks required by the society, but also tasks or actions that may detriment the society. The aim is to keep the style of play open by not limiting or directing players down paths of right and wrong but rather show an outcome of workforce actions and then challenge the player to deal with this in constructive even creative ways; casting influences over the population and controlling the creation of the workforces variables. 
+
+A cities workforce is influenced through players building, inacting ordinance, and various other city policies and diplomacy and raised through education, attracted via work opportunities from other cities, and hired directly. It is also influenced by numerous external and internal agencies such as media, education, drugs, and fashionable consumption. Through this process the workforce becomes increasingly convoluted and multifaceted, and the style of play implemented by the player, other players, and influences from NPCs, will help to determine the quality and quanity of a city's workforce. 
+
+%--------------> VISUAL REPRESENTATION OF THE WORKFORCE <--------------------------
+\StartSubSection{Visual Representation of the Workforce}
+A cities multi faceted workforce is actually made up of varying amounts (many thousands) of individual humans and are depicted visually as people, each an individual person, performing tasks or moving around the city.  
+
+Visually, the workforce units need to be represented as humans of varying skin tones, ages, sizes, and wearing various clothing and apparel. Depending on the zoomable scale all these units must be able to be seen performing actions and influencing there surroundings and interacting with other units as well as their environment and objects in this. 
+
+The depiction of skin tone will be generated from the units parents (see subsection workforce unit creation for more detail on unit creation). 
+%Move to unit creation section?
+Each unit will have a skin tone variable from 0 to 6 with 0 being the whitest, 6 being the blackest, and anything in between being degrees between these two. 
+
+At unit creation the skin tone value will be calculated from the values of the units parents, creating a random value for the newly created unit within limits set by the units parents skin tone value. Refer to table ... 
+%Table showing skin tone examples.
+   M 
+F  0 1 2 3 4 5 6
+0  0 1 2 3 4 5 - 
+1  1 2 3 4 5 6 6
+2  2 3 4 5 6 6 6
+3  3 4 5 6 6 6 6
+4  4 5 6 6 6 6 6
+5  5 6 6 6 6 6 6
+6  - 6 6 6 6 6 6 
+
+This table shows for each parent the skin tone value that each newly created unit will fall between at random with it being increasly more common for a darker value to be predominant as the skin tone value increases. This needs to be reflected in the random generation, the increased proability of darker tones in new offspring in darker couples.
+
+The only expcetion to this is where one parent has a skin tone value 0 and the other a skin tone value 6. In this case the unit will default to a value of 3.
+
+While this method does not completely represent polygenic inheritance, its works well as a model for the game.  
+%(source 1 - Biology, Campbell Reece Meyers - pg 263)
+%(source 2 - http://multiracial.com/site/index.php/2000/10/01/how-do-we-inherit-our-skin-color/)
+
+
+Initially the depiction of clothing will be based how characters are shown in the concept art. Eventually clothing will be culturally influenced and the clothes units are depcited in will depend on unit variables and its access to certain clothes. Units with certain interests in fashion may only purchase certain types of clothing, as will units exposed to certain clothing advertisements. The depiction of units in clothes needs to be done in a manner that allows them to change over time, for weather, times of day, trends, and culture.  
+
+The depiction of size is less important. Units of will vary in size noticeably between age groups, though some age groups will show no variation in size such as the various stages from young adult to late middle age where little change will occur (refer to section ... on age variables for further). 
+
+The depcition of age will be based entirely around which age bracket the unit falls within and this will change as the unit moves through various age brackets similar to unit size(refer to section ... on age variables for further). Some age bracket changes will be drastic others will be minor changes.
+
+In addition a large variety of animations will be required for the number of potential interactions with an aim of avoiding repetitiveness. These animations will include things such as walking, running, eating, talking, picking things up, etc. Refer to table ... for a complete list of all actions required. This table takes into consideration all events that a unit may end up doing, from basic everyday tasks like thos previously mentioned to specific tasks for specific jobs. 
+%-> SPREADSHEET -> animations
+
+%--------------> WORKFORCE UNIT CREATION <----------------------------------------
+\StartSubSection{Workforce Unit Creation}
+Workforce units are created in two ways, the first when a two units interact socially, the second is through technology such as invetro fertilization. In the first instance, where new units are created as a result of the love between a mommy workforce unit and a daddy workforce unit, the social situation will allow for enough privacy so that the actual act is not depicted. After this event there is a probability of the unit falling pregnant depending on both the unit's age brackets, refer to table .. below on pregnancy probability for further. 
+
+  M			        Key:
+F 1  2  3  4  5  6  7  8  9     1 - new born
+1 -  -  -  -  -  -  -  -  -     2 - toddler
+2 -  -  -  -  -  -  -  -  -     3 - child
+3 -  -  -  -  -  -  -  -  -     4 - adolescent
+4 -  -  - 10  -  -  -  -  -     5 - young adult
+5 -  -  -  -  9  8  5  3  -     6 - middle aged
+6 -  -  -  -  8  6  4  1  -     7 - late middle aged
+7 -  -  -  -  4  3  2  1  -     8 - elderly 
+8 -  -  -  -  1  1  1  1  -     9 - elderly infirmed
+9 -  -  -  -  -  -  -  -  -     
+
+Table depicting probability of falling pregnant depending on age
+Note: Probability out of 10 (0 to 10)
+
+%Units created through sex
+Workforce unit creation falls within the belonging need of the workforce unit but may also fulfil an interest. In determining if unit creation process is implemented two workforce units either want sex to fullful an interest, or want sex to reach higher tier belonging need of having own family (or one of each); and are at or will access a private location.
+
+There are designated areas in which workforce unit have sex. These will be obvious places such as a bedroom but also places such as private toilets, and other secluded locations. Such secluded locations will be generated through various means as a city is created. When units are at a stage where they want to have sex they will go to a private location. Two examples: two units in a house with other units in it will move to a bedroom; units in an office may move to a restroom. 
+% -> SPREADSHEET -> Locations of "private settings"
+
+If access is gained then the probability of unit creation is referred to table ... (above).
+
+Sometimes units will be made through reaching higher tier belonging needs, sometimes they will be created through units fulfilling interests. This creates situations in which unit creation will be planned and unplanned, will be created in a variety of social classes as well as help create social classes.
+
+%How frequently sex/baby making happens? What determines frequency?
+Frequency will be dependant on unit variables that factor in things such as income and intelligence.
+Generally a unit will have social and belonging factors met then income factors met also. 
+Units wanting to keep living standard is one way to slow reproduction.
+
+%Abandonned Units and Adoption
+Units who give birth to, or create, another unit will create or extend their original family group(see section ... [groups]), and be confronted by a variety of factors both personal and cultural that determine the new units future. A part of this will be a unit determining whether they keep the baby or child unit. In determining this units weigh up personal issues such as mental health and wealth, as well as cultural issues such as the babies gender or single motherhood, and on top of this there may be city or legal driven factors that determine a child's need to be taken away from the family.
+
+The point at which a unit will relinquish its child unit for adoption is determined by the variety of factors as listed below. If these factors accumulate to a level, this being X, the unit will put the child up for relinquishment. Lists One and Two show the causes of relinquishment which effect the unit factored by the degree of which each is affecting the unit, with certain causes having a greater multiplier than others. This will be measured while the unit is in the first age bracket, after which relqinquishment is no longer a factor.
+In addition the game has a informal and formal types of adoption, with informal instances being where children are cared for by extended family, or similar, where appropraite group dynamics take place. Formal adoption takes place through adoption facilities or buildings.
+
+%%%List One: Where Unit Determines Adoption
+ %Wealth and Resources
+Can a unit financially support another unit.
+Does the unit have access to and can it provide the resources for another unit. 
+ Wealth, income, living expenses, ability to provide food to self/others/child, other resources
+
+ %Age
+Age compounds with other variables lowering the threshold required to relinquish a child. Young units are more likely to relingquish but levels out.
+If single parnet that units age, if couple bother units age.
+
+ %Education
+Units at school or uni or similar may relingquish.
+
+ %Security
+Is the unit safe, does it belong with the child unit.
+Security, where living, safe to have kid, partner/family support, social support as a resource
+Single parent
+Social service / wealth of the social security system
+Strong support agencies, good adoption agencies, ability of mother to see kid, increases relinquishment
+Contraception: factor this in, like numerically, lower rates of available contraception means higher relinquishment rates
+
+ %Culture
+Stigmas, laws.
+Number of kids allowed or acceptable
+Genders
+Influenced by parents, presured by social worker, doctor, etc
+
+ %Health
+Is the unit physically able to care for the child
+What health variables does the unit have, certain ones complicate parenting.
+Health of child unit, does it have disabilities. 
+
+%%%List Two: Others/State Determines Adoption
+
+ %Child Services
+Child service may remove child and places with others
+Forced adoption - child services: parents lack capacity; children maltreated/intergenerational abuse; drugs and alcohol; mental health of parents; domestic violence
+Health of child unit, does it have disabilities
+
+ %Family
+Family takes child as parent unit unfit
+
+% -> SPREADSHEET -> Specific adoption factors, a influence on X.
+
+%Source 1 - Birth parents who relinquish babies for adoption revisited.
+%Source 2 - The reasons why young children are placed for adoption.
+%Source 3 - Correspondence from Beth NEIL (SWK)
+ 
+%Process of relingquishment / abandonment
+If due to the factors mentioned above the X value is exceeded, the unit will determine the childs appropriate for relinquishment. 
+
+If factors to do with adoption facilities are in play, the unit will attempt to relinquish at these. If it cannot relinquish at a facility, due to distance or overcapacity, the X value is recalculated without this factor. The unit will move to the facility, during operating hours, to attempt leave child unit at same. Note that in certain cases such as some hospitals, the adoption facility will be where the unit already is.
+
+If the unit has family dynamics that support it and is not prohibited by cultural factors, the unit will attempt to relinquish to family. This is done by the unit traveling to family to relinquish the unit.
+
+In city driven relinquishment, where child services or similar enter to take the unit, units of such an agency will enter and take the unit if the X value is met with a certain amount of X being met due to the unit being unit to parent.
+
+If there are severe factors that cause the unit to simply abandon the child, it will do so, at a designated location, as refered to in ... in an order of hierarchy.
+
+% -> SPREADSHEET -> Designated location for child unit abandonment.
+
+
+
+
+%Units created through other artificial means
+Units who reach the belonging need tier in which they create their own family but cannot or do not will try either adoption (see above) or technology such as invetro fertilization. 
+
+Through the probability methods listed in table ... above, there will be some units who will not end up with children, especially at older ages. Provided these units still try to meet their beloning needs they will eventually (define eventually) attempt artificial means of child creation. This is provided they have access to this, be it in their city or another's, and they can afford this method.
+
+Through in vetro the female workforce units age is the sole factor after a successful conception. Table ... shows the probabilty of success for in ventro.
+
+			        Key:
+F 1  2  3  4  5  6  7  8  9     1 - new born
+1 -  -  -  -  5  4  3  -  -     2 - toddler
+				3 - child
+				4 - adolescent
+				5 - young adult
+				6 - middle aged
+				7 - late middle aged
+				8 - elderly 
+				9 - elderly infirmed
+
+Table depicting probability of successful in vetro depending on female unit's age
+Note: Probability out of 10 (0 to 10
+
+Table ... above dipicts a base probability rate. Other factors may highten or lessen these probabilities such as technological complexity and the operator units expertise (level in appropriate workforce type).
+
+In vitro will be attempted by units, provided they still seak to fulfil the beloning need, as frequently as is allowed with what is games equivalent of a 6 month refractory period between attempts.
+
+Same sex units in vetro who use a sperm donor, the unit within the couple that chooses to be the genetic parent is determined at random on a 50/50 split.
+
+
+%Unit variables created at unit creation and what influence same.
+While most unit variables are determined from the environmental experiences of the unit, some will be determined at the creation of the workforce unit, and other will be created from experiences during pregnancy.
+
+Skin color, as mentioned above in the section of the visual representation of the workforce, will be determined by factors from the the parent units.
+
+Sexuality is another unit variable that is determined at birth. Each unit has a sexuality variable that represents what would be the genetic component of a unit's sexuality, ultimately determining what gender of unit it will date and have a family with.
+
+The level of this variable is determined by the level present in both parent units and interacts with environmental influences (see section ... influences) at (... age ranges etc...?) to determine the degree to which a unit is homosexual on a spectrum that includes bisexuality. 
+
+Table ... below indicates that degree of genes passed on to new workforce units from the male and female workforce units.
+
+   M			        
+F  0  1  2  3  4  5  6  7  8  9     
+0  0  1  1  1  2  2  3  3  4  4
+1  1  1  1  2  2  3  3  4  4  4     
+2  1  1  1  1  3  4  4  5  5  6     
+3  1  1  2  2  2  3  3  5  5  6     
+4  2  2  3  3  4  4  5  6  6  7     
+5  3  3  4  4  5  6  6  7  7  8     
+6  3  3  4  4  5  6  6  7  7  8     
+7  4  4  5  5  6  7  7  8  8  9      
+8  4  4  5  5  6  7  7  8  8  9       
+9  5  5  6  6  7  8  8  9  9  9
+
+Table depicting degree of which units sexuality variable interacts with environmental influences to determine sexuality.
+Note: scale ranges from 0 to 10 and converts to decimal point (ie 1 = .1, 2 = .2, etc).
+
+
+This table (...) represents the degree to which an environmental influence that determines homosexuality will be compounded by. People with a higher level of genetic homosexuality will have this influence increased at a quicker rate, filling the scale to homosexuality quicker, therefore be more likely to be gay.
+
+Units will keep the same genetic sexuality variable on the scale from 0 - 9, this variable does not change as the unit is exposed to more or less gay or straight influences. The environmental influences determine where the unit falls within a straight, bisexual, or homosexual [STR/BI/GAY] spectrum.
+
+The unit's gay/str/bi variable is determined via influences just like other unit variables excpet it is multiplied by its degree homosexuality as determined in table ... creating an effect where environmental influence to determine a unit's gay/str/bi variable are reduced by an amount determined by 'genes'. This is dipicted in figure ...
+
+%Figure .. dipicting influence hitting unit but slightly buffered by gene which are also dipicted.
+
+From this figure we can see an environmental influence happening within the units sphere of influence. While the influence itself exists full the effect on the unit is diminished, shielded if you will, through the units sexuality variable. 
+
+Various environmental influences will effect the units gay/str/bi variable. These are listed in table ... below.
+%List of environmental influences that help form homosexuality.
+Gay parents
+No father
+Less time with father (more time is reverse influence?)
+Cities density (more interactions with gay people)
+Cultural influences (more acceptance)
+%expand and explain these
+
+
+
+
+Other unit variables may be created from environmental experiences during pregnancy including both those imposed by the mother unit such as alcohol consumption, and those imposed from the environment such as exposure pre natal diet and exposure to toxic materials. This places a burden on the player to resolve diverse situations such as disposal of hazard materials and combat physical and mental health conditions.
+
+While a units health variable is more closely discussed in the sebsection titled Workforce Variables, conditions that determine which units are born with certain ailments are discussed her for the purpose of workforce unit creation.
+
+A Llst of prenatal experiences and their postnatal outcomes is shown below in table ...
+
+
+
+ Name  		Cause/s					Effects				
+Dietary							
+  A		Bad nutrition/lack of nutrients		Reduced lifespan			
+  B		Bad nutrition/excessive calories	Weight problems
+  C							
+							
+Drugs		Causes					EFfects	
+  D		Drug					Loss of intelligence / Intellectual development; Shortened life; Death; Loss of limb; Ongoing 								medical issues (heart/blood/etc);
+  
+  E		Alcohol					Loss of intelligence / Intellectual development; Shortened life; Death; Ongoing medical issues 								(heart/blood/etc);
+  
+  F		Smoking					Loss of intelligence / Intellectual development; Shortened life; Death; Ongoing medical issues 								(heart/blood/etc)Loss of limb; Weight problems;
+							
+Toxins		Type					Effects	
+  G							Deaf	
+  H							Dumb	
+  I							Blind
+  J							Paraplegia / Quadriplegia
+  K							Loss of intelligence / Intellectual development
+  L							Shortened life
+  M							Loss of limbs
+  N							Death
+  O							Weight problems
+
+Table depicting the variety of health effects on new workforce units and their prenatal causes.
+
+
+Rather than actual listing actual physical diseases and labeling them as such, existing diseases are used as a guide for symptoms, but the unit's health complication described by the effect its having on the unit. For example "This unit suffers from paraplegia".
+
+%Describe dietary effects
+%Example
+%Figure
+
+%Describe drugs and alcohol effects
+%Example
+%Figure
+
+%Describe toxin effects
+Toxins from the environment will have different types assoicated with them. Each toxin is not limited to one type of health effect with many causing a variety of health complications in new units and existing units.   
+%Example
+%Figure
+
+%(source 1 - Life-Span Human Development, Sigelman & Rider - pp 69 - 70)
+%(source 2 - http://americanpregnancy.org/birth-defects/ )
+
+
+%--------------> WORKFORCE MOVEMENT <----------------------------------------
+\StartSubSection{Workforce Movement}
+Workforce is a dynamic "resource" and can move city wide (if allowed) and globally (if they are not trapped in the city and have the appropriate travel documents, etc). If your workforce requires cheap housing and this becomes easier to gain in another city, many may migrate to this city seeking better opportunities given that chance. Likewise they can move within your city to different opportunities and movement both within a city and between cities can be controlled to an extent to enable better or worse access to certain locations, increasing and decreasing travel time.
+
+Indeed a lot of a workforce units interaction and influence over the cities economy and general development will have to do with its ability to move. How far a unit can travel while meeting all its needs (discussed below) will determine this influence. Depending on the unit type it may be walking to work littering, going out to lunch, moving between two locations at work (such as goods transport). It may be in cohesion with other units performing some of these tasks, for example eating lunch with a group of friends, building a vehicle, baking bread, or performing theater or dance. 
+
+The means in which unit movement is performed is based on the units needs and the environs which allow it to meet certain needs. Movement can also be restricted through placing private or off limit areas, constructing walk ways, allocating cetain areas and directions, making some directions longer and others shorter, charging to travel some routes, and creating and limiting private and public transport options. 
+
+%Expand.

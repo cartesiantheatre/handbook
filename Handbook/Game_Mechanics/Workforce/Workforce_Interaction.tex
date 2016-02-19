@@ -105,37 +105,46 @@ Friends don't happen cause one unit will not value to new friendship as its curr
 
 
 %Family Groups
-Family groups are unit groups where all the units are related. More specifically they are units that share a biological tracker or are adopted, and who associate.
+%Units given group ID but with family id variable ie F[gametime][location]
+%When family groups split off the form sub groups of that ID, F[gametime][location][.01]
+Family groups are unit groups where all the units are related. More specifically they are units that are part of group, some of whom they live together and associate with. So initally a family group is formed by two units when either: they intimately live together; or, one or both has a child. The family group will grow from this point. (Note: by having a child, this includes adoption) The family group ID of both parent units is shared to the child unit at birth, similarily when two units intimately live together they will also share eachothers family gorup ID for the period they do so.
 
-This enables enough flexible for families to become or be created into anything, from linear mum, dad plus 2 kids, to complex meshes of extended families including inlaws. 
+In the first instance, kinda like an Adam & Eve scenario. Adam and Eve form the family group, have a kid called Gen, now this kid is in the family group. When this kid grows up and forms its own intimate relationship with Bob bob enters the family group. Gen and Bob have a kid, Judy, who gains both family groups, which on Gen's side will include Gen, Adam, and Eve.
+%Fix example
+%Figure/Chart
 
-So initally a family group is formed by two units when either: they intimately live together; or, one or both has a child. The family group will grow from this point
+In an extended example, if Adam and Eve have 3 kids, the family group will extend to be Adam, Eve, Gen, Rick, and Michael. When Gen enters the personal relaitonship with Bob, Bobs family group will encompass all this, likewise when Gen and Bob have Judy, Judy's family group includes Gen, Bob, Michael, Rick, Adam, and Eve.   
+%Fix example
+%Figure/Chart
 
-The biological tracker of both parent units is shared to the child unit at birth, similarily when two units intimately live together they will also share the biological tracker for the period they do so.
- 
+%Define Assoicate
+Some family groups will be larger than other due to the degree of association between family members. Units of the same family are deemed to be assoicating when they are part of a group in the immediate vicinity of one another or attempt to do so. Factors that drive family units to associate are that they live together, they seek to meet their belonging need via family members, the have common interests (ie meet various needs via interests together), or they meet up similar to how friendship groups meet up. 
+%Example of living
+%Example of interests
+%Example of friendship in families
 
+%Support from family
+In this way units of a family group can assist other family units to meet various needs, therefore a family unit is seen to be offering support and the degree of family support a unit receives is measured by home many family units form the family group. 
 
+If family members do not associate, the links between family members are severed and the group either shrinks or splits.
 
+%Example of group shrinking - ie intimate relation ends.
+%Figure
 
-This can extend to units already living with family units.
+%Example of group splitting - ie two halfs of family no longer see eachother.
+%Figure
 
-Units given group ID but with family id variable ie F[gametime][location]
+This enables enough flexibility for families to become or be created into anything, from linear mum, dad plus 2 kids, to complex meshes of extended families including inlaws. Therfore family groups grow and shrink as members are born, adopted, married/partnered, seperate, lose contact and die. Some families will become extensive over time, becoming large groups who associate frequently while other will be smaller and many will fluctuate.
 
-Family groups grow and shrink as members are born, adopted, married/partnered, and die.
-
-In some cases
-
-when is a family group formed when sex and/or child and when is it not?
-What determines the size of a family group?
-How is this all locked in?
-
-Families are parents, children, grandparents, aunties, uncles, siblings, cousins, etc.
-
-Mapping family trees? 
-Limiting 'family' sizes.
-	
-
+%2 units in same family will not sex unless previously had intimate friends tag. Once units are in same fmaily group can't get intimate friends tag.
 %Intimate Friends
+difference between friendship group and intimate friends
+can we have intimate friendship groups of 3 or more?
+how is this recorded (tag)
+how do units become intimate friends.
+how do units sex etc
+how do units end up living together
+how do units split up
 
 
 %Work Groups
@@ -143,7 +152,7 @@ Limiting 'family' sizes.
 
 Static groups things like work and family, remain for longer periods of time.
 
-multiple interests alike, the units will be more frienyl and therefore make permient friend groups.
+multiple interests alike, the units will be more friendly and therefore make permient friend groups.
 Perma group eating and another unit attends and has same interests, this unit will join group
 
 ?Larger groups require more interests the same?
@@ -155,21 +164,11 @@ Some groups will disolve.
 can multiple groups cross over or are groups exclusive? Probably need to have cross over, or can groups be focused on current activity.
 
 
-%How families are formed
-%How groups are formed
-%Groups being companies
-%Businesses as groups
-
-
-
-%Notes so far:
-Units together doing things form group bubbles (bubbles is just a descriptor at this stage).
-Units move between groups throughout day/time. 
-They enter groups to fulfil needs, act on interests, or out of routine (whatever routine is).
-Group 'bubbles' grow and shrink as units come and go.
+%Groups being companies/Businesses as groups
 Units who enter work group/business group contribute to productivity. 
 
 
 
 %--------------> WORKFORCE UNIT INTERACTION <----------------------------------
 \StartSubSection{Workforce Unit Interaction}
+

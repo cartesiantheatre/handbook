@@ -98,7 +98,7 @@ for entry in tqdm(bib_database.entries):
         if url[0:8] != "https://" and url[0:7] != "http://":
             url = "http://" + url
         # Take backslash as a forward slash
-        url = url.replace('\\', '/')
+        url = url.replace('\\', '')
 
         # Actual connect.
         webpage = requests.get(url, timeout=10, headers=headers, verify=False)

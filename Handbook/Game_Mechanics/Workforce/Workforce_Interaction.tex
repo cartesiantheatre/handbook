@@ -139,15 +139,75 @@ This enables enough flexibility for families to become or be created into anythi
 %Intimate Friends
 %2 units in same family will not sex unless previously had intimate friends tag. Once units are in same fmaily group can't get intimate friends tag.
 
-Intimate friendships differ from other friendship groups in that they lead to new workforce units being created, and are often more enduring. Intimate relationships can be fleeting one night stands, short term relationhips where units live apart, or long term relationships that lead to living together and starting a family.
+Intimate friendships differ from other friendship groups in that they lead to new workforce units being created, and are often more enduring. Intimate relationships can be fleeting one night stands, short term relationhips where units live apart, or long term relationships that lead to living together and starting a family. Intimate relationships are not restricted to couples with instances where groups of 3 or more being a single intimate relationship possible.   
 
-Intimate relationships are not restricted to couples with instances where groups of 3 or more being a single intimate relationship possible.   
+Two (or more) units that are in either a static or fluid friendship group have the potential to beomce intimate friends as long as they share a mutal gender sex attraction (be it hereosexual, homosexual, etc). The likelihood of units forming intimate friendships increases as they share interests and display gender specific sex characteristics. 
 
-Friend -> Gender matches attraction -> Intimate factors met === relationship/sex. ?????????????
+Generally the process works like this: Friend -> Gender Sex Attraction -> Sex Characteristics -> Shared Interests -> Intimate Friends
+
+Interests and sex characteristics have two functions. First they decide what units that meet stay together and for how long. Second they filter possible matches to only those units within a certain range or eachother.
+
+%Formulas for determining relationship match range (broadens as age increases
+The following shows the method in which units determine if another unit is appropriate for intimate friendship.
+
+%1
+if sex A < sex B 
++ number of shared interests / 2 
+ 
+%2
+ then
+  if sex A + shared interests / 2 => B - (age bracket)
+  match
+
+%3
+else if sex A = sex B && shared interests => 1
+  match
+
+%4
+else if sex A > sex B
+ then
+  if sex B + shared interests / 2 => A - (age bracket)
+  match
+
+
+Age Bracket Variables
+New Born		-
+Toddler			-
+Child			-
+Adolescent		2
+Young Adult		3
+Middle Aged		4
+Late Middle Aged	5	
+Elderly			6
+Elderly Infirmed	7
+	
+The first section shows that only if sex characteristic of one unit are lower then the other will we calculate their shared interests
+
+Section two shows that one unit's sex characteristics are added to the number of shared characteristics divided by two (X+(Y/2)) then compared to the other units sex characterists level minus its age bracket. If unit A's value is equal to or greater than B's the units will be a match. 
+
+Section three shows that if two units match in the number of sexual characteristics and share at least one interest there will be a match.
+
+Section four shows that the same as section two but with the roles reversed.
+
+%Table depicting interest and sex characteristics and relationship type (ie one night stand, short term, etc).
+
+%Table depicting interest and sex charactersitics and relationship length.
 
 
 
-difference between friendship group and intimate friends
+
+
+Sex characteristics are both predetermined and culturally determined. Things like .. and ... are predetermined, biological, sex characteristics. Things like ... or ... and culturally determined. Predetermined characteristics will be the same in every city, whereas culturally determined characteristics will vary between cities. 
+%List of predetermined sex characteristics
+%List of cultural sex characteristics
+
+
+Breakup Ratio Factors: Length, Children, Change in Sex Characteristics
+
+
+
+
+
 can we have intimate friendship groups of 3 or more? -> factor in homesexuality variable.
 how is this recorded (tag)
 how do units become intimate friends.
@@ -156,9 +216,6 @@ how do units end up living together
 how do units split up
 arranged marriages?
 
-sex characteristics merged to create "market value" for culture.
-units choose another unit within range of their own market value.
-similar traits.
 
 !!!The culture determines the sex characteristics.
 

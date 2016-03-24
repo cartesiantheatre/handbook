@@ -139,6 +139,8 @@ This enables enough flexibility for families to become or be created into anythi
 %Intimate Friends
 %2 units in same family will not sex unless previously had intimate friends tag. Once units are in same fmaily group can't get intimate friends tag.
 
+%at some point in these next three paragraphs need to go into variables of mate selection
+
 Intimate friendships differ from other friendship groups in that they lead to new workforce units being created, and are often more enduring. Intimate relationships can be fleeting one night stands, short term relationhips where units live apart, or long term relationships that lead to living together and starting a family. Intimate relationships are not restricted to couples with instances where groups of 3 or more being a single intimate relationship possible.   
 
 Two (or more) units that are in either a static or fluid friendship group have the potential to beomce intimate friends as long as they share a mutal gender sex attraction (be it hereosexual, homosexual, etc). The likelihood of units forming intimate friendships increases as they share interests and display gender specific sex characteristics. 
@@ -150,13 +152,30 @@ Interests and sex characteristics have two functions. First they decide what uni
 %Formulas for determining relationship match range (broadens as age increases
 The following shows the method in which units determine if another unit is appropriate for intimate friendship.
 
+%Formula where A less sexy than B
+sA        <       sB
+s+(i/2)A =>       sB
+
+%Formula where B less sexy than A
+sA        >       sB
+sA       =< s+(i/2)B
+
+%Formulas where A and B equal sexy (at least 1 shared interest)
+sA       =        sB
+
+A = unit A
+B = unit B
+s = sex characteristics,
+i = matched interests
+
+
 %1
 if sex A < sex B 
 + number of shared interests / 2 
  
 %2
  then
-  if sex A + shared interests / 2 >= B - (age bracket)
+  if sex A + shared interests / 2 >= B - (age bracket) <- B lowers its standard based on its age.
   match
 
 %3
@@ -193,14 +212,60 @@ Section four shows that the same as section two but with the roles reversed.
 Once an intimate friends match is made these units will remain as eachothers intimate friend while the original conditions mentioned above are in place. 
 If units interests change, or sex characteristics change at the unit or city level, this may cause the conditions underlying the match to change and therefore end the relationship.
 
-In ... period of time, intimate relationship can be switched by better option coming along. In this case the unit will switch intimate friendship to the new unit who offers better conditions.
+In ... period of time, intimate relationship can be switched by a better option and match coming along. In this case the unit who is matched will switch intimate friendship to the new unit who offers better conditions.
 
 These factors vary the number of relationships a unit forms, allows for units to seek ideal mates, and maintains some form of stability as units settle into mate relationships. This naturally creates relationships of various durations. 
 
-However as relationships age the above conditions become superficial and the relationships will be more enduring. In one of the above examples (#1,#2,#3,#4) that result in a match add curent relationship duration to match calculations prior to determining if new match takes place.
-Likewise - living together
-	 - child/ren 
-	 - age bracket <- needs to be offset, people will not just keep going for younger people all the time.
+However as relationships age the above conditions become superficial and the relationships will be more enduring. In one of the above examples (#1,#2,#3,#4) where a match is calculated, additional factors are added to the relationship selection variable for existing relationships. There are: 
+
+1) Relationship duration
+2) Living together
+3) Child or children
+4) Age bracket
+
+Relationship duration refers to the length of time that has elapsed since the relationship match occured. A base numeric value is added to the above calculation depending on segements of time that have elapsed.
+%Table depicting elapsed time and relationship duration value
+Duraiton	  Value
+< 1 day		    0
+1 day - 1 mth       1
+1 mth - 1 yr	    2
+1 yr  - 3 yr	    3
+3 yr  - 10 yr	    4
+>10yr		    5
+
+Living together
+%what determines if units live together.
+-relationship duration
+-cultural conditions (ie marriage vs cohabitation)
+-economic conditions (ie save living costs etc)
+
+if cultural conditions permit, ratio of economic benefit vs relationship duration.
+
+ 
+Child or Children
+If units have a child or children together this also increases the relationship's strength, and increases as units have more children to a point (source 10). This value increases a large amount with 1 child and drops off rapidly as more children are added to the relationship. 
+%Table depicting number of children and relationship value
+Children	Value 
+ 0		0	
+ 1		2
+ 2		3
+ 3+		4
+		
+
+
+
+Age Bracket
+- age bracket <- needs to be offset, people will not just keep going for younger people all the time.
+Units in a higher age bracket will have more open standards on mate selection allowing them to secure a mate prior to reproductive benefits closing. However this also makes these unit's switching mates more frequent based entirely on their age. Therefore the units age variable is not included in calculating relationship change. This means as units age they will be more likely to hold down a catch, and only take up new relationships that have overwhelmingly better value. 
+
+
+%final formula for relationship stay/change - that includes above variables (duration, living, child, age).
+
+M = S + ( I / 2 ) - D - L - C - A
+
+match =  sex characteristics + (shared interests / 2) - duration value - living together value - child value - age value
+
+
 
 
 
@@ -307,16 +372,16 @@ if men are required to provide economic susistance, polyandry (source8) (must de
 -->quality of mates in vicinity determine selection of intimate friend. changes in quality may cause change in intimate friends choice. current intimate friend choice becomes disadvantageous (ie access to resources, change in interests) then will separate.
 
 
-% source 1 - marriage 1 - human mate selection, Buss, 1985
-% source 2 - marriage 6 - sexual strategies theory: an evolutionary perspective on human mating, Buss & Schmitt, 1993
-% source 3 - marriage 7 - different cognitive processes underlie human mate choices and mate preferences, Todd et al, 2007
-% source 4 - marriage 8 - personality and mate preferences: five factors in mate selection and marital satisfaction, Botwin Buss & Shackelford, 1997
-% source 5 - polygamy 5 - sexual conflict and the polygamy threshold, davies, 1989
-% source 6 - polygamy 6 - why behavior matches ecology: adaptive variation as a novel solution, barber, 2015
-% source 7 - polygamy 7 - explaining cross-national differences in polygyny intensity, barber, 2008
-% source 8 - polygamy 8 - exmploration into human polygamy: an evolutionary examination of the non-classical cases, starkweather, 2010
-% source 9 - polygamy 9 - serial monogamy as polygyny or polyandry, mulder, 2009
-
+% source  1 - marriage 1 - human mate selection, Buss, 1985
+% source  2 - marriage 6 - sexual strategies theory: an evolutionary perspective on human mating, Buss & Schmitt, 1993
+% source  3 - marriage 7 - different cognitive processes underlie human mate choices and mate preferences, Todd et al, 2007
+% source  4 - marriage 8 - personality and mate preferences: five factors in mate selection and marital satisfaction, Botwin Buss & Shackelford, 1997
+% source  5 - polygamy 5 - sexual conflict and the polygamy threshold, davies, 1989
+% source  6 - polygamy 6 - why behavior matches ecology: adaptive variation as a novel solution, barber, 2015
+% source  7 - polygamy 7 - explaining cross-national differences in polygyny intensity, barber, 2008
+% source  8 - polygamy 8 - exmploration into human polygamy: an evolutionary examination of the non-classical cases, starkweather, 2010
+% source  9 - polygamy 9 - serial monogamy as polygyny or polyandry, mulder, 2009
+% source 10 - marriage 9 - the impact of children on divorce risk, Yu & Qiu, 2015
 
 %Work Groups
 %Work group and interests meeting things like friendship groups, ie if people at work have some variables/interests then its as if they are with friends.

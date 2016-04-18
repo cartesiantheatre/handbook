@@ -53,17 +53,21 @@ Current finances are used for ad-hoc spending that will either bolster the ongoi
 
 %Spreadsheet of all possible expenses.
 
-At the base level a unit will break down its ongoing income amount into amount, or percentages, that allow it to meet all its needs as best as possible to a base level; in order of hierarchy being oxygen, water, food, shelter, and belonging.
+At the base level a unit will break down its ongoing income amount into amounts, or percentages, that allow it to meet all its needs as best as possible to a base level; in order of hierarchy being oxygen, water, food, shelter, and belonging.
 
 Game data on the costs of all these will be avaliable, that is the cost of housing, water, food, etc will be available for the unit to compare. The unit then fluidly allocates a percentage of its funds to meet all of these things.
 
 From this point as a base the unit will allocate additional fund that remain, if any, to fulfill its needs to a higher level and to entertain its interests. 
 
+For a detailed explaination on how units fulfill their needs refer to the section on Workforce Unit Needs under Workforce Attributes.
+
+
+
 %Example
 The games data shows that the cheapest dwelling is 50 dollars a week, and potatoes to meet the unit's food needs for a week is 10 dollars. Assuming all other factors are free, and the unit is on 1000 dollars a week it as leftover 940 dollars and in terms of percentages the unit has only used 6 percent of its income to meet its base needs. Table .. below demonstrates allocation.
 
 Income	1000	Percentage 
-Food	  10	  	 1ubsection{Optimal Choices: Mapping Consumption Patterns}
+Food	  10	  	 1	Subsection{Optimal Choices: Mapping Consumption Patterns}
 House	  50	  	 5
 
 Total	  60	  	 6
@@ -85,6 +89,9 @@ A units access to high utility products will cause greater distribution of incom
 
 %Cost and Utility Ratio
 (New Product Cost / (New Product Utility + Interest) / (Current Product Cost / (Current Product Utility + Interest))
+%%%--->> This still needs to factor in the price the unit can spend per pay period
+% Also it need to factor in units buying some things that will be saved and crafted with other things later.
+
 
 In calculating the cost and ultility ratio we compare 5 things:
 
@@ -106,13 +113,13 @@ In the above example the unit is comparing its default purchase against one alte
 %Example with multiple products in market place
 When a unit is seeking to purchase a good and finds a better alternative it will hold the alternative for a duration where a chance for other options to be bought takes place.
 
-This new option is then compared against other alternatives and the time frame is reset. 
+This new option is then compared against other alternatives and the time frame is reset. Eventual the unit will find the purchase that is best value for money and meets its interests.
 %Example
 
 
 %Where units purchase multiple goods for the one fulfillment (ie cooking a meal or making something).
 %Workforce unit crafting in workforce_change.tex subsection{workforce crafting}
-Units will sometimes purchase multiple, goods being several purchases of single goods, in order to turn these into a final product. This aspect, called crafting, is not always the method in which units will purchase things but the ability to do combine multiple items into a single product such as is done when cooking is something units will sometimes do. On a side note, crafting is something undertaken but companies (which are akin to workforce units) on a large scale.
+Units will sometimes purchase multiple, goods being several purchases of single goods, in order to turn these into a final product. This aspect, called crafting, is not always the method in which units will purchase things but the ability to do combine multiple items into a single product such as is done when cooking is something units will sometimes do. On a side note, crafting is something undertaken by companies (which are akin to workforce units on a large scale).
 
 For a detailed explaination of workforce units crafting refer to subsection "workforce crafting" in the workforce change section (game_mechanics/workforce/workforce change.tex). In this section we will discuss the method that units makes selections of final crafted products and the single items that make them up. 
 
@@ -120,9 +127,9 @@ For a detailed explaination of workforce units crafting refer to subsection "wor
 -recipes compared for utility against finished products
 -recipe utility factors in units ability to make quality
 
--individual items compared against other items for utility.
+-individual items of recipe compared against other items for utility.
 
-
+-compare the outcome of recipes for their utility, find the ingredients, and make; given the tools available.
 
 
 %Spending for families/other units

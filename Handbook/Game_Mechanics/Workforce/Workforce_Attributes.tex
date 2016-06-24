@@ -143,15 +143,32 @@ Starvation mode is when a unit cannot meet one or more of its needs and undertak
 Workforce Change - Influencing Workforce has a spreadsheet containing all possible actions for every unit. All actions are not open to units unless certain circumstances are met. As units become more starved for a need they will have more actions available to them, increasingly drastic, in order to meet needs. 
 
 For each need the following is calculated:
-Length need not met for * (1 + (number of interests in the need factor / 5)) = starvation level of specific need.
+Length need not met for * (1 + need weight + (number of interests in the need factor / 5)) = starvation level of specific need.
 
 This creates a value that can be used to determine what actions become availble to the unit as it progresses through starvation through each need and can be refereced in the spreadsheet of all possible actions.
 
 Length of time increments have varying degrees of significance for each need. Being without oxygen has dire consequences at a shorter time period than being without food does. Length of time in the above formula will have some form of timestamp beginning from when the need has not been met, incrementing in appropriate gametime steps (be they minutes or seconds), with this timelapse being recorded.
 
+Need weight is a miscleanious factor that addes weight to a specific need. For instance being without shelter in freezing conditions will escalte length of time conditions significantly. 
+
 The number of interests in the need factor refers to how many interests a unit has associated with the need or needs it is in starvation mode with. If a unit has not been able to get food and has two interests associated with this need, like icecream being one and milkshakes being two, this increases the dissatisfaction the unit experiences. This factor seeks to subtly increase the units starvation level number relevant to its length of being starved. The number of each interests in the specific need is divded by 5 to give a fractional value allowing this desired subtly increase.
 
+What a unit is does not change whether it is in starvation mode or not, but what a unit can do does change. When in starvation mode it has more actions open to it too meet its needs.
 
+%Example
+Workforce unit Jeff is poor and can barely afford food, he sleeps in a homeless shelter. On the first day of this example Jeff buys potatoes to eat as his only course of food all day, using all his remaining money to feed himself. On day two of the example, Jeff has run out of food and money having spent all his remaining money the day prior of pototos which he ate. Jeff has a need to eat now. As it is the first day of this need Jeff no additional option become available to him and him simply remains at the homeless shelter. On day three Jeff still has no money or food, the hunger is now at a stage where he needs to eat greatly and the legnth without a need is calculated giving it the appropriate score. This score opens up various actions for Jeff, one being stealing food from a store. Being so Jeff enters a grovery store and steals food (probably with the greatest utility), then consumes this food.
+
+There are times when multiple actions are open that may conflict and a unit needs to decide which action to undertake to meet its need. In this instance it will undertake actions that are at a level to its needs starvation level.
+
+Take the above example with Jeff and lets say on some later date he enters a similar situation where on day three he was unable to steal food (rating 3). On day four another option for action opens up which is mugging someone for money (4). Seeing that his starvation level is 4, he will undertake the mugging action as it is 4. This takes into account the despiration that the unit is in and allows the unit to adjust his actions appropriately.
+
+Hoever a second criteria allows the unit versitility in this course. If Jeff was unsucessful in finding someone to mug, be it nobdy gave him money or there was nobody about, and this brought him to grocery store, Jeff would now undertake an attempt to steal from the grocery store, provided no further opportunities made themselves available for him to mug someone.
+
+
+%Ending Starvation Mode
+Starvation mode ends as soon as the unit has met all needs that are in starvation mode. So if a unit is needing food and shelter its starvation mode actions for seeking shelter will remain if it gets fed, but its starvation mode actions for seeking food will end. 
+
+Once the unit has all needs met, it is no longer in starvation mode and will all starvation mode actions will cease. It is now a normal workforce unit, however it may still have negative variables associated with its starvation mode experience such as physical injury, death, criminal charges, or jail time.  
 
 
 

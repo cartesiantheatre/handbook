@@ -1,5 +1,5 @@
 % This is part of the Avaneya Project Crew Handbook.
-% Copyright (C) 2010-2016 Cartesian Theatre <info@cartesiantheatre.com>.
+% Copyright (C) 2010-2017 Cartesian Theatre™ <info@cartesiantheatre.com>.
 % See the file Copying for details on copying conditions.
 
 % The environment file is used to setup the typesetting that relate to
@@ -83,17 +83,17 @@
     \initializeBzr
 
     % URL of latest handbook...
-    \def\LatestHandbookURL{http://rod.gs/5Sn}
+    \def\LatestHandbookURL{https://goo.gl/F3AxPZ}
 
     % Clickable Bzr revision...
     \def\BzrRevisionClickable{\href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}}
 
 % External program version strings...
 
-    % Evince version...
-    \def\initializeEvince
-        {\ctxlua{context.setgvalue("EvinceVersion", os.resultof"evince --version | tr -d '\\n'")}}
-    \initializeEvince
+    % PDF renderer version...
+    \def\initializePDFRenderer
+        {\ctxlua{context.setgvalue("PDFRendererVersion", os.resultof"xreader --version | tr -d '\\n'")}}
+    \initializePDFRenderer
 
     % Graphviz version...
     \def\initializeGraphviz
@@ -250,6 +250,7 @@
     \setupnotation[footnote]
         [color=colour_footnote_text,
          backgroundcolor=colour_footnote_background,
+         width=0.3cm, % Space between footnote number and footnote itself
          numbercommand=] % Remove elevated footnote notation at bottom of page
 
     % Implemented by Hans in bleeding edge ConTeXt...
@@ -258,7 +259,8 @@
          before={\crlf\crlf}] %
 
     \setupfootnotes
-      [rule=off]
+      [rule=on, % Disable horizontal rule
+       textstyle={\hskip.03em}] % Vertical space between footnotes and the text
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text
@@ -393,11 +395,16 @@
     %\setupbodyfont[mainface]
 
     % Font to use for main text...
-    \setmainfont[Ubuntu]
+    %\setmainfont[Ubuntu]
     \setupbodyfont[11pt]
 
-\def\CopyrightDates{2010--2014}
-\def\CopyrightHolder{Cartesian Theatre}
+    % Font to use...
+    \definefontfamily [main_font] [rm] [titillium] [features={default,quality}]
+    \definefontfamily [main_font] [mm] [TeX Gyre Pagella Math]
+    \setupbodyfont[main_font]
+
+\def\CopyrightDates{2010--2017}
+\def\CopyrightHolder{Cartesian Theatre™}
 
 \def\SetupCharacterTable
 {

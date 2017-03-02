@@ -67,7 +67,11 @@ mostlyclean:
 	@ rm -vf $(TOC_PDF)
 	@ context --purgeall --nonstopmode --noconsole &> /dev/null
 
+# Upload...
+upload: $(OUTPUT_PDF)
+	rsync -avz --progress --partial $(OUTPUT_PDF) "kiplingw@avaneya.com:/home/kiplingw/avaneya.com/downloads/"
+
 # Directive to make to let it know that these targets don't generate filesystem 
 #  objects / products and therefore no need to check time stamps...
-.PHONY: all clean clean-all graphviz toc vlr
+.PHONY: all clean clean-all graphviz toc upload vlr
 

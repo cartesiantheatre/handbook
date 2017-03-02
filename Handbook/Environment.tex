@@ -136,6 +136,9 @@
 \mainlanguage[en]
 \language[en]
 
+% Avoid breaking words when going to next line...
+\setupalign[nothyphenated]
+
 % Setup default text colour...
 \setupcolors[
     state=start,
@@ -250,7 +253,7 @@
     \setupnotation[footnote]
         [color=colour_footnote_text,
          backgroundcolor=colour_footnote_background,
-         width=0.3cm, % Space between footnote number and footnote itself
+         width=0.5cm, % Space between footnote number and footnote itself
          numbercommand=] % Remove elevated footnote notation at bottom of page
 
     % Implemented by Hans in bleeding edge ConTeXt...
@@ -259,8 +262,8 @@
          before={\crlf\crlf}] %
 
     \setupfootnotes
-      [rule=on, % Disable horizontal rule
-       textstyle={\hskip.03em}] % Vertical space between footnotes and the text
+      [rule=on, % Toggle off to disable horizontal rule
+       textstyle={\hskip.06em}] % Vertical space between footnotes and the text
 
 % To move footnotes inside of text boxes to the bottom of the page with
 %  the rest of the footnotes. Disabled temporarily to fix issue of text

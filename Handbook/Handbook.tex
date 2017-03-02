@@ -1,29 +1,13 @@
 % This is part of the Avaneya Project Crew Handbook.
-% Copyright (C) 2010-2016 Cartesian Theatre <info@cartesiantheatre.com>.
+% Copyright (C) 2010-2017 Cartesian Theatre™ <info@cartesiantheatre.com>.
 % See the file Copying for details on copying conditions.
 
 \startproduct Handbook
 \environment Environment.tex
 
 \startcolor[colour_head]
-
 \startmakeup[standard][doublesided=no]
-%    \setupalign[center]
-%    \bft \setupspacing \setstrut
-%    \setupbodyfont[25pt]
-%    \strut Avaneya Project Crew Handbook
-%    \setupbodyfont[11pt]
-%    \par
-%    {\em \strut \BookShortDescription}
-%    \setupspacing \setstrut
-%    \vfill
-%    %\midaligned{\externalfigure[Makeup/Images/Avaneya_Logo.svg][][width=0.25\textwidth]} % This temporary logo is just awful.
-%    \midaligned{\rotate[rotation=42]{\color[red]{\bft 3\high{rd} DRAFT. NOT READY FOR PUBLIC DISTRIBUTION YET!}}}
-%    \vfill
-%    The Avaneya Project Crew\crlf
-%    {\small Bzr revision \BzrRevisionClickable}
 \stopmakeup
-
 \stopcolor
 
 \startmakeup[standard][page=,doublesided=no]
@@ -37,7 +21,7 @@
 
     This book was typeset on \currentdate\ from Bzr revision \BzrRevisionClickable\ using the \CONTEXT\ document engineering system, \contextmark\ \contextversion, and rendered via \texjitenginename\ \texengineversion. References were managed with Bib\TEX. Inkscape, Graphviz \GraphvizVersion, and \UmbrelloVersion\ were used for various illustrations. The resulting document was tested against \PDFRendererVersion, a Poppler based PDF viewer. All of the aforementioned were software {\it libre} at the time of writing.
     \blank
-    Copyright \copyright\ \CopyrightDates\ \CopyrightHolder. The {\it Avaneya: Project Crew Handbook} by \CopyrightHolder\ is licensed under the default terms of the Creative Commons Attribution--NonCommercial--ShareAlike 3.0 Unported License. A copy of the license is available online at the link below.
+    Copyright \copyright\ \CopyrightDates\ \CopyrightHolder. The {\it Avaneya™: Project Crew Handbook} by \CopyrightHolder\ is licensed under the default terms of the Creative Commons Attribution--NonCommercial--ShareAlike 3.0 Unported License. A copy of the license is available online at the link below.
     \blank
     ISBN-13: 978-0-9919804-1-3
     \crlf
@@ -45,50 +29,51 @@
     \midaligned{
         \goto{\externalfigure[Makeup/Images/By-nc-sa_plain.svg][][width=0.95\textwidth]}
             [url(https://creativecommons.org/licenses/by-nc-sa/3.0/)]
-        }
+    }
     \crlf
     \crlf
-
-    \bTABLE
-        \setupTABLE[frame=off, background=none,backgroundcolor=colour_text_background_clear]
-        \setupTABLE[row][odd][background=color,backgroundcolor=colour_text_background_clear]
-        \setupTABLE[row][even][background=color,backgroundcolor=colour_text_background_clear]
-        \setupTABLE[c][each][align={middle,lohi}]
-        \bTR
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/Bazaar_Logo.svg][][width=0.09\textwidth]}
-                    [url(http://bazaar.canonical.com/)]  
-            \eTD
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/ConTeXt_Logo.svg][][width=0.09\textwidth]}
-                    [url(http://www.contextgarden.net/)]  
-            \eTD
-            \bTD
-                \goto{\externalfigure[Makeup/Images/Gedit_Logo.svg][][width=0.09\textwidth]}
-                    [url(http://projects.gnome.org/gedit/)]  
-            \eTD
-            \bTD
-                \goto{\externalfigure[Makeup/Images/Ubuntu_Vancouver_LoCo_Logo.svg][][width=0.15\textwidth]}
-                    [url(http://www.meetup.com/ubuntuvancouver/)]
-            \eTD
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/Graphviz_Logo.png][][width=0.09\textwidth]}
-                    [url(http://www.graphviz.org/)]  
-            \eTD
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/Inkscape_Logo.svg][][width=0.09\textwidth]}
-                    [url(http://inkscape.org/)]  
-            \eTD
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/Umbrello_Logo.svg][][width=0.09\textwidth]}
-                    [url(http://uml.sourceforge.net/)]  
-            \eTD
-            \bTD 
-                \goto{\externalfigure[Makeup/Images/Authors_Against_DRM.png][][width=0.09\textwidth]}
-                    [url(http://www.defectivebydesign.org/)]  
-            \eTD
-        \eTR
-    \eTABLE
+    \midaligned{
+        \bTABLE
+            \setupTABLE[frame=off, background=none,backgroundcolor=colour_text_background_clear]
+            \setupTABLE[row][odd][background=color,backgroundcolor=colour_text_background_clear]
+            \setupTABLE[row][even][background=color,backgroundcolor=colour_text_background_clear]
+            \setupTABLE[c][each][align={middle,lohi}]
+            \bTR
+                %\bTD 
+                %    \goto{\externalfigure[Makeup/Images/Bazaar_Logo.svg][][width=0.09\textwidth]}
+                %        [url(http://bazaar.canonical.com/)]  
+                %\eTD
+                \bTD 
+                    \goto{\externalfigure[Makeup/Images/ConTeXt_Logo.svg][][width=0.09\textwidth]}
+                        [url(http://www.contextgarden.net/)]  
+                \eTD
+                %\bTD
+                %    \goto{\externalfigure[Makeup/Images/Gedit_Logo.svg][][width=0.09\textwidth]}
+                %        [url(http://projects.gnome.org/gedit/)]  
+                %\eTD
+                %\bTD
+                %    \goto{\externalfigure[Makeup/Images/Ubuntu_Vancouver_LoCo_Logo.svg][][width=0.15\textwidth]}
+                %        [url(http://www.meetup.com/ubuntuvancouver/)]
+                %\eTD
+                \bTD 
+                    \goto{\externalfigure[Makeup/Images/Graphviz_Logo.png][][width=0.09\textwidth]}
+                        [url(http://www.graphviz.org/)]  
+                \eTD
+                \bTD 
+                    \goto{\externalfigure[Makeup/Images/Inkscape_Logo.svg][][width=0.09\textwidth]}
+                        [url(http://inkscape.org/)]  
+                \eTD
+                \bTD 
+                    \goto{\externalfigure[Makeup/Images/Umbrello_Logo.svg][][width=0.09\textwidth]}
+                        [url(http://uml.sourceforge.net/)]  
+                \eTD
+                \bTD 
+                    \goto{\externalfigure[Makeup/Images/Authors_Against_DRM.png][][width=0.09\textwidth]}
+                        [url(http://www.defectivebydesign.org/)]  
+                \eTD
+            \eTR
+        \eTABLE
+    }
 \stopmakeup
 
 % Front matter...
@@ -98,10 +83,7 @@
     \input Makeup/Table_of_Contents.tex
 
     % Acknowledgements...
-    \component Acknowledgements/Acknowledgements.tex
-
-    % Foreword...
-    %\component Foreword/Foreword.tex
+    %\component Acknowledgements/Acknowledgements.tex
 
     % Preface...
     \component Preface/Preface.tex

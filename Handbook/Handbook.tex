@@ -1,13 +1,23 @@
-% This is part of the Avaneya Project Crew Handbook.
-% Copyright (C) 2010-2017 Cartesian Theatre™ <info@cartesiantheatre.com>.
+% This is part of the Avaneya™ Project Crew Handbook.
+% Copyright (C) 2010-2017 Cartesian Theatre™ <info at cartesiantheatre dot com>.
 % See the file Copying for details on copying conditions.
 
 \startproduct Handbook
 \environment Environment.tex
 
 \startcolor[colour_head]
-\startmakeup[standard][doublesided=no]
+
+\startmakeup[standard][page=,doublesided=no]
+\vfill
+\midaligned{\externalfigure[Makeup/Images/Cover_2.png][][width=1.4\textwidth]}
+
+\vfill
+{\tfc \bf Avaneya™: Project Crew Handbook} \hfill 
+\break
+\break
+\hfill {\it A Cerebral Science Fiction Game {\bf \type{|}} \MailTo{info@cartesiantheatre.com}{Cartesian Theatre™}}
 \stopmakeup
+
 \stopcolor
 
 \startmakeup[standard][page=,doublesided=no]
@@ -95,10 +105,9 @@
 
 	% Each component is used as one chapter logical unit...
 	\component How_To_Read_This_Book/How_To_Read_This_Book.tex
-    \component Leitmotifs/Leitmotifs.tex
     \component The_Game/The_Game.tex
+    \component Leitmotifs/Leitmotifs.tex
     \component Terms_and_Concepts/Terms_and_Concepts.tex
-    \component Learning_Resources/Learning_Resources.tex
     \component Leading_Characters/Leading_Characters.tex
     \component Timeline/Timeline.tex
     \component Game_World/Game_World.tex
@@ -121,8 +130,8 @@
 	% License appendix...
     \component Licenses/Licenses.tex
 
-    % References...
-    \component References/References.tex
+    % Learning resources...
+    \component Learning_Resources/Learning_Resources.tex
 
 	% Index...
 	\StartChapter{Index}

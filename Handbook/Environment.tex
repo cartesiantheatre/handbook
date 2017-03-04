@@ -310,11 +310,7 @@
 
     \defineoverlay
       [PageBackgroundImage]
-      [{\ifnum\rawcountervalue[realpage]=1\relax
-          \overlayfigure{Makeup/Images/Cover.png}%
-        \else
-          \overlayfigure{Makeup/Images/Background.png}%
-        \fi}]
+      [{\overlayfigure{Makeup/Images/Background.png}}]
 
     \setupbackgrounds[page][background=PageBackgroundImage]
 
@@ -401,10 +397,14 @@
     %\setmainfont[Ubuntu]
     \setupbodyfont[11pt]
 
-    % Font to use...
+    % Main font to use...
     \definefontfamily [main_font] [rm] [titillium] [features={default,quality}]
     \definefontfamily [main_font] [mm] [TeX Gyre Pagella Math]
     \setupbodyfont[main_font]
+    
+    % For Greek characters...
+    \definefontfamily [greek_font] [rm] [TeX Gyre Pagella Math]
+    \definefontfamily [greek_font] [mm] [TeX Gyre Pagella Math]
 
 \def\CopyrightDates{2010--2017}
 \def\CopyrightHolder{Cartesian Theatre™}

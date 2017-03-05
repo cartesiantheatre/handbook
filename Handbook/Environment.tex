@@ -405,9 +405,19 @@
     % For Greek characters...
     \definefontfamily [greek_font] [rm] [TeX Gyre Pagella Math]
     \definefontfamily [greek_font] [mm] [TeX Gyre Pagella Math]
+    
+    % For Sanskrit characters...
+    \definefontfamily [sanskrit_font] [rm] [Lohit Devanagari]
+    \definefontfamily [sanskrit_font] [mm] [Lohit Devanagari]
 
 \def\CopyrightDates{2010--2017}
 \def\CopyrightHolder{Cartesian Theatre™}
+
+% Bancor symbol properly typeset in something that supports Greek...
+\def\Bancor{ \begingroup\switchtobodyfont[greek_font]β\endgroup }
+
+% For any inline Sanskrit which may need a supporting typeface...
+\define[1]\Sanskrit{ \begingroup\switchtobodyfont[sanskrit_font]#1\endgroup }
 
 \def\SetupCharacterTable
 {

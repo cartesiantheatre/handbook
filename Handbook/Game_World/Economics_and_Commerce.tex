@@ -5,44 +5,44 @@
 % Economics & Commerce section...
 \StartSection{Economics & Commerce}
 
-Economics and commerce are central to our gameplay mechanics. It also forms a cornerstone of multiplayer play. Some other multiplayer games have attempted similar, sometimes with success and sometimes without. We need to pay attention especially to the ones that did not -- and why? This section will discuss some of the relevant design considerations.
+Economics and commerce are part of our gameplay mechanics. They also form a cornerstone of multiplayer interaction. Some other multiplayer games have attempted similar, sometimes with success and sometimes without. We need to pay attention especially to the ones that did not -- and why. This section will discuss some design considerations.
 
 \StartSubSection{Genuine Progress Indicator}
-The GPI\index{GPI} is a system of true cost accounting which is intended to replace the gross domestic product (GDP\index{GDP}), or sometimes called the gross national product. The GPI works by taking into account all monetary costs of an activity to produce a net balance sheet. The GDP, on the other hand, only functions as an income sheet by tabulating the total amount of goods and services produced in a year.\footnotecite[cobb1999]
+The GPI\index{GPI} is a system of true cost accounting which is intended to replace the gross domestic product (GDP\index{GDP}), sometimes referred to as the gross national product. The GPI works by taking into account all monetary costs of an activity to produce a net balance sheet. The GDP on the other hand only functions as an income sheet by tabulating the total amount of goods and services produced in a year.\footnotecite[cobb1999]
 
-An example where the difference between the two is well illustrated is with the tobacco industry. The GDP accounts for the value of all tobacco products sold, a dollar value greater than zero. The GPI, like the GDP, would also account for the total value of all tobacco products sold. Where it differs is it would then go on to subtract the actual costs socialized to society in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000\footnotecite[merchants_of_doubt] people every year who are no longer productive. 
+An example where a difference between the two is greatly illustrated is found in the tobacco industry. The GDP accounts for the value of all tobacco products sold, a dollar value greater than zero. The GPI, like the GDP, would also account for the total value of all tobacco products sold. Where it differs it would then go on to subtract the costs socialized to society in the form of health costs, fires, garbage collection, environmental toxicity, and the deaths of approximately 5,000,000\footnotecite[merchants_of_doubt] people every year who are no longer productive. 
 
-Another example is in the cost of fast food. The upfront cost the consumer pays for a hamburger may be only 99 cents, yet the actual true cost is roughly \dollar 200.\footnotecite[extras={ p.~46.}][raj2010] This is not an abstract quantity, but is a real value.
+Another example is in the cost of fast food. The upfront price the consumer pays for a hamburger may be only 99 cents, yet the actual true cost is roughly \dollar 200.\footnotecite[extras={ p.~46.}][raj2010] This is not an abstract or speculative quantity, but has actually been measured.
 
-As another arbitrary example, if we look at the top twenty regional sectors in various industries across our planet, ranging from coal power generation in North America and Eastern Asia to rice farming in Southern Asia, none would be profitable if the true environmental costs were fully accounted for.\footnotecite[roberts2013] Indeed, they would all rapidly find themselves bankrupt in short order.
+If we look at the top twenty regional sectors in various industries across our planet, ranging from coal power generation in North America and Eastern Asia to rice farming in Southern Asia, none would be profitable if the true environmental costs were fully accounted for.\footnotecite[roberts2013] Indeed they would all find themselves bankrupt in short order if all costs previously socialized were assumed.
 
-In all cases, the GDP determined a gain while the GPI was more accurate in revealing deficits. The GPI is a powerful tool that is seeing more and more practical applications amongst sociologists and true cost economists around the world.\footnotecite[costanzaa2004] When users know the true cost of things, it can influence how they make decisions.
+In all cases the GDP determined a gain while the GPI was a more accurate indicator in revealing hidden deficits. The GPI is a powerful tool that is seeing more and more practical applications among sociologists and true cost economists around the world.\footnotecite[costanzaa2004] When users know the true cost of things it can influence how they make decisions.
 
 \StartSubSection{Commodities}
-Commodities that can be bought and sold will vary, though they should all be as data driven as possible by using the engine's Lua interface. The data should include various parameters, appropriate artwork, and any scripted behaviour the commodity may require. All of the resources a city and its industries have available to them, supply, demand, and inter--city relations between industries are some factors in determining the complete list at any given time.
+Commodities that can be bought and sold will vary, though they should all be as data driven as possible by using the game engine's Lua interface. Data should include various parameters, appropriate artwork, and any scripted behaviour the commodity may require. All of the resources a city and its industries have available to them, supply, demand, and inter--city relations between industries are some factors in determining the complete list at any given time.
 
-The user should be given as much information as possible when working with a given commodity. This information should include the required energy to produce and transport it. It is sometimes quite revealing to see that it might take 35 megajoules of energy to produce 500 mL of water. In other cases it, it takes only a fourth the energy to lift off from Mars than on Earth, giving the former a major economic advantage.
+The user should be given as much information as possible when working with a given commodity. This information should include the required energy to produce and transport it. It is sometimes quite revealing to see that it might take 35 megajoules of energy to produce 500 mL of water. In other cases it takes but a fourth the energy to lift off from Mars than on Earth giving the former a major economic advantage over the latter.
 
-A very short list of commodities would include materials useful for agricultural purposes, such as smectite clays, nitrates, fertilizer, machinery, and so on. Deuterium, gold, magware (magnesiumware), food and beverages, such as \index{Arcadian+Manowar}Arcadian Manowar, high--grade mineral ores, geochemically rare elements, communications and shallow radar equipment useful for surveyors, and many others items form just a small sample of all the many possibilities.
+A very short list of commodities would include materials useful for agricultural purposes such as smectite clays, nitrates, fertilizer, machinery, and more. Deuterium; gold; magware (magnesiumware); food and beverages, such as \index{Arcadian+Manowar}Arcadian Manowar; high--grade mineral ores; geochemically rare elements; communications and shallow radar equipment useful for surveyors; and many others items form just a small sample of the countless possibilities.
 
-Generally the only way of acquiring any kind of high quantity mineral is from high--grade ore. High--grade ore only exists when complex hydrological and volcanic processes have occurred. In our solar system, this has taken place only on Mars and Earth, hence why the Moon is barren. But unlike the Earth, Martian deposits of precious metal ore have never been exploited and thus present a commercial opportunity.
+Generally the only way of acquiring any kind of high quantity mineral is from high--grade ore. High--grade ore only exists where complex hydrological and volcanic processes have occurred. In our solar system this has taken place only on Mars and Earth. This is why the Moon is barren. But unlike the Earth, Martian deposits of precious metal ore have never been exploited and thus present a commercial opportunity.
 
-Other commodities can contribute to underground black markets as well, such as NAU--CIA narco-trafficking. They may be providing a supply from off--world imports, or possibly manufacturing synthetic narcotics {\it in situ}, such as cocaine. If there is a demand for something, chances are there is someone willing to provide for it in the right circumstance for the better or the worse.
+Other commodities can contribute to underground black markets as well. An example would be NAU--CIA narco-trafficking. In that example they may be providing a supply from off--world imports or possibly manufacturing synthetic narcotics {\it in situ}, such as cocaine. If there is a demand for something on Mars, chances are there is someone willing to provide it for the better or the worse.
 
-Commodities can move in various ways. These include through airports, starports, ground vehicles and railways, or even railguns for off--world exports to Earth.
+Commodities can move in various ways. These include through airports, starports, ground vehicles, railways, or even railguns for off--world exports to Earth.
 
 \StartSubSection{Exchange Parties}
-There are multiple parties that can engage in trade. These should include cities or outposts other than the user's, industries within a city, and on Earth. All of these can be either human or NPC, except in the case of Earth which is always driven by the artificial intelligence.
+There are multiple parties that can engage in trade. These should include cities, outposts, including those other than the user's, industry sectors within a city, and on Earth. All of these can be either human or non--playable characters (NPCs) -- except Earth which is always AI driven.
 
 \StartSubSection{Industries}
-The industries are many in number. Construction is one example of a Martian industry because it can transform undeveloped locations into tillable or marketable property. Prospecting for precious metals would also be lucrative because they are more abundant on Mars than on Earth. Supplying prospectors with replacement gear and supplies is another example. Well--drilling for water would be yet another. Be creative.
+Industries are many in number. Construction is one example of a Martian industry because it can transform undeveloped locations into tillable or marketable properties. Prospecting for precious metals would be lucrative because they are much more abundant on Mars than on Earth. Supplying prospectors with replacement gear and supplies is another example. Well--drilling for water would be yet another.
 
 \StartSubSection{Jenya}
-\index{rhodium}Rhodium is an elemental chemical denoted with the symbol {\it Rh} on the periodic table and given atomic number 45. It is a member of the platinum family and considered to be the most precious metal of that family. It is one of the rarest precious metals and costs more than any other -- including gold.
+\index{rhodium}Rhodium is an elemental chemical denoted with the symbol {\it Rh} on the periodic table and assigned atomic number 45. It is a member of the platinum family and considered to be the most precious metal of that family. It is one of the rarest precious metals and costs more than any other -- including gold.
 
-A \index{fiat currency}fiat currency is a currency that has only the endorsement of an authority, such as a government, to validate its valuable. It is neither composed nor redeemable in any material perceived of as valuable that is held in reserve.
+A \index{fiat currency}fiat currency is a currency that has only the endorsement of an authority such as a government to assert its value. It is neither composed nor redeemable in any material perceived of as valuable held in reserve.
 
-{\it Article VII} of Arcadia's {\it Rubicon Act\index{Rubicon Act}} superannuated the Terran bancor\index{bancor} fiat currency with the {\it jenya\index{jenya}}. It is the first currency to be backed by a predominantly rhodium standard\index{rhodium+standard}, with the remainder by other precious metals, such as gold and silver. The jenya became the exclusive legal tender within Arcadia when the Act was passed. This required that all Terran interests acquire Arcadian goods and services exclusively in jenyas from that time onwards. The currency symbol for the jenya is \externalfigure[jenya_inline].
+{\it Article VII} of Arcadia's {\it Rubicon Act\index{Rubicon Act}} superannuated the Terran bancor\index{bancor} fiat currency with the {\it jenya\index{jenya}}. It is the first currency to be backed by a predominantly rhodium standard\index{rhodium+standard} with the remainder by other precious metals such as gold and silver. The jenya became the exclusive legal tender within Arcadia when the Act was passed. This required that all Terran interests acquire Arcadian goods and services exclusively in jenyas from that time onwards. The currency symbol for the jenya is \externalfigure[jenya_inline].
 
 \placefigure
     [here]
@@ -50,17 +50,17 @@ A \index{fiat currency}fiat currency is a currency that has only the endorsement
     {Currency symbol of the Arcadian jenya.}
     {\externalfigure[Game_World/Images/Jenya_red.svg][][width=3cm]}
 
-The word {\it jenya} is Sanskrit\index{Sanskrit}. It means {\it of noble origin, genuine, or true wealth}. The idea being that since rhodium is considered precious, for whatever reason -- and that not really relevant anyways -- indeed, even more so than gold on both Earth and Mars, its distribution across society implied a distribution of monetary wealth. Anyone with any amount of jenyas would always have something thought to be valuable, irrespective of any central authority's validation. Political volatility or institutional reforms could impose restrictions on using jenyas as legal tender, but never their perceived intrinsic value.
+The word {\it jenya} is Sanskrit\index{Sanskrit}. It means {\it of noble origin, genuine, or true wealth}. The idea being that since rhodium was considered precious by the colonists, even more so than gold, its distribution across society implied a distribution of monetary wealth. Anyone with any amount of jenyas would always have something thought to be valuable, irrespective of any central authority's validation. Political volatility or institutional reforms could impose restrictions on using jenyas as legal tender, but never their perceived \quotation{intrinsic} value.
 
-It should be noted at this point that the Avaneya project does not necessarily endorse the replacement of fiat currencies with those redeemable, either in whole or in part, by precious metals. That is not to say that doing so may not help to alleviate some economic problems, such as the problem of inflation. However, economic problems sometimes can be deeper rooted than merely in the choice of unit of exchange.
+It may be tempting among people of certain political persuasions to conclude with certainty that all economic woes would vanish with a precious metal based currency. It is true that doing so may help to alleviate some problems, such as the problem of inflation. But economic problems can be deeper rooted than merely in the choice of unit of exchange.
 
-As an example, gold is perceived by many as having intrinsic value for whatever reason. However, its availability is actually the result of massive waste. When one accounts for its true cost, it grossly exceeds its own monetary value. This is because for every one ounce of gold acquired through conventional extraction and refinement processes, there are seventy--nine tonnes of material waste produced as a byproduct.\footnotecite[oxfam2004] Sometimes this waste is so dangerous that even long after the mine has been abandoned, a single mine can still contain enough arsenic to poison every single person on the planet.\footnotecite[giant_mine_time_bomb]
+Consider that gold is considered by many as having great intrinsic value. Yet its availability is actually the result of monumental waste. When one accounts for its true cost, it grossly exceeds its own monetary value. This is because for every one ounce of gold gained through conventional extraction and refinement processes there are seventy--nine tonnes of material waste produced as a byproduct.\footnotecite[oxfam2004] Sometimes this waste is so dangerous that even long after the mine has been abandoned a single mine can still contain enough arsenic to poison every human on our planet.\footnotecite[giant_mine_time_bomb]
 
 \StartSubSection{Banks & Money Supply}
 
-As already described, Arcadia normally functions on a rhodium standard, but this could change depending on political circumstance, such as the political influence of its principle stakeholders.
+As already described, Arcadia normally functions on a rhodium standard. This could change depending on political circumstance.
 
-\index{banks}Banks are generally hostile to the concept that they are responsible for the creation of money, but the truth is, they are.\footnotecite[minutes_bank_of_canada]\footnotecite[the_creature_from_jekyll_island] In Avaneya, money can function either as a medium of exchange (a utility), or it can function as a dangerous weapon that can enslave your city when its creation is born out of interest bearing debt.
+\index{banks}Banks are generally hostile to the understanding that they are responsible for the creation of money. Nevertheless, they are.\footnotecite[minutes_bank_of_canada]\footnotecite[the_creature_from_jekyll_island] In Avaneya money can function either as a medium of exchange (a utility), or it can function as a dangerous weapon that can enslave your city when its creation is born out of interest bearing debt.
 
 How we model banks is important. We do not want to over--complicate things, but a certain degree of over--simplification may be necessary to convey only the most important ideas, such as the mechanics of fractional reserve lending. We should be able to do this without overwhelming the user. We can start, at least in part, by modelling a bank by using the \index{accounting equation, basic}basic accounting equation found in \in{formula}[formula:basic accounting equation].
 
@@ -73,39 +73,43 @@ Assets = Liabilities + Capital
 
 A bank's assets include three types of things. These would be loans to clients, reserves, and securities. Loans do not actually exist as assets, but banks maintain that they would be if they got them back. Their value is in the collateral, such as someone's home, business, or whatever the loan was used for.
 
-Reserves represent the amount of money that they have in hand, the amount deposited in a central bank, and the money made from customers. They do not collect interest on this. 
+Reserves represent the amount of money that a bank has in hand. This is the amount deposited within a central bank and the money made from customers. They do not collect interest on this.
 
-Securities represent a wide range of investments. These include stocks, bonds, notes, limited partnership interests, and so on.
+Securities represent a wide range of investments. These include stocks, bonds, notes, limited partnership interests, and so forth.
 
-A bank's liabilities include two types of things, deposits and their shareholder's capital. Deposits consist of two types. They can be other peoples' money, which the bank pays interest on, or they can be money lent {\it to} the banks {\it by} the customers to fill their accounts. The bank considers these liabilities because they are liable to have to return them to the customer whenever the latter wants them.
+A bank's liabilities include two types of things, deposits and their shareholder's capital. Deposits consist of two types. They can be other peoples' money, which the bank pays interest on, or they can be money lent {\it to} the banks {\it by} the customers to fill their accounts. The bank considers these liabilities because they are liable to have to return them to the customer at the customer's request.
 
 The shareholder's capital is the equity or amount they put forward to start up the bank.
 
-In \index{fractional reserve banking}fractional reserve banking, banks create new money through bank loans. All money is borrowed into existence at interest. This means there is only sufficient money in the money supply to satisfy the principle, but not the accrued interest. This is one reason why every developed nation around the world is in debt -- even when the majority in them are employed. There are discussions on how they spend money, but they must be preceded with the more important discussion of how money is created if the discussion is to be meaningful at all.
+In \index{fractional reserve banking}fractional reserve banking, banks create new money through bank loans. All money is created (borrowed) into existence at interest. This means there is only sufficient money in the money supply to at best repay the principle, but not the accrued compounding interest. 
 
-When this new money is created, the existing supply of money is devalued because there is more of it. This is especially troublesome since inflation punishes in particular those who tried to save by reducing the value of what they already have. This steals from everyone in a non--obvious way. Since all money begins in a bank before making its way to citizens through wages, salaries, and dividends, it means that people are constantly being \index{plundered by loans}plundered instantaneously with every new bank loan. The bank effectively sends loanees out into the world to compete for someone else's principle.
+This is one reason why every developed nation around the world is in debt -- even when the majority within them are employed. There are political debates on how governments ought best to spend their citizens money, but they seldom include discussions on how money is created in the first place.
 
-The graphical user interface can reveal a selected bank's balance sheet and any fractional reserve information. This should include a user definable reserve requirement.
+When new money is created the existing supply of money is devalued because there is now more of it. This is especially troublesome since inflation punishes in particular those who tried to save by reducing the value of what they already have. This deprives everyone in a non--obvious way. Since all money began in a bank before making its way to citizens through wages, salaries, and dividends, it means that people are constantly being \index{plundered by loans}plundered instantaneously with every new bank loan. The bank effectively sends loanees out into the world to compete for someone else's principle.
+
+The graphical user interface can reveal a selected bank's balance sheet and any fractional reserve information. This could include a user definable reserve requirement.
 
 \StartSubSection{Inflation}
-We can define inflation as the ratio of the total amount of money in citizens' hands with respect to the total cost of all available goods on the market. Contrary to popular belief and as described in \in{section}[Banks & Money Supply], inflation is not a devaluing in the currency. That is certainly a consequence of it, but rather inflation is an increase in the supply of money -- or at least so defined in this game.
+There are different definitions of inflation. We could define for our purposes inflation as the ratio of the total amount of money in citizens' hands with respect to the total price of all available goods on the market. Contrary to popular belief and as described in \in{section}[Banks & Money Supply], inflation is not really a devaluing in the currency. That is certainly a consequence of it, but rather inflation is an increase in the supply of money.
 
 \StartSubSection{Labour}
-Without people providing services or producing things, there would be no justification for a monetary economy. On Mars, perpetual labour shortages would be a problem. This is dissimilar to Earth frequently experiencing a labour surplus. Even settled Martian areas would experience labour shortages because the skilled labourers will be out trying to stake a new existence on the frontier. As a result, one would usually expect to see higher \index{wages}wages.
+Without people providing services, producing things, and competing for finite resources, there would be no need for a monetary economy. On Mars perpetual labour shortages would be a problem. This is dissimilar to Earth frequently experiencing a labour surplus. Even settled Martian areas would experience labour shortages because the skilled labourers would be out trying to stake a new existence on the frontier. As a result one would usually expect to see higher \index{wages}wages.
 
-Traditional conflicts between the organized labour movement, its leadership, the private sector, and the public sector can be modelled in a balanced and reasonable manner.
+Traditional conflicts between the organized labour movement, its leadership, the owners of private firms, and the public sector could be modelled in a balanced and reasonable manner.
 
 \StartSubSection{Taxation}
-Taxes sometimes need to be raised in order to provide for public infrastructure. The user should be given a choice to experiment with different \index{taxation models}models of taxation, such as a flat or progressive model as applied to either individuals and businesses. Other programs could be experimented with, such as the theoretical, never attempted, \index{negative income tax}negative income tax.
+Taxes sometimes need to be raised in order to provide for public infrastructure. The user should be given a choice to experiment with different \index{taxation models}models of taxation, such as a flat or progressive model as applied to either individuals and businesses. Other programs could be experimented with, such as the theoretical and never attempted \index{negative income tax}negative income tax.
 
 \StartSubSection{Railguns}
-By applying a magnetic field to a conductive mass mounted on a rail, it can be accelerated to a supersonic velocity. The drastic acceleration experienced by the mass, though high enough to crush the skull of a man, can be used for Martian material exports when brought to a speed exceeding the minimum Martian escape velocity.
+By applying a magnetic field to a conductive mass mounted on a rail, it can be accelerated to a supersonic velocity. The drastic acceleration experienced by the mass, though high enough to crush the skull of a man, could be used for Martian material exports when brought to a speed exceeding the minimum Martian escape velocity.
 
+\vfill
 \placefigure
     [here]
     [figure:Railgun]
     {Schematic of a railgun. Original image courtesy of {\it Bob Mellish}.}
     {\externalfigure[Game_World/Images/Railgun.svg][][width=0.4\textwidth]}
+\vfill
 
-Arcadians use railguns to export their staple \index{exportation tech}exports of deuterium, geochemically rare elements, and other materials back to Earth. Although energy demanding, railguns are more economical to use on Mars. This is because only a fourth the energy required to escape the gravitational field of Earth is needed on Mars because the latter is less massive.
+Arcadians use railguns to export their staple \index{exportation tech}exports of deuterium, geochemically rare elements, and other materials back to Earth. Although energy demanding, railguns are more economical to use on Mars. This is because only a fourth the energy is required on Mars to escape the gravitational field in contrast with Earth because the former is less massive.
 

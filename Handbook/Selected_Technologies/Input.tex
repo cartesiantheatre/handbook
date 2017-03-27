@@ -8,12 +8,10 @@
 \startitemize[4]
 \head {\em SDL_haptic}
 
-The {\tt SDL_haptic} API will be used to provide \index{force feedback}force feedback, provided the API is available and the user's input device supports it. This was considered a bleeding edge feature upstream at one time, but since SDL version 1.3 or greater provides it, availability will be less of a problem now.
-
-A note about the alternatives to {\tt SDL_haptic}. At this time, the Ogre3D plugins for OgreHaptics and OgreHAPI were both considered, but did not appear to be actively maintained.
+The {\tt SDL_haptic} API will be used to provide \index{force feedback}force feedback where supported. A note about the alternatives to {\tt SDL_haptic}. At this time the Ogre3D plugins for OgreHaptics and OgreHAPI were both considered but did not appear to be actively maintained.
 
 \head {\em OIS}
 
-OIS is an object--oriented API for Ogre3D which is used to provide \index{user input handling}input handling. Input starts at this low level API and is used to message pump CEGUI or anything else that needs to know what the player is doing.
+OIS is an object--oriented API for Ogre3D which is used to provide \index{user input handling}input handling. Input starts at this low level API and is used to message pump CEGUI or anything else that needs to know what the user is doing.
 \stopitemize
 

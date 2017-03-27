@@ -11,39 +11,27 @@
 
 This tool helps provide graphic artists and shader designers with reference imagery from the original Viking mission to Mars. The historic lost Viking mission archive is available on DVD format from us and can be ordered through our website. 
 
-NASA's Viking mission was the first ever to photograph the surface of the Red Planet, in particular a region of interest to this project never since revisited. See \in{chapter}[Viking Lander Remastered] for more information on how and why we went to the trouble of authoring this technology.
+NASA's Viking mission was the first ever to photograph the surface of the Red Planet. In particular, a region of interest to us has never since revisited. See \in{chapter}[Viking Lander Remastered] for more information on how and why we went to the trouble of authoring this technology.
 
 \head {\em Blender}
 
-All our modelling is generally done with Blender, but modellers are free to use whatever {\it libre} modelling application they like. It needs to at least supports common free formats. One popular alternative is {\it Wings 3D}. Ultimately though, all models have to be importable into Blender since we are dependent on Ogre3D's\index{Ogre3D} Exporter plugin to provide usable data for the Ogre3D rendering engine.
-
-\head {\em Caelum}
-
-Caelum is a \index{weather generation plugin}weather generation plugin for Ogre3D. It may be useful in generating weather effects on Mars.
+As much of our modelling as possible will be done with Blender, but modellers are free to use whatever {\it libre} modelling application they like. It needs to at least supports common free formats. One popular alternative is {\it Wings 3D}. Ultimately all models must be importable into Blender since we are dependent on Ogre3D's\index{Ogre3D} Exporter plugin to provide usable data for the Ogre3D rendering engine.
 
 \head {\em Crazy Eddie's Graphical User Interface}
 
-The Crazy Eddie's Graphical User Interface (CEGUI) library allows complex graphical user interfaces to be built on top of the Ogre3D rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts that drive a Lua interface to control all dynamic and static graphical elements. The actual graphical elements themselves need to be provided by an artist, such as images for buttons, scrollbars, and so on.
+Crazy Eddie's Graphical User Interface (CEGUI) library allows portable complex graphical user interfaces to be used with the Ogre3D rendering engine. This is necessary for the in game graphical user interface. CEGUI user interfaces are defined through Lua scripts that drive a Lua interface to control all dynamic and static graphical elements. The actual graphical elements themselves need to be provided by an artist, such as images for buttons and scrollbars.
 
 \head {\em Hydrax}
 
-Hydrax is a fluid dynamics plugin for the Ogre3D rendering engine. It may be useful for providing fluid effects on Mars.
+Hydrax is a fluid dynamics plugin for the Ogre3D rendering engine. It may be useful for providing fluid effects on Mars, such as a tailings pond or an indoor swimming pool.
 
 \head {\em Ogre3D}
 
-The {\it Ogre3D} rendering engine is a powerful cross--platform API generally aimed at game developers. It has a rich and simple to use API with a plethora of plugins available for it. It is strictly a \index{rendering engine}rendering engine and does not provide facilities for input, audio, physics, or any other subsystem typically found in a modern game engine.
+The {\it Ogre3D} rendering engine is a powerful cross--platform API generally aimed at game developers. It has a rich and simple to use API with a multitude of plugins available for it. It is strictly a \index{rendering engine}rendering engine and does not provide facilities for input, audio, physics, or any other subsystem typically found in a modern game engine.
 
 \head {\em OpenGL}
 
-The OpenGL library provides our preferred rendering backend for the Ogre3D rendering engine. Although the latter supports other backends, it is very difficult to write and maintain shaders for all of them. OpenGL is ubiquitous these days, can do virtually anything its proprietary counterparts on legacy systems can, and does not hold you hostage to any specific platform.
-
-\head {\em OpenGL Extension Wrangler Library}
-
-The OpenGL Extension Wrangler Library library ({\it GLEW}) helps to query and load OpenGL extensions. It provides efficient runtime mechanisms for determining which OpenGL extensions are supported on the target platform. All supported OpenGL extensions are exposed in a single header file which is machine--generated from an official extension list.
-
-\head {\em Terrain}
-
-Terrain is another plugin for the Ogre3D rendering engine. As its name suggests, it is responsible for terrain generation.
+The OpenGL API provides our preferred rendering backend for the Ogre3D rendering engine. Although the latter supports other backends it is very difficult to write and maintain shaders for all of them. OpenGL is ubiquitous these days, can do virtually anything its proprietary counterparts on other systems can, and does not hold you hostage to any particular platform.
 
 \head {\em SDL}
 

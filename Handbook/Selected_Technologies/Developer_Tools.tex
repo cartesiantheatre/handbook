@@ -8,40 +8,24 @@
 \startitemize[4]
 \head {\em Apport}
 
-Apport intercepts program crashes. It collects debugging information about the crash, the user's platform, and sends it to us in a standardized format by integrating directly into Launchpad. It is available only on supported GNU operating systems.
+Apport intercepts program crashes. It collects debugging information about the crash, obtains anonymous information about the user's platform, and uploads to us in a standardized format by integrating directly into Launchpad. It is available on supported GNU operating systems.
 
 \head {\em CppUnit}
 
-The CppUnit library is a unit testing framework module for the C++ programming language. It will be used only when the game is built in debug mode for performance reasons.
+The CppUnit library is a unit testing framework module for the C++ programming language. It is used to perform self diagnostics of various components of the game engine and tools. They are executed at build time.
 
 \head {\em GNU Autotools}
 
-The GNU Autotools are the industry standard and akin to the \quote{construction scaffolding} surrounding a new building under development. They can be used to reconcile and harmonize the many idiosyncrasies of different platforms to make \index{portability} portability easier.
-
-%To use it correctly, it is important to query the platform for specific features of interest, rather than for specific platforms assumed to provide the specific features of interest. The latter route makes assumptions that are bad because they may be conditional on things that are not reliable or subject to change. A good example is in byte ordering. If you want to know the platform's byte ordering, check for that. Do not check for a given platform, such as OS X, as an indicator of what you assume will always be its endianness since that may change one day.
+The GNU Autotools are industry standard and akin to the \quote{construction scaffolding} surrounding a new building under development. They can be used to reconcile and harmonize the many idiosyncrasies of different platforms to make \index{portability} portability easier.
 
 \head {\em GNU Compiler Collection}
 
-The GNU Compiler Collection is used for the engine's dependency calculation, compilation, linking, and other things. GCC is not a compiler, but actually a collection of compilers for different platforms. Ports of them are available for virtually every platform under the Sun.
+The GNU Compiler Collection is used for the engine's dependency calculation, compilation, and linking. GCC is not a compiler, but actually a collection of compilers for different platforms. Ports of them are available for virtually every platform under the Sun, including every single one we are targeting.
 
-%\head {\em libebml}
+\head {\em GNU MPFR}
 
-%The libebml library is the backbone of the Matroska multimedia container format. EBML stands for {\it Extensible Binary Meta Language}. It is often thought of as a binary analogue to the XML format, though not a complete analogue because, unlike XML, the schema must be known in advance. Therefore, it is ideally suited to be both read and written by machines and not humans. See \in{section}[AresPackages] for details on how we are leveraging it with this project.
+The GNU MPFR Library allows us to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors and optimizations can yield results that are inconsistent across different environments.
 
-\head {\em Smolt}
-
-Smolt is both a software utility for gathering user \index{hardware information submission}hardware information and a publicly accessible central server containing anonymous and voluntary submissions.
-
-This is very important for us because we require a reliable hardware database that we can consult with to determine the minimal expected hardware capabilities of our users. The Ubuntu hardware database was also considered, but it does not appear to be usable yet.
-
-\head {\em streflop}
-
-The streflop library ({\it STandalone REproducible FLOating--Point}) allows us to control how floating point computations are done in C++. The goal is to make programs give reliable and reproducible results. This is important because differences in machine generated code, numeric handling libraries, dedicated hardware floating point processors, optimizations, and so on, can yield results that are inconsistent across different environments. 
-
-A {\it libre} game is more likely to be ported to a greater variety of platforms than a non--free game. Players interacting over Solnet could be using very different platforms. The streflop library will help to ensure that all players are playing by consistent rules.
-
-%\head {\em xmlstarlet}
-
-%The xmlstarlet tool is used to validate XML against a schema. It is useful to check AresPackage manifests, engine event definitions, and whatever other engine data necessary for syntactical errors and to ensure that they are well formed.
+A {\it libre} game is likely to be ported to a variety of hardware platforms. Players interacting over Solnet could be using very different platforms where operations on the same values produce different results. The MPFR library will ensure that calculations are performed consistently across disparate hardware. This way all players will play by the same rules.
 \stopitemize
 

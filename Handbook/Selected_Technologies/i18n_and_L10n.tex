@@ -5,9 +5,9 @@
 % Internationalization and Localization section...
 \StartSection{i18n & L10n}
 
-What does {\it i18n} and {\it L10n} stand for? They are old cryptic industry acronymns for \quote{internationalization} and \quote{localization} respectively. Internationalization is the process of adapting software so that it can accommodate different localities. This is implemented by engineers.
+The acronyms {\it i18n} and {\it L10n} are old cryptic industry terms for \quote{internationalization} and \quote{localization} respectively. Internationalization is the process of adapting software so that it can accommodate different localities. This is implemented by engineers.
 
-Localities, or sometimes just called locales, specify data specific to a given locality, region, or culture, of the world. This usually includes the user's preferred language, writing direction, numeral system, and so on. This is provided by people with locale specific knowledge.
+Localities, or sometimes just called locales, specify data specific to a given locality, region, or culture of the world. This usually includes the user's preferred language, writing direction, currency, and numeral system. This is provided by people with locale specific knowledge.
 
 \startitemize[4]
 \head {\em GNU gettext}
@@ -18,8 +18,5 @@ GNU gettext is used to implement {\it i18n} by providing C functions for string 
 
 The lua--gettext API is a Lua package that acts as a Lua wrapper for gettext bindings.
 
-\head {\em lua--xgettext}
-
-The {\tt lua-xgettext} tool is a small program for message extraction of marked strings from Lua code so they can be made available for translation to other languages. It is similar to GNU {\tt xgettext}, but far more primitive; it just extracts the strings and prints them out without any additional information. It was written because GNU {\tt xgettext} did not support Lua at the time it was written.
 \stopitemize
 

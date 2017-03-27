@@ -6,13 +6,10 @@
 \StartSection{Audio}
 
 \startitemize[4]
-\head {\em Audacity}
-
-We use Audacity for audio recording, editing, post--processing, effects, and more. It can take advantage of any of the multitude of the LADSPA and VST plugins compatible with it. It can also export to popular digital surround sound formats.
 
 \head {\em libav / libasound_module_pcm_a52}
 
-The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms  -- usually GNU/Linux. The plugin is a wrapper for the lower level encoder provided through {\tt libav}. The latter provides a way to encode a \index{surround sound:+digital}digital surround sound stream in A52 format to a pass--through device (e.g. S/PDIF). The user's home theatre receiver then decodes and amplifies the stream to the user's surround sound system.
+The {\tt libasound_module_pcm_a52} library is a plugin for ALSA and therefore only available on supported platforms  -- usually GNU/Linux systems. The plugin is a wrapper for the lower level encoder provided through {\tt libav}. The latter provides a way to encode a \index{surround sound:+digital}digital surround sound stream in A52 format to a pass--through device (e.g. S/PDIF). The user's home theatre receiver then decodes and amplifies the stream to the user's surround sound system.
 
 We need to be careful for legal reasons. See \in{section}[Restricted Data Considerations] for more information on why.
 
@@ -22,10 +19,10 @@ We need to be careful for legal reasons. See \in{section}[Restricted Data Consid
 
 \head {\em OpenAL}
 
-OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is done through other APIs, such as {\tt SDL_audio}.
+OpenAL is used for 3D spatial audio rendering. Actual decoding of audio data is done through other APIs, such as {\tt SDL_audio}. Audio programming under GNU/Linux is unfortunately still a mess,\footnotecite[tuxradar2010_linux_audio_mess] but APIs like this help make it sane for game developers.
 
 \head {\em SDL_audio}
 
-This SDL module is used to provide audio decoding. It provides a standardized interface to various decoder backends, such as Ogg Vorbis and others. Audio programming under GNU/Linux is a mess,\footnotecite[tuxradar2010_linux_audio_mess] but APIs like this help make it sane for game developers.
+This SDL module is used to provide audio decoding. It provides a standardized interface to various decoder backends, such as Ogg Vorbis and others.
 \stopitemize
 

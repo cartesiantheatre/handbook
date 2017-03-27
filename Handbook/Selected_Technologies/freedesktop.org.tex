@@ -5,28 +5,24 @@
 % freedesktop.org section...
 \StartSection{freedesktop.org}
 
-The freedesktop.org community is committed to providing specifications and applications for a consistent user experience across various, usually GNU, desktop environments. This frees developers to focus on having to do things only one way, the standard way, as opposed to many ways, or having to make bad assumptions about the user's preferred desktop environment. 
-
-%The desktop environments that are freedesktop.org compliant in the ways that are relevant to this project include Xfce, Gnome, LXDE, ROX, KDE, and probably others. This is important because unlike some non--free platforms, GNU gives users the freedom to select whatever desktop environment they like.
+The freedesktop.org community is committed to providing specifications and applications for a consistent user experience across various desktop environments. This frees developers to focus on having to do things only one way, the standards compliant way, as opposed to many ways or having to make bad assumptions about the user's preferred desktop environment. 
 
 \startitemize[4]
 \head {\em D--Bus Specification}
 
-The D--Bus (Desktop Bus) API is a simple inter--process communication (IPC) system for software applications to communicate with one another. Avaneya can use it for things, such as determining the state of the user's network connection. We currently use it in the {\it Avaneya: Viking Lander Remastered DVD}.
+The D--Bus (Desktop Bus) API is a simple inter--process communication (IPC) system for software applications to communicate with one another. Avaneya can use it for things like determining the state of the user's network connection. We currently use it heavily in the {\it Avaneya: Viking Lander Remastered DVD}.
 
 \head {\em Desktop Application Autostart Specification}
 
-The autostart specification allows applications, notwithstanding the user's settings, to safely self launch when the appropriate medium is inserted. This could be a traditional optical media player's are accustomed to, but could also be a USB stick as an example. 
-
-This can be useful where player's are accustomed to a graphical user interface appearing on legacy systems after inserting an optical media for their favourite game.
+The autostart specification allows applications to safely self launch when an appropriate medium is inserted. It could be traditional optical media or a USB stick as examples. This can be useful where user's are accustomed to a graphical user interface appearing on legacy systems after inserting an optical media for their favourite game.
 
 \head {\em Desktop Entry Specification}
 
-Several freedesktop.org compliant desktop environments have adopted this convention. This allows applications to provide \quote{desktop entries} describing where an application is, how it is to be launched, where it should appear in the user's menu, translations, and so on.
+Several freedesktop.org compliant desktop environments have adopted this convention. This allows applications to provide \quote{desktop entries} describing where an application is, how it is to be launched, where it should appear in the user's menu, and localization strings.
 
 \head {\em Media Player Remote Interfacing Specification}
 
-MPRIS is a standardized interface for compliant media players. We could provide an option in Avaneya that stops the user's media player if currently playing upon launch and then instruct it to resume playback on exit.
+MPRIS is a standardized interface for compliant media players. We could provide an option in Avaneya that stops the user's media player if it is currently playing music and then instruct it to resume playback on exit.
 
 \head {\em Startup Notification Specification}
 

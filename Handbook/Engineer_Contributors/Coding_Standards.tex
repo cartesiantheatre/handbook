@@ -5,9 +5,9 @@
 % Coding standards section...
 \StartSection{Coding Standards}
 
-Try to abide by the project's coding standards whenever possible. It is easier to adapt to a new coding standard when applied uniformly than for everyone to apply their own in a project. Source code is easier to read when it appears as though only one person wrote it, no matter how many actual contributors there may have been.
+Try to abide by the project's coding standards. It is easier to adapt to a new coding standard when applied uniformly than for everyone to apply their own. Source code is easier to read when it appears as though only one person wrote it no matter how many actually did.
 
-Use the following conventions whenever working in C++, as well as whatever is practical to carry over to shaders, scripts, and other languages we may depend on from time to time. These are guidelines and not written in stone, so use your common sense and break them whenever you need to.
+Use the following conventions whenever working in C++ or in whatever carries over to shaders, scripts, and other languages we depend. These are guidelines and not written in stone, so use your common sense and break them whenever you need to.
 
 \StartSubSection{Declarations and Definitions}
 
@@ -19,10 +19,10 @@ All classes should be defined in their own header file. The only exception is fo
 Class method declarations in the class header should be listed in alphabetical order relative to its siblings of the same access rights. So sort {\tt protected}, {\tt public}, and {\tt private} methods within themselves, but not globally. In the case of constructors and deconstructors, place these at the beginning and ends respectively.
 
 \item
-Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order, with exceptions made for constructors and deconstructors. These should be defined first and last respectively.
+Class method definitions should be provided in the implementation file ({\tt *.cpp}) listed in alphabetical order with exceptions made for constructors and deconstructors. These should be defined first and last respectively.
 
 \item
-Whenever you want a C++ class's declaration to contain some inline code, leave the class's declaration as usual in its own header, {\tt SomeClass.h}, but move the actual inline definitions into a separate header, {\tt SomeClass.inl}. You can then include the latter into the former after its declaration with the use of an {\tt \#include <SomeClass.inl>}. This way you get the benefits of inline methods where you need them for whatever reason, but without confusing clients of the class in having them do something unusual. They only have to {\tt \#include <SomeClass.h>} as they normally would with any other class. This can also make finding errors at compile time easier with some compilers.
+Whenever you want a C++ class's declaration to contain some inline code, leave the class's declaration as usual in its own header, {\tt SomeClass.h}, but move the actual inline definitions into a separate header, {\tt SomeClass.inl}. You can then include the latter into the former after its declaration with the use of an {\tt \#include <SomeClass.inl>}. This way you get the benefits of inline methods whenever you need them but without confusing clients of the class in having them do something unusual. They only have to {\tt \#include <SomeClass.h>} as they normally would with any other class. This can make identifying compile time errors easier with some compilers.
 \stopitemize
 
 \StartSubSection{Legal}
@@ -33,9 +33,6 @@ Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapte
     AresEngine, a 3D game engine.
     Copyright (C) 2010-2017 Cartesian Theatre™ <info@cartesiantheatre.com>.
 
-    Public discussion on IRC available at #avaneya (irc.freenode.net)
-    or on the mailing list <avaneya@lists.avaneya.com>.
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -43,32 +40,19 @@ Headers (*.h), implementations (*.cpp), and other code, as defined in \in{chapte
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 \stopCodeExample
-
-Change the description line from referencing the engine to Avaneya, if it is a script or other media driving the engine. The reason you should avoid using \quote{Avaneya} directly in the copyright notice is because the same engine could be used eventually with other projects not having anything to do with Avaneya. This would look as such.
-
-\startCodeExample
-/*
-    Avaneya, a cerebral science fiction game for GNU.
-    Copyright (C) 2010-2017 <info@cartesiantheatre.com>.
-
-    Public discussion on IRC available at #avaneya (irc.freenode.net)
-    ...
-\stopCodeExample
-
-Same goes if it is for the Solnet server. If that is the case, use the equivalent licensing text. For more information on Avaneya's licensing rationales, see \in{chapter}[Licensing Rationale].
 
 \StartSubSection{Mathematical}
 
 \startitemize[4]
 \item
-All angles should be calculated in degrees whenever possible. Avoid radians.
+All angles should be calculated in degrees whenever possible. Avoid radians. They are a less \quotation{natural} way for a human to think.
 
 \item
 All floating point calculations should be done in single precision whenever possible. Single precision is faster, can take up less space, and we usually do not need the extra precision in a game anyways.
@@ -78,16 +62,16 @@ All floating point calculations should be done in single precision whenever poss
 
 \startitemize[4]
 \item
-English should be used for everything non--localized. Source code and other text files should be saved in UTF--8 for maximum portability.
+English should be used for everything non--localized. Source code and other text files should be saved in UTF-8 for maximum portability.
 
 \item
-Line breaks should end with a new line control character only. Do not use both a carriage return and a new line as done on some legacy platforms.
+Line breaks should end with a new line control character only. Do not use both a carriage return and a new line as done on some other platforms.
 
 \item
-Use spaces and not tabs for indentation. You can use the latter while editing if you like, but make sure your editor converts them to spaces when saving.
+Use spaces and not tabs for indentation. You can use the latter while editing if you like, but please ensure your editor converts them to spaces when saving.
 
 \item
-Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier, in which case it should be indented such that the identifier begins at a four space interval.
+Each level of nesting should be indented by four spaces. The exception to this is when a prefix operator precedes an identifier in which case it should be indented with the identifier beginning at a four space interval.
 
 Good:
 \startCodeExample
@@ -110,7 +94,7 @@ float SomeFunction()
 \stopCodeExample
 
 \item
-You do not need to indent to accommodate a namespace when an entire source file is enclosed within one. If only part of the source is enclosed in a namespace, then those parts affected should be indented.
+You do not need to indent to accommodate a namespace when an entire source file is enclosed within one. If only part of the source is enclosed in a namespace, then only those parts affected should be indented.
 
 \item
 An opening brace appears on the next line as preceding code.
@@ -190,14 +174,14 @@ When declaring variables, align the variable names on the same column evenly div
 
 Good:
 \startCodeExample
-int     Count;
-bool    Complete;
-Thing   MainThing;
+const int   Count;
+bool        Complete;
+Thing       MainThing;
 \stopCodeExample
 
 Bad:
 \startCodeExample
-int Count;
+const int Count;
 bool Complete;
 Thing MainThing;
 \stopCodeExample
@@ -339,9 +323,8 @@ if(x == 3)
 
 \startitemize[4]
 \item
-Do not use Hungarian notation\index{Hungarian notation}. Forget Woe32 and the '90s. Prefix objects to denote scope only. 
+Do not use Hungarian notation\index{Hungarian notation}. Prefix objects to denote scope only. For example, a member of a global namespace:
 
-Member of a global namespace:
 \startCodeExample
 g_Wheels
 \stopCodeExample
@@ -357,7 +340,7 @@ ms_Wheels
 \stopCodeExample
 
 \item
-Class, structure, and object names should be intuitive. Try to avoid abbreviations. Each word should begin with a capital letter. File size is not an issue. This allows for greater readability.
+Class, structure, and object names should be intuitive. Try to avoid abbreviations. Each word should begin with a capital letter. Brevity of characters for the sake of file size or laziness are not good reasons. Readability is much more important.
 
 Good:
 \startCodeExample

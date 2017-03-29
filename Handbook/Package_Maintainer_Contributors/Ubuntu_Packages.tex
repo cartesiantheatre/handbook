@@ -4,12 +4,12 @@
 
 % Ubuntu Packages section...
 \StartSection{Ubuntu Packages}
-Ubuntu package maintainers are responsible for building and preparing Avaneya packages for the Ubuntu community. They are comfortable with standard Debian packaging conventions, their requisite structure, key signing, and any helper tools like CDBS, debhelper, and lintian that can aid with the tasks at hand. They integrate any hooks that need to execute at various times during user installation to perform required actions, such as registering a file extension or desktop launchers in a freedesktop.org compliant manner. They know how to maintain an apt repository which we may use to roll out our packages directly. When they do not know on how to do something, they know where to ask.
+Ubuntu package maintainers are responsible for building and preparing Avaneya packages for the Ubuntu community. They are comfortable with the Debian Policy Manual, key signing, and any helper tools like CDBS, debhelper, and lintian that can aid with the tasks at hand. They integrate any maintainer scripts that need to executed at various times during user installation to perform required actions, such as registering a file extension or desktop launchers in a freedesktop.org compliant manner.
 
 \StartSubSection{Dependencies}
-Package maintainers must be careful to ensure our packages describe the appropriate dependencies the game actually requires to function. Without that, a user's package manager cannot make automated intelligent decisions to reconcile dependencies and the game will fail to launch when executed. 
+Package maintainers must be careful to ensure our packages describe the appropriate dependencies the game actually requires to function. Without that a user's package manager cannot make automated intelligent decisions to reconcile dependencies and the game will fail to launch when executed. 
 
-Sometimes the Debian packaging tools can do this automatically, but other times they need help. This might mean being very careful to avoid known bugs in specific versions of some dependency. If we have to do that, we may need to include our own build prefixed within our package. This also allows us to take advantage of a bleeding edge features of an experimental API not found in a stable package.
+Sometimes the Debian packaging tools can do this automatically, but other times they need help. This might mean being very careful to avoid known bugs in specific versions of some dependency. If we have to do that we may need to include our own build prefixed within our package. This also allows us to take advantage of a bleeding edge features of an experimental API not found in a stable package.
 
 \StartSubSection{Package List}
 There are many packages that need to be maintained, such as the game's main binaries; media files, such as textures, models, audio, and cinematics; user extras, such as maybe one day a screensaver or Plymouth boot theme; documentation; debugging symbols; developer related files, and so on. Each of these different types of files should be contained within a distinct package representing that logical type. It is useful to plan these things in advance.

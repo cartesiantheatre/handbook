@@ -7,111 +7,52 @@
 \placefigure
     [right, 0*hang]
     [figure:Kip_Pad]
-    {Good code comes from a healthy state of mind.}
+    {Good code comes from a healthy environment.}
     {\externalfigure[Engineer_Contributors/Images/Kip_Pad.png][][width=.55\textwidth]}
 
-In this section we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems we must address. Consider the following advice tentative and hardly sacrosanct. This is because no one knows with certainty what the future holds. We may find down the road that any of the following approaches are problematic, prompting a need to explore alternatives and the thoughtful recommendations of others. This is why {\it re}--search is called what it is.
+In this section we will share some of the different algorithms, optimizations, and tips that are useful in tackling the many different problems we must address. Consider the following advice tentative and hardly sacrosanct. This is because no one knows with certainty what the future holds. We may find down the road that any of the following approaches are problematic, encouraging a need to explore alternatives. This is why {\it re}--search is called what it is.
 
-With every bit of eye candy, bell, and whistle we add, there comes the problem of an increased burden on player's hardware. We need to take advantage of optimizations whenever possible. 
+With every bit of eye candy or bell and whistle we add there comes the problem of an increased burden on player's hardware. We need to take advantage of optimizations whenever possible. 
 
-As a general rule, asymptotic complexity (how an algorithm scales) is more important than constant time optimizations. But assessing an algorithm's complexity can be complicated. Fortunately you do not need a degree from a computer science department to understand the idea,\footnotecite[asymptotic_notation] despite the poor explanations sometimes found there. It is a very practical tool that is there to help you and need not need be an esoteric black art.
+As a general rule, asymptotic complexity (how an algorithm scales) is much more important than constant time optimizations. But assessing an algorithm's complexity can be complicated. Fortunately you do not need a degree from a computer science department to understand the idea.\footnotecite[asymptotic_notation] It is a very practical tool that is there to help you and need not be an esoteric black art.
 
-Nevertheless, sometimes having improved an algorithm from quadratic to linear logarithmic performance, useful constant time optimizations are all that remain if you want to go further. Most libraries the AresEngine (\in{section}[AresEngine's Architecture]) links against, such as SDL and Ogre3D, are usually already heavily optimized for the most popular architectures their compilation is supported on. But of course not necessarily everything a game engine consists of, as well as the scripts that drive it, are found in 3rd party libraries. If that were the case, we would not have to write anything.
-
-%With that in mind, what follows is some useful advice. Some of it is useful in only one specific domain, such as working with the geometry of a landscape. In other cases it is domain agnostic for solving many different types of seemingly unrelated problem, such as refactoring an algorithm to take advantage of parallelization available on multi--core machines.
-
-\StartSubSection{Socio-economic Simulation}
-For social simulation it is very difficult to commit to specific algorithms and information representation models until the maturity of more of the game's peripheral components. The reason being is that it is hard to tell how well a model works until there is a way of trying it. You might start with the behavioural output generated from some underlying quantitative model which in turn drives some higher level subsystems -- like what your 3D geometry ultimately does -- but it is much harder to tell how well the model actually worked without those higher level subsystems already present. Otherwise one is left to stare at a bunch of numbers to evaluate the simulated world.
-
-Compounding the challenges, of all the different sub--fields of game development, social simulation is probably among the hardest to do well. Take any abstract concept like {\it social inertia}\index{social inertia} and ask yourself how it ought best be modelled -- let alone formally defined. The challenge is to take the {\it qualitative} and find a way to make it {\it quantitative} because computers are only good with the latter.
-
-For resource consumption, a Hubbert curve of finite supplies of natural resources would probably be a good starting point.\footnotecite[hubbert_curve] This model seems reasonable.
-
-But until we can complete further research, a substantial basis for the quantitative models driving the simulation is probably found in Bossel's comprehensive volumes on complex simulations in software. These four volumes cover complexity, dynamics, and evolution;\footnotecite[systems_and_models] elementary systems, physics, and engineering;\footnotecite[system_zoo_1] climate, ecosystems, and resources;\footnotecite[system_zoo_2] and economics, society, and development\footnotecite[system_zoo_3] respectively.
-
-\StartSubSubSection{Agent vs. Simulation Based Modelling}
-
-Something we are reasonably confident of, at least for the time being, is our preference for an agent based simulation as opposed to a purely statistically driven model. Seeing an aircraft in the latter would just be a graphical representation of aerial traffic density until it disappeared after a while. In an agent based simulation, however, each unit moving is its own \quote{intelligent} agent representing itself. That is to say, a single aircraft (micro state) in a statistically driven model is only an expression or high level representation of the simulation (macro level). In the agent based model the aircraft would have been its own representation.
-
-In older city--builder simulation games, the lack of available computing power meant things had to be done statistically. Times have changed and offloading complex number crunching to GPUs or other specialized hardware has made this now practical. We are looking for ways to creatively leverage OpenCL to help solve this problem.
-
-\StartSubSubSection{Human Behaviour & Epigenetics}
-
-Individual human behaviour is obviously relevant to our agent based simulation. Consider for a moment how we describe someone's destructive behaviour in attributing it to their nature (genetic). We do this implicitly when we say that \quote{\it there will always be someone like that.} We make this assumption with ease as if we had dedicated years of our lives to having studied and reflected on the subject, as if it was even meaningful to say that an organism has a {\it default} behaviour in the first place.
-
-The truth is, however, there is probably no such thing as human nature. Research strongly indicates that there are, however, {\it human needs}.\footnote{See {\it Zeitgeist: Moving Forward} in \in{chapter}[Resources For Everyone] for an excellent introduction.} Very little of what we call human behaviour is actually genetic, if any. Most of what we call human behaviour is probably cultural and environmental influences that are not universal.\footnotecite[henrich2010] 
-
-All organisms, such as humans, have needs. These could be oxygen, water, security, a sense of belonging, community, a meaningful existence, nutrients, sunlight, or what have you. It is more reasonable to suggest that human behaviour manifests from what and how fundamental needs are met within the context of an environment that to say they were predisposed or could not have been any other way. Some human genotypes, for instance, do not even express the same phenotypes when varied across different cultures and environments.\footnote{\it Ibid.}
-
-We also know now that genetic expression can actually change throughout an organism's life and is not immutable.\footnotecite[scishow_epigenetics] This field is called epigenetics and is rapidly driving basic research in genetics across much of the European Union with millions of Euros spent each year to further our understanding of how our environment shapes our genes. Even simply changing what you eat can change your genetic material.
-
-An excellent application of epigenetics is in advancing our understanding of violence. Consider that there is an asymmetrical distribution of violence across our planet. If violence were truly human nature, we should be able to rotate the planet, randomly land our finger anywhere where there are people, say, a Mennonite community, and expect to find a serial killer with the same \math{1/n} probability expected in Detroit or elsewhere. This does not happen.
-
-As one of many influences, where there is poverty, there is despair. Where there is despair, there is crime. Provide for all fundamental human needs and these problems disappear. It is neither random nor magic. Humans, and probably all organisms, have little in their nature. They do, however, all have needs.
-
-The evidence {\it The Equality Trust}\index{The Equality Trust}{~}\footnotecite[equality_trust] has compiled powerfully reasserts this idea. It is a non--profit organization that aims to reduce income inequality through a programme of public and political education designed to achieve a widespread understanding of the harm caused by income inequality. This ties in well with efforts of epigeneticists to causally determine the changes in human genes based on their behaviour and external factors.
-
-Since Avaneya should rely on as much as reasonably possible of actual scientific research to substantiate the quantitative models driving the underlying simulation, {\it The Equality Trust} will be an invaluable repository of research to mine.
+Still, sometimes having improved an algorithm from quadratic to linear logarithmic performance, a useful constant time optimization is all that remains if you want to go further. Most libraries the AresEngine (\in{section}[AresEngine's Architecture]) links against like SDL and Ogre3D are already heavily optimized. But of course not necessarily everything a game engine consists of, as well as the scripts that drive it, are found in 3\high{rd} party libraries. If that were the case we would not have to write anything.
 
 \StartSubSection{Fallback Shaders}
-Those who work in the non--free software industry sometimes over inflate their target user's hardware requirements. The corporations they work for are usually unconcerned with leveraging the most out of what users already have. They profit, at least in part, when users are perpetually convinced their hardware is inadequate, coercing them into undue, mindless, and wasteful consumption that only adds to the volume of the mountains of garbage we already have.\footnotecite[caroll2008] 
+Those who work in the non--free software industry sometimes over inflate their target user's hardware requirements. The corporations they work for are unconcerned with leveraging the most out of what users already have. They profit, at least in part, when users are perpetually convinced their hardware is inadequate, coercing them into undue, mindless, and wasteful consumption that only adds to the volume of the mountains of garbage we already have.\footnotecite[caroll2008] 
 
-As an example, the US government is one of the largest producers of electronic garbage in the world. It throws out over 10,000 computers every week.\footnotecite[urbina2013] That is not to say that users should never upgrade, but only so long as it is actually rational to do so and not merely for the sake of some special interest group.
+As an example the US government is one of the largest producers of electronic garbage in the world. It throws out over 10,000 computers every week.\footnotecite[urbina2013] That is not to say that users should never upgrade, but only so long as it is actually rational to do so and not merely for the sake of some special interest group trying to sell us a new video card.
 \placefigure
     [right, 3*hang]
     [figure:Fluid_Dynamics]
     {Our early fluid dynamics simulator generated entirely on the GPU.}
     {\externalfigure[Engineer_Contributors/Images/Fluid_Dynamics.png][][width=.35\textwidth]}
 
-We rely on visual effects like any game to make it interesting. Consider some creative examples. The scanline effect of a fictional terminal's interface; gas sublimation of exposed Martian ice and the ensuing dust devils; a solar lens flare; atmospheric \chemical{CO_2} clouds visible in the day sky, or glowing meteorites and auroras at night; a construction site's flood lights and the welder's sparks; the Fresnel effect to model the amount of reflection and refraction at a fluid body's material boundary,\footnotecite[extras={, p.~404.}][opengl_yellow_book] of chromatic aberation of ice,\footnote{{\it Ibid}, p.~409.} a jet's exhaust; or what have you, are all some of the many examples we can implement. All of these are typically written in a high performance shader language like GLSL that executes directly on the player's video card.
+We rely on visual effects like any game to make it interesting. Consider some creative examples. The scanline effect of a fictional terminal's interface; gas sublimation of exposed Martian ice and the ensuing dust devils; a solar lens flare; atmospheric \chemical{CO_2} clouds visible in the day sky, or glowing meteorites and auroras at night; a construction site's flood lights and the welder's sparks; the Fresnel effect to model the amount of reflection and refraction at a fluid body's material boundary,\footnotecite[extras={, p.~404.}][opengl_yellow_book] of chromatic aberation of ice,\footnote{{\it Ibid}, p.~409.} or a jet's exhaust; are all some of the many examples we can implement. All of these are typically written in a high performance shader language like GLSL that executes directly on the player's video card.
 
-Truth be told, most people on this planet have never even used a telephone, let alone a top of the line, liquid cooled, \$500 graphics card that has the muscle for any of the aforementioned. As William Gibson once remarked, \quote{\it The future is already here, it’s just not evenly distributed yet.} But even if everyone had powerful graphics hardware, there is still no guarantee that two users with two different vendor's top of the line cards would both have the same feature set -- or even implement the ones they {\it do} share in ways that produce the {\it same} results. 
+Truth be told most people on this planet have never even used a telephone, let alone a top of the line, liquid cooled, \$500 graphics card that has the muscle for any of the aforementioned. As William Gibson once remarked, \quotation{\it The future is already here, it’s just not evenly distributed yet.} But even if everyone had powerful graphics hardware, there is still no guarantee that two users with two different vendor's top of the line cards would both have the same feature set -- or even implement the ones they {\it do} share in ways that produce the {\it same} results. 
 
-For these reasons we need to provide fallback shaders whenever reasonable. This is for those with less capable hardware, or whenever we can expect hiccups on hardware that ought to be capable enough, but may have driver issues. This way users who already know their hardware is weak and do not expect it to do what more powerful hardware can do can still get the most out of it. Meanwhile, those who {\it do} have powerful hardware can be satisfied knowing that it is being properly leveraged.
+For these reasons we need to provide fallback shaders whenever reasonable. This is for those with less capable hardware or whenever we can expect hiccups on hardware that ought to be capable enough but may have driver issues. This way users who already know their hardware is weak and do not expect it to do what more powerful hardware can do can still get the most out of Avaneya. Meanwhile those who {\it do} have powerful hardware can be satisfied knowing that they are getting the most out of their expensive hardware.
 
 But in aiming for flexibility, we must draw the line somewhere. We still require \index{system requirements+GPU}graphics hardware that at least supports a programmable shader interface. Investing time in appeasing a dead fixed function pipeline is not a useful expenditure of resources in an era where even the cheapest and most primitive graphics hardware typically supports at least {\it some} minimal of a programmable shader interface.
 
-%\StartSubSection{Graphics Memory}
-%It is usually a bad idea for games to make assumptions about the capabilities of a user's graphics hardware -- except when it can reliably predict them, safely provide a fallback when it cannot, and of course, do something useful with that information.
-
-%The amount of memory a user's graphics card is equipped with can sometimes provide hints in automatically selecting, or suggesting, a certain graphics' setting. This is important because a lot of users do not configure a game's graphics' settings properly and they are left with a bad impression because the default settings were poor choices, albeit safely compatible with the lowest common denominator.
-
-%In the case of ATI/AMD video cards, querying the {\tt GL_ATI_meminfo} function can provide us with this information. On nVidia cards, the following code snippet can be used instead. Note that you must link against {\tt libXNVCtrl.a} in the case of the latter.
-
-%\startCodeExample
-%// Determine total video memory on an nVidia graphics card...
-
-%    // Open the display...
-%    Display *CurrentDisplay = XOpenDisplay(NULL);
-
-%    // Perform the query and store the result in TotalMemory...
-%    int TotalMemory = 0;
-%    XNVCTRLQueryAttribute(
-%        CurrentDisplay, 0, 0, NV_CTRL_VIDEO_RAM, &TotalMemory);
-%    
-%    // Cleanup...
-%    XCloseDisplay(CurrentDisplay);
-%\stopCodeExample
-
-%The engine should only have to query the hardware once with future requests cached.
-
 \StartSubSection{Instrumentation & Performance Analysis}
 
-A good engineering principle is to make something work first, then to make it work better. There will come a time when the engine is sufficiently mature that introspection will be necessary to identify performance bottlenecks that were difficult to anticipate during the architectural design. One approach is to use instrumentation software like GNU's {\tt gprof} to examine call graphs.
+A good engineering principle is to make something work first, then to make it work better. There will come a time when the engine is mature enough that introspection will be necessary to identify performance bottlenecks that were difficult to anticipate during the architectural design. One approach is to use instrumentation software like GNU's {\tt gprof} to examine call graphs.
 
-On Intel architectures we should also remember to check the machine's performance counters\footnotecite[extras={, p. A--13}][intel_optimization_manual] for the frequency of cache misses. This is especially important on consoles.\footnotecite[extras={, p.~568.}][game_engine_architecture]
+On Intel architectures we should monitor the machine's performance counters\footnotecite[extras={, p. A--13}][intel_optimization_manual] for the frequency of cache misses. This is especially important on consoles, should we port Avaneya later.\footnotecite[extras={, p.~568.}][game_engine_architecture]
 
 \StartSubSection{Lighting Models}
 
-For lighting we will have to experiment with the capabilities of Ogre3D, our rendering engine. Still, there are some algorithms to consider earmarking for the time being. For static objects, such as buildings and terrain, we may be able to take advantage of spherical harmonics for real--time lighting.\footnotecite[extras={, p.~365.}][opengl_yellow_book] We can also consider using deferred shading for volume shadows.\footnote{{\it Ibid}, p.~392.} For global or ambient illumination, we might leverage a hemispherical lighting model. Time will tell, as there is no {\it a priori} substitute for actual experimentation.
+For lighting we will experiment with the capabilities of Ogre3D, our rendering engine. Still, there are some algorithms to consider earmarking for the time being. For static objects like buildings and terrain, we may be able to take advantage of spherical harmonics for real--time lighting.\footnotecite[extras={, p.~365.}][opengl_yellow_book] We can also consider using deferred shading for volume shadows.\footnote{{\it Ibid}, p.~392.} For global or ambient illumination we could use a hemispherical lighting model. Experimentation will be critical.
 
 \StartSubSection{Memoization}
 
-Memoization, not to be confused with memorization, is a technique in algorithm design that preserves the results of costly calculations whenever it is possible to re--use them without having to perform the same calculation again. When scripting, we can take advantage of Lua's built--in {\tt memoization(f)} function whenever possible.\footnotecite[extras={, p.~26.}][lua_programming_gems] The function works by creating a new function that returns the same result as {\tt f} on a given input, but by memoizing the result. As long as {\tt f} does not have any side effects, we can use the memoized variant with constant time performance.
+Memoization, not to be confused with memorization, is a technique in algorithm design that preserves the results of costly calculations whenever it is possible to re--use them without having to perform the same calculation again. When scripting we can take use Lua's built--in {\tt memoization(f)} function whenever possible.\footnotecite[extras={, p.~26.}][lua_programming_gems] The function works by creating a new function that returns the same result as {\tt f} on a given input, but by memoizing the result. As long as {\tt f} does not have any side effects, we can use the memoized variant with constant time performance.
 
 \StartSubSection{Path Finding}
 
-A path finding algorithm is necessary for mobile units, such as any of the vehicles described in \in{figure}[figure:Units_User_Basic_Vehicles]. Sometimes units need to autonomously self--navigate from one location to another. Sometimes their movement could involve a non--trivial solution. By non--trivial, we mean the optimal path could involve balancing a number of different constraints, such as minimizing fuel expenditure; time of travel; time before, say, a unit's solar array is deprived of sunlight; distance; severity of the terrain; \index{negotiating obstacles}negotiating obstacles, some of them possibly moving, unfriendly; and so on and so forth.
+A path finding algorithm is necessary for vehicles and pedestrians. Sometimes units need to autonomously self--navigate from one location to another. Sometimes their movement could involve a non--trivial solution. By non--trivial, we mean the optimal path could involve balancing a number of different constraints like minimizing fuel expenditure, time, distance, and severity of the terrain.
 \crlf
 
 \placefigure
@@ -128,68 +69,39 @@ For this problem we have selected the tried and true A\high{*} search strategy a
     {Our A\high{*} pathfinder algorithm with a more complex test case.}
     {\externalfigure[Engineer_Contributors/Images/PathFinder_Complex.png][][width=.8\textwidth]}
 
-\StartSubSection{Procedural Materials & Audio}
-
-Procedural generation is a mathematical technique for automatic generation of meaningful data, as opposed to relying on an artist. Think of a computer \quote{understanding} what wood looks like and creating a suitable material for a model on the fly, instead of an artist having to create the material. Procedural generation can therefore be much faster when generating many similar, but not necessarily identical, objects for forests, roads, terrain, and so on.
-
-\placefigure
-    [here,force]
-    [figure:Procedural_Generation]
-    {Starting from the left, procedurally generated granite, wood, magma, and marble respectively.}
-    \startcombination[4*1]
-    {\externalfigure[Engineer_Contributors/Images/Procedural_Generation_Granite.png][][width=.25\textwidth]}
-    {}
-    {\externalfigure[Engineer_Contributors/Images/Procedural_Generation_Wood.png][][width=.25\textwidth]}
-    {}
-    {\externalfigure[Engineer_Contributors/Images/Procedural_Generation_Magma.png][][width=.25\textwidth]}
-    {}
-    {\externalfigure[Engineer_Contributors/Images/Procedural_Generation_Marble.png][][width=.25\textwidth]}
-    {}
-    \stopcombination
-
-As a general rule with this project, whenever we can reasonably get away with procedural generation, as opposed to providing static data, we will. Note that even in the best case, artists will still be necessary to provide the majority of the assets.
-
-The advantages of procedural generation are many, but we can name a few. These include a reduced storage footprint, increased performance, a theoretical infinite resolution in some situations, and also an opportunity for every user to experience something unique that would not have been possible with static data.
-
-In the context of graphics, procedural generation is certainly not a new concept. Most graphics engineers have probably, at the very least, heard of the concept by now. See \in{figure}[figure:Procedural_Generation] for some examples. But it is comparatively unheard of as far as creating dynamic {\it audio} in a game. 
-
-There are many possibilities to consider. We could experiment with attempting to dynamically recreate the low--frequency rumbles of a marsquake, the sound of dry--ice hail impacting on the frozen Martian tundra, static heard over a radio, or what have you. Some books and papers have been written on the subject,\footnotecite[infinite_game_universe_2] although seldom done. The possibilities are limited by our own imagination.
-
-Whenever we use procedural generation for creating audio, we will need to do it all in software -- for now. There may come a time, however, when a low--level audio API, such as OpenAL, will offer a programmable \quote{shader} interface. This would theoretically allow code to execute on specialized hardware that interfaces directly with a digital signal processor (DSP). This idea has been discussed before.\footnotecite[openal_shaders]
-
 \StartSubSection{Procedural Terrain}
-Terrain generation is another application of procedural generation. Terrain problems are common to any game that requires the rendering of three--dimensional landscapes. But before that, consider some other approaches.
+Terrain problems are common to any game that requires the rendering of three--dimensional landscapes. Consider some other approaches.
 
-What about height maps? Not if we need overhangs. If you have an underground vacuum tunnel carrying a train, you will need them.
+What about height maps? Not if we need overhangs. If you have an underground vacuum tunnel carrying a train you cannot use them.
 
-What about high resolution detail that we could provide manually, perhaps pre--modelled in something like Blender with the help of some Perlin noise? Could that suffice for any reasonable level of magnification? That would probably be fine for offline rendering, but not if we wanted to maintain an interactive frame rate which is non--negotiable for a game. But users would probably be better satisfied with a virtual landscape that was influenced by the real thing if it were possible.
+What about high resolution detail that we could provide manually. Perhaps pre--modelled in something like Blender with the help of some Perlin noise? Could that work for any reasonable level of magnification? That would probably be fine for offline rendering, but not if we wanted to maintain an interactive frame rate which is non--negotiable for a game. But users would probably be better satisfied with a virtual landscape that was influenced by the real thing if it were possible.
 
-So what about using real topographical data of Mars? Possible, but there is a problem. The best source of topographical data at the time of writing is the {\it Mars Orbiter Laser Altimeter (MOLA)} data set.\footnotecite[mola] MOLA was one of the instruments carried by the {\it Mars Global Surveyor}\index{Mars Global Surveyor} orbital spacecraft between the years of 1999 to 2001. Unfortunately the spatial resolution is inadequate for our purposes. For every degree of longitude at the planet's equator, there are 128 pixels of sampling available from the cylindrical projection\index{Cylindrical projection} data set. That might seem like a lot, but this is really only about half a kilometre per pixel. Consider for a moment just how much detail a player's booming Martian metropolis might pack in less than half a square kilometre.
+What about using real topographical data of Mars? Possible, but there is a problem. The best source of topographical data at the time of writing is the {\it Mars Orbiter Laser Altimeter (MOLA)} data set.\footnotecite[mola] MOLA was one of the instruments carried by the {\it Mars Global Surveyor}\index{Mars Global Surveyor} orbital spacecraft between the years of 1999 to 2001. Unfortunately the spatial resolution is inadequate for our purposes. For every degree of longitude at the planet's equator, there are 128 pixels of sampling available from the cylindrical projection\index{Cylindrical projection} data set. That might seem like a lot, but this is really only about half a kilometre per pixel. Consider for a moment just how much detail a player's booming Martian metropolis might pack in less than half a square kilometre.
 
 If the user zoomed out to see an entire city, that might be fine, but what about if they zoomed in really close to the landscape to interact with various objects? Even if the data's spatial resolution was fine enough to provide for elevation details at distances as small as a metre, we are now left with a problem we already encountered had we gone with the Blender route -- too much geometry for the machine to realistically handle at an interactive frame rate. Whatever was viewable at a micro--level, even if we hide all of the landscape that is not visible, all of the details present in what is {\it still} present in the camera's viewport will bog the machine down. But perhaps there is another approach to consider.
 
-Ryan Geiss\index{Geiss, Ryan} is well known for his Geiss visualizer for the Winamp media player\index{Winamp media player}. This non--free plugin is considered a classic. Ryan was a pioneer in the field of sound activated graphics (visualization) at the time, but he has also made contributions few have heard about in other fields like procedural terrain generation. His article on {\it Generating Complex Procedural Terrains Using the GPU}\footnotecite[geiss_fractal_terrain] provides an attractive candidate for us.
+Ryan Geiss\index{Geiss, Ryan} is well known for his Geiss visualizer for the Winamp media player\index{Winamp media player}. This non--free plugin is considered a classic. Ryan was a pioneer in the field of sound activated graphics (visualization) at the time, but he has also made contributions few have heard about in other fields like procedural terrain generation. His article on {\it Generating Complex Procedural Terrains Using the GPU}\footnotecite[geiss_fractal_terrain] provides a solution worth considering.
 
-The method allows overhangs, something we already discussed traditional height maps cannot handle. It also generates rich and highly detailed geometry at {\it infinite} spatial resolutions while maintaining an interactive frame rate by generating the geometry entirely on the fly. This is accomplished by offloading the entire computation to the GPU where he relies on fractals and several octaves of noise to produce the vertex data. Consider taking a look at one of his demonstrations.\footnotecite[geiss_fractal_terrain_demo]
+The method allows overhangs. It also generates rich and highly detailed geometry at {\it infinite} spatial resolutions while maintaining an interactive frame rate by generating the geometry entirely on the fly. This is accomplished by offloading the entire computation to the GPU where he relies on fractals and several octaves of noise to produce the vertex data. Consider taking a look at one of his demonstrations.\footnotecite[geiss_fractal_terrain_demo]
 
-However, we are still left to solve other problems, such as terrain deformation and the community's desire to see real topographical data incorporated if possible. In the latter case, it may be theoretically possible to influence Ryan's algorithm at a macro--level by \quote{seeding it} with an initial brute--force approach using what is topographically known now, while dynamically \quote{filling in} the details algorithmically on the fly at runtime. We will have to experiment and adapt his algorithm as necessary. It may be possible to adapt protein--structure modelling and reconstruction algorithms from the realms of structural biology and bioinformatics for this purpose; further research is required before we arrive at a definitive answer.
+We are still left to solve other problems like terrain deformation and the community's desire to see real topographical data incorporated if possible. In the latter case it may be theoretically possible to influence Ryan's algorithm at a macro--level by \quotation{seeding it} with an initial brute--force approach using what is topographically known now while dynamically \quotation{filling in} the details algorithmically on the fly at runtime. We will have to experiment and adapt his algorithm as necessary. It may be possible to adapt protein--structure modelling and reconstruction algorithms from the realms of structural biology and bioinformatics for this purpose.
 
-We will probably see a performance improvement in the terrain shaders when relying on hardware based GLSL implementations of the {\tt noise*()} functions to provide fast high performance pseudo--random number generators. At the time of writing, unfortunately no known hardware vendor implements these functions\footnote{Mesa\index{Mesa} 8.0, a popular software based OpenGL renderer, notes in its {\tt src/glsl/lower_noise.cpp} that {\it "no hardware has a noise instruction"}.} -- probably owing to parasitic patent trolls. Instead, these function stubs return {\tt 0.0}. We will have to check at runtime whether available and, if not, rely on another method such as a noise texture.\footnotecite[extras={, pp.~264--269.}][using_noise_in_shaders]
+We will probably see a performance improvement in the terrain shaders when relying on hardware based GLSL implementations of the {\tt noise*()} functions to provide fast high performance pseudo--random number generators. At the time of writing unfortunately no known hardware vendor implements these functions.\footnote{Mesa\index{Mesa} 8.0, a popular software based OpenGL renderer, notes in its {\tt src/glsl/lower_noise.cpp} that {\it "no hardware has a noise instruction"}.} This may be due to patent trolls. Instead these function stubs return {\tt 0.0}. We will have to check at runtime whether available and if unavailable rely on another method like noise textures.\footnotecite[extras={, pp.~264--269.}][using_noise_in_shaders]
 
 \StartSubSection{Random Number Generators}
-Random numbers are vital to games. These numbers usually do not need to be as high quality as required in statistical and scientific computing, but clearly better than what is implemented in most standard language APIs, such as C++. Case in point, few serious game developers actually rely on their C++ compiler's {\tt std::rand()} function.
+Random numbers are vital to games. These numbers usually do not need to be as high quality as required in statistical and scientific computing, but at least better than what is implemented in most standard language APIs, such as C++. Case in point, few serious game developers actually rely on their C++ compiler's {\tt std::rand()} function.
 
-The game can query the random number generator many thousands of times per second in some cases, with each number potentially contributing in a significant way to a sequence or causal chain of events. One number might determine the severity of a seasonal dust storm. A seasonal dust storm that in turn leads to a reduction in inbound starport flights from Earth or another city that year. In turn leading to a reduction in immigration, and so on and so forth.
+The game can query the random number generator many thousands of times per second in some cases, with each number potentially contributing in a significant way to a sequence or causal chain of events. One number might determine the severity of a seasonal dust storm. A seasonal dust storm that in turn leads to a reduction of inbound starport flights. In turn this leads to a reduction in immigration.
 
-Considering this, we selected Makoto Matsumoto's algorithm,\footnotecite[mersenne_twister] a popular high quality pseudo--random number generator. The algorithm offers an excellent balance between performance and quality of output within a very large period.
+We selected Makoto Matsumoto's algorithm,\footnotecite[mersenne_twister] a popular high quality pseudo--random number generator. The algorithm offers an excellent balance between performance and quality of output within a very large period.
 
-As one of its many novel uses, it may be possible to parametrically define some characteristics of a graphical object by having its appearance and behaviour rely on some element of randomness. For example, two otherwise identical building units, such as a pressurized habitat, could incorporate random parameters to make the foliage in their indoor courtyards different from one another by seeding a foliage generation subroutine with different values. But we need not stop at just geometry, but also use random parameters to generate a colour palette. The possibilities are limited in part by our creativity.
+As one of its many novel uses we could parametrically define some characteristics of a building where it does not need to respond directly to the state of the underlying simulation. Some aspects of its appearance and behaviour could rely on some element of randomness. Two identical pressurized habitat building units could incorporate random parameters to make the foliage in their courtyards different from one another by seeding a foliage generation subroutine with different values. But we need not stop at just geometry. We could use random parameters to generate a colour palette too. The possibilities are limited only by our creativity.
 
 \StartSubSection{Square Roots}
-Square roots are common in game programming and nearly always pop up whenever vectors, trigonometry, linear algebra, and so on, are involved. Nevertheless, we avoid them whenever possible. We use the squared magnitude instead. The former is slow, the latter faster -- albeit at the cost of accuracy.
+Square roots are common in game programming and nearly always pop up whenever vectors, trigonometry, linear algebra and the like are involved. We avoid them whenever possible. We use the squared magnitude instead. The former is slow and the latter faster -- albeit at the cost of accuracy.
 
 \StartSubSection{Vectorization}
-Take advantage of the vectorization a given architecture's accelerated instruction set comes with whenever possible. This is sometimes called single instruction, multiple data (SIMD). These days, virtually every major architecture offers some variant of this concept under a name of its own. It works by taking a group of inputs and batch processes them simultaneously as opposed to serially. For example, calculating an otherwise costly normalization of a list of half a dozen, double precision, floating point, vectors within a single SIMD instruction.
+Take advantage of the vectorization a given architecture's accelerated instruction set comes with. This is sometimes called single instruction, multiple data (SIMD). These days virtually every major architecture offers some variant of this concept under a name of its own. It works by taking a group of inputs and batch processes them simultaneously instead of serially. Calculating an otherwise costly normalization of a list of half a dozen double precision floating point vectors can be done this way with a single SIMD instruction.
 
-Since we are using the GNU Compiler Collection, we can leverage an already existing implementation of Intel's specification whenever working with {\tt amd64} or {\tt i686} architectures.\footnote{See the {\tt xmmintrin.h} header which ships with the GNU Compiler Collection.} This is very useful for linear algebra and other math--related routines found in games. Better yet, we might instead rely on an architecturally agnostic approach by using GCC's built--in vector extensions.\footnotecite[gcc_vector_extensions]
+Since we are using the GNU Compiler Collection we can use an already existing implementation of Intel's specification whenever working with {\tt amd64} or {\tt i686} architectures.\footnote{See the {\tt xmmintrin.h} header which ships with the GNU Compiler Collection.} This is useful for linear algebra and other math--related routines found in games. Better yet, we might instead rely on an architecturally agnostic approach by using GCC's built--in vector extensions.\footnotecite[gcc_vector_extensions]
 

@@ -401,7 +401,11 @@
     \definefontfamily [main_font] [rm] [titillium] [features={default,quality}]
     \definefontfamily [main_font] [mm] [TeX Gyre Pagella Math]
     \setupbodyfont[main_font]
-    
+
+    % For code...
+    \definefontfamily [code] [rm] [Liberation Mono] [features={default,quality}]
+    \definefontfamily [code] [mm] [Liberation Mono] [features={default,quality}]
+
     % For Greek characters...
     \definefontfamily [greek_font] [rm] [TeX Gyre Pagella Math]
     \definefontfamily [greek_font] [mm] [TeX Gyre Pagella Math]
@@ -557,6 +561,7 @@
     \definetyping
       [CodeExample]
       [before=\startCodeExampleFrame,
+       bodyfont=code,
        after=\stopCodeExampleFrame]
 
 % Number formulae etc. using the chapter number...

@@ -4,13 +4,13 @@
 
 % Package Maintainer Contributors chapter...
 \StartChapter{Package Maintainer Contributors}
-Package maintainers are responsible for building and preparing Avaneya packages. They need to be familiar with the standard methods of rolling out software for a given platform. %In our case, we are mostly concerned with Ubuntu. Other GNU platforms are important too, but only so far as demand and available resources allow.
+Package maintainers are responsible for building and preparing Avaneya packages. They need to be familiar with the standard methods of rolling out software for a given platform. This means intimate familiarity with at least the Debian Policy Manual.
 
 Package maintainers need to work with the engineers to adapt the build environment to be flexible for producing packages for all supported architectures. This includes at least {\it amd64}, {\it armel}, {\it armhf}, {\it i686}, {\it lpia}, and {\it mips64el}. They need to be familiar with the various quirks of different architectures.
 
 Package maintainers need to ensure that package contents meet the packaging guidelines of a distribution so that they can be hosted in a given software channel (e.g. Ubuntu's {\it universe} or {\it multiverse}). This is sometimes a very difficult and tedious task and we must be very careful to avoid stepping on toes. There is no point in spending years of labour only to have it unavailable where most users would have first looked for the end result.
 
-Package names must be consistent with the naming schemes adopted by the GNU distribution as used within their respective package management systems. We should also break them up into multiple logical packages. This saves users from having to update a single large package when it can instead be split up into multiple packages where only whatever needs to be updated actually get updated. This also drastically saves bandwidth costs and build server time.
+Package names must be consistent with the naming schemes adopted by the GNU distribution as used within their respective package management systems. We should also break them up into multiple logical packages. This saves users from having to update a single large package when it can instead be split up into multiple packages where only one of them actually needed to be updated. This drastically saves bandwidth costs and build server time.
 
 \input Package_Maintainer_Contributors/Ubuntu_Packages.tex
 

@@ -8,6 +8,7 @@ ALL_DOT_PDF             = $(patsubst %.dot.gv, %.pdf, $(shell find . -type f -in
 ALL_TWOPI_PDF           = $(patsubst %.twopi.gv,%.pdf, $(shell find . -type f -iname '*.twopi.gv' -exec echo "{}" \; | sed 's/ /\\ /g'))
 ALL_BIBTEX              = References/References.bib
 ALL_GRAPHVIZ_PDF        = $(ALL_DOT_PDF) $(ALL_TWOPI_PDF)
+# Override path with make UMBRELLO_ENGINE_DIAGRAM='/home/kip/Projects/Avaneya/OldMonolithicBzr/Documentation/Contributors/AresEngine/UML/Engine.xmi'
 UMBRELLO_ENGINE_DIAGRAM = ../AresEngine/UML/Engine.xmi
 CONTEXT_OPTIONS         = --purgeresult --directives=logs.blocked,system.nostatistics #--nostats --batchmode --engine=luajittex 
 

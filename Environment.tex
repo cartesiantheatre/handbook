@@ -72,21 +72,21 @@
 
 % Revision control...
 
-    % Bzr revision...
-    \def\initializeBzr{
+    % Git revision...
+    \def\initializeGit{
         \ctxlua{
             context.setxvalue(
-                "BzrRevision",
-                os.resultof("bzr revno | tr -d '\string\n'"))}
+                "GitRevision",
+                os.resultof("git rev-list --count HEAD | tr -d '\string\n'"))}
     }
 
-    \initializeBzr
+    \initializeGit
 
     % URL of latest handbook...
     \def\LatestHandbookURL{https://goo.gl/F3AxPZ}
 
-    % Clickable Bzr revision...
-    \def\BzrRevisionClickable{\href{https://blueprints.launchpad.net/avaneya/+spec/avaneya-project-crew-handbook}{\BzrRevision}}
+    % Clickable Git revision...
+    \def\GitRevisionClickable{\href{https://github.com/cartesiantheatre/handbook}{\GitRevision}}
 
 % External program version strings...
 
@@ -119,9 +119,9 @@
    contrastcolor=colour_link,
    focus=standard, % Clicking an inter-document hyperlink by default switches to "fit page" mode. Override.
    openaction={FitWidth,ToggleViewer},
-   title=Avaneya Project Crew Handbook (Revision \BzrRevision),
+   title=Avaneya Project Crew Handbook (Revision \GitRevision),
    subtitle=\BookShortDescription,
-   author=The Avaneya Project Crew (Revision \BzrRevision),
+   author=The Avaneya Project Crew (Revision \GitRevision),
    keyword={Avaneya, handbook, Mars, GNU, linux, Ubuntu, game}]
 
 % Show the PDF bookmarks and expand to the chapter and section level...

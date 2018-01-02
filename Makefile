@@ -70,7 +70,7 @@ mostlyclean:
 
 # Upload...
 upload: $(OUTPUT_PDF)
-	rsync -avz --progress --partial $(OUTPUT_PDF) "kiplingw@avaneya.com:/home/kiplingw/avaneya.com/downloads/"
+	rsync -avz --progress --partial $(OUTPUT_PDF) "avaneya@avaneya.com:/home/avaneya/avaneya.com/downloads/"
 
 # Directive to make to let it know that these targets don't generate filesystem 
 #  objects / products and therefore no need to check time stamps...
